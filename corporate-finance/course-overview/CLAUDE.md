@@ -9,7 +9,7 @@ Fixed reference material from the NYU Stern Certificate in Corporate Finance (Pr
 | [advanced-valuation-course-outline.md](advanced-valuation-course-outline.md) | Meetup dates + fixed-date deliverables (quizzes, final exam, final project) |
 | [syllabus.md](syllabus.md) | Full syllabus — instructor, primers, learning outcomes, grading, policies, resources |
 | [frequently-asked-questions.md](frequently-asked-questions.md) | Course-site FAQ — meetups, quizzes, CapIQ, certificates, support |
-| [transcripts/CLAUDE.md](transcripts/CLAUDE.md) | Lecture-video transcripts (SRT + plain text) for sessions 27–36 |
+| [transcripts/CLAUDE.md](transcripts/CLAUDE.md) | Lecture-video transcripts for sessions 27–36 — cleaned `.md`, plain `.txt`, and timed `.srt` |
 
 ## Key dates at a glance
 

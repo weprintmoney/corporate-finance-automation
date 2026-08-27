@@ -1,0 +1,58 @@
+---
+title: "Session 32 Part 2 — Terminal Value and Mature-Company Characteristics"
+status: active
+owner: weprintmoney
+created: 2026-08-27
+last_updated: 2026-08-27
+source_srt: session-32-part-2.en.srt
+---
+
+# Session 32 Part 2 — Terminal Value and Mature-Company Characteristics
+
+Expanding on the notion of stable growth and terminal value. Now let's fill in the rest of the details and what happens to your company when it becomes a mature company. After all, when you make your company a mature company, not only should the growth rate change but so should every other characteristic of the company.
+
+## Valuing Vale as a Mature Company
+
+Before we look at the other components of a mature company, I'm going to try to value Vale. Because if I've decided to make Vale a mature company, then the valuation becomes very simple, right? I don't have to estimate cash flows for a growth period, I don't have to estimate a growth period, I can do the valuation as of right now.
+
+To make my best estimates for Vale, rather than use the most recent years' numbers, which is always dangerous for a commodity company, I try to normalize. Normalize in what sense? I looked at the last five years leading into my valuation, and over those five years here's what I saw. I saw an average operating income of 17.6 billion, an average effective tax rate of 20.92%, and an average return on capital of 17.25%. I'm going to assume that those are the numbers that Vale will return to over time. It's an assumption, but I think it's a fairly solid assumption for a commodity company.
+
+So let's talk about the cost of capital for Vale. To estimate the cost of capital for Vale, I looked at the businesses it was in, and took a weighted average paid at the bottom of beta. I took into account how much debt Vale uses in its operations, and where it does business to get its equity risk premium. The composite value that I get is 8.2% as my cost of capital, and I'm doing the cost of capital in U.S. dollar terms because my cash flows are in U.S. dollars.
+
+I'm almost there. To make my valuation of Vale work, I took the return on capital of 17.25% as my steady state return on capital. I used a growth rate of 2% in perpetuity, less than the risk free rate, and that gave me a reinvestment rate of about 11.59%, that's a growth rate divided by the return on capital.
+
+And my value for Vale reflects my normalized numbers. I start with the normalized operating income, $17,626 million. I net out the tax rate based on my normalized tax rate of 20.92%. I net out my reinvestment of 11.59% based on my normalized numbers. And I discount that back at 8.2%, allowing for a 2% growth rate in perpetuity. The value that I get for the operating assets at Vale is $203 billion. I add cash, I subtract our debt, I get a value for the equity of $167 billion. These assumptions lead me to a value per share of $32.44. Divided by the number of shares, the value per share that I get for Vale is $13.57.
+
+Now let me back up, did I make a lot of assumptions in this valuation? Absolutely. Am I assuming that Vale is a mature company? Absolutely. The value per share that I get for Vale is $32.44, well above the stock price of $13.57.
+
+## Excess Returns and Reinvestment in Perpetuity
+
+So now that we've got the Vale valuation behind us, as a mature company let's turn to two other rules I want to introduce into your terminal value calculation. The first is, remember in the context of growth I talked about the value of growth being a function of excess returns? I'm going to revisit that question now that you've told me your company is going to become a mature company. I'm going to ask you, what kind of excess returns do you think your company will make as a mature company? Your answers can range from, it will not make excess returns, it will make very large excess returns. Note though, that as your company becomes mature those excess returns will probably become lower as competition enters.
+
+But here's why I need to know what your excess returns are. To estimate what you will need to reinvest in perpetuity, I need to know what return in capital you will make in perpetuity. So let's put some numbers. Let's assume you tell me your company will have a 2% growth rate, and that you think your return on capital will be 10%. Those are the numbers incidentally that I assumed for Disney. To grow at 2% with a 10% return on capital, you will need to reinvest about 20% each year forever. Growth has to be earned, and you cannot violate that rule just because you're looking at a mature company.
+
+Now the big question then becomes, do mature companies earn more than their cost of capital? There are some who argue no. In fact, there are some discounted cash flow valuations with the excess returns for mature companies are always set to zero. If you set your return on capital equal to your cost of capital, you know what the value of your growth is going to be? It's going to be zero. You might as well use a zero growth rate in perpetuity if that is the case. But do companies actually earn their cost of capital once they become mature companies? There is some evidence that suggests that companies continue to earn excess returns for far longer than they maintain growth. Put differently, there are lots of mature companies out there that earn more than their cost of capital. So leave that door open, that if you have a special company, a company with unique competitive advantages, it might be able to earn more than its cost of capital.
+
+## Giving the Company Mature-Company Characteristics
+
+There's a final point I want to make about terminal value calculations is, when you put your company to stable growth, give it the characteristics of a stable growth company. Put differently, when you make your company a mature company, you're going to bring its growth rate down, right? That's bad. But there's some good stuff that happens when you become a mature company.
+
+Your cost of capital will have to become that of a mature company. So if you're valuing a young, high growth company, your cost of capital to start the process might be 12%, 14%, or 15% but in stable growth, I would expect that cost of capital converge on the cost of capital of a mature company. If you're using betas, for a high growth company your beta could be 2, 2.5 or even 3. But for a mature company, that number can't be that different from 1. In fact, I have a very simple rule of thumb, since two thirds of all companies have betas between 0.8 and 1.2, I'm going to put a mature company in that range. So when I'm looking at a mature company valuation, I would expect the beta to be closer to 1. I would also expect mature companies to be able to borrow more money and have returns in capital that are closer to the cost of capital.
+
+In effect, when you give me the characteristics of your company 10 years from now as a mature company, don't just reproduce the characteristics you have for that company today. So your terminal value calculation should reflect your characteristics of the company as a mature company.
+
+## Internal Inconsistency in Terminal Value Assumptions
+
+Now as I look at discounted cash flow valuations, I'm often struck by inconsistent assumptions especially when it comes to the terminal value. Let me give you one very common example. Let's assume you're looking at a discounted cash flow valuation. When you're 10, your company becomes a mature company. It's given a growth rate of 2% a year, a defensible number. But then the analysts says, "This is a mature company, therefore I'm going to assume that CapEx offsets depreciation. It does not need net CapEx, and it does not need working capital, change in working capital is zero."
+
+That is a valuation that's internally inconsistent, and here's why. If your net CapEx is zero, and your change in working capital is zero, you're reinvesting nothing, right? Your reinvestment rate is zero. And since your growth rate is your reinvestment rate times your return on capital, you cannot grow 2% a year forever.
+
+Now, the comeback you might get from some analysts is that the growth rate is just the inflation rate, and therefore you don't have to build new capacity. That might be true, but you have to replace old capacity, right? And if you have inflation helping you on your revenues, it's going to hurt you when you replace old equipment, old machinery. There is no way around the reality, that if you're going to grow your company you will have to reinvest to sustain that growth.
+
+## Applying the Rules to Disney
+
+So let me summarize. When you look at your terminal value, you want to put a growth cap, you want to make sure you don't wait too long, you want to make sure you reinvest enough to sustain your stable growth rate, and that you give your company the characteristics of a mature company.
+
+So let me try these very simple principles on Disney. I'm going to make Disney a mature company after year 10. I'm going to give it a growth rate of 2.5%, that's less than the risk free rates so I'm obeying the cap. To estimate how much Disney will have to reinvest in stable growth, I'm going to assume that Disney's return on capital once it becomes a mature company is 10%. That's lower than the 12.61% it's earning now, but it's higher than its cost of capital. I'll back it up by arguing that Disney's competitive advantages are so strong and so sustainable that they will not disappear in year 11. Now that return on capital of 10% in conjunction with my 2.5% growth rate gives me a reinvestment rate of 25%. That's what you're going to see as my reinvestment rate in year 11. Finally, I make Disney a mature company not just in its growth rate but in its cost of capital. I give it the benefit of having a lower cost to capital as a mature company, a cost of capital of 7.29% instead of the 7.81% you see now. In year 10, Disney is a mature company meeting all of my constraints.
+
+If you're doing a discounted cash flow valuation for the first time, the terminal value scares you, right? And it should. It's a big number. But if you follow the rules I've suggested you should in this session, you're going to be okay, you're going to be able to keep the terminal value under your control. And here are the rules again: check your growth rate, make sure it's less than your risk free rate which is my proxy for nominal growth in the economy. Or if you want to estimate the nominal growth in the economy, make sure it's less than that number. Second, don't wait too long to make your company a mature company. Third, make sure you're reinvesting enough to sustain your stable growth rate. And finally, give your company the characteristics of a mature company. It's not just the growth rate that changes when you become a mature company, it's everything else about the company. And if you do all of those things, your terminal value will be your number to control rather than the other way around.
