@@ -1,0 +1,32 @@
+# Lesson 10 — Bottom-up Betas
+
+## Overview
+
+If regression betas are too noisy and backward looking, what should we use instead? A better alternative is to estimate a beta for a company based upon its business mix and financial leverage choices, and allow that beta to change over time as those variables change. This lesson demonstrates how to estimate a beta for a company by looking at the businesses it is in, the betas of other companies in those businesses, and its mix of debt and equity.
+
+**Learning objectives:**
+- Estimate unlevered (asset) betas for individual business segments using comparable company data
+- Build a bottom-up beta by weighting segment betas by value and then re-levering for the company's actual debt ratio
+- Apply the bottom-up beta approach to diversified companies and companies with limited trading history
+
+---
+
+## Videos
+
+| Part | Title | Link |
+|------|-------|------|
+| 1 | Bottom-up Betas - Part 1 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s10.1_020818/1_uclfcrxg) |
+| 2 | Bottom-up Betas - Part 2 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s10.2_020818/1_uxs4x4zl) |
+
+> **Transcripts:** Session 10 transcripts have not been added to the repo yet.
+
+---
+
+## Files in this folder
+
+| File | Description |
+|------|-------------|
+| `slides.md` | Slide deck for Lesson 10 (ACF_S10) |
+| `spreadsheet-bottomupbeta.md` | Spreadsheet: Bottom-up Beta calculator |
+| `spreadsheet-totalbeta24.md` | Spreadsheet: Total Beta by industry — 2024 (US) |
+| `spreadsheet-totalbeta-global24.md` | Spreadsheet: Total Beta by industry — 2024 (Global) |
