@@ -6,10 +6,10 @@ Structured as a "Team OS"-style knowledge base so an AI session opened in any su
 
 ## Structure
 
-- `Financial Accounting/` — accounting foundations, statements, ratios
-- `Statistics/` — distributions, tests, regression
-- `Corporate Finance/` — TVM, valuation, WACC, capital budgeting
-- `Final Project/` — capstone
+- `financial-accounting/` — accounting foundations, statements, ratios
+- `statistics/` — distributions, tests, regression
+- `corporate-finance/` — TVM, valuation, WACC, capital budgeting
+- `final-project/` — capstone
 
 ## Solo repo
 
