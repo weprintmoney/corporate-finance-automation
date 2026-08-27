@@ -14,7 +14,7 @@ Local mirror of Aswath Damodaran's [*Musings on Markets*](https://aswathdamodara
 
 | File | Purpose |
 |------|---------|
-| `fetch_archive.py` | Pulls every post from Blogger's public JSON feed, converts each to markdown with attribution frontmatter, and writes to `posts/`. |
+| `fetch-archive.py` | Pulls every post from Blogger's public JSON feed, converts each to markdown with attribution frontmatter, and writes to `posts/`. |
 | `.gitignore` | Excludes `posts/` from git — the mirror stays on disk, not in history. |
 | `README.md` | This file. |
 
@@ -25,11 +25,11 @@ Blog posts are copyrighted by the author. Fetching them into a private working d
 ## Run it
 
 ```bash
-cd "Corporate Finance/Blogs"
-python3 fetch_archive.py            # first run: pulls all ~680 posts
-python3 fetch_archive.py            # subsequent runs: only writes new/missing files
-python3 fetch_archive.py --refresh  # force re-download of everything
-python3 fetch_archive.py --limit 20 # for testing
+cd corporate-finance/blogs
+python3 fetch-archive.py            # first run: pulls all ~680 posts
+python3 fetch-archive.py            # subsequent runs: only writes new/missing files
+python3 fetch-archive.py --refresh  # force re-download of everything
+python3 fetch-archive.py --limit 20 # for testing
 ```
 
 Standard library only — no `pip install` needed.

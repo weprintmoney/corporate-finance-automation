@@ -15,7 +15,7 @@ Capstone that ties Financial Accounting, Statistics, and Corporate Finance toget
 ## Suggested Structure
 
 ```
-Final Project/
+final-project/
 ├── brief.md            # Prompt, scope, success criteria
 ├── data/               # Raw and cleaned inputs
 ├── analysis/           # Notebooks, models, worksheets
