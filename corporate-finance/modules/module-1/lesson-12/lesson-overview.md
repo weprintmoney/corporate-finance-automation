@@ -13,12 +13,12 @@ A firm can not only raise equity but can borrow money. To bring debt into the hu
 
 ## Videos
 
-| Part | Title | Link |
-|------|-------|------|
-| 1 | Debt: Measure and Cost - Part 1 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s12.1_012218/1_klvqtswb) |
-| 2 | Debt: Measure and Cost - Part 2 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s12.2_012218/1_sab6h5vr) |
+| Part | Title | Local (720p, in repo) | Original (Kaltura) |
+|------|-------|-----------------------|--------------------|
+| 1 | Debt: Measure and Cost - Part 1 | [session-12-part-1.mp4](session-12-part-1.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s12.1_012218/1_klvqtswb) |
+| 2 | Debt: Measure and Cost - Part 2 | [session-12-part-2.mp4](session-12-part-2.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s12.2_012218/1_sab6h5vr) |
 
-> **Transcripts:** Session 12 transcripts have not been added to the repo yet.
+> **Transcripts:** cleaned prose available — [pt 1](session-12-part-1.md) · [pt 2](session-12-part-2.md).
 
 ---
 

@@ -1,0 +1,43 @@
+---
+title: "Session 15 Part 1 — From Accounting Earnings to Time-Weighted Incremental Cash Flows"
+status: active
+owner: weprintmoney
+created: 2026-08-27
+last_updated: 2026-08-27
+---
+
+# Session 15 Part 1 — From Accounting Earnings to Time-Weighted Incremental Cash Flows
+
+You might have been a little puzzled last session because we talked about a good measure return as being based on time weighted incremental cash flows. Then, we spent the entire session talking about an accounting return, return invested capital. The reason I focus so much on accounting returns is that's what many companies still use. But in this session, I'd like to turn our attention from accounting returns to cash flow returns. Well, in this session, we're going to re-emphasize the steps.
+
+## From Earnings to Cash Flows
+
+So, let's start off by looking at the accounting earnings we estimated for this theme park for the next 10 years. We took revenues, we subtracted our operating and accounting expenses, depreciation and allocation of GNA, and we came up with operating income. We netted out taxes, the first two years, the tax benefits, and we came up with after tax operating income. Now, the last session, I used that to come up with the return on capital. But in this session, I'm going to try to use these to come up with cash flows.
+
+So, let's take the first step. To go from earnings to cash flows, I said you have to go through three steps. First, you add back depreciation and amortization. Now, let me remind you again why we're doing this. We subtracted our depreciation and amortization to get to the earnings, but those are not cash expenses, they're accounting expenses. So, I'm going to add them back saying, "Hey, I haven't spent that money yet." Then, I subtract out capital expenditures, and now you see the big negative cash flows showing up, starting today, year one, year two, year three. That's the building of the theme park. And then, you have expenditures that continue beyond that as you maintain the theme park. And finally, subtract out change and non-cash working capital to go from accrual earnings to cash flows. Income plus depreciation minus capex minus change in working capital is cash flows.
+
+## Why Depreciation Still Matters
+
+Now, you might be puzzled as to why I'm even bothering subtracting our depreciation if I'm going to add it back next. It looks like it's cancelling out, right? But it really doesn't, and here's why. Depreciation leaves an imprint on the cash flows because it does affect your taxes. You can compute how much depreciation affects your cash flows by just multiplying your depreciation by your tax rate, and you can see that in the case of this particular project, the 50 million in depreciation in year one would save you 18 million in taxes, and over time, you see the substantial tax benefits you get from depreciation. That's why we care about depreciation. We subtract our capital expenditures because even though it's not an accounting expense, it's a cash out flow, and subtract out the change in working capital. So, we've gone from earnings to cash flows and already you see how different the numbers look once you brought in those cash flows.
+
+## From Cash Flows to Incremental Cash Flows
+
+Now, let's go from cash flows to incremental cash flows. This might sound mysterious, but there are two items that I won't have to deal with when I go from cash flows to incremental cash flows. Before I deal with those two items, let me lay out the two questions that I always ask to decide whether something is incremental. The first question I ask was, "What will happen if I take this project?" The next question I ask is, "What will happen if I don't take this project?" If the answer is the same to both questions, that item is not incremental.
+
+So, let's try this out. Remember that I said that Disney had already spent a half a billion dollars researching this project. And I also said that if I don't take this project, I'm not going to get this money back. So, let's ask the two questions. What will happen if I take the project while I've already spent half a billion? What will happen if I don't take the project when I've already spent a half a billion and I'm not getting it back? This project has absolutely no effect on that half a billion I've already spent. That's called the sunk cost. And the first rule in capital budgeting is you have sunk cost, money were already spent, don't consider them. That's easier said than done because it's human nature to think about sunk cost, but I'm going to take a half a billion out of my initial investment saying, "I should never have counted that because I'm not going to get it back."
+
+The other item where incremental comes into play is in the allocated GNA. If you remember I said, two-thirds of that allocated GNA have nothing to do with this project, and that Disney does not take this project, they're just going to go somewhere else in the company. So again, let's ask those two questions. What will happen if I take the project? Well, that two-thirds would get allocated to this particular project. What will happen if I don't take the project? The two-thirds will get allocated somewhere else. This particular project has no effect on those two-thirds for the company, and therefore, they're not incremental expenses.
+
+So, here's what I do. I take two-thirds of the allocated GNA that I expended already and I add it back, saying, "I shouldn't have subtracted it out." There's a mechanical detail I've got to take care of because those expenses saved me taxes. When I add it back, I'm going to add back the two-thirds, the net of the tax benefits I might have already counted in. I'm now ready to get my incremental cash flows. I take out the sunk cost, I add back the non-incremental GNA, I have my incremental cash flows by year.
+
+## Time Weighting the Cash Flows
+
+Last step in the process is I need to time weight these cash flows. Again, it sounds fancy but time weighting is just another fancy word for discounting. If any of you have old corporate finance textbooks and have a time valued table, it actually illustrates the time weighting in the numbers. A dollar a year from now is worth 91 cents. A dollar 2 years from now is worth 82 cents, and so on. As the further in time you go, the less the dollar is worth. That's time weighting in practice. So, if I can convert my incremental cash flows into time weighted incremental cash flows, I'm home free. I have a return that I can actually trust. So, I'm, at least, going to set up the process by which your time weight cash flows.
+
+## The Five Types of Cash Flows in Finance
+
+Much of this you can do with the present value button on your calculator. But, there are only five types of cash flows you will ever run into in finance, and might as well be conversive with all five. You can have a single cash flow in the future, which you discount by just taking the cash flow and dividing the one plus the discount rate raise to power n. You can have an annuity, which is a constant cash flow every year for an extended period, 10, 15, 20 years. It's the present value of an annuity. You can have the present value of a perpetuity. That's actually a cash flow. That's a constant cash flow forever. The present value of a perpetuity is a cash flow divided by the discount rate. And then, you have two versions of these cash flows that you might not be as familiar with. One is a growing annuity. A million dollars growing at 5% a year for the next 25 years, that equation that you see is an extended version of an annuity formula which allows for growth. And finally, you have a growing perpetuity.
+
+This is an equation we're going to see over and over in this class so I'm going to spend a minute on this. If I have a cash flow growing at 3% a year forever, here's all I need to do to compute the present value. I take the expected cash flow next year, and I divide by the difference between the discount rate and the growth rate. It is one of the most potent formulas in finance. It's also one of the more dangerous formulas. Remember, if you're going to assume that your cash flows will grow at a constant rate forever, that growth rate cannot be greater than the growth rate of the economy. But ultimately, these are just mechanisms to convert cash flows in the future into cash flows today.
+
+So, if you can actually get your hands on numbers for a project, especially accounting earnings, see if you can go from earnings to cash flows. It's an extremely useful exercise in starting to understand, A, the mechanics of how to do it, and B, why the two numbers can give you very different results.

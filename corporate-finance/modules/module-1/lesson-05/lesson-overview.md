@@ -13,12 +13,12 @@ While risk is part of every business, the first step in assessing what you need 
 
 ## Videos
 
-| Part | Title | Link |
-|------|-------|------|
-| 1 | The Risk Free Rate - Part 1 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s5.1_121317/1_71zcpell) |
-| 2 | The Risk Free Rate - Part 2 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s5.2_121317/1_vslkwpsy) |
+| Part | Title | Local (720p, in repo) | Original (Kaltura) |
+|------|-------|-----------------------|--------------------|
+| 1 | The Risk Free Rate - Part 1 | [session-5-part-1.mp4](session-5-part-1.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s5.1_121317/1_71zcpell) |
+| 2 | The Risk Free Rate - Part 2 | [session-5-part-2.mp4](session-5-part-2.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s5.2_121317/1_vslkwpsy) |
 
-> **Transcripts:** Session 5 transcripts have not been added to the repo yet.
+> **Transcripts:** cleaned prose available — [pt 1](session-5-part-1.md) · [pt 2](session-5-part-2.md).
 
 ---
 

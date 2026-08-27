@@ -1,0 +1,51 @@
+---
+title: "Session 17 Part 2 — The Trade-off on Debt"
+status: active
+owner: weprintmoney
+created: 2026-08-27
+last_updated: 2026-08-27
+---
+
+# Session 17 Part 2 — The Trade-off on Debt
+
+It is true that looking at where your company's in the life cycle can give you a sense of how much debt it should take on, but let's start to get more explicit about the trade-off on using debt. If you look at the trade-off when using debt, there are two pluses and three minuses.
+
+## The Benefits of Debt
+
+Let's start with the biggest plus. The biggest plus of using debt is the tax code rewards you for borrowing money. Interest expenses are tax deductible, but cash flows to equity are usually not. As a consequence, when you borrow money, you create a tax benefit, and the higher your marginal tax rate, the greater the tax benefit to debt. So holding all else constant, I would expect U.S. companies, which face a 40% tax rate, to benefit more from borrowing than Irish companies that face a 12.5% tax rate. So the biggest benefit is a tax benefit.
+
+The second benefit of debt is that debt can sometimes make companies a little more disciplined in the way they take projects. I'll come back and fill in the details, but for companies where there's a separation in owners and managers, stockholders hire managers and managers invest the money as if it's not their own, you could argue that perhaps borrowing money might make them a little more reluctant to take bad projects. Tax benefits add a discipline.
+
+## The Costs of Debt
+
+Let's go to the other side. There are three big costs I've got to factor in when I borrow money.
+
+The first is an expected bankruptcy cost. I don't care how big and mature and stable you as a company, as you borrow more money, you've increased your likelihood of bankruptcy, of defaulting, and that creates an expected bankruptcy cost. In fact, there are two components that go into the expected bankruptcy cost. One, is the probability that you will default, be unable to make your debt payments, and obviously, the more you borrow, the greater the probability. And that is going to be higher at firms which have unstable earnings than stable earnings for any given debt level. Second, there's a cost to bankruptcy. There are two costs associated with bankruptcy. One is, of course, the direct cost, the dead weight cost of actually going bankrupt, because here's where you end up, you end up in bankruptcy court. And in bankruptcy court, your fate is determined by lawyers, not by investors, and that can take a long time. So the direct cost of bankruptcy measures how much of your assets you will end up paying out in legal costs, and it can be substantial. But there is another more subtle and perhaps bigger cost. I call this an indirect cost to bankruptcy. What is an indirect cost to bankruptcy? If people perceive you're in trouble, you're in trouble, and here's why. If your customers think you're in trouble, they stop buying your product. If your employees think you're in trouble, they quit their jobs. If your suppliers think you're in trouble, they demand cash. The perception of being in trouble puts you in trouble. So as you borrow money, this is something you'll have to factor in, you've increased your likelihood that you could get into that debt spiral. That's the expected bankruptcy cost, functions as the probability that you'll be unable to make your debt payments and the cost to bankruptcy.
+
+The second cost is an agency cost. What's an agency cost? Think about the two big players in this game, there's debt and there's equity, right? When you go out and borrow money, you have very different incentives with those lenders than you have with the stockholders. When people lend you money, they just want to get repaid. When stockholders invest their money, they want upside. If you let equity investors run a company, they can make decisions that make them better off but leave lenders holding the bag. Like what? They can borrow money and pay themselves dividends. They can borrow money and take much riskier projects in the projects they describe to you. You think, "Who cares?" If you're are a lender, you better care, and here's what you should do as a follow-up. You should write in covenants or constraints that prevent equity investors from doing these. That becomes a cost you have to factor in when you borrow money is that every time you borrow money, you're constraining yourself. The way I like to describe myself is borrowing money is like putting yourself in a straitjacket, and the more you borrow money the tighter the straitjacket gets.
+
+The third and final cost is lost flexibility. It's nice to have the capacity to borrow money to meet future needs. So if you have debt capacity, it's nice to hold back on some of it just in case, just in case a great project comes along or in a recession. If you borrow and reach your total capacity, you've used up that future financing flexibility.
+
+So here's a trade-off, tax benefits and added discipline on one side, bankruptcy cost, agency cost, and lost flexibility on the other. If the benefits exceed the cost, you should borrow the money. If the cost exceeds the benefits, you shouldn't.
+
+## Unpacking Each Side of the Trade-off
+
+Very quickly, let me hit those points. If you think about the tax benefits of debt, as I said, the tax benefits of debt accrue from a very simple part of the tax code. Interest is tax deductible. As a consequence, if you are in an economy with high tax rates, borrowing money will create value for you because of the tax benefits of debt.
+
+When you talk about added discipline, here is the argument. If you're a manager in an all equity-funded company with lots of cash flows, you're tempted to be sloppy. Sloppy in what sense? If you take a bad project, who's going to notice? See, here is what I'm going to make you do. I'm going to make you borrow money because now you've got to make interest payments on that debt in good times and in bad times, and if you've taken bad projects, you've increased the chance you will not be able to make those debt payments, and as a consequence, you might lose your job. You then go bankrupt. I've tried to make this personal so you have to worry about that when you take projects. Those are the two big benefits.
+
+In terms of the cost, here's the bankruptcy cost. Bankruptcy cost arises because you're unable to make those contractual payments you agreed to make on your debt. Obviously, those costs will increase as you borrow more money, and they will increase more if you are in an unstable business. And second, as I mentioned, your both direct and indirect costs. If you're in a business where those indirect costs are high, why? Because you sell to customers who are on long-term contracts with you and worrying more about your default risk, you might borrow less than an otherwise similar company that does not face those indirect bankruptcy costs.
+
+And second, there's agency costs. Agency cost arises because lenders and equity investors have very different incentives in a company. That is why lenders, when they lend money to a firm, put in constraints and covenants. But here again, the cost is going to vary widely across firms. If you're lending to a firm with physical assets, assets you can see, assets you can monitor, you're less worried than if you're lending to a firm with intangible assets. Lending to a pharmaceutical company or a technology company will always make you more uncomfortable because you cannot monitor the cash. I would expect those types of companies to borrow less than a company with physical tangible assets.
+
+Finally, there is this lost flexibility. If you're in a business where the future is predictable, you know what your needs are, you can borrow a lot more than if you're in a business with uncertain future needs. Because of your uncertain future needs, you should be holding back on debt just in case you'll need that debt capacity.
+
+So that's it, we've got the trade-off. And when you look at a company, here's the place you should start, the analysis of your financing mix. Look at its potential tax benefits and the capacity for added discipline in this company. Look at the expected bankruptcy costs, look at the agency cost, and look at the lost flexibility, and think, at least, in qualitative terms of whether your firm should be one of those firms that should be borrowing a lot more money or a lot less money.
+
+## A Hypothetical World: The Irrelevance Theorem
+
+As a final part of this analysis, let's turn to a hypothetical scenario. I'm going to describe a world to you and I want you to stay in this world with me till I'm done. Let's assume we wake up tomorrow in a world with no taxes, okay? That's good, right? Let's assume that managers do exactly what they should do, take good projects and reject bad projects, they're all really disciplined, no company ever goes bankrupt, equity investors don't lie to lenders, they tell them exactly what they're going to do and they do it, and finally, this is a world where every company knows its future financing needs with certainty.
+
+Think about the trade-off, there are no tax benefits. There's no need for added discipline because managers already do the right thing. There's no bankruptcy costs, no agency costs, and no need for future flexibility. In this world, it doesn't matter how much you borrow. In fact, this is one of corporate finances most famous theorems. In a world with no taxes, no default risk, and no agency costs, the amount of debt you have is irrelevant. Your value as a business is not affected by a debt, and in cost of capital terms, your cost of capital will be the same at every conceivable debt ratio.
+
+The theorem does make some unrealistic assumptions, but it's a good limiting case to think about as we start thinking about the trade-off for debt and equity and when it might matter. So turn to your company, think about the trade-off at least in quantitative terms. Think about the tax benefits and agency costs, bankruptcy costs, ask yourself, "Should my company be the type of company that borrows a lot of money?" Maybe the answer is yes, maybe the answer is no, but there's no way to know until you start asking the questions.

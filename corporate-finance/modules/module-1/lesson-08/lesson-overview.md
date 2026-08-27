@@ -14,12 +14,12 @@ It is standard practice in finance to estimate a beta for a company by running a
 
 ## Videos
 
-| Part | Title | Link |
-|------|-------|------|
-| 1 | Regression Betas - Part 1 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s08.1_010318/1_9zz6ozlw) |
-| 2 | Regression Betas - Part 2 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s08.2_010318/1_txe379de) |
+| Part | Title | Local (720p, in repo) | Original (Kaltura) |
+|------|-------|-----------------------|--------------------|
+| 1 | Regression Betas - Part 1 | [session-8-part-1.mp4](session-8-part-1.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s08.1_010318/1_9zz6ozlw) |
+| 2 | Regression Betas - Part 2 | [session-8-part-2.mp4](session-8-part-2.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s08.2_010318/1_txe379de) |
 
-> **Transcripts:** Session 8 transcripts have not been added to the repo yet.
+> **Transcripts:** cleaned prose available — [pt 1](session-8-part-1.md) · [pt 2](session-8-part-2.md).
 
 ---
 

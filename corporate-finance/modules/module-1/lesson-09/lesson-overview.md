@@ -13,12 +13,12 @@ While we may estimate betas from regressions, betas are determined by choices th
 
 ## Videos
 
-| Part | Title | Link |
-|------|-------|------|
-| 1 | Beta Fundamentals - Part 1 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s09.1_0111818/1_nlpy3l1q) |
-| 2 | Beta Fundamentals - Part 2 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s09.2_011818/1_c26dmrgg) |
+| Part | Title | Local (720p, in repo) | Original (Kaltura) |
+|------|-------|-----------------------|--------------------|
+| 1 | Beta Fundamentals - Part 1 | [session-9-part-1.mp4](session-9-part-1.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s09.1_0111818/1_nlpy3l1q) |
+| 2 | Beta Fundamentals - Part 2 | [session-9-part-2.mp4](session-9-part-2.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s09.2_011818/1_c26dmrgg) |
 
-> **Transcripts:** Session 9 transcripts have not been added to the repo yet.
+> **Transcripts:** cleaned prose available — [pt 1](session-9-part-1.md) · [pt 2](session-9-part-2.md).
 
 ---
 

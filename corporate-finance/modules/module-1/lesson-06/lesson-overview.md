@@ -13,12 +13,12 @@ To determine what you would demand for investing in the equity in a business, yo
 
 ## Videos
 
-| Part | Title | Link |
-|------|-------|------|
-| 1 | Equity Risk Premiums - Part 1 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s6.1_final_121317/1_y9hyueud) |
-| 2 | Equity Risk Premiums - Part 2 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s6.2_final_121317/1_u0q7ak3p) |
+| Part | Title | Local (720p, in repo) | Original (Kaltura) |
+|------|-------|-----------------------|--------------------|
+| 1 | Equity Risk Premiums - Part 1 | [session-6-part-1.mp4](session-6-part-1.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s6.1_final_121317/1_y9hyueud) |
+| 2 | Equity Risk Premiums - Part 2 | [session-6-part-2.mp4](session-6-part-2.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s6.2_final_121317/1_u0q7ak3p) |
 
-> **Transcripts:** Session 6 transcripts have not been added to the repo yet.
+> **Transcripts:** cleaned prose available — [pt 2](session-6-part-2.md).
 
 ---
 
