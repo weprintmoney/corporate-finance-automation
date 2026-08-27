@@ -13,10 +13,10 @@ As companies and investors globalize, we face the challenge of estimating equity
 
 ## Videos
 
-| Part | Title | Link |
-|------|-------|------|
-| 1 | Country Risk Premiums - Part 1 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s07.1_122217/1_kt24z2ko) |
-| 2 | Country Risk Premiums - Part 2 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s07.2_122217/1_zju5k2g3) |
+| Part | Title | Local (720p, in repo) | Original (Kaltura) |
+|------|-------|-----------------------|--------------------|
+| 1 | Country Risk Premiums - Part 1 | [session-7-part-1.mp4](session-7-part-1.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s07.1_122217/1_kt24z2ko) |
+| 2 | Country Risk Premiums - Part 2 | [session-7-part-2.mp4](session-7-part-2.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s07.2_122217/1_zju5k2g3) |
 
 > **Transcripts:** Session 7 transcripts have not been added to the repo yet.
 
