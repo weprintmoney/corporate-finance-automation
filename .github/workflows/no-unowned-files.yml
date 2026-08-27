@@ -1,0 +1,58 @@
+name: No Unowned Files
+
+on:
+  pull_request:
+    paths:
+      - '**.md'
+
+jobs:
+  check-ownership:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check markdown files for owner frontmatter
+        run: |
+          FAILED=0
+          # Get list of changed .md files in this PR
+          git fetch origin ${{ github.base_ref }}
+          CHANGED_FILES=$(git diff --name-only --diff-filter=ACM origin/${{ github.base_ref }}...HEAD -- '*.md' || true)
+
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "No markdown files changed."
+            exit 0
+          fi
+
+          for file in $CHANGED_FILES; do
+            # Skip CLAUDE.md and README.md — these are structural, not owned docs
+            basename=$(basename "$file")
+            if [ "$basename" = "CLAUDE.md" ] || [ "$basename" = "README.md" ] || [ "$basename" = "LICENSE" ]; then
+              continue
+            fi
+
+            # Check for owner in frontmatter (between --- markers)
+            if head -20 "$file" | grep -q '^owner:'; then
+              echo "✅ $file — has owner"
+            else
+              echo "❌ $file — missing owner frontmatter"
+              FAILED=1
+            fi
+          done
+
+          if [ "$FAILED" -eq 1 ]; then
+            echo ""
+            echo "FAILED: Some markdown files are missing 'owner:' in frontmatter."
+            echo "Add 'owner: your-github-handle' to the YAML frontmatter at the top of each file."
+            echo ""
+            echo "Example:"
+            echo "---"
+            echo "title: My Document"
+            echo "owner: hannahstulberg"
+            echo "---"
+            exit 1
+          fi
+
+          echo ""
+          echo "All changed markdown files have owner frontmatter. ✅"
