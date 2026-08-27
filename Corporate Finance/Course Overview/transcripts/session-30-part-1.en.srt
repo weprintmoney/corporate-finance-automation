@@ -1,0 +1,745 @@
+1
+00:00:00,000 --> 00:00:03,003
+♪ [music] ♪
+
+2
+00:00:08,000 --> 00:00:11,220
+In the last session,
+we started our discussion on valuation
+
+3
+00:00:11,220 --> 00:00:15,430
+by talking about two ways you can approach
+valuation. You can value just the equity
+
+4
+00:00:15,430 --> 00:00:20,150
+in a business or value the whole business.
+And we talked about the inputs you need
+
+5
+00:00:20,150 --> 00:00:23,650
+to value a company. In this session,
+I'd like to talk about two
+
+6
+00:00:23,650 --> 00:00:29,480
+of those inputs: cash flows and discount
+rates. When you're doing a discounted cash
+
+7
+00:00:29,480 --> 00:00:33,490
+flow valuation of a company,
+you obviously need to estimate cash flows,
+
+8
+00:00:33,490 --> 00:00:37,510
+but what are those cash flows?
+There are three definitions of cash flows
+
+9
+00:00:37,510 --> 00:00:41,650
+you can get if you focused on
+equity investors. The first,
+
+10
+00:00:41,650 --> 00:00:45,080
+and this is the oldest definition of cash
+flow, is to look at what investors
+
+11
+00:00:45,080 --> 00:00:49,230
+actually get from the company.
+And equity investors get only one cash
+
+12
+00:00:49,230 --> 00:00:52,640
+flow from the company and that is
+dividends. So the oldest version of a
+
+13
+00:00:52,640 --> 00:00:55,780
+discounted cash flow model,
+you discount dividends.
+
+14
+00:00:55,780 --> 00:00:59,510
+Increasingly over the last 20 years as
+we saw in the section on dividends,
+
+15
+00:00:59,510 --> 00:01:03,060
+companies have been returning cash not in
+the form of dividends but in the form
+
+16
+00:01:03,060 --> 00:01:07,350
+of buybacks. So an expanded version of
+cash flow to equity investors looks
+
+17
+00:01:07,350 --> 00:01:11,460
+at dividends plus buybacks,
+but you're still assuming that companies
+
+18
+00:01:11,460 --> 00:01:15,540
+pay out what they can afford to do to
+their stockholders. In the discussion
+
+19
+00:01:15,540 --> 00:01:19,600
+of dividend policy, we also looked at
+potential dividends where we estimate how
+
+20
+00:01:19,600 --> 00:01:23,730
+much a company can pay out in dividends
+by looking at the cash flows leftover
+
+21
+00:01:23,730 --> 00:01:27,960
+after every conceivable need is met,
+reinvestment needs and taxes,
+
+22
+00:01:27,960 --> 00:01:31,660
+and that cash flow is free cash flow to
+equity. Three versions of cash flows
+
+23
+00:01:31,660 --> 00:01:34,690
+for equity investors: dividends,
+dividends plus buybacks,
+
+24
+00:01:34,690 --> 00:01:38,500
+and free cash flow to equity.
+That is, if you're valuing the equity
+
+25
+00:01:38,500 --> 00:01:41,800
+in a company. But what if you're
+valuing the entire business?
+
+26
+00:01:41,800 --> 00:01:45,680
+The cash flow you then have to estimate
+has to be a pre-debt cash flow,
+
+27
+00:01:45,680 --> 00:01:49,060
+a cash flow before debt payments,
+but after taxes and
+
+28
+00:01:49,060 --> 00:01:51,820
+after reinvestment needs.
+To estimate that cash flow,
+
+29
+00:01:51,820 --> 00:01:54,750
+we're going to start with the
+operating income, not net income.
+
+30
+00:01:54,750 --> 00:01:57,970
+We're going to act like we pay
+taxes on that operating income,
+
+31
+00:01:57,970 --> 00:02:00,920
+and we're going to subtract out
+reinvestment needs. What we're left
+
+32
+00:02:00,920 --> 00:02:04,670
+with is a free cash flow but it's
+a free cash flow to the firm.
+
+33
+00:02:04,670 --> 00:02:07,800
+Note that the difference between free cash
+flow to the firm and free cash flow
+
+34
+00:02:07,800 --> 00:02:10,810
+to equity is free cash flow to the firm
+is before debt payments,
+
+35
+00:02:10,810 --> 00:02:14,980
+free cash flow to equity is after debt
+payments. So let's talk about estimating
+
+36
+00:02:14,980 --> 00:02:18,020
+these cash flows using the companies
+we've been talking about through this
+
+37
+00:02:18,020 --> 00:02:21,440
+entire class. Let's start with
+Deutsche Bank. I value
+
+38
+00:02:21,440 --> 00:02:25,730
+Deutsche Bank twice,
+once in 2008 and once in 2013.
+
+39
+00:02:25,730 --> 00:02:30,200
+In 2008, I value Deutsche Bank
+the way I used to value all banks then.
+
+40
+00:02:30,200 --> 00:02:35,180
+I valued based on dividends. Implicitly,
+I was assuming that dividends reflected
+
+41
+00:02:35,180 --> 00:02:39,725
+the cash flows that Deutsche Bank
+could afford to pay out in 2008,
+
+42
+00:02:39,725 --> 00:02:44,480
+and I did a dividend discount model.
+By 2013, though, I was no longer
+
+43
+00:02:44,480 --> 00:02:48,710
+comfortable discounting dividends partly
+because Deutsche's dividends were in flux
+
+44
+00:02:48,710 --> 00:02:52,600
+and partly because I'd lost faith in
+managers and banks paying out what they
+
+45
+00:02:52,600 --> 00:02:55,520
+could afford to in dividends.
+So I estimated the free cash flow
+
+46
+00:02:55,520 --> 00:02:59,130
+to equity. This is actually the
+computation I laid out when we talked
+
+47
+00:02:59,130 --> 00:03:01,870
+about dividend policy would
+estimate the free cash flow
+
+48
+00:03:01,870 --> 00:03:04,630
+to equity for a bank,
+I suggested you start with the net income
+
+49
+00:03:04,630 --> 00:03:09,420
+and you subtract out the reinvestment in
+regulatory capital that the bank has
+
+50
+00:03:09,420 --> 00:03:14,560
+to make. Based on that measure of
+free cash flow, Deutsche's free cash flow
+
+51
+00:03:14,560 --> 00:03:18,130
+to equity in the next year is negative.
+What does that mean?
+
+52
+00:03:18,130 --> 00:03:21,270
+Not only does it say that Deutsche
+cannot afford to pay dividends,
+
+53
+00:03:21,270 --> 00:03:26,140
+it says that Deutsche will have to raise
+equity over time to cover its requirements
+
+54
+00:03:26,140 --> 00:03:30,740
+and reinvestment in regulatory capital.
+So free cash flow to equity for Deutsche
+
+55
+00:03:30,740 --> 00:03:36,130
+in 2013 reflects the fact that I no longer
+trust the dividend payments to be what the
+
+56
+00:03:36,130 --> 00:03:40,874
+cash flows of the bank are. Now, let's
+expand this discussion to Tata Motors.
+
+57
+00:03:40,874 --> 00:03:43,040
+To get the free cash flow
+to equity for Tata Motors,
+
+58
+00:03:43,040 --> 00:03:46,640
+I followed the more conventional route.
+I started with net income.
+
+59
+00:03:46,640 --> 00:03:52,970
+I subtracted out Net CapEx minus
+Depreciation. I subtracted out the change
+
+60
+00:03:52,970 --> 00:03:57,400
+in working capital. And then I brought in
+the cash flows from and to debt,
+
+61
+00:03:57,400 --> 00:04:00,410
+from debt in the form of new debt issues
+and to debt in the form
+
+62
+00:04:00,410 --> 00:04:03,730
+of debt repayments. I got the free
+cash flows to equity every year.
+
+63
+00:04:03,730 --> 00:04:07,920
+And you can see, the numbers shift over
+time and the equity reinvestment rate
+
+64
+00:04:07,920 --> 00:04:12,580
+which measures how much I'm reinvesting
+back of my net income also shifts
+
+65
+00:04:12,580 --> 00:04:17,853
+over time. So free cash flow to equity is
+a cash flow left over after debt payments.
+
+66
+00:04:18,130 --> 00:04:20,380
+Let's look at free cash flow to the firm,
+a pre-debt cash flow,
+
+67
+00:04:20,380 --> 00:04:24,290
+and let's use Disney to illustrate this
+process. In the fiscal year ended
+
+68
+00:04:24,290 --> 00:04:28,120
+September of 2013, here's what
+Disney's numbers looked like.
+
+69
+00:04:28,120 --> 00:04:32,240
+It had operating income of $10,032
+million. Notice the subtle shift away
+
+70
+00:04:32,240 --> 00:04:37,765
+from net income. The effective tax rate
+that Disney paid across its income is 31%.
+
+71
+00:04:37,765 --> 00:04:43,400
+Its CapEx for the year was $5.239 billion.
+That includes acquisitions and its
+
+72
+00:04:43,400 --> 00:04:49,110
+depreciation was $2,192 million.
+To get to the free cash flow to the firm,
+
+73
+00:04:49,110 --> 00:04:52,270
+here's what I'm going to do.
+I'm going to start with my after-tax
+
+74
+00:04:52,270 --> 00:04:56,490
+operating income which is $6.92 billion.
+From that, I'm going to subtract out my
+
+75
+00:04:56,490 --> 00:05:00,200
+net CapEx, the difference between
+capital expenditures and depreciation,
+
+76
+00:05:00,200 --> 00:05:04,050
+and I'm also going to subtract out my
+change in working capital because that
+
+77
+00:05:04,050 --> 00:05:08,020
+drains my cash flows as well.
+My free cash flow to the firm for Disney
+
+78
+00:05:08,020 --> 00:05:12,640
+is $3.188 billion. Note that these are
+cash flows before debt payments.
+
+79
+00:05:12,640 --> 00:05:17,170
+Equity investors will get only a small
+slice of this, but it is an estimate of a
+
+80
+00:05:17,170 --> 00:05:20,370
+pre-debt cash flow. Incidentally,
+using those numbers,
+
+81
+00:05:20,370 --> 00:05:24,390
+I can estimate my reinvestment rate
+which will come in handy when we talk
+
+82
+00:05:24,390 --> 00:05:30,920
+about growth. The reinvestment rate is my
+total net CapEx which is $3,732 million
+
+83
+00:05:30,920 --> 00:05:37,125
+divided by my after-tax operating income
+of $6.92 billion. That gives me about 54%,
+
+84
+00:05:37,125 --> 00:05:43,200
+and that is what Disney reinvested
+in the 2012-2013 financial year.
+
+85
+00:05:43,200 --> 00:05:47,270
+So free cash flow to equity is after debt
+payments, free cash flow to the firm is
+
+86
+00:05:47,270 --> 00:05:49,680
+before debt payments.
+Let's turn our attention
+
+87
+00:05:49,680 --> 00:05:53,460
+to discount rates. When you're doing a
+discounted cash flow valuation,
+
+88
+00:05:53,460 --> 00:05:56,280
+are discount rates a critical
+ingredient in your valuation?
+
+89
+00:05:56,280 --> 00:06:00,540
+Obviously. It is discounted cash flow
+valuation. That said though,
+
+90
+00:06:00,540 --> 00:06:05,250
+I think we pay far too much attention to
+discount rates and valuation and too
+
+91
+00:06:05,250 --> 00:06:09,220
+little attention to cash flows,
+but much of what we've said in the context
+
+92
+00:06:09,220 --> 00:06:12,690
+of capital structure and investment
+analysis about discount rates is going
+
+93
+00:06:12,690 --> 00:06:16,620
+to help us when we talk about discount
+rates when it comes to valuation.
+
+94
+00:06:16,620 --> 00:06:20,050
+Again, remember, if you're
+discounting cash flows to equity,
+
+95
+00:06:20,050 --> 00:06:23,670
+the discount rate you need is a cost of
+equity. And for Deutsche Bank,
+
+96
+00:06:23,670 --> 00:06:29,720
+I estimated the cost of equity in 2008 and
+2013 using exactly the same techniques
+
+97
+00:06:29,720 --> 00:06:33,770
+I used when I computed cost of equity
+for investment analysis.
+
+98
+00:06:33,770 --> 00:06:38,130
+I started with the risk-free rate and
+notice how much that shifted between 2008
+
+99
+00:06:38,130 --> 00:06:43,210
+and 2013. I used a beta that reflected a
+bottom-up beta, and that changed as well,
+
+100
+00:06:43,210 --> 00:06:47,180
+and finally, an equity risk premium
+that reflected the price of risk.
+
+101
+00:06:47,180 --> 00:06:51,470
+Put differently, everything in my inputs
+changed between 2008 and 2013,
+
+102
+00:06:51,470 --> 00:06:55,493
+but my overall cost of equity for
+Deutsche Bank decreased slightly
+
+103
+00:06:55,493 --> 00:07:02,770
+from 9.23% in 2008 to 8.8% in 2013.
+Now, to compute the cost of equity
+
+104
+00:07:02,770 --> 00:07:06,300
+for Tata Motors, I did my analysis
+entirely in repeat terms.
+
+105
+00:07:06,300 --> 00:07:09,910
+Why? Because I'm going to do my valuation
+in repeat terms. I started with the
+
+106
+00:07:09,910 --> 00:07:15,480
+risk-free rate in Indian rupees, 6.57%.
+I used the bottom-up beta for Tata Motors
+
+107
+00:07:15,480 --> 00:07:20,160
+based on automobile companies.
+I multiplied that beta by an equity risk
+
+108
+00:07:20,160 --> 00:07:25,004
+premium that reflects where
+Tata Motors operates, the 7.19%.
+
+109
+00:07:25,004 --> 00:07:28,219
+Bringing those numbers together,
+my cost of equity for Tata Motors
+
+110
+00:07:28,219 --> 00:07:33,750
+is 13.5%, exactly the same cost of equity
+I've been using for Tata Motors all the
+
+111
+00:07:33,750 --> 00:07:37,390
+way through this analysis.
+Finally, let's turn to Disney.
+
+112
+00:07:37,390 --> 00:07:40,930
+Here, because I'm looking at a pre-debt
+cash flow, a cash flow to the firm,
+
+113
+00:07:40,930 --> 00:07:43,910
+I need a cost of capital.
+To get to a cost of capital,
+
+114
+00:07:43,910 --> 00:07:48,250
+I started with a cost of equity for
+Disney. The risk-free rate, the beta,
+
+115
+00:07:48,250 --> 00:07:51,910
+and the risk premium that you see in that
+computation are the numbers we've already
+
+116
+00:07:51,910 --> 00:07:54,896
+computed for Disney.
+The risk-free rate is a U.S. dollar
+
+117
+00:07:54,896 --> 00:07:57,750
+risk-free rate. The beta is a
+bottom-up beta reflecting
+
+118
+00:07:57,750 --> 00:08:03,290
+the five businesses that Disney was in in
+2013. The equity risk premium reflects
+
+119
+00:08:03,290 --> 00:08:08,418
+where Disney does its business.
+The 8.52% is my cost of equity.
+
+120
+00:08:08,850 --> 00:08:12,530
+To get to the cost of debt,
+I start with Disney's actual rating.
+
+121
+00:08:12,530 --> 00:08:16,170
+I used a default spread,
+netted out the marginal tax rate.
+
+122
+00:08:16,170 --> 00:08:20,220
+Remember that because the interest
+saves you taxes at the margin,
+
+123
+00:08:20,220 --> 00:08:24,310
+you have to use the marginal tax rate,
+and the cost of debt after taxes I get
+
+124
+00:08:24,310 --> 00:08:29,530
+is 2.4%. Looking at the weights for equity
+and debt in market value terms,
+
+125
+00:08:29,530 --> 00:08:34,933
+I have 88.4% equity based on the market
+value of equity of $121.9 billion.
+
+126
+00:08:34,933 --> 00:08:39,521
+And I have 11.6% debt ratio based on the
+market value of debt which includes leases
+
+127
+00:08:39,521 --> 00:08:44,686
+of $15.96 billion, my cost of capital
+for Disney is 7.81%.
+
+128
+00:08:44,686 --> 00:08:48,433
+Incidentally, if that number looks
+familiar, it's a number that we used as a
+
+129
+00:08:48,433 --> 00:08:52,695
+hurdle rate for Disney in investment
+analysis. It's also the number from which
+
+130
+00:08:52,695 --> 00:08:56,730
+we started our discussion on optimal
+debt ratios for Disney in the Capital
+
+131
+00:08:56,730 --> 00:09:01,410
+Structure section. The one final point I
+want to add when you talk about valuation
+
+132
+00:09:01,410 --> 00:09:04,910
+that we did not talk about in the context
+of investment analysis and capital
+
+133
+00:09:04,910 --> 00:09:09,420
+structure is in valuation,
+we forecast out cash flows for a company.
+
+134
+00:09:09,420 --> 00:09:12,656
+And as we forecast out cash flows for a
+company, that characteristics of the
+
+135
+00:09:12,656 --> 00:09:16,462
+company might change. In the case of
+Disney, for instance, when I value the
+
+136
+00:09:16,462 --> 00:09:21,349
+company, I would start at a 7.81%
+cost of capital but I will let that cost
+
+137
+00:09:21,349 --> 00:09:25,307
+of capital change over time. Why?
+Because I would expect the beta to change
+
+138
+00:09:25,307 --> 00:09:29,807
+as Disney becomes a more mature company.
+I would expect the debt ratios to change
+
+139
+00:09:29,807 --> 00:09:33,437
+as Disney becomes a more mature company.
+And as those two numbers change,
+
+140
+00:09:33,437 --> 00:09:39,208
+my cost of capital which starts at 7.81%
+is going to end at 7.29%.
+
+141
+00:09:39,208 --> 00:09:43,159
+So in valuation, the cost of capital can
+and should change over time
+
+142
+00:09:43,159 --> 00:09:45,555
+as your company changes over time.
+
+143
+00:09:46,760 --> 00:09:50,060
+So think about doing this for your
+company. Start off by estimating cash
+
+144
+00:09:50,060 --> 00:09:52,600
+flows in the most recent year.
+Don't get ambitious yet and try
+
+145
+00:09:52,600 --> 00:09:56,002
+to forecast cash flows. Look at
+how much your company made and
+
+146
+00:09:56,002 --> 00:10:00,400
+how much it reinvested. Also,
+if you've already got a cost of equity and
+
+147
+00:10:00,400 --> 00:10:04,450
+cost of capital you've estimated for your
+company, get it ready because that's going
+
+148
+00:10:04,450 --> 00:10:07,900
+to be the starting point for discount
+rates in your discounted cash
+
+149
+00:10:07,900 --> 00:10:08,985
+flow valuation.
+
+150
+00:10:08,985 --> 00:10:12,021
+♪ [music] ♪

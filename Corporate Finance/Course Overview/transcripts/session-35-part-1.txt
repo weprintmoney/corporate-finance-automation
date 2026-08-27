@@ -1,0 +1,120 @@
+ In these last few sessions, we've talked about how to value a company. And we said the value of a
+ company is a function of its cash flows, its growth, and its risk. That's what a discounted cash
+ flow valuation tries to do is bring those numbers into a number you attach to the company. In this
+ session, we're going to talk about a much more common way of attaching a number to a company, and
+ that is to price the company. You're saying, "What does that mean?" Well, let's talk about it. When
+ you talk about pricing a company, here's what you're doing. You're trying to attach a number to a
+ company based on how similar companies are being priced out there. I'll use the analogy of real
+ estate. Think about what you do when you buy a house. A realtor shows you a house and gives you a
+ number for the house. But that realtor comes up with the number of the house based on how similar
+ houses have traded for or transacted for in the recent past. That's what you're doing in pricing,
+ and if you break it down, there are three parts to pricing. The first is, you have to find
+ comparable or similar companies out in the market that are traded because you need that trading
+ price. The second is, you've got to convert that traded price into a standardized price. Why?
+ Because price per share is not comparable across companies, and here's why. When I have a price per
+ share of a $100, I can very easily make it $50 per share by doubling the number of shares, having
+ the stock split. That makes the number of shares twice what it was before, so I've got to
+ standardize the price. If you're mystified, in a second, I'll fill in the details. So you've got
+ comparable assets of companies, you've got a standardized price, you compare those prices across
+ the companies. Then you make a judgment call based on what your company looks like relative to
+ those comparable companies. So comparable companies, standardized price, and storytelling make up
+ what a pricing is going to do. So to take a look at that standardized price, let me break it down.
+ In a standardized price, here's what you would see. You would see a multiple. And in the numerator
+ of the multiple, you have some measure of market value. And there are at least three variants you
+ might see. The first is the market value of equity or market capitalization, share price times
+ number of shares. You could see market value of equity plus market value of debt, which is the
+ total value of the firm. Or you might see, market value of equity plus market value of debt minus
+ cash, which is called enterprise value. All three are measures of market pricing of value. In the
+ denominator is where you'll see the variance. You could divide that market value that you got for
+ equity, the firm, or in the enterprise by the revenues of the business. Those revenues can either
+ be stated in dollar values or as drivers of revenues, number of users, number of subscribers. So
+ the first choice is to divide the market value by revenues or revenue drivers. You might divide the
+ market value by earnings. Those earnings can either be to equity investors, earnings per share or
+ net income. Or they can be to the entire business, operating income. You can divide by cash flows.
+ Those cash flows can either be EBITDA, if you're looking at the operating assets of company, or it
+ can be net income plus depreciation, which is a measure of cash flow to equity. Or you can divide
+ by book value, book value of equity, which is the accountants measure of how much the equity in the
+ company is worth or book value of the entire firm, which is book value of equity plus book value of
+ debt, or what accountants like to call invested capital, which is book value of equity plus book
+ value of debt minus cash. In summary, the numerator is always a market value. The denominator is
+ some kind of scaling variable. So with that set up, let's talk about the four steps in using
+ multiples right, or doing pricing well. The first step, if you were to decide to price your company
+ rather than to value it, is to make sure that you've defined and understood the multiple you're
+ using. You're saying, "Well, the multiple I'm using is PE, everybody knows what the PE ratio is."
+ You'd be surprised how many variants there are on commonly used multiples. So the first step is
+ define and make sure what your multiple is okay. Second step, describe the multiple. Sounds fancy,
+ right? But play some money ball. Look at the distribution of your multiple to get a sense of what
+ it looks like. Rather than use rules of thumb for high numbers and low numbers, let the data tell
+ you what's high and what's low. Third step, analyze the multiple. Embedded in every multiple are
+ all of the assumptions about cash flows, growth, and risk you're trying to run away from. So make
+ sure you bring them into the comparison. And the final step, apply the multiple. Define, describe,
+ analyze, apply. The key to doing pricing right is to go through those steps carefully every time
+ you use a multiple. So let's start with a definitional test. When I look at a multiple, there are
+ two questions I always ask. The first is, is this multiple consistently defined? And the second
+ question is, is it uniformly estimated? Let me start with the first of those two questions, is it
+ consistently defined? Here's a simple rule. If your numerator is an equity value, your denominator
+ has to be an equity value as well. If your numerator is a firm or an enterprise value, your
+ denominator is to be a firm or an enterprise value as well. You're mystified, right? So let's take
+ an example. Think of PE ratios, the most widely used multiples in the world. The numerator, the
+ price or market cap, is an equity value. The denominator, earnings per share or net income, is an
+ equity value. Thank God for small blessings. The most widely used multiple in the world passes the
+ consistency test. So in the consistency test, you're checking the numerator and the denominator.
+ We'll do a couple more examples of this in a second, but that's a first stop. The second stop is,
+ remember, you're comparing this multiple across 15 or 20 companies. Make sure you're estimating the
+ multiple the same way for all 15 or 20 companies. You know how difficult a test this is to meet?
+ Think about PE ratios. What am I asking you to do? I am asking you to make sure that the earnings
+ per share is estimated the same way for all 15 and 20 companies. So those are the two questions of
+ the definitional test. Let me use a couple of examples to illustrate the consistency point that I
+ made. I already told you price-earnings ratios are consistent multiples, numerator and denominator
+ equity values. That said though, it's amazing how many variations you can get on the PE ratio for a
+ company. So if you take a company like Coca-Cola and you ask me what the PE ratio is, here's what's
+ going to drive differences across different investors and analysts. In the numerator, you usually
+ have the current price but I've seen some variance that might use an average price over time. It's
+ in the denominator that you get the real variations. I can divide the price per share by earnings
+ per share in the most recent fiscal year. That's called current PE. I could divide price per share
+ by earnings per share in the last four quarters. That's trailing PE. I could divide price per share
+ by expected earnings per share in the next four quarters. That's forward PE. Or I can even divide
+ price per share by expected earnings per share in the year 2027. That's really, really forward PE.
+ You can have earnings per share before extraordinary items or after extraordinary items, before
+ option expensing or after option expensing. I've told people that if you take companies that are
+ widely followed, don't be surprised to see 15, 20, or 25 different numbers passing as PE ratios for
+ the company. You're saying, "So what." Depending on your biases, you're going to latch on to either
+ the lowest of those numbers or the highest of those numbers, so watch out. Here's a second example
+ to illustrate the consistency point. One of the most widely used multiples now in equity research
+ is the EV to EBITDA multiple. In the EV to EBITDA multiple, here's what you're going to see. In the
+ numerator, you're going to see market value of equity plus debt minus cash, enterprise value. And
+ in the denominator, you're going to see EBITDA. In fact, think about it. Why am I netting out cash?
+ Because the interest income from cash is not part of my EBITDA. It's a consistency reason. In fact,
+ if you use that consistency reason, you can already see that if you have a company with cross
+ holdings, to get to an EV to EBITDA for the company, you have to adjust for those cross-holdings.
+ So you have minority holdings in other companies, you got to net it out of the numerator because
+ the operating income from those holdings are not part of your EBITDA. If you have majority
+ holdings, you might have to add on the 40% or 45% or 50% of the EBITDA of the cross holding that
+ hasn't been counted yet. It's a mess, but it's a mess of your own doing. So when you look at
+ multiples, make sure they're consistently defined. Make sure they are uniformly estimated because
+ only then can you start using them. So let's at least set up the second step in the process. You've
+ defined the multiple, the next step is to look at the distribution of these multiples. Practice
+ some basic statistics. So if you look at PE ratios, look at the distribution of PE ratios using EV
+ to EBITDA, look at the distribution. Distribution over what subsample? Start up by looking at the
+ distribution in your own sector, but then look at the distribution for the entire market. You're
+ going to be surprised at some of those characteristics you discover when you look at the
+ distribution. Let me illustrate by showing you PE ratios at the start of 2014 for U.S. companies.
+ Notice that this distribution has a peak to the left and a tail to the right. That is actually
+ typical of almost all multiples. You're saying, "So what?" Basically, the reason you have a peak to
+ the left and a tail to the right is that PE ratio can never be lower than zero. So you have floated
+ zero. It can be any number at the other end of the spectrum. What that does is, when you compute
+ averages for PE ratios, they'll get pulled out by the positive outliers. Here's the lesson I get
+ out of looking at this distribution. When you ask me what the PE ratio for a company is, I can
+ never compare the PE ratio for that company to the average for the sector and draw a conclusion
+ because I might be drawing the wrong conclusion. So I'm going to draw on Stat 101. I was told that
+ when I have asymmetric distributions, rather than use the average, I should be using the median.
+ I'm going to draw on that lesson. So if you ask me is Disney cheap or expensive relative to other
+ entertainment companies, rather than compare Disney's PE ratio to the average for entertainment
+ companies, I'm going to compare it to the median. Basic statistics, but it's amazing how useful it
+ is when you start looking at the actual numbers that underlie distributions. So if you've decided
+ to price your company, here's what I'd like you to start off with. Try to compute different
+ multiple for your company, staying true to the notion of consistency. So do a price to earnings
+ ratio, do a price to book ratio, try an EV to EBITDA, try an EV to sales, but don't do a price to
+ sales or a price to EBITDA. A price to EBITDA and a price to sales would be internally
+ inconsistent. The numerator is an equity value, the denominator is not. Once you have these
+ numbers, you're on your pathway to actually pricing your company rather than just valuing it.

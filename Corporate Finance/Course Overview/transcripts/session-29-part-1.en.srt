@@ -1,0 +1,666 @@
+1
+00:00:00,000 --> 00:00:03,018
+♪ [music] ♪
+
+2
+00:00:08,380 --> 00:00:11,300
+In all of these sessions in corporate
+finance, we've talked about value.
+
+3
+00:00:11,300 --> 00:00:15,010
+We've talked about maximizing value and
+changing value, but we've never talked
+
+4
+00:00:15,010 --> 00:00:18,690
+about how to estimate the value of a
+company. What is the value that you put
+
+5
+00:00:18,690 --> 00:00:22,920
+on a company? In these last few sessions,
+that's the question we're going to try
+
+6
+00:00:22,920 --> 00:00:29,240
+to address. So, let's assume you're trying
+to put a number on a company.
+
+7
+00:00:29,240 --> 00:00:34,180
+To get that number, there are three basic
+ways you can estimate what a company
+
+8
+00:00:34,180 --> 00:00:38,953
+is worth. The first is to do what's
+called an intrinsic valuation.
+
+9
+00:00:39,150 --> 00:00:43,210
+In an intrinsic valuation,
+the value of an asset is the present value
+
+10
+00:00:43,210 --> 00:00:47,380
+of the expected cash flows in the asset.
+You're trying to value business based
+
+11
+00:00:47,380 --> 00:00:51,320
+on its fundamental characteristics.
+There's a second way you can attach a
+
+12
+00:00:51,320 --> 00:00:53,860
+number to a company.
+You can do a relative valuation
+
+13
+00:00:53,860 --> 00:00:57,165
+or appraising. You know what you're trying
+to do here? You're trying to attach a
+
+14
+00:00:57,165 --> 00:01:01,600
+number to a company based on how similar
+companies are being priced out there.
+
+15
+00:01:01,600 --> 00:01:04,570
+There's a third way you can
+attach a number to a company.
+
+16
+00:01:04,570 --> 00:01:08,110
+If the cash flows on a company
+or a business are contingent
+
+17
+00:01:08,110 --> 00:01:11,500
+on something happening,
+you could actually apply option pricing
+
+18
+00:01:11,500 --> 00:01:15,890
+to put a number on a company. Generically,
+these are the only three ways you can
+
+19
+00:01:15,890 --> 00:01:19,990
+attach numbers to companies,
+an intrinsic valuation, appraising,
+
+20
+00:01:19,990 --> 00:01:24,530
+or real options. I'm going to start with
+the intrinsic valuation because it ties
+
+21
+00:01:24,530 --> 00:01:28,470
+most closely to what we've been
+talking about in corporate finance.
+
+22
+00:01:28,470 --> 00:01:31,720
+In an intrinsic valuation,
+the value of a company is the present
+
+23
+00:01:31,720 --> 00:01:37,530
+value of its expected cash flows over its
+lifetime. Well, most of you who've seen
+
+24
+00:01:37,530 --> 00:01:40,870
+these valuations might think of them as
+spreadsheets, and cash flows,
+
+25
+00:01:40,870 --> 00:01:44,480
+and discount rates. When I look at a
+discounted cash flow valuation or
+
+26
+00:01:44,480 --> 00:01:48,510
+an intrinsic valuation,
+I'm seeing answers to four questions I
+
+27
+00:01:48,510 --> 00:01:52,480
+have about any company I analyze.
+Here's the first question.
+
+28
+00:01:52,480 --> 00:01:56,270
+What are my cash flows from existing
+assets? Remember, your company has been
+
+29
+00:01:56,270 --> 00:01:59,980
+around awhile. It's already made
+investments. The cash flows from those
+
+30
+00:01:59,980 --> 00:02:03,950
+investments become the starting point
+for estimating intrinsic value.
+
+31
+00:02:03,950 --> 00:02:06,850
+That's why we look at last year's
+financials, the income you made,
+
+32
+00:02:06,850 --> 00:02:10,070
+the cash flows you made.
+The second question I'm trying to answer
+
+33
+00:02:10,070 --> 00:02:13,950
+is what is the value of growth on this
+company? Notice how I've phrased
+
+34
+00:02:13,950 --> 00:02:17,250
+that question. What is the value of
+growth? I might ask you what your growth
+
+35
+00:02:17,250 --> 00:02:21,090
+rate was, and here's why.
+Growth can create value.
+
+36
+00:02:21,090 --> 00:02:23,940
+It can do nothing for value.
+It can destroy value.
+
+37
+00:02:23,940 --> 00:02:28,020
+The value of growth is a trade-off.
+The good side of growth is that it allows
+
+38
+00:02:28,020 --> 00:02:31,740
+your earnings to grow over time.
+The earnings become larger.
+
+39
+00:02:31,740 --> 00:02:35,240
+The bad side of growth is you have to
+reinvest to create that growth.
+
+40
+00:02:35,240 --> 00:02:39,230
+The net effect is what determines the
+value of growth. What are your cash flows
+
+41
+00:02:39,230 --> 00:02:42,050
+from existing assets?
+What's the value of growth?
+
+42
+00:02:42,050 --> 00:02:45,490
+The third question I've to ask is
+how risky are your cash flows?
+
+43
+00:02:45,490 --> 00:02:48,710
+And the place that shows up in your
+discounted cash flow valuation is in the
+
+44
+00:02:48,710 --> 00:02:52,710
+discount rate. So, your cash flows from
+existing assets show up in your base
+
+45
+00:02:52,710 --> 00:02:56,440
+year numbers. The value of growth shows up
+in the growth rate you use and the
+
+46
+00:02:56,440 --> 00:03:00,078
+reinvestment you put in.
+The risk shows up in the discount rate.
+
+47
+00:03:00,078 --> 00:03:03,950
+There is one final question I need to ask
+and get answer to value your company.
+
+48
+00:03:03,950 --> 00:03:07,509
+When I ask you, "When is your company
+going to become a mature company?"
+
+49
+00:03:07,509 --> 00:03:11,210
+You're saying, "What's a mature company?"
+A mature company is one that grows at a
+
+50
+00:03:11,210 --> 00:03:14,870
+rate less than or equal to the economy.
+And here's why I need to know the answer
+
+51
+00:03:14,870 --> 00:03:18,840
+to that question. In theory,
+a publicly traded company can keep
+
+52
+00:03:18,840 --> 00:03:23,360
+growing forever. I can't estimate cash
+flows forever. But if your cash flows
+
+53
+00:03:23,360 --> 00:03:27,980
+start to grow at a constant rate forever,
+there's a mathematical trick I can use
+
+54
+00:03:27,980 --> 00:03:32,040
+to compute the value of your cash flows in
+one step . And most of us who have done
+
+55
+00:03:32,040 --> 00:03:35,130
+discounted cash flow valuation
+have seen this trick play out as a
+
+56
+00:03:35,130 --> 00:03:39,010
+terminal value. But to you use that trick,
+you got to assume that your cash flows
+
+57
+00:03:39,010 --> 00:03:42,610
+grow at a constant rate forever.
+That's why I asked you when will your
+
+58
+00:03:42,610 --> 00:03:46,220
+company be a mature company.
+Because for your cash flows to grow at a
+
+59
+00:03:46,220 --> 00:03:49,410
+constant rate forever,
+that growth rate has to be less than or
+
+60
+00:03:49,410 --> 00:03:52,960
+equal to the economy. So,
+when you think about valuation,
+
+61
+00:03:52,960 --> 00:03:56,090
+think about the answers to those four
+questions. What are your cash flows
+
+62
+00:03:56,090 --> 00:03:58,860
+from existing assets?
+What's the value of growth?
+
+63
+00:03:58,860 --> 00:04:03,433
+How risky are these cash flows?
+When will my company be a mature company?
+
+64
+00:04:04,480 --> 00:04:07,690
+So, let's set the table.
+When you sit down to value a business,
+
+65
+00:04:07,690 --> 00:04:11,220
+there are two ways you can
+approach valuation. In the first,
+
+66
+00:04:11,220 --> 00:04:14,870
+you wear blinders. All you care about
+are the equity investors.
+
+67
+00:04:14,870 --> 00:04:18,790
+You try to value just the equity in the
+business. What does that mean?
+
+68
+00:04:18,790 --> 00:04:22,870
+You focus on the cash flows equity
+investors get from the business and you
+
+69
+00:04:22,870 --> 00:04:27,720
+discount those cash flows back at the rate
+of return that equity investors demand
+
+70
+00:04:27,720 --> 00:04:31,270
+for investing in the business.
+In corporate finance terminology,
+
+71
+00:04:31,270 --> 00:04:34,780
+you discount your cash flows
+to equity at your cost of equity,
+
+72
+00:04:34,780 --> 00:04:39,000
+you end up with the value of equity.
+This strictest version as a model,
+
+73
+00:04:39,000 --> 00:04:42,730
+your argument is the only cash flow that I
+get as an equity investor from a publicly
+
+74
+00:04:42,730 --> 00:04:46,940
+traded firm is dividends.
+The divided discount model is a special
+
+75
+00:04:46,940 --> 00:04:50,800
+case of an equity valuation model.
+In our discussion of dividends,
+
+76
+00:04:50,800 --> 00:04:53,530
+we talked about potential dividends,
+free cash flow to equity.
+
+77
+00:04:53,530 --> 00:04:58,010
+Think of that as the more expensive
+version of an equity valuation model.
+
+78
+00:04:58,010 --> 00:05:01,660
+In both cases, you're looking at cash
+flows to equity discounting at the cost
+
+79
+00:05:01,660 --> 00:05:05,120
+of equity. There is another way
+you can approach valuation.
+
+80
+00:05:05,120 --> 00:05:08,740
+Rather than the equity-focus,
+you can try to value the entire business.
+
+81
+00:05:08,740 --> 00:05:11,710
+What does that mean?
+You look at the collective cash flow that
+
+82
+00:05:11,710 --> 00:05:16,300
+equity investors and lenders get from the
+company. Equity investors get their cash
+
+83
+00:05:16,300 --> 00:05:19,970
+flows to equity. Lenders get interest
+payments and principal payments.
+
+84
+00:05:19,970 --> 00:05:23,560
+That collective cash flows called
+free cash flow to the firm.
+
+85
+00:05:23,560 --> 00:05:27,080
+You discount that cash flow to weighted
+average of the cost of equity and the cost
+
+86
+00:05:27,080 --> 00:05:30,790
+of debt which is the cost of capital.
+What you get as a present value is the
+
+87
+00:05:30,790 --> 00:05:35,470
+value of the firm. You've got to make
+the decision early in the process.
+
+88
+00:05:35,470 --> 00:05:39,870
+You have to decide when you sit down to do
+valuation, are you valuing just the equity
+
+89
+00:05:39,870 --> 00:05:43,260
+or are you valuing an entire business?
+Now, you might wonder,
+
+90
+00:05:43,260 --> 00:05:46,760
+"How do I make that choice?"
+I'll give you a simple rule.
+
+91
+00:05:46,760 --> 00:05:50,450
+When you cannot estimate free cash flows
+to equity for whatever reason,
+
+92
+00:05:50,450 --> 00:05:54,800
+you might have to focus on just dividends.
+All too often, that was what analysts used
+
+93
+00:05:54,800 --> 00:05:58,060
+to do when they valued banks. They'd say,
+"Look, we cannot estimate free cash flow
+
+94
+00:05:58,060 --> 00:06:01,980
+to equity. We're just going to discount
+dividends." If you can't estimate
+
+95
+00:06:01,980 --> 00:06:05,590
+cash flows, then the choice becomes more
+complex because you can do cash flow
+
+96
+00:06:05,590 --> 00:06:09,910
+to the firm or cash flow to equity.
+Here's the simple rule that I adopt.
+
+97
+00:06:09,910 --> 00:06:15,080
+If you have a company with changing debt
+ratios over time, estimating cash flow
+
+98
+00:06:15,080 --> 00:06:18,890
+to equity becomes a pain because you got
+to estimate how much debt gets repaid,
+
+99
+00:06:18,890 --> 00:06:22,510
+how much debt gets taken on. So,
+when you have shifting, unstable,
+
+100
+00:06:22,510 --> 00:06:26,290
+or unpredictable debt ratios,
+you should be valuing the entire firm.
+
+101
+00:06:26,290 --> 00:06:30,070
+If you have a predictable debt ratio
+that's not going to change over time,
+
+102
+00:06:30,070 --> 00:06:35,120
+then you can do an equity valuation.
+Nine out of 10 discounted cash flow
+
+103
+00:06:35,120 --> 00:06:39,010
+valuations that I do are
+firm valuations because it's very
+
+104
+00:06:39,010 --> 00:06:43,120
+difficult to find a firm with a debt ratio
+you have today is the debt ratio that
+
+105
+00:06:43,120 --> 00:06:47,490
+you're going to have forever. So,
+let's assume you've made that choice,
+
+106
+00:06:47,490 --> 00:06:52,450
+equity or firm. Let's go back to the
+notion of valuation. Because as I said,
+
+107
+00:06:52,450 --> 00:06:56,430
+doing valuation requires inputs,
+and the way you estimate numbers for these
+
+108
+00:06:56,430 --> 00:07:00,300
+inputs will depend on whether you took
+the equity route or the business route.
+
+109
+00:07:00,300 --> 00:07:03,500
+So, let's start with the first question.
+What are my cash flows
+
+110
+00:07:03,500 --> 00:07:06,850
+from existing investments?
+If you're valuing the entire business,
+
+111
+00:07:06,850 --> 00:07:11,280
+that cash flow has to be a pre-debt cash
+flow, a cash flow before debt payments.
+
+112
+00:07:11,280 --> 00:07:14,690
+If you're valuing equity,
+it's going to be a post-debt cash flow.
+
+113
+00:07:14,690 --> 00:07:17,150
+When I ask you what the growth
+in these earnings are going to be?
+
+114
+00:07:17,150 --> 00:07:20,570
+If you're doing an equity valuation,
+your growth has to be in equity earnings,
+
+115
+00:07:20,570 --> 00:07:23,800
+net income or earnings per share.
+If you're valuing the entire business,
+
+116
+00:07:23,800 --> 00:07:27,430
+it's got to be on operating income.
+When I ask you, "How risky are these
+
+117
+00:07:27,430 --> 00:07:30,219
+cash flows?" The discount rate you're
+going to give me if you're doing an equity
+
+118
+00:07:30,219 --> 00:07:33,750
+valuation is the cost of equity,
+whereas if I'm valuing the entire firm,
+
+119
+00:07:33,750 --> 00:07:37,570
+it's going to be the cost of capital.
+When your firm will be a mature firm will
+
+120
+00:07:37,570 --> 00:07:41,840
+be answered exactly the same way
+with both equity and firm valuation.
+
+121
+00:07:41,840 --> 00:07:44,710
+But when you discount cash flows
+to equity at the cost of equity,
+
+122
+00:07:44,710 --> 00:07:48,380
+you've valued just the equity.
+Whereas when you discount cash flows
+
+123
+00:07:48,380 --> 00:07:52,480
+to the firm at the cost of capital,
+you've valued the operating assets of the
+
+124
+00:07:52,480 --> 00:07:56,040
+company and you might have more work to do
+before you get from there to the value
+
+125
+00:07:56,040 --> 00:07:59,770
+of equity. We'll come back and talk about
+those extra steps you need to take.
+
+126
+00:07:59,770 --> 00:08:05,043
+But for the moment, this should give you
+a broad view of how to approach valuation.
+
+127
+00:08:05,780 --> 00:08:09,636
+Now, as you've done this class,
+you probably have wondered whether
+
+128
+00:08:09,636 --> 00:08:13,780
+you can value your own company.
+Well, we've started on that process by
+
+129
+00:08:13,780 --> 00:08:16,829
+looking at the two different ways
+you can approach valuation.
+
+130
+00:08:16,829 --> 00:08:20,975
+You could value just the equity in your
+company or value the entire business.
+
+131
+00:08:20,975 --> 00:08:23,680
+In the next session or two,
+we're going to talk about how to get
+
+132
+00:08:23,680 --> 00:08:27,140
+the cash flows and discount rates.
+And you're going to see much of the work
+
+133
+00:08:27,140 --> 00:08:29,320
+you need to do, you've already done.
+
+134
+00:08:29,320 --> 00:08:32,324
+♪ [music] ♪
