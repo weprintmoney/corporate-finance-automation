@@ -12,10 +12,10 @@ This lesson lays out the first principles of corporate finance and the broad the
 
 Two required video modules for this lesson. Watch with slides open and take notes.
 
-| Part | Title | Link |
-|------|-------|------|
-| 1 | Introduction to Corporate Finance — Part 1 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s01.1_FINAL_120217/1_nxqe3jle) |
-| 2 | Introduction to Corporate Finance — Part 2 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s01.2_FINAL_120212/1_y26w7b07) |
+| Part | Title | Local (720p, in repo) | Original (Kaltura) |
+|------|-------|-----------------------|--------------------|
+| 1 | Introduction to Corporate Finance — Part 1 | [session-1-part-1.mp4](session-1-part-1.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s01.1_FINAL_120217/1_nxqe3jle) |
+| 2 | Introduction to Corporate Finance — Part 2 | [session-1-part-2.mp4](session-1-part-2.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s01.2_FINAL_120212/1_y26w7b07) |
 
 > **Transcripts:** Session 1 transcripts have not been added to the repo yet.
 
