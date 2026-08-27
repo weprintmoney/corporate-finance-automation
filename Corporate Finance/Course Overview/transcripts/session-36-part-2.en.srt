@@ -1,0 +1,625 @@
+1
+00:00:00,275 --> 00:00:03,251
+♪ [music] ♪
+
+2
+00:00:08,760 --> 00:00:12,227
+So now that we have a measure of the
+quality investment, what next?
+
+3
+00:00:13,230 --> 00:00:16,980
+To look at what next,
+let's think about the trade-off on debt.
+
+4
+00:00:16,980 --> 00:00:19,910
+On the trade-off on debt,
+I talked about the two significant
+
+5
+00:00:19,910 --> 00:00:24,010
+benefits that debt brings into the game.
+The biggest is the tax benefit.
+
+6
+00:00:24,010 --> 00:00:27,470
+Interest is tax deductible,
+cash flows to equity in most parts of the
+
+7
+00:00:27,470 --> 00:00:31,520
+world are not. So when I borrow money,
+I create a tax benefit.
+
+8
+00:00:31,520 --> 00:00:34,430
+The higher my marginal tax rate,
+the greater the tax benefit,
+
+9
+00:00:34,430 --> 00:00:37,940
+the more I should borrow.
+There is a secondary benefit to debt.
+
+10
+00:00:37,940 --> 00:00:41,450
+Sometimes, in some companies,
+borrowing money can make the company more
+
+11
+00:00:41,450 --> 00:00:44,770
+disciplined in the way it picks projects.
+That can help you in terms
+
+12
+00:00:44,770 --> 00:00:48,180
+of increasing value.
+Those two benefits have to be weighed
+
+13
+00:00:48,180 --> 00:00:52,950
+off against three significant costs.
+The first is a bankruptcy cost.
+
+14
+00:00:52,950 --> 00:00:55,790
+When you borrow money,
+you increase the likelihood of bankruptcy.
+
+15
+00:00:55,790 --> 00:01:00,000
+The expected bankruptcy cost is a product
+of that likelihood of probability
+
+16
+00:01:00,000 --> 00:01:04,260
+of bankruptcy and the cost of bankruptcy.
+The cost of bankruptcy can be either
+
+17
+00:01:04,260 --> 00:01:08,660
+direct cost, the cost occurred after you
+go bankrupt, or an indirect cost,
+
+18
+00:01:08,660 --> 00:01:12,260
+which is a function of what happens to
+your company when people think you're
+
+19
+00:01:12,260 --> 00:01:16,670
+in trouble. There is an agency cost.
+Every time you borrow money,
+
+20
+00:01:16,670 --> 00:01:20,570
+you create a potential for conflicts,
+conflict between equity investors
+
+21
+00:01:20,570 --> 00:01:24,630
+and lenders, and it's usually resolved by
+putting constraints on the company,
+
+22
+00:01:24,630 --> 00:01:27,950
+covenants in loan agreements.
+As you borrow money,
+
+23
+00:01:27,950 --> 00:01:31,170
+you're increasing those constraints,
+and that's got to be factored into your
+
+24
+00:01:31,170 --> 00:01:34,060
+debt decision. And finally,
+every time you borrow money,
+
+25
+00:01:34,060 --> 00:01:38,260
+you give up some future flexibility.
+So from a purely qualitative standpoint,
+
+26
+00:01:38,260 --> 00:01:41,580
+if you ask me, should I borrow money,
+it's this tradeoff that drives
+
+27
+00:01:41,580 --> 00:01:44,970
+that decision. Now, you can, of course,
+convert this trade-off
+
+28
+00:01:44,970 --> 00:01:48,710
+into an actual choice.
+So when we look at the optimal mix of debt
+
+29
+00:01:48,710 --> 00:01:52,320
+and equity, we bring that trade-off into
+play into the cost of capital.
+
+30
+00:01:52,320 --> 00:01:55,390
+So here's what happens.
+As you borrow more money,
+
+31
+00:01:55,390 --> 00:01:59,590
+you are replacing more expensive equity
+with cheaper debt. That's good news,
+
+32
+00:01:59,590 --> 00:02:02,170
+but as you borrow more money,
+here's what you're doing to your cost
+
+33
+00:02:02,170 --> 00:02:05,900
+of equity and your cost of debt.
+Your cost of equity is going to become
+
+34
+00:02:05,900 --> 00:02:10,340
+higher because your equity investors bear
+more risk when you borrow more money.
+
+35
+00:02:10,340 --> 00:02:15,150
+We show this as a higher beta and a higher
+cost of equity. Your lenders will also see
+
+36
+00:02:15,150 --> 00:02:19,340
+more risk in you as you borrow more money,
+so the default spreads that they charge
+
+37
+00:02:19,340 --> 00:02:22,320
+will go up, and with that,
+the cost of debt will go up.
+
+38
+00:02:22,320 --> 00:02:26,740
+It's the net effect that drives your cost
+of capital. And as we saw,
+
+39
+00:02:26,740 --> 00:02:29,520
+as you initially borrow money,
+your cost of capital might go down,
+
+40
+00:02:29,520 --> 00:02:33,420
+but as you borrow more and more money,
+there's a tipping point at which your cost
+
+41
+00:02:33,420 --> 00:02:37,190
+of capital starts to increase.
+Your optimum mix of debt and equity is the
+
+42
+00:02:37,190 --> 00:02:41,110
+one that maximizes your value as a
+business by minimizing your cost
+
+43
+00:02:41,110 --> 00:02:46,870
+of capital. Now, in terms of getting to
+that optimal mix, we'd added some caveat.
+
+44
+00:02:46,870 --> 00:02:51,090
+There are two basic questions you need to
+address once you have an optimal mix,
+
+45
+00:02:51,090 --> 00:02:55,230
+how quickly do I need to move to that mix?
+And in what form? To answer the
+
+46
+00:02:55,230 --> 00:02:58,330
+first question, we asked,
+how much your urgency is there in the fact
+
+47
+00:02:58,330 --> 00:03:01,194
+that your actual debt ratio is different
+from the optimal?
+
+48
+00:03:01,194 --> 00:03:02,613
+For an under-levered firm,
+
+49
+00:03:02,613 --> 00:03:05,400
+a firm with too little debt,
+the question we asked was,
+
+50
+00:03:05,400 --> 00:03:09,510
+how likely is it that you'll be taken
+over? The greater the likelihood,
+
+51
+00:03:09,510 --> 00:03:12,710
+the quicker the move has to be.
+With an over-levered firm,
+
+52
+00:03:12,710 --> 00:03:14,740
+one with too much debt,
+the question we asked was,
+
+53
+00:03:14,740 --> 00:03:17,800
+are you under bankruptcy threat?
+If you're under bankruptcy threat,
+
+54
+00:03:17,800 --> 00:03:21,820
+you need to do something quickly.
+So the question of whether you move fast
+
+55
+00:03:21,820 --> 00:03:26,680
+or slow to your optimal will depend on how
+much your urgency there is in the process.
+
+56
+00:03:26,680 --> 00:03:29,690
+But once you've made the decision,
+you still have to decide how to move
+
+57
+00:03:29,690 --> 00:03:34,010
+to the optimal, and there are two ways you
+can do it. One is you can recapitalize,
+
+58
+00:03:34,010 --> 00:03:37,900
+change your mix of debt and equity.
+The second is you can take new projects.
+
+59
+00:03:37,900 --> 00:03:40,590
+Which one you choose will depend on
+whether you've good projects.
+
+60
+00:03:40,590 --> 00:03:44,330
+If you have good projects,
+my recommendation is you borrow the money
+
+61
+00:03:44,330 --> 00:03:47,470
+to take those projects if you're
+under-levered, or raise equity to take
+
+62
+00:03:47,470 --> 00:03:50,840
+those projects if you are over-levered.
+You'll get a double whammy.
+
+63
+00:03:50,840 --> 00:03:53,910
+Not only do you move to your optimal mix
+of debt and equity and thus increase
+
+64
+00:03:53,910 --> 00:03:57,580
+your value, but you also get a positive
+net present values of the projects
+
+65
+00:03:57,580 --> 00:04:02,130
+you take. Now, in terms of the right kind
+of debt for your company,
+
+66
+00:04:02,130 --> 00:04:05,170
+the answer is very simple.
+Tell me what kind of assets you have
+
+67
+00:04:05,170 --> 00:04:08,720
+as a company, the projects you take,
+and I'll give you the right kind of debt
+
+68
+00:04:08,720 --> 00:04:12,940
+for your company. If your assets are
+long-term assets that generate cash flows
+
+69
+00:04:12,940 --> 00:04:16,730
+in euros, the right kind of debt for you
+is long-term euro debt.
+
+70
+00:04:16,730 --> 00:04:21,090
+By matching up your debt to your assets,
+here's what you do. You're able to borrow
+
+71
+00:04:21,090 --> 00:04:24,810
+more money without exposing yourself to
+default risk. You get the best
+
+72
+00:04:24,810 --> 00:04:29,610
+of both worlds. You get debt that behaves
+like equity. You get the tax advantages
+
+73
+00:04:29,610 --> 00:04:34,500
+with all of the flexibility of equity.
+In the context of dividend policy,
+
+74
+00:04:34,500 --> 00:04:37,910
+the key number we talked about was
+potential dividend, the free cash flow
+
+75
+00:04:37,910 --> 00:04:42,740
+to equity. The free cash to equity is the
+cash left over after you've met every
+
+76
+00:04:42,740 --> 00:04:47,780
+conceivable need, CapEx, working capital,
+debt payments. That is what you can
+
+77
+00:04:47,780 --> 00:04:50,180
+pay out. And remember,
+that free cash flow to equity can be a
+
+78
+00:04:50,180 --> 00:04:53,490
+negative number. So let's start easy.
+If you have negative free cash flows
+
+79
+00:04:53,490 --> 00:04:56,470
+to equity, you have no business returning
+cash to your stockholders.
+
+80
+00:04:56,470 --> 00:05:00,080
+If you have positive free cash flows to
+equity, you can choose to return all of it
+
+81
+00:05:00,080 --> 00:05:04,420
+or none of it. And if you decide to return
+none of it, your cash balance
+
+82
+00:05:04,420 --> 00:05:08,520
+will increase. Is that a bad thing?
+Not necessarily if investors trust you
+
+83
+00:05:08,520 --> 00:05:11,810
+with the cash. The key word I said in
+dividend policy is trust.
+
+84
+00:05:11,810 --> 00:05:15,170
+To the extent that you've earned the trust
+of your investors, you can
+
+85
+00:05:15,170 --> 00:05:19,540
+accumulate cash. If they don't trust you,
+they're going to demand their cash back,
+
+86
+00:05:19,540 --> 00:05:23,800
+and who can blame them? And finally,
+when you turn to valuation,
+
+87
+00:05:23,800 --> 00:05:27,880
+make a decision just like you did in
+capital budgeting. Are you valuing just
+
+88
+00:05:27,880 --> 00:05:31,210
+the equity in the business? In which case,
+here is what you need to do.
+
+89
+00:05:31,210 --> 00:05:34,800
+Estimate the cash flows to equity,
+which can be in the simplest example
+
+90
+00:05:34,800 --> 00:05:38,720
+dividends or in the more expensive example
+of free cash to equity,
+
+91
+00:05:38,720 --> 00:05:41,730
+discount them back at the cost of equity,
+come up with the value of equity
+
+92
+00:05:41,730 --> 00:05:45,510
+in the company. If you decide to value the
+whole business, the process gets
+
+93
+00:05:45,510 --> 00:05:49,950
+more complex. You estimate pre-debt cash
+flows, free cash flows to the firm,
+
+94
+00:05:49,950 --> 00:05:53,600
+you discount those back at the cost of
+capital, you come up with the value of the
+
+95
+00:05:53,600 --> 00:05:58,420
+operating assets. Then tie up the loose
+ends. Add cash, add cross holdings,
+
+96
+00:05:58,420 --> 00:06:02,540
+subtract debt, and if you have equity
+options, take care of those before you
+
+97
+00:06:02,540 --> 00:06:08,380
+come up with a value per share.
+Overall of this, I've kept referring back
+
+98
+00:06:08,380 --> 00:06:12,540
+to the big picture. So let me return and
+end this class with the same big picture
+
+99
+00:06:12,540 --> 00:06:16,300
+that we started this class with.
+Let me repeat again the three principles
+
+100
+00:06:16,300 --> 00:06:20,630
+that govern corporate finance and let's
+see if, at the end of 36 sessions,
+
+101
+00:06:20,630 --> 00:06:24,690
+there's a little more heft to each of
+these principles. The first principle is
+
+102
+00:06:24,690 --> 00:06:27,470
+the investment principle.
+Here's what it says,
+
+103
+00:06:27,470 --> 00:06:31,470
+"When you as a company go out and make
+investments, make sure you earn a return
+
+104
+00:06:31,470 --> 00:06:34,960
+that is greater than your hurdle rate,"
+but now, we have a basis
+
+105
+00:06:34,960 --> 00:06:38,370
+for those returns. Those return should be
+based on cash flows,
+
+106
+00:06:38,370 --> 00:06:42,050
+should reflect the timing of those cash
+flows, and have all side effects built
+
+107
+00:06:42,050 --> 00:06:46,140
+into them. That's investment return
+process. The hurdle rate should reflect
+
+108
+00:06:46,140 --> 00:06:48,850
+the risk of the investments,
+and we've talked about what type of risk
+
+109
+00:06:48,850 --> 00:06:52,210
+should be in the hurdle rate,
+and should also reflect where you get
+
+110
+00:06:52,210 --> 00:06:56,510
+your money, the mix of debt and equity.
+The financing principle has two
+
+111
+00:06:56,510 --> 00:06:59,670
+sub-principles to it.
+The right financing mix for your company
+
+112
+00:06:59,670 --> 00:07:03,060
+is the one that minimizes your hurdled
+rate and maximizes your value,
+
+113
+00:07:03,060 --> 00:07:05,870
+so look for that mix.
+And the right kind of debt for your
+
+114
+00:07:05,870 --> 00:07:10,270
+company is the one that best matches your
+assets. And finally,
+
+115
+00:07:10,270 --> 00:07:13,760
+there's a dividend principle.
+If you cannot find investments that make
+
+116
+00:07:13,760 --> 00:07:18,040
+your hurdle rate, find a way to get the
+cash back to your stockholders.
+
+117
+00:07:18,040 --> 00:07:21,200
+Whether you do it in the form of dividends
+or buybacks will depend on what kind
+
+118
+00:07:21,200 --> 00:07:25,110
+of stockholders you have and what they
+prefer. So the first principles
+
+119
+00:07:25,110 --> 00:07:29,870
+of corporate finance are simple.
+It is in the process of practicing them
+
+120
+00:07:29,870 --> 00:07:35,460
+that we make them much too complex and we
+end up making mistakes. So when in doubt,
+
+121
+00:07:35,460 --> 00:07:39,560
+go back to these first principles.
+It's amazing how often they can give you
+
+122
+00:07:39,560 --> 00:07:43,820
+the right answer to even the most
+complicated questions you face in running
+
+123
+00:07:43,820 --> 00:07:47,540
+a business. Thank you very much for
+listening for these 36 sessions.
+
+124
+00:07:47,540 --> 00:07:50,600
+I've enjoyed this journey,
+and I hope that you've learned something
+
+125
+00:07:50,600 --> 00:07:51,820
+along the way as well.
+
+126
+00:07:52,200 --> 00:07:55,206
+♪ [music] ♪

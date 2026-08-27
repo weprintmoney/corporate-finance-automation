@@ -1,0 +1,107 @@
+ So at this stage of the process, let's inquire all the inputs we already have. In the context of a
+ discounted cash flow valuation, we've talked about cash flows, we've talked about coming up with
+ discount rates, and we've talked about estimating growth. In this session, I'd like to bring that
+ process to closure by looking at the biggest number you often have in a discounted cash flow
+ valuation which is the terminal value. So let's think about why we need a terminal value to apply
+ closure in a discounted cash flow valuation. The value of an asset is the present value of its
+ expected cash flows over time, that's always true. So if you have a 15-year asset, you produce cash
+ flows for the next 15 years, you discount them back, you have a value for the asset. With a
+ publicly traded company though, your cash flows can go on and on and on forever. You cannot
+ estimate cash flows forever, so here's what we do in valuation. We estimate cash flows for a finite
+ period, 5 years, 10 years, and at the end of the period, we estimate a terminal value to capture
+ what we think this company will be worth at the end of that period. That terminal value is what we
+ want to talk about in this session. In practice, there are three ways you would see people
+ estimating the terminal value. The first is to use a stable growth rate. Assume your cash flows
+ grow at a constant rate forever beyond year 5 or 10, what does that get you? It gets you an
+ infinite series in mathematics, which can be...which allows you to compute the value by taking the
+ cash flow in the year after your terminal year, year 11 if you're looking at year 10 or year 6 if
+ you're looking at year 5, and dividing by the difference between your discount rate and your growth
+ rate. It's called a perpetual growth model. The second way you can estimate a terminal value is to
+ assume that at the end of that 5 or 10 year period, you liquidate the company. What does
+ liquidation mean? You sell off the assets of the company, you get the best price you can for them
+ and use that as your estimated terminal value. There's a third way of estimating terminal value
+ that many analysts use, which I do not think fits, and that is to assume that at the end of year 5
+ or 10, your terminal value will be a multiple of some operating metric. For instance, in many
+ discounted cash flow valuations, the terminal value would be 6 times EBITDA or 10 times earnings.
+ Think of where those 6 times and 10 times come from. They come from looking at other companies and
+ what they trade at in the market today. In other words, you made the biggest number in your
+ discounted cash flow valuation a pricing, and that basically undercuts the whole notion of
+ intrinsic value. So in effect, there are two ways of estimating terminal value. One is the
+ perpetual growth model and the other is liquidation value, and for most healthy going concerns it's
+ a perpetual growth model that you will end up using. So let's take a closer look at that perpetual
+ growth model. To get my value in year 10, I need my cash flow in year 11, and I need a cost of
+ capital and a growth rate to use to get the terminal value, that's if I'm valuing the entire firm.
+ If I'm valuing equity, I need the cash flow to equity in year 11 and the cost of equity and the
+ growth rate forever beyond that point in time. That equation is an incredibly powerful one but it
+ can very easily lead you into a maze and cause you to lose control of your discounted cash flow
+ valuations. So there are four simple rules I'm going to suggest to keep your terminal value in
+ check. Here's the first one, this growth rate that you're assuming is your growth rate forever
+ comes with a cap. What do I mean by a cap? When you tell me your cash flows will grow at a fixed
+ rate forever, that growth rate has to be less than or equal to the growth rate of the economy in
+ which you operate. Notice, I've given you the freedom to define that economy as the U.S. economy,
+ the global economy, or even a local economy depending on the company you're valuing, but it has to
+ be less than or equal to the growth rate of that economy. Why? Because if you let this cash flow
+ grow at a rate faster than the growth rate of the economy, your company, sooner or later, will
+ become the economy. The challenge then becomes how do we decide what the growth rate in the economy
+ is? I've suggested a simple rule in prior sessions and that is to use your risk free rate as your
+ proxy for the growth rate of the economy, and here's why it works. Embedded in your risk-free rate
+ is the expected inflation which should help you in your terminal growth rate. Embedded in your
+ risk-free rate is a real interest rate, and in the long term, your real interest rate and the real
+ growth rate in the economy have to converge. It will keep your valuations disciplined, it will keep
+ your valuations also from getting out of control. Now notice I said that your growth rate has to be
+ less than or equal to the growth rate of the economy. In 2017, for instance, where the risk-free
+ rate in U.S. dollars was 2.1%, the cap on your growth rate will also become 2.1%. That is if you
+ follow my rigid rule of letting the risk-free rate be a nominal growth rate, but it doesn't have to
+ be 2.1%. It could be 1.5%, it could be 1%, it can be 0%, it can be -2%. It's a choice that many
+ analysts don't make, but you can let you cash flows decline at a fixed rate beyond your terminal
+ year. What is that going to do to your company? Your company will peak in your 5 or 10 which is
+ your last year of calculation and then it will become smaller over time before effectively
+ disappearing. So first rule is obey that growth gap because if you violate that rule, your terminal
+ values will explode on you. Here's a second suggestion, don't wait too long to put your company to
+ stable growth. In my discounted cash flow valuations of companies, I almost never go beyond a
+ 10-year growth period. That strikes some people as conservative because they will start naming
+ companies that have grown for longer than 10 years. They'd say, "What about Microsoft? What about
+ Google? What about Apple?" The very fact that we can name these companies that have grown for
+ longer than 10 years should tell you that they're the exceptions rather than the rule. You should
+ never value a company to be an exception, and 10 years is around the 90th or 95th percentile of
+ growth periods for high growth companies. So when you look at analysts projecting out 25 or 30
+ years of growth, be cautious because those growth periods could happen but they're unlikely. So cap
+ your growth rate, and don't wait too long to put your company into stable growth. So let me try
+ this on my companies and in doing this, I'm going to draw on a very simple proposition. It's not
+ how quickly you grow that I worry about, it's how much value you create from that growth. Let me
+ back up. If you grow but you grow by taking projects around your cost of capital, your growth has
+ no value. So when we talk about high growth periods we're also talking about growth accompanied by
+ excess returns, earning more than your cost of capital. So the key question you need to ask when
+ you sit down to value your companies, what are my company's competitive advantages and how
+ sustainable are they? The bigger your competitive advantages and the more sustainable they are, the
+ longer your growth period can be. And so if you have a company like Coca-Cola which is one of the
+ most valuable brand names in the world, you can see why your growth period might be 10 years. But
+ if you have competitive advantages that are minor or can be very quickly chipped away by
+ competition, you should be a lot more cautious about long growth periods. The scaling factor should
+ also be taken into account. If your company is a small company in a big market, you can allow for
+ long growth periods, but if it's a large company in a mature market, you need to be a lot more
+ cautious. So let's try this for the companies that I'm looking at. Let me start with Disney. I'm
+ going to give Disney a 10 year growth period. Before you get too excited, I'm not going to give it
+ too high a growth rate, only 6.8% but I'm going to allow it to grow for 10 years because I think
+ Disney has very strong competitive advantages. After all, you can't recreate Mickey. Next, let me
+ move to Vale, I'm going to treat Vale as a mature company. It's a global mining company, it's
+ already one of the largest iron ore mining companies in the world, it is the largest iron ore
+ mining company in the world. I can't see it growing at 10%, 12%, or 15% a year so I'm going to make
+ it a mature company which means that I don't have a growth period to estimate. Let's move on to
+ Tata Motors. I'm going to give Tata Motors a growth period of about five years, and I think the
+ growth is going to come, not from its domestic production alone but from Jaguar and Land Rover
+ continuing to grow in global markets. A combination of being in a very large growing market, which
+ is India, for automobiles and Jaguar and Land Rover is going to give it some growth but I'm going
+ to be cautious. I'm going to be cautious because Tata Motors is part of a business, the automobile
+ business, where earning more than the cost of capital is more the exception than the rule, so I'm
+ going to give them a five year growth period. So Disney has a 10 year growth period, Vale is a
+ mature company already, Tata Motors has a five year growth period. Let me close off by looking at
+ Baidu. Baidu has two advantages, one is it in a large and growing market, the Chinese online
+ market, and it's also got a dominant position at market partly because the Chinese government has
+ stepped in and kept the competition out. For those two reasons, I'm going to give it a 10 year
+ growth period. So 10, 5, 0, and 10 for the four companies reflecting very different competitive
+ advantages and sustainability in each of these companies. So that's what I'd like you to do for
+ your company next. You've talked about growth, you've estimated a growth rate, but make this
+ valuation yours by thinking about your company's competitive advantages. How long the growth will
+ last, and then putting your company into stable growth. We'll talk next about what parameters you
+ might have to change when you make your company a mature company.

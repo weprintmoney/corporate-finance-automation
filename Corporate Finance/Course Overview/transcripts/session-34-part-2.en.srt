@@ -1,0 +1,599 @@
+1
+00:00:00,000 --> 00:00:03,000
+♪ [music] ♪
+
+2
+00:00:08,710 --> 00:00:11,900
+So now, that we've talked about not just
+the mechanics of valuation but
+
+3
+00:00:11,900 --> 00:00:15,200
+how to convert a story into valuation,
+let's build on that by talking
+
+4
+00:00:15,200 --> 00:00:18,600
+about the value of control.
+What is the value of control
+
+5
+00:00:18,600 --> 00:00:22,740
+in the company and how do you come up
+with that number? To answer that question,
+
+6
+00:00:22,740 --> 00:00:27,230
+I'm going to go back to a page that
+you saw at the very start of this class.
+
+7
+00:00:27,230 --> 00:00:30,860
+I talked about how corporate finance's
+built on three principles, right?
+
+8
+00:00:30,860 --> 00:00:33,670
+The investment principle,
+the financing principle,
+
+9
+00:00:33,670 --> 00:00:38,070
+and the dividend principle.
+Every principle in corporate finance is
+
+10
+00:00:38,070 --> 00:00:42,158
+embedded somewhere in your valuation
+and here's how. The investment principle
+
+11
+00:00:42,158 --> 00:00:44,897
+drives your return on capital
+and your reinvestment rate
+
+12
+00:00:44,897 --> 00:00:47,255
+and through your return on capital
+and your reinvestment rate,
+
+13
+00:00:47,255 --> 00:00:49,974
+it drives your growth rate.
+The financing principle
+
+14
+00:00:49,974 --> 00:00:53,413
+determines a financing mix you use and
+the type of debt you have, and through
+
+15
+00:00:53,413 --> 00:00:56,677
+those numbers, it drives your cost of
+capital, the discount rate you use and the
+
+16
+00:00:56,677 --> 00:01:01,111
+discounted cash valuation. The dividend
+principle shows up in your reinvestment
+
+17
+00:01:01,111 --> 00:01:04,176
+rate because the more cash you choose
+to return to your stockholders,
+
+18
+00:01:04,176 --> 00:01:05,847
+the less you reinvest.
+
+19
+00:01:05,847 --> 00:01:10,440
+You could actually argue that everything
+in corporate finance is part of valuation
+
+20
+00:01:10,440 --> 00:01:14,150
+and that's effectively what I've tried to
+do here. I've taken the investment
+
+21
+00:01:14,150 --> 00:01:17,890
+decisions that Disney has made,
+translated those investment decisions
+
+22
+00:01:17,890 --> 00:01:21,353
+into the current operating income,
+the return capital they generate and
+
+23
+00:01:21,353 --> 00:01:24,730
+their expected growth rate.
+I've taken the financing decision,
+
+24
+00:01:24,730 --> 00:01:29,600
+the choice they made of 11.5% debt and
+88.5% equity to come up with a cost
+
+25
+00:01:29,600 --> 00:01:34,520
+of capital of 7.81% that drives my
+discounted cash valuation.
+
+26
+00:01:34,520 --> 00:01:37,210
+And the dividend decision
+effects the reinvestment rate and
+
+27
+00:01:37,210 --> 00:01:40,630
+through the reinvestment rate drives the
+growth rate and drives the value
+
+28
+00:01:40,630 --> 00:01:44,424
+of the company. You're saying, "Why are
+we doing this?" The value that I got for
+
+29
+00:01:44,424 --> 00:01:48,996
+Disney as a company reflects the choices
+that Disney has made on the investment,
+
+30
+00:01:48,996 --> 00:01:52,745
+the dividend, and the financing
+principles. Could you have made different
+
+31
+00:01:52,745 --> 00:01:56,122
+decisions? Through this class,
+we've talked about what Disney does well
+
+32
+00:01:56,122 --> 00:02:00,703
+and what Disney does badly, what we might
+change at Disney if we ran the company
+
+33
+00:02:00,703 --> 00:02:04,890
+and what we would leave alone. Now,
+here's your chance to bring those numbers
+
+34
+00:02:04,890 --> 00:02:09,060
+into play. So, here's what I did,
+I decided to look at how I might be able
+
+35
+00:02:09,060 --> 00:02:13,830
+to change the value at Disney.
+And let me step back and look at the four
+
+36
+00:02:13,830 --> 00:02:17,940
+parameters in my valuation that I could
+potentially change by changing the way the
+
+37
+00:02:17,940 --> 00:02:21,980
+company is run. By changing the
+way my existing assets are run,
+
+38
+00:02:21,980 --> 00:02:25,970
+I change my base here, cashflow. So maybe,
+maybe if I'm running my existing
+
+39
+00:02:25,970 --> 00:02:29,480
+investments inefficiently,
+by running them more efficiently I could
+
+40
+00:02:29,480 --> 00:02:33,340
+generate a higher operating margin
+and a higher operating income.
+
+41
+00:02:33,340 --> 00:02:36,920
+I could try to increase the value of a
+business by changing the value of growth.
+
+42
+00:02:36,920 --> 00:02:40,100
+The drivers of my value for growth are
+my reinvestment rate and my return
+
+43
+00:02:40,100 --> 00:02:43,930
+on capital. If I'm earning more than
+my cost of capital, if I could
+
+44
+00:02:43,930 --> 00:02:47,470
+reinvest more, I could increase my value
+as a company because I'm increasing
+
+45
+00:02:47,470 --> 00:02:50,090
+the value of growth.
+If I'm earning less than the cost
+
+46
+00:02:50,090 --> 00:02:54,520
+of capital, I could increase my value by
+reducing my reinvestment rate but I could
+
+47
+00:02:54,520 --> 00:02:57,940
+look for ways in which I can
+increase value from growth.
+
+48
+00:02:57,940 --> 00:03:02,520
+Perhaps, I can lower my cost of capital
+by doing what? By either altering the mix
+
+49
+00:03:02,520 --> 00:03:06,210
+of debt and equity in my company or
+changing the type of debt that I use
+
+50
+00:03:06,210 --> 00:03:10,260
+as a company. Remember we talked
+about matching debt to assets?
+
+51
+00:03:10,260 --> 00:03:13,200
+So, if I have mismatched debt,
+maybe by matching up my debt,
+
+52
+00:03:13,200 --> 00:03:15,536
+I can lower my cost of debt
+and cost of capital.
+
+53
+00:03:15,536 --> 00:03:18,700
+And finally, perhaps I can
+put off the day I become a
+
+54
+00:03:18,700 --> 00:03:22,840
+mature company. Remember I said that the
+key variable determining when I will
+
+55
+00:03:22,840 --> 00:03:25,650
+become a mature company
+is what kind of competitive advantages
+
+56
+00:03:25,650 --> 00:03:30,790
+I have. If I can build up new competitive
+advantages, keep the competition at bay,
+
+57
+00:03:30,790 --> 00:03:35,090
+maybe I can put off the day I become a
+mature company. So in summary,
+
+58
+00:03:35,090 --> 00:03:38,320
+I can try to increase my cash flows
+and existing assets by running them
+
+59
+00:03:38,320 --> 00:03:42,050
+more efficiently, I can try to increase
+the value of growth by changing
+
+60
+00:03:42,050 --> 00:03:46,980
+my reinvestment rate or altering my return
+on capital, I can lower my cost of capital
+
+61
+00:03:46,980 --> 00:03:51,630
+by changing my mix of debt and equity and
+changing the type of debt I have and push
+
+62
+00:03:51,630 --> 00:03:56,450
+off the day that I become a mature company
+by pushing up my competitive advantages.
+
+63
+00:03:56,450 --> 00:04:01,088
+Everything we talk about in the context of
+restructuring is somewhere in this page.
+
+64
+00:04:01,088 --> 00:04:05,793
+So, let's have I made you see of Disney
+in November of 2013. Let's think about
+
+65
+00:04:05,793 --> 00:04:10,296
+some of the changes you might be able to
+make. Here's the first change I tried to
+
+66
+00:04:10,296 --> 00:04:14,840
+make. I said, "Perhaps, Disney could fin
+a different mix of reinvestment and return
+
+67
+00:04:14,840 --> 00:04:18,520
+on capital." That gives them only a
+slightly higher growth rate but a much
+
+68
+00:04:18,520 --> 00:04:21,950
+higher value, and here's why.
+The return on capital I assume for Disney
+
+69
+00:04:21,950 --> 00:04:29,300
+in November of 2013 with the status quo
+was 12.61%, the reinvestment rate was 54%.
+
+70
+00:04:29,300 --> 00:04:33,400
+Perhaps, by reinvesting a little less,
+they might be able to earn a return
+
+71
+00:04:33,400 --> 00:04:36,100
+on capital of 14%. That's not
+
+72
+00:04:36,100 --> 00:04:39,348
+an unreachable number.
+In fact, prior to the capital
+
+73
+00:04:39,348 --> 00:04:42,517
+of Disney's ABC acquisition,
+Disney's return on capital is close
+
+74
+00:04:42,517 --> 00:04:47,320
+to 16%. So, if I can push up my return on
+capital and push down my reinvestment rate
+
+75
+00:04:47,320 --> 00:04:52,390
+a little bit, I'm not growing much faster
+but I'm creating more value from growth.
+
+76
+00:04:52,390 --> 00:04:56,130
+The second change I tried to institute
+was I looked at the debt ratio.
+
+77
+00:04:56,130 --> 00:04:58,760
+Remember when we looked at the
+optimal debt ratio for Disney,
+
+78
+00:04:58,760 --> 00:05:03,450
+we said that the optimal mix of debt and
+equity was 40% debt, 60% equity.
+
+79
+00:05:03,450 --> 00:05:07,560
+Let's say they could go to that mix right
+away, that reduces the cost of capital
+
+80
+00:05:07,560 --> 00:05:13,520
+to the optimal cost of capital of 7.16%.
+Those were the only two changes I made.
+
+81
+00:05:13,520 --> 00:05:18,030
+A slightly higher growth rate with a
+higher a return on capital accompanying it
+
+82
+00:05:18,030 --> 00:05:21,580
+and a lower cost of capital changing
+my mix of debt and equity.
+
+83
+00:05:21,580 --> 00:05:24,550
+With those changes put in,
+the value that I get for Disney as a
+
+84
+00:05:24,550 --> 00:05:31,994
+company is $74.91. Remember that
+my status quo value was $62.56?
+
+85
+00:05:31,994 --> 00:05:37,420
+With the changes I put into the company,
+the value that I get is $74.91.
+
+86
+00:05:37,420 --> 00:05:41,400
+I've increased the value of the
+company by $12.35, why?
+
+87
+00:05:41,400 --> 00:05:45,490
+Because I think I can run the company
+better than the existing management can.
+
+88
+00:05:45,490 --> 00:05:48,690
+That might be the ego trip but
+to the extent that I believe it,
+
+89
+00:05:48,690 --> 00:05:53,980
+the value of control at Disney is
+$12.35. Stepping back,
+
+90
+00:05:53,980 --> 00:05:57,930
+here's a more general proposition.
+The value of control in any company is the
+
+91
+00:05:57,930 --> 00:06:01,400
+difference between two values,
+the status quo value and the
+
+92
+00:06:01,400 --> 00:06:06,070
+optimal value. To the extent that a
+company's already perfectly managed and
+
+93
+00:06:06,070 --> 00:06:10,080
+perfectly ran, the value of control could
+be zero. If it's badly managed and badly
+
+94
+00:06:10,080 --> 00:06:13,661
+ran, the value of control can be immense.
+You're saying, "Where is the market price
+
+95
+00:06:13,661 --> 00:06:18,550
+fall in of all these?" The market does not
+reflect either the status quo value or the
+
+96
+00:06:18,550 --> 00:06:22,700
+optimal value, it's an expected value.
+Expected value in what sense?
+
+97
+00:06:22,700 --> 00:06:27,320
+If I'm investing in Disney,
+I have to factor what the status quo
+
+98
+00:06:27,320 --> 00:06:30,500
+value is, I have to look at the optimal
+value, and then I have to ask a
+
+99
+00:06:30,500 --> 00:06:35,090
+final question. What is the chance that
+management in Disney would change?
+
+100
+00:06:35,090 --> 00:06:38,960
+And if the answer to that question is
+greater than zero, then I have to reflect
+
+101
+00:06:38,960 --> 00:06:43,130
+an expected value. But that's going to
+happen only if I believe that I could
+
+102
+00:06:43,130 --> 00:06:46,760
+change the management of a company.
+So, let me connect this back
+
+103
+00:06:46,760 --> 00:06:50,070
+the topic we started off with
+in corporate finance. We talked
+
+104
+00:06:50,070 --> 00:06:54,030
+about corporate governance.
+We talked about corporate governance
+
+105
+00:06:54,030 --> 00:06:57,680
+has the capacity to change the management
+of a company if we don't like the way
+
+106
+00:06:57,680 --> 00:07:02,280
+it's run. If you have strong corporate
+governance, your market price will reflect
+
+107
+00:07:02,280 --> 00:07:06,320
+closer to the optimal value than
+it will to the status quo value.
+
+108
+00:07:06,320 --> 00:07:09,820
+If you have weak corporate governance,
+you're going to end up with a market price
+
+109
+00:07:09,820 --> 00:07:13,500
+that's close to the status quo value.
+If you have no corporate governance,
+
+110
+00:07:13,500 --> 00:07:17,969
+no power without change, your market
+prices might just reflect the status quo
+
+111
+00:07:17,969 --> 00:07:23,650
+value. I'm going to assume at this stage,
+you have a value for your company.
+
+112
+00:07:23,650 --> 00:07:27,430
+I'm going to assume that that value
+reflects the status quo, the existing
+
+113
+00:07:27,430 --> 00:07:30,792
+management of the company,
+because you've done the realistic thing.
+
+114
+00:07:30,792 --> 00:07:33,210
+As an investor, you've said,
+"This is not my company.
+
+115
+00:07:33,210 --> 00:07:37,677
+I'm going to value the company given
+its existing practices." Now, put on,
+
+116
+00:07:37,677 --> 00:07:41,765
+you'll see you had. Revalue your company
+with the changes you would make
+
+117
+00:07:41,765 --> 00:07:44,924
+and don't be surprised if you come up
+with a value very different from the
+
+118
+00:07:44,924 --> 00:07:48,488
+status quo value, especially, if you're
+looking at a company you think
+
+119
+00:07:48,488 --> 00:07:53,312
+is badly managed and badly run.
+You've unlock the key to understanding
+
+120
+00:07:53,312 --> 00:07:54,516
+the value of control.
+
+121
+00:07:54,516 --> 00:07:57,541
+♪ [music] ♪

@@ -1,0 +1,130 @@
+ So to assess dividend policy for a company, not only do you have to assess how much the company
+ could have paid in dividends, the free cash flow to equity, you also have to look at what it
+ actually does return. You also have to get a measure of whether your company has good projects and
+ whether it delivers solid return to its stockholders. That is what we did for Disney. But we can
+ replicate what we did for Disney for all of the other companies in our sample. So let's try this on
+ Vale. Vale is a large Brazilian mining company, actually, a global mining company incorporated in
+ Brazil. Let's look at what it pays out in dividends and what it could have paid out. In the period
+ that I looked at, at Vale, its free cash flows to equity were actually negative, minus $1.9 billion
+ if I don't count debt. And if I do count debt, it's about $1 billion. The company managed to return
+ almost $42.8 billion in the form of dividends and buybacks. In fact, even if I use a target debt
+ ratio, the free cash flow to equity I get is only $19 billion. It is beyond doubt that Vale during
+ this time period was returning way more than it could in the form of dividends and buybacks than it
+ could. So, really, the question becomes, what do we do next? Clearly this is a problem, right? A
+ company that pays out vast amount in dividends and buybacks with cash flows it doesn't have. So I'm
+ going to try something. I'm going to be the CEO of Vale, and I'm going to put you in the role of a
+ shareholder and I'm going to get up and ask for a change. A change in what? A change in my dividend
+ policy. I'm going to make the case on those cash flows. I'm going to say, "Look I can't afford to
+ pay what I'm paying in dividends, I just don't have the cash flow." Sounds reasonable, right? But
+ let me fill in the rest of the story. Part of the reason Vale has to pay the dividends that they do
+ is they have two classes of shares. We talked about this at the very start of the class, voting
+ shares and non-voting shares. One of the conditions that come with the non-voting shares that
+ allows them to be non-voting is Vale's committed contractually to pay dividends on those shares. If
+ it fails to pay those dividends on those preferred shares, it has to give up voting rights. So if
+ you're a shareholder, odds are, you're a non-voting shareholder, you are the one receiving
+ dividends, and what's Vale CEO asking, "Can I pay you less in dividends, right?" Before you agree,
+ what would you like in return? Think about it. You demanded those large dividends because I told
+ you, you could not vote. Now, I'm asking you to cut those dividends. I would assume that you're
+ going to push back and say, "You can do that as long as you give me voting rights." In many
+ companies the desire for control is so strong that companies will continue to pay dividends, a
+ little like Vale does, and drive themselves into bankruptcy rather than give up control. So with
+ the case of Vale, are they paying out too much in dividends? Absolutely. Can they do something
+ about it? Only if they're willing to give up control. So let's try this on a company I haven't
+ talked about so far, BP, large oil company. And, in fact, this is way back in time between 1982 and
+ '91. Between 1982 and 1991, BP reported free cash flows to equity on average each year of about
+ $571 million a year. That's a pretty large cash flow, right? So let me ask you a question, it's a
+ pretty obvious question. If you have free cash flows to equity of $571 million a year, how much can
+ you afford to pay in dividends each year? Good answer is roughly $571 million, right? But here's
+ what BP managed to do. In this 10-year period BP consistently managed to pay about $1.5 billion in
+ dividends every year. You see, how does a company with $571 million in free cash flow to equity pay
+ $1.5 in dividends? Each year for this period BP went out and borrowed $1 billion every year, not to
+ take projects, not to drill more wells, but to pay in dividends. Clearly, the company has a
+ dysfunctional dividend policy. It's paying way too much in dividends. Now, the puzzling question
+ is, "Hey, why didn't BP do something about it right away?" Now, here's the reason. Companies, once
+ they get into a dysfunctional dividend policy, can't back away. As BP started paying bigger and
+ bigger dividends in the early 1980s, it started attracting investors who like those dividends. So
+ they bought BP stock because they liked big dividends. For lack of a better word, these were
+ dividend addicts, they were addicted to dividends, and they're now stockholders in your company.
+ Think of the problem you face. What are you going to do? Are you going to go in front of those
+ stockholders who really love their dividends and tell them, "Hey look, we can't afford to pay those
+ dividends?" You could try, but it's not going to go well. So BP kept putting off the bad decision
+ year after year after year hoping that something good will happen. Which for an oil company is that
+ oil prices will go up and perhaps, perhaps the dividend problem will go away. That didn't happen.
+ And, in fact, in 1991 BP was forced to cut dividends. You know why? Because when they went to the
+ bank to borrow the billion dollars to pay the dividends as they had the previous 10 years, the bank
+ said,"You're already the most highly levered oil company in the world, we're not funding you
+ dividends." They cut dividends. Now, we all agree based on a corporate finance stand point that
+ this is the right thing to do. The company cannot afford those dividends. But to show you that the
+ world doesn't always behave the way corporate finance textbooks would want them to behave. When
+ this dividend cut was announced, the stock price dropped. In fact, to complete the story, it fully
+ recovered a few weeks later. But you're saying, "What happened during those weeks?" So when the
+ dividend cut was announced, these dividend addicts sold their shares, drove the price down. And it
+ took a few weeks for other shareholders to step in and fill the breach. And during that period,
+ half of BP stock management lost their jobs. And if you ask me, they deserved to. They deserved to
+ for putting off this decision for as long as they did. My advice to companies with dysfunctional
+ dividend polices, policies like BP, is do something about it quickly while you still control your
+ destiny. Don't deal with it only after you're forced to cut dividends. In fact, changing dividend
+ policy is always one of the most difficult things for a company to pull off. And it goes back to
+ that dividend clientele effect we talked about, you get the stockholders we deserve. So if you are
+ a company that's paying too much in dividends, a company like BP, and you're saying, "How do I cut
+ dividends without having a stock price effect?" The bad news is you cannot. Because when you cut
+ dividends, your stock price will drop. The question is, can you bundle your cutting dividends with
+ something that might make the drop in stock prices less severe? And there are things you can try,
+ in fact, there are studies that look at dividend cuts accompanied by other new stories. If the
+ dividend cut is accompanied by just a drop in earnings. That's the worst possible scenario because
+ investors say they cut dividends because times are bad, and they had no choice. So you look at the
+ stock price effect, not only is it large at the day of the announcement, it continues for weeks
+ after. If you cut dividends and you announce with it simultaneously that you're taking projects
+ with that cash, maybe people don't believe you right away, the stock price does drop on the
+ announcement day but to the extent that you can deliver news. So deliver information that backs up
+ your argument that there are good investments, you might see the stock price come back. Now, don't
+ take any of this stuff in these studies literally. It doesn't mean that if you do exactly this,
+ you're going to get the same impact. But it's worth thinking about if you have to announce a change
+ in dividend policy. You might want to make it a more comprehensive announcement about why you're
+ doing it, and what you hope to do with that cash. Maybe markets will treat you more fairly if you
+ do that. Let's move on to a fourth example. This is again, a company I haven't talked about so far,
+ it's The Limited. And in 1992, The Limited was a high-growth retail company. The reason I picked
+ The Limited is in the 10 years leading into 1992, The Limited's free cash flow to equity was minus
+ $34 million a year on average. Now, think about it. If you have negative free cash flow to equity,
+ and I ask you how much can you afford to pay in dividends, the answer is nothing, right? The
+ Limited managed to pay $41 million in dividends even though it was a high-growth company taking
+ good projects. You're saying, "How come?" Why would a high-growth company that requires the money
+ to take reinvestment start paying in dividend? So let me lay out the argument that probably got The
+ Limited started on the policy of paying dividends. Early in the 1980s, the free cash flows to
+ equity were negative. Let's assume they were visited by a consultant. The consultant says, "Look,
+ by not paying in dividends, you're making yourself a stock that many shareholders can't buy." And
+ that's actually true. There are some pension funds that cannot invest in shares that don't pay in
+ dividends. So here's what the consultant suggests, "Why don't you pay a token dividend?" The
+ Limited's dividend payouts started as a token dividend with $1 million. But here's the problem,
+ when you pay a token dividend they attract those investors into your stock who like dividends,
+ guess what they want the next year? More dividends, and still more dividends. And that's the
+ pathway that led The Limited to where it is today. So if you're a company that cannot afford to pay
+ dividends, you have negative free cash flows to equity, don't go looking for trouble. Don't pay a
+ token dividend or a small dividend hoping that, that will be sufficient. Because you're attracting
+ investors who are, in fact, investors you don't want buying your shares if you're a young growth
+ company with negative cash flows. Let's do one final example. And this is Tata Motors. If you look
+ at the free cash flows to equity for Tata Motors pre-debt, it is minus ₹106 billion. Even if you
+ count that up with the target debt ratio, the free cash flow to equity is about ₹48 billion. The
+ reason I emphasized that is no matter what your measure of free cash flow to equity, it turns out
+ that what was returned by Tata Motors during this period ₹75.184 billion exceeds those free cash
+ flow to equity. In fact, the only way you can explain the higher dividends is during this period
+ Tata Motors went in and increased its debt ratio significantly by borrowing huge amounts of money.
+ Remember in our assessment of capital structure we said that Tata Motors was over levered. One
+ reason they have too much debt is because the acquisitions they did during the period. The other
+ reason is because they're paying out dividends that they can't afford to pay out. Here again, there
+ might be a reason that explains why Tata Motors does what it does. It is part of a family group.
+ And when you have a family group of companies, when one company pays out more than it can afford
+ to, maybe another company in the group is making up the difference. As with capital structure, I
+ think, Tata Consulting Services, which is the Tata group's biggest and most profitable company is,
+ in a sense, subsidizing the dividend policies of all of the older Tata companies, something to
+ think about when you look at a family group company. So let's think about bringing this process to
+ fruition for your company. You've assessed the potential dividend, the free cash flow to equity,
+ you've looked at the actual dividend, you've looked at what kinds of projects your company has,
+ you've also looked at what kind of Jensen's have or returns your stock has been delivering over
+ time. You're in a position to make a judgement about the company's dividend policy. If your company
+ is holding back cash and has a history of taking bad projects and delivering poor returns, you're
+ well within your rights to ask for your cash back. If it's burning through cash by paying out more
+ than it can afford to, and it has good projects, I think you have to start thinking about how do
+ you bring the company back to worth and get it to pay less in dividends because it needs that cash
+ to take the projects. It is a subjective judgment. But it's a judgment you have to make
+ nevertheless.

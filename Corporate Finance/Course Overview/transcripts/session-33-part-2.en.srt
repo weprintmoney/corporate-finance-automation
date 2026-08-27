@@ -1,0 +1,577 @@
+1
+00:00:00,071 --> 00:00:03,078
+♪ [music] ♪
+
+2
+00:00:08,430 --> 00:00:12,715
+Having dealt with cash and cross-holdings,
+we have a few more loose ends to tie up.
+
+3
+00:00:13,070 --> 00:00:16,356
+So let's bring in the remaining loose ends
+that'll allow you to get to the value
+
+4
+00:00:16,356 --> 00:00:18,728
+of equity per share in your company.
+
+5
+00:00:22,445 --> 00:00:25,373
+Let's finish our discussion
+of cross-holdings first.
+
+6
+00:00:26,274 --> 00:00:29,293
+In most companies, doing the value
+of the cross holdings right
+
+7
+00:00:29,294 --> 00:00:32,510
+which requires the full financial
+statements of the parent company
+
+8
+00:00:32,511 --> 00:00:35,488
+and the subsidiaries is going
+to be almost impossible to do.
+
+9
+00:00:36,171 --> 00:00:39,699
+Why? Because many companies
+don't reveal the details you need
+
+10
+00:00:39,700 --> 00:00:42,246
+about their cross-holdings
+to value them right.
+
+11
+00:00:42,247 --> 00:00:44,642
+So here are two compromise
+solutions you can adopt.
+
+12
+00:00:45,552 --> 00:00:49,486
+If your company has a cross-holding
+in another publicly traded company,
+
+13
+00:00:49,954 --> 00:00:53,167
+you could take the market value
+of that publicly traded company
+
+14
+00:00:53,558 --> 00:00:57,674
+and use that to estimate the value of your
+cross-holding. So let's say you own 10%
+
+15
+00:00:57,674 --> 00:01:01,493
+of a publicly traded company with a market
+value of a billion. Ten percent of the
+
+16
+00:01:01,493 --> 00:01:04,363
+billion is 100 million.
+It's cheating and here's why
+
+17
+00:01:04,363 --> 00:01:08,063
+it's cheating. An intrinsic valuation,
+which is what you're doing when you
+
+18
+00:01:08,063 --> 00:01:11,713
+discount cash flows at the cost of
+capital, you are assuming that markets
+
+19
+00:01:11,713 --> 00:01:14,759
+make mistakes and that you
+cannot just trust a market value.
+
+20
+00:01:15,219 --> 00:01:18,657
+And you're selectively ignoring that rule
+when you have a cross-holding.
+
+21
+00:01:19,095 --> 00:01:21,797
+But if you have hundreds of cross-holdings
+in public companies,
+
+22
+00:01:21,797 --> 00:01:24,769
+you might have no choice
+but to use the market value solution.
+
+23
+00:01:25,357 --> 00:01:29,147
+Say what if I don't have a market value?
+What if my subsidiary is not
+
+24
+00:01:29,147 --> 00:01:33,277
+publicly traded? Here's another cheat you
+can use. You have the book value of that
+
+25
+00:01:33,277 --> 00:01:34,958
+cross holding, right?
+In your balance sheet?
+
+26
+00:01:35,467 --> 00:01:39,667
+If you know what sector your cross-holding
+is in, you can convert that book value
+
+27
+00:01:39,667 --> 00:01:42,298
+to a market value. Again,
+let me give you an example.
+
+28
+00:01:42,897 --> 00:01:45,917
+Let's suppose you have a cross-holding
+in a chemical company and that that
+
+29
+00:01:45,917 --> 00:01:50,717
+cross-holding is $100 million book value.
+And let's say that chemical companies
+
+30
+00:01:50,717 --> 00:01:53,715
+typically trade at one and
+a half times book value.
+
+31
+00:01:54,651 --> 00:01:57,663
+One and a half times
+100 million is 150 million.
+
+32
+00:01:57,664 --> 00:02:00,382
+That becomes the estimated market
+value of your crossholding.
+
+33
+00:02:01,162 --> 00:02:03,947
+It's an approximation
+but given the information you have,
+
+34
+00:02:04,462 --> 00:02:06,397
+that might be as good
+a number as you can get.
+
+35
+00:02:07,756 --> 00:02:11,365
+Now let's start to anything else you
+might want to bring into your valuation.
+
+36
+00:02:11,933 --> 00:02:14,840
+Now remember, when you discount
+cash flows back at the costed capital,
+
+37
+00:02:14,841 --> 00:02:17,646
+you value the operating assets.
+You brought in cash,
+
+38
+00:02:17,646 --> 00:02:20,150
+you brought in cross-holdings.
+You should be done, right?
+
+39
+00:02:20,513 --> 00:02:24,816
+But check around. Check around to see if
+there are other assets your company owns
+
+40
+00:02:24,816 --> 00:02:27,876
+which you haven't counted yet.
+What might that include?
+
+41
+00:02:28,222 --> 00:02:31,763
+Truly vacant assets.
+A piece of land that the company owns.
+
+42
+00:02:31,763 --> 00:02:35,950
+A piece of real estate that it's not
+using. Some other assets that adds value
+
+43
+00:02:35,950 --> 00:02:39,443
+but it's not reflected near operating
+income. You might want to bring that in.
+
+44
+00:02:40,230 --> 00:02:44,210
+In some cases, especially in the US,
+we have companies which have defined
+
+45
+00:02:44,210 --> 00:02:47,659
+benefit plans where essentially they
+promised a fixed pension to their
+
+46
+00:02:47,659 --> 00:02:52,320
+employees to the extent that that benefit
+plan is overfunded. You have an overfunded
+
+47
+00:02:52,320 --> 00:02:55,657
+pension plan, there are some
+people who add on that overfunding
+
+48
+00:02:55,658 --> 00:02:58,268
+arguing that it belongs
+to the equity investors.
+
+49
+00:02:59,548 --> 00:03:02,796
+But when you're counting these
+other assets, just be careful.
+
+50
+00:03:02,797 --> 00:03:04,046
+You cannot double count.
+
+51
+00:03:04,609 --> 00:03:09,324
+Let me explain what I mean by double
+counting. Let's assume you're valuing
+
+52
+00:03:09,324 --> 00:03:13,053
+an oil company. You discount the cash
+flows back at the cost of capital,
+
+53
+00:03:13,053 --> 00:03:17,163
+you come up with the present value right?
+You cannot take that present value and add
+
+54
+00:03:17,163 --> 00:03:22,073
+to it the value of the refineries you have
+and other assets you have because those
+
+55
+00:03:22,073 --> 00:03:26,993
+are the assets that generate the cash
+flows. Simple rule, you cannot count
+
+56
+00:03:26,993 --> 00:03:31,178
+an asset and the cash flows
+from that asset in the same valuation.
+
+57
+00:03:31,178 --> 00:03:32,245
+That's double counting.
+
+58
+00:03:33,798 --> 00:03:35,236
+Let's do a final loose end.
+
+59
+00:03:36,002 --> 00:03:38,642
+You've taken into account cash,
+you've looked at cross-holdings,
+
+60
+00:03:38,642 --> 00:03:42,312
+you've brought in any other assets a
+company might have. You're almost there.
+
+61
+00:03:43,302 --> 00:03:45,962
+You subtract out debt from that value
+for the business you have.
+
+62
+00:03:45,962 --> 00:03:48,860
+You should have the overall value
+of equity for the company right?
+
+63
+00:03:49,512 --> 00:03:52,566
+Here's the final stop you have to make
+to get to value of equity per share.
+
+64
+00:03:53,182 --> 00:03:56,202
+In the last 20 to 30 years,
+in the US especially,
+
+65
+00:03:56,202 --> 00:04:00,965
+companies have increasingly turned
+to paying their employees with equity.
+
+66
+00:04:01,362 --> 00:04:05,148
+Equity in one of two forms,
+options and restricted stock.
+
+67
+00:04:05,802 --> 00:04:09,062
+Restricted stock, you don't have
+a problem. Restricted stock show up in the
+
+68
+00:04:09,062 --> 00:04:13,852
+outstanding shares, they're already dealt
+with. But when a company grants options,
+
+69
+00:04:13,852 --> 00:04:17,892
+it creates a problem in discounted cash
+flow valuation because it creates a second
+
+70
+00:04:17,892 --> 00:04:20,661
+claim on your equity.
+What do I mean by second claim?
+
+71
+00:04:21,062 --> 00:04:24,742
+The overall value that you get for your
+equity now is claimed by two groups,
+
+72
+00:04:24,742 --> 00:04:28,812
+one is the common stock holders through
+their ownership of shares and one is
+
+73
+00:04:28,812 --> 00:04:33,532
+by managers through their ownership
+of options. You have to net out the value
+
+74
+00:04:33,532 --> 00:04:36,987
+of that second claim if you want the value
+per share as a common stockholder.
+
+75
+00:04:37,642 --> 00:04:41,382
+Incidentally, the way you have to deal
+with equity options granted to employees
+
+76
+00:04:41,382 --> 00:04:44,685
+varies depending on whether you're looking
+at options that have already been granted
+
+77
+00:04:45,176 --> 00:04:48,265
+or whether there are options that you
+expect to be granted in the future and
+
+78
+00:04:48,265 --> 00:04:51,751
+let's lay out the rules on how to deal
+with each of these types of options.
+
+79
+00:04:52,435 --> 00:04:55,985
+To the extent that you have options
+already outstanding and US companies
+
+80
+00:04:55,985 --> 00:04:58,669
+report these in their financial
+statements, here's what you have to do.
+
+81
+00:04:59,215 --> 00:05:02,465
+Value the equity as if there were
+no options. So take the cash flows,
+
+82
+00:05:02,465 --> 00:05:05,965
+discount them back at the costed capital,
+do everything you have to do to get to the
+
+83
+00:05:05,965 --> 00:05:10,545
+value of equity. Then value the equity
+options as options. You're saying,
+
+84
+00:05:10,545 --> 00:05:13,275
+"What does that mean?"
+Don't value them based on the exercise
+
+85
+00:05:13,275 --> 00:05:17,895
+value today. An option has a time premium.
+Value these options using an option
+
+86
+00:05:17,895 --> 00:05:21,945
+pricing model. Then subtract out the value
+of these equity options from the value
+
+87
+00:05:21,945 --> 00:05:25,435
+of your equity and then divide
+that remaining value by the actual
+
+88
+00:05:25,435 --> 00:05:29,075
+shares outstanding. You don't have
+to adjust for the delusion because you
+
+89
+00:05:29,075 --> 00:05:33,345
+effectively reflected the delusion
+in the value of equity options subtracted
+
+90
+00:05:33,345 --> 00:05:36,775
+out from the value of equity. This
+is the right way to deal with options
+
+91
+00:05:36,775 --> 00:05:40,743
+outstanding rather than trying to adjust
+the number of shares for options that
+
+92
+00:05:40,743 --> 00:05:44,413
+might be exercised in the future.
+Value the equity, subtract out the value
+
+93
+00:05:44,413 --> 00:05:47,773
+of equity options, divide by the
+number of shares. You're saying,
+
+94
+00:05:47,773 --> 00:05:51,693
+"What about options that might be granted
+in the future?" Remember why companies use
+
+95
+00:05:51,693 --> 00:05:55,503
+options to compensate employees.
+It's because they don't have the cash
+
+96
+00:05:55,503 --> 00:05:58,023
+to play their employees.
+Treat it like any other
+
+97
+00:05:58,023 --> 00:06:01,943
+compensation expense. What does
+that mean? If you treat it as an expense
+
+98
+00:06:01,943 --> 00:06:04,893
+in the future, it's going to reduce your
+operating income and reduce your future
+
+99
+00:06:04,893 --> 00:06:08,443
+cash flows. By reducing your future cash
+flows, it's going to reduce the value
+
+100
+00:06:08,443 --> 00:06:11,813
+of equity. It might sound like
+double counting but it's not,
+
+101
+00:06:11,813 --> 00:06:14,477
+because it's reading two
+separate claims on the equity.
+
+102
+00:06:15,340 --> 00:06:19,073
+The first, we value the options and
+subtract them from the value of equity,
+
+103
+00:06:19,073 --> 00:06:23,205
+takes care of past option grants.
+The second, we take into account the
+
+104
+00:06:23,205 --> 00:06:25,928
+options in the future and
+reduce future cash flows,
+
+105
+00:06:25,929 --> 00:06:28,024
+take into account future options issues.
+
+106
+00:06:28,025 --> 00:06:31,234
+They both can hurt your value as
+an equity investor in the company.
+
+107
+00:06:33,942 --> 00:06:37,045
+So to the extent that you've
+followed along up to this point,
+
+108
+00:06:37,045 --> 00:06:39,777
+you're ready to come up with a value
+of equity per share of your company.
+
+109
+00:06:40,645 --> 00:06:43,615
+So assuming you've added the cash
+and you've brought in cross-holdings
+
+110
+00:06:43,615 --> 00:06:45,802
+into your valuation, here
+are the final two steps.
+
+111
+00:06:46,305 --> 00:06:49,485
+Check around for any other assets
+you might have as a company.
+
+112
+00:06:50,325 --> 00:06:53,375
+To the extent that these assets haven't
+been counted, make sure you're not
+
+113
+00:06:53,375 --> 00:06:57,257
+double counting, add them on. Then
+subtract out the debt and if you have
+
+114
+00:06:57,257 --> 00:07:00,667
+equity options, take care of them now.
+Take care of them right by valuing them
+
+115
+00:07:00,667 --> 00:07:03,707
+as options. You're ready. You can
+come up with the value of equity
+
+116
+00:07:03,707 --> 00:07:09,120
+per share. That is your intrinsic value
+for the equity per share in this company.
+
+117
+00:07:09,121 --> 00:07:12,126
+♪ [music] ♪

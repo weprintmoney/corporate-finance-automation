@@ -1,0 +1,556 @@
+1
+00:00:00,000 --> 00:00:03,089
+♪ [music] ♪
+
+2
+00:00:08,000 --> 00:00:11,042
+So it's been a long journey,
+but we're at the end of the journey.
+
+3
+00:00:11,210 --> 00:00:15,540
+Let's review all of the stuff we've
+learned, hopefully, during the course
+
+4
+00:00:15,540 --> 00:00:20,600
+of these last 35 sessions.
+So as you start thinking about lessons
+
+5
+00:00:20,600 --> 00:00:24,170
+learned over the last few weeks,
+here are a few that I've learned and
+
+6
+00:00:24,170 --> 00:00:28,910
+perhaps you might share some of
+these conclusions and perhaps not.
+
+7
+00:00:28,910 --> 00:00:32,900
+The first is as I've talked about Disney
+and I've used all of these numbers,
+
+8
+00:00:32,900 --> 00:00:37,820
+notice how few facts there are and how
+many opinions. Even numbers that you take
+
+9
+00:00:37,820 --> 00:00:41,130
+as facts, accounting earnings from
+last year are really opinions.
+
+10
+00:00:41,130 --> 00:00:45,550
+Lots of opinions drive our analysis.
+The second is the real world is a
+
+11
+00:00:45,550 --> 00:00:51,040
+messy place. Numbers don't end with three
+zeros. Things can change all the time.
+
+12
+00:00:51,040 --> 00:00:55,390
+Third, we've used a lot of models along
+the way, but I hope you recognize that
+
+13
+00:00:55,390 --> 00:00:59,150
+these models are just tools. Many of
+them make assumptions and you need
+
+14
+00:00:59,150 --> 00:01:03,370
+to be aware of those assumptions when
+you use those models. And finally,
+
+15
+00:01:03,370 --> 00:01:07,330
+everything changes every day.
+Just when you think you're done,
+
+16
+00:01:07,330 --> 00:01:10,490
+new things come at you.
+That's the reality of corporate finance,
+
+17
+00:01:10,490 --> 00:01:14,870
+and you have to get used to it.
+So let's summarize the 10 lessons that I
+
+18
+00:01:14,870 --> 00:01:19,360
+hope you've taken out of this class.
+The first is we started with the notion
+
+19
+00:01:19,360 --> 00:01:22,740
+of corporate governance,
+but if you boil it down to basics,
+
+20
+00:01:22,740 --> 00:01:25,960
+we were talking about conflicts of
+interests. There are lots of different
+
+21
+00:01:25,960 --> 00:01:29,950
+entities in a modern public corporation,
+and that they're not all pulling in the
+
+22
+00:01:29,950 --> 00:01:34,450
+same direction. In fact, broadly speaking,
+there are at least four groups you got
+
+23
+00:01:34,450 --> 00:01:38,450
+to keep happy in a company,
+and each has its own interests.
+
+24
+00:01:38,450 --> 00:01:42,180
+The first are stockholders who want to
+maximize the value of their shares and get
+
+25
+00:01:42,180 --> 00:01:45,310
+the highest returns they can.
+The second are bondholders who want
+
+26
+00:01:45,310 --> 00:01:48,760
+to protect their money and make sure that
+they get paid their interest payments.
+
+27
+00:01:48,760 --> 00:01:53,870
+The third are managers who might want to
+maximize their compensation and protect
+
+28
+00:01:53,870 --> 00:01:57,170
+their jobs. And finally, the society,
+kind of hanging out there.
+
+29
+00:01:57,170 --> 00:02:00,940
+And if it's a publicly traded company of a
+fifth group, investors, who are making
+
+30
+00:02:00,940 --> 00:02:04,630
+their best judgments in the company.
+It should come as no surprise then that
+
+31
+00:02:04,630 --> 00:02:08,850
+sometimes when you see decisions made by
+a company, they're made to advance the
+
+32
+00:02:08,850 --> 00:02:12,180
+interests of one group at the expense
+of another, and that is at the heart
+
+33
+00:02:12,180 --> 00:02:16,420
+of corporate governance.
+Not everyone will agree on every decision
+
+34
+00:02:16,420 --> 00:02:20,920
+being the best decision from their
+interests. Second, we talked about how
+
+35
+00:02:20,920 --> 00:02:25,090
+to measure risk, and if there's one broad
+lesson that I hope you got out of this is
+
+36
+00:02:25,090 --> 00:02:29,310
+when you look at the risk in a company,
+it depends on who's looking at the risk.
+
+37
+00:02:29,310 --> 00:02:32,790
+In fact, with publicly traded companies,
+we introduce the notion of a
+
+38
+00:02:32,790 --> 00:02:36,470
+marginal investor, the investor
+at the margin who sets prices.
+
+39
+00:02:36,470 --> 00:02:39,810
+And that marginal investor, we said,
+needs to meet two criteria.
+
+40
+00:02:39,810 --> 00:02:44,290
+One, he or she needs to own a lot
+of shares and trade those shares.
+
+41
+00:02:44,290 --> 00:02:47,490
+Well, based on that assumption,
+with most companies especially if they're
+
+42
+00:02:47,490 --> 00:02:50,810
+large to mid-cap companies,
+you can assume that the marginal
+
+43
+00:02:50,810 --> 00:02:55,190
+investor's probably some kind of
+institution. Very few individuals have the
+
+44
+00:02:55,190 --> 00:02:58,620
+amount of money that will allow them
+to be marginal investors. So what?
+
+45
+00:02:58,620 --> 00:03:02,770
+You might ask. If that institutional
+investor, a mutual fund, a pension fund,
+
+46
+00:03:02,770 --> 00:03:07,600
+is diversified, the way you measure risk
+in a company changes forever.
+
+47
+00:03:07,600 --> 00:03:11,480
+The risk we bring into the cost of equity
+for publicly traded companies reflects
+
+48
+00:03:11,480 --> 00:03:15,440
+that assumption. The only risk we bring in
+to the cost of equity is the risk you
+
+49
+00:03:15,440 --> 00:03:20,450
+cannot diversify away because we assume
+the marginal investor being diversified is
+
+50
+00:03:20,450 --> 00:03:25,620
+going to get rid of the rest over their
+portfolio. Third, we measured that risk
+
+51
+00:03:25,620 --> 00:03:30,120
+with a beta, and that beta, of course,
+captures the risk that you cannot
+
+52
+00:03:30,120 --> 00:03:34,560
+diversify it away. But once you start
+thinking about how to measure the risk,
+
+53
+00:03:34,560 --> 00:03:37,810
+think about all the decisions
+that go into your cost of equity.
+
+54
+00:03:37,810 --> 00:03:41,780
+The first is the choice you make about
+what currency you do the analysis in.
+
+55
+00:03:41,780 --> 00:03:45,250
+We talked about picking high inflation
+versus low inflation currencies,
+
+56
+00:03:45,250 --> 00:03:47,350
+but more importantly,
+we said be consistent.
+
+57
+00:03:47,350 --> 00:03:50,660
+Once you pick a currency,
+everything has to be done based
+
+58
+00:03:50,660 --> 00:03:53,740
+on that currency. In fact,
+if you break the cost of equity
+
+59
+00:03:53,740 --> 00:03:57,280
+down into its components,
+each piece plays a role.
+
+60
+00:03:57,280 --> 00:04:00,600
+Your choice of currency drives your
+risk-free rate, and that risk-free rate is
+
+61
+00:04:00,600 --> 00:04:04,150
+embedded in it and expected inflation
+which you should also bring into your
+
+62
+00:04:04,150 --> 00:04:08,040
+cash flows. Your beta reflects the
+business or businesses you're in,
+
+63
+00:04:08,040 --> 00:04:13,420
+and we talked about bottom-up betas being
+much better choices than regression betas.
+
+64
+00:04:13,420 --> 00:04:17,260
+That beta also reflects choices you make
+as a company as to what kind of business
+
+65
+00:04:17,260 --> 00:04:21,800
+you're in, what your fixed costs are,
+and how much debt you carry. And finally,
+
+66
+00:04:21,800 --> 00:04:26,510
+the equity risk premium reflects where you
+do business. If you are a developed market
+
+67
+00:04:26,510 --> 00:04:29,980
+company but you operate in a lot of
+emerging markets, it is my job to make
+
+68
+00:04:29,980 --> 00:04:34,430
+sure your risk premium carries that
+effect. See, risk-free rate reflects the
+
+69
+00:04:34,430 --> 00:04:38,270
+currency you do the analysis in.
+Your beta reflects the businesses
+
+70
+00:04:38,270 --> 00:04:42,415
+you're in, your equity risk premium
+reflects where you do business.
+
+71
+00:04:43,000 --> 00:04:46,770
+When we talked about cost of capital,
+we move past the cost of equity
+
+72
+00:04:46,770 --> 00:04:49,753
+by bringing the cost of debt.
+And let me restate again what the
+
+73
+00:04:49,753 --> 00:04:52,690
+cost of debt and the cost of capital
+is supposed to measure.
+
+74
+00:04:52,690 --> 00:04:58,660
+It's a cost of borrowing money long-term
+today. Key words are long-term and today.
+
+75
+00:04:58,660 --> 00:05:02,370
+So to get to a cost of debt,
+we start with the same risk-free rate
+
+76
+00:05:02,370 --> 00:05:06,000
+from which we start our cost of equity,
+but we add a default spread in sort
+
+77
+00:05:06,000 --> 00:05:09,850
+of beta and in equity risk premium.
+The default spread measures your credit
+
+78
+00:05:09,850 --> 00:05:13,800
+risk as a company, and to the extent that
+the tax code is tilted towards debt,
+
+79
+00:05:13,800 --> 00:05:17,930
+we bring it into the cost of capital.
+That cost of capital helps us assess the
+
+80
+00:05:17,930 --> 00:05:21,100
+quality of investments. In fact,
+there are two ways you can answer
+
+81
+00:05:21,100 --> 00:05:25,450
+the question, "Are my investments good
+investments?" One is to where your equity
+
+82
+00:05:25,450 --> 00:05:28,970
+had and focus on just equity investors.
+What does that mean?
+
+83
+00:05:28,970 --> 00:05:32,110
+You look at the net income you make
+on the project, and you look at the equity
+
+84
+00:05:32,110 --> 00:05:35,100
+invested in the project,
+you come up with a return in equity.
+
+85
+00:05:35,100 --> 00:05:38,740
+You compare the return in equity to the
+cost of equity, you have a measure of the
+
+86
+00:05:38,740 --> 00:05:42,340
+quality of your investments from
+an equity investor's standpoint.
+
+87
+00:05:42,340 --> 00:05:45,580
+You could look at cash flows to equity,
+discounted the cost of equity
+
+88
+00:05:45,580 --> 00:05:48,400
+come up with a value,
+a net present value based on equity
+
+89
+00:05:48,400 --> 00:05:52,170
+investors in the project.
+You could also look at the same projects
+
+90
+00:05:52,170 --> 00:05:55,720
+from the perspective of the entire
+company. What does that mean?
+
+91
+00:05:55,720 --> 00:05:59,290
+You measure your earnings as after-tax
+operating income. You measure what you've
+
+92
+00:05:59,290 --> 00:06:03,760
+invested as invested capital:
+book equity plus debt minus cash.
+
+93
+00:06:03,760 --> 00:06:06,900
+You return an invested capital that
+you get out of those two numbers,
+
+94
+00:06:06,900 --> 00:06:10,380
+you compare to the cost of capital.
+Alternatively, you can focus
+
+95
+00:06:10,380 --> 00:06:14,670
+on cash flows: cash flows to the entire
+business discounted back to the cost
+
+96
+00:06:14,670 --> 00:06:18,590
+of capital. So you can measure the quality
+of your investments either from the
+
+97
+00:06:18,590 --> 00:06:22,160
+perspective of just the equity investors
+in the business, the entire business,
+
+98
+00:06:22,160 --> 00:06:28,120
+and done right, you should get roughly the
+same conclusions. So let's summarize the
+
+99
+00:06:28,120 --> 00:06:31,220
+lessons we've drawn so far.
+The first is if you look at a
+
+100
+00:06:31,220 --> 00:06:34,320
+modern corporation, it's a web of
+conflicts of interest and you have
+
+101
+00:06:34,320 --> 00:06:36,940
+to figure out whose interests are
+being served when you look at a
+
+102
+00:06:36,940 --> 00:06:40,330
+particular decision. Second,
+when you think about risk,
+
+103
+00:06:40,330 --> 00:06:44,240
+it's not how much risk you and I see in
+investment that drives its cost of equity,
+
+104
+00:06:44,240 --> 00:06:48,340
+it's what the marginal investors see in
+that. Third, to convert that measure
+
+105
+00:06:48,340 --> 00:06:51,570
+of risk into a cost of equity,
+you need a risk-free rate and an equity
+
+106
+00:06:51,570 --> 00:06:55,360
+risk premium. That risk-free rate would
+reflect the currency you're working in.
+
+107
+00:06:55,360 --> 00:06:59,180
+Your equity risk premium will reflect
+where your company does business.
+
+108
+00:06:59,180 --> 00:07:02,520
+And fourth, to make a judgment
+on the quality of your projects,
+
+109
+00:07:02,520 --> 00:07:06,152
+decide whether you're looking at those
+projects as an equity investor or from the
+
+110
+00:07:06,152 --> 00:07:07,972
+perspective of the entire business.
+
+111
+00:07:07,972 --> 00:07:10,565
+We'll talk about the
+remaining principles next.
+
+112
+00:07:10,565 --> 00:07:13,595
+♪ [music] ♪

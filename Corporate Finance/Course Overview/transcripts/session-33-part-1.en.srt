@@ -1,0 +1,732 @@
+1
+00:00:00,000 --> 00:00:03,000
+♪ [music] ♪
+
+2
+00:00:08,430 --> 00:00:12,640
+So let's review where we are in this
+process. In coming up with the discounted
+
+3
+00:00:12,640 --> 00:00:16,540
+cash flow valuation of a company
+we've talked about estimating cash flows
+
+4
+00:00:16,540 --> 00:00:20,450
+and discount rates, we then moved on to
+growth, and then we closed off by looking
+
+5
+00:00:20,450 --> 00:00:24,800
+at terminal value. We're almost there,
+right? You discount the cash flows back
+
+6
+00:00:24,800 --> 00:00:28,130
+add to your cost of capital,
+you should come up with a value.
+
+7
+00:00:28,130 --> 00:00:32,200
+But what is that value? So let's
+talk about what you get as your
+
+8
+00:00:32,200 --> 00:00:35,620
+present value when you discount
+cash flows back at a discount rate.
+
+9
+00:00:35,620 --> 00:00:39,310
+It depends on what the cash flows
+were and what discount rate you used.
+
+10
+00:00:39,310 --> 00:00:43,624
+If you discounted dividends at the cost
+of equity, what you get as a present value
+
+11
+00:00:43,624 --> 00:00:46,510
+is the value of equity.  So
+in the dividend discount model,
+
+12
+00:00:46,510 --> 00:00:50,880
+you're done. If you'd estimated free
+cash flow as equity, potential dividends,
+
+13
+00:00:50,880 --> 00:00:54,540
+and discounted them back at the cost
+of equity, what you get is the value
+
+14
+00:00:54,540 --> 00:00:58,480
+of equity but to the extent that you have
+equity options outstanding that managers
+
+15
+00:00:58,480 --> 00:01:01,909
+might have been granted options to get to
+a value per share. Now there's some work
+
+16
+00:01:01,909 --> 00:01:06,130
+to do. But if you discounted free cash
+flows the firm at the cost of capital,
+
+17
+00:01:06,130 --> 00:01:09,300
+your work, unfortunately, is just
+beginning because here's what
+
+18
+00:01:09,300 --> 00:01:13,390
+you've estimated. By discounting the free
+cash for the firm at the cost of capital,
+
+19
+00:01:13,390 --> 00:01:17,440
+you valued the operating assets
+of the company. Let me explain why.
+
+20
+00:01:17,440 --> 00:01:20,690
+The free cash flow to the firm is
+based on operating income, right?
+
+21
+00:01:20,690 --> 00:01:23,910
+So you've estimated the value of any
+assets whose earnings are part
+
+22
+00:01:23,910 --> 00:01:28,430
+of operating income. Put differently,
+you haven't valued any of those assets
+
+23
+00:01:28,430 --> 00:01:32,790
+whose earnings are not part of operating
+income. I don't mean to sound mysterious,
+
+24
+00:01:32,790 --> 00:01:35,700
+but if you value a company like Apple,
+you know what you haven't valued yet?
+
+25
+00:01:35,700 --> 00:01:39,730
+You haven't valued the cash that the
+company has. If you have companies that
+
+26
+00:01:39,730 --> 00:01:43,406
+have cross-holdings in other companies,
+you haven't valued those cross-holdings
+
+27
+00:01:43,406 --> 00:01:47,400
+yet. So you've got to add the cash,
+you have to add the cross-holdings.
+
+28
+00:01:47,400 --> 00:01:51,140
+In some cases, there might be other
+assets you might add on to this value,
+
+29
+00:01:51,140 --> 00:01:54,560
+assets that haven't been
+utilized that are vacant assets.
+
+30
+00:01:54,560 --> 00:01:57,830
+That gives you the value of the
+firm. To get to the value of equity,
+
+31
+00:01:57,830 --> 00:02:01,510
+you need to subtract out the
+value of debt. But that's not all.
+
+32
+00:02:01,510 --> 00:02:07,010
+To the extent that you granted equity
+options or restricted stock to managers
+
+33
+00:02:07,010 --> 00:02:10,770
+in your company, that reduces your
+value of equity in common stock.
+
+34
+00:02:10,770 --> 00:02:13,760
+You got to subtract out at least
+the value of the equity options,
+
+35
+00:02:13,760 --> 00:02:17,121
+and what you're left with is the value
+of the equity in the common stock.
+
+36
+00:02:17,340 --> 00:02:22,580
+So let's talk about each of the items that
+you have to deal with after you value the
+
+37
+00:02:22,580 --> 00:02:26,600
+cash flows to get to the value of
+equity per share. Let's start with cash.
+
+38
+00:02:26,600 --> 00:02:29,980
+The normal rule with cash is, don't
+mess with it. If you have a company
+
+39
+00:02:29,980 --> 00:02:34,070
+with $100 million in cash, just
+add the $100 million and move on,
+
+40
+00:02:34,070 --> 00:02:37,460
+and that's what we tend to do
+in discounted cash flow valuations.
+
+41
+00:02:37,460 --> 00:02:41,790
+But let me ask you a provocative question.
+Are there conditions where you see a
+
+42
+00:02:41,790 --> 00:02:46,070
+company with $100 million in cash where
+you might actually treat the $100 million
+
+43
+00:02:46,070 --> 00:02:50,260
+as worth less than $100 million, if so,
+why? Or more than $100 million,
+
+44
+00:02:50,260 --> 00:02:54,650
+if so, why? To illustrate why this might
+happen, let me give you three companies
+
+45
+00:02:54,650 --> 00:02:58,910
+that look exactly the same in terms
+of enterprise value and cash. In fact,
+
+46
+00:02:58,910 --> 00:03:02,840
+all three companies have $100
+million in cash on their balance sheet.
+
+47
+00:03:02,840 --> 00:03:06,650
+But here's how they're different.
+Company A has a history of earning a
+
+48
+00:03:06,650 --> 00:03:09,970
+return on capital roughly equal to its
+cost of capital, and is a developed
+
+49
+00:03:09,970 --> 00:03:13,976
+market company. Company B is a
+company with a history of taking bad
+
+50
+00:03:13,976 --> 00:03:18,560
+projects, earning a return in capital
+of 5% when its cost to capital is 10%,
+
+51
+00:03:18,560 --> 00:03:22,270
+also developed market company.
+Company C has a history of taking
+
+52
+00:03:22,270 --> 00:03:26,010
+good projects, earning well above its cost
+to capital, about 10% more than its cost
+
+53
+00:03:26,010 --> 00:03:31,170
+to capital, and it's an emerging market
+company. I'm going to argue that in one
+
+54
+00:03:31,170 --> 00:03:34,540
+of these three companies cash is going
+to be a neutral asset. What do I mean
+
+55
+00:03:34,540 --> 00:03:38,442
+by a neutral asset? $100 million
+in cash is going to be valued at roughly
+
+56
+00:03:38,442 --> 00:03:42,836
+$100 million. In one of these three
+companies, cash might be discounted
+
+57
+00:03:42,836 --> 00:03:45,490
+in the hands of the company,
+and I'd like you to start thinking
+
+58
+00:03:45,490 --> 00:03:49,910
+about which one. And one of these three
+companies, cash might actually have a
+
+59
+00:03:49,910 --> 00:03:54,360
+premium attached to it. Think about it.
+I would argue that in Company A,
+
+60
+00:03:54,360 --> 00:03:58,290
+cash is going to be a neutral asset.
+Why? Because this company has a history
+
+61
+00:03:58,290 --> 00:04:00,500
+of being a blah company.
+What's a blah company?
+
+62
+00:04:00,500 --> 00:04:04,461
+A blah company is one that earns
+roughly its cost of capital. It does no
+
+63
+00:04:04,461 --> 00:04:09,230
+good, it does no damage. In Company B,
+I'm going to argue that cash might have a
+
+64
+00:04:09,230 --> 00:04:13,130
+discount attached to it. Why? Not
+because it's cash and earns a low rate
+
+65
+00:04:13,130 --> 00:04:18,060
+of return but because you're afraid of
+what the company might do with the cash.
+
+66
+00:04:18,060 --> 00:04:21,690
+This company has a history of taking bad
+projects. You're afraid they will use the
+
+67
+00:04:21,690 --> 00:04:25,420
+cash to take more bad projects.
+There will be a stupidity discount you
+
+68
+00:04:25,420 --> 00:04:29,600
+attach to the cash. For the third company,
+you might actually attach a premium
+
+69
+00:04:29,600 --> 00:04:33,010
+to the cash, and here is why. Not
+only does it have a history of taking
+
+70
+00:04:33,010 --> 00:04:36,449
+good projects, but it's an emerging
+market, in this case, Argentina.
+
+71
+00:04:36,449 --> 00:04:40,980
+A market where, in the last 15 years,
+there have been at least four scenarios or
+
+72
+00:04:40,980 --> 00:04:45,426
+four time periods where capital markets
+have shut down, both equity and debt
+
+73
+00:04:45,426 --> 00:04:51,550
+markets. Having cash in a market like
+that one could be a strategic weapon that
+
+74
+00:04:51,550 --> 00:04:56,191
+adds value to the company. Adds value
+why? Because this cash can be used not
+
+75
+00:04:56,191 --> 00:04:59,662
+only to allow the company to survive
+a period where capital markets shut
+
+76
+00:04:59,662 --> 00:05:04,350
+down, but be used to buy assets from other
+companies that are desperate for the cash.
+
+77
+00:05:05,110 --> 00:05:09,340
+Put differently, cash might sometimes
+have a premium or discount attached to it.
+
+78
+00:05:09,340 --> 00:05:13,280
+In fact, there is some evidence
+that markets actually do this.
+
+79
+00:05:13,280 --> 00:05:16,700
+This is actually from a study that looked
+at how much a dollar in cash is valued
+
+80
+00:05:16,700 --> 00:05:21,070
+in the hands of a U.S. company.
+And here's what it found. On average,
+
+81
+00:05:21,070 --> 00:05:24,260
+a dollar in cash is valued at about a
+dollar, which is what we tend to do
+
+82
+00:05:24,260 --> 00:05:28,410
+in discounted cash flow valuations.
+But if you look at mature companies,
+
+83
+00:05:28,410 --> 00:05:33,230
+slow growth companies with negative
+excess returns, companies like company B,
+
+84
+00:05:33,230 --> 00:05:36,220
+here's what you find.
+A dollar in cash is valued
+
+85
+00:05:36,220 --> 00:05:41,100
+at about 69 cents. That's a 31%
+discount. And if you focus on young
+
+86
+00:05:41,100 --> 00:05:45,130
+growth companies, especially smaller
+companies that face capital constraints,
+
+87
+00:05:45,130 --> 00:05:49,440
+companies like Company C, a
+dollar in cash is valued at $1.22.
+
+88
+00:05:49,440 --> 00:05:54,800
+So if you're adding on the cash
+balance to get your value for your firm,
+
+89
+00:05:54,800 --> 00:05:58,680
+keep doing what you're doing. But
+in some cases, when you find your
+
+90
+00:05:58,680 --> 00:06:01,320
+company to be undervalued,
+step back and think about why that
+
+91
+00:06:01,320 --> 00:06:05,820
+might be. It just might be that investors
+don't trust the company with the cash that
+
+92
+00:06:05,820 --> 00:06:10,760
+it has on its hands. Let's
+talk about cross-holdings.
+
+93
+00:06:10,760 --> 00:06:14,900
+Cross-holdings are difficult to value
+because the accounting for cross-holdings
+
+94
+00:06:14,900 --> 00:06:18,810
+is all over the place. In fact,
+generically, there are three ways a
+
+95
+00:06:18,810 --> 00:06:23,520
+cross holding can be accounted
+for. It can be treated as a minority
+
+96
+00:06:23,520 --> 00:06:26,670
+passive investment, in which case,
+here's what you're going to see.
+
+97
+00:06:26,670 --> 00:06:29,300
+In the income statement, you're
+going to see the dividends you
+
+98
+00:06:29,300 --> 00:06:32,060
+receive from that cross-holdings.
+In the balance sheet,
+
+99
+00:06:32,060 --> 00:06:35,400
+you're going to see what you originally
+invested to get that cross-holding.
+
+100
+00:06:35,400 --> 00:06:39,090
+Already, you can see a disconnect opening
+up between what you see on the income
+
+101
+00:06:39,090 --> 00:06:41,760
+statement and the balance sheet
+and the value of a cross-holding,
+
+102
+00:06:41,760 --> 00:06:45,630
+especially if you invest in a company
+that's become a very valuable
+
+103
+00:06:45,630 --> 00:06:51,200
+successful company. The second scenario
+for accounting is, if you own 15%,
+
+104
+00:06:51,200 --> 00:06:56,560
+20% of a company and you're treated
+as having some control of that company.
+
+105
+00:06:56,560 --> 00:07:00,560
+In that case, the accounting is treated
+as a minority active investment.
+
+106
+00:07:00,560 --> 00:07:04,540
+What happens then? In the income
+statement, you have to show 15% or 20%,
+
+107
+00:07:04,540 --> 00:07:09,420
+depending on the percentage you own of the
+net income or net loss of that subsidiary.
+
+108
+00:07:09,420 --> 00:07:12,730
+So not dividends, but net income
+or net loss, that's a little better.
+
+109
+00:07:12,730 --> 00:07:14,830
+And on the balance sheet, you
+have to show what you originally
+
+110
+00:07:14,830 --> 00:07:18,859
+invested plus some minus retained
+earning sets. So it's an updated book
+
+111
+00:07:18,859 --> 00:07:23,047
+value, a little better than minority
+passive investments. But if you own
+
+112
+00:07:23,047 --> 00:07:27,760
+40%, 45%, 50%, or 55% of a company,
+you might be viewed as effectively
+
+113
+00:07:27,760 --> 00:07:32,430
+controlling the company. When you
+do that, accountants consolidate.
+
+114
+00:07:32,430 --> 00:07:34,440
+What does that mean?
+In your income statement,
+
+115
+00:07:34,440 --> 00:07:38,690
+you record a 100% of the revenues
+in the operating income of the subsidiary.
+
+116
+00:07:38,690 --> 00:07:41,760
+In the balance sheet, you have
+to record a 100% of the assets
+
+117
+00:07:41,760 --> 00:07:46,410
+and the debt of the subsidiary.
+But you own only 60%, right?
+
+118
+00:07:46,410 --> 00:07:50,130
+So here's what accountants do
+to bring your financial statements back
+
+119
+00:07:50,130 --> 00:07:54,470
+into balance. They take the 40% that
+does not belong to you and show it
+
+120
+00:07:54,470 --> 00:07:58,010
+as a liability. It's called a
+noncontrolling interest on a
+
+121
+00:07:58,010 --> 00:08:01,470
+minority interest. Why am I going
+on and on about the accounting
+
+122
+00:08:01,470 --> 00:08:04,830
+for cross-holdings? Because if you
+don't understand how cross-holdings are
+
+123
+00:08:04,830 --> 00:08:09,420
+accounted for, you really cannot value
+them. So let me at least set up how you
+
+124
+00:08:09,420 --> 00:08:12,933
+would value cross-holdings in a
+perfect world. If you gave me a company
+
+125
+00:08:12,933 --> 00:08:16,060
+with cross-holdings in a perfect
+world, here's what I would do.
+
+126
+00:08:16,060 --> 00:08:20,680
+I would value the parent company standing
+alone, and then I take each cross holding,
+
+127
+00:08:20,680 --> 00:08:24,260
+minority or majority, and value
+that subsidiary standing alone
+
+128
+00:08:24,260 --> 00:08:28,160
+as well. Then to value of the parent
+company with the cross-holdings,
+
+129
+00:08:28,160 --> 00:08:32,180
+I take the value of the parent company
+plus the percentage of each subsidiary
+
+130
+00:08:32,180 --> 00:08:36,370
+that belongs to that company. That
+is the best way to value a company
+
+131
+00:08:36,370 --> 00:08:39,830
+with cross-holdings, but
+already you can see the barriers
+
+132
+00:08:39,830 --> 00:08:43,560
+you're going to face in doing this.
+To do this, you'll need full financial
+
+133
+00:08:43,560 --> 00:08:47,107
+statements for the parent company
+as well as full financial statements
+
+134
+00:08:47,107 --> 00:08:51,150
+for each and every subsidiary. And
+if you can get that, you can do it right.
+
+135
+00:08:51,150 --> 00:08:58,600
+You can value it as the sum of the parts
+of the company. I'm not sure whether your
+
+136
+00:08:58,600 --> 00:09:02,260
+company has cross-holdings,
+but it definitely will have cash.
+
+137
+00:09:02,260 --> 00:09:05,960
+So here's the first thing I'd like you
+to do. If you've done the discounted cash
+
+138
+00:09:05,960 --> 00:09:09,260
+flow valuation for your company,
+and you've used a free cash flow to the
+
+139
+00:09:09,260 --> 00:09:13,000
+firm and a cost to capital to get there,
+add on the cash for the moment.
+
+140
+00:09:13,000 --> 00:09:16,680
+Don't worry about discounting it or
+premiuming it, just add on the cash.
+
+141
+00:09:16,680 --> 00:09:19,705
+We'll come back and talk about what
+to do if you don't trust the company
+
+142
+00:09:19,705 --> 00:09:24,111
+later. Then check for cross-holdings.
+You will find the vestiges
+
+143
+00:09:24,111 --> 00:09:28,480
+of cross-holdings on your balance sheet.
+Why vestiges? Because the numbers you see
+
+144
+00:09:28,480 --> 00:09:31,630
+on the balance sheet will not be the
+numbers that reflect the values
+
+145
+00:09:31,630 --> 00:09:34,930
+of those cross-holdings. Depending
+on how the cross-holdings are
+
+146
+00:09:34,930 --> 00:09:37,100
+accounted for, you have
+a lot more work to do.
+
+147
+00:09:37,100 --> 00:09:40,100
+♪ [music] ♪

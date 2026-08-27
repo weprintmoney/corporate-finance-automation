@@ -1,0 +1,908 @@
+1
+00:00:00,000 --> 00:00:03,000
+♪ [music] ♪
+
+2
+00:00:08,305 --> 00:00:11,722
+So to assess dividend policy for a
+company, not only do you have to assess
+
+3
+00:00:11,722 --> 00:00:14,816
+how much the company could have paid in
+dividends, the free cash flow to equity,
+
+4
+00:00:14,910 --> 00:00:17,293
+you also have to look at
+what it actually does return.
+
+5
+00:00:17,712 --> 00:00:18,917
+You also have to get a measure
+
+6
+00:00:19,210 --> 00:00:23,000
+of whether your company has good projects
+and whether it delivers solid return
+
+7
+00:00:23,000 --> 00:00:25,809
+to its stockholders.
+That is what we did for Disney.
+
+8
+00:00:26,030 --> 00:00:29,900
+But we can replicate what we did for
+Disney for all of the other companies
+
+9
+00:00:29,900 --> 00:00:35,600
+in our sample. So let's try this on
+Vale. Vale is a large Brazilian
+
+10
+00:00:35,600 --> 00:00:38,260
+mining company, actually,
+a global mining company incorporated
+
+11
+00:00:38,260 --> 00:00:41,390
+in Brazil. Let's look at what it pays out
+in dividends and what it could have
+
+12
+00:00:41,390 --> 00:00:45,910
+paid out. In the period that I looked
+at, at Vale, its free cash flows
+
+13
+00:00:45,910 --> 00:00:50,140
+to equity were actually negative,
+minus $1.9 billion if I don't count debt.
+
+14
+00:00:50,243 --> 00:00:53,142
+And if I do count debt,
+it's about $1 billion.
+
+15
+00:00:53,293 --> 00:00:58,120
+The company managed to return almost
+$42.8 billion in the form of dividends
+
+16
+00:00:58,120 --> 00:01:01,751
+and buybacks. In fact,
+even if I use a target debt ratio,
+
+17
+00:01:01,950 --> 00:01:06,619
+the free cash flow to equity I get is
+only $19 billion. It is beyond doubt
+
+18
+00:01:06,743 --> 00:01:10,870
+that Vale during this time period was
+returning way more than it could in the
+
+19
+00:01:10,870 --> 00:01:15,480
+form of dividends and buybacks than it
+could. So, really, the question becomes,
+
+20
+00:01:15,480 --> 00:01:19,194
+what do we do next? Clearly this is a
+problem, right? A company that pays
+
+21
+00:01:19,194 --> 00:01:23,427
+out vast amount in dividends and
+buybacks with cash flows it doesn't have.
+
+22
+00:01:23,760 --> 00:01:27,567
+So I'm going to try something.
+I'm going to be the CEO of Vale,
+
+23
+00:01:27,620 --> 00:01:30,230
+and I'm going to put you in the role
+of a shareholder and I'm going to get
+
+24
+00:01:30,230 --> 00:01:35,086
+up and ask for a change. A change in what?
+A change in my dividend policy.
+
+25
+00:01:35,520 --> 00:01:38,060
+I'm going to make the case on
+those cash flows. I'm going to say,
+
+26
+00:01:38,060 --> 00:01:41,090
+"Look I can't afford to pay
+what I'm paying in dividends,
+
+27
+00:01:41,090 --> 00:01:44,591
+I just don't have the cash flow."
+Sounds reasonable, right?
+
+28
+00:01:44,750 --> 00:01:48,880
+But let me fill in the rest of the story.
+Part of the reason Vale has to pay the
+
+29
+00:01:48,880 --> 00:01:52,598
+dividends that they do is they have two
+classes of shares. We talked about this
+
+30
+00:01:52,781 --> 00:01:56,926
+at the very start of the class,
+voting shares and non-voting shares.
+
+31
+00:01:57,510 --> 00:02:00,920
+One of the conditions that come with the
+non-voting shares that allows them
+
+32
+00:02:00,920 --> 00:02:05,090
+to be non-voting is Vale's committed
+contractually to pay dividends
+
+33
+00:02:05,090 --> 00:02:09,340
+on those shares. If it fails to pay those
+dividends on those preferred shares,
+
+34
+00:02:09,340 --> 00:02:13,430
+it has to give up voting rights.
+So if you're a shareholder, odds are,
+
+35
+00:02:13,430 --> 00:02:16,660
+you're a non-voting shareholder,
+you are the one receiving dividends,
+
+36
+00:02:16,660 --> 00:02:20,487
+and what's Vale CEO asking,
+"Can I pay you less in dividends, right?"
+
+37
+00:02:20,930 --> 00:02:25,026
+Before you agree, what would you
+like in return? Think about it.
+
+38
+00:02:25,570 --> 00:02:28,690
+You demanded those large dividends because
+I told you, you could not vote.
+
+39
+00:02:28,690 --> 00:02:33,030
+Now, I'm asking you to cut those
+dividends. I would assume that you're
+
+40
+00:02:33,030 --> 00:02:36,040
+going to push back and say,
+"You can do that as long as you give me
+
+41
+00:02:36,040 --> 00:02:41,030
+voting rights." In many companies the
+desire for control is so strong that
+
+42
+00:02:41,030 --> 00:02:45,932
+companies will continue to pay dividends,
+a little like Vale does, and drive
+
+43
+00:02:45,932 --> 00:02:48,980
+themselves into bankruptcy
+rather than give up control.
+
+44
+00:02:49,337 --> 00:02:50,555
+So with the case of Vale,
+
+45
+00:02:50,555 --> 00:02:54,820
+are they paying out too much in dividends?
+Absolutely. Can they do something
+
+46
+00:02:54,820 --> 00:02:59,000
+about it? Only if they're willing to give
+up control. So let's try this on a company
+
+47
+00:02:59,000 --> 00:03:03,510
+I haven't talked about so far, BP,
+large oil company. And, in fact,
+
+48
+00:03:03,510 --> 00:03:08,841
+this is way back in time between 1982 and
+'91. Between 1982 and 1991,
+
+49
+00:03:08,841 --> 00:03:14,256
+BP reported free cash flows to equity on
+average each year of about $571 million
+
+50
+00:03:14,256 --> 00:03:17,710
+a year. That's a pretty large cash flow,
+right? So let me ask you a question,
+
+51
+00:03:17,710 --> 00:03:21,086
+it's a pretty obvious question.
+If you have free cash flows to equity
+
+52
+00:03:21,086 --> 00:03:24,130
+of $571 million a year,
+how much can you afford to pay
+
+53
+00:03:24,130 --> 00:03:26,646
+in dividends each year?
+Good answer is roughly
+
+54
+00:03:26,646 --> 00:03:30,485
+$571 million, right?
+But here's what BP managed to do.
+
+55
+00:03:30,687 --> 00:03:35,930
+In this 10-year period BP consistently
+managed to pay about $1.5 billion
+
+56
+00:03:35,930 --> 00:03:41,290
+in dividends every year. You see,
+how does a company with $571 million
+
+57
+00:03:41,290 --> 00:03:46,430
+in free cash flow to equity pay $1.5 in
+dividends? Each year for this period BP
+
+58
+00:03:46,430 --> 00:03:49,671
+went out and borrowed $1 billion
+every year, not to take projects,
+
+59
+00:03:50,100 --> 00:03:52,720
+not to drill more wells,
+but to pay in dividends.
+
+60
+00:03:53,150 --> 00:03:58,445
+Clearly, the company has a dysfunctional
+dividend policy. It's paying way too much
+
+61
+00:03:58,470 --> 00:04:02,960
+in dividends. Now, the puzzling question
+is, "Hey, why didn't BP do something
+
+62
+00:04:02,960 --> 00:04:05,685
+about it right away?"
+Now, here's the reason.
+
+63
+00:04:05,850 --> 00:04:08,720
+Companies, once they get into a
+dysfunctional dividend policy,
+
+64
+00:04:08,720 --> 00:04:12,981
+can't back away. As BP started paying
+bigger and bigger dividends in the
+
+65
+00:04:12,981 --> 00:04:17,525
+early 1980s, it started attracting
+investors who like those dividends.
+
+66
+00:04:18,400 --> 00:04:23,090
+So they bought BP stock because they liked
+big dividends. For lack of a better word,
+
+67
+00:04:23,090 --> 00:04:26,060
+these were dividend addicts,
+they were addicted to dividends,
+
+68
+00:04:26,060 --> 00:04:29,630
+and they're now stockholders in your
+company. Think of the problem you face.
+
+69
+00:04:29,953 --> 00:04:34,110
+What are you going to do?
+Are you going to go in front of those
+
+70
+00:04:34,110 --> 00:04:37,780
+stockholders who really love their
+dividends and tell them, "Hey look,
+
+71
+00:04:37,780 --> 00:04:41,450
+we can't afford to pay those dividends?"
+You could try, but it's not going to
+
+72
+00:04:41,450 --> 00:04:47,530
+go well. So BP kept putting off the bad
+decision year after year after year hoping
+
+73
+00:04:47,530 --> 00:04:51,050
+that something good will happen.
+Which for an oil company is that oil
+
+74
+00:04:51,050 --> 00:04:55,471
+prices will go up and perhaps,
+perhaps the dividend problem will go away.
+
+75
+00:04:55,530 --> 00:05:00,581
+That didn't happen. And, in fact,
+in 1991 BP was forced to cut dividends.
+
+76
+00:05:00,910 --> 00:05:04,280
+You know why? Because when they went to
+the bank to borrow the billion dollars
+
+77
+00:05:04,280 --> 00:05:08,070
+to pay the dividends as they had the
+previous 10 years, the bank said,"You're
+
+78
+00:05:08,070 --> 00:05:11,025
+already the most highly levered oil
+company in the world,
+
+79
+00:05:11,380 --> 00:05:14,239
+we're not funding you dividends."
+They cut dividends.
+
+80
+00:05:14,870 --> 00:05:18,670
+Now, we all agree based on a corporate
+finance stand point that this is the right
+
+81
+00:05:18,670 --> 00:05:22,840
+thing to do. The company cannot afford
+those dividends. But to show you that the
+
+82
+00:05:22,840 --> 00:05:26,119
+world doesn't always behave the way
+corporate finance textbooks would want
+
+83
+00:05:26,119 --> 00:05:30,207
+them to behave. When this dividend cut
+was announced, the stock price dropped.
+
+84
+00:05:30,690 --> 00:05:34,207
+In fact, to complete the story,
+it fully recovered a few weeks later.
+
+85
+00:05:34,600 --> 00:05:37,210
+But you're saying, "What happened during
+those weeks?" So when the dividend cut
+
+86
+00:05:37,210 --> 00:05:40,570
+was announced, these dividend addicts sold
+their shares, drove the price down.
+
+87
+00:05:40,570 --> 00:05:43,560
+And it took a few weeks for other
+shareholders to step in and fill
+
+88
+00:05:43,560 --> 00:05:47,970
+the breach. And during that period,
+half of BP stock management lost
+
+89
+00:05:47,970 --> 00:05:51,680
+their jobs. And if you ask me,
+they deserved to. They deserved
+
+90
+00:05:51,680 --> 00:05:56,440
+to for putting off this decision for as
+long as they did. My advice to companies
+
+91
+00:05:56,440 --> 00:06:00,860
+with dysfunctional dividend polices,
+policies like BP, is do something about it
+
+92
+00:06:00,860 --> 00:06:04,990
+quickly while you still control your
+destiny. Don't deal with it only
+
+93
+00:06:04,990 --> 00:06:11,770
+after you're forced to cut dividends.
+In fact, changing dividend policy is
+
+94
+00:06:11,770 --> 00:06:15,240
+always one of the most difficult
+things for a company to pull off.
+
+95
+00:06:15,240 --> 00:06:18,385
+And it goes back to that dividend
+clientele effect we talked about,
+
+96
+00:06:18,520 --> 00:06:22,450
+you get the stockholders we deserve.
+So if you are a company that's paying too
+
+97
+00:06:22,450 --> 00:06:26,390
+much in dividends, a company like BP,
+and you're saying, "How do I cut dividends
+
+98
+00:06:26,390 --> 00:06:30,040
+without having a stock price effect?"
+The bad news is you cannot.
+
+99
+00:06:30,040 --> 00:06:32,500
+Because when you cut dividends,
+your stock price will drop.
+
+100
+00:06:32,500 --> 00:06:36,660
+The question is, can you bundle your
+cutting dividends with something that
+
+101
+00:06:36,660 --> 00:06:42,510
+might make the drop in stock prices less
+severe? And there are things you can try,
+
+102
+00:06:42,510 --> 00:06:46,230
+in fact, there are studies that look at
+dividend cuts accompanied by other
+
+103
+00:06:46,230 --> 00:06:51,521
+new stories. If the dividend cut is
+accompanied by just a drop in earnings.
+
+104
+00:06:52,310 --> 00:06:55,570
+That's the worst possible scenario
+because investors say they cut dividends
+
+105
+00:06:55,570 --> 00:06:57,693
+because times are bad,
+and they had no choice.
+
+106
+00:06:58,710 --> 00:07:01,950
+So you look at the stock price effect,
+not only is it large at the day
+
+107
+00:07:01,950 --> 00:07:04,691
+of the announcement,
+it continues for weeks after.
+
+108
+00:07:05,100 --> 00:07:09,860
+If you cut dividends and you announce with
+it simultaneously that you're taking
+
+109
+00:07:09,860 --> 00:07:13,060
+projects with that cash,
+maybe people don't believe you right away,
+
+110
+00:07:13,060 --> 00:07:16,550
+the stock price does drop on the
+announcement day but to the extent that
+
+111
+00:07:16,550 --> 00:07:20,740
+you can deliver news.
+So deliver information that backs up your
+
+112
+00:07:20,740 --> 00:07:24,430
+argument that there are good investments,
+you might see the stock price come back.
+
+113
+00:07:24,902 --> 00:07:27,450
+Now, don't take any of this
+stuff in these studies literally.
+
+114
+00:07:27,450 --> 00:07:28,702
+It doesn't mean that if you do
+
+115
+00:07:28,730 --> 00:07:32,640
+exactly this, you're going to get the same
+impact. But it's worth thinking about if
+
+116
+00:07:32,640 --> 00:07:37,620
+you have to announce a change in dividend
+policy. You might want to make it a more
+
+117
+00:07:37,620 --> 00:07:41,520
+comprehensive announcement about why
+you're doing it, and what you hope to do
+
+118
+00:07:41,520 --> 00:07:45,569
+with that cash. Maybe markets will treat
+you more fairly if you do that.
+
+119
+00:07:47,040 --> 00:07:50,260
+Let's move on to a fourth example.
+This is again, a company I haven't talked
+
+120
+00:07:50,260 --> 00:07:54,757
+about so far, it's The Limited.
+And in 1992, The Limited was a high-growth
+
+121
+00:07:54,757 --> 00:07:59,106
+retail company. The reason I picked The
+Limited is in the 10 years leading into
+
+122
+00:07:59,106 --> 00:08:04,225
+1992, The Limited's free cash flow to
+equity was minus $34 million a year
+
+123
+00:08:04,225 --> 00:08:05,019
+on average.
+
+124
+00:08:05,516 --> 00:08:07,958
+Now, think about it.
+If you have negative free cash flow
+
+125
+00:08:07,958 --> 00:08:10,417
+to equity, and I ask you how much
+can you afford to pay in dividends,
+
+126
+00:08:10,470 --> 00:08:14,717
+the answer is nothing, right?
+The Limited managed to pay $41 million
+
+127
+00:08:14,717 --> 00:08:18,372
+in dividends even though it was a
+high-growth company taking good projects.
+
+128
+00:08:19,090 --> 00:08:22,250
+You're saying, "How come?"
+Why would a high-growth company that
+
+129
+00:08:22,250 --> 00:08:25,414
+requires the money to take
+reinvestment start paying in dividend?
+
+130
+00:08:25,520 --> 00:08:29,420
+So let me lay out the argument that
+probably got The Limited started on the
+
+131
+00:08:29,420 --> 00:08:33,214
+policy of paying dividends.
+Early in the 1980s, the free cash flows
+
+132
+00:08:33,214 --> 00:08:35,560
+to equity were negative.
+Let's assume they were visited
+
+133
+00:08:35,560 --> 00:08:40,310
+by a consultant. The consultant says,
+"Look, by not paying in dividends,
+
+134
+00:08:40,310 --> 00:08:43,360
+you're making yourself a stock
+that many shareholders can't buy."
+
+135
+00:08:43,360 --> 00:08:46,370
+And that's actually true.
+There are some pension funds that cannot
+
+136
+00:08:46,370 --> 00:08:48,826
+invest in shares that
+don't pay in dividends.
+
+137
+00:08:49,175 --> 00:08:50,746
+So here's what the
+consultant suggests,
+
+138
+00:08:50,963 --> 00:08:55,350
+"Why don't you pay a token dividend?" The
+Limited's dividend payouts started as a
+
+139
+00:08:55,350 --> 00:08:58,594
+token dividend with $1 million.
+But here's the problem,
+
+140
+00:08:59,030 --> 00:09:02,480
+when you pay a token dividend they
+attract those investors into your stock
+
+141
+00:09:02,480 --> 00:09:06,390
+who like dividends, guess what they want
+the next year? More dividends,
+
+142
+00:09:06,390 --> 00:09:10,120
+and still more dividends.
+And that's the pathway that led The
+
+143
+00:09:10,120 --> 00:09:13,790
+Limited to where it is today.
+So if you're a company that cannot afford
+
+144
+00:09:13,790 --> 00:09:15,994
+to pay dividends, you have
+negative free cash flows to equity,
+
+145
+00:09:16,220 --> 00:09:19,910
+don't go looking for trouble.
+Don't pay a token dividend or a small
+
+146
+00:09:19,910 --> 00:09:22,200
+dividend hoping that,
+that will be sufficient.
+
+147
+00:09:22,200 --> 00:09:26,470
+Because you're attracting investors who
+are, in fact, investors you don't want
+
+148
+00:09:26,470 --> 00:09:30,516
+buying your shares if you're a young
+growth company with negative cash flows.
+
+149
+00:09:31,740 --> 00:09:34,520
+Let's do one final example.
+And this is Tata Motors.
+
+150
+00:09:35,100 --> 00:09:38,405
+If you look at the free cash flows to
+equity for Tata Motors pre-debt,
+
+151
+00:09:38,421 --> 00:09:45,200
+it is minus ₹106 billion.
+Even if you count that up with the target
+
+152
+00:09:45,200 --> 00:09:48,688
+debt ratio, the free cash flow to
+equity is about ₹48 billion.
+
+153
+00:09:49,340 --> 00:09:52,860
+The reason I emphasized that is no matter
+what your measure of free cash flow
+
+154
+00:09:52,860 --> 00:09:57,845
+to equity, it turns out that what was
+returned by Tata Motors during this period
+
+155
+00:09:57,845 --> 00:10:03,110
+₹75.184 billion exceeds those
+free cash flow to equity. In fact,
+
+156
+00:10:03,110 --> 00:10:06,950
+the only way you can explain the
+higher dividends is during this period
+
+157
+00:10:06,950 --> 00:10:11,750
+Tata Motors went in and increased its debt
+ratio significantly by borrowing huge
+
+158
+00:10:11,750 --> 00:10:15,590
+amounts of money. Remember in our
+assessment of capital structure we said
+
+159
+00:10:15,590 --> 00:10:19,130
+that Tata Motors was over levered.
+One reason they have too much debt is
+
+160
+00:10:19,130 --> 00:10:23,010
+because the acquisitions they did during
+the period. The other reason is because
+
+161
+00:10:23,010 --> 00:10:26,980
+they're paying out dividends that they
+can't afford to pay out. Here again,
+
+162
+00:10:26,980 --> 00:10:30,470
+there might be a reason that explains why
+Tata Motors does what it does.
+
+163
+00:10:30,856 --> 00:10:34,070
+It is part of a family group.
+And when you have a family group
+
+164
+00:10:34,070 --> 00:10:37,628
+of companies, when one company
+pays out more than it can afford to,
+
+165
+00:10:38,020 --> 00:10:40,869
+maybe another company in the
+group is making up the difference.
+
+166
+00:10:41,300 --> 00:10:44,613
+As with capital structure, I think,
+Tata Consulting Services,
+
+167
+00:10:45,390 --> 00:10:50,020
+which is the Tata group's biggest and
+most profitable company is, in a sense,
+
+168
+00:10:50,020 --> 00:10:54,392
+subsidizing the dividend policies of all
+of the older Tata companies,
+
+169
+00:10:54,690 --> 00:10:57,636
+something to think about when you
+look at a family group company.
+
+170
+00:10:58,969 --> 00:11:02,430
+So let's think about bringing this
+process to fruition for your company.
+
+171
+00:11:02,610 --> 00:11:05,121
+You've assessed the potential dividend,
+the free cash flow to equity,
+
+172
+00:11:05,190 --> 00:11:08,530
+you've looked at the actual dividend,
+you've looked at what kinds of projects
+
+173
+00:11:08,530 --> 00:11:12,850
+your company has, you've also looked at
+what kind of Jensen's have or returns your
+
+174
+00:11:12,850 --> 00:11:18,380
+stock has been delivering over time.
+You're in a position to make a judgement
+
+175
+00:11:18,380 --> 00:11:23,620
+about the company's dividend policy.
+If your company is holding back cash and
+
+176
+00:11:23,620 --> 00:11:26,908
+has a history of taking bad projects
+and delivering poor returns,
+
+177
+00:11:27,480 --> 00:11:31,740
+you're well within your rights to ask
+for your cash back. If it's burning
+
+178
+00:11:31,740 --> 00:11:35,105
+through cash by paying out more than it
+can afford to, and it has good projects,
+
+179
+00:11:35,560 --> 00:11:38,500
+I think you have to start thinking about
+how do you bring the company back
+
+180
+00:11:38,500 --> 00:11:42,350
+to worth and get it to pay less in
+dividends because it needs that cash
+
+181
+00:11:42,350 --> 00:11:45,560
+to take the projects.
+It is a subjective judgment.
+
+182
+00:11:45,560 --> 00:11:47,810
+But it's a judgment you have
+to make nevertheless.
+
+183
+00:11:47,810 --> 00:11:50,810
+♪ [music] ♪

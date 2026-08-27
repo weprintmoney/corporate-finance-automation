@@ -1,0 +1,98 @@
+ In all of these sessions in corporate finance, we've talked about value. We've talked about
+ maximizing value and changing value, but we've never talked about how to estimate the value of a
+ company. What is the value that you put on a company? In these last few sessions, that's the
+ question we're going to try to address. So, let's assume you're trying to put a number on a
+ company. To get that number, there are three basic ways you can estimate what a company is worth.
+ The first is to do what's called an intrinsic valuation. In an intrinsic valuation, the value of an
+ asset is the present value of the expected cash flows in the asset. You're trying to value business
+ based on its fundamental characteristics. There's a second way you can attach a number to a
+ company. You can do a relative valuation or appraising. You know what you're trying to do here?
+ You're trying to attach a number to a company based on how similar companies are being priced out
+ there. There's a third way you can attach a number to a company. If the cash flows on a company or
+ a business are contingent on something happening, you could actually apply option pricing to put a
+ number on a company. Generically, these are the only three ways you can attach numbers to
+ companies, an intrinsic valuation, appraising, or real options. I'm going to start with the
+ intrinsic valuation because it ties most closely to what we've been talking about in corporate
+ finance. In an intrinsic valuation, the value of a company is the present value of its expected
+ cash flows over its lifetime. Well, most of you who've seen these valuations might think of them as
+ spreadsheets, and cash flows, and discount rates. When I look at a discounted cash flow valuation
+ or an intrinsic valuation, I'm seeing answers to four questions I have about any company I analyze.
+ Here's the first question. What are my cash flows from existing assets? Remember, your company has
+ been around awhile. It's already made investments. The cash flows from those investments become the
+ starting point for estimating intrinsic value. That's why we look at last year's financials, the
+ income you made, the cash flows you made. The second question I'm trying to answer is what is the
+ value of growth on this company? Notice how I've phrased that question. What is the value of
+ growth? I might ask you what your growth rate was, and here's why. Growth can create value. It can
+ do nothing for value. It can destroy value. The value of growth is a trade-off. The good side of
+ growth is that it allows your earnings to grow over time. The earnings become larger. The bad side
+ of growth is you have to reinvest to create that growth. The net effect is what determines the
+ value of growth. What are your cash flows from existing assets? What's the value of growth? The
+ third question I've to ask is how risky are your cash flows? And the place that shows up in your
+ discounted cash flow valuation is in the discount rate. So, your cash flows from existing assets
+ show up in your base year numbers. The value of growth shows up in the growth rate you use and the
+ reinvestment you put in. The risk shows up in the discount rate. There is one final question I need
+ to ask and get answer to value your company. When I ask you, "When is your company going to become
+ a mature company?" You're saying, "What's a mature company?" A mature company is one that grows at
+ a rate less than or equal to the economy. And here's why I need to know the answer to that
+ question. In theory, a publicly traded company can keep growing forever. I can't estimate cash
+ flows forever. But if your cash flows start to grow at a constant rate forever, there's a
+ mathematical trick I can use to compute the value of your cash flows in one step . And most of us
+ who have done discounted cash flow valuation have seen this trick play out as a terminal value. But
+ to you use that trick, you got to assume that your cash flows grow at a constant rate forever.
+ That's why I asked you when will your company be a mature company. Because for your cash flows to
+ grow at a constant rate forever, that growth rate has to be less than or equal to the economy. So,
+ when you think about valuation, think about the answers to those four questions. What are your cash
+ flows from existing assets? What's the value of growth? How risky are these cash flows? When will
+ my company be a mature company? So, let's set the table. When you sit down to value a business,
+ there are two ways you can approach valuation. In the first, you wear blinders. All you care about
+ are the equity investors. You try to value just the equity in the business. What does that mean?
+ You focus on the cash flows equity investors get from the business and you discount those cash
+ flows back at the rate of return that equity investors demand for investing in the business. In
+ corporate finance terminology, you discount your cash flows to equity at your cost of equity, you
+ end up with the value of equity. This strictest version as a model, your argument is the only cash
+ flow that I get as an equity investor from a publicly traded firm is dividends. The divided
+ discount model is a special case of an equity valuation model. In our discussion of dividends, we
+ talked about potential dividends, free cash flow to equity. Think of that as the more expensive
+ version of an equity valuation model. In both cases, you're looking at cash flows to equity
+ discounting at the cost of equity. There is another way you can approach valuation. Rather than the
+ equity-focus, you can try to value the entire business. What does that mean? You look at the
+ collective cash flow that equity investors and lenders get from the company. Equity investors get
+ their cash flows to equity. Lenders get interest payments and principal payments. That collective
+ cash flows called free cash flow to the firm. You discount that cash flow to weighted average of
+ the cost of equity and the cost of debt which is the cost of capital. What you get as a present
+ value is the value of the firm. You've got to make the decision early in the process. You have to
+ decide when you sit down to do valuation, are you valuing just the equity or are you valuing an
+ entire business? Now, you might wonder, "How do I make that choice?" I'll give you a simple rule.
+ When you cannot estimate free cash flows to equity for whatever reason, you might have to focus on
+ just dividends. All too often, that was what analysts used to do when they valued banks. They'd
+ say, "Look, we cannot estimate free cash flow to equity. We're just going to discount dividends."
+ If you can't estimate cash flows, then the choice becomes more complex because you can do cash flow
+ to the firm or cash flow to equity. Here's the simple rule that I adopt. If you have a company with
+ changing debt ratios over time, estimating cash flow to equity becomes a pain because you got to
+ estimate how much debt gets repaid, how much debt gets taken on. So, when you have shifting,
+ unstable, or unpredictable debt ratios, you should be valuing the entire firm. If you have a
+ predictable debt ratio that's not going to change over time, then you can do an equity valuation.
+ Nine out of 10 discounted cash flow valuations that I do are firm valuations because it's very
+ difficult to find a firm with a debt ratio you have today is the debt ratio that you're going to
+ have forever. So, let's assume you've made that choice, equity or firm. Let's go back to the notion
+ of valuation. Because as I said, doing valuation requires inputs, and the way you estimate numbers
+ for these inputs will depend on whether you took the equity route or the business route. So, let's
+ start with the first question. What are my cash flows from existing investments? If you're valuing
+ the entire business, that cash flow has to be a pre-debt cash flow, a cash flow before debt
+ payments. If you're valuing equity, it's going to be a post-debt cash flow. When I ask you what the
+ growth in these earnings are going to be? If you're doing an equity valuation, your growth has to
+ be in equity earnings, net income or earnings per share. If you're valuing the entire business,
+ it's got to be on operating income. When I ask you, "How risky are these cash flows?" The discount
+ rate you're going to give me if you're doing an equity valuation is the cost of equity, whereas if
+ I'm valuing the entire firm, it's going to be the cost of capital. When your firm will be a mature
+ firm will be answered exactly the same way with both equity and firm valuation. But when you
+ discount cash flows to equity at the cost of equity, you've valued just the equity. Whereas when
+ you discount cash flows to the firm at the cost of capital, you've valued the operating assets of
+ the company and you might have more work to do before you get from there to the value of equity.
+ We'll come back and talk about those extra steps you need to take. But for the moment, this should
+ give you a broad view of how to approach valuation. Now, as you've done this class, you probably
+ have wondered whether you can value your own company. Well, we've started on that process by
+ looking at the two different ways you can approach valuation. You could value just the equity in
+ your company or value the entire business. In the next session or two, we're going to talk about
+ how to get the cash flows and discount rates. And you're going to see much of the work you need to
+ do, you've already done.
