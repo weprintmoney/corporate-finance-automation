@@ -51,4 +51,4 @@ WACC = (E/V) · rₑ + (D/V) · r_d · (1 − t)
 
 | File | Description |
 |------|-------------|
-| _(empty)_ | |
+| [Course Overview/CLAUDE.md](Course%20Overview/CLAUDE.md) | NYU Stern Certificate in Corporate Finance — course outline, syllabus, FAQ, key dates |
