@@ -13,12 +13,12 @@ The bottom-up beta approach can yield better estimates of beta for a company, bu
 
 ## Videos
 
-| Part | Title | Link |
-|------|-------|------|
-| 1 | The "Right" Beta - Part 1 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s11.1_011918/1_bt4azi4j) |
-| 2 | The "Right" Beta - Part 2 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s11.2_012518/1_c1ptr2le) |
+| Part | Title | Local (720p, in repo) | Original (Kaltura) |
+|------|-------|-----------------------|--------------------|
+| 1 | The "Right" Beta - Part 1 | [session-11-part-1.mp4](session-11-part-1.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s11.1_011918/1_bt4azi4j) |
+| 2 | The "Right" Beta - Part 2 | [session-11-part-2.mp4](session-11-part-2.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s11.2_012518/1_c1ptr2le) |
 
-> **Transcripts:** Session 11 transcripts have not been added to the repo yet.
+> **Transcripts:** cleaned prose available — [pt 1](session-11-part-1.md) · [pt 2](session-11-part-2.md).
 
 ---
 

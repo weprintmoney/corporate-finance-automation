@@ -13,13 +13,13 @@ Conventional corporate finance is built on a singular objective, maximizing stoc
 
 ## Videos
 
-| Part | Title | Link |
-|------|-------|------|
-| 1 | The Objective: Utopia and Let Down - Part 1 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s2.1_FINAL_120417/1_tx21esf6) |
-| 2 | The Objective: Utopia and Let Down - Part 2 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s2.2_FINAL_120417/1_0m0hic03/84729361) |
-| 3 | The Objective: Utopia and Let Down - Part 3 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s2.3_FINAL_12041/1_yel3o3pp) |
+| Part | Title | Local (720p, in repo) | Original (Kaltura) |
+|------|-------|-----------------------|--------------------|
+| 1 | The Objective: Utopia and Let Down - Part 1 | [session-2-part-1.mp4](session-2-part-1.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s2.1_FINAL_120417/1_tx21esf6) |
+| 2 | The Objective: Utopia and Let Down - Part 2 | [session-2-part-2.mp4](session-2-part-2.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s2.2_FINAL_120417/1_0m0hic03/84729361) |
+| 3 | The Objective: Utopia and Let Down - Part 3 | [session-2-part-3.mp4](session-2-part-3.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s2.3_FINAL_12041/1_yel3o3pp) |
 
-> **Transcripts:** Session 2 transcripts have not been added to the repo yet.
+> **Transcripts:** cleaned prose available — [pt 1](session-2-part-1.md) · [pt 2](session-2-part-2.md) · [pt 3](session-2-part-3.md).
 
 ---
 

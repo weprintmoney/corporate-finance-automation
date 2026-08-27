@@ -13,12 +13,12 @@ When conflicts of interest abound, markets are inefficient and social costs are 
 
 ## Videos
 
-| Part | Title | Link |
-|------|-------|------|
-| 1 | The Objective: Reality and Reaction - Part 1 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s3.1_120517/1_ecumcwqk) |
-| 2 | The Objective: Reality and Reaction - Part 2 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s3.2_120517/1_279gxq1m) |
+| Part | Title | Local (720p, in repo) | Original (Kaltura) |
+|------|-------|-----------------------|--------------------|
+| 1 | The Objective: Reality and Reaction - Part 1 | [session-3-part-1.mp4](session-3-part-1.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s3.1_120517/1_ecumcwqk) |
+| 2 | The Objective: Reality and Reaction - Part 2 | [session-3-part-2.mp4](session-3-part-2.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s3.2_120517/1_279gxq1m) |
 
-> **Transcripts:** Session 3 transcripts have not been added to the repo yet.
+> **Transcripts:** cleaned prose available — [pt 1](session-3-part-1.md) · [pt 2](session-3-part-2.md).
 
 ---
 

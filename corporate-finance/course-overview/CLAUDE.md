@@ -41,49 +41,49 @@ Quick nav to every session's slides and cleaned transcript. Blank entries fill i
 
 | # | Topic | Slides | Transcript |
 |---|-------|--------|------------|
-| 1 | Valuation: The Big Picture / What is Corporate Finance? | [slides](../modules/module-1/lesson-01/slides.md) | — |
-| 2 | The Objective: Utopia and Let Down | [slides](../modules/module-1/lesson-02/slides.md) | — |
-| 3 | The Objective: Reality and Reaction | [slides](../modules/module-1/lesson-03/slides.md) | — |
-| 4 | Define and Measure Risk | [slides](../modules/module-1/lesson-04/slides.md) | — |
-| 5 | The Risk Free Rate | [slides](../modules/module-1/lesson-05/slides.md) | — |
-| 6 | Equity Risk Premiums | [slides](../modules/module-1/lesson-06/slides.md) | — |
-| 7 | Country Risk Premiums | [slides](../modules/module-1/lesson-07/slides.md) | — |
-| 8 | Regression Betas | [slides](../modules/module-1/lesson-08/slides.md) | — |
-| 9 | Beta Fundamentals | [slides](../modules/module-1/lesson-09/slides.md) | — |
-| 10 | Bottom-up Betas | [slides](../modules/module-1/lesson-10/slides.md) | — |
-| 11 | The "Right" Beta | [slides](../modules/module-1/lesson-11/slides.md) | — |
-| 12 | Debt: Measure and Cost | [slides](../modules/module-1/lesson-12/slides.md) | — |
+| 1 | Valuation: The Big Picture / What is Corporate Finance? | [slides](../modules/module-1/lesson-01/slides.md) | [pt 1](../modules/module-1/lesson-01/session-1-part-1.md) · [pt 2](../modules/module-1/lesson-01/session-1-part-2.md) |
+| 2 | The Objective: Utopia and Let Down | [slides](../modules/module-1/lesson-02/slides.md) | [pt 1](../modules/module-1/lesson-02/session-2-part-1.md) · [pt 2](../modules/module-1/lesson-02/session-2-part-2.md) · [pt 3](../modules/module-1/lesson-02/session-2-part-3.md) |
+| 3 | The Objective: Reality and Reaction | [slides](../modules/module-1/lesson-03/slides.md) | [pt 1](../modules/module-1/lesson-03/session-3-part-1.md) · [pt 2](../modules/module-1/lesson-03/session-3-part-2.md) |
+| 4 | Define and Measure Risk | [slides](../modules/module-1/lesson-04/slides.md) | [pt 1](../modules/module-1/lesson-04/session-4-part-1.md) · [pt 2](../modules/module-1/lesson-04/session-4-part-2.md) · [pt 3](../modules/module-1/lesson-04/session-4-part-3.md) |
+| 5 | The Risk Free Rate | [slides](../modules/module-1/lesson-05/slides.md) | [pt 1](../modules/module-1/lesson-05/session-5-part-1.md) · [pt 2](../modules/module-1/lesson-05/session-5-part-2.md) |
+| 6 | Equity Risk Premiums | [slides](../modules/module-1/lesson-06/slides.md) | [pt 1](../modules/module-1/lesson-06/session-6-part-1.md) · [pt 2](../modules/module-1/lesson-06/session-6-part-2.md) |
+| 7 | Country Risk Premiums | [slides](../modules/module-1/lesson-07/slides.md) | [pt 1](../modules/module-1/lesson-07/session-7-part-1.md) · [pt 2](../modules/module-1/lesson-07/session-7-part-2.md) |
+| 8 | Regression Betas | [slides](../modules/module-1/lesson-08/slides.md) | [pt 1](../modules/module-1/lesson-08/session-8-part-1.md) · [pt 2](../modules/module-1/lesson-08/session-8-part-2.md) |
+| 9 | Beta Fundamentals | [slides](../modules/module-1/lesson-09/slides.md) | [pt 1](../modules/module-1/lesson-09/session-9-part-1.md) · [pt 2](../modules/module-1/lesson-09/session-9-part-2.md) |
+| 10 | Bottom-up Betas | [slides](../modules/module-1/lesson-10/slides.md) | [pt 1](../modules/module-1/lesson-10/session-10-part-1.md) · [pt 2](../modules/module-1/lesson-10/session-10-part-2.md) |
+| 11 | The "Right" Beta | [slides](../modules/module-1/lesson-11/slides.md) | [pt 1](../modules/module-1/lesson-11/session-11-part-1.md) · [pt 2](../modules/module-1/lesson-11/session-11-part-2.md) |
+| 12 | Debt: Measure and Cost | [slides](../modules/module-1/lesson-12/slides.md) | [pt 1](../modules/module-1/lesson-12/session-12-part-1.md) · [pt 2](../modules/module-1/lesson-12/session-12-part-2.md) |
 
 ### Module 2 (lessons 13–19)
 
 | # | Topic | Slides | Transcript |
 |---|-------|--------|------------|
-| 13 | _(pending)_ | — | — |
-| 14 | _(pending)_ | — | — |
-| 15 | _(pending)_ | — | — |
-| 16 | _(pending)_ | — | — |
-| 17 | _(pending)_ | — | — |
-| 18 | _(pending)_ | — | — |
-| 19 | _(pending)_ | — | — |
+| 13 | _(pending)_ | — | [pt 1](../modules/module-2/lesson-13/session-13-part-1.md) · [pt 2](../modules/module-2/lesson-13/session-13-part-2.md) |
+| 14 | _(pending)_ | — | [pt 1](../modules/module-2/lesson-14/session-14-part-1.md) · [pt 2](../modules/module-2/lesson-14/session-14-part-2.md) |
+| 15 | _(pending)_ | — | [pt 1](../modules/module-2/lesson-15/session-15-part-1.md) · [pt 2](../modules/module-2/lesson-15/session-15-part-2.md) |
+| 16 | _(pending)_ | — | [pt 1](../modules/module-2/lesson-16/session-16-part-1.md) · [pt 2](../modules/module-2/lesson-16/session-16-part-2.md) |
+| 17 | _(pending)_ | — | [pt 1](../modules/module-2/lesson-17/session-17-part-1.md) · [pt 2](../modules/module-2/lesson-17/session-17-part-2.md) |
+| 18 | _(pending)_ | — | [pt 1](../modules/module-2/lesson-18/session-18-part-1.md) · [pt 2](../modules/module-2/lesson-18/session-18-part-2.md) |
+| 19 | _(pending)_ | — | [pt 1](../modules/module-2/lesson-19/session-19-part-1.md) · [pt 2](../modules/module-2/lesson-19/session-19-part-2.md) |
 
 ### Module 3 (lessons 20–26)
 
 | # | Topic | Slides | Transcript |
 |---|-------|--------|------------|
-| 20 | _(pending)_ | — | — |
-| 21 | _(pending)_ | — | — |
-| 22 | _(pending)_ | — | — |
-| 23 | _(pending)_ | — | — |
-| 24 | _(pending)_ | — | — |
-| 25 | _(pending)_ | — | — |
-| 26 | _(pending)_ | — | — |
+| 20 | _(pending)_ | — | [pt 1](../modules/module-3/lesson-20/session-20-part-1.md) · [pt 2](../modules/module-3/lesson-20/session-20-part-2.md) |
+| 21 | _(pending)_ | — | [pt 1](../modules/module-3/lesson-21/session-21-part-1.md) · [pt 2](../modules/module-3/lesson-21/session-21-part-2.md) |
+| 22 | _(pending)_ | — | [pt 1](../modules/module-3/lesson-22/session-22-part-1.md) |
+| 23 | _(pending)_ | — | [pt 1](../modules/module-3/lesson-23/session-23-part-1.md) · [pt 2](../modules/module-3/lesson-23/session-23-part-2.md) |
+| 24 | _(pending)_ | — | _not on channel_ |
+| 25 | _(pending)_ | — | [pt 1](../modules/module-3/lesson-25/session-25-part-1.md) · [pt 2](../modules/module-3/lesson-25/session-25-part-2.md) |
+| 26 | _(pending)_ | — | [pt 1](../modules/module-3/lesson-26/session-26-part-1.md) · [pt 2](../modules/module-3/lesson-26/session-26-part-2.md) |
 
 ### Module 4 (lessons 27–36)
 
 | # | Topic | Slides | Transcript |
 |---|-------|--------|------------|
-| 27 | _(pending)_ | — | [pt 2](../modules/module-4/lesson-27/session-27-part-2.md) |
-| 28 | _(pending)_ | — | — |
+| 27 | _(pending)_ | — | [pt 1](../modules/module-4/lesson-27/session-27-part-1.md) · [pt 2](../modules/module-4/lesson-27/session-27-part-2.md) |
+| 28 | _(pending)_ | — | [pt 1](../modules/module-4/lesson-28/session-28-part-1.md) |
 | 29 | _(pending)_ | — | [pt 1](../modules/module-4/lesson-29/session-29-part-1.md) |
 | 30 | _(pending)_ | — | [pt 1](../modules/module-4/lesson-30/session-30-part-1.md) |
 | 31 | _(pending)_ | — | [pt 1](../modules/module-4/lesson-31/session-31-part-1.md) · [pt 2](../modules/module-4/lesson-31/session-31-part-2.md) |

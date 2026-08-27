@@ -13,12 +13,12 @@ If regression betas are too noisy and backward looking, what should we use inste
 
 ## Videos
 
-| Part | Title | Link |
-|------|-------|------|
-| 1 | Bottom-up Betas - Part 1 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s10.1_020818/1_uclfcrxg) |
-| 2 | Bottom-up Betas - Part 2 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s10.2_020818/1_uxs4x4zl) |
+| Part | Title | Local (720p, in repo) | Original (Kaltura) |
+|------|-------|-----------------------|--------------------|
+| 1 | Bottom-up Betas - Part 1 | [session-10-part-1.mp4](session-10-part-1.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s10.1_020818/1_uclfcrxg) |
+| 2 | Bottom-up Betas - Part 2 | [session-10-part-2.mp4](session-10-part-2.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s10.2_020818/1_uxs4x4zl) |
 
-> **Transcripts:** Session 10 transcripts have not been added to the repo yet.
+> **Transcripts:** cleaned prose available — [pt 1](session-10-part-1.md) · [pt 2](session-10-part-2.md).
 
 ---
 

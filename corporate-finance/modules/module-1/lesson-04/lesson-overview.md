@@ -13,13 +13,13 @@ Risk is a feature of business, not a bug. The objective in business cannot be to
 
 ## Videos
 
-| Part | Title | Link |
-|------|-------|------|
-| 1 | Define and Measure Risk - Part 1 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s4.1_final_120617/1_u3z8htd9) |
-| 2 | Define and Measure Risk - Part 2 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s4.2_011018/1_07jnz5m8) |
-| 3 | Define and Measure Risk - Part 3 | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s4.3_final_120617/1_xygbp27a) |
+| Part | Title | Local (720p, in repo) | Original (Kaltura) |
+|------|-------|-----------------------|--------------------|
+| 1 | Define and Measure Risk - Part 1 | [session-4-part-1.mp4](session-4-part-1.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s4.1_final_120617/1_u3z8htd9) |
+| 2 | Define and Measure Risk - Part 2 | [session-4-part-2.mp4](session-4-part-2.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s4.2_011018/1_07jnz5m8) |
+| 3 | Define and Measure Risk - Part 3 | [session-4-part-3.mp4](session-4-part-3.mp4) | [stream.nyu.edu](https://stream.nyu.edu/media/ACF_s4.3_final_120617/1_xygbp27a) |
 
-> **Transcripts:** Session 4 transcripts have not been added to the repo yet.
+> **Transcripts:** cleaned prose available — [pt 1](session-4-part-1.md) · [pt 2](session-4-part-2.md) · [pt 3](session-4-part-3.md).
 
 ---
 
