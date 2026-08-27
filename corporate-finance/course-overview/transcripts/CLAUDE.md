@@ -1,12 +1,8 @@
 # Lecture Transcripts
 
-Captions pulled from NYU Stream (Kaltura) for the Applied Corporate Finance channel — the same lecture set surfaced on the course site as the "ACF - Corporate Finance" channel.
+Cleaned-prose transcripts of the NYU Stream Applied Corporate Finance video channel — pulled from Kaltura's English captions, then cleaned up: punctuation added, paragraph breaks inserted, and H2 section headings placed at topic transitions. Every figure, company, and teaching point preserved verbatim.
 
-Each session has three files:
-
-- `session-N-part-P.en.srt` — timed captions, use with the corresponding video for subtitles
-- `session-N-part-P.txt` — plain-text caption dump, wrapped at 100 cols; grep-friendly, LLM-friendly
-- `session-N-part-P.md` — **cleaned prose** with punctuation, paragraph breaks, and H2 section headings; the recommended reading version
+One file per session part: `session-N-part-P.md`.
 
 Personal-study copy only — do not push this directory to any public repo.
 
@@ -14,20 +10,26 @@ Personal-study copy only — do not push this directory to any public repo.
 
 | Session | Part 1 | Part 2 |
 |---------|--------|--------|
-| 27 | — | ✅ [md](session-27-part-2.md) · [srt](session-27-part-2.en.srt) · [txt](session-27-part-2.txt) |
-| 29 | ✅ [md](session-29-part-1.md) · [srt](session-29-part-1.en.srt) · [txt](session-29-part-1.txt) | — |
-| 30 | ✅ [md](session-30-part-1.md) · [srt](session-30-part-1.en.srt) · [txt](session-30-part-1.txt) | — |
-| 31 | ✅ [md](session-31-part-1.md) · [srt](session-31-part-1.en.srt) · [txt](session-31-part-1.txt) | ✅ [md](session-31-part-2.md) · [srt](session-31-part-2.en.srt) · [txt](session-31-part-2.txt) |
-| 32 | ✅ [md](session-32-part-1.md) · [srt](session-32-part-1.en.srt) · [txt](session-32-part-1.txt) | ✅ [md](session-32-part-2.md) · [srt](session-32-part-2.en.srt) · [txt](session-32-part-2.txt) |
-| 33 | ✅ [md](session-33-part-1.md) · [srt](session-33-part-1.en.srt) · [txt](session-33-part-1.txt) | ✅ [md](session-33-part-2.md) · [srt](session-33-part-2.en.srt) · [txt](session-33-part-2.txt) |
-| 34 | ✅ [md](session-34-part-1.md) · [srt](session-34-part-1.en.srt) · [txt](session-34-part-1.txt) | ✅ [md](session-34-part-2.md) · [srt](session-34-part-2.en.srt) · [txt](session-34-part-2.txt) |
-| 35 | ✅ [md](session-35-part-1.md) · [srt](session-35-part-1.en.srt) · [txt](session-35-part-1.txt) | ✅ [md](session-35-part-2.md) · [srt](session-35-part-2.en.srt) · [txt](session-35-part-2.txt) |
-| 36 | ✅ [md](session-36-part-1.md) · [srt](session-36-part-1.en.srt) · [txt](session-36-part-1.txt) | ✅ [md](session-36-part-2.md) · [srt](session-36-part-2.en.srt) · [txt](session-36-part-2.txt) |
+| 27 | — | [session-27-part-2.md](session-27-part-2.md) — Assessing dividend policy (Vale, BP, The Limited, Tata Motors) |
+| 29 | [session-29-part-1.md](session-29-part-1.md) — Three ways to value a company; equity vs. firm valuation | — |
+| 30 | [session-30-part-1.md](session-30-part-1.md) — FCFF; cost of equity/capital; Deutsche, Tata, Disney | — |
+| 31 | [session-31-part-1.md](session-31-part-1.md) — Growth: historical, analyst, fundamental (Deutsche) | [session-31-part-2.md](session-31-part-2.md) — Growth in Tata, Disney, Baidu |
+| 32 | [session-32-part-1.md](session-32-part-1.md) — Terminal value: methods, growth caps, growth periods | [session-32-part-2.md](session-32-part-2.md) — Mature-company assumptions; Vale; Disney maturation |
+| 33 | [session-33-part-1.md](session-33-part-1.md) — PV → equity; cash; cross-holdings | [session-33-part-2.md](session-33-part-2.md) — Cross-holding valuation |
+| 34 | [session-34-part-1.md](session-34-part-1.md) — Disney narrative + numbers (full DCF walkthrough) | [session-34-part-2.md](session-34-part-2.md) — Restructuring Disney; value of control; governance |
+| 35 | [session-35-part-1.md](session-35-part-1.md) — Multiples fundamentals | [session-35-part-2.md](session-35-part-2.md) — Deconstructing PE; Deutsche regression |
+| 36 | [session-36-part-1.md](session-36-part-1.md) — Capital structure recap | [session-36-part-2.md](session-36-part-2.md) — Debt trade-off; dividend policy; three first principles |
 
-Session 28 (both parts) and Session 27 part 1 / Session 29 part 2 / Session 30 part 2 were not in the channel listing. If they exist elsewhere on the course site, add them by pulling the SRT with `yt-dlp --cookies-from-browser chrome --skip-download --write-subs --sub-langs en --sub-format srt`.
+Missing from the channel listing: Session 28 (both parts), Session 27 part 1, Session 29 part 2, Session 30 part 2. If they exist elsewhere on the course site, re-run the pull:
+
+```bash
+yt-dlp --cookies-from-browser chrome --skip-download --write-subs --sub-langs en --sub-format srt "<VIDEO_URL>"
+```
+
+Convert the resulting `.srt` to plain text, clean via LLM, and drop the `.md` here.
 
 ## Source
 
 - Channel: `https://stream.nyu.edu/channel/ACF+-+Corporate+Finance/84729361`
 - Pulled: 2026-08-27
-- Cleaned: 2026-08-27 (15 `.md` files, ~27k words — punctuation, paragraph breaks, section headings; content preserved verbatim)
+- Total: 15 files, ~27k words
