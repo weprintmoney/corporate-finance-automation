@@ -14,7 +14,7 @@ I will be helping you with any doubt you have during the course. The best way to
 
 ## Tips from Roberto
 
-1. **Create a WhatsApp group** to stay in touch with your classmates and grow your network. Roberto had a very active group when he took the class that lasts until today.
+1. **[Join the WhatsApp group](https://chat.whatsapp.com/ChFjKrUfgTyIqNdsau2Bhv?s=em&p=i&mlu=4)** to stay in touch with your classmates and grow your network. Roberto had a very active group when he took the class that lasts until today.
 
 2. **Use the forum** for any doubt or question and try to answer questions your classmates have. The more active you are as a class, the more you will learn.
 
