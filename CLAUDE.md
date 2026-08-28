@@ -14,10 +14,9 @@ Solo repo — no PR approvals or CODEOWNERS. Direct-push to `main` is still bloc
 
 | Folder | Purpose |
 |--------|---------|
-| `financial-accounting/` | Ledgers, financial statements, ratio analysis, journal-entry drills |
-| `statistics/` | Probability, distributions, hypothesis tests, regression |
-| `corporate-finance/` | TVM, valuation, capital structure, capital budgeting, cost of capital |
-| `final-project/` | Capstone: problem framing, data, model, write-up |
+| `01-statistics/` | Probability, distributions, hypothesis tests, regression |
+| `02-financial-accounting/` | Ledgers, financial statements, ratio analysis, journal-entry drills |
+| `03-corporate-finance/` | TVM, valuation, capital structure, capital budgeting, cost of capital |
 
 Each folder has its own `CLAUDE.md` with subject-specific context, key formulas, and a doc index.
 
@@ -25,10 +24,9 @@ Each folder has its own `CLAUDE.md` with subject-specific context, key formulas,
 
 | Area | File | Description |
 |------|------|-------------|
-| Financial Accounting | `financial-accounting/CLAUDE.md` | Accounting equation, statements, GAAP conventions, per-topic notes |
-| Statistics | `statistics/CLAUDE.md` | Distributions, tests, regression, formula sheet |
-| Corporate Finance | `corporate-finance/CLAUDE.md` | TVM, valuation, WACC, capital budgeting |
-| Final Project | `final-project/CLAUDE.md` | Capstone scope, deliverables, data, model |
+| Statistics | `01-statistics/CLAUDE.md` | Distributions, tests, regression, formula sheet |
+| Financial Accounting | `02-financial-accounting/CLAUDE.md` | Accounting equation, statements, GAAP conventions, per-topic notes |
+| Corporate Finance | `03-corporate-finance/CLAUDE.md` | TVM, valuation, WACC, capital budgeting |
 | Kebab-case naming rule | `.claude/rules/kebab-case-naming.md` | File and folder naming convention (enforced by hook) |
 | Doc frontmatter schema | `.claude/rules/doc-frontmatter-schema.md` | Frontmatter schema for non-CLAUDE.md docs |
 | Update doc index rule | `.claude/rules/update-doc-index.md` | Keep parent CLAUDE.md indexes in sync when files are added |
