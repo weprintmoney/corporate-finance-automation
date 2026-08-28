@@ -28,7 +28,6 @@ The course follows Damodaran's standard valuation framework: estimate a risk-adj
   ├── modules/               All 36 lessons organized by module
   │   ├── lesson-index.yaml  Navigation index — find any lesson in one read
   │   ├── module-1/          Foundations & discount rates (lessons 01–12)
-  │   │   └── example-evals/ Reference valuation outputs (SolarWinds, etc.)
   │   ├── module-2/          (in progress)
   │   ├── module-3/          (in progress)
   │   └── module-4/          (in progress)
@@ -89,7 +88,7 @@ Open Claude Code in this repo and type `/evaluate-company`. Claude will read the
 
 Output is saved to `03-corporate-finance/modules/company-valuations/<company>-valuation.md`.
 
-**Example:** The SolarWinds (SWI) valuation is in `03-corporate-finance/modules/module-1/example-evals/` — both as a markdown report and as a standalone HTML file.
+**Example:** The SolarWinds (SWI) valuation is in `03-corporate-finance/modules/company-valuations/` — both as a markdown report and as a standalone HTML file.
 
 ---
 
