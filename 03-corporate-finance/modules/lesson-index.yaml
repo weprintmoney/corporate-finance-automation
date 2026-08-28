@@ -1,0 +1,416 @@
+# lesson-index.yaml
+# Navigation map for all 36 lessons. Read this to find a lesson folder fast.
+#
+# files:
+#   slides: slides.md + slides.pdf present
+#   transcripts: session-N-part-N.md present (mp4 LFS pointers co-located — never read mp4)
+#   spreadsheets: original XLS/XLSX + converted .md present
+#   readings: reading-*.md present
+#   blogs: blog-*.md (Damodaran posts) present
+#   overview: lesson-overview.md present
+
+lessons:
+
+  # ── Module 1: Foundations & Discount Rates ──────────────────────────────────
+
+  - lesson: "01"
+    module: "module-1"
+    topic: "Valuation: The Big Picture / What is Corporate Finance?"
+    folder: "module-1/lesson-01"
+    files:
+      slides: true
+      transcripts: 2
+      spreadsheets: false
+      readings: false
+      blogs: true
+
+  - lesson: "02"
+    module: "module-1"
+    topic: "The Objective: Utopia and Let Down"
+    folder: "module-1/lesson-02"
+    files:
+      slides: true
+      transcripts: 3
+      spreadsheets: false
+      readings: false
+      blogs: true
+
+  - lesson: "03"
+    module: "module-1"
+    topic: "The Objective: Reality and Reaction"
+    folder: "module-1/lesson-03"
+    files:
+      slides: true
+      transcripts: 2
+      spreadsheets: false
+      readings: false
+      blogs: true
+
+  - lesson: "04"
+    module: "module-1"
+    topic: "Define and Measure Risk"
+    folder: "module-1/lesson-04"
+    files:
+      slides: true
+      transcripts: 3
+      spreadsheets: true   # inshold.xls
+      readings: true
+      blogs: true
+
+  - lesson: "05"
+    module: "module-1"
+    topic: "The Risk-Free Rate"
+    folder: "module-1/lesson-05"
+    files:
+      slides: true
+      transcripts: 2
+      spreadsheets: true   # risk-free-rate-estimator.xls, currencyriskfree2023.xls
+      readings: false
+      blogs: true
+
+  - lesson: "06"
+    module: "module-1"
+    topic: "Equity Risk Premiums"
+    folder: "module-1/lesson-06"
+    files:
+      slides: true
+      transcripts: 2
+      spreadsheets: true   # implprem.xls, histretsp.xls, histimpl.xls
+      readings: true
+      blogs: true
+
+  - lesson: "07"
+    module: "module-1"
+    topic: "Country Risk Premiums"
+    folder: "module-1/lesson-07"
+    files:
+      slides: true
+      transcripts: 2
+      spreadsheets: true   # ctrypremjuly24.xlsx, company-erp-calculator.xls
+      readings: true
+      blogs: true
+
+  - lesson: "08"
+    module: "module-1"
+    topic: "Regression Betas"
+    folder: "module-1/lesson-08"
+    files:
+      slides: true
+      transcripts: 2
+      spreadsheets: false
+      readings: false
+      blogs: true
+
+  - lesson: "09"
+    module: "module-1"
+    topic: "Beta Fundamentals"
+    folder: "module-1/lesson-09"
+    files:
+      slides: true
+      transcripts: 2
+      spreadsheets: true   # financial-leverage-betas.xls
+      readings: false
+      blogs: false
+
+  - lesson: "10"
+    module: "module-1"
+    topic: "Bottom-Up Betas"
+    folder: "module-1/lesson-10"
+    files:
+      slides: true
+      transcripts: 2
+      spreadsheets: true   # bottomupbeta.xlsx, totalbeta24.xls, totalbeta-global24.xls
+      readings: false
+      blogs: false
+
+  - lesson: "11"
+    module: "module-1"
+    topic: "The Right Beta"
+    folder: "module-1/lesson-11"
+    files:
+      slides: true
+      transcripts: 2
+      spreadsheets: true   # total-beta-calculator.xls
+      readings: false
+      blogs: false
+
+  - lesson: "12"
+    module: "module-1"
+    topic: "Debt: Measure and Cost"
+    folder: "module-1/lesson-12"
+    files:
+      slides: true
+      transcripts: 2
+      spreadsheets: true   # ratings.xls, dbtfund24.xls, dbtfund-global24.xls, leaseeffect24.xls, leaseeffect-global24.xls, countrytaxrates24.xls, debt-cost-of-debt.xls
+      readings: true
+      blogs: false
+
+  # ── Module 2 ─────────────────────────────────────────────────────────────────
+
+  - lesson: "13"
+    module: "module-2"
+    topic: "(pending)"
+    folder: "module-2/lesson-13"
+    files:
+      slides: false
+      transcripts: 2
+      spreadsheets: false
+      readings: false
+      blogs: false
+
+  - lesson: "14"
+    module: "module-2"
+    topic: "(pending)"
+    folder: "module-2/lesson-14"
+    files:
+      slides: false
+      transcripts: 2
+      spreadsheets: false
+      readings: false
+      blogs: false
+
+  - lesson: "15"
+    module: "module-2"
+    topic: "(pending)"
+    folder: "module-2/lesson-15"
+    files:
+      slides: false
+      transcripts: 2
+      spreadsheets: false
+      readings: false
+      blogs: false
+
+  - lesson: "16"
+    module: "module-2"
+    topic: "(pending)"
+    folder: "module-2/lesson-16"
+    files:
+      slides: false
+      transcripts: 2
+      spreadsheets: false
+      readings: false
+      blogs: false
+
+  - lesson: "17"
+    module: "module-2"
+    topic: "(pending)"
+    folder: "module-2/lesson-17"
+    files:
+      slides: false
+      transcripts: 2
+      spreadsheets: false
+      readings: false
+      blogs: false
+
+  - lesson: "18"
+    module: "module-2"
+    topic: "(pending)"
+    folder: "module-2/lesson-18"
+    files:
+      slides: false
+      transcripts: 2
+      spreadsheets: false
+      readings: false
+      blogs: false
+
+  - lesson: "19"
+    module: "module-2"
+    topic: "(pending)"
+    folder: "module-2/lesson-19"
+    files:
+      slides: false
+      transcripts: 2
+      spreadsheets: false
+      readings: false
+      blogs: false
+
+  # ── Module 3 ─────────────────────────────────────────────────────────────────
+
+  - lesson: "20"
+    module: "module-3"
+    topic: "(pending)"
+    folder: "module-3/lesson-20"
+    files:
+      slides: false
+      transcripts: 2
+      spreadsheets: false
+      readings: false
+      blogs: false
+
+  - lesson: "21"
+    module: "module-3"
+    topic: "(pending)"
+    folder: "module-3/lesson-21"
+    files:
+      slides: false
+      transcripts: 2
+      spreadsheets: false
+      readings: false
+      blogs: false
+
+  - lesson: "22"
+    module: "module-3"
+    topic: "(pending)"
+    folder: "module-3/lesson-22"
+    files:
+      slides: false
+      transcripts: 1    # part 2 not on channel
+      spreadsheets: false
+      readings: false
+      blogs: false
+
+  - lesson: "23"
+    module: "module-3"
+    topic: "(pending)"
+    folder: "module-3/lesson-23"
+    files:
+      slides: false
+      transcripts: 2
+      spreadsheets: false
+      readings: false
+      blogs: false
+
+  - lesson: "24"
+    module: "module-3"
+    topic: "(pending)"
+    folder: "module-3/lesson-24"
+    files:
+      slides: false
+      transcripts: 0    # not on channel — folder exists but empty
+      spreadsheets: false
+      readings: false
+      blogs: false
+
+  - lesson: "25"
+    module: "module-3"
+    topic: "(pending)"
+    folder: "module-3/lesson-25"
+    files:
+      slides: false
+      transcripts: 2
+      spreadsheets: false
+      readings: false
+      blogs: false
+
+  - lesson: "26"
+    module: "module-3"
+    topic: "(pending)"
+    folder: "module-3/lesson-26"
+    files:
+      slides: false
+      transcripts: 2
+      spreadsheets: false
+      readings: false
+      blogs: false
+
+  # ── Module 4 ─────────────────────────────────────────────────────────────────
+
+  - lesson: "27"
+    module: "module-4"
+    topic: "(pending)"
+    folder: "module-4/lesson-27"
+    files:
+      slides: false
+      transcripts: 2
+      spreadsheets: false
+      readings: false
+      blogs: false
+
+  - lesson: "28"
+    module: "module-4"
+    topic: "(pending)"
+    folder: "module-4/lesson-28"
+    files:
+      slides: false
+      transcripts: 1    # part 2 not on channel
+      spreadsheets: false
+      readings: false
+      blogs: false
+
+  - lesson: "29"
+    module: "module-4"
+    topic: "(pending)"
+    folder: "module-4/lesson-29"
+    files:
+      slides: false
+      transcripts: 1
+      spreadsheets: false
+      readings: false
+      blogs: false
+
+  - lesson: "30"
+    module: "module-4"
+    topic: "(pending)"
+    folder: "module-4/lesson-30"
+    files:
+      slides: false
+      transcripts: 1
+      spreadsheets: false
+      readings: false
+      blogs: false
+
+  - lesson: "31"
+    module: "module-4"
+    topic: "(pending)"
+    folder: "module-4/lesson-31"
+    files:
+      slides: false
+      transcripts: 2
+      spreadsheets: false
+      readings: false
+      blogs: false
+
+  - lesson: "32"
+    module: "module-4"
+    topic: "(pending)"
+    folder: "module-4/lesson-32"
+    files:
+      slides: false
+      transcripts: 2
+      spreadsheets: false
+      readings: false
+      blogs: false
+
+  - lesson: "33"
+    module: "module-4"
+    topic: "(pending)"
+    folder: "module-4/lesson-33"
+    files:
+      slides: false
+      transcripts: 2
+      spreadsheets: false
+      readings: false
+      blogs: false
+
+  - lesson: "34"
+    module: "module-4"
+    topic: "(pending)"
+    folder: "module-4/lesson-34"
+    files:
+      slides: false
+      transcripts: 2
+      spreadsheets: false
+      readings: false
+      blogs: false
+
+  - lesson: "35"
+    module: "module-4"
+    topic: "(pending)"
+    folder: "module-4/lesson-35"
+    files:
+      slides: false
+      transcripts: 2
+      spreadsheets: false
+      readings: false
+      blogs: false
+
+  - lesson: "36"
+    module: "module-4"
+    topic: "(pending)"
+    folder: "module-4/lesson-36"
+    files:
+      slides: false
+      transcripts: 2
+      spreadsheets: false
+      readings: false
+      blogs: false
