@@ -26,4 +26,8 @@ When conflicts of interest abound, markets are inefficient and social costs are 
 
 | File | Description |
 |------|-------------|
-| `slides.md` | Slide deck for Lesson 3 (ACF_S03) |
+| `slides.pdf` | Original slide deck (PDF) |
+| `slides.md` | Slide deck converted to markdown |
+| `session-3-part-1.md` | Video transcript — part 1 |
+| `session-3-part-2.md` | Video transcript — part 2 |
+| `blog-jan-2016-data-update-5-corporate-governance.md` | January 2016 Data Update 5: Making a case for corporate governance |

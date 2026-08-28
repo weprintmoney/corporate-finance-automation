@@ -27,8 +27,13 @@ Risk is a feature of business, not a bug. The objective in business cannot be to
 
 | File | Description |
 |------|-------------|
-| `slides.md` | Slide deck for Lesson 4 (ACF_S04) |
-| `reading-modified-capital-asset-pricing-model.md` | Reading: Modified Capital Asset Pricing Model |
-| `spreadsheet-inshold.md` | Spreadsheet: Institutional Stockholdings data (inshold.xls) |
-| `blog-diversification-why-is-it-not-working.md` | Blog: Diversification — Why is it not working? |
-| `blog-how-much-diversification-is-too-much.md` | Blog: How Much Diversification is Too Much? |
+| `slides.pdf` | Original slide deck (PDF) |
+| `slides.md` | Slide deck converted to markdown |
+| `session-4-part-1.md` | Video transcript — part 1 |
+| `session-4-part-2.md` | Video transcript — part 2 |
+| `session-4-part-3.md` | Video transcript — part 3 |
+| `reading-modified-capital-asset-pricing-model.md` | Corrective Lenses (modified CAPM reading) |
+| `spreadsheet-inshold.md` | Institutional stockholdings data (spreadsheet) |
+| `blog-diversification-why-is-it-not-working.md` | Diversification: Why is it not working? |
+| `blog-how-much-diversification-is-too-much.md` | How much diversification is too much? |
+| `blog-jan-2016-data-update-5-corporate-governance.md` | January 2016 Data Update 5: Making a case for corporate governance |

@@ -26,5 +26,8 @@ The bottom-up beta approach can yield better estimates of beta for a company, bu
 
 | File | Description |
 |------|-------------|
-| `slides.md` | Slide deck for Lesson 11 (ACF_S11) |
-| `spreadsheet-total-beta-calculator.md` | Spreadsheet: Total Beta Calculator (ACF_S11) |
+| `slides.pdf` | Original slide deck (PDF) |
+| `slides.md` | Slide deck converted to markdown |
+| `session-11-part-1.md` | Video transcript — part 1 |
+| `session-11-part-2.md` | Video transcript — part 2 |
+| `spreadsheet-total-beta-calculator.md` | Total beta calculator (spreadsheet) |

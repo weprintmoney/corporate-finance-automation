@@ -26,9 +26,13 @@ While risk is part of every business, the first step in assessing what you need 
 
 | File | Description |
 |------|-------------|
-| `slides.md` | Slide deck for Lesson 5 (ACF_S05) |
-| `spreadsheet-risk-free-rate-estimator.md` | Spreadsheet: Risk Free Rate Estimator (ACF_S05) |
-| `spreadsheet-currencyriskfree2023.md` | Spreadsheet: Currency Risk Free Rates (2023 data) |
-| `blog-risk-free-rates-and-value-dealing-with-historically-low-risk-free-rates.md` | Blog: Risk Free Rates and Value — Dealing with Historically Low Risk Free Rates |
-| `blog-the-fed-interest-rates-and-stock-prices-fighting-the-fear-factor.md` | Blog: The Fed, Interest Rates and Stock Prices — Fighting the Fear Factor |
-| `blog-january-2016-data-update-2-interest-rates-exchange-rates-and-currencies.md` | Blog: January 2016 Data Update 2 — Interest Rates, Exchange Rates and Currencies |
+| `slides.pdf` | Original slide deck (PDF) |
+| `slides.md` | Slide deck converted to markdown |
+| `session-5-part-1.md` | Video transcript — part 1 |
+| `session-5-part-2.md` | Video transcript — part 2 |
+| `spreadsheet-currencyriskfree2023.md` | Currency risk-free rates (spreadsheet) |
+| `spreadsheet-risk-free-rate-estimator.md` | Risk free rate estimator (spreadsheet) |
+| `blog-january-2016-data-update-2-interest-rates-exchange-rates-and-currencies.md` | January 2016 Data Update 2: Interest Rates, Exchange Rates and Currencies |
+| `blog-negative-interest-rates.md` | Negative Interest Rates: Impossible, Unnatural or Just Unusual? |
+| `blog-risk-free-rates-and-value-dealing-with-historically-low-risk-free-rates.md` | Risk free rates and value: Dealing with historically low risk free rates |
+| `blog-the-fed-interest-rates-and-stock-prices-fighting-the-fear-factor.md` | The Fed, Interest Rates and Stock Prices: Fighting the Fear Factor |

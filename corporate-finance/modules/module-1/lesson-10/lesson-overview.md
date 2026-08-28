@@ -26,7 +26,10 @@ If regression betas are too noisy and backward looking, what should we use inste
 
 | File | Description |
 |------|-------------|
-| `slides.md` | Slide deck for Lesson 10 (ACF_S10) |
-| `spreadsheet-bottomupbeta.md` | Spreadsheet: Bottom-up Beta calculator |
-| `spreadsheet-totalbeta24.md` | Spreadsheet: Total Beta by industry — 2024 (US) |
-| `spreadsheet-totalbeta-global24.md` | Spreadsheet: Total Beta by industry — 2024 (Global) |
+| `slides.pdf` | Original slide deck (PDF) |
+| `slides.md` | Slide deck converted to markdown |
+| `session-10-part-1.md` | Video transcript — part 1 |
+| `session-10-part-2.md` | Video transcript — part 2 |
+| `spreadsheet-bottomupbeta.md` | Bottom-up beta calculator (spreadsheet) |
+| `spreadsheet-totalbeta24.md` | Total beta by industry — 2024 US (spreadsheet) |
+| `spreadsheet-totalbeta-global24.md` | Total beta by industry — 2024 global (spreadsheet) |

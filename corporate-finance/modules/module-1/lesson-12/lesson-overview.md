@@ -26,13 +26,16 @@ A firm can not only raise equity but can borrow money. To bring debt into the hu
 
 | File | Description |
 |------|-------------|
-| `slides.md` | Slide deck for Lesson 12 (ACF_S12) |
-| `reading-the-cost-of-capital.md` | Reading: The Cost of Capital |
-| `reading-leases-debt-and-value.md` | Reading: Leases, Debt and Value |
-| `spreadsheet-debt-cost-of-debt.md` | Spreadsheet: Debt and Cost of Debt calculator (ACF_S12) |
-| `spreadsheet-dbtfund24.md` | Spreadsheet: Debt fundamentals by industry — 2024 (US) |
-| `spreadsheet-dbtfund-global24.md` | Spreadsheet: Debt fundamentals by industry — 2024 (Global) |
-| `spreadsheet-leaseeffect24.md` | Spreadsheet: Lease effect on debt — 2024 (US) |
-| `spreadsheet-leaseeffect-global24.md` | Spreadsheet: Lease effect on debt — 2024 (Global) |
-| `spreadsheet-countrytaxrates24.md` | Spreadsheet: Country tax rates — 2024 |
-| `spreadsheet-ratings.md` | Spreadsheet: Default spreads by credit rating |
+| `slides.pdf` | Original slide deck (PDF) |
+| `slides.md` | Slide deck converted to markdown |
+| `session-12-part-1.md` | Video transcript — part 1 |
+| `session-12-part-2.md` | Video transcript — part 2 |
+| `reading-leases-debt-and-value.md` | Leases, Debt and Value |
+| `reading-the-cost-of-capital.md` | The Cost of Capital: The Swiss Army Knife of Finance |
+| `spreadsheet-countrytaxrates24.md` | Country tax rates — 2024 (spreadsheet) |
+| `spreadsheet-dbtfund24.md` | Debt fundamentals by industry — 2024 US (spreadsheet) |
+| `spreadsheet-dbtfund-global24.md` | Debt fundamentals by industry — 2024 global (spreadsheet) |
+| `spreadsheet-debt-cost-of-debt.md` | Debt and cost of debt calculator (spreadsheet) |
+| `spreadsheet-leaseeffect24.md` | Lease effect on debt — 2024 US (spreadsheet) |
+| `spreadsheet-leaseeffect-global24.md` | Lease effect on debt — 2024 global (spreadsheet) |
+| `spreadsheet-ratings.md` | Ratings-to-spread mapping (spreadsheet) |

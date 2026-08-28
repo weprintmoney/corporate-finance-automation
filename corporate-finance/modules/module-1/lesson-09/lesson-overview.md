@@ -26,6 +26,10 @@ While we may estimate betas from regressions, betas are determined by choices th
 
 | File | Description |
 |------|-------------|
-| `slides.md` | Slide deck for Lesson 9 (ACF_S09) — Part 1 |
-| `slides-part2.md` | Slide deck for Lesson 9 (ACF_S09) — Part 2 |
-| `spreadsheet-financial-leverage-betas.md` | Spreadsheet: Financial Leverage and Betas (ACF_S09) |
+| `slides.pdf` | Original slide deck (PDF) |
+| `slides.md` | Slide deck converted to markdown |
+| `slides-part2.pdf` | Original slide deck part 2 (PDF) |
+| `slides-part2.md` | Slide deck part 2 converted to markdown |
+| `session-9-part-1.md` | Video transcript — part 1 |
+| `session-9-part-2.md` | Video transcript — part 2 |
+| `spreadsheet-financial-leverage-betas.md` | Financial leverage and betas (spreadsheet) |
