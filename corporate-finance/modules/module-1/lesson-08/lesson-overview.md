@@ -27,4 +27,9 @@ It is standard practice in finance to estimate a beta for a company by running a
 
 | File | Description |
 |------|-------------|
-| `slides.md` | Slide deck for Lesson 8 (ACF_S08) |
+| `slides.pdf` | Original slide deck (PDF) |
+| `slides.md` | Slide deck converted to markdown |
+| `session-8-part-1.md` | Video transcript — part 1 |
+| `session-8-part-2.md` | Video transcript — part 2 |
+| `blog-dark-side-of-globalization-country-risk.md` | The Dark Side of Globalization: An Update on Country Risk! |
+| `blog-jan-2017-data-update-4-country-risk.md` | January 2017 Data Update 4: Country Risk Update |

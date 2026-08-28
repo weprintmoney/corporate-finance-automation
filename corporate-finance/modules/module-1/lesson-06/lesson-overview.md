@@ -26,10 +26,14 @@ To determine what you would demand for investing in the equity in a business, yo
 
 | File | Description |
 |------|-------------|
-| `slides.md` | Slide deck for Lesson 6 (ACF_S06) |
-| `reading-erp-determinants-estimation-implications-2017.md` | Reading: Equity Risk Premiums — Determinants, Estimation and Implications (2017 Edition) |
-| `spreadsheet-histretsp.md` | Spreadsheet: Historical Returns on S&P 500 (histretSP.xls) |
-| `spreadsheet-histimpl.md` | Spreadsheet: Historical Implied ERP data (histimpl.xls) |
-| `spreadsheet-implprem.md` | Spreadsheet: Implied Equity Risk Premium calculator (implprem.xls) |
-| `blog-an-erp-retrospective-looking-back-2014-and-looking-forward-2015.md` | Blog: An ERP Retrospective — Looking Back at 2014 and Forward to 2015 |
-| `blog-another-market-crisis-my-survival-manual-journal.md` | Blog: Another Market Crisis — My Survival Manual/Journal |
+| `slides.pdf` | Original slide deck (PDF) |
+| `slides.md` | Slide deck converted to markdown |
+| `session-6-part-1.md` | Video transcript — part 1 |
+| `session-6-part-2.md` | Video transcript — part 2 |
+| `reading-erp-determinants-estimation-implications-2017.md` | Equity Risk Premiums (ERP): Determinants, Estimation and Implications — The 2017 Edition |
+| `spreadsheet-histimpl.md` | Historical implied ERP data (spreadsheet) |
+| `spreadsheet-histretsp.md` | Historical returns on S&P 500 (spreadsheet) |
+| `spreadsheet-implprem.md` | Implied equity risk premium calculator (spreadsheet) |
+| `blog-an-erp-retrospective-looking-back-2014-and-looking-forward-2015.md` | An ERP Retrospective: Looking back (2014) and Looking forward (2015) |
+| `blog-another-market-crisis-my-survival-manual-journal.md` | Another Market Crisis? My Survival Manual/Journal! |
+| `blog-jan-2016-data-update-1-us-equity-markets.md` | January 2016 Data Update 1: The US Equity Markets |

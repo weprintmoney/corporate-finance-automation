@@ -26,8 +26,12 @@ As companies and investors globalize, we face the challenge of estimating equity
 
 | File | Description |
 |------|-------------|
-| `slides.md` | Slide deck for Lesson 7 (ACF_S07) |
-| `reading-country-risk-premiums-determinants-measures-implications-2017.md` | Reading: Country Risk Premiums — Determinants, Measures and Implications (2017 Edition) |
-| `spreadsheet-company-erp-calculator.md` | Spreadsheet: Company ERP Calculator (ACF_S07) |
-| `spreadsheet-ctrypremjuly24.md` | Spreadsheet: Country Risk Premiums — July 2024 data |
-| `blog-january-2017-data-update-4-country-risk-update.md` | Blog: January 2017 Data Update 4 — Country Risk Update |
+| `slides.pdf` | Original slide deck (PDF) |
+| `slides.md` | Slide deck converted to markdown |
+| `session-7-part-1.md` | Video transcript — part 1 |
+| `session-7-part-2.md` | Video transcript — part 2 |
+| `reading-country-risk-premiums-determinants-measures-implications-2017.md` | Country Risk: Determinants, Measures and Implications — The 2017 Edition |
+| `spreadsheet-company-erp-calculator.md` | Company ERP calculator (spreadsheet) |
+| `spreadsheet-ctrypremjuly24.md` | Country risk premiums — July 2024 (spreadsheet) |
+| `blog-dark-side-of-globalization-country-risk.md` | The Dark Side of Globalization: An Update on Country Risk! |
+| `blog-january-2017-data-update-4-country-risk-update.md` | January 2017 Data Update 4: Country Risk Update |
