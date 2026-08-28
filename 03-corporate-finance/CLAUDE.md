@@ -56,3 +56,6 @@ WACC = (E/V) · rₑ + (D/V) · r_d · (1 − t)
 | [modules/lesson-index.yaml](modules/lesson-index.yaml) | Full lesson map: folder paths, topics, and which file types are present per lesson |
 | [blogs/README.md](blogs/README.md) | Damodaran "Musings on Markets" archive fetcher — pulls all posts to `posts/` for local text analysis |
 | [blogs/posts/](blogs/posts/) | Full Damodaran blog archive (~680 posts, 2008–present) |
+| [data/market-rates.json](data/market-rates.json) | Live rates from FRED: 10-year Treasury, SOFR, Fed Funds — refreshed weekdays by CI |
+| [data/companies/](data/companies/) | Per-ticker JSON from Financial Modeling Prep: income statement, balance sheet, cash flow |
+| [data/damodaran/](data/damodaran/) | Damodaran industry betas + country risk premiums — refreshed monthly by CI |

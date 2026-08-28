@@ -1,0 +1,31 @@
+name: Refresh Market Rates
+
+on:
+  schedule:
+    # 9:00 AM CT weekdays (14:00 UTC; adjusts for DST automatically)
+    - cron: '0 14 * * 1-5'
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch rates from FRED
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python3 scripts/fetch-market-data.py
+
+      - name: Commit if data changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add 03-corporate-finance/data/market-rates.json
+          git diff --staged --quiet && echo "No changes." || (
+            git commit -m "data: refresh market rates $(date -u +%Y-%m-%d)" &&
+            git push
+          )
