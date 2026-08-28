@@ -8,6 +8,19 @@ Before starting, determine the output path for the report:
 - Report file: `03-corporate-finance/modules/company-valuations/<company-slug>-valuation.md`
 - Create the `company-valuations/` directory if it doesn't exist
 
+### Pre-fetched data (prefer over web search when available)
+
+Check these files before web-searching for rates or financials. If the file exists and its `updated` field is recent (≤ 7 days for rates, ≤ 90 days for financials), use it as the primary source and note it in the report.
+
+| File | Contents | Used in |
+|------|----------|---------|
+| `03-corporate-finance/data/market-rates.json` | US 10-year Treasury yield, SOFR, Fed Funds rate — updated weekdays by CI | Step 5 (risk-free rate), Step 12 (floating debt cost) |
+| `03-corporate-finance/data/companies/<ticker>.json` | FMP income statement, balance sheet, cash flow, key metrics | Steps 4, 8, 10, 12 |
+| `03-corporate-finance/data/damodaran/industry-betas.json` | Damodaran sector unlevered/levered/total betas | Step 10 |
+| `03-corporate-finance/data/damodaran/country-risk.json` | Country equity risk premiums | Step 7 |
+
+If `companies/<ticker>.json` does not exist, continue with web search as before. Mention in the report whether live data or web-searched estimates were used for each key input.
+
 ---
 
 ## Step 1 — Pick a company

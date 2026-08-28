@@ -1,0 +1,33 @@
+name: Refresh Damodaran Data
+
+on:
+  schedule:
+    # 1st of each month at noon UTC — Damodaran refreshes data in January,
+    # so this ensures we pick it up within a month of release.
+    - cron: '0 12 1 * *'
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Python dependencies
+        run: pip install xlrd openpyxl
+
+      - name: Fetch Damodaran industry betas and country risk
+        run: python3 scripts/fetch-damodaran.py
+
+      - name: Commit if data changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add 03-corporate-finance/data/damodaran/
+          git diff --staged --quiet && echo "No changes." || (
+            git commit -m "data: refresh Damodaran industry/country data $(date -u +%Y-%m-%d)" &&
+            git push
+          )
