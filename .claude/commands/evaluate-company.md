@@ -5,7 +5,7 @@ Guide the user through a 12-step corporate finance company valuation based on Mo
 ## Setup
 
 Before starting, determine the output path for the report:
-- Report file: `corporate-finance/modules/company-valuations/<company-slug>-valuation.md`
+- Report file: `03-corporate-finance/modules/company-valuations/<company-slug>-valuation.md`
 - Create the `company-valuations/` directory if it doesn't exist
 
 ---
@@ -13,15 +13,15 @@ Before starting, determine the output path for the report:
 ## Step 1 — Pick a company
 
 Read and internalize:
-- `corporate-finance/modules/module-1/lesson-01/lesson-overview.md`
-- `corporate-finance/modules/module-1/lesson-01/slides.md`
+- `03-corporate-finance/modules/module-1/lesson-01/lesson-overview.md`
+- `03-corporate-finance/modules/module-1/lesson-01/slides.md`
 
 Then ask the user: **"Pick a company to value."**
 
 Wait for the user's answer before proceeding. Once they give a company name:
 - Set `<COMPANY>` as the company name used throughout all remaining steps
 - Set `<SLUG>` as the kebab-case version of the company name (e.g. "Apple Inc." → `apple`)
-- Create the report file at `corporate-finance/modules/company-valuations/<SLUG>-valuation.md` with this header:
+- Create the report file at `03-corporate-finance/modules/company-valuations/<SLUG>-valuation.md` with this header:
 
 ```markdown
 # Company Valuation: <COMPANY>
@@ -37,10 +37,10 @@ Confirm to the user which company you'll be evaluating and that the report file 
 ## Step 2 — Corporate Governance
 
 Read and internalize:
-- `corporate-finance/modules/module-1/lesson-02/lesson-overview.md`
-- `corporate-finance/modules/module-1/lesson-02/slides.md`
-- `corporate-finance/modules/module-1/lesson-02/blog-alibaba-governance.md`
-- `corporate-finance/modules/module-1/lesson-02/blog-family-companies-4c-tradeoff.md`
+- `03-corporate-finance/modules/module-1/lesson-02/lesson-overview.md`
+- `03-corporate-finance/modules/module-1/lesson-02/slides.md`
+- `03-corporate-finance/modules/module-1/lesson-02/blog-alibaba-governance.md`
+- `03-corporate-finance/modules/module-1/lesson-02/blog-family-companies-4c-tradeoff.md`
 
 Research `<COMPANY>` using web search and any available tools. Answer:
 1. Who sits on the board of directors?
@@ -67,9 +67,9 @@ Append to the report:
 ## Step 3 — Stated Objectives
 
 Read and internalize:
-- `corporate-finance/modules/module-1/lesson-03/lesson-overview.md`
-- `corporate-finance/modules/module-1/lesson-03/slides.md`
-- `corporate-finance/modules/module-1/lesson-03/blog-jan-2016-data-update-5-corporate-governance.md`
+- `03-corporate-finance/modules/module-1/lesson-03/lesson-overview.md`
+- `03-corporate-finance/modules/module-1/lesson-03/slides.md`
+- `03-corporate-finance/modules/module-1/lesson-03/blog-jan-2016-data-update-5-corporate-governance.md`
 
 Research `<COMPANY>`. Answer:
 1. If the firm has stated goals or objectives, what is it targeting — growth, higher profitability, higher stock price, or higher value?
@@ -92,10 +92,10 @@ Append to the report:
 ## Step 4 — Share Classes and Marginal Investor
 
 Read and internalize:
-- `corporate-finance/modules/module-1/lesson-04/lesson-overview.md`
-- `corporate-finance/modules/module-1/lesson-04/slides.md`
-- `corporate-finance/modules/module-1/lesson-04/reading-modified-capm.md` (if present)
-- `corporate-finance/modules/module-1/lesson-04/blog-how-much-diversification-is-too-much.md`
+- `03-corporate-finance/modules/module-1/lesson-04/lesson-overview.md`
+- `03-corporate-finance/modules/module-1/lesson-04/slides.md`
+- `03-corporate-finance/modules/module-1/lesson-04/reading-modified-capm.md` (if present)
+- `03-corporate-finance/modules/module-1/lesson-04/blog-how-much-diversification-is-too-much.md`
 
 Research `<COMPANY>`. Answer:
 1. How many classes of shares exist? What are the voting rights of each?
@@ -126,10 +126,10 @@ Append to the report:
 ## Step 5 — Currency and Risk-Free Rate
 
 Read and internalize:
-- `corporate-finance/modules/module-1/lesson-05/lesson-overview.md`
-- `corporate-finance/modules/module-1/lesson-05/slides.md`
-- `corporate-finance/modules/module-1/lesson-05/blog-risk-free-rates-and-value-dealing-with-historically-low-risk-free-rates.md`
-- `corporate-finance/modules/module-1/lesson-05/blog-negative-interest-rates.md`
+- `03-corporate-finance/modules/module-1/lesson-05/lesson-overview.md`
+- `03-corporate-finance/modules/module-1/lesson-05/slides.md`
+- `03-corporate-finance/modules/module-1/lesson-05/blog-risk-free-rates-and-value-dealing-with-historically-low-risk-free-rates.md`
+- `03-corporate-finance/modules/module-1/lesson-05/blog-negative-interest-rates.md`
 
 Research `<COMPANY>`. Answer:
 1. What currency does the company report its financial statements in?
@@ -160,11 +160,11 @@ Append to the report:
 ## Step 6 — Equity Risk Premium (Mature Market)
 
 Read and internalize:
-- `corporate-finance/modules/module-1/lesson-06/lesson-overview.md`
-- `corporate-finance/modules/module-1/lesson-06/slides.md`
-- `corporate-finance/modules/module-1/lesson-06/blog-an-erp-retrospective-looking-back-2014-and-looking-forward-2015.md`
-- `corporate-finance/modules/module-1/lesson-06/blog-jan-2016-data-update-1-us-equity-markets.md`
-- `corporate-finance/modules/module-1/lesson-06/blog-another-market-crisis-my-survival-manual-journal.md`
+- `03-corporate-finance/modules/module-1/lesson-06/lesson-overview.md`
+- `03-corporate-finance/modules/module-1/lesson-06/slides.md`
+- `03-corporate-finance/modules/module-1/lesson-06/blog-an-erp-retrospective-looking-back-2014-and-looking-forward-2015.md`
+- `03-corporate-finance/modules/module-1/lesson-06/blog-jan-2016-data-update-1-us-equity-markets.md`
+- `03-corporate-finance/modules/module-1/lesson-06/blog-another-market-crisis-my-survival-manual-journal.md`
 
 Research the current implied ERP for a mature market (US, as of today). Cite your source and method (implied vs. historical). Answer:
 1. What is the equity risk premium for a mature market today?
@@ -186,11 +186,11 @@ Append to the report:
 ## Step 7 — Country Risk Exposure and Weighted ERP
 
 Read and internalize:
-- `corporate-finance/modules/module-1/lesson-07/lesson-overview.md`
-- `corporate-finance/modules/module-1/lesson-07/slides.md`
-- `corporate-finance/modules/module-1/lesson-07/blog-january-2017-data-update-4-country-risk-update.md`
-- `corporate-finance/modules/module-1/lesson-07/blog-dark-side-of-globalization-country-risk.md`
-- `corporate-finance/modules/module-1/lesson-07/reading-country-risk-2017.md` (if present)
+- `03-corporate-finance/modules/module-1/lesson-07/lesson-overview.md`
+- `03-corporate-finance/modules/module-1/lesson-07/slides.md`
+- `03-corporate-finance/modules/module-1/lesson-07/blog-january-2017-data-update-4-country-risk-update.md`
+- `03-corporate-finance/modules/module-1/lesson-07/blog-dark-side-of-globalization-country-risk.md`
+- `03-corporate-finance/modules/module-1/lesson-07/reading-country-risk-2017.md` (if present)
 
 Research `<COMPANY>`. Answer:
 1. What is the best measure of country risk exposure for this company — revenues, production, reserves, or other?
@@ -223,10 +223,10 @@ Append to the report:
 ## Step 8 — Regression Beta
 
 Read and internalize:
-- `corporate-finance/modules/module-1/lesson-08/lesson-overview.md`
-- `corporate-finance/modules/module-1/lesson-08/slides.md`
-- `corporate-finance/modules/module-1/lesson-08/blog-jan-2017-data-update-4-country-risk.md`
-- `corporate-finance/modules/module-1/lesson-08/blog-dark-side-of-globalization-country-risk.md`
+- `03-corporate-finance/modules/module-1/lesson-08/lesson-overview.md`
+- `03-corporate-finance/modules/module-1/lesson-08/slides.md`
+- `03-corporate-finance/modules/module-1/lesson-08/blog-jan-2017-data-update-4-country-risk.md`
+- `03-corporate-finance/modules/module-1/lesson-08/blog-dark-side-of-globalization-country-risk.md`
 
 Research `<COMPANY>`. Find the regression (historical) beta for the company from a financial data source. Note the index used, the time period, and the R-squared. Assess whether the regression beta is reliable.
 
@@ -250,9 +250,9 @@ Append to the report:
 ## Step 9 — Beta Fundamentals
 
 Read and internalize:
-- `corporate-finance/modules/module-1/lesson-09/lesson-overview.md`
-- `corporate-finance/modules/module-1/lesson-09/slides.md`
-- `corporate-finance/modules/module-1/lesson-09/slides-part2.md`
+- `03-corporate-finance/modules/module-1/lesson-09/lesson-overview.md`
+- `03-corporate-finance/modules/module-1/lesson-09/slides.md`
+- `03-corporate-finance/modules/module-1/lesson-09/slides-part2.md`
 
 Research `<COMPANY>`. Answer:
 1. Based on the products and services the firm sells, would you expect a high or low beta? Do different parts of the business have different betas?
@@ -279,9 +279,9 @@ Append to the report:
 ## Step 10 — Bottom-Up Unlevered Beta
 
 Read and internalize:
-- `corporate-finance/modules/module-1/lesson-10/lesson-overview.md`
-- `corporate-finance/modules/module-1/lesson-10/slides.md`
-- `corporate-finance/modules/module-1/lesson-10/spreadsheet-bottomup-beta.md` (for methodology reference)
+- `03-corporate-finance/modules/module-1/lesson-10/lesson-overview.md`
+- `03-corporate-finance/modules/module-1/lesson-10/slides.md`
+- `03-corporate-finance/modules/module-1/lesson-10/spreadsheet-bottomup-beta.md` (for methodology reference)
 
 Research `<COMPANY>` and Damodaran's industry beta data. Answer:
 1. Estimate a bottom-up unlevered (business) beta for the company using comparable firms' average unlevered betas.
@@ -311,9 +311,9 @@ Append to the report:
 ## Step 11 — Total Beta and Levered Beta
 
 Read and internalize:
-- `corporate-finance/modules/module-1/lesson-11/lesson-overview.md`
-- `corporate-finance/modules/module-1/lesson-11/slides.md`
-- `corporate-finance/modules/module-1/lesson-11/spreadsheet-total-beta-calculator.md` (for methodology reference)
+- `03-corporate-finance/modules/module-1/lesson-11/lesson-overview.md`
+- `03-corporate-finance/modules/module-1/lesson-11/slides.md`
+- `03-corporate-finance/modules/module-1/lesson-11/spreadsheet-total-beta-calculator.md` (for methodology reference)
 
 Using the unlevered beta from Step 10 and the company's current debt/equity ratio and marginal tax rate, answer:
 1. What is the levered beta for this company (using the standard Hamada equation)?
@@ -347,11 +347,11 @@ Append to the report:
 ## Step 12 — Cost of Debt
 
 Read and internalize:
-- `corporate-finance/modules/module-1/lesson-12/lesson-overview.md`
-- `corporate-finance/modules/module-1/lesson-12/slides.md`
-- `corporate-finance/modules/module-1/lesson-12/reading-cost-of-capital.md`
-- `corporate-finance/modules/module-1/lesson-12/reading-leases-debt-value.md`
-- `corporate-finance/modules/module-1/lesson-12/spreadsheet-ratings.md` (for ratings → spread mapping)
+- `03-corporate-finance/modules/module-1/lesson-12/lesson-overview.md`
+- `03-corporate-finance/modules/module-1/lesson-12/slides.md`
+- `03-corporate-finance/modules/module-1/lesson-12/reading-cost-of-capital.md`
+- `03-corporate-finance/modules/module-1/lesson-12/reading-leases-debt-value.md`
+- `03-corporate-finance/modules/module-1/lesson-12/spreadsheet-ratings.md` (for ratings → spread mapping)
 
 Research `<COMPANY>`. Answer:
 1. Does the company have a bond rating? If so, what is the default spread and pre-tax cost of debt?
