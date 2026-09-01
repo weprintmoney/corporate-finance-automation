@@ -59,4 +59,3 @@ WACC = (E/V) · rₑ + (D/V) · r_d · (1 − t)
 | [data/market-rates.json](data/market-rates.json) | Live rates from FRED: 10-year Treasury, SOFR, Fed Funds — refreshed weekdays by CI |
 | [data/companies/](data/companies/) | Per-ticker JSON from Financial Modeling Prep: income statement, balance sheet, cash flow |
 | [data/damodaran/](data/damodaran/) | Damodaran industry betas + country risk premiums — refreshed monthly by CI |
-| [class-roster.yaml](class-roster.yaml) | Fall 2026 cohort — name, location, background, goals, WhatsApp, LinkedIn for all 11 students + TA |
