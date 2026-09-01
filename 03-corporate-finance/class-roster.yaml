@@ -118,7 +118,7 @@ students:
     background: Recently completed MBA at NYU Stern. Taking the "legendary Damodaran" course.
     goals: null
     whatsapp: null  # not yet visible in WhatsApp group
-    linkedin: null
+    linkedin: https://www.linkedin.com/in/horton-fisher-0729b6217/
 
 # WhatsApp group members not yet matched to Brightspace introductions
 unidentified_whatsapp_members:
