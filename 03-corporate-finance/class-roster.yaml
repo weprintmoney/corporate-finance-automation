@@ -1,0 +1,135 @@
+# NYU Corporate Finance — Damodaran Fall 2026
+# Class Roster
+# Updated: 2026-09-01
+# Sources: Brightspace discussion board + WhatsApp group ("Corp Finance Fall 20...")
+
+course:
+  name: Corporate Finance
+  instructor: Aswath Damodaran
+  institution: NYU Stern School of Business
+  instructor_linkedin: https://www.linkedin.com/in/aswathdamodaran/
+  term: Fall 2026
+  whatsapp_group: "Corp Finance Fall 20..." # 13 members as of 2026-09-01
+
+teaching_assistant:
+  name: Roberto Chavez
+  location: Peru
+  background: Economist, Master in Finance; Damodaran course alumnus
+  email: rchavezg.nyu@yahoo.com
+  whatsapp: "+51995957995"
+  whatsapp_handle: "@rchavezgam"
+  linkedin: null  # multiple matches, unconfirmed
+
+students:
+  - name: Charlcye Mitchell
+    location: Austin, TX, USA
+    background: >
+      Product Manager; career in hardware & software engineering, agentic AI systems.
+      Teaching free community AI courses in Austin.
+    goals: Be the translator between finance and engineering — the operator CFOs and CTOs both trust.
+    whatsapp: null  # admin of group
+    whatsapp_handle: "@MotivateMe"
+    linkedin: https://www.linkedin.com/in/camitchell
+
+  - name: Luisa Ghied
+    posted_as: "Lui Villanueva"
+    location: Sweden (Filipino)
+    background: null
+    goals: >
+      Build a strong professional career in finance; understand financial
+      principles, valuation, and investment decisions.
+    whatsapp: "+46 76 588 96 52"
+    linkedin: null
+
+  - name: Jose Domingo Rivarola Reisz
+    posted_as: "Jose Rivarola"
+    location: Lima, Peru
+    background: >
+      Arbitration and litigation lawyer; teaches evidence law at PUCP.
+      LLM at University of Virginia; executive education in accounting and investment strategies.
+    goals: >
+      Deepen understanding of financial decisions for M&A and VC arbitration/litigation cases.
+      Become a board member.
+    whatsapp: null
+    whatsapp_handle: "@josedomin..."  # truncated in group
+    linkedin: https://pe.linkedin.com/in/domingo-rivarola-64a44b15b  # probable match — Cuatrecasas
+
+  - name: Mehdi Benmebarek
+    location: Paris, France
+    background: >
+      International strategy, business development, and market expansion.
+      20+ years in aerospace & defense, professional services, and identity security
+      across Europe, Africa, and the Middle East.
+    goals: >
+      Complement international strategy experience with finance expertise
+      for growth, investment, and transformation at a global level.
+    whatsapp: "+33 6 58 74 37 37"
+    linkedin: https://www.linkedin.com/in/mehdi-benmebarek-4273425/  # French Aerospace Group
+
+  - name: Edy Jimenez
+    posted_as: "Edy Jimenez"
+    location: Santo Domingo, Dominican Republic
+    background: >
+      VP of Commerce at AES Dominicana. Energy sector — commercial strategy,
+      portfolio management, and infrastructure across Latin America and the Caribbean.
+      President, Energy Committee at AMCHAM DR.
+    goals: Grow into broader leadership combining strategy and finance.
+    whatsapp: null
+    whatsapp_handle: "@eejimenezt"
+    linkedin: https://do.linkedin.com/in/edyjimeneztoribio
+    notes: Created the class WhatsApp group.
+
+  - name: Matthias Wiltschek
+    location: Vienna, Austria
+    background: M&A and post-merger integration at a manufacturing company.
+    goals: null
+    whatsapp: null  # not yet visible in WhatsApp group
+    linkedin: https://at.linkedin.com/in/matthias-wiltschek-73783810b
+
+  - name: Hugo Nieto
+    location: Mexico City, Mexico
+    background: >
+      Finance, investments, investment banking, and business valuation.
+      Corporate finance, capital raising, and investment analysis.
+    goals: Specialize in alternative investments, private equity, and business valuation.
+    whatsapp: "+52 55 5106 5029"
+    whatsapp_handle: "HN"
+    linkedin: https://www.linkedin.com/in/hugo-nieto-6952b31ab/  # probable match — KM Capital Partners
+
+  - name: Grace Liu
+    location: Mainland China
+    background: >
+      Nearly 20 years in food manufacturing and international trading.
+    goals: Strengthen financial knowledge and apply to real business decisions and career development.
+    whatsapp: null  # not yet visible in WhatsApp group
+    linkedin: null  # too many matches to confirm
+
+  - name: Simona Morachioli
+    location: Tuscany, Italy
+    background: >
+      Chief Transformation Officer at F.I.S. (PE-backed pharma). Engineer by training.
+      Lives in Tuscany with partner and cat Guenda.
+    goals: null
+    whatsapp: "+39 346 807 7654"
+    linkedin: https://it.linkedin.com/in/simona-morachioli
+
+  - name: Horton Fisher
+    location: USA  # NYU Stern implied
+    background: Recently completed MBA at NYU Stern. Taking the "legendary Damodaran" course.
+    goals: null
+    whatsapp: null  # not yet visible in WhatsApp group
+    linkedin: null
+
+# WhatsApp group members not yet matched to Brightspace introductions
+unidentified_whatsapp_members:
+  - whatsapp_name: "Aldo"
+    whatsapp: "+39 347 253 0726"
+    notes: Italy (+39). Not yet posted introduction on Brightspace.
+
+  - whatsapp_name: "Allan"
+    whatsapp: "+356 7947 5088"
+    notes: Malta (+356). Not yet posted introduction on Brightspace.
+
+  - whatsapp_name: "Valentyn Burianov"
+    whatsapp: "+380 97 62..."  # truncated in screenshot
+    notes: Ukraine (+380). Not yet posted introduction on Brightspace.
