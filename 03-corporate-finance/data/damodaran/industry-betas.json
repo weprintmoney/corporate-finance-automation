@@ -1,0 +1,6 @@
+{
+  "updated": "2026-09-01",
+  "source_url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/betas.xls",
+  "note": "Damodaran refreshes annually in January. Re-run this script after each update.",
+  "industries": {}
+}
