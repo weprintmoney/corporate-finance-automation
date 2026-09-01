@@ -5,3 +5,5 @@ __pycache__/
 .ipynb_checkpoints/
 .venv/
 node_modules/
+.brightspace.env
+*.env

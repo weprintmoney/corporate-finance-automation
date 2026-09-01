@@ -19,6 +19,29 @@ Each lesson folder contains:
 - `reading-*.md` — converted readings
 - `blog-*.md` — optional Damodaran blog posts
 
+## Content Export
+
+### `brightspace-export.py`
+
+Downloads slides, spreadsheets, and readings from NYU Brightspace; converts them to markdown; generates `lesson-overview.md` per lesson; updates `lesson-index.yaml`.
+
+**Setup:** Create `.brightspace.env` in the repo root (gitignored):
+```
+D2L_SESSION_VAL=<from DevTools → Application → Cookies → d2lSessionVal>
+D2L_SECURE_SESSION_VAL=<from DevTools → d2lSecureSessionVal>
+D2L_ORG_UNIT_ID=<from brightspace.nyu.edu/d2l/home/XXXXXX>
+D2L_BASE_URL=https://brightspace.nyu.edu
+```
+
+**Run:**
+```bash
+python3 corporate-finance/modules/brightspace-export.py            # all lessons
+python3 corporate-finance/modules/brightspace-export.py --lesson 13
+python3 corporate-finance/modules/brightspace-export.py --modules 2 3
+python3 corporate-finance/modules/brightspace-export.py --toc-only   # inspect raw structure
+python3 corporate-finance/modules/brightspace-export.py --dry-run
+```
+
 ## Skills
 
 ### `/evaluate-company`
