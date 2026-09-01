@@ -9,7 +9,9 @@ course:
   institution: NYU Stern School of Business
   instructor_linkedin: https://www.linkedin.com/in/aswathdamodaran/
   term: Fall 2026
-  whatsapp_group: "Corp Finance Fall 20..." # 13 members as of 2026-09-01
+  whatsapp_group: "Corp Finance Fall 2026"
+  whatsapp_group_link: "https://chat.whatsapp.com/ChFjKrUfgTyIqNdsau2Bhv"
+  whatsapp_group_members: 13  # as of 2026-09-01
 
 teaching_assistant:
   name: Roberto Chavez
