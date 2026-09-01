@@ -12,7 +12,7 @@ Informal shared context repository for the NYU Corporate Finance (Damodaran) Fal
 | TA | Roberto Chavez | rchavezg.nyu@yahoo.com · WhatsApp +51995957995 |
 | Maintainer | Charlcye Mitchell | `weprintmoney` on GitHub |
 
-WhatsApp group: "Corp Finance Fall 2026" (13 members — ask Edy Jimenez or Charlcye for the link)
+WhatsApp group: [Corp Finance Fall 2026](https://chat.whatsapp.com/ChFjKrUfgTyIqNdsau2Bhv) (13 members)
 
 ## Class Roster
 
