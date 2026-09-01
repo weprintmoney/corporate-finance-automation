@@ -28,7 +28,7 @@ WhatsApp group: [Corp Finance Fall 2026](https://chat.whatsapp.com/ChFjKrUfgTyIq
 | Grace Liu | Mainland China | — | — | 20 yrs food manufacturing & international trading |
 | Simona Morachioli | Tuscany, Italy | +39 346 807 7654 | [LinkedIn](https://it.linkedin.com/in/simona-morachioli) | Chief Transformation Officer, PE-backed pharma; engineer by training |
 | Horton Fisher | USA | — | [LinkedIn](https://www.linkedin.com/in/horton-fisher-0729b6217/) | NYU Stern MBA |
-| Valentyn Burianov | Ukraine | +380 97 625 4550 | — | — |
+| Valentyn Burianov | Ukraine | +380 97 625 4550 | [LinkedIn](https://www.linkedin.com/in/valentyn-burianov-23a824359/) | — |
 | Aldo | Italy | +39 347 253 0726 | — | — |
 | Allan | Malta | +356 7947 5088 | — | — |
 
