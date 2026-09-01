@@ -51,11 +51,11 @@ WACC = (E/V) · rₑ + (D/V) · r_d · (1 − t)
 
 | File | Description |
 |------|-------------|
-| [01-course-overview/CLAUDE.md](01-course-overview/CLAUDE.md) | NYU Stern Certificate in Corporate Finance — course outline, syllabus, FAQ, key dates |
-| [02-course-content/CLAUDE.md](02-course-content/CLAUDE.md) | All 36 lesson folders — navigation guide and lesson-index.yaml pointer |
-| [02-course-content/lesson-index.yaml](02-course-content/lesson-index.yaml) | Full lesson map: folder paths, topics, and which file types are present per lesson |
-| [04-blogs/README.md](04-blogs/README.md) | Damodaran "Musings on Markets" archive fetcher — pulls all posts to `posts/` for local text analysis |
-| [04-blogs/posts/](04-blogs/posts/) | Full Damodaran blog archive (~680 posts, 2008–present) |
-| [03-supplemental-data/market-rates.json](03-supplemental-data/market-rates.json) | Live rates from FRED: 10-year Treasury, SOFR, Fed Funds — refreshed weekdays by CI |
-| [03-supplemental-data/companies/](03-supplemental-data/companies/) | Per-ticker JSON from Financial Modeling Prep: income statement, balance sheet, cash flow |
-| [03-supplemental-data/damodaran/](03-supplemental-data/damodaran/) | Damodaran industry betas + country risk premiums — refreshed monthly by CI |
+| [03-1-course-overview/CLAUDE.md](03-1-course-overview/CLAUDE.md) | NYU Stern Certificate in Corporate Finance — course outline, syllabus, FAQ, key dates |
+| [03-2-course-content/CLAUDE.md](03-2-course-content/CLAUDE.md) | All 36 lesson folders — navigation guide and lesson-index.yaml pointer |
+| [03-2-course-content/lesson-index.yaml](03-2-course-content/lesson-index.yaml) | Full lesson map: folder paths, topics, and which file types are present per lesson |
+| [03-4-blogs/README.md](03-4-blogs/README.md) | Damodaran "Musings on Markets" archive fetcher — pulls all posts to `posts/` for local text analysis |
+| [03-4-blogs/posts/](03-4-blogs/posts/) | Full Damodaran blog archive (~680 posts, 2008–present) |
+| [03-3-supplemental-data/market-rates.json](03-3-supplemental-data/market-rates.json) | Live rates from FRED: 10-year Treasury, SOFR, Fed Funds — refreshed weekdays by CI |
+| [03-3-supplemental-data/companies/](03-3-supplemental-data/companies/) | Per-ticker JSON from Financial Modeling Prep: income statement, balance sheet, cash flow |
+| [03-3-supplemental-data/damodaran/](03-3-supplemental-data/damodaran/) | Damodaran industry betas + country risk premiums — refreshed monthly by CI |

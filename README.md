@@ -24,22 +24,22 @@ The course follows Damodaran's standard valuation framework: estimate a risk-adj
 01-statistics/               Probability, distributions, hypothesis tests, regression
 02-financial-accounting/     Financial statements, ratio analysis, journal-entry drills
 03-corporate-finance/        The main course — TVM, WACC, valuation, capital structure
-  ├── 01-course-overview/    Syllabus, schedule, FAQ, key dates
-  ├── 02-course-content/     All 36 lessons organized by module
+  ├── 03-1-course-overview/    Syllabus, schedule, FAQ, key dates
+  ├── 03-2-course-content/     All 36 lessons organized by module
   │   ├── lesson-index.yaml  Navigation index — find any lesson in one read
   │   ├── module-1/          Foundations & discount rates (lessons 01–12)
   │   ├── module-2/          (in progress)
   │   ├── module-3/          (in progress)
   │   ├── module-4/          (in progress)
   │   └── company-valuations/  Output reports from /evaluate-company runs
-  ├── 03-supplemental-data/  Live data refreshed by CI
+  ├── 03-3-supplemental-data/  Live data refreshed by CI
   │   ├── market-rates.json  US 10-yr Treasury, SOFR, Fed Funds (updated weekdays)
   │   ├── companies/         Per-ticker financial statements from SEC via FMP
   │   └── damodaran/         Industry betas and country risk premiums
-  └── 04-blogs/              Damodaran "Musings on Markets" archive (~680 posts)
+  └── 03-4-blogs/              Damodaran "Musings on Markets" archive (~680 posts)
 ```
 
-Each folder has a `CLAUDE.md` that orients an AI session to that subject — formulas, conventions, and a doc index. Navigation from root to any lesson takes three hops: `CLAUDE.md` → subject `CLAUDE.md` → `02-course-content/CLAUDE.md` → `lesson-index.yaml` → lesson folder.
+Each folder has a `CLAUDE.md` that orients an AI session to that subject — formulas, conventions, and a doc index. Navigation from root to any lesson takes three hops: `CLAUDE.md` → subject `CLAUDE.md` → `03-2-course-content/CLAUDE.md` → `lesson-index.yaml` → lesson folder.
 
 ---
 
@@ -86,9 +86,9 @@ Each lesson folder contains some combination of:
 
 Open Claude Code in this repo and type `/evaluate-company`. Claude will read the lesson materials, ask you to pick a company, then run all 12 steps automatically — reading from `data/` files first, falling back to web search when live data isn't available yet.
 
-Output is saved to `03-corporate-finance/02-course-content/company-valuations/<company>-valuation.md`.
+Output is saved to `03-corporate-finance/03-2-course-content/company-valuations/<company>-valuation.md`.
 
-**Example:** The SolarWinds (SWI) valuation is in `03-corporate-finance/02-course-content/company-valuations/` — both as a markdown report and as a standalone HTML file.
+**Example:** The SolarWinds (SWI) valuation is in `03-corporate-finance/03-2-course-content/company-valuations/` — both as a markdown report and as a standalone HTML file.
 
 ---
 
@@ -98,9 +98,9 @@ Three GitHub Actions workflows keep valuation inputs current:
 
 | Workflow | Trigger | What it fetches | Output |
 |----------|---------|----------------|--------|
-| `refresh-market-rates` | Weekdays 9 AM CT | FRED: 10-yr Treasury, SOFR, Fed Funds | `03-supplemental-data/market-rates.json` |
-| `fetch-company-financials` | Manual (enter ticker) | FMP: income statement, balance sheet, cash flow | `03-supplemental-data/companies/{ticker}.json` |
-| `refresh-damodaran` | 1st of each month | Damodaran: industry betas, country risk | `03-supplemental-data/damodaran/` |
+| `refresh-market-rates` | Weekdays 9 AM CT | FRED: 10-yr Treasury, SOFR, Fed Funds | `03-3-supplemental-data/market-rates.json` |
+| `fetch-company-financials` | Manual (enter ticker) | FMP: income statement, balance sheet, cash flow | `03-3-supplemental-data/companies/{ticker}.json` |
+| `refresh-damodaran` | 1st of each month | Damodaran: industry betas, country risk | `03-3-supplemental-data/damodaran/` |
 
 **Required GitHub secrets:**
 - `FRED_API_KEY` — free at [fred.stlouisfed.org](https://fred.stlouisfed.org/docs/api/api_key.html)
@@ -131,5 +131,5 @@ pip install xlrd openpyxl && python3 scripts/fetch-damodaran.py
 |------|------------------|
 | [`CLAUDE.md`](CLAUDE.md) | Repo map, top-level conventions, doc index |
 | [`03-corporate-finance/CLAUDE.md`](03-corporate-finance/CLAUDE.md) | TVM/WACC/valuation formulas, data directory index |
-| [`03-corporate-finance/02-course-content/lesson-index.yaml`](03-corporate-finance/02-course-content/lesson-index.yaml) | Full map of all 36 lessons — folders, topics, available file types |
+| [`03-corporate-finance/03-2-course-content/lesson-index.yaml`](03-corporate-finance/03-2-course-content/lesson-index.yaml) | Full map of all 36 lessons — folders, topics, available file types |
 | [`.claude/commands/evaluate-company.md`](.claude/commands/evaluate-company.md) | The complete `/evaluate-company` command definition |
