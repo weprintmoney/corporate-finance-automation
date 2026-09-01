@@ -24,7 +24,7 @@ The course follows Damodaran's standard valuation framework: estimate a risk-adj
 01-statistics/               Probability, distributions, hypothesis tests, regression
 02-financial-accounting/     Financial statements, ratio analysis, journal-entry drills
 03-corporate-finance/        The main course — TVM, WACC, valuation, capital structure
-  ├── course-overview/       Syllabus, schedule, FAQ, key dates
+  ├── 01-course-overview/       Syllabus, schedule, FAQ, key dates
   ├── modules/               All 36 lessons organized by module
   │   ├── lesson-index.yaml  Navigation index — find any lesson in one read
   │   ├── module-1/          Foundations & discount rates (lessons 01–12)
@@ -86,9 +86,9 @@ Each lesson folder contains some combination of:
 
 Open Claude Code in this repo and type `/evaluate-company`. Claude will read the lesson materials, ask you to pick a company, then run all 12 steps automatically — reading from `data/` files first, falling back to web search when live data isn't available yet.
 
-Output is saved to `03-corporate-finance/modules/company-valuations/<company>-valuation.md`.
+Output is saved to `03-corporate-finance/02-course-content/company-valuations/<company>-valuation.md`.
 
-**Example:** The SolarWinds (SWI) valuation is in `03-corporate-finance/modules/company-valuations/` — both as a markdown report and as a standalone HTML file.
+**Example:** The SolarWinds (SWI) valuation is in `03-corporate-finance/02-course-content/company-valuations/` — both as a markdown report and as a standalone HTML file.
 
 ---
 
@@ -131,5 +131,5 @@ pip install xlrd openpyxl && python3 scripts/fetch-damodaran.py
 |------|------------------|
 | [`CLAUDE.md`](CLAUDE.md) | Repo map, top-level conventions, doc index |
 | [`03-corporate-finance/CLAUDE.md`](03-corporate-finance/CLAUDE.md) | TVM/WACC/valuation formulas, data directory index |
-| [`03-corporate-finance/modules/lesson-index.yaml`](03-corporate-finance/modules/lesson-index.yaml) | Full map of all 36 lessons — folders, topics, available file types |
+| [`03-corporate-finance/02-course-content/lesson-index.yaml`](03-corporate-finance/02-course-content/lesson-index.yaml) | Full map of all 36 lessons — folders, topics, available file types |
 | [`.claude/commands/evaluate-company.md`](.claude/commands/evaluate-company.md) | The complete `/evaluate-company` command definition |

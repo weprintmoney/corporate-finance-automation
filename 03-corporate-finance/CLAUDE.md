@@ -51,11 +51,11 @@ WACC = (E/V) · rₑ + (D/V) · r_d · (1 − t)
 
 | File | Description |
 |------|-------------|
-| [course-overview/CLAUDE.md](course-overview/CLAUDE.md) | NYU Stern Certificate in Corporate Finance — course outline, syllabus, FAQ, key dates |
-| [modules/CLAUDE.md](modules/CLAUDE.md) | All 36 lesson folders — navigation guide and lesson-index.yaml pointer |
-| [modules/lesson-index.yaml](modules/lesson-index.yaml) | Full lesson map: folder paths, topics, and which file types are present per lesson |
-| [blogs/README.md](blogs/README.md) | Damodaran "Musings on Markets" archive fetcher — pulls all posts to `posts/` for local text analysis |
-| [blogs/posts/](blogs/posts/) | Full Damodaran blog archive (~680 posts, 2008–present) |
-| [data/market-rates.json](data/market-rates.json) | Live rates from FRED: 10-year Treasury, SOFR, Fed Funds — refreshed weekdays by CI |
-| [data/companies/](data/companies/) | Per-ticker JSON from Financial Modeling Prep: income statement, balance sheet, cash flow |
-| [data/damodaran/](data/damodaran/) | Damodaran industry betas + country risk premiums — refreshed monthly by CI |
+| [01-course-overview/CLAUDE.md](01-course-overview/CLAUDE.md) | NYU Stern Certificate in Corporate Finance — course outline, syllabus, FAQ, key dates |
+| [02-course-content/CLAUDE.md](02-course-content/CLAUDE.md) | All 36 lesson folders — navigation guide and lesson-index.yaml pointer |
+| [02-course-content/lesson-index.yaml](02-course-content/lesson-index.yaml) | Full lesson map: folder paths, topics, and which file types are present per lesson |
+| [04-blogs/README.md](04-blogs/README.md) | Damodaran "Musings on Markets" archive fetcher — pulls all posts to `posts/` for local text analysis |
+| [04-blogs/posts/](04-blogs/posts/) | Full Damodaran blog archive (~680 posts, 2008–present) |
+| [03-supplemental-data/market-rates.json](03-supplemental-data/market-rates.json) | Live rates from FRED: 10-year Treasury, SOFR, Fed Funds — refreshed weekdays by CI |
+| [03-supplemental-data/companies/](03-supplemental-data/companies/) | Per-ticker JSON from Financial Modeling Prep: income statement, balance sheet, cash flow |
+| [03-supplemental-data/damodaran/](03-supplemental-data/damodaran/) | Damodaran industry betas + country risk premiums — refreshed monthly by CI |

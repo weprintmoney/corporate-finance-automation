@@ -28,7 +28,7 @@ Command file: `.claude/commands/evaluate-company.md`
 
 Each step reads the relevant lesson, researches your chosen company on the web, and appends findings to a report saved at:
 ```
-corporate-finance/modules/company-valuations/<company-slug>-valuation.md
+corporate-finance/02-course-content/company-valuations/<company-slug>-valuation.md
 ```
 
 Invoke it by typing `/evaluate-company` in any Claude Code session in this repo.
