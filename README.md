@@ -24,22 +24,22 @@ The course follows Damodaran's standard valuation framework: estimate a risk-adj
 01-statistics/               Probability, distributions, hypothesis tests, regression
 02-financial-accounting/     Financial statements, ratio analysis, journal-entry drills
 03-corporate-finance/        The main course — TVM, WACC, valuation, capital structure
-  ├── 01-course-overview/       Syllabus, schedule, FAQ, key dates
-  ├── modules/               All 36 lessons organized by module
+  ├── 01-course-overview/    Syllabus, schedule, FAQ, key dates
+  ├── 02-course-content/     All 36 lessons organized by module
   │   ├── lesson-index.yaml  Navigation index — find any lesson in one read
   │   ├── module-1/          Foundations & discount rates (lessons 01–12)
   │   ├── module-2/          (in progress)
   │   ├── module-3/          (in progress)
-  │   └── module-4/          (in progress)
-  ├── company-valuations/    Output reports from /evaluate-company runs
-  ├── blogs/                 Damodaran "Musings on Markets" archive (~680 posts)
-  └── data/                  Live data refreshed by CI
-      ├── market-rates.json  US 10-yr Treasury, SOFR, Fed Funds (updated weekdays)
-      ├── companies/         Per-ticker financial statements from SEC via FMP
-      └── damodaran/         Industry betas and country risk premiums
+  │   ├── module-4/          (in progress)
+  │   └── company-valuations/  Output reports from /evaluate-company runs
+  ├── 03-supplemental-data/  Live data refreshed by CI
+  │   ├── market-rates.json  US 10-yr Treasury, SOFR, Fed Funds (updated weekdays)
+  │   ├── companies/         Per-ticker financial statements from SEC via FMP
+  │   └── damodaran/         Industry betas and country risk premiums
+  └── 04-blogs/              Damodaran "Musings on Markets" archive (~680 posts)
 ```
 
-Each folder has a `CLAUDE.md` that orients an AI session to that subject — formulas, conventions, and a doc index. Navigation from root to any lesson takes three hops: `CLAUDE.md` → subject `CLAUDE.md` → `modules/CLAUDE.md` → `lesson-index.yaml` → lesson folder.
+Each folder has a `CLAUDE.md` that orients an AI session to that subject — formulas, conventions, and a doc index. Navigation from root to any lesson takes three hops: `CLAUDE.md` → subject `CLAUDE.md` → `02-course-content/CLAUDE.md` → `lesson-index.yaml` → lesson folder.
 
 ---
 
@@ -98,9 +98,9 @@ Three GitHub Actions workflows keep valuation inputs current:
 
 | Workflow | Trigger | What it fetches | Output |
 |----------|---------|----------------|--------|
-| `refresh-market-rates` | Weekdays 9 AM CT | FRED: 10-yr Treasury, SOFR, Fed Funds | `data/market-rates.json` |
-| `fetch-company-financials` | Manual (enter ticker) | FMP: income statement, balance sheet, cash flow | `data/companies/{ticker}.json` |
-| `refresh-damodaran` | 1st of each month | Damodaran: industry betas, country risk | `data/damodaran/` |
+| `refresh-market-rates` | Weekdays 9 AM CT | FRED: 10-yr Treasury, SOFR, Fed Funds | `03-supplemental-data/market-rates.json` |
+| `fetch-company-financials` | Manual (enter ticker) | FMP: income statement, balance sheet, cash flow | `03-supplemental-data/companies/{ticker}.json` |
+| `refresh-damodaran` | 1st of each month | Damodaran: industry betas, country risk | `03-supplemental-data/damodaran/` |
 
 **Required GitHub secrets:**
 - `FRED_API_KEY` — free at [fred.stlouisfed.org](https://fred.stlouisfed.org/docs/api/api_key.html)
