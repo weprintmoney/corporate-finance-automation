@@ -24,7 +24,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add 03-corporate-finance/data/market-rates.json
+          git add 03-corporate-finance/03-3-supplemental-data/market-rates.json
           git diff --staged --quiet && echo "No changes." || (
             git commit -m "data: refresh market rates $(date -u +%Y-%m-%d)" &&
             git push

@@ -18,27 +18,27 @@ WhatsApp group: [Corp Finance Fall 2026](https://chat.whatsapp.com/ChFjKrUfgTyIq
 
 | Name | Location | WhatsApp | LinkedIn | Background |
 |------|----------|----------|----------|------------|
-| Charlcye Mitchell | Austin, TX, USA | @MotivateMe (admin) | [camitchell](https://www.linkedin.com/in/camitchell) | Product Manager; agentic AI systems; teaching community AI courses |
+| Charlcye Mitchell | Austin, TX, USA | @MotivateMe (admin) | [LinkedIn](https://www.linkedin.com/in/camitchell) | Product Manager; agentic AI systems; teaching community AI courses |
 | Luisa Ghied | Sweden (Filipino) | +46 76 588 96 52 | — | Finance career-builder |
-| Jose Domingo Rivarola Reisz | Lima, Peru | @josedomingo.rivarola.reisz | [probable](https://pe.linkedin.com/in/domingo-rivarola-64a44b15b) | Arbitration & litigation lawyer; teaches evidence law at PUCP; LLM UVA |
+| Jose Domingo Rivarola Reisz | Lima, Peru | @josedomingo.rivarola.reisz | [LinkedIn](https://pe.linkedin.com/in/domingo-rivarola-64a44b15b) | Arbitration & litigation lawyer; teaches evidence law at PUCP; LLM UVA |
 | Mehdi Benmebarek | Paris, France | +33 6 58 74 37 37 | [LinkedIn](https://www.linkedin.com/in/mehdi-benmebarek-4273425/) | Strategy & BD; 20+ yrs aerospace/defense, professional services, identity security |
 | Edy Jimenez | Dominican Republic | @eejimenezt | [LinkedIn](https://do.linkedin.com/in/edyjimeneztoribio) | VP Commerce, AES Dominicana; energy sector across LatAm & Caribbean |
 | Matthias Wiltschek | Vienna, Austria | — | [LinkedIn](https://at.linkedin.com/in/matthias-wiltschek-73783810b) | M&A and post-merger integration at a manufacturing company |
-| Hugo Nieto | Mexico City, Mexico | +52 55 5106 5029 | [probable](https://www.linkedin.com/in/hugo-nieto-6952b31ab/) | Investment banking, valuation, capital raising |
+| Hugo Nieto | Mexico City, Mexico | +52 55 5106 5029 | [LinkedIn](https://www.linkedin.com/in/hugo-nieto-6952b31ab/) | Investment banking, valuation, capital raising |
 | Grace Liu | Mainland China | — | — | 20 yrs food manufacturing & international trading |
 | Simona Morachioli | Tuscany, Italy | +39 346 807 7654 | [LinkedIn](https://it.linkedin.com/in/simona-morachioli) | Chief Transformation Officer, PE-backed pharma; engineer by training |
 | Horton Fisher | USA | — | [LinkedIn](https://www.linkedin.com/in/horton-fisher-0729b6217/) | NYU Stern MBA |
-| Valentyn Burianov | Ukraine | +380 97 625 4550 | — | — |
+| Valentyn Burianov | Ukraine | +380 97 625 4550 | [LinkedIn](https://www.linkedin.com/in/valentyn-burianov-23a824359/) | — |
 | Aldo | Italy | +39 347 253 0726 | — | — |
 | Allan | Malta | +356 7947 5088 | — | — |
 
-*Sources: Brightspace discussion board + WhatsApp group. "probable" LinkedIn = high-confidence match, unconfirmed.*
+*Sources: Brightspace discussion board + WhatsApp group. Last updated 2026-09-01.*
 
 ## Top-level Folders
 
 | Folder | Purpose |
 |--------|---------|
-| `01-statistics/` | Probability, distributions, hypothesis tests, regression |
+| `01-primers/` | Pre-course primers — accounting, statistics, risk & return, present value |
 | `02-financial-accounting/` | Ledgers, financial statements, ratio analysis, journal-entry drills |
 | `03-corporate-finance/` | TVM, valuation, capital structure, capital budgeting, cost of capital |
 
@@ -48,7 +48,7 @@ Each folder has its own `CLAUDE.md` with subject-specific context, key formulas,
 
 | Area | File | Description |
 |------|------|-------------|
-| Statistics | `01-statistics/CLAUDE.md` | Distributions, tests, regression, formula sheet |
+| Primers | `01-primers/CLAUDE.md` | Damodaran pre-course primers (accounting, statistics, risk & return, PV) + stats quick reference |
 | Financial Accounting | `02-financial-accounting/CLAUDE.md` | Accounting equation, statements, GAAP conventions, per-topic notes |
 | Corporate Finance | `03-corporate-finance/CLAUDE.md` | TVM, valuation, WACC, capital budgeting |
 | Kebab-case naming rule | `.claude/rules/kebab-case-naming.md` | File and folder naming convention (enforced by hook) |
