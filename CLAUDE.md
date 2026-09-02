@@ -38,7 +38,7 @@ WhatsApp group: [Corp Finance Fall 2026](https://chat.whatsapp.com/ChFjKrUfgTyIq
 
 | Folder | Purpose |
 |--------|---------|
-| `01-statistics/` | Probability, distributions, hypothesis tests, regression |
+| `01-primers/` | Pre-course primers — accounting, statistics, risk & return, present value |
 | `02-financial-accounting/` | Ledgers, financial statements, ratio analysis, journal-entry drills |
 | `03-corporate-finance/` | TVM, valuation, capital structure, capital budgeting, cost of capital |
 
@@ -48,7 +48,7 @@ Each folder has its own `CLAUDE.md` with subject-specific context, key formulas,
 
 | Area | File | Description |
 |------|------|-------------|
-| Statistics | `01-statistics/CLAUDE.md` | Distributions, tests, regression, formula sheet |
+| Primers | `01-primers/CLAUDE.md` | Damodaran pre-course primers (accounting, statistics, risk & return, PV) + stats quick reference |
 | Financial Accounting | `02-financial-accounting/CLAUDE.md` | Accounting equation, statements, GAAP conventions, per-topic notes |
 | Corporate Finance | `03-corporate-finance/CLAUDE.md` | TVM, valuation, WACC, capital budgeting |
 | Kebab-case naming rule | `.claude/rules/kebab-case-naming.md` | File and folder naming convention (enforced by hook) |
