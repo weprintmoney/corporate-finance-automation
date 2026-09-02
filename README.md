@@ -21,7 +21,7 @@ The course follows Damodaran's standard valuation framework: estimate a risk-adj
 ## What's inside
 
 ```
-01-statistics/               Probability, distributions, hypothesis tests, regression
+01-primers/                  Damodaran pre-course primers — accounting, statistics, risk & return, PV
 02-financial-accounting/     Financial statements, ratio analysis, journal-entry drills
 03-corporate-finance/        The main course — TVM, WACC, valuation, capital structure
   ├── 03-1-course-overview/    Syllabus, schedule, FAQ, key dates
