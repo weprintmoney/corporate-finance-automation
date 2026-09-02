@@ -146,14 +146,14 @@ The historical premium approach, which remains the more widely used approach, is
 
 *Table 1: Historical Equity Risk Premium – US from 1928-2015*
 
-|           | Arithmetic	Average Stocks	- | T.	Bills Stocks	- | Geometric	Average T.	Bonds Stocks	- | T.	Bills Stocks	- T.	Bonds |
-|-----------|-----------------------------|-------------------|-------------------------------------|----------------------------|
-| 1928-2015 | 7.92%                       | 6.18%             | 6.05%                               | 4.54%                      |
-| Std	Error | (2.15%)                     | (2.29%)           |                                     |                            |
-| 1966-2015 | 6.05%                       | 3.89%             | 4.69%                               | 2.90%                      |
-| Std	Error | (2.42%)                     | (2.74%)           |                                     |                            |
-| 2006-2015 | 7.87%                       | 3.88%             | 6.11%                               | 2.53%                      |
-| Std	Error | (6.06%)                     | (8.66%)           |                                     |                            |
+|           | Arithmetic Average: Stocks - T.Bills | Arithmetic Average: Stocks - T.Bonds | Geometric Average: Stocks - T.Bills | Geometric Average: Stocks - T.Bonds |
+|-----------|--------------------------------------|--------------------------------------|-------------------------------------|-------------------------------------|
+| 1928-2015 | 7.92%                                | 6.18%                                | 6.05%                               | 4.54%                               |
+| Std Error | (2.15%)                              | (2.29%)                              |                                     |                                     |
+| 1966-2015 | 6.05%                                | 3.89%                                | 4.69%                               | 2.90%                               |
+| Std Error | (2.42%)                              | (2.74%)                              |                                     |                                     |
+| 2006-2015 | 7.87%                                | 3.88%                                | 6.11%                               | 2.53%                               |
+| Std Error | (6.06%)                              | (8.66%)                              |                                     |                                     |
 
 This table lays bare all of the weaknesses of historical equity risk premiums. Not only are they backward looking, by construct, and subject to manipulation, with very different values for the premium based upon what period of history you look at, whether you use T.Bills or T.Bonds as your risk free rate and how you compute averages. Not surprisingly, analysts use this to 
 
@@ -180,6 +180,30 @@ Using this approach to estimate equity risk premiums by country, I obtain the gl
 As a final piece of the puzzle, now consider how you would compute the equity risk premium for a company. Rather than leave it, as many analysts are prone to, at the ERP of the country in which the company is incorporated, I would estimate it, based on where the company generates its revenues. Thus, with Coca Cola, a US-based multinational, and Vale, a Brazil-based global mining company, the equity risk premium computations would be as follows:
 
 *Figure 12: ERP for Companies – Vale & Coca Cola*
+
+**Vale**
+
+| Region                | Revenues (2014) | Revenue Weight | ERP    | Weight * ERP |
+|-----------------------|-----------------|----------------|--------|--------------|
+| North America         | $2,771          | 7.38%          | 5.81%  | 0.43%        |
+| Brazil                | $5,927          | 15.79%         | 8.66%  | 1.37%        |
+| Rest of Latin America | $685            | 1.82%          | 11.32% | 0.21%        |
+| China                 | $12,657         | 33.72%         | 6.71%  | 2.26%        |
+| Rest of Asia          | $6,932          | 18.47%         | 7.76%  | 1.43%        |
+| Europe                | $6,697          | 17.84%         | 6.97%  | 1.24%        |
+| Rest of the World     | $1,870          | 4.98%          | 8.94%  | 0.45%        |
+| **Vale**              | **$37,539**     | **100.00%**    |        | **7.39%**    |
+
+**Coca Cola**
+
+| Region           | Revenue Weight (2014) | Regional ERP | Weight * ERP |
+|------------------|-----------------------|--------------|--------------|
+| Eurasia & Africa | 6.98%                 | 8.94%        | 0.62%        |
+| Europe           | 12.43%                | 6.97%        | 0.87%        |
+| Latin America    | 11.83%                | 10.42%       | 1.23%        |
+| North America    | 55.27%                | 5.81%        | 3.21%        |
+| Asia Pacific     | 13.49%                | 7.19%        | 0.97%        |
+| **Coca Cola**    |                       |              | **6.90%**    |
 
 Consequently, the equity risk premium used in valuing a company has less to do with where it is incorporated or traded and more to do with where it does business.
 
@@ -227,13 +251,10 @@ The differences between the competing models then boils down to how they measure
 | Model    | Assumptions                                                                                                                         | Risk Measure                                                                                                                                                                                                                                                                  |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | The CAPM | <ol style="list-style-type: none;"> <li>1. There are no transactions costs.</li> <li>2. There is no private information.</li> </ol> | The marginal investors will be fully diversified and hold a portfolio of every traded asset in the market. The risk of an individual asset will be captured by the risk added to this market portfolio, and <u>measured with a single beta</u> , measured against the market. |
-| The APM  | The market prices of stocks are the best indicators of market and                                                                   | Historical stock returns can be analyzed to identify the number of                                                                                                                                                                                                            |
+| The APM  | The market prices of stocks are the best indicators of market and firm-specific risks, with market risks affecting all or many stocks and firm-specific risks not. | Historical stock returns can be analyzed to identify the number of market risk factors and the exposure of each stock to that market risk. Since this is a statistical model, the factors will be unnamed. The risk in a stock will be captured with <u>betas</u>, measured against these unnamed factors. |
+| The Multifactor Model | Market risk factors have to be macroeconomic, to affect many stocks at the same time. Looking at how a stock behaves, relative to different macroeconomic variables, should yield clues to its market risk exposure. | The risk in a stock will be captured with <u>betas</u>, measured against specified macroeconomic factors. |
 
 <sup>4</sup> Damodaran, Aswath, 2016, Equity Risk Premiums (ERP): Determinants, Estimation and Implications – The 2016 Edition. [http://papers.ssrn.com/sol3/papers.cfm?abstract\\_id=2742186](http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2742186). This is the ninth annual update of my review and assessment of equity risk premiums, how to estimate them and a comparison of the approaches.
-
-|                       | firm-specific risks, with market risks affecting all or many stocks and firm-specific risks not.                                                                                                                     | market risk factors and the exposure of each stock to that market risk. Since this is a statistical model, the factors will be unnamed. The risk in a stock will be captured with <u>betas</u> , measured against these unnamed factors. |
-|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| The Multifactor Model | Market risk factors have to be macroeconomic, to affect many stocks at the same time. Looking at how a stock behaves, relative to different macroeconomic variables, should yield clues to its market risk exposure. | The risk in a stock will be captured with <u>betas</u> , measured against specified macroeconomic factors.                                                                                                                               |
 
 Notice that these models agree on more than they disagree about. They all focus on non-diversifiable risk and they all use past stock prices to measure that risk exposure, whether it is with one beta (the CAPM) or multiple betas (the APM or Multifactor Models).
 

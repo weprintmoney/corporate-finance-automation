@@ -3,7 +3,7 @@ title: "Modified Capital Asset Pricing Model"
 status: active
 owner: weprintmoney
 created: 2026-09-01
-last_updated: 2026-09-01
+last_updated: 2026-09-02
 ---
 
 # **Corrective Lenses**
@@ -46,7 +46,7 @@ As a result of beta's unreliability, many companies simply ignore CAPM, choosing
 
 Companies that do use beta frequently adjust their hurdle rates to reflect such factors as a company's size, financial leverage, and the specific type of investment involved. In fact, Willamette's Reilly says such adjustments are critical. "When you get to investment-specific issues," he says, "you have to apply some judgment."
 
-That's clearly the tack taken by Stamford, Connecticut — based officeequipment maker Pitney Bowes Inc. Instead of one across-the-board rate, Pitney uses a range of 10 percent to 12 percent based on the returns the company has generated in the past and has led investors to expect, says Dessa Bokides, the company's treasurer. Within that range, it makes adjustments based on such considerations as where a particular business stands in relation to its cycle. But, says Bokides, the process doesn't involve "a huge mathematical calculation."
+That's clearly the tack taken by Stamford, Connecticut — based office-equipment maker Pitney Bowes Inc. Instead of one across-the-board rate, Pitney uses a range of 10 percent to 12 percent based on the returns the company has generated in the past and has led investors to expect, says Dessa Bokides, the company's treasurer. Within that range, it makes adjustments based on such considerations as where a particular business stands in relation to its cycle. But, says Bokides, the process doesn't involve "a huge mathematical calculation."
 
 #### **A New Option**
 
@@ -58,9 +58,7 @@ Instead of relying on adjustments to beta, MCPM uses options-pricing models to e
 
 Yeh says a growing number of companies are employing the methodology to set hurdle rates, though he says he can't disclose their identities. Another consultant reports that Procter & Gamble expressed interest in applying the approach not long after a *Harvard Business Review* article on MCPM appeared, in 2002. Home Depot CFO Carol Tomé says her company uses both CAPM and an options-based approach to estimate its cost of capital, though she contends that setting hurdle rates under either is still "more of an art than a science."
 
-Yeh nevertheless contends that MCPM is more useful than a CAPM approach, even after adjustments to beta. For one thing, he says, MCPM is forward-looking, based as it is on traded financial instruments, whereas CAPM uses historical market data. As a result, he says, MCPM gives corporate managers a sense of the returns that investors actually expect, rather than what they've received in the past (which, after all, is no guarantee of future performance). What's more, says Yeh, a company's cost of capital changes with the daily price of its equity, and that's reflected in the prices of options, bonds, and other financial instruments. In contrast, beta involves an unchanging or "static" estimate based on the historical time frame used to measure returns. And while that estimate varies with the
-
-period chosen for analysis, any decision involving a historical period can't help but be arbitrary.
+Yeh nevertheless contends that MCPM is more useful than a CAPM approach, even after adjustments to beta. For one thing, he says, MCPM is forward-looking, based as it is on traded financial instruments, whereas CAPM uses historical market data. As a result, he says, MCPM gives corporate managers a sense of the returns that investors actually expect, rather than what they've received in the past (which, after all, is no guarantee of future performance). What's more, says Yeh, a company's cost of capital changes with the daily price of its equity, and that's reflected in the prices of options, bonds, and other financial instruments. In contrast, beta involves an unchanging or "static" estimate based on the historical time frame used to measure returns. And while that estimate varies with the period chosen for analysis, any decision involving a historical period can't help but be arbitrary.
 
 # **Critical Assumptions**
 
@@ -86,6 +84,4 @@ The methodology developed by Pacifica Strategic Advisors LLC to calculate the eq
 - 2. Estimate the stock's future volatility. Next Pacifica determines how likely it is that a company will fail to reach the break-even price. It does that by analyzing the prices of options on the company's stock, using an options-pricing model.
 - 3. Calculate the cost of the risk implied. Pacifica then combines its estimate of volatility with the forward break-even price to determine the price investors would be prepared to pay to insure against the chances that their shares will fall below the forward break-even price. This premium reflects the extra risk of equity over debt.
 - 4. Annualize the premium. Next, Pacifica expresses the dollar cost of that equity risk premium as an annual percentage.
-- 5. Create a term structure of equity. Finally, Pacifica repeats the calculation for different intervals to create a term structure of equity, which it then uses with the corporate bond term structure to
-
-determine the appropriate weighted cost of capital for a given project.
+- 5. Create a term structure of equity. Finally, Pacifica repeats the calculation for different intervals to create a term structure of equity, which it then uses with the corporate bond term structure to determine the appropriate weighted cost of capital for a given project.
