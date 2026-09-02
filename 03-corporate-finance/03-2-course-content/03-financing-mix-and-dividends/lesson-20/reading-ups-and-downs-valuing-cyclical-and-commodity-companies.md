@@ -3,7 +3,7 @@ title: "Ups and Downs: Valuing Cyclical and Commodity Companies"
 status: active
 owner: weprintmoney
 created: 2026-09-01
-last_updated: 2026-09-01
+last_updated: 2026-09-02
 ---
 
 # **Ups and Downs: Valuing Cyclical and Commodity Companies**
@@ -224,10 +224,8 @@ To normalize Toyota's operating income, we look at its operating performance fro
 
 *Table 2: Toyota's Operating Performance – 1998-2009 (in millions of Yen)*
 
-|               |             | Operating  |            | Operating | EBITDA/ |
+| Year          | Revenues    | Operating Income | EBITDA | Operating Margin | EBITDA/Revenues |
 |---------------|-------------|------------|------------|-----------|---------|
-| Year          | Revenues    |            |            |           |         |
-|               |             | Income     | EBITDA     |           |         |
 | FY1 1998      | ¥11,678,400 | ¥779,800   | ¥1,382,950 | 6.68%     | 11.84%  |
 | FY1 1999      | ¥12,749,010 | ¥774,947   | ¥1,415,997 | 6.08%     | 11.11%  |
 | FY1 2000      | ¥12,879,560 | ¥775,982   | ¥1,430,982 | 6.02%     | 11.11%  |
@@ -439,11 +437,7 @@ Note that oil prices can vary from about \$8 a barrel at the minimum to more tha
 
 Step 2: Link the operating results to commodity price: To link the operating income to commodity prices, we used the regression results from illustration 4:
 
-| Operating Income = $-6,395 + (2.95)$ |  | 911.32 (Average Oil Price) |  | $R^2 = 90.2\%$ |
-|--------------------------------------|--|----------------------------|--|----------------|
-
-| Operating Income = $-3,395 + (2.95)$ |  | 911.32 (Average Oil Price) |  | $R^2 = 90.2\%$ |
-|--------------------------------------|--|----------------------------|--|----------------|
+Operating Income = -6,395 + 911.32 (Average Oil Price) R2 = 90.2% (2.95) (14.59)
 
 <sup>6</sup> We used thirty years of historical data on oil prices, adjusted for inflation, to create an empirical distribution. We then chose the statistical distribution that seemed to provide the closest fit (lognormal) and chose parameter values that yielded numbers closest to the historical data.
 
@@ -487,23 +481,20 @@ In February 2009, oil companies that had benefited over the prior five years of 
 |----------------------------|-------------|-------------|-----------------|---------------------|----------------------------|------------|-------------|------------|---------------|
 | BP PLC ADR                 | \$37.21     | \$3.84      | \$8.18          | \$4.25              | \$6.20                     | 9.69       | 4.55        | 8.76       | 6.00          |
 | Chevron Corp.              | \$61.22     | \$5.24      | \$11.67         | \$4.00              | \$7.30                     | 11.68      | 5.25        | 15.31      | 8.39          |
-| ConocoPhillips Exxon Mobil | \$37.98     | \$4.78      | \$10.69         | \$4.75              | \$6.25                     | 7.95       | 3.55        | 8.00       | 6.08          |
-| Corp.                      | \$65.77     | \$5.15      | \$8.66          | \$5.00              | \$6.50                     | 12.77      | 7.59        | 13.15      | 10.12         |
+| ConocoPhillips             | \$37.98     | \$4.78      | \$10.69         | \$4.75              | \$6.25                     | 7.95       | 3.55        | 8.00       | 6.08          |
+| Exxon Mobil Corp.          | \$65.77     | \$5.15      | \$8.66          | \$5.00              | \$6.50                     | 12.77      | 7.59        | 13.15      | 10.12         |
 | Frontier Oil               | \$13.97     | \$0.21      | \$0.77          | \$1.35              | \$1.90                     | 66.52      | 18.14       | 10.35      | 7.35          |
 | Hess Corp.                 | \$57.17     | \$0.42      | \$7.24          | \$1.05              | \$3.40                     | 136.12     | 7.90        | 54.45      | 16.81         |
-| Holly Corp. Marathon Oil   | \$22.03     | \$3.06      | \$2.41          | \$2.75              | \$3.50                     | 7.20       | 9.14        | 8.01       | 6.29          |
-| Corp.                      | \$22.59     | \$2.04      | \$4.94          | \$2.90              | \$4.20                     | 11.07      | 4.57        | 7.79       | 5.38          |
-
-| Murphy Oil                    |         |        |         |        |        |       |      |       |       |
-|-------------------------------|---------|--------|---------|--------|--------|-------|------|-------|-------|
-| Corp. Occidental              | \$41.00 | \$2.88 | \$8.73  | \$2.85 | \$5.50 | 14.24 | 4.70 | 14.39 | 7.45  |
-| Petroleum Petroleo Brasileiro | \$55.59 | \$3.18 | \$8.97  | \$3.05 | \$5.50 | 17.48 | 6.20 | 18.23 | 10.11 |
-| ADR Repsol-YPF                | \$30.47 | \$4.05 | \$4.44  | \$4.05 | \$4.15 | 7.52  | 6.86 | 7.52  | 7.34  |
-| ADR Royal Dutch               | \$15.76 | \$1.48 | \$3.49  | \$2.45 | \$3.70 | 10.65 | 4.52 | 6.43  | 4.26  |
-| Shell 'A'                     | \$43.32 | \$5.42 | \$10.15 | \$5.10 | \$6.40 | 7.99  | 4.27 | 8.49  | 6.77  |
-| Sunoco Inc.                   | \$28.33 | \$5.68 | \$7.48  | \$3.65 | \$4.30 | 4.99  | 3.79 | 7.76  | 6.59  |
-| Tesoro Corp.                  | \$13.67 | \$2.60 | \$1.76  | \$2.10 | \$2.80 | 5.26  | 7.77 | 6.51  | 4.88  |
-| Total ADR                     | \$49.85 | \$5.84 | \$9.16  | \$5.65 | \$7.15 | 8.54  | 5.44 | 8.82  | 6.97  |
+| Holly Corp.                | \$22.03     | \$3.06      | \$2.41          | \$2.75              | \$3.50                     | 7.20       | 9.14        | 8.01       | 6.29          |
+| Marathon Oil Corp.         | \$22.59     | \$2.04      | \$4.94          | \$2.90              | \$4.20                     | 11.07      | 4.57        | 7.79       | 5.38          |
+| Murphy Oil Corp.           | \$41.00     | \$2.88      | \$8.73          | \$2.85              | \$5.50                     | 14.24      | 4.70        | 14.39      | 7.45          |
+| Occidental Petroleum       | \$55.59     | \$3.18      | \$8.97          | \$3.05              | \$5.50                     | 17.48      | 6.20        | 18.23      | 10.11         |
+| Petroleo Brasileiro ADR    | \$30.47     | \$4.05      | \$4.44          | \$4.05              | \$4.15                     | 7.52       | 6.86        | 7.52       | 7.34          |
+| Repsol-YPF ADR             | \$15.76     | \$1.48      | \$3.49          | \$2.45              | \$3.70                     | 10.65      | 4.52        | 6.43       | 4.26          |
+| Royal Dutch Shell 'A'      | \$43.32     | \$5.42      | \$10.15         | \$5.10              | \$6.40                     | 7.99       | 4.27        | 8.49       | 6.77          |
+| Sunoco Inc.                | \$28.33     | \$5.68      | \$7.48          | \$3.65              | \$4.30                     | 4.99       | 3.79        | 7.76       | 6.59          |
+| Tesoro Corp.               | \$13.67     | \$2.60      | \$1.76          | \$2.10              | \$2.80                     | 5.26       | 7.77        | 6.51       | 4.88          |
+| Total ADR                  | \$49.85     | \$5.84      | \$9.16          | \$5.65              | \$7.15                     | 8.54       | 5.44        | 8.82       | 6.97          |
 
 As can be seen from the table, each version of the PE ratio tells a different story. With current PE (based on earnings per share in the most recent fiscal year), the cheapest stock is Sunoco, with a PE of 4.99 and Hess is off the charts with its PE ratio of 136, but the fact that the most recent fiscal year is different for different firms – 2007 for some, midway through 2008 for others and the end of 2008 for a handful – gives us pause. With trailing PE, the cheapest stock is ConocoPhillips and the most expensive is Frontier Oil, and there are relatively few outliers. If we assume that all oil companies benefited equally from the oil price boom in the last four quarter and that there are no significant differences in growth and risk across oil companies, this would suggest that Conoco Phillips is cheap. However, perusing the expected growth rates in earnings per share, we find that Conoco has an expected growth rate of only 4% for the next 5 years, whereas analysts are forecasting growth of 8.5% a year for Petrobras. With forward PE ratios, there are no stocks that trade at PE ratios less than 6, but Repsol does have the lowest PE with 6.43. Finally, with normalized EPS, the cheapest stock remains Repsol with a PE of 4.26 and the most expensive is Hess; our assumption that the average earnings per share over the last 5 years is normal can be contested.
 
@@ -529,15 +520,10 @@ If we accept the premise that natural resource reserves are options, we have to 
 
 | Input                         | Estimation procedure                                      |
 |-------------------------------|-----------------------------------------------------------|
-| Value of underlying asset (S) | Estimated value of natural resource in reserve. Usually   |
-| Strike Price (K)              | Cost of developing reserve. Generally assumed to be       |
-| Life of the option (t)        | Can be defined in one of two ways:                        |
-|                               | a. If rights to reserve are for a finite period, use that |
-|                               | b. Number of years of production it would take to         |
-| Variance in value of          | Since quantity of resource is assumed to be known,        |
-
-| underlying asset               | variance of price of natural resource.                                                                                                                              |
-|--------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Value of underlying asset (S) | Estimated value of natural resource in reserve. Usually estimated as quantity of resource times current price. |
+| Strike Price (K)              | Cost of developing reserve. Generally assumed to be known and fixed. |
+| Life of the option (t)        | Can be defined in one of two ways: a. If rights to reserve are for a finite period, use that period. b. Number of years of production it would take to exhaust the estimated reserve. Thus, a gold mine with a mine inventory of 3 million ounces and a capacity output rate of 150,000 ounces a year will be exhausted in 20 years |
+| Variance in value of underlying asset | Since quantity of resource is assumed to be known, variance of price of natural resource. |
 | Dividend yield (cost of delay) | Annual cash flow as a percent of the value of the underlying asset. Once the reserve becomes viable, this is what the firm is losing by not developing the reserve. |
 
 An important issue in using option pricing models to value natural resource options is the effect of development lags on the value of these options. Since the resources cannot be extracted instantaneously, a time lag has to be allowed between the decision to extract the resources and the actual extraction. A simple adjustment for this lag is to adjust the value of the developed reserve for the loss of cash flows during the development period. Thus, if there is a one-year lag in development, the current value of the developed reserve will be discounted back one year at the cost of delay.7
@@ -562,13 +548,7 @@ Based upon these inputs, the Black-Scholes model provides the following value fo
 
 | $d_1 = 0.5744$ | $N(d_1) = 0.7172$ |
 |----------------|-------------------|
-|----------------|-------------------|
-
 | $d_2 = -0.9748$ | $N(d_2) = 0.1648$ |
-|-----------------|-------------------|
-|-----------------|-------------------|
-
-$$d_2 = -0.9748$$
 
 Call Value= 1,318 exp(-0.0667)(15) (0.7172) -1,400 (exp(-0.05)(15) (0.1648)= \$ 238.8 million
 
@@ -582,12 +562,9 @@ If we decide to apply the option pricing approach to estimate the value of aggre
 
 *Table 6: Valuing a Natural Resource Option: Inputs*
 
-|                               | <i>Input</i>                                        | <i>Estimation procedure</i> |
-|-------------------------------|-----------------------------------------------------|-----------------------------|
-| Value of underlying asset (S) | Cumulate all of the undeveloped reserves owned by a |                             |
-
-|                                       | company and estimate the value of these reserves, based upon the price of the resource today and the average variable cost of extracting these reserves today. |
+| Input                                 | Estimation procedure                                                                                                                                            |
 |---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Value of underlying asset (S)         | Cumulate all of the undeveloped reserves owned by a company and estimate the value of these reserves, based upon the price of the resource today and the average variable cost of extracting these reserves today. |
 | Strike Price (K)                      | Aggregate cost to the company to develop all of its undeveloped reserves immediately.                                                                          |
 | Life of the option (t)                | Weighted average of the lives across undeveloped reserves, with weights based upon reserve quantities.                                                         |
 | Variance in value of underlying asset | Variance in price of underlying commodity.                                                                                                                     |
@@ -597,18 +574,11 @@ Once we have valued the undeveloped reserves as options, we can then value the d
 
 *Table 7: Value of Commodity Company – Real Options Framework*
 
-| Value of operating assets = Value of developed reserves + Value | of         | undeveloped |
-|-----------------------------------------------------------------|------------|-------------|
-| Valuation approach DCF valuation: Present                       |            |             |
-| value of expected cash                                          |            |             |
-| Option                                                          | valuation: | Option      |
-| value                                                           | of         | undeveloped |
-| reserves                                                        | (valued    | either      |
-| individually                                                    | or         | in the      |
-| Effects of higher                                               |            |             |
-| Increase value Increase value, but reduce                       |            |             |
-| May reduce value by                                             |            |             |
-| Increase                                                        | option     | time        |
+| Value of operating assets =                 | Value of developed reserves                                                                                          | + Value of undeveloped reserves                                                                      |
+|---------------------------------------------|----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| Valuation approach                          | DCF valuation: Present value of expected cash flows from extraction and sale of natural resource in developed reserves | Option valuation: Option value of undeveloped reserves (valued either individually or in the aggregate) |
+| Effects of higher commodity price           | Increase value                                                                                                        | Increase value, but reduce time premium on option                                                     |
+| Effects of higher volatility in commodity price | May reduce value by increasing risk and discount rate.                                                            | Increase option time premium.                                                                          |
 
 Note that if we consider undeveloped reserves as options and value them separately, we cannot use the existences of these reserves to justify using higher growth rates in discounted cash flow models. That would be double counting.
 
@@ -623,7 +593,8 @@ In general, real options are much more useful as internal analyses tools within 
 
 Gulf Oil was the target of a takeover in early 1984 at \$70 per share (It had 165.30 million shares outstanding and total debt of \$9.9 billion). It had estimated reserves of 3038 million barrels of oil and the average cost of developing these reserves at that time was estimated to be \$30.38 billion dollars (The development lag is approximately two years). The average relinquishment life of the reserves is 12 years. The price of oil was \$22.38 per barrel, and the production cost, taxes and royalties were estimated at \$7 per barrel. The bond rate at the time of the analysis was 9.00%. If Gulf chooses to develop these reserves, it was expected to have cash flows next year of approximately 5% of the value of the developed reserves. The variance in oil prices is 0.03.
 
-Value of underlying asset = Value of estimated reserves discounted back for period of development lag ( )( ) \$42,380 million 1.05 3038 22.38 - 7 <sup>2</sup> = =
+Value of underlying asset = Value of estimated reserves discounted back for period of development lag = 
+$$\frac{(3038)(22.38 - 7)}{1.05^2} = \$42,380 \text{ million}$$
 
 Note that we could have used forecasted oil prices and estimated cash flows over the production period to estimate the value of the underlying asset, which is the present value of all of these cash flows. We have used as short cut of assuming that the current contribution margin of \$15.38 a barrel will remain unchanged in present value terms over the production period.
 
@@ -641,11 +612,7 @@ Based upon these inputs, the Black-Scholes model provides the following value fo
 
 | $d_1 = 1.6548$ | $N(d_1) = 0.9510$ |
 |----------------|-------------------|
-|----------------|-------------------|
-
 | $d_2 = 1.0548$ | $N(d_2) = 0.8542$ |
-|----------------|-------------------|
-|----------------|-------------------|
 
 Call Value = 
 $$42,380e^{-(0.05)(12)}(0.9510) - 30,380e^{-(0.09)(12)}(0.8542) = \$13,306$$
@@ -668,7 +635,6 @@ Adding the value of the developed and undeveloped reserves of Gulf Oil provides 
 | Less Outstanding Debt         | = \$ 9,900 million  |
 | Value of Equity               | = \$ 8,472 million  |
 | Value per share               | = \$51.25           |
-|                               | \$8,472 =           |
 
 Value per share = 
 $$\frac{\$8,472}{165.3} = \$51.25$$

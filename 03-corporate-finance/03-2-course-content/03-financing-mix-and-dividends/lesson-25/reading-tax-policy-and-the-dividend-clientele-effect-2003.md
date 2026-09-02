@@ -3,7 +3,7 @@ title: "Tax Policy and the Dividend Clientele Effect (2003)"
 status: active
 owner: weprintmoney
 created: 2026-09-01
-last_updated: 2026-09-01
+last_updated: 2026-09-02
 ---
 
 ![](reading-tax-policy-and-the-dividend-clientele-effect-2003-images/_page_0_Picture_23.jpeg)
@@ -58,24 +58,21 @@ Previous studies have shown that an investor's optimal portfolio is a function o
 
 JGTRRA changed this calculation. With the new legislation, the top marginal tax rate on long-term capital gains fell from 20 percent to 15 percent, while the 10 percent rate for lower-income taxpayers fell to 5 percent (and then to zero percent in 2008). Also, new qualified dividends now were taxed in the same way as capital gains (rather than at the traditional ordinary-income marginal tax rates).
 
-In sum, the top marginal rate for dividends fell from 35 percent to 15 percent, and, for lower-income taxpayers, from 10 percent to 5 percent. The change extended across dividends from directly owned equities, as well as those owned through a mutual fund, partnership, real estate investment trust or common trust fund. This was a remarkable break with past tax policy. For
-
-capital gains when the tax disadvantage of dividends varies across investors. To study the impact of these tax rate changes on equity portfolio choices, I used data from before and after JGTRRA to estimate the relationship between the dividend yield on a household's equity portfolio and the gap between dividend and long-term capital gains rates.
+In sum, the top marginal rate for dividends fell from 35 percent to 15 percent, and, for lower-income taxpayers, from 10 percent to 5 percent. The change extended across dividends from directly owned equities, as well as those owned through a mutual fund, partnership, real estate investment trust or common trust fund. This was a remarkable break with past tax policy. For decades prior to 2003, the long-term capital gains tax rate had been much lower than the ordinary income rate (except for a brief period after the Tax Reform Act of 1986, when dividends and capital gains were both taxed at 28 percent).
 
 **FIGURE 1: TOP TAX RATES AND DIVIDEND YIELDS 1987-2012**
 
 ![](reading-tax-policy-and-the-dividend-clientele-effect-2003-images/_page_1_Figure_35.jpeg)
 
-decades prior to 2003, the long-term capital gains tax rate had been much lower than the ordinary income rate (except for a brief period after the Tax Reform Act of 1986, when dividends and capital gains were both taxed at 28 percent).
-
 ## DIVIDEND CLIENTELES
 
-This change in dividend tax rates provides a rare opportunity to test the "dividend clientele hypothesis," the idea that investors sort into "clienteles" based on dividend payouts. Some have preferences for stocks that pay dividends while others prefer stocks whose expected returns come in the form of
+This change in dividend tax rates provides a rare opportunity to test the "dividend clientele hypothesis," the idea that investors sort into "clienteles" based on dividend payouts. Some have preferences for stocks that pay dividends while others prefer stocks whose expected returns come in the form of capital gains when the tax disadvantage of dividends varies across investors. To study the impact of these tax rate changes on equity portfolio choices, I used data from before and after JGTRRA to estimate the relationship between the dividend yield on a household's equity portfolio and the gap between dividend and long-term capital gains rates.
 
 The data come from the Surveys of Consumer Finances (SCF) from 2001, 2004 and 2007. The SCF is a triennial survey conducted by the Federal Reserve Board of Governors; each survey samples about 4,500 households. An advantage of using the SCF for my analysis is that it provides detailed information on household investments and allows for accurate marginal tax rate calculations. Also included is information that allows me to control for other, non-tax-related factors that can influence portfolio choices, such as age, marital status, household size, educational attainment, risk preferences, and optimism about the future of the economy.
 
-<sup>1</sup> New York Times, January 8, 2003, <http://www.ny-times.com/2003/01/08/us/politics-economy-over-view-bush-unveils-plan-cut-tax-rates-spur-economy.html?pagewanted=all&src=pm.lbid.>  
-<sup>2</sup> This brief is based on Laura Kawano, "The Dividend Clientele Hypothesis: Evidence from the 2003 Tax
+<sup>1</sup> New York Times, January 8, 2003, <http://www.ny-times.com/2003/01/08/us/politics-economy-over-view-bush-unveils-plan-cut-tax-rates-spur-economy.html?pagewanted=all&src=pm>.  
+<sup>2</sup> Ibid.  
+<sup>3</sup> This brief is based on Laura Kawano, "The Dividend Clientele Hypothesis: Evidence from the 2003 Tax
 
 Act," American Economic Journal: Economic Policy, February 2014, [http://papers.ssrn.com/sol3/papers.cfm?abstract\\_id=1668158](http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1668158).  
 <sup>4</sup> Raj Chetty and Emmanuel Saez, "Dividend Taxes and Corporate Behavior: Evidence from the 2003 Dividend Tax Cut," Quarterly Journal of Economics 120 (3): 791-833.

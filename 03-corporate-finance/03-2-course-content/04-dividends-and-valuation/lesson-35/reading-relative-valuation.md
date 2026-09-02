@@ -3,7 +3,7 @@ title: "Relative Valuation"
 status: active
 owner: weprintmoney
 created: 2026-09-01
-last_updated: 2026-09-01
+last_updated: 2026-09-02
 ---
 
 # RELATIVE VALUATION
@@ -140,9 +140,7 @@ $$\frac{P_0}{BV_0} = PBV = \frac{ROE * Payout Ratio * (1 + g_n)}{k_e - g_n}$$
 
 where ROE is the return on equity. Dividing by the Sales per share, the price/sales ratio for a stable growth firm can be estimated as a function of its profit margin, payout ratio, profit margin, and expected growth.
 
-| $\frac{P_0}{\text{Sales}_0} = \text{PS} =$ | Profit Margin*Payout Ratio*(1 + $g_n$ ) |
-|--------------------------------------------|-----------------------------------------|
-|                                            | $k_e - g_n$                             |
+$$\frac{P_0}{\text{Sales}_0} = \text{PS} = \frac{\text{Profit Margin} * \text{Payout Ratio} * (1 + g_n)}{k_e - g_n}$$
 
 You can do a similar analysis to derive the firm value multiples. The value of a firm in stable growth can be written as:
 
@@ -227,6 +225,8 @@ PE Ratio = 3.43 \* 35.2 = 120.82
 
 Based upon this adjusted PE, Cisco remains overvalued at its current PE ratio of 133.76. While this may seem like an easy adjustment to resolve the problem of differences across firms, the conclusion holds only if these firms are of equivalent risk. Implicitly, this approach assumes a linear relationship between growth rates and PE.
 
+### *3. Sector Regressions*
+
 When firms differ on more than one variable, it becomes difficult to modify the multiples to account for the differences across firms. You can run regressions of the multiples against the variables and then use these regressions to find predicted values for each firm. This approach works reasonably well when the number of comparable firms is large and the relationship between the multiple and the variables is stable. When these conditions do not hold, a few outliers can cause the coefficients to change dramatically and make the predictions much less reliable.
 
 # *Illustration 8.1: Revisiting the Cisco Analysis: Sector Regression*
@@ -251,9 +251,9 @@ The price earnings ratio is a function of the expected growth rate, risk and the
 
 Since these firms differ on both risk and expected growth, a regression of PE ratios on both variables is run:
 
-| PE = <span>35.08</span> <span>-</span> | 65.73 Beta + <span>-</span> | 573.10 Expected Growth | $R^2 = 93.63\%$ |
-|----------------------------------------|-----------------------------|------------------------|-----------------|
-| (0.56)                                 | (1.67)                      | (11.93)                |                 |
+| PE = 35.08 | - 65.73 Beta | + 573.10 Expected Growth | $R^2 = 93.63\%$ |
+|------------|--------------|--------------------------|-----------------|
+| (0.56)     | (1.67)       | (11.93)                  |                 |
 
 The numbers in brackets are t-statistics and suggest that the relationships between PE ratios and both variables in the regression are statistically significant. The R-squared indicates the percentage of the differences in PE ratios that is explained by the independent variables. Finally, the regression5 itself can be used to get predicted PE ratios for the companies in the list. Thus, the predicted PE ratio for Cisco, based upon its beta of 1.40 and the expected growth rate of 35.2%, would be:
 

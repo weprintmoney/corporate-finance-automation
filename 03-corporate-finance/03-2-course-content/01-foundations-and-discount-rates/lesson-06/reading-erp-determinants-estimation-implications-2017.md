@@ -86,19 +86,12 @@ All risk and return models agree on this crucial distinction, but they part ways
 
 *Table 1: Equity Risk Premiums in Risk and Return Models*
 
-| Model                                                     | Equity Risk Premium          |
-|-----------------------------------------------------------|------------------------------|
-| Arbitrage pricing                                         |                              |
-|                                                           | Risk Premiums for individual |
-| Multi-Factor Model                                        | Risk Premiums for individual |
-| Proxy Models Expected Return = a + b (Proxy 1) + c (Proxy |                              |
-|                                                           | No explicit risk premium     |
-| Expected Return = Riskfree Rate +                         | β j                          |
-| j=                                                        | k                            |
-| ∑                                                         | (Risk Premiumj)              |
-| Expected Return = Riskfree Rate +                         | β j                          |
-| j=                                                        | k                            |
-| ∑                                                         | (Risk Premiumj)              |
+|                               | Model                                                                                                                                                                  | Equity Risk Premium                                                                                                 |
+|-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
+| The CAPM                      | Expected Return = Riskfree Rate + β_Asset (Equity Risk Premium)                                                                                                        | Risk Premium for investing in the market portfolio, which includes all risky assets, relative to the riskless rate. |
+| Arbitrage pricing model (APM) | Expected Return = Riskfree Rate + Σ_(j=1 to k) β_j (Risk Premium_j)                                                                                                    | Risk Premiums for individual (unspecified) market risk factors.                                                     |
+| Multi-Factor Model            | Expected Return = Riskfree Rate + Σ_(j=1 to k) β_j (Risk Premium_j)                                                                                                    | Risk Premiums for individual (specified) market risk factors                                                        |
+| Proxy Models                  | Expected Return = a + b (Proxy 1) + c (Proxy 2) (where the proxies are firm characteristics such as market capitalization, price to book ratios or return momentum) | No explicit risk premium computation, but coefficients on proxies reflect risk preferences.                         |
 
 All of the models other than proxy models require three inputs. The first is the riskfree rate, simple to estimate in currencies where a default free entity exists, but more complicated in markets where there are no default free entities. The second is the beta (in the CAPM) or betas (in the APM or multi-factor models) of the investment being analyzed, and the third is the appropriate risk premium for the portfolio of all risky assets (in the CAPM) and the factor risk premiums for the market risk factors in the APM and multifactor models. While I examine the issues of riskfree rate and beta estimation in companion pieces, I will concentrate on the measurement of the risk premium in this paper.
 
@@ -520,12 +513,9 @@ It is difficult to make much of this data other than to state the obvious, which
 | Minimum            | -43.84%  | 0.03%    | -11.12%  |
 | Maximum            | 52.56%   | 14.30%   | 32.81%   |
 | 25th percentile    | -1.19%   | 0.96%    | 0.92%    |
+| 75th percentile    | 25.06%   | 5.13%    | 8.46%    |
 
 ![](reading-erp-determinants-estimation-implications-2017-images/_page_35_Figure_1.jpeg)
-
-| 75th percentile | 25.06% | 5.13% | 8.46% |
-|-----------------|--------|-------|-------|
-|                 |        |       |       |
 
 While U.S. equities have delivered much higher returns than treasuries over this period, they have also been more volatile, as evidenced both by the higher standard deviation in returns and by the extremes in the distribution. Using this table, we can take a first shot at estimating a risk premium by taking the difference between the average returns on stocks and the average return on treasuries, yielding a risk premium of 7.96% for stocks over T.Bills (11.42% minus 3.46%) and 6.24% for stocks over T.Bonds (11.42% minus 5.18%). Note, though, that these represent arithmetic average, long-term premiums for stocks over treasuries.
 
@@ -533,7 +523,7 @@ How much will the premium change if we make different choices on historical time
 
 *Table 4: Historical Equity Risk Premiums (ERP) –Estimation Period, Riskfree Rate and Averaging Approach*
 
-|           | Stocks - Bills | Arithmetic Average Stocks - Bonds | Stocks - Bills | Geometric Average Stocks - Bonds |
+|           | Arithmetic Average: Stocks - Bills | Arithmetic Average: Stocks - Bonds | Geometric Average: Stocks - Bills | Geometric Average: Stocks - Bonds |
 |-----------|----------------|-----------------------------------|----------------|----------------------------------|
 | 1928-2016 | 7.96%          | 6.24%                             | 6.11%          | 4.62%                            |
 |           | (2.12%)        | (2.26%)                           |                |                                  |
@@ -626,7 +616,7 @@ How can we mitigate the survivor bias? One solution is to look at historical ris
 
 *Table 6: Historical Risk Premiums across Equity Markets – 1900 – 2016 (in %)*
 
-| Country         | Geometric Mean | Arithmetic Mean | Standard Error | Standard Deviation | Geometric Mean | Arithmetic Mean | Standard Error | Standard Deviation |
+| Country         | Geometric Mean (Stocks minus Short term Governments) | Arithmetic Mean (Stocks minus Short term Governments) | Standard Error (Stocks minus Short term Governments) | Standard Deviation (Stocks minus Short term Governments) | Geometric Mean (Stocks minus Long term Governments) | Arithmetic Mean (Stocks minus Long term Governments) | Standard Error (Stocks minus Long term Governments) | Standard Deviation (Stocks minus Long term Governments) |
 |-----------------|----------------|-----------------|----------------|--------------------|----------------|-----------------|----------------|--------------------|
 | Australia       | 6.0%           | 7.4%            | 1.5%           | 16.4%              | 5.0%           | 6.6%            | 1.7%           | 18.1%              |
 | Austria         | 5.6%           | 10.4%           | 3.5%           | 37.1%              | 2.7%           | 21.4%           | 14.2%          | 152.2%             |
@@ -639,18 +629,18 @@ How can we mitigate the survivor bias? One solution is to look at historical ris
 | Ireland         | 3.6%           | 5.9%            | 2.0%           | 21.3%              | 2.7%           | 4.7%            | 1.8%           | 19.8%              |
 | Italy           | 5.7%           | 9.5%            | 2.9%           | 31.3%              | 3.1%           | 6.4%            | 2.7%           | 29.2%              |
 | Japan           | 6.2%           | 9.3%            | 2.6%           | 27.5%              | 5.1%           | 9.1%            | 3.0%           | 32.4%              |
-| Netherlands New | 4.5%           | 6.6%            | 2.1%           | 22.3%              | 3.2%           | 5.5%            | 2.0%           | 22.1%              |
-| Zealand         | 4.4%           | 6.0%            | 1.7%           | 18.0%              | 4.0%           | 5.5%            | 1.6%           | 17.7%              |
+| Netherlands     | 4.5%           | 6.6%            | 2.1%           | 22.3%              | 3.2%           | 5.5%            | 2.0%           | 22.1%              |
+| New Zealand     | 4.4%           | 6.0%            | 1.7%           | 18.0%              | 4.0%           | 5.5%            | 1.6%           | 17.7%              |
 | Norway          | 3.2%           | 5.9%            | 2.4%           | 25.9%              | 2.4%           | 5.3%            | 2.5%           | 27.5%              |
-| Portugal South  | 4.6%           | 9.2%            | 3.1%           | 33.6%              | 2.7%           | 7.5%            | 3.1%           | 33.0%              |
-| Africa          | 6.2%           | 8.2%            | 2.0%           | 21.6%              | 5.3%           | 7.0%            | 1.8%           | 19.5%              |
+| Portugal        | 4.6%           | 9.2%            | 3.1%           | 33.6%              | 2.7%           | 7.5%            | 3.1%           | 33.0%              |
+| South Africa    | 6.2%           | 8.2%            | 2.0%           | 21.6%              | 5.3%           | 7.0%            | 1.8%           | 19.5%              |
 | Spain           | 3.3%           | 5.4%            | 2.0%           | 21.5%              | 1.7%           | 3.7%            | 1.9%           | 20.5%              |
 | Sweden          | 4.0%           | 6.0%            | 1.9%           | 20.3%              | 3.1%           | 5.3%            | 2.0%           | 21.3%              |
 | Switzerland     | 3.6%           | 5.3%            | 1.7%           | 18.6%              | 2.0%           | 3.5%            | 1.6%           | 17.4%              |
 | U.K.            | 4.4%           | 6.1%            | 1.8%           | 19.5%              | 3.6%           | 4.9%            | 1.6%           | 17.1%              |
 | U.S.            | 5.5%           | 7.4%            | 1.8%           | 19.6%              | 4.3%           | 6.4%            | 1.9%           | 20.8%              |
-| Europe World-ex | 3.3%           | 5.1%            | 1.7%           | 19.1%              | 3.1%           | 4.4%            | 1.5%           | 16.0%              |
-| U.S.            | 3.5%           | 5.1%            | 1.7%           | 18.4%              | 2.8%           | 3.8%            | 1.3%           | 14.5%              |
+| Europe          | 3.3%           | 5.1%            | 1.7%           | 19.1%              | 3.1%           | 4.4%            | 1.5%           | 16.0%              |
+| World-ex U.S.   | 3.5%           | 5.1%            | 1.7%           | 18.4%              | 2.8%           | 3.8%            | 1.3%           | 14.5%              |
 | World           | 4.2%           | 5.6%            | 1.6%           | 16.9%              | 3.2%           | 4.4%            | 1.4%           | 15.5%              |
 
 Source: Credit Suisse Global Investment Returns Sourcebook, 2016
