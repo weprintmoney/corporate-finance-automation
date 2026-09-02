@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Fetch current market rates from FRED and write to 03-corporate-finance/data/market-rates.json.
+Fetch current market rates from FRED and write to 03-corporate-finance/03-3-supplemental-data/market-rates.json.
 Requires FRED_API_KEY environment variable.
 
 Run: python3 scripts/fetch-market-data.py
@@ -37,7 +37,7 @@ SERIES = {
     },
 }
 
-OUT_PATH = "03-corporate-finance/data/market-rates.json"
+OUT_PATH = "03-corporate-finance/03-3-supplemental-data/market-rates.json"
 
 
 def fetch_series(api_key: str, series_id: str) -> dict:
