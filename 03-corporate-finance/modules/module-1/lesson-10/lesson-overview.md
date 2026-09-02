@@ -32,4 +32,4 @@ If regression betas are too noisy and backward looking, what should we use inste
 | `session-10-part-2.md` | Video transcript — part 2 |
 | `spreadsheet-bottomupbeta.md` | Bottom-up beta calculator (spreadsheet) |
 | `spreadsheet-totalbeta24.md` | Total beta by industry — 2024 US (spreadsheet) |
-| `spreadsheet-totalbeta-global24.md` | Total beta by industry — 2024 global (spreadsheet) |
+| `spreadsheet-totalbetaglobal24.md` | Total beta by industry — 2024 global (spreadsheet) |

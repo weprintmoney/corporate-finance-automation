@@ -1,135 +1,127 @@
-## Session 12: Debt — Measure and Cost
-
-*Debt, the double-edged sword!*
-
-*Aswath Damodaran*
-
+---
+title: "Lesson 12 Slides"
+status: active
+owner: weprintmoney
+created: 2026-09-01
+last_updated: 2026-09-01
 ---
 
-## From Cost of Equity to Cost of Capital
+# **SESSION 12: DEBT: MEASURE AND COST**
+
+Debt, the double-edged sword!
+
+# SESSION 12: DEBT: MEASURE AND COST
+
+![](slides-images/_page_1_Diagram_6.jpeg)
+
+# **FROM COST OF EQUITY TO COST OF CAPITAL**
 
 - The cost of capital is a composite cost to the firm of raising financing to fund its projects.
 - In addition to equity, firms can raise capital from debt.
 
-*(diagram)*
+# **WHAT IS DEBT?**
 
----
+- General Rule: Debt generally has the following characteristics: o Commitment to make fixed payments in the future o Fixed payments are tax deductible o Failure to make the payments can lead to either default or loss of control of the firm to the party to whom payments are due
+- As a consequence, debt should include o Any interest-bearing liability, whether short term or long term o Any lease obligation, whether operating or capital
 
-## What Is Debt?
-
-- **General Rule:** Debt generally has the following characteristics:
-  - Commitment to make fixed payments in the future.
-  - Fixed payments are tax deductible.
-  - Failure to make the payments can lead to either default or loss of control of the firm to the party to whom payments are due.
-- As a consequence, debt should include:
-  - Any interest-bearing liability, whether short term or long term.
-  - Any lease obligation, whether operating or capital.
-
----
-
-## Estimating the Cost of Debt
+# **ESTIMATING THE COST OF DEBT**
 
 - If the firm has bonds outstanding, and the bonds are traded, the yield to maturity on a long-term, straight (no special features) bond can be used as the interest rate.
-- If the firm is rated, use the rating and a typical default spread on bonds with that rating to estimate the cost of debt.
-- If the firm is not rated:
-  - And it has recently borrowed long term from a bank, use the interest rate on the borrowing, or
-  - Estimate a synthetic rating for the company, and use the synthetic rating to arrive at a default spread and a cost of debt.
+- If the firm is rated, use the rating and a typical default dpread on bonds with that rating to estimate the cost of debt.
+- If the firm is not rated, o and it has recently borrowed long term from a bank, use the interest rate on the borrowing, or o estimate synthetic rating for the company, and use the synthetic rating to arrive at a default spread and a cost of debt.
 - The cost of debt has to be estimated in the same currency as the cost of equity and the cash flows in the valuation.
 
----
+#### **THE EASY ROUTE: OUTSOURCING THE MEASUREMENT OF DEFAULT RISK**
 
-## The Easy Route: Outsourcing the Measurement of Default Risk
+- For those firms that have bond ratings from global rating agencies, I used those ratings:
 
-For firms that have bond ratings from global rating agencies:
+- If you want to estimate Vale's cost of debt in \$R terms, we can again use the differential inflation approach we used for the cost of equity:
 
-| Company | S&P Rating | Risk-Free Rate | Default Spread | Cost of Debt |
-|---------|-----------|----------------|----------------|--------------|
-| Disney | A | 2.75% (US$) | 1.00% | 3.75% |
-| Deutsche Bank | A | 1.75% (€) | 1.00% | 2.75% |
-| Vale | A− | 2.75% (US$) | 1.30% | 4.05% |
+$$\text{COST OF DEBT}_{\text{Rs}} = (1 + \text{COST OF DEBT}_{\text{Us}})^{(1 + \text{EXPECTED INFLATION}_{\text{Rs}})} - 1$$
+$$\text{COST OF DEBT}_{\text{Rs}} = (1 + \text{COST OF DEBT}_{\text{Us}})^{(1 + \text{EXPECTED INFLATION}_{\text{Rs}})} - 1$$
 
-If you want to estimate Vale's cost of debt in R$ terms, you can use the differential inflation approach used for the cost of equity.
+= 
+$$(1.0405) \frac{(1.09)}{(1.02)} - 1 = 11.19\%$$
 
----
+=  $(1.0405) \frac{(1.09)}{(1.02)} - 1 = 11.19\%$ 
 
-## A More General Route: Estimating Synthetic Ratings
+| Company       | S&P Rating | Risk-Free Rate | Default Spread | Cost of Debt |
+|---------------|------------|----------------|----------------|--------------|
+| Disney        | A          | 2.75% (US \$)  | 1.00%          | 3.75%        |
+| Deutsche Bank | A          | 1.75% (€)      | 1.00%          | 2.75%        |
+| Vale          | A-         | 2.75% (US \$)  | 1.30%          | 4.05%        |
 
-- The rating for a firm can be estimated using the financial characteristics of the firm. In its simplest form, we can use just the interest coverage ratio.
-- For the four non-financial service companies, we obtain the following: *(see diagram)*
+# **A MORE GENERAL ROUTE: ESTIMATING SYNTHETIC RATINGS**
 
----
+- The rating for a firm can be estimated using the financial characteristics of the firm. In its simplest form, we can use just the interest coverage ratio:
 
-## Interest Coverage Ratios, Ratings, and Default Spreads — November 2013
+## INTEREST COVERAGE RATIO = EBIT / INTEREST EXPENSES
 
-*(diagram)*
+- For the four non-financial service companies, we obtain the following:
 
----
+| COMPANY            | OPERATING INCOME  | INTEREST EXPENSES | INTEREST COVERAGE RATIO |
+|--------------------|-------------------|-------------------|-------------------------|
+| <b>DISNEY</b>      | <b>\$10,023</b>   | <b>\$444</b>      | <b>22.57</b>            |
+| <b>VALE</b>        | <b>\$15,667</b>   | <b>\$1,342</b>    | <b>11.67</b>            |
+| <b>TATA MOTORS</b> | <b>Rs 166,605</b> | <b>Rs 36,972</b>  | <b>4.51</b>             |
+| <b>BAIDU</b>       | <b>Cy 11,193</b>  | <b>Cy 472</b>     | <b>23.72</b>            |
+| <b>BOOKSCAPE</b>   | <b>\$2,536</b>    | <b>\$492</b>      | <b>5.16</b>             |
 
-## Synthetic Versus Actual Ratings: Rated Firms
+# INTEREST COVERAGE RATIOS, RATINGS AND DEFAULT SPREADS – NOVEMBER 2013
 
-- **Disney's** synthetic rating is AAA whereas its actual rating is A. The difference can be attributed to any of the following:
-  - Synthetic ratings reflect only the interest coverage ratio, whereas actual ratings incorporate all other ratios and qualitative factors.
-  - Synthetic ratings do not allow for sector-wide biases in ratings.
-  - The synthetic rating was based on 2013 operating income, whereas the actual rating reflects normalized earnings.
-- **Vale's** synthetic rating is AA, but the actual rating for dollar debt is A−. The biggest factor behind the difference is the presence of country risk, since Vale is probably being rated lower for being a Brazil-based corporation.
-- **Deutsche Bank** had an A rating. We will not try to estimate a synthetic rating for the bank. Defining interest expenses on debt for a bank is difficult.
+| <i>Large cap (&gt;\$ billion)</i> | <i>Small cap or risky (&lt;\$5 billion)</i> | <i>Rating is (S&amp;P/ Moody's)</i> | <i>Spread (11/13)</i> |
+|-----------------------------------|---------------------------------------------|-------------------------------------|-----------------------|
+| >8.50                             | >12.5                                       | Aaa/AAA                             | 0.40%                 |
+| 6.5-8.5                           | 9.5-12.5                                    | Aa2/AA                              | 0.70%                 |
+| 5.5-6.5                           | 7.5-9.5                                     | A1/A+                               | 0.85%                 |
+| 4.25-5.5                          | 6-7.5                                       | A2/A                                | 1.00%                 |
+| 3-4.25                            | 4.5-6                                       | A3/A-                               | 1.30%                 |
+| 2.5-3                             | 4-4.5                                       | Baa2/BBB                            | 2.00%                 |
+| 2.25-2.5                          | 3.5-4                                       | Ba1/BB+                             | 3.00%                 |
+| 2-2.25                            | 3-3.5                                       | Ba2/BB                              | 4.00%                 |
+| 1.75-2.25                         | 2.5-3                                       | B1/B+                               | 5.50%                 |
+| 1.5-1.75                          | 2-2.5                                       | B2/B                                | 6.50%                 |
+| 1.25-1.5                          | 1.5-2                                       | B3/B-                               | 7.25%                 |
+| 0.8-1.25                          | 1.25-1.5                                    | Caa/CCC                             | 8.75%                 |
+| 0.65-0.8                          | 0.8-1.25                                    | Ca2/CC                              | 9.50%                 |
+| 0.2-0.65                          | 0.5-0.8                                     | C2/C                                | 10.50%                |
+| <0.2                              | <0.5                                        | D2/D                                | 12.00%                |
 
----
+![](slides-images/_page_7_Figure_8.jpeg)
 
-## Estimating Cost of Debt
+- Disney's synthetic rating is AAA whereas its actual rating is A. The difference can be attributed to any of the following: o Synthetic ratings reflect only the interest coverage ratio whereas actual ratings incorporate all of the other ratios and qualitative factors o Synthetic ratings do not allow for sector-wide biases in ratings o Synthetic rating was based on 2013 operating income whereas actual rating reflects normalized earnings
+- Vale's synthetic rating is AA, but the actual rating for doallar debt is A-. The biggest factor behind the difference is the presence of country risk, since Vale is probably being rated lower for being a Brazil-based corporation.
+- Deutsche Bank had an A rating. We will not try to estimate a synthetic rating for the bank. Defining interest expenses on debt for a bank is difficult . . .
 
-- For Bookscape, we use the synthetic rating (A−) to estimate the cost of debt:
-  - Default Spread based upon A− rating = 1.30%
-  - Pre-tax cost of debt = Riskfree Rate + Default Spread = 2.75% + 1.30% = 4.05%
-  - After-tax cost of debt = Pre-tax cost of debt × (1 − tax rate) = 4.05% × (1 − 0.40) = 2.43%
+# **SYNTHETIC VERSUS ACTUAL RATINGS: RATED FIRMS**
 
-- For the three publicly traded firms that are rated in our sample, we use the actual bond ratings to estimate the cost of debt:
+# **ESTIMATING COST OF DEBT**
 
-| Company | S&P Rating | Risk-Free Rate | Default Spread | Cost of Debt | Tax Rate | After-Tax Cost of Debt |
-|---------|-----------|----------------|----------------|--------------|----------|------------------------|
-| Disney | A | 2.75% (US$) | 1.00% | 3.75% | 36.1% | 2.40% |
-| Deutsche Bank | A | 1.75% (€) | 1.00% | 2.75% | 29.48% | 1.94% |
-| Vale | A− | 2.75% (US$) | 1.30% | 4.05% | 34% | 2.67% |
+- For Bookscape, we will use the synthetic rating (A-) to estimate the cost of debt: o Default Spread based upon A- rating = 1.30% o Pre-tax cost of debt = Riskfree Rate + Default Spread = 2.75% + 1.30 % = 4.05% o After-tax cost of debt + Pre-tax cost of debt (1 – tax rate) = 4.05% (1-0.40) = 2.43%
+- For the three publicly traded firms that are rated in our sample, we will use the actual bond ratings to estimate the cost of debt.
 
-- For Tata Motors, we have a rating of AA− from CRISIL, an Indian bond-rating firm, that measures only company risk. Using that rating: *(see diagram)*
+- For Tata Motors, we have a rating of AA- from CRISIL, an Indian bond-rating firm, that measures only company risk. Using that rating:
 
----
+COST OF DEBT<sub>TMT</sub> = RISK-FREE RATE<sub>RS</sub> + DEFAULT SPREAD<sub>INDIA</sub> + DEFAULT SPREAD<sub>TM</sub>
 
-## Updated Default Spreads — January 2017
+| Company       | S&P Rating | Risk-Free Rate | Default Spread | Cost of Debt | Tax Rate | After-Tax Cost of Debt |
+|---------------|------------|----------------|----------------|--------------|----------|------------------------|
+| Disney        | A          | 2.75% (US \$)  | 1.00%          | 3.75%        | 36.1%    | 2.40%                  |
+| Deutsche Bank | A          | 1.75% (€)      | 1.00%          | 2.75%        | 29.48%   | 1.94%                  |
+| Vale          | A-         | 2.75% (US \$)  | 1.30%          | 4.05%        | 34%      | 2.67%                  |
 
-Default Spreads for 10-year Corporate Bonds: 2015–2017
+# **UPDATED DEFAULT SPREADS – JANUARY 2017**
 
-| Rating | Spread 2017 | Spread 2016 | Spread 2015 |
-|--------|-------------|-------------|-------------|
-| Aaa/AAA | 0.60% | 0.75% | 0.40% |
-| Aa2/AA | 0.80% | 1.00% | 0.70% |
-| A1/A+ | 1.00% | 1.10% | 0.90% |
-| A2/A | 1.10% | 1.25% | 1.00% |
-| A3/A− | 1.25% | 1.75% | 1.20% |
-| Baa2/BBB | 1.60% | 2.25% | 1.75% |
-| Ba1/BB+ | 2.50% | 3.25% | 2.75% |
-| Ba2/BB | 3.00% | 4.25% | 3.25% |
-| B1/B+ | 3.75% | 5.50% | 4.00% |
-| B2/B | 4.50% | 6.50% | 5.00% |
-| B3/B− | 5.50% | 7.50% | 6.00% |
-| Caa/CCC | 6.50% | 9.00% | 7.00% |
-| Ca2/CC | 8.00% | 12.00% | 8.00% |
-| C2/C | 10.50% | 16.00% | 10.00% |
-| D2/D | 14.00% | 20.00% | 12.00% |
+![](slides-images/_page_10_Figure_1.jpeg)
 
----
+# 6 **APPLICATION TEST: ESTIMATING A COST OF DEBT**
 
-## Application Test: Estimating a Cost of Debt
+- Based upon your firm's current earnings before interest and taxes, its interest and taxed, its interest expenses, estimate o An interest coverage ration for your firm o A synthetic rating for your firm (use the tables from prior pages) o A pre-tax cost of debt for your firm o An after-tax cost of debt for your firm
 
-- Based upon your firm's current earnings before interest and taxes, its interest expenses, estimate:
-  - An interest coverage ratio for your firm.
-  - A synthetic rating for your firm (use the tables from prior pages).
-  - A pre-tax cost of debt for your firm.
-  - An after-tax cost of debt for your firm.
+## Applied Corporate Finance
 
----
+Optional: Read Chapter 4
 
-## Task & Reading
+![](slides-images/_page_12_Picture_5.jpeg)
 
-- Task: Estimate the cost of debt for your company.
-- Optional: Read Chapter 4
+**Task** Estimate the cost of debt for your company

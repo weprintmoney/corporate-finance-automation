@@ -35,5 +35,5 @@ To determine what you would demand for investing in the equity in a business, yo
 | `spreadsheet-histretsp.md` | Historical returns on S&P 500 (spreadsheet) |
 | `spreadsheet-implprem.md` | Implied equity risk premium calculator (spreadsheet) |
 | `blog-an-erp-retrospective-looking-back-2014-and-looking-forward-2015.md` | An ERP Retrospective: Looking back (2014) and Looking forward (2015) |
-| `blog-another-market-crisis-my-survival-manual-journal.md` | Another Market Crisis? My Survival Manual/Journal! |
-| `blog-jan-2016-data-update-1-us-equity-markets.md` | January 2016 Data Update 1: The US Equity Markets |
+| `blog-another-market-crisis-my-survival-manualjournal.md` | Another Market Crisis? My Survival Manual/Journal! |
+| `blog-january-2016-data-update-1-the-us-equity-markets.md` | January 2016 Data Update 1: The US Equity Markets |

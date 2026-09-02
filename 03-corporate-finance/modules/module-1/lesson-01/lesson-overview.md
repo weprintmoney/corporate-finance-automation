@@ -26,4 +26,4 @@ Two required video modules for this lesson. Watch with slides open and take note
 | File | Description |
 |------|-------------|
 | `slides.md` | Session 1 slide deck (converted from ACF_S01_Slides.pdf) |
-| `blog-corporate-finance-big-picture.md` | Optional reading — Damodaran's overview of the course and its first principles |
+| `blog-corporate-finance-101-a-big-picture-applied-class.md` | Optional reading — Damodaran's overview of the course and its first principles |

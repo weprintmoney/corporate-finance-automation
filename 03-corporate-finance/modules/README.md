@@ -13,11 +13,40 @@ modules/
 ```
 
 Each lesson folder contains:
-- `lesson-overview.md` — objectives, video links, file index
-- `slides.md` — converted slide deck
-- `spreadsheet-*.md` — converted data spreadsheets
-- `reading-*.md` — converted readings
-- `blog-*.md` — optional Damodaran blog posts
+- `lesson-overview.md` — objectives, video links, project questions, file index
+- `slides.pdf` + `slides.md` — slide deck (markdown converted with marker; extracted charts in `slides-images/`)
+- `spreadsheet-*.md` — converted data spreadsheets (raw `.xls` alongside)
+- `reading-*.md` — converted readings (raw `.pdf` alongside)
+- `blog-*.md` — Damodaran blog posts (copied from `../blogs/posts/` archive when available)
+- `session-N-part-P.md` / `.mp4` — lecture transcripts and recordings
+
+## Export script
+
+`brightspace-export.py` pulls everything above from NYU Brightspace. Auth is
+cookie-based — copy `d2lSessionVal` / `d2lSecureSessionVal` from a logged-in
+browser session into `.brightspace.env` at the repo root (gitignored; template
+in the script header).
+
+```bash
+# All lessons missing a lesson-overview.md
+python3 03-corporate-finance/modules/brightspace-export.py
+
+# Specific modules or a single lesson
+python3 03-corporate-finance/modules/brightspace-export.py --modules 2 3 4
+python3 03-corporate-finance/modules/brightspace-export.py --lesson 13
+
+# Re-convert slides.md from slides.pdf with marker (e.g. after a converter upgrade)
+python3 03-corporate-finance/modules/brightspace-export.py --modules 1 --force --reconvert-slides
+```
+
+PDF→markdown uses [marker](https://github.com/datalab-to/marker) (vision-native —
+captures charts, equations, and images that text-only extractors miss).
+Dependencies: `pip install marker-pdf requests beautifulsoup4 pandas openpyxl` and
+`brew install llama.cpp`.
+
+The Financial Accounting course has its own variant at
+`02-financial-accounting/modules/brightspace-export.py` (different Brightspace
+TOC structure — lessons are D2L modules there).
 
 ## Skills
 

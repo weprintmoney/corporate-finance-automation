@@ -33,6 +33,6 @@ While risk is part of every business, the first step in assessing what you need 
 | `spreadsheet-currencyriskfree2023.md` | Currency risk-free rates (spreadsheet) |
 | `spreadsheet-risk-free-rate-estimator.md` | Risk free rate estimator (spreadsheet) |
 | `blog-january-2016-data-update-2-interest-rates-exchange-rates-and-currencies.md` | January 2016 Data Update 2: Interest Rates, Exchange Rates and Currencies |
-| `blog-negative-interest-rates.md` | Negative Interest Rates: Impossible, Unnatural or Just Unusual? |
+| `blog-negative-interest-rates-impossible-unnatural-or-just-unusual.md` | Negative Interest Rates: Impossible, Unnatural or Just Unusual? |
 | `blog-risk-free-rates-and-value-dealing-with-historically-low-risk-free-rates.md` | Risk free rates and value: Dealing with historically low risk free rates |
 | `blog-the-fed-interest-rates-and-stock-prices-fighting-the-fear-factor.md` | The Fed, Interest Rates and Stock Prices: Fighting the Fear Factor |
