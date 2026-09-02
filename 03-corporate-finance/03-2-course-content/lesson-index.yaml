@@ -9,14 +9,89 @@
 #   blogs: blog-*.md (Damodaran posts) present
 #   overview: lesson-overview.md present
 
+schedule:
+
+  modules:
+    - module: "01-foundations-and-discount-rates"
+      lessons: "1–12"
+      deadline: "2026-09-11"
+      deadline_label: "Quiz 1"
+
+    - module: "02-investment-returns-and-financing"
+      lessons: "13–19"
+      deadline: "2026-10-02"
+      deadline_label: "Quiz 2"
+
+    - module: "03-financing-mix-and-dividends"
+      lessons: "20–26"
+      deadline: "2026-10-23"
+      deadline_label: "Quiz 3"
+
+    - module: "04-dividends-and-valuation"
+      lessons: "27–36"
+      deadline: "2026-12-05"
+      deadline_label: "Final Exam"
+
+  meetups:
+    - date: "2026-09-08"
+      time: "10:00 ET"
+      label: "Meetup 1"
+      context: "Module 1 review — lessons 1–12 (pre Quiz 1)"
+
+    - date: "2026-09-22"
+      time: "12:00 ET"
+      label: "Meetup 2"
+      context: "Module 2 mid-point — lessons 13–19"
+
+    - date: "2026-10-06"
+      time: "12:00 ET"
+      label: "Meetup 3"
+      context: "Module 2/3 transition — post Quiz 2, Module 3 kickoff"
+
+    - date: "2026-10-20"
+      time: "10:00 ET"
+      label: "Meetup 4"
+      context: "Module 3 review — lessons 20–26 (pre Quiz 3)"
+
+    - date: "2026-11-03"
+      time: "12:00 ET"
+      label: "Meetup 5"
+      context: "Module 4 kickoff — lessons 27–36"
+
+    - date: "2026-11-30"
+      time: "12:00 ET"
+      label: "Meetup 6"
+      context: "Final exam review — lessons 27–36 (pre Final Exam)"
+
+  assessments:
+    - date: "2026-09-11"
+      label: "Quiz 1"
+      covers: "Module 1 — lessons 1–12"
+
+    - date: "2026-10-02"
+      label: "Quiz 2"
+      covers: "Module 2 — lessons 13–19"
+
+    - date: "2026-10-23"
+      label: "Quiz 3"
+      covers: "Module 3 — lessons 20–26"
+
+    - date: "2026-12-05"
+      label: "Final Exam"
+      covers: "All modules — lessons 1–36"
+
+    - date: "2026-12-11"
+      label: "Final Project"
+      covers: "Cumulative — company valuation"
+
 lessons:
 
-  # ── Module 1: Foundations & Discount Rates ──────────────────────────────────
+  # ── Module 1: Foundations & Discount Rates — lessons 1–12, due 2026-09-11 ──
 
   - lesson: "01"
-    module: "module-1"
+    module: "01-foundations-and-discount-rates"
     topic: "Valuation: The Big Picture / What is Corporate Finance?"
-    folder: "module-1/lesson-01"
+    folder: "01-foundations-and-discount-rates/lesson-01"
     files:
       slides: true
       transcripts: 2
@@ -25,9 +100,9 @@ lessons:
       blogs: true
 
   - lesson: "02"
-    module: "module-1"
+    module: "01-foundations-and-discount-rates"
     topic: "The Objective: Utopia and Let Down"
-    folder: "module-1/lesson-02"
+    folder: "01-foundations-and-discount-rates/lesson-02"
     files:
       slides: true
       transcripts: 3
@@ -36,9 +111,9 @@ lessons:
       blogs: true
 
   - lesson: "03"
-    module: "module-1"
+    module: "01-foundations-and-discount-rates"
     topic: "The Objective: Reality and Reaction"
-    folder: "module-1/lesson-03"
+    folder: "01-foundations-and-discount-rates/lesson-03"
     files:
       slides: true
       transcripts: 2
@@ -47,9 +122,9 @@ lessons:
       blogs: true
 
   - lesson: "04"
-    module: "module-1"
+    module: "01-foundations-and-discount-rates"
     topic: "Define and Measure Risk"
-    folder: "module-1/lesson-04"
+    folder: "01-foundations-and-discount-rates/lesson-04"
     files:
       slides: true
       transcripts: 3
@@ -58,9 +133,9 @@ lessons:
       blogs: true
 
   - lesson: "05"
-    module: "module-1"
+    module: "01-foundations-and-discount-rates"
     topic: "The Risk-Free Rate"
-    folder: "module-1/lesson-05"
+    folder: "01-foundations-and-discount-rates/lesson-05"
     files:
       slides: true
       transcripts: 2
@@ -69,9 +144,9 @@ lessons:
       blogs: true
 
   - lesson: "06"
-    module: "module-1"
+    module: "01-foundations-and-discount-rates"
     topic: "Equity Risk Premiums"
-    folder: "module-1/lesson-06"
+    folder: "01-foundations-and-discount-rates/lesson-06"
     files:
       slides: true
       transcripts: 2
@@ -80,9 +155,9 @@ lessons:
       blogs: true
 
   - lesson: "07"
-    module: "module-1"
+    module: "01-foundations-and-discount-rates"
     topic: "Country Risk Premiums"
-    folder: "module-1/lesson-07"
+    folder: "01-foundations-and-discount-rates/lesson-07"
     files:
       slides: true
       transcripts: 2
@@ -91,9 +166,9 @@ lessons:
       blogs: true
 
   - lesson: "08"
-    module: "module-1"
+    module: "01-foundations-and-discount-rates"
     topic: "Regression Betas"
-    folder: "module-1/lesson-08"
+    folder: "01-foundations-and-discount-rates/lesson-08"
     files:
       slides: true
       transcripts: 2
@@ -102,9 +177,9 @@ lessons:
       blogs: true
 
   - lesson: "09"
-    module: "module-1"
+    module: "01-foundations-and-discount-rates"
     topic: "Beta Fundamentals"
-    folder: "module-1/lesson-09"
+    folder: "01-foundations-and-discount-rates/lesson-09"
     files:
       slides: true
       transcripts: 2
@@ -113,9 +188,9 @@ lessons:
       blogs: false
 
   - lesson: "10"
-    module: "module-1"
+    module: "01-foundations-and-discount-rates"
     topic: "Bottom-Up Betas"
-    folder: "module-1/lesson-10"
+    folder: "01-foundations-and-discount-rates/lesson-10"
     files:
       slides: true
       transcripts: 2
@@ -124,9 +199,9 @@ lessons:
       blogs: false
 
   - lesson: "11"
-    module: "module-1"
+    module: "01-foundations-and-discount-rates"
     topic: "The Right Beta"
-    folder: "module-1/lesson-11"
+    folder: "01-foundations-and-discount-rates/lesson-11"
     files:
       slides: true
       transcripts: 2
@@ -135,9 +210,9 @@ lessons:
       blogs: false
 
   - lesson: "12"
-    module: "module-1"
+    module: "01-foundations-and-discount-rates"
     topic: "Debt: Measure and Cost"
-    folder: "module-1/lesson-12"
+    folder: "01-foundations-and-discount-rates/lesson-12"
     files:
       slides: true
       transcripts: 2
@@ -145,12 +220,12 @@ lessons:
       readings: true
       blogs: false
 
-  # ── Module 2 ─────────────────────────────────────────────────────────────────
+  # ── Module 2: Investment Returns & Financing — lessons 13–19, due 2026-10-02 ─
 
   - lesson: "13"
-    module: "module-2"
-    topic: "(pending)"
-    folder: "module-2/lesson-13"
+    module: "02-investment-returns-and-financing"
+    topic: "Weights for Cost of Capital"
+    folder: "02-investment-returns-and-financing/lesson-13"
     files:
       slides: false
       transcripts: 2
@@ -159,9 +234,9 @@ lessons:
       blogs: false
 
   - lesson: "14"
-    module: "module-2"
-    topic: "(pending)"
-    folder: "module-2/lesson-14"
+    module: "02-investment-returns-and-financing"
+    topic: "From Hurdle Rates to Cash Flows"
+    folder: "02-investment-returns-and-financing/lesson-14"
     files:
       slides: false
       transcripts: 2
@@ -170,9 +245,9 @@ lessons:
       blogs: false
 
   - lesson: "15"
-    module: "module-2"
-    topic: "(pending)"
-    folder: "module-2/lesson-15"
+    module: "02-investment-returns-and-financing"
+    topic: "From Accounting Earnings to Time-Weighted Incremental Cash Flows"
+    folder: "02-investment-returns-and-financing/lesson-15"
     files:
       slides: false
       transcripts: 2
@@ -181,9 +256,9 @@ lessons:
       blogs: false
 
   - lesson: "16"
-    module: "module-2"
-    topic: "(pending)"
-    folder: "module-2/lesson-16"
+    module: "02-investment-returns-and-financing"
+    topic: "Currency Consistency and Uncertainty in Investment Analysis"
+    folder: "02-investment-returns-and-financing/lesson-16"
     files:
       slides: false
       transcripts: 2
@@ -192,9 +267,9 @@ lessons:
       blogs: false
 
   - lesson: "17"
-    module: "module-2"
-    topic: "(pending)"
-    folder: "module-2/lesson-17"
+    module: "02-investment-returns-and-financing"
+    topic: "The Financing Principle: Debt vs Equity"
+    folder: "02-investment-returns-and-financing/lesson-17"
     files:
       slides: false
       transcripts: 2
@@ -203,9 +278,9 @@ lessons:
       blogs: false
 
   - lesson: "18"
-    module: "module-2"
-    topic: "(pending)"
-    folder: "module-2/lesson-18"
+    module: "02-investment-returns-and-financing"
+    topic: "Cost of Capital Approach to Optimal Debt Ratio"
+    folder: "02-investment-returns-and-financing/lesson-18"
     files:
       slides: false
       transcripts: 2
@@ -214,9 +289,9 @@ lessons:
       blogs: false
 
   - lesson: "19"
-    module: "module-2"
-    topic: "(pending)"
-    folder: "module-2/lesson-19"
+    module: "02-investment-returns-and-financing"
+    topic: "From Optimal Debt Ratio to Value Impact"
+    folder: "02-investment-returns-and-financing/lesson-19"
     files:
       slides: false
       transcripts: 2
@@ -224,12 +299,12 @@ lessons:
       readings: false
       blogs: false
 
-  # ── Module 3 ─────────────────────────────────────────────────────────────────
+  # ── Module 3: Financing Mix & Dividends — lessons 20–26, due 2026-10-23 ──────
 
   - lesson: "20"
-    module: "module-3"
-    topic: "(pending)"
-    folder: "module-3/lesson-20"
+    module: "03-financing-mix-and-dividends"
+    topic: "Weak Links in the Cost of Capital Approach"
+    folder: "03-financing-mix-and-dividends/lesson-20"
     files:
       slides: false
       transcripts: 2
@@ -238,9 +313,9 @@ lessons:
       blogs: false
 
   - lesson: "21"
-    module: "module-3"
-    topic: "(pending)"
-    folder: "module-3/lesson-21"
+    module: "03-financing-mix-and-dividends"
+    topic: "Adjusted Present Value Approach"
+    folder: "03-financing-mix-and-dividends/lesson-21"
     files:
       slides: false
       transcripts: 2
@@ -249,9 +324,9 @@ lessons:
       blogs: false
 
   - lesson: "22"
-    module: "module-3"
-    topic: "(pending)"
-    folder: "module-3/lesson-22"
+    module: "03-financing-mix-and-dividends"
+    topic: "Moving to the Optimal Debt Ratio"
+    folder: "03-financing-mix-and-dividends/lesson-22"
     files:
       slides: false
       transcripts: 1    # part 2 not on channel
@@ -260,9 +335,9 @@ lessons:
       blogs: false
 
   - lesson: "23"
-    module: "module-3"
-    topic: "(pending)"
-    folder: "module-3/lesson-23"
+    module: "03-financing-mix-and-dividends"
+    topic: "Designing the Right Type of Financing"
+    folder: "03-financing-mix-and-dividends/lesson-23"
     files:
       slides: false
       transcripts: 2
@@ -271,9 +346,9 @@ lessons:
       blogs: false
 
   - lesson: "24"
-    module: "module-3"
-    topic: "(pending)"
-    folder: "module-3/lesson-24"
+    module: "03-financing-mix-and-dividends"
+    topic: "(pending — transcript not on channel)"
+    folder: "03-financing-mix-and-dividends/lesson-24"
     files:
       slides: false
       transcripts: 0    # not on channel — folder exists but empty
@@ -282,9 +357,9 @@ lessons:
       blogs: false
 
   - lesson: "25"
-    module: "module-3"
-    topic: "(pending)"
-    folder: "module-3/lesson-25"
+    module: "03-financing-mix-and-dividends"
+    topic: "Three Schools of Thought on Dividends"
+    folder: "03-financing-mix-and-dividends/lesson-25"
     files:
       slides: false
       transcripts: 2
@@ -293,9 +368,9 @@ lessons:
       blogs: false
 
   - lesson: "26"
-    module: "module-3"
-    topic: "(pending)"
-    folder: "module-3/lesson-26"
+    module: "03-financing-mix-and-dividends"
+    topic: "Assessing Dividend Policy and Free Cash Flow to Equity"
+    folder: "03-financing-mix-and-dividends/lesson-26"
     files:
       slides: false
       transcripts: 2
@@ -303,12 +378,12 @@ lessons:
       readings: false
       blogs: false
 
-  # ── Module 4 ─────────────────────────────────────────────────────────────────
+  # ── Module 4: Dividends & Valuation — lessons 27–36, due 2026-12-05 ──────────
 
   - lesson: "27"
-    module: "module-4"
-    topic: "(pending)"
-    folder: "module-4/lesson-27"
+    module: "04-dividends-and-valuation"
+    topic: "Assessing Dividend Policy: Trust, Projects, and the Cash Matrix"
+    folder: "04-dividends-and-valuation/lesson-27"
     files:
       slides: false
       transcripts: 2
@@ -317,9 +392,9 @@ lessons:
       blogs: false
 
   - lesson: "28"
-    module: "module-4"
-    topic: "(pending)"
-    folder: "module-4/lesson-28"
+    module: "04-dividends-and-valuation"
+    topic: "Me-Too Dividend Policy and Peer Group Assessment"
+    folder: "04-dividends-and-valuation/lesson-28"
     files:
       slides: false
       transcripts: 1    # part 2 not on channel
@@ -328,9 +403,9 @@ lessons:
       blogs: false
 
   - lesson: "29"
-    module: "module-4"
-    topic: "(pending)"
-    folder: "module-4/lesson-29"
+    module: "04-dividends-and-valuation"
+    topic: "Intrinsic Valuation Foundations"
+    folder: "04-dividends-and-valuation/lesson-29"
     files:
       slides: false
       transcripts: 1
@@ -339,9 +414,9 @@ lessons:
       blogs: false
 
   - lesson: "30"
-    module: "module-4"
-    topic: "(pending)"
-    folder: "module-4/lesson-30"
+    module: "04-dividends-and-valuation"
+    topic: "Cash Flows and Discount Rates in Valuation"
+    folder: "04-dividends-and-valuation/lesson-30"
     files:
       slides: false
       transcripts: 1
@@ -350,9 +425,9 @@ lessons:
       blogs: false
 
   - lesson: "31"
-    module: "module-4"
-    topic: "(pending)"
-    folder: "module-4/lesson-31"
+    module: "04-dividends-and-valuation"
+    topic: "Estimating Growth in Cash Flows"
+    folder: "04-dividends-and-valuation/lesson-31"
     files:
       slides: false
       transcripts: 2
@@ -361,9 +436,9 @@ lessons:
       blogs: false
 
   - lesson: "32"
-    module: "module-4"
-    topic: "(pending)"
-    folder: "module-4/lesson-32"
+    module: "04-dividends-and-valuation"
+    topic: "Terminal Value in DCF Valuation"
+    folder: "04-dividends-and-valuation/lesson-32"
     files:
       slides: false
       transcripts: 2
@@ -372,9 +447,9 @@ lessons:
       blogs: false
 
   - lesson: "33"
-    module: "module-4"
-    topic: "(pending)"
-    folder: "module-4/lesson-33"
+    module: "04-dividends-and-valuation"
+    topic: "From Firm Value to Equity Value: Cash and Cross-Holdings"
+    folder: "04-dividends-and-valuation/lesson-33"
     files:
       slides: false
       transcripts: 2
@@ -383,9 +458,9 @@ lessons:
       blogs: false
 
   - lesson: "34"
-    module: "module-4"
-    topic: "(pending)"
-    folder: "module-4/lesson-34"
+    module: "04-dividends-and-valuation"
+    topic: "Stories, Numbers, and the Disney DCF Valuation"
+    folder: "04-dividends-and-valuation/lesson-34"
     files:
       slides: false
       transcripts: 2
@@ -394,9 +469,9 @@ lessons:
       blogs: false
 
   - lesson: "35"
-    module: "module-4"
-    topic: "(pending)"
-    folder: "module-4/lesson-35"
+    module: "04-dividends-and-valuation"
+    topic: "Pricing vs. Valuation: Using Multiples"
+    folder: "04-dividends-and-valuation/lesson-35"
     files:
       slides: false
       transcripts: 2
@@ -405,9 +480,9 @@ lessons:
       blogs: false
 
   - lesson: "36"
-    module: "module-4"
-    topic: "(pending)"
-    folder: "module-4/lesson-36"
+    module: "04-dividends-and-valuation"
+    topic: "Course Review: Lessons Learned and Ten Principles"
+    folder: "04-dividends-and-valuation/lesson-36"
     files:
       slides: false
       transcripts: 2
