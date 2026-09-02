@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Download Damodaran's industry beta and country risk premium data from NYU Stern
-and write JSON files to 03-corporate-finance/data/damodaran/.
+and write JSON files to 03-corporate-finance/03-3-supplemental-data/.
 
 No API key required — pulls from public NYU Stern files.
 Requires: pip install xlrd openpyxl
@@ -20,7 +20,7 @@ from urllib.request import urlopen, Request
 from urllib.error import URLError
 from io import BytesIO
 
-OUT_DIR = "03-corporate-finance/data/damodaran"
+OUT_DIR = "03-corporate-finance/03-3-supplemental-data"
 
 # Update these URLs each January from: https://pages.stern.nyu.edu/~adamodar/New_Home_Page/data.html
 BETA_URL = "https://pages.stern.nyu.edu/~adamodar/pc/datasets/betas.xls"

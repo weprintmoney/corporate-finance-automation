@@ -60,4 +60,5 @@ WACC = (E/V) · rₑ + (D/V) · r_d · (1 − t)
 | [03-4-blogs/posts/](03-4-blogs/posts/) | Full Damodaran blog archive (~680 posts, 2008–present) |
 | [03-3-supplemental-data/market-rates.json](03-3-supplemental-data/market-rates.json) | Live rates from FRED: 10-year Treasury, SOFR, Fed Funds — refreshed weekdays by CI |
 | [03-3-supplemental-data/companies/](03-3-supplemental-data/companies/) | Per-ticker JSON from Financial Modeling Prep: income statement, balance sheet, cash flow |
-| [03-3-supplemental-data/damodaran/](03-3-supplemental-data/damodaran/) | Damodaran industry betas + country risk premiums — refreshed monthly by CI |
+| [03-3-supplemental-data/industry-betas.json](03-3-supplemental-data/industry-betas.json) | Damodaran industry betas — refreshed monthly by CI |
+| [03-3-supplemental-data/country-risk.json](03-3-supplemental-data/country-risk.json) | Damodaran country risk premiums — refreshed monthly by CI |

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Fetch company financial statements from Financial Modeling Prep and write to
-03-corporate-finance/data/companies/{ticker}.json.
+03-corporate-finance/03-3-supplemental-data/companies/{ticker}.json.
 
 Usage:  python3 scripts/fetch-company-data.py TICKER
         python3 scripts/fetch-company-data.py SWI
@@ -19,7 +19,7 @@ from urllib.error import URLError
 
 FMP_BASE = "https://financialmodelingprep.com/api/v3"
 YEARS = 3
-OUT_DIR = "03-corporate-finance/data/companies"
+OUT_DIR = "03-corporate-finance/03-3-supplemental-data/companies"
 
 
 def fmp_get(path: str, api_key: str, extra: str = "") -> list | dict:
