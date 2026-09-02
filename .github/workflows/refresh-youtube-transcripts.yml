@@ -1,0 +1,36 @@
+name: Refresh YouTube Transcripts
+
+on:
+  schedule:
+    # Mondays 13:00 UTC — picks up the past week's uploads.
+    - cron: '0 13 * * 1'
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: pip install yt-dlp pyyaml
+
+      # YouTube intermittently blocks datacenter IPs. The script fails fast
+      # after 8 consecutive fetch errors; if this job keeps failing, run
+      # `python3 scripts/fetch-youtube-transcripts.py` locally instead —
+      # it is resumable and only fetches videos missing from index.yaml.
+      - name: Fetch new video transcripts
+        run: python3 scripts/fetch-youtube-transcripts.py
+
+      - name: Commit if new transcripts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add 03-corporate-finance/03-6-youtube/
+          git diff --staged --quiet && echo "No changes." || (
+            git commit -m "data: refresh YouTube transcripts $(date -u +%Y-%m-%d)" &&
+            git push
+          )
