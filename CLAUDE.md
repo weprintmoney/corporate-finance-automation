@@ -31,6 +31,7 @@ WhatsApp group: [Corp Finance Fall 2026](https://chat.whatsapp.com/ChFjKrUfgTyIq
 | Valentyn Burianov | Ukraine | +380 97 625 4550 | [LinkedIn](https://www.linkedin.com/in/valentyn-burianov-23a824359/) | — |
 | Aldo | Italy | +39 347 253 0726 | — | — |
 | Allan | Malta | +356 7947 5088 | — | — |
+| Jennifer Conrad | — | +1 347 564 8137 | — | — |
 
 *Sources: Brightspace discussion board + WhatsApp group. Last updated 2026-09-01.*
 
