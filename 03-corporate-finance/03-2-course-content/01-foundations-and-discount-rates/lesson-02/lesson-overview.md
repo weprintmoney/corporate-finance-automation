@@ -32,5 +32,5 @@ Conventional corporate finance is built on a singular objective, maximizing stoc
 | `session-2-part-1.md` | Video transcript — part 1 |
 | `session-2-part-2.md` | Video transcript — part 2 |
 | `session-2-part-3.md` | Video transcript — part 3 |
-| `blog-alibaba-governance.md` | Alibaba's Governance by Politburo: Corporate Governance and Value |
-| `blog-family-companies-4c-tradeoff.md` | Family Feuds: The Promise and Peril of Family Group Companies! |
+| `blog-alibabas-governance-by-politburo-corporate-governance-and-value.md` | Alibaba's Governance by Politburo: Corporate Governance and Value |
+| `blog-family-feuds-the-promise-and-peril-of-family-group-companies.md` | Family Feuds: The Promise and Peril of Family Group Companies! |

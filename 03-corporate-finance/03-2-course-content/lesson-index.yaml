@@ -128,7 +128,7 @@ lessons:
     files:
       slides: true
       transcripts: 3
-      spreadsheets: true   # inshold.xls
+      spreadsheets: true
       readings: true
       blogs: true
 
@@ -139,7 +139,7 @@ lessons:
     files:
       slides: true
       transcripts: 2
-      spreadsheets: true   # risk-free-rate-estimator.xls, currencyriskfree2023.xls
+      spreadsheets: true
       readings: false
       blogs: true
 
@@ -150,7 +150,7 @@ lessons:
     files:
       slides: true
       transcripts: 2
-      spreadsheets: true   # implprem.xls, histretsp.xls, histimpl.xls
+      spreadsheets: true
       readings: true
       blogs: true
 
@@ -161,7 +161,7 @@ lessons:
     files:
       slides: true
       transcripts: 2
-      spreadsheets: true   # ctrypremjuly24.xlsx, company-erp-calculator.xls
+      spreadsheets: true
       readings: true
       blogs: true
 
@@ -172,7 +172,7 @@ lessons:
     files:
       slides: true
       transcripts: 2
-      spreadsheets: false
+      spreadsheets: true
       readings: false
       blogs: true
 
@@ -183,7 +183,7 @@ lessons:
     files:
       slides: true
       transcripts: 2
-      spreadsheets: true   # financial-leverage-betas.xls
+      spreadsheets: true
       readings: false
       blogs: false
 
@@ -194,7 +194,7 @@ lessons:
     files:
       slides: true
       transcripts: 2
-      spreadsheets: true   # bottomupbeta.xlsx, totalbeta24.xls, totalbeta-global24.xls
+      spreadsheets: true
       readings: false
       blogs: false
 
@@ -205,7 +205,7 @@ lessons:
     files:
       slides: true
       transcripts: 2
-      spreadsheets: true   # total-beta-calculator.xls
+      spreadsheets: true
       readings: false
       blogs: false
 
@@ -216,7 +216,7 @@ lessons:
     files:
       slides: true
       transcripts: 2
-      spreadsheets: true   # ratings.xls, dbtfund24.xls, dbtfund-global24.xls, leaseeffect24.xls, leaseeffect-global24.xls, countrytaxrates24.xls, debt-cost-of-debt.xls
+      spreadsheets: true
       readings: true
       blogs: false
 
@@ -227,31 +227,31 @@ lessons:
     topic: "Weights for Cost of Capital"
     folder: "02-investment-returns-and-financing/lesson-13"
     files:
-      slides: false
+      slides: true
       transcripts: 2
-      spreadsheets: false
-      readings: false
-      blogs: false
+      spreadsheets: true
+      readings: true
+      blogs: true
 
   - lesson: "14"
     module: "02-investment-returns-and-financing"
     topic: "From Hurdle Rates to Cash Flows"
     folder: "02-investment-returns-and-financing/lesson-14"
     files:
-      slides: false
+      slides: true
       transcripts: 2
-      spreadsheets: false
-      readings: false
-      blogs: false
+      spreadsheets: true
+      readings: true
+      blogs: true
 
   - lesson: "15"
     module: "02-investment-returns-and-financing"
     topic: "From Accounting Earnings to Time-Weighted Incremental Cash Flows"
     folder: "02-investment-returns-and-financing/lesson-15"
     files:
-      slides: false
+      slides: true
       transcripts: 2
-      spreadsheets: false
+      spreadsheets: true
       readings: false
       blogs: false
 
@@ -260,44 +260,44 @@ lessons:
     topic: "Currency Consistency and Uncertainty in Investment Analysis"
     folder: "02-investment-returns-and-financing/lesson-16"
     files:
-      slides: false
+      slides: true
       transcripts: 2
       spreadsheets: false
-      readings: false
-      blogs: false
+      readings: true
+      blogs: true
 
   - lesson: "17"
     module: "02-investment-returns-and-financing"
     topic: "The Financing Principle: Debt vs Equity"
     folder: "02-investment-returns-and-financing/lesson-17"
     files:
-      slides: false
+      slides: true
       transcripts: 2
-      spreadsheets: false
+      spreadsheets: true
       readings: false
-      blogs: false
+      blogs: true
 
   - lesson: "18"
     module: "02-investment-returns-and-financing"
     topic: "Cost of Capital Approach to Optimal Debt Ratio"
     folder: "02-investment-returns-and-financing/lesson-18"
     files:
-      slides: false
+      slides: true
       transcripts: 2
-      spreadsheets: false
-      readings: false
-      blogs: false
+      spreadsheets: true
+      readings: true
+      blogs: true
 
   - lesson: "19"
     module: "02-investment-returns-and-financing"
     topic: "From Optimal Debt Ratio to Value Impact"
     folder: "02-investment-returns-and-financing/lesson-19"
     files:
-      slides: false
+      slides: true
       transcripts: 2
-      spreadsheets: false
+      spreadsheets: true
       readings: false
-      blogs: false
+      blogs: true
 
   # ── Module 3: Financing Mix & Dividends — lessons 20–26, due 2026-10-23 ──────
 
@@ -306,10 +306,10 @@ lessons:
     topic: "Weak Links in the Cost of Capital Approach"
     folder: "03-financing-mix-and-dividends/lesson-20"
     files:
-      slides: false
+      slides: true
       transcripts: 2
-      spreadsheets: false
-      readings: false
+      spreadsheets: true
+      readings: true
       blogs: false
 
   - lesson: "21"
@@ -317,20 +317,20 @@ lessons:
     topic: "Adjusted Present Value Approach"
     folder: "03-financing-mix-and-dividends/lesson-21"
     files:
-      slides: false
+      slides: true
       transcripts: 2
-      spreadsheets: false
+      spreadsheets: true
       readings: false
-      blogs: false
+      blogs: true
 
   - lesson: "22"
     module: "03-financing-mix-and-dividends"
     topic: "Moving to the Optimal Debt Ratio"
     folder: "03-financing-mix-and-dividends/lesson-22"
     files:
-      slides: false
-      transcripts: 1    # part 2 not on channel
-      spreadsheets: false
+      slides: true
+      transcripts: 1
+      spreadsheets: true
       readings: false
       blogs: false
 
@@ -339,9 +339,9 @@ lessons:
     topic: "Designing the Right Type of Financing"
     folder: "03-financing-mix-and-dividends/lesson-23"
     files:
-      slides: false
+      slides: true
       transcripts: 2
-      spreadsheets: false
+      spreadsheets: true
       readings: false
       blogs: false
 
@@ -350,33 +350,33 @@ lessons:
     topic: "(pending — transcript not on channel)"
     folder: "03-financing-mix-and-dividends/lesson-24"
     files:
-      slides: false
-      transcripts: 0    # not on channel — folder exists but empty
-      spreadsheets: false
+      slides: true
+      transcripts: 0
+      spreadsheets: true
       readings: false
-      blogs: false
+      blogs: true
 
   - lesson: "25"
     module: "03-financing-mix-and-dividends"
     topic: "Three Schools of Thought on Dividends"
     folder: "03-financing-mix-and-dividends/lesson-25"
     files:
-      slides: false
+      slides: true
       transcripts: 2
-      spreadsheets: false
-      readings: false
-      blogs: false
+      spreadsheets: true
+      readings: true
+      blogs: true
 
   - lesson: "26"
     module: "03-financing-mix-and-dividends"
     topic: "Assessing Dividend Policy and Free Cash Flow to Equity"
     folder: "03-financing-mix-and-dividends/lesson-26"
     files:
-      slides: false
+      slides: true
       transcripts: 2
-      spreadsheets: false
-      readings: false
-      blogs: false
+      spreadsheets: true
+      readings: true
+      blogs: true
 
   # ── Module 4: Dividends & Valuation — lessons 27–36, due 2026-12-05 ──────────
 
@@ -385,20 +385,20 @@ lessons:
     topic: "Assessing Dividend Policy: Trust, Projects, and the Cash Matrix"
     folder: "04-dividends-and-valuation/lesson-27"
     files:
-      slides: false
+      slides: true
       transcripts: 2
-      spreadsheets: false
+      spreadsheets: true
       readings: false
-      blogs: false
+      blogs: true
 
   - lesson: "28"
     module: "04-dividends-and-valuation"
     topic: "Me-Too Dividend Policy and Peer Group Assessment"
     folder: "04-dividends-and-valuation/lesson-28"
     files:
-      slides: false
-      transcripts: 1    # part 2 not on channel
-      spreadsheets: false
+      slides: true
+      transcripts: 1
+      spreadsheets: true
       readings: false
       blogs: false
 
@@ -407,85 +407,85 @@ lessons:
     topic: "Intrinsic Valuation Foundations"
     folder: "04-dividends-and-valuation/lesson-29"
     files:
-      slides: false
+      slides: true
       transcripts: 1
-      spreadsheets: false
+      spreadsheets: true
       readings: false
-      blogs: false
+      blogs: true
 
   - lesson: "30"
     module: "04-dividends-and-valuation"
     topic: "Cash Flows and Discount Rates in Valuation"
     folder: "04-dividends-and-valuation/lesson-30"
     files:
-      slides: false
+      slides: true
       transcripts: 1
-      spreadsheets: false
-      readings: false
-      blogs: false
+      spreadsheets: true
+      readings: true
+      blogs: true
 
   - lesson: "31"
     module: "04-dividends-and-valuation"
     topic: "Estimating Growth in Cash Flows"
     folder: "04-dividends-and-valuation/lesson-31"
     files:
-      slides: false
+      slides: true
       transcripts: 2
-      spreadsheets: false
+      spreadsheets: true
       readings: false
-      blogs: false
+      blogs: true
 
   - lesson: "32"
     module: "04-dividends-and-valuation"
     topic: "Terminal Value in DCF Valuation"
     folder: "04-dividends-and-valuation/lesson-32"
     files:
-      slides: false
+      slides: true
       transcripts: 2
-      spreadsheets: false
-      readings: false
-      blogs: false
+      spreadsheets: true
+      readings: true
+      blogs: true
 
   - lesson: "33"
     module: "04-dividends-and-valuation"
     topic: "From Firm Value to Equity Value: Cash and Cross-Holdings"
     folder: "04-dividends-and-valuation/lesson-33"
     files:
-      slides: false
+      slides: true
       transcripts: 2
-      spreadsheets: false
-      readings: false
-      blogs: false
+      spreadsheets: true
+      readings: true
+      blogs: true
 
   - lesson: "34"
     module: "04-dividends-and-valuation"
     topic: "Stories, Numbers, and the Disney DCF Valuation"
     folder: "04-dividends-and-valuation/lesson-34"
     files:
-      slides: false
+      slides: true
       transcripts: 2
-      spreadsheets: false
-      readings: false
-      blogs: false
+      spreadsheets: true
+      readings: true
+      blogs: true
 
   - lesson: "35"
     module: "04-dividends-and-valuation"
     topic: "Pricing vs. Valuation: Using Multiples"
     folder: "04-dividends-and-valuation/lesson-35"
     files:
-      slides: false
+      slides: true
       transcripts: 2
-      spreadsheets: false
-      readings: false
-      blogs: false
+      spreadsheets: true
+      readings: true
+      blogs: true
 
   - lesson: "36"
     module: "04-dividends-and-valuation"
     topic: "Course Review: Lessons Learned and Ten Principles"
     folder: "04-dividends-and-valuation/lesson-36"
     files:
-      slides: false
+      slides: true
       transcripts: 2
       spreadsheets: false
       readings: false
-      blogs: false
+      blogs: true

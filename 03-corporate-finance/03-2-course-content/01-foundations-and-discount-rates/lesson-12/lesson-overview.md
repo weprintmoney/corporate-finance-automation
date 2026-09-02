@@ -34,8 +34,8 @@ A firm can not only raise equity but can borrow money. To bring debt into the hu
 | `reading-the-cost-of-capital.md` | The Cost of Capital: The Swiss Army Knife of Finance |
 | `spreadsheet-countrytaxrates24.md` | Country tax rates — 2024 (spreadsheet) |
 | `spreadsheet-dbtfund24.md` | Debt fundamentals by industry — 2024 US (spreadsheet) |
-| `spreadsheet-dbtfund-global24.md` | Debt fundamentals by industry — 2024 global (spreadsheet) |
+| `spreadsheet-dbtfundglobal24.md` | Debt fundamentals by industry — 2024 global (spreadsheet) |
 | `spreadsheet-debt-cost-of-debt.md` | Debt and cost of debt calculator (spreadsheet) |
 | `spreadsheet-leaseeffect24.md` | Lease effect on debt — 2024 US (spreadsheet) |
-| `spreadsheet-leaseeffect-global24.md` | Lease effect on debt — 2024 global (spreadsheet) |
+| `spreadsheet-leaseeffectglobal24.md` | Lease effect on debt — 2024 global (spreadsheet) |
 | `spreadsheet-ratings.md` | Ratings-to-spread mapping (spreadsheet) |

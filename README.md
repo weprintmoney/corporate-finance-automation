@@ -27,10 +27,10 @@ The course follows Damodaran's standard valuation framework: estimate a risk-adj
   ├── 03-1-course-overview/    Syllabus, schedule, FAQ, key dates
   ├── 03-2-course-content/     All 36 lessons organized by module
   │   ├── lesson-index.yaml  Navigation index — find any lesson in one read
-  │   ├── module-1/          Foundations & discount rates (lessons 01–12)
-  │   ├── module-2/          (in progress)
-  │   ├── module-3/          (in progress)
-  │   ├── module-4/          (in progress)
+  │   ├── 01-foundations-and-discount-rates/    Lessons 01–12
+  │   ├── 02-investment-returns-and-financing/  Lessons 13–19
+  │   ├── 03-financing-mix-and-dividends/       Lessons 20–26
+  │   ├── 04-dividends-and-valuation/           Lessons 27–36
   │   └── company-valuations/  Output reports from /evaluate-company runs
   ├── 03-3-supplemental-data/  Live data refreshed by CI
   │   ├── market-rates.json  US 10-yr Treasury, SOFR, Fed Funds (updated weekdays)

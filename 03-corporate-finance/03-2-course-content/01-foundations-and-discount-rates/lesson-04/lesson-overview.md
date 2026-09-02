@@ -36,4 +36,4 @@ Risk is a feature of business, not a bug. The objective in business cannot be to
 | `spreadsheet-inshold.md` | Institutional stockholdings data (spreadsheet) |
 | `blog-diversification-why-is-it-not-working.md` | Diversification: Why is it not working? |
 | `blog-how-much-diversification-is-too-much.md` | How much diversification is too much? |
-| `blog-jan-2016-data-update-5-corporate-governance.md` | January 2016 Data Update 5: Making a case for corporate governance |
+| `blog-january-2016-data-update-5-making-a-case-for-corporate-governance.md` | January 2016 Data Update 5: Making a case for corporate governance |

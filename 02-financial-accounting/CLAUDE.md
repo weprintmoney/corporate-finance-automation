@@ -33,8 +33,29 @@ Foundational accounting: recording transactions, preparing statements, and readi
 
 ## Doc Index
 
-_Add new notes, problem sets, and worked examples below as they land — keep filenames kebab-case._
-
 | File | Description |
 |------|-------------|
-| _(empty)_ | |
+| [modules/lesson-index.yaml](modules/lesson-index.yaml) | Full lesson map: folder, topic, available file types (10 lessons, module-1) |
+| [modules/brightspace-export.py](modules/brightspace-export.py) | Brightspace export script — downloads PDFs, converts with marker, generates lesson-overview.md |
+
+## Navigation
+
+To find a specific lesson, read `modules/lesson-index.yaml`. Jump directly to `modules/module-1/lesson-NN/`. Each lesson folder contains:
+
+- `reading-*.md` — required reading PDFs converted to markdown (marker, vision-native)
+- `exercise-*.md` — in-class exercise PDFs converted to markdown
+- Raw `.pdf` files alongside their `.md` conversions
+- `lesson-overview.md` — lesson summary with video links and file index
+
+## Export script
+
+```bash
+# Re-export all lessons (cookies in .brightspace-accounting.env)
+python3 02-financial-accounting/modules/brightspace-export.py
+
+# Single lesson
+python3 02-financial-accounting/modules/brightspace-export.py --lesson 3
+
+# Re-convert PDFs with marker even if .md exists
+python3 02-financial-accounting/modules/brightspace-export.py --reconvert-slides --force
+```
