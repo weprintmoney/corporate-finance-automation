@@ -8,3 +8,4 @@ node_modules/
 .brightspace.env
 .brightspace-accounting.env
 *.env
+.crawl-cache/
