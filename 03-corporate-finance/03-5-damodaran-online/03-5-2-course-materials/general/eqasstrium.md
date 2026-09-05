@@ -1,0 +1,96 @@
+---
+title: "Projects for Equity Class"
+status: active
+owner: weprintmoney
+created: 2026-09-04
+last_updated: 2026-09-04
+source_url: http://pages.stern.nyu.edu/~adamodar/New_Home_Page/eqasstrium.htm
+---
+
+Projects for Equity Class
+
+.background {color: #00F;
+}
+
+|  |  |  |  |
+| --- | --- | --- | --- |
+| [logo](home.htm) | [about](biomission.html) | [writing](writing.html) | [tools](tools.html) |
+| [teaching](teaching.html) | [data](data.html) | [blog](http://aswathdamodaran.blogspot.com) |
+
+# **Project: Valuation**
+
+* [Class Material](#)
+  + [Syllabus](https://www.stern.nyu.edu/~adamodar/pdfiles/eqnotes/eqsyllspr15.pdf)
+  + [Lecture Notes](eqlect.htm)
+  + [Books](public.htm)
+    - [Investment Valuation, 3rd Ed](Inv3ed.htm)
+    - [Damodaran on Valuation](dam2ed.htm)
+    - [The Dark Side of Valuation](DSV2ed.htm)
+    - [The Little Book of Valuation](littlebook.htm)
+* [Webcasts](#)
+  + [NYU/Stern](webcasteqspr15.htm)
+  + [Apple iTunes U](https://itunes.apple.com/us/course/valuation-spring-2015/id959944561 )
+  + [Yellowdig](https://www.yellowdig.com)
+  + [YouTube](http://www.youtube.com/playlist?list=PLUkh9m2BorqlC9L22LncmXWf_GPbBtScc)
+* [The Projects](#)
+  + [The "Big" Project](#)
+    - [Project Description](https://www.stern.nyu.edu/~adamodar/pdfiles/eqnotes/eqproj.pdf)
+    - [Data for project](eqdataMod.htm)
+    - [Past Projects](eqass2.htm)
+  + [The Mystery Project](#)
+* [Exams & Problems](#)
+  + [Quiz Rules](quizrules.htm)
+  + [Practice Problems](eqprob.html)
+  + [Past Quizzes and Exams](eqexam.htm)
+  + [Quiz Reviews](valquizreview.htm)
+* [Add ins](#)
+  + [In-class Valuations](covalsSpr2015.htm)
+  + [Valuation of the week](webcasteqspr15.htm)
+  + [Weekly Challenges](wkchallenge.html)
+* [In the loop](#)
+  + [Calendar](http://bit.ly/1xfQ1ov)
+  + [Newsletters](newsletters.html)
+  + [Emails for the class](eqemail.html)
+* [Support](#)
+  + [Data](data.html)
+  + [Spreadsheets](spreadsh.htm)
+  + [Readings](eqread.htm)
+
+---
+
+**Overall Valuation Project**
+
+1. [Description of project](#valproj) - [How to get data for project](eqdata.htm)- [Sample projects from previous years](triumpastvalprojects.html)
+
+**Overall Valuation Project**
+
+**Project Description**
+
+* This project is designed to apply the valuation techniques we learn in class on companies in the real world. * It is an individual project, with each person in the class picking one company to value.
+
+*Step 1: Pick the companies*
+
+* Pick a company to value. You can pick any business you want, public or private. If you do pick a private company, you will need to either have access to financial statements for the private company (if it is an established business) or to the owner (to get a measure of what the company is planning to do, if it is a startup).
+
+*Step 2: Discounted Cashflow Valuation*
+
+Value the equity in your company using a discounted cash flow model. To do so, you can use any of the spreadsheets that I have online or build your own. If you decide to do the latter, please do not use investment banking templates, since they mangle first principle, and in general, almost useless. Your intrinsic valuation (that you will submit) will contain the following
+
+* A very short summary of what your company does (business model, geographic reach) and its history (a picture of past revenues and margins may help)* Your story for the company in the future, tied to your assumptions about growth, profitability and reinvestment.* Present your valuation in a picture, summarizing the assumptions that you have made. (Be as creative as you can in doing this.)
+
+*Step 3: Value relative to comparables*
+
+* Prepare a list of "comparable" companies, using
+  criteria that you think are appropriate * Choose a multiple that you will use in comparing firms across the group. (You might have to try a number of multiples out before making this choice) * Evaluate your company against the comparable firms using the multiple that you have chosen for your valuation. 
+      + using simple techniques + using a sector regression
+
+*Step 4: Value relative to the market*
+
+* Using the latest regression posted for the market on my web site, and the multiple you chose in step 3, evaluate whether your firm is under or over valued. * If you have a non-U.S. company which has an ADR listed on it, you can use the U.S. regression * While I will not require it, I will be very impressed if you run a regression of the multiple in your foreign market (use the 50 largest firms, if you want to reduce your work load) against the variables that determine that multiple.
+
+*Step 5: Final Value Estimate and Recommendation*
+
+* Consider the values you have obtained from the discounted cash flow, relative and option valuation models. 
+  + How would you reconcile the different estimates of value? + Make a final recommendation on your stock (buy, sell or hold)
+
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"../SpryAssets/SpryMenuBarDownHover.gif", imgRight:"../SpryAssets/SpryMenuBarRightHover.gif"});

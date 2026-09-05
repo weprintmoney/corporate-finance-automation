@@ -1,0 +1,32 @@
+---
+title: "Chapter 9 derivations"
+status: active
+owner: weprintmoney
+created: 2026-09-04
+last_updated: 2026-09-04
+source_url: http://pages.stern.nyu.edu/~adamodar/New_Home_Page/AppldCF/derivn/ch9deriv.html
+---
+
+Chapter 9 derivations
+
+### *Discussion Issues and Derivations*
+
+1. *Determinants of whether a firm is a takeover target*There is substantial empirical evidence (See Bhide(1993) and Palepu (1991) that target firms in hostile takeovers have the following characteristics:  
+   1. They have underperformed their competitors in terms of return on equity on projects taken  
+   2 They have underperformed the market in terms of stock returns,   
+   3. They tend to have significantly lower insider holdings than other firms in their peer group  
+   4. They tend to be smaller than other firms in their peer group  
+   Thus, smaller firms, with dispersed stockholdings, and a history of poor project choice and stock price performance are more likely to be takeover targets.- *Determinants of whether a firm is under risk of bankruptcy*The question of whether a firm is under risk of bankruptcy can be most directly examined by looking at how much it generates in cash flows, prior to debt payments (EBITDA and EBIT) and the magnitude of these debt payments. Firms which have large debt payments relative to the cash flows that they generate are much more likely to be under bankruptcy threat.  
+     On top of this, I would superimpose three other considerations. The first is the stability of the earnings and cash flows considered earlier. Other things remaining equal, I would expect firms with more stable cashflows to have lower bankruptcy risk than firms with volatile cash flows. The second is the liquidity and value of the assets owned by the firm. Other things remaining equal, firms with valuable and liquid assets will have much lower bankruptcy risk than firms without such assets. The firnal consideration is the size of the firm. Larger firms are much less likely to be pushed into bankruptcy by creditors, given the costs associated with liquidation.- *Determinants of project quality at a firm*It makes sense to begin with a firm's history in terms of project choice. The quality of projects on a firm's books can be measured, albeit imperfectly, using accounting measures of returns such as return on equity and capital. These accounting returns can then be compared to the firm's hurdle rates (cost of equity for ROE and cost of capital for ROC) to provide a measure of whether existing projects earn excess returns. (This measure, which is a percentage differential, can also be converted into a measure of dollar surplus value - EVA).  
+       The quality of a firm's past projects is a useful, but not perfect, indicator of the quality of future projects, which is what we are really interested in. To make this analysis, we do have to draw on some strategic analysis. To the extent that excess returns are earned from a firm's "differential advantages" (superior technology, economies of scale ..), the question of whether past project returns are a good indicator of future project returns is really a question about whether the firm will build on or lose some of the differential advantages it has had historically.- *Duration: Traditional Measure versus Regression*The duration of a project or asset can be estimated in terms of its pre-debt operating cash flows:  
+         ![](image-1313618233.gif)  
+         where  
+         CFt = After-tax operating cash flow on the project in year t  
+         Terminal Value = Salvage Value at the end of the project lifetime  
+         N = Life of the project  
+         The duration of any asset provides a measure of the interest rate risk embedded in that asset. It is also a mesure of how much the value of a project will change for every unit change in the interest rate. One of the limitations of traditional duration analysis is that it keeps cash flows fixed, while interest rates change. On real projects, however, the cash flows will be adversely affected by the increases in interest rates, and the degree of the effect will vary from business to business - more for cyclical firms (automobiles, housing) and less for non-cyclical firms (food processing). Thus the actual duration of most projects will be higher than the estimates obtained by keeping cash flows constant.  
+         An alternative way of estimating duration without depending upon the traditional bond duration measures is to use historical data. If the duration is, in fact, the sensitivity of asset values to interest rate changes, and a time series of data of asset value and interest rate changes is available, a regression of the former on the latter should yield a measure of duration:  
+         Chg Asset Valuet = a + b Chg Interest Ratet  
+         In this regression, the coefficient ‘b’ measures how much the value of the asset (firm) changes for a unit change in interest rates. It should, therefore, be a measure of the duration of the assets. While this approach allows the cash flows of the firm to change with interest rates, it does suffer from two limitations. First, it needs a significant amount of historical data. Second, it assumes that the the duration characteristics of the assets have not changed over the historical time period and reflect the duration characteristics of the existing assets of the firm.- *Simple versus Multi-variate regression*In the analysis in the book, we have run simple regressions of changes in firm value against each of the macro economic variables - interest rates, inflation rates, GNP growth, the dollar ... It may seem simpler to run one multiple regression of changes in firm value against all of the macro economic variables. We have not done so for the following reasons:  
+           1. When multi-variate regressions are run, the coefficients on the variables lose some of the intuitive appeal that they have in the simple regression. For instance, the coefficient on the interest rate variable in the multi-variate regression is no longer a simple measure of duration.  
+           2. The macro economic variables used will almost always be highly correlated with each other - interest rates with inflation, interest rates with GNP growth and the dollar with interest rates. Consequently, the multiple regression will have a problem with multi-collinearity, which will result in variables proxying for each other and coefficients that are difficult to interpret.
