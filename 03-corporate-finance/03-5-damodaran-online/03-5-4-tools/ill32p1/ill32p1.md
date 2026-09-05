@@ -1,0 +1,130 @@
+---
+title: "Ill32P1"
+status: active
+owner: weprintmoney
+created: 2026-09-02
+last_updated: 2026-09-02
+source_url: https://www.stern.nyu.edu/~adamodar/pc/inv2ed/ill32p1.xls
+---
+
+# Ill32P1
+
+Source: https://www.stern.nyu.edu/~adamodar/pc/inv2ed/ill32p1.xls
+
+Sheets: Base Case, Growth Trade-Off, GrowthCFComps, Risk TradeOff, RiskCFComps
+
+## Base Case
+
+| Inputs |
+|---|
+| Capital Invested = |
+| Cost of Capital = |
+| ROC on Assets in Place = |
+| ROC on New Investments in year 1 = |
+| ROC on New Investments in year 2 = |
+| ROC on New Investments in year 3 = |
+| ROC on New Investments in year 4 = |
+| ROC on New Investments in year 5 = |
+| ROC on New Investments after year 5 = |
+|  |
+| Output |
+| Capital Invested in Assets in Place |
+| + EVA from Assets in Place = (.15 – .10) (100)/.10 |
+| + PV of EVA from New Investments in Year 1 = [(.15 -– .10)(10)/.10] |
+| + PV of EVA from New Investments in Year 2 = [(.15 -– .10)(10)/.10]/1.1 |
+| + PV of EVA from New Investments in Year 3 = [(.15 -– .10)(10)/.10]/1.12 |
+| + PV of EVA from New Investments in Year 4 = [(.15 -– .10)(10)/.10]/1.13 |
+| + PV of EVA from New Investments in Year 5 = [(.15 -– .10)(10)/.10]/1.14 |
+|  + PV of EVA from Investments after Year 5 = |
+| Value of Firm  |
+|  |
+| Year-by-Year EVA |
+| Year 1 EVA |
+| Year 2 EVA |
+| Year 3 EVA |
+| Year 4 EVA |
+| Year 5 EVA |
+
+## Growth Trade-Off
+
+| Inputs |
+|---|
+| Capital Invested = |
+| Cost of Capital = |
+| ROC on Assets in Place = |
+| ROC on New Investments in year 1 = |
+| ROC on New Investments in year 2 = |
+| ROC on New Investments in year 3 = |
+| ROC on New Investments in year 4 = |
+| ROC on New Investments in year 5 = |
+| ROC on New Investments after year 5 = |
+|  |
+| Output |
+| Capital Invested in Assets in Place |
+|  + EVA from Assets in Place = (.16 – .10) (100)/.10 |
+|  + PV of EVA from New Investments in Year 1 = [(.12 -– .10)(10)/.10] |
+|  + PV of EVA from New Investments in Year 2 = [(.12 -– .10)(10)/.10]/1.1 |
+|  + PV of EVA from New Investments in Year 3 = [(.12 -– .10)(10)/.10]/1.12 |
+|  + PV of EVA from New Investments in Year 4 = [(.12 -– .10)(10)/.10]/1.13 |
+|  + PV of EVA from New Investments in Year 5 = [(.12 -– .10)(10)/.10]/1.14 |
+|  + PV of EVA from Investments after Year 5 = |
+| Value of Firm  |
+|  |
+| Year-by-Year EVA |
+| Year 1 EVA |
+| Year 2 EVA |
+| Year 3 EVA |
+| Year 4 EVA |
+| Year 5 EVA |
+
+## GrowthCFComps
+
+| Year | EVA (Original) | EVA (Growth Trade-Off) |
+|---|---|---|
+| 1 | 5.5 | 6.199999999999999 |
+| 2 | 6 | 6.399999999999999 |
+| 3 | 6.5 | 6.599999999999998 |
+| 4 | 7 | 6.799999999999997 |
+| 5 | 7.5 | 6.9999999999999964 |
+
+## Risk TradeOff
+
+| Inputs |
+|---|
+| Capital Invested = |
+| Cost of Capital = |
+| ROC on Assets in Place = |
+| ROC on New Investments in year 1 = |
+| ROC on New Investments in year 2 = |
+| ROC on New Investments in year 3 = |
+| ROC on New Investments in year 4 = |
+| ROC on New Investments in year 5 = |
+| ROC on New Investments after year 5 = |
+|  |
+| Output |
+| Capital Invested in Assets in Place |
+| + EVA from Assets in Place = (.15 – .10) (100)/.10 |
+| + PV of EVA from New Investments in Year 1 = [(.15 -– .10)(10)/.10] |
+| + PV of EVA from New Investments in Year 2 = [(.15 -– .10)(10)/.10]/1.1 |
+| + PV of EVA from New Investments in Year 3 = [(.15 -– .10)(10)/.10]/1.12 |
+| + PV of EVA from New Investments in Year 4 = [(.15 -– .10)(10)/.10]/1.13 |
+| + PV of EVA from New Investments in Year 5 = [(.15 -– .10)(10)/.10]/1.14 |
+|  + PV of EVA from Investments after Year 5 = |
+| Value of Firm  |
+|  |
+| Year-by-Year EVA |
+| Year 1 EVA |
+| Year 2 EVA |
+| Year 3 EVA |
+| Year 4 EVA |
+| Year 5 EVA |
+
+## RiskCFComps
+
+| Year | EVA (Original) | EVA (Risk Trade-Off) |
+|---|---|---|
+| 1 | 5.5 | 5.775 |
+| 2 | 6 | 6.300000000000001 |
+| 3 | 6.5 | 6.824999999999999 |
+| 4 | 7 | 7.35 |
+| 5 | 7.5 | 7.875 |

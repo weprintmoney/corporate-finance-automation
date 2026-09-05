@@ -1,0 +1,647 @@
+---
+title: "Ill31P4"
+status: active
+owner: weprintmoney
+created: 2026-09-02
+last_updated: 2026-09-02
+source_url: https://www.stern.nyu.edu/~adamodar/pc/inv2ed/ill31p4.xls
+---
+
+# Ill31P4
+
+Source: https://www.stern.nyu.edu/~adamodar/pc/inv2ed/ill31p4.xls
+
+Sheets: Master Inputs Start here, Sheet1, WCWhatIf, Earnings Normalizer, R&D converter, Operating lease converter, Valuation Model, Option Value, Bottom-up Beta, Ratings estimator, Industry averages
+
+## Master Inputs Start here
+
+| Master Input Sheet |
+|---|
+| Do you want to capitalize R&D expenses? |
+| Do you want to convert operating leases to debt? |
+| Do you want to normalize operating income? |
+|  |
+| Inputs |
+| Current EBIT = |
+| Current Interest Expense = |
+| Current Capital Spending |
+| Current Depreciation & Amort'n = |
+| Tax Rate on Income = |
+| Current Revenues = |
+| Current Non-cash Working Capital = |
+| Chg. Working Capital = |
+| Book Value of Debt = |
+| Book Value of Equity = |
+|  |
+| Cash & Marketable Securities = |
+| Value of Non-operating Assets = |
+|  |
+| Current Stock Price = |
+| Number of shares outstanding = |
+| Market Value of Debt = |
+|  |
+| Market Data |
+| Long Term Treasury bond rate= |
+| Risk premium for equity = |
+|  |
+| Ratings |
+| Do you want to estimate the firm's current rating = |
+| If not, what is the current rating of the firm? |
+| Enter the cost of debt associated with the rating = |
+
+## Sheet1
+
+| Reinvestment Rate | Effect of Value/Share |
+|---|---|
+| -0.2 | -0.208460634547591 |
+| -0.1 | -0.11045828437132776 |
+| 0.1 | 0.12361927144535856 |
+| 0.2 | 0.2620446533490013 |
+
+## WCWhatIf
+
+| Non-cash WC as % of Revenue | Value/Share |
+|---|---|
+| 0 | 45.71 |
+| 0.05 | 43.36 |
+| 0.1 | 41 |
+| 0.15 | 38.64 |
+| 0.2 | 36.28 |
+
+## Earnings Normalizer
+
+| Normalizing Earnings |
+|---|
+| Approach used to normalize earnings = |
+|  |
+| If historical average, |
+| Average Earnings before interest and taxes = |
+|  |
+| If historical average ROC, |
+| Historical average pre-tax return on capital = |
+|  |
+| If sector margin |
+| Pre-tax Operating Margin for Sector = |
+|  |
+|  |
+| Normalized Earnings before interest and taxes = |
+
+## R&D converter
+
+| R & D Converter |
+|---|
+| This spreadsheet converts R&D expenses from operating to capital expenses. It makes the appropriate adjustments to operating income, net |
+| income, the book value of assets and the book value of equity. |
+|  |
+| Inputs |
+| Over how many years do you want to amortize R&D expenses |
+|  |
+| Enter R& D expenses for past years: the number of years that you will need to enter will be determined by the amortization period |
+| Do not input numbers in the first column (Year). It will get automatically updated  based on the input above. |
+| Year |
+| -1 |
+| -2 |
+| -3 |
+| -4 |
+| -5 |
+| -6 |
+| -7 |
+| -8 |
+| -9 |
+| -10 |
+|  |
+| Output |
+| Year |
+| -1 |
+| -2 |
+| -3 |
+| -4 |
+| -5 |
+| -6 |
+| -7 |
+| -8 |
+| -9 |
+| -10 |
+| Value of Research Asset = |
+|  |
+| Amortization of asset for current year = |
+|  |
+| Adjustment to Operating Income = |
+| Tax Effect of R&D Expensing |
+|  |
+|  |
+| Look Up Table for Amortization Periods |
+| Industry Name |
+| Advertising |
+| Aerospace/Defense |
+| Air Transport |
+| Aluminum |
+| Apparel |
+| Auto & Truck |
+| Auto Parts (OEM) |
+| Auto Parts (Replacement) |
+| Bank |
+| Bank (Canadian) |
+| Bank (Foreign) |
+| Bank (Midwest) |
+| Beverage (Alcoholic) |
+| Beverage (Soft Drink) |
+| Building Materials |
+| Cable TV |
+| Canadian Energy |
+| Cement & Aggregates |
+| Chemical (Basic) |
+| Chemical (Diversified) |
+| Chemical (Specialty) |
+| Coal/Alternate Energy |
+| Computer & Peripherals |
+| Computer Software & Svcs |
+| Copper |
+| Diversified Co. |
+| Drug |
+| Drugstore |
+| Educational Services |
+| Electric Util. (Central) |
+| Electric Utility (East) |
+| Electric Utility (West) |
+| Electrical Equipment |
+| Electronics |
+| Entertainment |
+| Environmental |
+| Financial Services |
+| Food Processing |
+| Food Wholesalers |
+| Foreign Electron/Entertn |
+| Foreign Telecom. |
+| Furn./Home Furnishings |
+| Gold/Silver Mining |
+| Grocery |
+| Healthcare Info Systems |
+| Home Appliance |
+| Homebuilding |
+| Hotel/Gaming |
+| Household Products |
+| Industrial Services |
+| Insurance (Diversified) |
+| Insurance (Life) |
+| Insurance (Prop/Casualty) |
+| Internet |
+| Investment Co. (Domestic) |
+| Investment Co. (Foreign) |
+| Investment Co. (Income) |
+| Machinery |
+| Manuf. Housing/Rec Veh |
+| Maritime |
+| Medical Services |
+| Medical Supplies |
+| Metal Fabricating |
+| Metals & Mining (Div.) |
+| Natural Gas (Distrib.) |
+| Natural Gas (Diversified) |
+| Newspaper |
+| Office Equip & Supplies |
+| Oilfield Services/Equip. |
+| Packaging & Container |
+| Paper & Forest Products |
+| Petroleum (Integrated) |
+| Petroleum (Producing) |
+| Precision Instrument |
+| Publishing |
+| R.E.I.T. |
+| Railroad |
+| Recreation |
+| Restaurant |
+| Retail (Special Lines) |
+| Retail Building Supply |
+| Retail Store |
+| Securities Brokerage |
+| Semiconductor |
+| Semiconductor Cap Equip |
+| Shoe |
+| Steel (General) |
+| Steel (Integrated) |
+| Telecom. Equipment |
+| Telecom. Services |
+| Textile |
+| Thrift |
+| Tire & Rubber |
+| Tobacco |
+| Toiletries/Cosmetics |
+| Trucking/Transp. Leasing |
+| Utility (Foreign) |
+| Water Utility |
+
+## Operating lease converter
+
+| Operating Lease Converter |
+|---|
+| Inputs |
+| Operating lease expense in current year = |
+| Operating Lease Commitments (From footnote to financials) |
+| Year |
+| 1 |
+| 2 |
+| 3 |
+| 4 |
+| 5 |
+| 6 and beyond |
+|  |
+| Pre-tax Cost of Debt = |
+|  |
+| From the current financial statements, enter the following |
+| Reported Operating Income (EBIT) = |
+| Reported Debt = |
+|  |
+| Output |
+| Number of years embedded in yr 6 estimate = |
+|  |
+| Converting Operating Leases into debt |
+| Year |
+| 1 |
+| 2 |
+| 3 |
+| 4 |
+| 5 |
+| 6 and beyond |
+| Debt Value of leases = |
+|  |
+| Restated Financials |
+| Depreciation on Operating Lease Asset = |
+| Adjustment to Operating Earnings = |
+| Adjustment to Total Debt outstanding = |
+
+## Valuation Model
+
+| Two-Stage FCFF Discount Model |
+|---|
+|  |
+| This model is designed to value a firm, with two stages of growth, an initial |
+| period of higher growth and a subsequent period of stable growth. |
+|  |
+| Assumptions |
+| 1. The firm is expected to grow at a higher growth rate in the first period. |
+| 2. The growth rate will drop at the end of the first period to the stable growth rate. |
+|  |
+| The user has to define the following inputs: |
+| 1. Length of high growth period |
+| 2. Expected growth rate in earnings during the high growth period. |
+| 3. Capital Spending, Depreciation and Working Capital needs during the high growth period. |
+| 4. Expected growth rate in earnings during the stable growth period. |
+| 5. Inputs for the cost of capital. (Cost of equity, Cost of debt, Weights on debt and equity) |
+|  |
+|  |
+|  |
+| Inputs to the model |
+| Normalized EBIT (before adjustments) |
+| Adjusted EBIT = |
+| Adjusted Interest Expense = |
+| Adjusted Capital Spending |
+| Adjusted Depreciation & Amort'n = |
+| Tax Rate on Income = |
+| Current Revenues = |
+| Current Non-cash Working Capital = |
+| Chg. Working Capital = |
+| Adjusted Book Value of Debt = |
+| Adjusted Book Value of Equity = |
+|  |
+| Weights on Debt and Equity |
+| Is the firm publicly traded ? |
+| These will be the inputs for your market value calculations (Do not input) |
+| Market price per share = |
+|       & Number of shares outstanding  = |
+|       & Market Value of Debt = |
+|  |
+|  Are there equity options outstanding on the firm? |
+| If yes, estimate the estimated market value of these equity options |
+|  |
+| If your stock is not traded, do you want to use the book value debt ratio ? |
+| If you do not want to use book value ratio, enter the debt to capital ratio to be used = |
+|  |
+| Enter length of extraordinary growth period = |
+|  |
+| Do you want to change the debt ratio in the stable growth period? |
+| If yes, enter the debt ratio for the stable growth period = |
+|  |
+| Costs of Components |
+| Do you want to enter cost of equity directly? |
+| If yes, enter the cost of equity = |
+| If no, enter the inputs to the cost of equity |
+| Beta of the stock = |
+| Riskfree rate= |
+| Risk Premium= |
+|  |
+| Enter the cost of debt for cost of capital calculation |
+|  |
+| Earnings Inputs |
+| Do you want to use the historical growth rate? |
+| If yes, enter EBIT  from five years ago = |
+|  |
+| Do you have an outside estimate of growth ? |
+| If yes, enter the estimated growth: |
+|  |
+| Do you want to calculate the growth rate from fundamentals? |
+| The following will be the inputs to the fundamental growth formulation: |
+| ROC = |
+| Reinv. Rate = |
+| Do you want to change any of these inputs for the high growth period? |
+| If yes, specify the values for these inputs (Please enter all variables) |
+| ROC = |
+| Reinv. Rate = |
+|  |
+| Specify weights to be assigned to each of these growth rates: |
+| Historical Growth Rate  = |
+| Outside Prediction of Growth = |
+| Fundamental Estimate of Growth = |
+|  |
+| Enter growth rate in stable growth period? |
+|  |
+| Beta |
+| Will the beta to change in the stable period? |
+| If yes, enter the beta for stable period = |
+|  |
+| Will the cost of debt change in the stable period? |
+| If yes, enter the new cost of debt  = |
+|  |
+| Capital Spending, Depreciation & Working Capital |
+| Do you want all these items to grow at the same rate as earnings ? |
+| If not, enter the growth rates for each of the following items: |
+|  |
+| High Growth |
+| Stable Growth |
+|  |
+| Do you want to keep the current fraction of working capital to revenues? |
+| Specify working capital as a percent of revenues: |
+|  |
+| Capital Spending and Depreciation in Stable Growth |
+| Do you want to compute reinvestment needs in stable growth based on fundamentals? |
+| If yes, enter the return on capital that the firm will have in stable growth |
+| If no, answer the following questions: |
+| Is capital spending to be offset by depreciation in stable period? |
+| If no, do you want to enter capital expenditure as % of depreciation |
+|  |
+|  |
+| Before reviewing the output, check to see if any warnings appear on the next page. |
+| Warnings |
+|   |
+|   |
+|  |
+| Capital Spending exceeds depreciation by a significant factor |
+|   |
+|   |
+|  |
+| Output from the program |
+| Cost of Equity = |
+| Equity/(Debt+Equity ) = |
+| After-tax Cost of debt = |
+| Debt/(Debt +Equity) = |
+| Cost of Capital = |
+|  |
+|  |
+| Current EBIT * (1 - tax rate) = |
+|  - (Capital Spending - Depreciation) |
+|  - Change in Working Capital |
+| Current FCFF |
+|  |
+| Growth Rate in Earnings per share |
+|  |
+| Historical Growth = |
+| Outside Estimates = |
+| Fundamental Growth = |
+| Weighted Average |
+|  |
+| Growth Rate in capital spending, depreciation and working capital |
+|  |
+| Growth rate in capital spending = |
+| Growth rate in depreciation = |
+| Growth rate in revenues = |
+|  |
+| Working Capital as percent of revenues = |
+| The FCFE for the high growth phase are shown below (upto 10 years) |
+|  |
+| EBIT * (1 - tax rate) |
+|  - (CapEx-Depreciation) |
+|  -Chg. Working Capital |
+| Free Cashflow to Firm |
+| Present Value |
+|  |
+| Growth Rate in Stable Phase = |
+| FCFF in Stable Phase = |
+| Cost of Equity in Stable Phase = |
+| Equity/ (Equity + Debt) = |
+| AT Cost of Debt in Stable Phase = |
+| Debt/ (Equity + Debt)  = |
+| Cost of Capital in Stable Phase = |
+| Value at the end of growth phase = |
+|  |
+| Present Value of FCFF in high growth phase = |
+| Present Value of Terminal Value of Firm = |
+| Value of operating assets of the firm = |
+| Value of Cash, Marketable Securities & Non-operating assets = |
+| Value of Firm = |
+| Market Value of outstanding debt = |
+| Market Value of Equity = |
+| Value of Equity in Options = |
+| Value of Equity in Common Stock = |
+| Market Value of Equity/share = |
+|  |
+|  |
+| EBIT(1-t) |
+| Reinvestment |
+| FCFF |
+|  |
+
+## Option Value
+
+| Valuing Options or Warrants |
+|---|
+| Enter the current stock price = |
+| Enter the strike price on the option = |
+| Enter the expiration of the option = |
+| Enter the standard deviation in stock prices = |
+| Enter the annualized dividend yield on stock = |
+| Enter the treasury bond rate = |
+| Enter the number of warrants (options) outstanding = |
+| Enter the number of shares outstanding = |
+|  |
+| Do not input any numbers below this line |
+| VALUING WARRANTS WHEN THERE IS DILUTION |
+| Stock Price= |
+| Strike Price= |
+| Adjusted S (DO NOT ENTER)= |
+| Adjusted K (DO NOT ENTER)= |
+| Expiration (in years) = |
+|  |
+|  |
+| d1 =  |
+| N (d1) = |
+|  |
+| d2 =  |
+| N (d2) = |
+|  |
+| Value per option =  |
+| Value of all options outstanding = |
+
+## Bottom-up Beta
+
+| Bottom-up Beta Calculator |
+|---|
+| Unlevered beta for sector = |
+|  |
+| Output |
+| Firm's Current market value D/E ratio = |
+| Firm's Current tax rate = |
+|  |
+| Bottom-up beta for firm = |
+
+## Ratings estimator
+
+| Inputs for synthetic rating estimation |
+|---|
+| Enter the type of firm = |
+| Enter current Earnings before interest and taxes (EBIT) = |
+| Enter current interest expenses = |
+| Enter current long term government bond rate = |
+| Output |
+| Interest  coverage ratio = |
+| Estimated Bond Rating = |
+| Estimated Default Spread = |
+| Estimated Cost of Debt = |
+|  |
+| For large manufacturing firms |
+| If interest coverage ratio is |
+| > |
+| -100000 |
+| 0.2 |
+| 0.65 |
+| 0.8 |
+| 1.25 |
+| 1.5 |
+| 1.75 |
+| 2 |
+| 2.5 |
+| 3 |
+| 4.25 |
+| 5.5 |
+| 6.5 |
+| 8.5 |
+|  |
+| For smaller and riskier firms |
+| If interest coverage ratio is |
+| greater than |
+| -100000 |
+| 0.5 |
+| 0.8 |
+| 1.25 |
+| 1.5 |
+| 2 |
+| 2.5 |
+| 3 |
+| 3.5 |
+| 4.5 |
+| 6 |
+| 7.5 |
+| 9.5 |
+| 12.5 |
+
+## Industry averages
+
+| Industry Name | Number of Firms | Cap Ex/Depreciation | ROC | Reinvestment Rate | Unlevered Beta | MV Debt to Capital Ratio | Non-Cash Working Capital/Sales | Pre-tax Operating Margin | Std Deviation in Equity |
+|---|---|---|---|---|---|---|---|---|---|
+| Advertising | 25 | 0.849713760107632 | 0.139266192229706 | -0.0766402386507223 | 1.09841634687683 | 0.105139686120256 | -0.0257183821566944 | 0.147609422206356 | 0.407636363636364 |
+| Aerospace/Defense | 48 | 1.02259219174963 | 0.351140626512412 | 0.00480556319648894 | 0.776113018809397 | 0.298769606787735 | 0.189497784645494 | 0.236848910581401 | 0.415855555555555 |
+| Air Transport | 44 | 1.84445483529375 | 0.182021297409357 | 0.488533452839655 | 0.958798449236753 | 0.33414679399623 | 0.0350773531438318 | 0.14011910386847 | 0.472482142857143 |
+| Aluminum | 9 | 1.20925895287801 | 0.172449541519075 | 0.243852904093547 | 0.830619258357047 | 0.246459690623551 | 0.188247079938041 | 0.148327188230508 | 0.321883333333333 |
+| Apparel | 61 | 1.02935159581268 | 0.140453027536743 | 0.113455410197272 | 0.867135558552655 | 0.172094257450674 | 0.264800575470012 | 0.110386807875267 | 0.485197619047619 |
+| Auto & Truck | 20 | 1.03354778116449 | 0.132032643629083 | 0.228360348124743 | 0.608430705065901 | 0.514197945763759 | 0.418026384308938 | 0.158825076496545 | 0.3371 |
+| Auto Parts (OEM) | 36 | 1.59032113023582 | 0.121549741657877 | 0.598007859646907 | 0.74608655058081 | 0.265752662787466 | 0.117663127097448 | 0.111108684318672 | 0.360766666666667 |
+| Auto Parts (Replacement) | 36 | 1.50399023916535 | 0.134646243842888 | 0.451761126654177 | 0.713413517578864 | 0.215614686876037 | 0.214854059980435 | 0.113054816593958 | 0.363326923076923 |
+| Bank | 162 | NA | NA | NA | 0.754024799952243 | 0.21084278669022 | NA | NA | 0.25949935483871 |
+| Bank (Canadian) | 8 | NA | NA | NA | 0.812515703269275 | 0.25379225946515 | NA | NA | 0.248725 |
+| Bank (Foreign) | 2 | NA | NA | NA | 0.918317074353066 | 0.198005134221922 | NA | NA | 0.3326 |
+| Bank (Midwest) | 34 | NA | NA | NA | 0.817038445841558 | 0.155758327749925 | NA | NA | 0.23099696969697 |
+| Beverage (Alcoholic) | 22 | 1.59201224941316 | 0.0982005506625353 | 0.378381861383303 | 0.698112569012107 | 0.157322321183698 | 0.176055094327766 | 0.180529578107675 | 0.297684615384615 |
+| Beverage (Soft Drink) | 13 | 1.33611675005195 | 0.209662414338812 | 0.151123312946212 | 0.927609838888792 | 0.0770255254644488 | 0.0554394097752827 | 0.210416996315223 | 0.371675 |
+| Building Materials | 57 | 1.58840631206954 | 0.150000868163881 | 0.389846116095462 | 0.802868089341887 | 0.217331142000412 | 0.128680255982263 | 0.0957279653647896 | 0.376370731707317 |
+| Cable TV | 22 | 0.995927157384956 | 0.160285685793403 | -0.00596778625834259 | 0.712715651818539 | 0.392827413623602 | -0.0114022600882168 | 0.336305371452012 | 0.459864285714286 |
+| Canadian Energy | 15 | 1.98373388450661 | 0.124984871019984 | 0.733913766810358 | 0.670938500983742 | 0.38362537821278 | 0.030748793824675 | 0.260913784805613 | 0.275014285714286 |
+| Cement & Aggregates | 15 | 1.67738573517793 | 0.186028061106963 | 0.332599606294208 | 0.840001960147145 | 0.0889278101550481 | 0.161977987652601 | 0.22816515955693 | 0.340691666666667 |
+| Chemical (Basic) | 18 | 1.59050860906468 | 0.281283812149289 | 0.204691619894535 | 0.821253414127114 | 0.202344006415327 | 0.175689657998354 | 0.259897918023179 | 0.339254545454545 |
+| Chemical (Diversified) | 35 | 1.29683925886147 | 0.163802328289661 | 0.261185098202044 | 0.793623611053661 | 0.224381780697421 | 0.199160146650558 | 0.180492320752635 | 0.306181481481481 |
+| Chemical (Specialty) | 89 | 1.41872776594047 | 0.170966732327746 | 0.346705326472879 | 0.789680819895336 | 0.206616599676142 | 0.207856039941916 | 0.167886351276571 | 0.388280519480519 |
+| Coal/Alternate Energy | 6 | 2.36993930917356 | 0.0853276734507933 | 0.623682143644277 | 0.535240714981347 | 0.44019889860153 | 0.0996915760253605 | 0.319020365999712 | 0.414766666666667 |
+| Computer & Peripherals | 166 | 1.35946945624636 | 0.197632066013318 | 0.467080345537936 | 1.28709233372367 | 0.0504663100922462 | 0.197931322291453 | 0.136226447224848 | 0.629857547169811 |
+| Computer Software & Svcs | 355 | 0.964723416013384 | 0.213982667862488 | 0.11456863457962 | 1.3789474112547 | 0.0255836159264187 | 0.179991849429202 | 0.232205685043629 | 0.62081932 |
+| Copper | 7 | 1.85121116791192 | 0.189805696316122 | 0.41429642298051 | 0.566255189708046 | 0.524499298970453 | 0.108560574246933 | 0.253929505628613 | 0.31166 |
+| Diversified Co. | 101 | 1.19923112328276 | 0.127111613938474 | 0.204931768320953 | 0.845947576198499 | 0.178158283665457 | 0.187110277308288 | 0.1249160553445 | 0.375885714285714 |
+| Drug | 229 | 1.26726930865601 | 0.211220534626129 | 0.217418031521488 | 1.17926739921591 | 0.0283181501641817 | 0.212710679379585 | 0.27285152863497 | 0.648402135714286 |
+| Drugstore | 12 | 1.96413823708557 | 0.152230646992099 | 0.708793282290822 | 0.953249959411655 | 0.0612254767780809 | 0.133693485163229 | 0.0693556279025777 | 0.444955555555556 |
+| Educational Services | 21 | 1.54031392540918 | 0.12342316228095 | 0.397941225349621 | 1.11008003004044 | 0.0400167233194139 | 0.120709373344972 | 0.167873741454073 | 0.563044444444444 |
+| Electric Util. (Central) | 36 | 0.949374971255889 | 0.0963359526075296 | -0.00223259386369086 | 0.449636054352501 | 0.418747030581808 | 0.0741555996015157 | 0.262321444281407 | 0.16768 |
+| Electric Utility (East) | 38 | 0.92443203363463 | 0.121410289984537 | -0.0336343182142802 | 0.481527469527795 | 0.370615621202845 | 0.0889413298516566 | 0.295667458825232 | 0.192026315789474 |
+| Electric Utility (West) | 19 | 1.03828599390257 | 0.117453690983326 | 0.0331203112507104 | 0.444198058512302 | 0.422178916494208 | 0.0844063153780124 | 0.284073401484132 | 0.178886666666667 |
+| Electrical Equipment | 104 | 1.30438095661688 | 0.183504688467358 | 0.25148614131419 | 1.08013347814003 | 0.0484626073226486 | 0.202490216863325 | 0.150209542209748 | 0.484775757575757 |
+| Electronics | 152 | 1.45666705668073 | 0.139393918622927 | 0.510609296356275 | 1.05960961930337 | 0.132412490059173 | 0.242634788508409 | 0.113014874183228 | 0.53559593495935 |
+| Entertainment | 70 | 0.806739168226679 | 0.0590575084822186 | -0.0672478620918902 | 0.90025999964824 | 0.18948004110204 | 0.174251126134198 | 0.20334320365864 | 0.376407692307692 |
+| Environmental | 61 | 1.13291947138666 | 0.101325745373266 | 0.153615629663428 | 0.841831225003728 | 0.174925284880011 | 0.153537117534561 | 0.16055286980495 | 0.573668085106383 |
+| Financial Services | 101 | 0.914032444327536 | 0.0587233773402832 | 0.893449460790854 | 0.928416597287828 | 0.332261659136118 | 1.56894061423409 | 0.274677947580036 | 0.397636486486486 |
+| Food Processing | 93 | 1.12821395960625 | 0.153050949657523 | 0.107724749241533 | 0.705726528148285 | 0.145176034867992 | 0.0930385805248984 | 0.113899800305708 | 0.338446666666667 |
+| Food Wholesalers | 18 | 1.72171384968127 | 0.131971521169073 | 0.489690112381341 | 0.68767505362639 | 0.219813459104676 | 0.0337628477532228 | 0.0450700533942094 | 0.319730769230769 |
+| Foreign Electron/Entertn | 13 | 1.25299946645801 | 0.0858562423253802 | 0.445871819220129 | 0.715632866014902 | 0.272436700714503 | 0.233746632670374 | 0.113097155327779 | 0.2763 |
+| Foreign Telecom. | 19 | 0.858964143138126 | 0.183838349133105 | -0.0117108662298873 | 0.994076447644922 | 0.151035630748103 | 0.157486436253841 | 0.331928057172971 | 0.394152941176471 |
+| Furn./Home Furnishings | 36 | 1.1810503804491 | 0.158210354650381 | 0.298925553877215 | 0.918062173018458 | 0.137521851800954 | 0.209276223579423 | 0.121797819021177 | 0.347710344827586 |
+| Gold/Silver Mining | 34 | 1.80808730726693 | 0.0720439571198743 | 0.921915488922401 | 0.556501875947247 | 0.144987132349684 | 0.080747515542637 | 0.264964303889176 | 0.5614 |
+| Grocery | 29 | 1.69190930987614 | 0.15658650420305 | 0.451691128171818 | 0.708351358268252 | 0.160053460537199 | 0.0411318306182542 | 0.0609699493068582 | 0.347985714285714 |
+| Healthcare Info Systems | 32 | 1.05199707744764 | 0.197814113571204 | 0.20897135179493 | 1.17882212952843 | 0.0139361276911258 | 0.220600776915201 | 0.220380551406811 | 0.702025 |
+| Home Appliance | 15 | 1.18224014609648 | 0.152868789026516 | 0.175471578633561 | 0.772498678488897 | 0.247571046879594 | 0.227378658114207 | 0.110087021336705 | 0.381830769230769 |
+| Homebuilding | 66 | 2.30293981154537 | 0.0753425110590241 | 0.783561132919 | 0.714728232422832 | 0.374702046065737 | 0.323779207982516 | 0.0896951117077389 | 0.439792982456141 |
+| Hotel/Gaming | 56 | 3.77523045553547 | 0.104373386460351 | 1.33017515529047 | 0.790512679095052 | 0.354768278502426 | 0.00526671188659806 | 0.20816659598255 | 0.490086111111111 |
+| Household Products | 33 | 1.47672644187249 | 0.233484077596703 | 0.250348136691119 | 0.901787073666221 | 0.0902077575876496 | 0.153932526755365 | 0.187563031082624 | 0.353654166666667 |
+| Industrial Services | 157 | 0.907102367473126 | 0.13656799505791 | 0.161444499111619 | 0.972954844208941 | 0.168321997108781 | 0.14848535720346 | 0.107833073300299 | 0.450088888888889 |
+| Insurance (Diversified) | 57 | 4.22515217833736 | 0.0178382515566943 | 1.60389020447552 | 0.861942291394389 | 0.111301817891747 | NA | 0.201572645150566 | 0.307273469387755 |
+| Insurance (Life) | 32 | NA | NA | NA | 0.924009446413009 | 0.0801567129300448 | NA | NA | 0.288720689655172 |
+| Insurance (Prop/Casualty) | 66 | NA | NA | NA | 0.864531894282925 | 0.0635093628538873 | NA | NA | 0.286038888888889 |
+| Internet | 28 | 2.23084342927695 | 0.0463245325413439 | 3.10557788763964 | 1.81428769097195 | 0.00416611765370779 | 0.210946964088738 | 0.0405696639987644 | 0.72044 |
+| Investment Co. (Domestic) | 18 | NA | NA | NA | 0.820095438429919 | 0.018060646242049 | NA | NA | 0.240693333333333 |
+| Investment Co. (Foreign) | 24 | NA | NA | NA | NA | 0.0252580397739144 | NA | NA | 0.317566666666667 |
+| Investment Co. (Income) | 13 | NA | NA | NA | NA | 0 | NA | NA | 0.122258333333333 |
+| Machinery | 140 | 1.41305695385707 | 0.157008337965614 | 0.381024205336906 | 0.785368401154748 | 0.249642153469232 | 0.243944134765185 | 0.131308055248407 | 0.384244545454545 |
+| Manuf. Housing/Rec Veh | 21 | 2.11540262172285 | 0.142071158876397 | 0.743653472324358 | 0.834089924884737 | 0.131887089232947 | 0.204812243082709 | 0.0843895362584308 | 0.386578947368421 |
+| Maritime | 22 | 2.09357584136173 | 0.101968787102693 | 0.634575967685494 | 0.482182874852802 | 0.513238357249828 | 0.108464885476055 | 0.160215066658212 | 0.360475 |
+| Medical Services | 191 | 1.1444349330366 | 0.0922252555131848 | 0.233150050581981 | 0.976448354378922 | 0.245039398864216 | 0.083561777825663 | 0.103908183018902 | 0.583910298969072 |
+| Medical Supplies | 210 | 1.77976007379535 | 0.197676883486003 | 0.449101590715539 | 1.04852511977475 | 0.0533493163055799 | 0.186695113109399 | 0.138570765442524 | 0.561827659574468 |
+| Metal Fabricating | 42 | 1.45918655873283 | 0.159560301942614 | 0.25498563620062 | 0.875023721985933 | 0.1655833893314 | 0.22046108212035 | 0.142981344819432 | 0.37746 |
+| Metals & Mining (Div.) | 29 | 2.52178441813803 | 0.0627257599788098 | 1.44756627952068 | 0.661606829822543 | 0.322567995926421 | 0.193287565899097 | 0.127304082312758 | 0.560045833333333 |
+| Natural Gas (Distrib.) | 54 | 2.16238984666656 | 0.126173707587957 | 0.61349471759498 | 0.461997162245634 | 0.382444504126997 | 0.0630082187001609 | 0.205814153607056 | 0.203790476190476 |
+| Natural Gas (Diversified) | 41 | 2.24870621205887 | 0.136591042133639 | 0.724844090685647 | 0.717199566658568 | 0.322532991809713 | 0.0387605819115602 | 0.154192778927534 | 0.370902564102564 |
+| Newspaper | 20 | 0.875769958861647 | 0.139363873961501 | -0.0427061032482282 | 0.809558891997361 | 0.188070882449215 | 0.0390275461697964 | 0.217133276761824 | 0.248316666666667 |
+| Office Equip & Supplies | 31 | 1.00033635617061 | 0.129102541359328 | 0.372730869163694 | 0.910186548740568 | 0.202867417421706 | 0.270744859433634 | 0.129882096887916 | 0.3714 |
+| Oilfield Services/Equip. | 93 | 2.37889822098352 | 0.176862152000013 | 0.676451238066482 | 1.05895658273446 | 0.145952803801025 | 0.207185782743508 | 0.226595921534662 | 0.515908333333333 |
+| Packaging & Container | 33 | 1.241526836869 | 0.143068314005375 | 0.212038647384066 | 0.67120866051889 | 0.351795853388178 | 0.12916774120983 | 0.157817135665483 | 0.343595833333333 |
+| Paper & Forest Products | 63 | 1.12992646033318 | 0.110133165951306 | 0.199178937998751 | 0.714494617221115 | 0.373322181496654 | 0.154531892918676 | 0.125668750449139 | 0.319032 |
+| Petroleum (Integrated) | 41 | 1.64105323847705 | 0.185811840223308 | 0.384963099743906 | 0.819894676655707 | 0.127208674003959 | 0.064293339972824 | 0.165899480152475 | 0.2787025 |
+| Petroleum (Producing) | 104 | 2.36403038625611 | 0.159425696006122 | 0.985592803939193 | 0.695105273266894 | 0.338424568759964 | 0.0335079876236863 | 0.403446312029174 | 0.499796655555556 |
+| Precision Instrument | 101 | 1.59613445568559 | 0.173717868951623 | 0.4959522085162 | 1.04304162045957 | 0.0945609776174774 | 0.265583603929471 | 0.147279567401195 | 0.491477464788732 |
+| Publishing | 57 | 0.78287967239812 | 0.204105612947674 | -0.0111955163031279 | 0.886483271095312 | 0.138580739025514 | 0.163692301297287 | 0.183233056078436 | 0.509569230769231 |
+| R.E.I.T. | 87 | 9.38392846832398 | 0.11992988585408 | 1.44671331482599 | 0.715411249246634 | 0.117097519276836 | NA | NA | 0.218828169014085 |
+| Railroad | 15 | 2.21703231026683 | 0.116863770333856 | 0.605414177456216 | 0.820900779266484 | 0.331061674060668 | 0.0166894524446842 | 0.262720395118694 | 0.359108333333333 |
+| Recreation | 90 | 2.12914253147248 | 0.149572668928847 | 0.563419765693797 | 0.899301016913749 | 0.125672290077751 | 0.18705379607185 | 0.171709678092379 | 0.505692727272727 |
+| Restaurant | 90 | 2.0093310087497 | 0.168046919448024 | 0.503652149483043 | 0.894785484000629 | 0.159695500249583 | 0.00282852956924078 | 0.164584617434001 | 0.413939655172414 |
+| Retail (Special Lines) | 172 | 1.59080366284378 | 0.140230216195741 | 0.552366041545216 | 1.06801412349714 | 0.102532127998106 | 0.140142474939879 | 0.0824318673672088 | 0.583359008196721 |
+| Retail Building Supply | 14 | 3.71100417769752 | 0.155015142268541 | 0.886193544533682 | 1.0598241454053 | 0.0302780784115629 | 0.122987553822551 | 0.0872445030387816 | 0.433014285714286 |
+| Retail Store | 49 | 1.59436580933119 | 0.133524016925018 | 0.4085547101784 | 1.02592328633397 | 0.168398137693983 | 0.175606298756677 | 0.0804513340915155 | 0.4550225 |
+| Securities Brokerage | 35 | 1.32450291281355 | 0.157404785324054 | 0.595213349196633 | 0.633614864218786 | 0.621619294259246 | NA | 0.591600854403097 | 0.421933333333333 |
+| Semiconductor | 69 | 1.58957642151143 | 0.222686794985379 | 0.42934542348878 | 1.50654163140796 | 0.0302811986935988 | 0.170915981205671 | 0.265343218324985 | 0.633504081632653 |
+| Semiconductor Cap Equip | 8 | 1.72181586533512 | 0.176281311243123 | 0.57160402075812 | 1.57461576477738 | 0.032455116439317 | 0.229659049612131 | 0.233755670762007 | 0.582625 |
+| Shoe | 26 | 2.02165945539809 | 0.143722064841819 | 0.439566226637807 | 0.856273743409228 | 0.203851846498001 | 0.26562649457226 | 0.0975112707222795 | 0.42882 |
+| Steel (General) | 31 | 1.95131990721851 | 0.148802635744172 | 0.583841037732915 | 0.679665630467793 | 0.331184324544902 | 0.181616271129051 | 0.112020990658696 | 0.367568 |
+| Steel (Integrated) | 20 | 1.44097769984119 | 0.145850907163992 | 0.177775416211172 | 0.68046633794315 | 0.379465068285338 | 0.183115679646108 | 0.127721073102476 | 0.37578125 |
+| Telecom. Equipment | 100 | 2.17495235920982 | 0.152737706643613 | 0.792863937502307 | 1.36591075827416 | 0.0447212530994327 | 0.242505498257622 | 0.14778839910481 | 0.633214754098361 |
+| Telecom. Services | 131 | 1.47921008621923 | 0.172690291685642 | 0.390423528024961 | 1.13176003506289 | 0.136167751440345 | 0.0675166609478895 | 0.330530799919749 | 0.51659 |
+| Textile | 27 | 1.55358066279568 | 0.122684528617798 | 0.432819932705388 | 0.656886104763952 | 0.409553476776288 | 0.266523284756251 | 0.122286204623007 | 0.342595454545455 |
+| Thrift | 120 | 3.57894736842105 | NA | NA | 0.469558478732176 | 0.591118968580044 | NA | NA | 0.2878 |
+| Tire & Rubber | 10 | 1.61865661088723 | 0.195920795454692 | 0.432347409059837 | 0.866010281565466 | 0.1609470630591 | 0.17137574187388 | 0.124337638928382 | 0.267214285714286 |
+| Tobacco | 16 | 0.988502936326312 | 0.234698417117587 | 0.0371493544156827 | 0.720197325067652 | 0.164551869053259 | 0.157714519048548 | 0.174868528117112 | 0.36911 |
+| Toiletries/Cosmetics | 25 | 1.87894067010501 | 0.227611903862218 | 0.392826300505141 | 0.997888070092803 | 0.0596864691061634 | 0.238678100066786 | 0.182358732841836 | 0.448709523809524 |
+| Trucking/Transp. Leasing | 51 | 2.05934845634503 | 0.144167265576355 | 1.09388931930579 | 0.5986665656794 | 0.500400805672055 | 0.142068646694883 | 0.168438652425618 | 0.357364705882353 |
+| Utility (Foreign) | 2 | 1.83697249292336 | 0.097396400397808 | 0.744135236609678 | 0.825491334363364 | 0.31499494865821 | 0.0810539550722479 | 0.460736094765545 | 0.2569 |
+| Water Utility | 17 | 2.42565273748534 | 0.0974428995917557 | 0.49643261414431 | 0.424619335035125 | 0.413656535505661 | 0.035815282494897 | 0.421191987911538 | 0.225557142857143 |

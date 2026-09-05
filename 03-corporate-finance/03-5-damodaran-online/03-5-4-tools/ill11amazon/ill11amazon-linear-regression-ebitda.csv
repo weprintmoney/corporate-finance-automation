@@ -1,0 +1,220 @@
+Linear Regression
+Dependent variable
+Independent variables
+N
+""
+""
+Regression Statistics
+R
+MSE
+Durbin-Watson (DW)
+Akaike inf. criterion (AIC)
+Schwarz criterion (BIC)
+PRESS
+""
+"EBITDA = - 14,186.9818 + 9,167.6182 * Time period (t) "
+""
+""
+""
+ANOVA
+""
+Regression
+Residual
+Total
+""
+""
+Intercept
+Time period (t)
+T (5%)
+LCL - Lower limit of the 95% confidence interval
+UCL - Upper limit of the 95% confidence interval
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+CI - 95% Confidence Interval
+PI - 95% Prediction Interval
+""
+""
+""
+Residuals
+Observation
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+Minimum
+Maximum
+Mean
+""
+Breusch-Pagan-Godfrey (BPG) test
+Test Statistic
+F
+""
+White test (All cross-terms)
+Test Statistic
+F
+""
+Normality Tests
+Test
+Shapiro-Wilk W
+Shapiro-Francia
+Anderson-Darling
+Cramer-von Mises
+Kolmogorov-Smirnov (Lilliefors)
+D'Agostino Skewness
+D'Agostino Kurtosis
+D'Agostino Omnibus
+Jarque-Bera
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""

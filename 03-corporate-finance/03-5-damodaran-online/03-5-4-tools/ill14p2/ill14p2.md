@@ -1,0 +1,88 @@
+---
+title: "Ill14P2"
+status: active
+owner: weprintmoney
+created: 2026-09-02
+last_updated: 2026-09-02
+source_url: https://www.stern.nyu.edu/~adamodar/pc/inv2ed/ill14p2.xls
+---
+
+# Ill14P2
+
+Source: https://www.stern.nyu.edu/~adamodar/pc/inv2ed/ill14p2.xls
+
+Sheets: NewFCFEStableGrowth
+
+## NewFCFEStableGrowth
+
+| FCFE STABLE GROWTH MODEL |
+|---|
+|  |
+| This model is designed to value the equity in a stable firm on the basis of |
+| free cashflows to equity, especially when they are |
+| different from dividends paid. |
+|  |
+| Assumptions in the model: |
+| 1. The firm is in steady state and will grow at a stable rate forever. |
+| 2. The firm does not pay out what it can afford to in dividends, i.e., Dividends ≠ FCFE. |
+|  |
+| User defined inputs |
+| The user has to define the following inputs to the model: |
+| 1. Current Earnings per share  |
+| 2. Capital Spending and Depreciation per share |
+| 3. Change in working capital per share |
+| 4. Desired debt level for financing working capital and capital spending needs. |
+| 5. Cost of Equity or Inputs to the CAPM (Beta, Riskfree rate, Risk Premium) |
+| 6. Expected Growth Rate in free cashflows to equity forever. |
+|  |
+| Please enter inputs to the model: |
+| Current Net Income = |
+|  |
+| Capital Spending= |
+| Depreciation  = |
+| Chg. Working Capital = |
+| Do you want to offset capital expenditures by depreciation in the future? |
+|  |
+| Desired debt financing ratio = |
+|  |
+| Are you directly entering the cost of equity? (Yes or No) |
+| If yes, enter cost of equity = |
+| If no, enter the inputs for the CAPM |
+| Beta of the stock = |
+| Riskfree rate = |
+| Risk Premium= |
+|  |
+| Expected Growth Rate = |
+|  |
+|  |
+|  |
+|  |
+| Warnings: |
+|  |
+|  |
+|  |
+| This is the output from the Gordon Growth Model |
+| Firm Details: from inputs on prior page |
+| Current Earnings per share = |
+|   -(1- Desired debt fraction) * |
+|  (Capital Spending - Depreciation) |
+|  -(1- Desired debt fraction) * |
+| ∂ Working Capital |
+| Free Cashflow to Equity = |
+|  |
+| Cost of Equity = |
+| Expected Growth rate = |
+|  |
+|  |
+|  |
+|  |
+| Growth rate |
+| 0.09 |
+| 0.08 |
+| 0.07 |
+| 0.060000000000000005 |
+| 0.05 |
+| 0.04 |
+| 0.030000000000000002 |
+| 0.020000000000000004 |
+| 0.010000000000000002 |
