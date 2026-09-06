@@ -1,0 +1,91 @@
+---
+title: "Ch12Equityoption"
+status: active
+owner: weprintmoney
+created: 2026-09-02
+last_updated: 2026-09-02
+source_url: http://www.stern.nyu.edu/~adamodar/pc/acf4E/ch12equityoption.xls
+---
+
+# Ch12Equityoption
+
+Source: http://www.stern.nyu.edu/~adamodar/pc/acf4E/ch12equityoption.xls
+
+Sheets: Default probabilities and sprds, equity.xls
+
+## Default probabilities and sprds
+
+| Equity Value | Interest rate on debt | Default Spread | 1-N(d2) |
+|---|---|---|---|
+| 69.16 | 0.1 | 0 | 0 |
+| 70.57 | 0.1052 | 0.005199999999999996 | 0.0002 |
+| 70.9 | 0.1064 | 0.006399999999999989 | 0.0529 |
+| 72.79 | 0.1139 | 0.013899999999999996 | 0.2075 |
+| 75.94 | 0.1277 | 0.027700000000000002 | 0.369 |
+| 79.6 | 0.1464 | 0.0464 | 0.5068 |
+| 83.25 | 0.1692 | 0.06919999999999998 | 0.6195 |
+| 86.62 | 0.1958 | 0.0958 | 0.7103 |
+| 89.59 | 0.2262 | 0.1262 | 0.7827 |
+
+## equity.xls
+
+| VALUING EQUITY AS AN OPTION |
+|---|
+|  |
+| This program calculates the value of equity as a call option |
+| on the value of the underlying firm. |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+| Output |
+| Stock Price= |
+| Strike Price= |
+| Expiration (in years) = |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+| Value of equity as a call = |
+| Value of outstanding debt = |
+| Appropriate interest rate for debt = |

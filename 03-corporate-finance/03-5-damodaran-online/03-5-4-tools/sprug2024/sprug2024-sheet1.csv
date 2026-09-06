@@ -1,0 +1,236 @@
+Company,Country,Money making or losing,Date,Prce/Share,DCF Value/Share,Multiple,Pricing/share,Option value,Recommendation
+3M,United States,Money losing,2024-05-05 00:00:00,97.15,92.35,EV/EBITDA,115.17,,Hold
+Abercrombie & Fitch,United States,Money making,2024-05-04 00:00:00,128.76,80.41,EV/Sales,100.69,,Sell
+Accenture,United States,Money making,2024-05-03 00:00:00,303.71,195.46,EV/EBITDA,293.24,,Sell
+Adobe Inc.,United States,Money making,2024-05-03 00:00:00,486.18,218.31,EV/EBITDA,272.96,,Sell
+Advanced Micro Devices,USA,Money making,2024-05-03 00:00:00,149.06,112.78,PBV,89.14,,Sell
+AerCap Holdings,Netherlands,Money making,2024-04-30 00:00:00,84.49,100.39,EV/EBITDA,139.11,,Buy
+Air Arabia,UAE,Money making,2024-05-03 00:00:00,2.66,4.43,EV/EBITDA,125.78,,Buy
+Airbnb,United States,Money making,2024-05-05 00:00:00,159.71,88.28,EV/Sales,50.86,,Sell
+Airbnb,USA,Money making,2024-04-30 00:00:00,158.57,101.38,EV/EBITDA,64.33,,Sell
+Airbnb,United States,Money making,2024-05-03 00:00:00,159.71,97.91,EV/EBITDA,54.25,,Sell
+Alibaba,China,Money making,2024-05-05 00:00:00,81.33,96.16,P/FCF,186.25,,Buy
+Align Technology ,United States,Money making,2024-05-03 00:00:00,288.77,220.08,EV/Sales,119.59,,Sell
+Amazon,United States,Money making,2024-05-03 00:00:00,186.24,304.2,EV/EBITDA,222.12,,Buy
+AMC,United States,Money losing,2024-05-05 00:00:00,3.3,-6.61,EV/Sales,2.35,,Buy
+"AMC Entertainment Holdings, Inc.",United States,Money losing,2024-05-03 00:00:00,3.3,1.15,PE,2.57,,Sell
+American Express Company,United States,Money making,2024-05-06 00:00:00,230.77,167.8,PE,160.15,,Sell
+Anand Rathi Wealth ,India,Money making,2024-05-04 00:00:00,4000,3605.23,P/BV,2172.8,,Sell
+ANTA Sports,China,Money making,2024-05-03 00:00:00,86.66,102.98,EV/Sales,94.24,,Buy
+Applied Materials,United States,Money making,2024-05-05 00:00:00,204.16,184.29,EV/Sales,311.87,,Buy
+Aramco,KSA,Money making,2024-05-03 00:00:00,29.95,7.61,EV/Sales,3.16,,Sell
+Aramex,United Arab Emirates,Money making,2024-05-03 00:00:00,2.54,2.17,EV/Sales,1.57,,Sell
+Aritzia,Canada,Money making,2024-05-05 00:00:00,35.82,25.42,EV/Sales,19.07,,Sell
+ARM Holdings PLC,United Kingdom,Money making,2024-05-04 00:00:00,101.72,41.34,EV/Inv Capital,22.2,,Sell
+ASML,United States,Money making,2024-05-04 00:00:00,901.63,587.03,EV / EBITDA,526.9,,Sell
+ASML,Netherlands,Money making,2024-05-05 00:00:00,901.63,444.1,EV/EBITDA,516.7,,Sell
+Atlassian (NYSE: TEAM),United States,Money losing,2024-05-03 00:00:00,182.23,191.82,EV/EBIT,226.2,,Buy
+Baidu,China,Money making,2024-05-05 00:00:00,818.16,948.39,EV/EBITDA,1128.91,,Buy
+Bank of America,United States,Money making,2024-05-05 00:00:00,37.25,50.39,PBV,27.32,,Buy
+Bent Pixels,United States,Money making,2024-05-02 00:00:00,1008.02,1008.02,EV/Sales,396.62,,Buy
+Berkshire Hathaway,United States,Money making,2024-05-04 00:00:00,603000,575442,EV/Sales,762452.54,,Hold
+Beyond meat,United States,Money losing,2024-05-04 00:00:00,8.23,5.81,EV/Sales,5.35,0.25,Sell
+Beyond Meat,United States,Money losing,2024-05-05 00:00:00,8.23,0,EV/Sales,3.98,0.01,Sell
+Beyond Meat,United States,Money losing,2024-05-05 00:00:00,8.23,0,EV/Sales,-22.08,0,Sell
+Bilibili,China,Money losing,2024-05-03 00:00:00,14.83,16.49,EV/Sales,13.72,,Buy
+Bilibili,China,Money losing,2024-05-05 00:00:00,14.83,16.44,EV/EBITDA,18.52,,Buy
+Bill,United States,Money losing,2024-05-03 00:00:00,56.58,37.66,EV/Sales,61.32,,Hold
+BMW,Germany,Money making,2024-05-03 00:00:00,102.5,126.18,EV/Sales,267.33,,Buy
+Boeing,United States,Money losing,2024-05-01 00:00:00,167.7,171.47,EV/Sales,191.44,,Buy
+Boeing,United States,Money losing,2024-05-03 00:00:00,179.79,190.6,EV/Sales,327.34,,Buy
+Boeing,United States,Money losing,2024-05-03 00:00:00,180,172.92,EV/Sales,116.56,,Sell
+Booking Holdings,United States,Money making,2024-05-05 00:00:00,3577.38,2868.55,EV/Sales,4528.11,,Sell
+Build-A-Bear,United States,Money making,2024-05-03 00:00:00,30.06,48.64,EV/EBITDA,66.6,,Buy
+Bumble,United States,Money losing,2024-04-30 00:00:00,10.1,15.7,EV/Sales,22.24,,Buy
+BYD,China,Money making,2024-05-05 00:00:00,218.5,340.99,EV/Sales,189.11,,Buy
+BYD,China,Money making,2024-05-03 00:00:00,218.5,377.6,EV/EBIT,160.37,,Buy
+BYD Co,China,Money making,2024-05-05 00:00:00,218.5,343.47,EV/EBITDA,241.17,,Buy
+BYD Company,China,Money making,2024-05-05 00:00:00,218.5,314.96,EV/Sales,163.01,,Buy
+Celcius Holdings,United States,Money making,2024-04-29 00:00:00,73.73,76.76,EV/Sales,64.86,,Buy
+Celsius,United States,Money making,2024-05-01 00:00:00,72.34,106.92,EV/EBITDA,93.28,,Buy
+Celsius Holdings Inc.,United States,Money making,2024-05-04 00:00:00,75.97,120.23,PBV,32.33,,Buy
+"Celsius Holdings, Inc.",United States,Money making,2024-05-03 00:00:00,75.7,94.58,EV/EBITDA,90.42,,Buy
+Chipotle,United States,Money making,2024-05-01 00:00:00,3127.76,1889.33,EV/EBITDA,2639.53,,Sell
+Cisco,United States,Money making,2024-05-05 00:00:00,47.12,61.83,EV/Sales,81.23,,Buy
+Citizens Financial Group,United States,Money making,2024-05-05 00:00:00,35.39,37.8,PE,38.29,,Buy
+Coinbase,United States ,Money making,28/4/2024,218.16,44.06,EV/EBITDA,24.04,,Sell
+Coinbase,United States,Money making,2024-04-24 00:00:00,236.32,99.05,EV/Sales,236.69,,Sell
+Comextaa,Mexico,Money making,2024-05-04 00:00:00,390148018.07,390148018.07,EV/Sales,129040012,,Buy
+Constellation Brands,USA ,Money making,2024-05-05 00:00:00,256.8,169.5,EV/Sales ,225.54,,Sell
+Costco,United States,Money making,2024-05-05 00:00:00,743.9,302.42,EV/Sales,338.26,,Sell
+Costco,United States,Money making,2024-05-05 00:00:00,743.9,390.03,EV/Sales,273.86,,Sell
+Costco,United States,Money making,2024-05-03 00:00:00,743.9,509.64,EV/Sales,342.36,,Sell
+Costco,United States,Money making,2024-05-05 00:00:00,743.9,248.91,EV/Sales,578.32,,Sell
+Coupang,United States,Money making,2024-05-03 00:00:00,23,54.19,EV/Sales,16.78,,Buy
+Crocs,United States,Money making,2024-05-03 00:00:00,124.28,185.88,PBV,124.74,,Buy
+Crowdstrike,USA,Money losing,2024-05-05 00:00:00,310.21,170.65,EV/Sales,229.21,,Sell
+CrowdStrike,United States ,Money losing,2024-05-05 00:00:00,310.21,200.72,EV/Sales,151.65,,Sell
+"CrowdStrike Holdings, Inc.",United States,Money losing,2024-05-03 00:00:00,310.21,163.01,EV/Sales,219.33,,Sell
+Delta Airlines,United States,Money making,2024-05-05 00:00:00,51.55,102.88,PE,105.37,,Buy
+Dick's Sporting Goods,United States,Money making,2024-05-03 00:00:00,202.74,221.39,EV/Sales,302.49,,Buy
+Disney,United States,Money making,2024-05-05 00:00:00,113.66,68.18,EV/Sales,113.17,,Sell
+Disney,United States,Money making,2024-05-03 00:00:00,113.66,84.43,PBV,161,,Sell
+DoorDash,United States,Money losing,2024-05-05 00:00:00,113.81,78.27,EV/Sales,108,110.07,Sell
+Doordash Inc.,USA,Money losing,2024-05-04 00:00:00,113.81,50.07,EV/SALES,108.95,,Sell
+DraftKings,United States,Money losing,2024-05-03 00:00:00,41.79,50.63,EV/Sales,14.93,,Buy
+DraftKings,United States,Money losing,2024-05-05 00:00:00,41.79,25.55,EV/Sales,18.14,,Sell
+DraftKings ,United States,Money losing,2024-05-05 00:00:00,41.79,44.37,EV/Sales,42.27,,Buy
+Duke Energy,United States,Money making,2024-05-05 00:00:00,100.26,76.32,EV / Sales,95.11,,SELL
+Duolingo,United States,Money losing,2024-05-03 00:00:00,240,164.26,EV/Sales,126.77,,Sell
+"Duolingo, Inc.",United States,Money making,2024-05-05 00:00:00,240,114.13,EV/Sales,23.9,,Sell
+e.l.f beauty inc.,United States,Money making,2024-05-03 00:00:00,160.12,83.24,EV/Sales,87.1,,sell
+Ecolab,United States,Money making,2024-05-04 00:00:00,227.5,136.69,EV/Sales,168.45,,Sell
+Ecopetrol,Colombia,Money making,2024-05-05 00:00:00,2260,1922.91,EV/Sales,4482.65,648.25,Sell
+Electronic Arts,United States,Money making,2024-05-04 00:00:00,129.56,92.41,EV/Sales,118.49,,Sell
+Electronic Arts,United States,Money making,2024-05-04 00:00:00,129.56,93.65,EV/Sales,55.39,,Sell
+Elevance Health,United States,Money making,2024-04-30 00:00:00,528.58,451.01,PBV,514.32,,Sell
+Eli Lilly,United States,Money making,2024-05-04 00:00:00,734.97,244.25,EV/Sales,596.65,,Sell
+Employers Holdings,US,Money making,2024-04-28 00:00:00,44.01,104.44,PBV,60.38,,Buy
+"Expedia Group, INC",United States,Money making,2024-05-03 00:00:00,115.33,100.01,EV/Sales,239.18,,Sell
+Ferrari,Netherlands,Money making,2024-05-04 00:00:00,399.89,142.71,EV/EBITDA,189.39,,Sell
+Ferrari,Italy,Money making,2024-05-03 00:00:00,430.29,135.09,EV/EBITDA,38.89,,Sell
+Five Below,United States,Money making,2024-05-04 00:00:00,144.81,121.02,EV/Inv Capital,154.53,,Buy
+Ford Motor,United States,Money making,2024-05-03 00:00:00,12.43,15.36,PE,13.72,,Buy
+Ford Motors,United States,Money making,2024-05-05 00:00:00,12.43,16.25,EV/Sales,44.22,,Buy
+General Dynamics ,United States,Money making,2024-05-05 00:00:00,228.14,262.92,EV/Sales,253.37,,Buy
+Giant Biogene,China,Money making,2024-05-04 00:00:00,46.55,34.86,,,,Sell
+Goldman Sachs,United States,Money making,2024-05-05 00:00:00,432.57,385.4,EV/Sales,392.1,,Sell
+Grab Ltd,Singapore,Money losing,2024-05-04 00:00:00,3.53,2.07,EV/Sales,2.75,2.75,Sell
+Grupo Bimbo,Mexico,Money making,2024-05-04 00:00:00,4.12,3.51,EV/Sales,6.9,,Buy
+Grupo Televisa,Mexico ,Money making,2024-05-01 00:00:00,10.26,7.96,EV/Sales,7.38,,Sell
+H World Group Limited,United States,Money making,2024-05-04 00:00:00,40.98,16.77,EV/Sales,24.98,,Sell
+Heidrick&Struggles,United States,Money making,2024-05-05 00:00:00,29.83,93.25,EV/Sales,75.93,,Buy
+Hims & Hers,United States,Money making,2024-05-04 00:00:00,11.25,21.73,PBV,13.76,,Buy
+IndiGo,India,Money making,2024-05-03 00:00:00,4029.8,4850.82,EV/Sales,3880.55,,Buy
+Intel,United Status,Money making,2024-05-01 00:00:00,30.47,25.45,EV/Sales,27.16,,Sell
+Intel,United States,Money making,2024-05-05 00:00:00,30.9,27.79,EV/Sales,96.26,,Sel
+International Workplace Group,UK,Money losing,2024-05-02 00:00:00,188,379.59,EV/EBITDA,593,,Buy
+"Intuitive Surgical, Inc.",United States,Money making,2024-05-02 00:00:00,371.7,337.56,EV/EBITDA,156.76,,Sell
+iQIYI,China,Money making,2024-05-05 00:00:00,5.09,6.55,EV/Sales,9.21,,Buy
+JD .com,China,Money making,2024-05-04 00:00:00,117.65,167.8,PE,121.03,,Buy
+Kroger,United States,Money making,5th May,54.78,62.75,P/E,59.73,,Buy
+Lego,Denmark,Money making,2024-05-05 00:00:00,374156690000,374156690000,TEV/Sales,269592050000,N/A,Buy
+Li Auto,USA,Money making,2024-05-05 00:00:00,28,135.05,EV/Sales,140.4,,Buy
+Li Auto Inc,China,Money making,2024-05-04 00:00:00,28,32.05,EV/EBITDA,17.61,,Buy
+Lockheed Martin,United States,Money making,2024-05-03 00:00:00,461.91,360.73,EV/Sales,125.82,,Sell
+Lucid Group Inc,United States,Money losing,2024-05-05 00:00:00,2.79,1.97,EV/Sales,2.14,,Sell
+Lucid Motors,United States,Money losing,2024-05-03 00:00:00,2.78,2.82,EV/Sales,4.43,,Buy
+Lulu Lemon,United States,Money making,2024-05-04 00:00:00,355.15,375.25,EV/Revenue,226.6,,Buy
+Lululemon,Canada,Money making,2024-05-05 00:00:00,355.15,374.2,EV/Sales,630,,Buy
+Lululemon,United States,Money making,2024-05-04 00:00:00,355.15,325.73,EV/Sales,266.43,255.32,Sell
+Lululemon,USA,Money making,2024-05-03 00:00:00,355.15,347.76,EV/EBITDA,303.39,,Sell
+Lululemon,United States,Money making,2024-05-02 00:00:00,350.08,307.83,EV/Sales,224.93,,Sell
+Lyft,United States,Money losing,2024-05-01 00:00:00,15.8,17,EV/Sales,42.64,,Buy
+Lyft,United States,Money losing,2024-05-02 00:00:00,16.84,44.9,P/BV,28.15,,Buy
+Lyft,United States,Money losing,2024-05-05 00:00:00,17.2,17.24,EV/Sales,18.94,11.95,Hold
+Lyft,United States,Money losing,2024-05-04 00:00:00,17.2,14.87,EV/Sales,27.78,12.77,Hold
+Marvell,United States,Money losing,2024-05-04 00:00:00,68.26,30.38,EV/EBITDA,50.27,,Sell
+Mckesson Co.,United States,Money making,2024-05-05 00:00:00,528.86,391.51,EV/EBITDA,494.88,,Sell
+Mercado Libre ,United States,Money making,2024-05-05 00:00:00,1630.56,1608.69,EV/Sales,1160.8,,Sell
+Merck & Co Inc,United States,Money making,2024-05-03 00:00:00,127.54,155.02,EV/Sales,158.74,,Buy
+Mersen SA,France,Money making,2024-05-05 00:00:00,35.45,54.95,Ev/Revenue,73.35,,Buy
+MGM Resorts,United States,Money making,2024-03-24 00:00:00,42.77,87.23,EV/EBITDA,54.08,,Buy
+Micron Technology Inc,United States,Money losing,2024-05-04 00:00:00,114.68,69.79,EV/Sales,77.33,,Sell
+MongoDB,United States,Money losing,2024-05-02 00:00:00,373.33,307.92,EV/Sales,391.61,,Sell
+NanoX,Israel,Money losing,2024-04-17 00:00:00,8.95,2.52,EV/Sales,6.69,,Sell
+Natera,United States,Money losing,2024-05-03 00:00:00,96.98,50.49,EV/Sales,50.75,,Sell
+Netflix,United States,Money making,2024-05-05 00:00:00,579.34,700.23,EV/EBITDA,139.36,,Buy
+Netflix,United States,Money making,2024-05-06 00:00:00,579.34,458.3,EV/EBITDA,338.41,,Sell
+Netflix,United States,Money making,2024-05-05 00:00:00,579.34,539.81,PBV,528.12,,Sell
+Netflix,United States,Money making,2024-04-30 00:00:00,550.64,260.9,EV/Sales,347,,Sell
+NextEra Energy,United States,Money making,2024-05-05 00:00:00,70.14,13.19,EV/EBITDA,132.1,,Buy
+Nike ,USA,Money making,2024-05-04 00:00:00,92.15,59.89,PBV,40.19,,Sell
+Nintendo,Japan,Money making,2024-05-05 00:00:00,7575,9229.06,EV/Inv Capital,8461.93,,Buy
+Novo Nordisk,Denmark,Money making,2024-05-03 00:00:00,850.6,503.46,EV/Sales,759.74,,Sell
+Novo Nordisk,Denmark,Money making,2024-05-05 00:00:00,850.6,809.84,EV/EBITDA,596.94,,Sell
+Novo Nordisk,Denmark,Money making,2024-05-05 00:00:00,123.05,86.17,EV/Sales,79.67,,Sell
+Novo Nordisk,Denmark,Money making,2024-05-05 00:00:00,850.6,671.32,EV/Sales,403.19,,Sell
+Nu Holdings,Cayman Islands,Money making,2024-04-30 00:00:00,10.86,2.96,PBV,2.75,,Sell
+Nvidia,United States,Money making,2024-05-05 00:00:00,887.83,530.69,EV/Sales,660.71,,Sell
+Nvidia,United States,Money making,2024-04-28 00:00:00,877.35,550.89,PBV,854.79,,Sell
+Nvidia,United States,Money making,2024-05-03 00:00:00,887.89,530.67,EV/EBITDA,993.83,,Sell
+Nvidia,United States,Money making,2024-05-03 00:00:00,887.83,520.12,EV/EBITDA,834.81,,Sell
+Nvidia,USA,Money making,2024-04-30 00:00:00,864.02,607.71,EV/EBITDA,713.13,,Sell
+Nvidia ,United States ,Money making,2024-05-03 00:00:00,887.89,422.83,EV/Sales,496.6,,Sell
+Nykka (NYKKA: NSE) ,India,Money making,4th May,173,152.9,EV/EBITDA,147,,Sell
+ON Holdings (ONON),Switzerland,Money making,2024-05-03 00:00:00,33.27,91.92,EV/EBITDA,30.26,,Buy
+ON Running,Switzerland,Money making,2024-05-02 00:00:00,32.33,35.53,EV/Sales,15.36,,Hold
+Onsemi,United States,Money making,2024-05-04 00:00:00,70.37,64.48,EV/Sales,162.02,,Buy
+Oracle,United States,Money making,2024-05-04 00:00:00,115.8,78.95,EV/EBITDA,162.88,,Sell
+Palantir Technologies Inc.,United States,Money losing,2024-05-05 00:00:00,23.33,7.7,EV/Sales,22.07,,Sell
+Paramount Global,United States,Money losing,2024-05-03 00:00:00,12.89,2.74,EV/Sales,61.3,,Sell
+Paypal,United States,Money making,2024-05-04 00:00:00,65.68,88.07,EV/Sales,173.5,,Buy
+Paytm,India,Money losing,2024-05-04 00:00:00,370,373,EV/Sales,352,₹18.50,Hold
+PDD Holdings Inc,China,,2024-05-03 00:00:00,140.18,193.19,EV/Sales,101.29,,Buy
+PDD Holdings Inc.,China,Money making,2024-05-03 00:00:00,1014.52,1540.26,EV/EBITDA,1384.86,,BUY
+Peloton,United States,Money losing,2024-05-05 00:00:00,3.42,0.94,EV/Sales,0.74,0.72,SELL
+Peloton,United States,Money losing,2024-05-04 00:00:00,3.42,3.2,EV/Sales,1.9,1.78,Sell
+PepsiCo,United States,Money making,2024-05-04 00:00:00,176.15,128.7,EV/Sales,166.59,,Sell
+PetCo (WOOF),USA,Money losing,2024-05-03 00:00:00,1.55,1.64,EV/EBITDA,0,2.44,Hold
+Pure Storage,United States,Money making,2024-05-01 00:00:00,50.13,27.89,EV / Sales,41.7,,Sell
+Ralph Lauren,United States,Money making,2024-05-03 00:00:00,166.65,159.08,EV/Sales,131.69,,Sell
+Raytheon (RTX),United States,Money making,2024-05-04 00:00:00,101.4,108.88,P/BV,136.82,,Buy
+Reliance Industries,India,Money making,2024-05-03 00:00:00,2871,2399.67,EV/Sales,2912.96,,SELL
+Rivian,United States,Money losing,2024-05-03 00:00:00,10.07,11.49,EV/Sales,15.92,,Buy
+Roblox,US,Money losing,2024-05-03 00:00:00,38.74,11.79,EV/SALES,19.23,,Sell
+Roblox,Unied States,Money losing,2024-05-03 00:00:00,39.24,37.04,EV/Sales,49.44,36.76,Sell
+Royal Caribbean,United States,Money making,2024-05-05 00:00:00,138.21,221.67,EV/EBITDA,194.09,,Buy
+Royal Caribbean Cruises Ltd.,United States,Money making,2024-05-04 00:00:00,138.21,206.14,EV/Sales,313.63,,Buy
+S&P Global,United States,Money making,2024-05-03 00:00:00,428.18,357.08,EV/Sales,345.94,,Sell
+Salesforce,United States,Money making,2024-05-03 00:00:00,273.66,99.02,EV/EBITDA,945.51,,Buy
+Samsung Electronics,South Korea,Money making,2024-03-19 00:00:00,72300,99603,EV/EBITDA,181869,,Buy
+Sands China Ltd.,"Macau, China",Money making,2024-05-05 00:00:00,2.56,1.67,EV/Sales,1.69,,Sell
+"SentinelOne, Inc (NYSE: S) ",USA,Money losing,2024-05-05 00:00:00,21.25,19.19,EV/Sales,30.89,,Sell
+Shopify,Canada,Money making,2024-05-05 00:00:00,74.46,46.78,EV/Sales,81.8,,Hold
+Sketchers,United States,Money making,2024-05-04 00:00:00,67.1,76.86,EV/Sales,49.89,,Sell
+Snowflake,United States,Money losing,2024-04-30 00:00:00,155.2,63.84,EV/Sales,88.08,,Sell
+Snowflake Inc.,United States,Money losing,2024-05-04 00:00:00,159.32,98.95,EV/Sales,149.85,,Sell
+Sonos,United States,Money losing,2024-05-03 00:00:00,16.94,8.76,EV/Sales,15.87,,Sell
+Spotify,United States,Money making,2024-05-04 00:00:00,275.09,216.1,EV/Sales,118.68,,Sell
+Spotify,Sweden,Money making,2024-05-03 00:00:00,296.07,253.01,EV/Sales,242.9,,Sell
+Spotify,Sweden,Money making,2024-05-05 00:00:00,296.07,244.54,EV/Sales,236.65,,Sell
+Spotify,Sweden,Money losing,2024-05-05 00:00:00,274.86,143.64,EV/Sales,196.72,,Sell
+Squarespace,United States,Money losing,2024-05-03 00:00:00,35.24,31.67,EV/Sales,62.88,,Sell
+Stanley Black & Decker,USA,Money losing,2024-05-03 00:00:00,85.72,76.23,EV/Sales,55.92,,Sell
+Starbucks,United States,Money making,2024-05-05 00:00:00,73.11,70.87,PEG,58.1,,Sell
+starbucks,united States,Money making,2024-05-05 00:00:00,73.1,85.61,EV/EBItda,89,,Sell
+Sterling Infrastructure,United States,Money making,2024-05-04 00:00:00,101.15,152.45,EV/Sales,115.45,,Buy
+Steve Madden,United States,Money making,2024-05-04 00:00:00,39.59,41.5,EV/Sales,36.16,,Hold
+Sunny Optical Technology,China,Money making,2024-05-04 00:00:00,38.35,26.58,EV/EBITDA,28.53,,Sell
+SweetGreen,USA,Money losing,2024-05-03 00:00:00,22.1,5.67,EV/Invested Capital,23.11,,Sell
+Taiwan Semiconductor Mfg. Comp.,Taiwan,Money making,2024-05-04 00:00:00,780,730.54,EV/Sales,928.97,,Buy
+"Take-Two Interactive Software, Inc.",United States,Money losing,2024-05-04 00:00:00,145.88,165.81,PBV,168.74,,Buy
+Target,USA,Money making,2024-04-30 00:00:00,160.98,127.01,EV/EBITDA,84.58,,Sell
+Tencent,China,Money making,2024-05-05 00:00:00,335.6,367.19,EV/Sales,381.62,¥134.54,Buy
+Tesco PLC,United Kingdom,Money making,2024-05-04 00:00:00,2.98,3.13,EV/Sales,24.49,,Buy
+Tesla,United States,Money making,2024-05-05 00:00:00,181,189.04,EV/Sales,78.66,,Hold
+Tesla,United States,Money making,2023-11-14 00:00:00,212.55,181.33,PE,115.54,,Sell
+Tesla,United States,Money making,2024-05-05 00:00:00,181.14,172.46,PE,37,,Sell
+TJX Companies,United States,Money making,2024-05-05 00:00:00,95.11,61,EV/Sales,79.34,,Sell
+"Toast, Inc.",United States,Money losing,2024-04-30 00:00:00,23.63,19.71,EV/Sales,20.64,,Sell
+TSMC,Taiwan,Money making,2024-05-05 00:00:00,4571.24,5540.89,EV/Sales,8696.62,,Buy
+Twilio,United States,Money losing,2024-05-03 00:00:00,61.89,52.89,EV/Sales,109.74,,Buy
+U-Haul Holding Company,United States,Money making,2024-05-02 00:00:00,66.85,54.25,PBV,78.56,,Sell
+Uber,United States,Money making,2024-05-05 00:00:00,69.23,77.7,EV/Sales,52.37,,Buy
+Uber,United States,Money making,2024-05-04 00:00:00,69.23,77.25,EV/Sales,31.02,,Buy
+Uber,United States,Money making,2024-05-05 00:00:00,69.23,78.56,PBV,11.26,,Buy
+Udemy,United States,Money losing,2024-05-03 00:00:00,10.13,11.44,PBV,9.74,,Buy
+Unity Software Inc.,United States,Money losing,2024-05-03 00:00:00,24.74,37.06,EV/Sales,30.42,,Buy
+V. F. Corporation,United States,Money losing,2024-05-02 00:00:00,12.56,5.89,EV/Sales,5.04,10.58,Sell
+Verizon,United States,Money making,2024-05-05 00:00:00,38.39,33.63,EV/EBITDA,35.62,,Sell
+Viasat,United States,Money losing,2024-05-03 00:00:00,17.21,30.45,EV/Sales,102.12,58,Buy
+Vistry,GB,Money making,2024-05-03 00:00:00,12.87,21.98,EV/EBITDA,9.13,,Buy
+Walmart,United States,Money making,2024-05-05 00:00:00,59.82,51.39,EV/Sales,61.69,,Buy
+Walmart,United States,Money making,2024-05-04 00:00:00,59.82,55.53,EV/Sales,111.26,,Hold
+Walmart,United States,Money making,2024-05-05 00:00:00,59.82,54.94,EV/Sales,62.96,,Hold
+Walmart Inc.,United States,Money making,2024-05-04 00:00:00,59.82,34.98,EV/Sales,87.84,,Hold
+Walmart Inc.,United States,Money making,2024-05-07 00:00:00,58.85,37.2,EV/EBITDA,147.96,,hold
+Warner Bros. Discovery,United States,Money losing,2024-05-03 00:00:00,7.97,5.91,EV/Sales,28.62,9.89,Sell
+Warner Music Group,United States,Money making,2024-05-05 00:00:00,34.06,34.64,EV/Sales,36.94,,Buy
+Warner Music Group,United States,Money making,2024-05-04 00:00:00,34.14,17.14,EV/EBIT,27.9,,Sell
+WeWork,United States,Money losing,2024-05-05 00:00:00,0.15,-48.08,EV/Sales,98.99,0.2,Sell
+XPeng,China,Money losing,2024-05-03 00:00:00,65.56,39.53,EV/Sales,44.57,,Sell
+Xpeng,China,Money losing,2024-05-05 00:00:00,35.8,24.15,EV/Sales,33.95,,Sell
+Zillow,United States,Money losing,2024-05-05 00:00:00,40.69,20.54,EV/Sales,13.13,,Sell
+Zip.Co,Australia,Money losing,2024-05-05 00:00:00,1.23,0.91,Price/Sales,0.81,,Sell
+Zoom Video Communications,United States,Money making,2024-05-02 00:00:00,62.83,68.49,EV/Sales,52.67,,Buy

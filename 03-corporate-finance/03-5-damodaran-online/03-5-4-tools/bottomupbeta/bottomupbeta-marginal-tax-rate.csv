@@ -1,0 +1,252 @@
+Country,Corporate Tax Rate
+Aruba,0.22
+Afghanistan,0.2
+Angola,0.25
+Anguilla,0
+Aland Islands,0.2
+Albania,0.15
+Andorra,0.1
+United Arab Emirates,0.09
+Argentina,0.35
+Armenia,0.18
+American Samoa,0.34
+Antigua and Barbuda,0.25
+Australia,0.3
+Austria,0.23
+Azerbaijan,0.2
+Burundi,0.3
+Belgium,0.25
+Benin,0.3
+"Bonaire, Sint Eustatius and Saba",0.258
+Burkina Faso,0.275
+Bangladesh,0.275
+Bulgaria,0.1
+Bahrain,0
+Bahamas,0
+Bosnia and Herzegovina,0.1
+Saint Barthelemy,0
+Belarus,0.25
+Belize,0
+Bermuda,0
+Plurinational State of Bolivia,0.25
+Brazil,0.34
+Barbados,0.09
+Brunei Darussalam,0.185
+Bhutan,0.25
+Botswana,0.22
+Central African Republic,0.3
+Canada,0.2614
+Switzerland,0.1961
+Chile,0.27
+China,0.25
+Cote d'Ivoire,0.25
+Cameroon,0.33
+Democratic Republic of the Congo,0.3
+Congo,0.28
+Cook Islands,0.2
+Colombia,0.35
+Comoros,0.5
+Cabo Verde,0.21420000000000003
+Costa Rica,0.3
+Cuba,0.35
+Curacao,0.22
+Cayman Islands,0
+Cyprus,0.125
+Czechia,0.21
+Germany,0.2993
+Djibouti,0.25
+Dominica,0.25
+Denmark,0.22
+Dominican Republic,0.27
+Algeria,0.26
+Ecuador,0.25
+Egypt,0.225
+Eritrea,0.3
+Spain,0.25
+Estonia,0.2
+Ethiopia,0.3
+Finland,0.2
+Fiji,0.25
+Falkland Islands (Malvinas),0.26
+France,0.2583
+Faroe Islands,0.18
+Federated States of Micronesia,0.3
+Gabon,0.3
+United Kingdom of Great Britain and Northern Ireland,0.25
+Georgia,0.15
+Guernsey,0
+Ghana,0.25
+Gibraltar,0.15
+Guinea,0.25
+Gambia,0.27
+Guinea-Bissau,0.25
+Equatorial Guinea,0.35
+Greece,0.22
+Grenada,0.28
+Greenland,0.265
+Guatemala,0.25
+Guam,0.21
+Guyana,0.25
+"China, Hong Kong Special Administrative Region",0.165
+Honduras,0.3
+Croatia,0.18
+Haiti,0.3
+Hungary,0.09
+Indonesia,0.22
+Isle of Man,0
+India,0.3
+Ireland,0.125
+Islamic Republic of Iran,0.25
+Iraq,0.15
+Iceland,0.21
+Israel,0.23
+Italy,0.2781
+Jamaica,0.25
+Jersey,0
+Jordan,0.2
+Japan,0.2974
+Kazakhstan,0.2
+Kenya,0.3
+Kyrgyzstan,0.1
+Cambodia,0.2
+Kiribati,0.3
+Saint Kitts and Nevis,0.33
+Republic of Korea,0.264
+Kuwait,0.15
+Lao People's Democratic Republic,0.2
+Lebanon,0.17
+Liberia,0.25
+Libya,0.2
+Saint Lucia,0.3
+Liechtenstein,0.125
+Sri Lanka,0.3
+Lesotho,0.25
+Lithuania,0.15
+Luxembourg,0.2494
+Latvia,0.2
+"China, Macao Special Administrative Region",0.12
+Saint Martin (French Part),0.2
+Morocco,0.33
+Monaco,0.25
+Republic of Moldova,0.12
+Madagascar,0.2
+Maldives,0.15
+Mexico,0.3
+The former Yugoslav Republic of Macedonia,0.1
+Mali,0.3
+Malta,0.35
+Myanmar,0.22
+Montenegro,0.15
+Mongolia,0.25
+Northern Mariana Islands,0.21
+Mozambique,0.32
+Mauritania,0.25
+Montserrat,0.3
+Mauritius,0.15
+Malawi,0.3
+Malaysia,0.24
+Namibia,0.32
+New Caledonia,0.3
+Niger,0.3
+Nigeria,0.3
+Nicaragua,0.3
+Niue,0.3
+Netherlands,0.258
+Norway,0.22
+Nepal,0.25
+Nauru,0.25
+New Zealand,0.28
+Oman,0.15
+Pakistan,0.29
+Panama,0.25
+Peru,0.295
+Philippines,0.25
+Papua New Guinea,0.3
+Poland,0.19
+Puerto Rico,0.375
+Portugal,0.315
+Paraguay,0.1
+State of Palestine,0.15
+French Polynesia,0.25
+Qatar,0.1
+Romania,0.16
+Russian Federation,0.2
+Rwanda,0.28
+Saudi Arabia,0.2
+Sudan,0.35
+Senegal,0.3
+Singapore,0.17
+Saint Helena,0.25
+Solomon Islands,0.3
+Sierra Leone,0.25
+El Salvador,0.3
+San Marino,0.17
+Serbia,0.15
+South Sudan,0.3
+Sao Tome and Principe,0.25
+Suriname,0.36
+Slovakia,0.21
+Slovenia,0.22
+Sweden,0.20600000000000002
+Swaziland,0.25
+Sint Maarten (Dutch part),0.345
+Seychelles,0.25
+Syrian Arab Republic,0.25
+Turks and Caicos Islands,0
+Chad,0.35
+Togo,0.27
+Thailand,0.2
+Tajikistan,0.18
+Tokelau,0
+Turkmenistan,0.08
+Timor-Leste,0.1
+Tonga,0.25
+Trinidad and Tobago,0.3
+Tunisia,0.15
+Turkey,0.25
+Taiwan,0.2
+United Republic of Tanzania,0.3
+Uganda,0.3
+Ukraine,0.18
+Uruguay,0.25
+United States of America,0.2563
+Uzbekistan,0.15
+Saint Vincent and the Grenadines,0.28
+Bolivarian Republic of Venezuela,0.34
+British Virgin Islands,0
+United States Virgin Islands,0.231
+Viet Nam,0.2
+Vanuatu,0
+Wallis and Futuna Islands,0
+Samoa,0.27
+Kosovo,0.1
+Yemen,0.2
+South Africa,0.27
+Zambia,0.3
+Zimbabwe,0.24719999999999998
+Tokelau,0
+Tonga,0.25
+Trinidad and Tobago,0.3
+Tunisia,0.25
+Turkey,0.22
+Turkmenistan,0.08
+Turks and Caicos Islands,0
+Tuvalu,NA
+Uganda,0.3
+Ukraine,0.18
+United Arab Emirates,0
+United Kingdom of Great Britain and Northern Ireland,0.19
+United Republic of Tanzania,0.3
+United States Minor Outlying Islands,NA
+United States of America,0.25886140999999996
+United States Virgin Islands,0.231
+Uruguay,0.25
+Uzbekistan,0.12
+Vanuatu,0
+Venezuela (Bolivarian Republic of),0.34
+Viet Nam,0.2
+Wallis and Futuna Islands,0
+Western Sahara,NA
+Yemen,0.2
+Zambia,0.35
+Zimbabwe,0.2575

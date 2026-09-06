@@ -1,0 +1,221 @@
+Mature Market ERP +,0.0423,"Updated January 1, 2026"
+Changing this number will update all your country equity risk premiums.,,
+Country,Moody's rating,Adj. Default Spread
+Abu Dhabi,Aa2,0.0042
+Albania,Ba3,0.0306
+Algeria,NR,0.0383
+Andorra (Principality of),Baa1,0.0136
+Angola,B3,0.0552
+Anguilla,NR,0.04915183026184869
+Antigua & Barbuda,NR,0.027785941866780777
+Argentina,Caa1,0.0637
+Armenia,Ba3,0.0306
+Aruba,Baa3,0.0187
+Australia,Aaa,0
+Austria,Aa1,0.0023
+Azerbaijan,Baa3,0.0187
+Bahamas,B1,0.0383
+Bahrain,B2,0.0467
+Bangladesh,B2,0.0467
+Barbados,B2,0.0467
+Belarus,C,0.175
+Belgium,Aa3,0.0051
+Belize,Caa1,0.0637
+Benin,B1,0.0383
+Bermuda,A2,0.0072
+Bolivia,Ca,0.102
+Bosnia and Herzegovina,B3,0.0552
+Botswana,Baa1,0.0136
+Brazil,Ba1,0.0213
+British Virgin Islands,NR,0.04915183026184869
+Brunei,NR,0.0051
+Bulgaria,Baa1,0.0136
+Burkina Faso,Caa1,0.0637
+Cambodia,B2,0.0467
+Cameroon,Caa1,0.0637
+Canada,Aaa,0
+Cape Verde,B2,0.0467
+Cayman Islands,NR,0.0051
+Channel Islands,NR,0.006804264459189996
+Chile,A2,0.0072
+China,A1,0.006
+Colombia,Baa3,0.0187
+Congo (Democratic Republic of),B3,0.0552
+Congo (Republic of),Caa2,0.0765
+Cook Islands,B1,0.0383
+Costa Rica,Ba2,0.0256
+Croatia,A3,0.0102
+Cuba,Ca,0.102
+Curaçao,NR,0.027785941866780777
+Cyprus,A3,0.0102
+Czech Republic,Aa3,0.0051
+Denmark,Aaa,0
+Dominican Republic,Ba2,0.0256
+Ecuador,Caa3,0.085
+Egypt,Caa1,0.0637
+El Salvador,B3,0.0552
+Estonia,A1,0.006
+Ethiopia,Caa2,0.0765
+Falkland Islands,NR,0.027785941866780777
+Fiji,B1,0.0383
+Finland,Aa1,0.0023
+France,Aa3,0.0051
+French Guiana,NR,0.027785941866780777
+Gabon,Caa2,0.0765
+Gambia,NR,0.0467
+Georgia,Ba2,0.0256
+Germany,Aaa,0
+Ghana,Caa1,0.0637
+Gibraltar,NR,0.006804264459189996
+Greece,Baa3,0.0187
+Greenland,Aaa,0
+Guatemala,Ba1,0.0213
+Guernsey (States of),A1,0.006
+Guinea,NR,0.0765
+Guinea-Bissau,NR,0.0637
+Guyana,NR,0.0136
+Haiti,NR,0.085
+Honduras,B1,0.0383
+Hong Kong,Aa3,0.0051
+Hungary,Baa2,0.0162
+Iceland,A1,0.006
+India,Baa3,0.0187
+Indonesia,Baa2,0.0162
+Iran,NR,0.0637
+Iraq,Caa1,0.0637
+Ireland,Aa3,0.0051
+Isle of Man,Aa3,0.0051
+Israel,Baa1,0.0136
+Italy,Baa2,0.0162
+Ivory Coast,Ba2,0.0256
+Jamaica,Ba3,0.0306
+Japan,A1,0.006
+Jersey (States of),Aa3,0.0051
+Jordan,Ba3,0.0306
+Kazakhstan,Baa1,0.0136
+Kenya,Caa1,0.0637
+"Korea, D.P.R.",NR,0.102
+Kuwait,A1,0.006
+Kyrgyzstan,B3,0.0552
+Laos,Caa2,0.0765
+Latvia,A3,0.0102
+Lebanon,C,0.175
+Liberia,NR,0.0765
+Libya,NR,0.0256
+Liechtenstein,Aaa,0
+Lithuania,A2,0.0072
+Luxembourg,Aaa,0
+Macau,Aa3,0.0051
+Macedonia,Ba3,0.0306
+Madagascar,NR,0.0552
+Malawi,NR,0.085
+Malaysia,A3,0.0102
+Maldives,Caa2,0.0765
+Mali,Caa2,0.0765
+Malta,A2,0.0072
+Martinique,NR,0.04915183026184869
+Mauritius,Baa3,0.0187
+Mexico,Baa2,0.0162
+Moldova,B3,0.0552
+Monaco,NR,0
+Mongolia,B1,0.0383
+Montenegro,B1,0.0383
+Montserrat,Baa3,0.0187
+Morocco,Ba1,0.0213
+Mozambique,Caa3,0.085
+Myanmar,NR,0.102
+Namibia,B1,0.0383
+Nepal,Ba3,0.0306
+Netherlands,Aaa,0
+Netherlands Antilles,NR,0.04915183026184869
+New Zealand,Aaa,0
+Nicaragua,B2,0.0467
+Niger,Caa3,0.085
+Nigeria,B3,0.0552
+Norway,Aaa,0
+Oman,Baa3,0.0187
+Pakistan,Caa1,0.0637
+Palestinian Authority,NR,0.013172608945359637
+Panama,Baa3,0.0187
+Papua New Guinea,B2,0.0467
+Paraguay,Baa3,0.0187
+Peru,Baa1,0.0136
+Philippines,Baa2,0.0162
+Poland,A2,0.0072
+Portugal,A3,0.0102
+Qatar,Aa2,0.0042
+Ras Al Khaimah (Emirate of),A3,0.0102
+Reunion,NR,0.05067230446817149
+Romania,Baa3,0.0187
+Russia,NR,0.0256
+Rwanda,B2,0.0467
+Saint Lucia,NR,0.04915183026184869
+Saudi Arabia,Aa3,0.0051
+Senegal,Caa1,0.0637
+Serbia,Ba2,0.0256
+Sharjah,Ba1,0.0213
+Sierra Leone,NR,0.0552
+Singapore,Aaa,0
+Slovakia,A3,0.0102
+Slovenia,A3,0.0102
+Solomon Islands,Caa1,0.0637
+Somalia,NR,0.085
+South Africa,Ba2,0.0256
+South Korea,Aa2,0.0042
+Spain,A3,0.0102
+Sri Lanka,Ca,0.102
+St. Maarten,Ba2,0.0256
+St. Vincent & the Grenadines,B3,0.0552
+Sudan,NR,0.175
+Suriname,Caa1,0.0637
+Swaziland,B2,0.0467
+Sweden,Aaa,0
+Switzerland,Aaa,0
+Syria,NR,0.102
+Taiwan,Aa3,0.0051
+Tajikistan,B3,0.0552
+Tanzania,B1,0.0383
+Thailand,Baa1,0.0136
+Togo,B3,0.0552
+Trinidad &' Tobago,Ba2,0.0256
+Tunisia,Caa1,0.0637
+Turkey,B1,0.0383
+Turks & Caicos Islands,NR,0.04915183026184869
+Uganda,B3,0.0552
+Ukraine,Ca,0.102
+United Arab Emirates,Aa2,0.0042
+United Kingdom,Aa3,0.0051
+United States,Aa1,0.0023
+Uruguay,Baa1,0.0136
+Uzbekistan,Ba3,0.0306
+Venezuela,C,0.175
+Vietnam,Ba2,0.0256
+Yemen,NR,0.102
+Zambia,Caa2,0.0765
+Zimbabwe,NR,0.0765
+Region,ERP,Weighted Average: Default Spread
+Africa,0.11949308050536839,0.05067230446817149
+Asia,0.057223235648452254,0.009796146694470292
+Australia & New Zealand,0.04234082173200421,2.6796847845597547e-05
+Caribbean,0.117176823349771,0.04915183026184869
+Central and South America,0.08462849620618983,0.027785941866780777
+Eastern Europe,0.07577709101845075,0.021975562287317348
+Middle East,0.0623668644036819,0.013172608945359637
+North America,0.04446474878479404,0.0021647487847940407
+Western Europe,0.052665467678857734,0.006804264459189996
+Global,0.05625707330046291,0.009376176752184568
+,ERP,Default Spread
+Africa & Mid East,0.08491484948674607,0.028036085188648738
+"Australia, NZ & Canada",0.0423192903892356,1.2691045549737567e-05
+Latin America & Caribbean,0.08617494101154734,0.02886509277075483
+Japan,0.05140924819663502,0.005992926445154621
+US,0.04584719233838787,0.002333679169992019
+Europe,0.052642481977968794,0.006804264459189996
+Emerging Markets,0.06622434319976982,0.01573969947353278
+"Small Asia (No India, China & Japan)",0.06698520980036643,0.01624026960550423
+India,0.07069049021284582,0.018677954087398564
+China,0.05140924819663502,0.005992926445154621
+Global,0.05655178866332054,0.009376176752184568
+For other regional groupings,,
+,ERP,Default Spread
+EMEA,0.0591112,0.01106

@@ -1,0 +1,587 @@
+Company Name,Price,DCF Model,DCF Value,Multiple used,Relative Value,Option Value,Recommendation
+a2 Milk Company Limited,15.97,FCFF,11.18,EV/Sales,2.91,,Sell
+AB InBev,85.15,FCFF,83.47,PE,55.98,,Sell
+Accenture PLC,174.3,FCFF,207.42,EV/Sales,209.72,,Buy
+Activision Blizzard,46.02,FCFF,49.85,EV/Sales,59.56,,Buy
+Activision Blizzard,46.02,FCFF,32.66,Forward PE,30.79,,Sell
+Activision Blizzard Inc.,45.52,FCFF,39.99,PE,48.57,,Hold
+Adidas,248.85,FCFF,216.9,EV/EBIT,266.83,,Sell
+Adidas AG,256.55,FCFF,276.89,EV/EBITDA,315.35,,Buy
+Adobe,275,FCFF,265.61,EV/EBITDA,208.84,,Sell
+Adobe,276.77,FCFF,223.7,EV/EBITDA,151.29,,Hold
+Adobe,278.48,FCFF,145.01,EV/Sales,137.59,,Sell
+Adobe,276.77,FCFF,174.08,PE,140.14,,Sell
+Adobe,278.48,FCFF,183.94,EV/Sales,197.52,,Sell
+Adobe ,278.48,FCFF,305,EV/EBITDA,133.48,,Buy
+Adobe (ADBE),278.48,FCFF,205.47,EV/Sales,238.69,,Sell
+Adobe Inc.,277.69,FCFF,269,EV/EBITDA,259.78,,Hold
+Advanced Medical Solutions,3.33,FCFF,3.08,EV/EBITDA,3.27,,Hold
+Advanced Micro Devices,27.96,2Stg - FCFF,20.3,TEV/Sales,25.3,,Sell
+"Aeglea Bio Therapeutics, Inc.",7,FCFF,7.93,EV/Sales,10.84,,Buy
+Aeroporto di Bologna,11.98,FCFF,13.59,EV/EBITDA,9.38,,Buy
+AGL Limited,21.99,FCFF,22.88,EV/EBITDA,16.47,,Buy
+Air France ,10.23,FCFF,16.43,EV/Sales,44.23,,Buy
+Airbus,118.87,FCFF,104.27,EV/Sales,81.42,,Sell
+Airbus SE,117.5,2Stg - FCFF,101.14,TEV/Sales,94.59,,Sell
+Alibaba Group Holding Limited ,178,FCFF,106.98,EV/EBITDA,122.03,,Sell
+Align Technologies,331.08,FCFF,131.57,EV/Sales,217.6,,Sell
+Allegiant Travel Company,144.67,FCFF,166.06,PE,153.69,,Buy
+Allegiant Travel Company,144.67,FCFF,166.06,PE,153.69,,Buy
+Almacenes Exito S.A,14580,FCFF,15441.55,EV/Sales,62928.07,,Buy
+Altria,52.11,FCFF,53.26,PBV,51.46,,Hold
+Amazon ,1889.98,FCFF,1160.58,PE,1447.35,,Sell
+AMC,13.82,FCFF,10.82,EV/EBITDA,8.22,,Sell
+AMD,27.96,FCFF,25.48,EV/Sales,9.17,,Hold
+AMD,27.96,FCFF,31.36,PBV,11.92,,HOLD
+American Campus Communities,45.91,FCFF,56.29,PBV,59.63,,Buy
+Amorepacific,173.16,FCFF,87.89,EV/EBITDA,126.1,,Sell
+ARHT Media (Canadian dollars),0.15,FCFF,0.07,Price/Sales,0.7,,Sell
+ASOS PLC,37.45,FCFF,41.48,EV/Sales,44.64,,Buy
+AT&T,31.36,FCFF,35.48,EV/EBITDA,53.35,,Buy
+ATN International (ATNI),62.38,FCFF,70.64,EV/EBITDA,81.16,,Buy
+Autodesk,173.97,FCFF,130.99,Other,115.36,,Sell
+B2W,33.8,FCFF,29.05,EV/Sales,28.24,,Sell
+Badger Daylighting,43.26,FCFF,46.79,EV/EBITDA,33.4,,HOLD
+BAE Systems,4.69,FCFF,7.68,EV/Sales,9.03,,Buy
+BAE Systems plc,4.69,FCFF,6.29,EV/EBITDA,7.83,,Buy
+BAE Systems PLC.,4.69,FCFF,4.3,EV/EBITDA,7.74,,Buy
+Barnes & Noble,5.17,FCFF,2.86,EV/Sales,8.87,,Sell
+Barnes & Noble,6.38,FCFF,1.16,EV/EBITDA,4.74,,Sell
+Barnes & Noble,5.1,FCFF,3.36,EV/Sales,3.81,,Sell
+Bed Bath and Beyond,15.76,FCFF,13.07,EV/EBITDA,50.5,,Hold
+Best Buy,72.3,FCFF,79.86,EV/EBITDA,81.41,,Hold
+Best Buy,71.32,FCFF,89.6,EV/EBITDA,47.1,,Hold
+"Best Buy Co., Inc",71.32,FCFF,84.25,PE,103.65,,Buy
+"Best Buy Co., Ltd.",71.02,FCFF,79.79,EV/Sales,89,,Buy
+BExcellent (HKD),0.66,FCFF,0.69,EV/EBITDA,0.73,,Hold
+Beyond Meat,66.22,FCFF,40.95,EV/Sales,22.59,,Sell
+Big Lots,36.52,FCFF,62.1,EV/Sales,75.11,,Buy
+BlackBerry,8.83,FCFF,6.38,EV/Sales,10.57,0.02,Sell
+BlackBerry Limited,8.77,FCFF,9.18,PBV,56.21,,Hold
+"Bloomin' Brands, Inc. ",20.14,FCFF,5.08,EV/Sales,12.91,,Sell
+Blue Apron,0.8219,FCFF,-0.9,EV/Sales,1.01,0,Sell
+Blue Apron,0.8219,FCFF,-0.9,EV/Sales,1.01,,Sell
+BMW,68.87,FCFF,70.85,EV/EBITDA,87.71,,Hold
+BMW AG,72.28,FCFF,92.63,EV/EBITDA,123.47,,Buy
+Boeing,354.67,FCFF,347.82,PE,399.36,,Hold
+Boeing,377.69,FCFF,359.79,P/Sales,426.91,,Hold
+Boston Beer,335.2,FCFF,290.8700413260992,EV/Sales,452.3034289054605,,Sell
+Boston Beer Company,328.86,FCFF,256.76,EV/EBITDA,266.66,,Sell
+Box,20.24,FCFF,11.12,EV/Sales,27.89,9.34,Sell
+"Box, Inc.",20.2,FCFF,22.04,EV/Sales,34.88,,Buy
+Brown & Brown,32.19,FCFF,21.24,EV/EBITDA,31.04,,Sell
+BT Group plc,2.08,FCFF,2.12,EV/Sales,4.97,,Buy
+Build-a-Bear Workshop (BBW),4.92,FCFF,7,EV/Sales,8.72,,Buy
+Cabot Oil and Gas,25.96,FCFF+Resource Option Value,23.28,P/BV,21.24,,Sell
+Campbell Soup Company,38.74,FCFF,20.64,EV/EBITDA,58.81,25.22,HOLD
+Canada Goose,51.27,FCFF,39.45,PE,59.18,,Hold
+Canada Goose,68.76,FCFF,89.83,TEV/Sales,74.71,,Buy
+Canada Goose Holdings Inc.,51.27,FCFF,49.24,Other,52.48,,Hold
+Canadian National Railway,124.08,FCFF,121.4,EV/EBITDA,100.44,,Sell
+Capgemini ,104.6,FCFF,121.9,EV/EBITDA,77.64,,Buy
+Card Factory PLC,1.99,FCFF,2.14,EV/Invested Capital,2.84,,Buy
+Carvana Co. ,75.23,FCFF,62.87,EV/Sales,67.43,73.29,Sell
+Catapult Group,1.26,FCFF,0.7,EV/Sales,0.42,,Sell
+Caterpillar,131.2,FCFF,110.26,EV/EBITDA,131.14,,Hold
+Cathay Pacific,12.68,FCFF,10.19,EV/EBITDAR,7.11,,Sell
+Caxton and CTP Publishers,8.27,FCFF,9.95,EV/EBITDA,15.8,,Buy
+Cementos Pacasmayo,29.79,FCFF,1.09,EV/EBITDA,0.99,,Sell
+Cementos Pacasmayo S.A.A,6.04,FCFF ,4.31,EV/Sales ,4.86,,Sell 
+Cemex,8.78,FCFF,5.59,EV/EBITDA,8.72,,Sell
+"Charter Communications, Inc",377.89,FCFF,341.36,EV/EBITDA,409,,Hold
+Cheesecake Factory,44.77,FCFF,50.92,EV/Sales,42.36,,Hold
+Chegg,36.7,FCFF,9.92,EV/Sales,8.29,,Sell
+Chegg Inc,36.7,FCFF,16.34,EV/Sales,8.63,,Sell
+Chegg Inc.,34.85,FCFF,19.9,EV/Sales,24.55,,Sell
+"ChemBio, Inc. (Nasdaq: CEMI)",7.67,FCFF,43.85,EV/Sales,7.76,,Buy
+Chevron,123.18,FCFF,110,EV/Inv Cap,160,,Buy
+Chipotle,$706.45,FCFF,$596.95,EV/EBITDA,$314.35,,Sell
+CHIPOTLE,706.45,FCFF,110.26,EV/EBITDA,307.4,,Sell
+Chipotle,705.44,FCFF,589.25,EV/EBITDA,274,,Sell
+Chipotle,705.44,FCFF,117.79,P/Sales,451.75,,Sell
+Chipotle,679.87,FCFF,205.93,EV/EBITDA,319.58,,Sell
+Chipotle Mexican Grill,705.44,FCFF,2128.55,PEG,783.62,,Buy
+Chipotle Mexican Grill Inc.,689.94,FCFF,418.14,EV/Sales,406.14,,Sell
+Chipotle Mexican Grill Inc.,705.44,FCFF,583.83,EV/Sales,310.83,,Sell
+"Chipotle Mexican Grill, Inc.",705.44,FCFF,432.81,EV/Sales ,314.7,,Sell
+"Chipotle Mexican Grill, Inc.",706.52,FCFF,488.78,EV/Sales,520.22,,Sell
+Chow Tai Fook,7.81,FCFF,7.4,PE,8.24,,Buy
+Chuy's,22.9,FCFF,18.98,EV/EBITDA,15.55,,Hold
+Coffee Holding Co.,5.04,FCFF,7.42,PE,5.63,,Buy
+Comcast ,43.15,FCFE,57.75,EV/EBITDA,46.62,,Buy
+Comfort Del Gro,2.56,FCFF,2.56,EV/EBITDA,3.11,,HOLD
+Community Health Systems,3.15,FCFF,-21.7,EV/EBITDA,-63.36,11.67,Sell
+Comscore,12.66,FCFF,1.89,EV/Sales,15.13,,Sell
+Concho Resources Inc. ,110.92,2Stg - FCFF,119.22,TEV/EBITDA,131.16,,Buy
+Corus Entertainment,5.89,FCFF,10.36,EV/EBITDA,24.4,,Buy
+Costco,247.02,FCFF3,144.05,PBV,172.46276385,,Sell
+Costco,247.02,FCFF,252.42,EV/Sales,260.1,,Buy
+Costco,247.03,FCFF,190.27,P/B,125.08,,Sell
+Costco ,247.02,FCFF,267.82,EV/Sales,290.88,,Buy 
+Costco ,247.02,FCFF,319.26,EV/Sales,233.73,,Buy
+Costco Wholesale Corporation,247.02,FCFF,207.66,PBV,67.4,,Sell
+Credit Suisse,13.68,FCFE,13.98,P/BV,9.94,,Sell
+Cushman & Wakefield,18.18,FCFF,40.26,EV/Sales,15.94,,Buy
+CVS,55.16,FCFF,42.2,EV/EBITDA,44.36,4.43,Sell
+CVS Health,55.35,FCFF,49.82,EV/Sales,65.05,,Sell
+CyberArk Software Ltd.,125.74,FCFF,88.23,EV/EBITDA,120,,Hold
+CyberArk Software Ltd.,125.09,FCFF,104.33,EV/Sales,104.1,,Sell
+Dave & Buster's,59.09,FCFF,65.21,EV/Sales,68.14,,Buy
+Del Taco ,11.88,FCFF,9.61,EV/EBITDA,26.39,,Sell
+"Delta Airlines, Inc.",56.62,FCFF,68.91,EV/EBITDA,58.64,,Buy
+Deutsche Bank,7.02,DDM,30,P/Tangible BV,20.87,,Buy
+DexCom,118.14,FCFF,132.25,EV/Sales,108.61,,Hold
+Dexcom Inc.,118.79,FCFF,147.22,EV/EBITDA,131.26,,Buy
+Diageo Plc.,32.4,FCFF,24.7,TEV/LTM EBITDA,34.2,,Hold
+Dillard's,66.11,FCFF,47.94,PE,42.19,,Sell
+Dillard's Inc.,66.11,FCFF,66.43,EV/Sales,73.94,,Hold
+Dino Polska,127.3,FCFF,138.29,PE,99.82,,Buy
+Direcional Engenharia (BOVESPA: DIRR3),8.3,FCFF,8.94,PBV,11.29,,Buy
+DocuSign,53.24,FCFF,40.01,EV/ Invested Capital,40.39,,Sell
+Dropbox,23.5,FCFF,11.16,P/E,26.43,,Sell
+Duke Energy (NYSE: DUK),86.83,FCFF,89.47,PE,92.63,,Hold
+E-Mart,160500,FCFE,162551,EV/EBITDA,193564,,Hold
+"e.l.f Beauty, Inc.",11.38,FCFE,4.23,EV/Sales,11.08,,Sell
+"EasyJet, plc",10.34,FCFF,20.44,PE,10.68,,Buy
+Egyptian Resorts Co.,1.92,FCFF,0.78,PBV,1.11,,Sell
+Empresas Publicas De Medellin (Private Company),,FCFF,,EV/EBITDA,,,Buy
+Enel S.p.A.,5.55,FCFF,9.47,PE,6.63,,Buy
+EnLink Midstream,11.05,FCFF,12.37,EV/Sales,22.6,,Buy
+Ericsson ,88.13,FCFF,120.23,EV/EBITDA,103.4,,Buy
+Estee Lauder,164.35,FCFF,176.21,EV/EBITDA,157.8,,HOLD
+Etsy,66.97,FCFF,46.52,PBV,29.55,,Sell
+Etsy,66.97,FCFF,46.52,PBV,29.55,,Sell
+Etsy,61.8,FCFF,67.69,EV/Sales,67.23,,Buy
+Everest Re,245.77,FCFF,179.57,PBV,238.82,,Buy
+Expedia,120.23,FCFF,129.24,EV/Sales,99.02,,Hold
+Expedia,120.23,FCFF,129.24,EV/Sales,99.02,,Hold
+Express,3.69,FCFF,3.62,EV/Sales,10.3,,Hold
+Express (EXPR),3.66,FCFF,0,EV/EBITDA,4.58,,Sell
+"Express, Inc (EXPR)",3.79,FCFF,0.45,PE,1.76,,Sell
+Facebook,189.91,FCFF,245.32,EV/EBITDA,209.92,,Buy
+Facebook,188.34,FCFF,156.22,EV/Sales,143.22,152.97,Sell
+Facebook,188.34,FCFF,196.45,EV/EBITDA,271.5,,Buy
+Facebook,193.4,FCFF,210.21,EV/Sales,202.41,,Buy
+Ferrari,125,FCFF,98,EV/EBITDA,19.78,,Sell
+Ferrari,118,FCFF,103.92,PE,100.04,,Hold
+Ferrari N.V,137.45,FCFF,137.75,EVEBITDA,128.39,,Hold
+Fiat Chrysler,13.67,FCFF,54.2,EV/EBITDA,19.24,,BUY
+Fiserv Inc.,85,FCFF,77,EV/EBITDA,87.87,,Hold
+Fitbit,5.03,FCFF,5.25,EV/Sales,13.9,,Buy
+Fitbit,5.03,FCFF,3.15,EV/Sales,3.62,,Sell
+FitBit,5.03,FCFF,5.92,P/Sales,14.99,,Hold
+Five Below,135.38,FCFF3,143.82,PBV,61.11,,Hold
+Ford,10.2,FCFF,12.59,PE,15.23,,Buy
+Ford Motor Company,10.38,FCFF,14.69,PE,27.76,,Buy
+Fosun Tourism Group,1.95,FCFF,2.28,EV/Sales,2.51,,Buy
+Fosun Tourism Group,1.95,FCFF,2.28,,,,Buy
+"Fuyao Glass Industry Group Co., Ltd.",23.54,FCFF,24.25,VS,25.23,,Hold
+Gartner,154.46,FCFF,81.1,EV/Sales,145.75,,Sell
+Gateley (Holdings) PLC,1.61,FCFF,1.98,EVEBITDA,1.65,,Buy
+Gazprom,163.77,FCFF,198.52,EV/Sales,583.21,,Hold
+GlaxoSmithKline,39.66,FCFF,35.89,EV/EBITDA,36.99,,Hold
+Goldman Sachs Group,202.5,Dividends,219.14,PBV,226.74,,Buy
+"GoPro, Inc.",6.41,FCFF,5.7,EV/Sales,6.26,,Sell
+Great Canadian Gaming Company,42.39,FCFE,31.66,PE,22.54,,Sell
+Groupon,3.5,FCFF,3.08,EV/Sales,5.74,,Sell
+Grubhub,69.78,FCFF,66.95,EV/Sales,58.98,,Hold
+Grubhub,68.38,FCFF,39,Other,77.43,,Hold
+Grubhub,68.39,FCFF,42.35,PBV,44.69,,Sell
+Grubhub,66.6,FCFF,51.02,EV/Sales,31.39,,Sell
+Grubhub,66.6,FCFF,30.18,EV/Sales,32.74,,Sell
+GrubHub,66.63,FCFF,64.4,P/E,63.57,,Hold
+GrubHub,66.6,FCFF,75.4,EV/Invested Capital,83.79,,Buy
+GrubHub,63.99,FCFF,43.93,PBV,88.28,,Buy
+Grubhub Inc.,66.6,FCFF,109.27,EV/Sales,54.08,,Buy
+GrubHub Inc.,66.6,FCFF,29.13,EV/Sales,107.97,,Hold
+"Grubhub, Inc.",66.6,FCFF,67.5,EV/EBITDA,62.96,,Hold
+Grupo Aeroportuario del Pacifico,188.83,FCFF,199.82,EV/Sales,199.82,,Buy
+H&M,16.51,FCFF,15.41,P/BV,16.03,,Sell
+Haidilao International Holding Ltd. (SEHK:6862),28.85,FCFF,33.02,EV/EBITDA,34.3,,Buy
+Halozyme Therapeutics,16.22,FCFF,14.31,EV/Sales,10.02,,Sell
+Hawaiian Holdings,27.58,FCFF,43.16,EV/EBITDA,52.56,,Buy
+"HCA Healthcare, Inc",123.75,FCFF,142.42,EV/EBITDA,493.7,,Buy
+Health and Happiness,47,FCFF,56.17,PE,49.63,,Buy
+Hello Fresh ,8.3,FCFF,14.59,EV/Sales,19,,Buy
+Henkel,80,FCFE,93.25,PBV,190.11,,Hold
+Home Depot,194.58,FCFF,143.78,EVEBITDA,107.02,,Sell
+Home Depot,194.58,FCFF,165.32,EV/EBITDA,205.07,,Sell
+HYATT,76.38,FCFF,75.45,EV/Sales,75.44,,Sell
+Hyundai Motor Company,110.71,FCFF,107.6,EV/EBITDA,149.23,,Sell
+ICICI Bank,386.5,Excess Return,426.1,P/B,426.3,,Buy
+IMAX,23.37,FCFF,9.18,EV/Sales,4.21,,Sell
+Imperial Brands (IMB),28.32,FCFF,60.02,PE,41.26,,Buy
+Infosys,10.26,FCFF,7.3,EV/Sales,10.59,,Sell
+Intuitive Surgical,495.31,FCFF,263.05,PS,200.26,,Sell
+IPG Photonics,153.62,FCFF,224.14,EV/EBITDA,212.56,,Buy
+"iQIYI, Inc. ",20.96,FCFF,26.46,EV/EBITDA,32.87,,Buy
+IRadimed,23.12,3Stg - FCFE,30.57,TEV/Sales,24.36,,Buy
+istyle inc.,770,FCFF,684.87,EV/Sales,463.38,,SELL
+Itau Unibanco,32.41,Dividends,35.3,PBV,34.28,,Hold
+ITV plc,1.19,FCFF,1.8,EV/EBITDA,1.41,,Buy
+J. C. Penney,1.28,FCFF,-4.44,EV/Sales,-0.2,3.24,Sell
+J.P. Morgan,112.51,Dividends,108.01,PBV,112.62,,Hold
+JC Penney,1.32,FCFF,0.05,EV/Sales,5.4,3.12,Sell
+JC Penney,1.26,FCFF,0.7,Debt/EBITDA,0.85,,Hold
+JCPenney Company,1.32,FCFF,1.04,EV/Sales,0.96,1.38,Sell
+JD,28.17,FCFF,28.3,EV/Sales,40.62,,Buy
+JD.COM,28.17,FCFF,38.51,EV/Sales,65.39,,Buy
+JD.com,28.17,FCFF,38.51,EV/Sales,65.39,,Buy
+JD.Com Inc ,28.17,FCFF,28.18,EV/EBITDA,30.41,,Hold
+JetBlue,18.29,FCFF,26.6,EV/EBITDA,25.86,,Buy
+JetBlue,18.31,FCFF,31.97,EV/EBITDA,24.12,,Buy
+Jinko Solar,18.54,FCFF,17.18,EV/Sales,43.26,,Hold
+Jollibee Foods Corp,302.8,FCFF,248.7,EV/Sales,281.79,,Sell
+JPMorgan Chase & Co.,112.51,FCFE,88.19,PBV,86.96,,Sell
+K12,31.71,FCFF,38.54,EV/Sales,58.61,,BUY
+Kohl's,67.06,FCFF,51.43,P/E,50.11,,Sell
+Koninklijke Philips N.V.,36.99,FCFF,34.01780590773476,EV/EBITDA,38.83954091203089,,Hold
+Koninklijke Philips N.V.,36.99,FCFF,34.01780590773476,EV/EBITDA,38.83954091203089,,Hold
+Kroger (KR),25.83,FCFF,19.78,EV/EBITDA,42.9,,Sell
+Kweichow Moutai,974,FCFF,1016,EV/Inv Cap,1247,,Hold
+L'Oreal,235.8,FCFF,124.47,EV/EBITDA,198.91,,Sell
+La Crosse Lumber (Private),3.2,FCFF,3.2,EV/EBITDA,2.18,,Sell
+Lazard Ltd,37.05,Dividends,56.03,PE,56.4,,Buy
+Liberty Media Corporation ,31.74,FCFF,31.74,EV/Sales,17.71,,Buy
+Lockheed Martin,341.35,FCFF,275.11,EV/EBITDA,261.27,,Sell
+Lockheed Martin,341.35,FCFF,275.11,EV/EBITDA,261.27,,Sell
+Lulu Lemon Athletica,173.68,FCFF,110.34,EV/Sales,75,,Sell
+Lululemon,173.68,FCFF,133.83,EV/Sales,143.33,,Sell
+Lululemon,175.17,FCFF,121.54,EV/EBITDA,93.89,,Sell
+LuLuLemon,175.17,FCFF,164.49,EV/SALES,68.07,,Sell
+Lululemon,178.64,FCFF,170.08,PE,167.5,,Sell 
+Lululemon,173.98,FCFF,113,EV/EBITDA,116.71,,Sell
+Lululemon,173.71,FCFF,156.38,EV/EBITDA,167.12,,Sell
+Lululemon,173.68,FCFF,165.19,EV/Sales,151.33,,Sell
+Lululemon (LULU),173.68,FCFF,194.43,EV/Sales,200.98,,Buy
+Lululemon Athletica,175.83,FCFF,99.06,Market Cap/EBITDA ,113,,Sell Cautiously
+Lululemon Athletica Inc.,175.17,FCFF,162.02,EV/EBITDA,168.83,,Hold
+Lumentum Holdings inc.,59.13,FCFF,50.08,EV/Sales,46.52,,Sell
+Lyft,51.09,FCFF,65.57,EV/Sales,86.84,,Buy
+Macy's,22.46,FCFF,12.73,EV/EBITDA,35.14,,Sell
+Macy’s Inc.,22.99,FCFF,40.07,EV/EBITDA,18.34,,Hold
+Magazine Luiza SA (MGLU3),185.9,FCFF,129.34,EV/Sales,120.42,,Sell
+Maruti Suzuki,94.71,FCFF,32.64,EV/EBIT,51.41,,Sell
+Masco,37.94,FCFF,48.1,EV/EBITDA,38.89,,Buy
+Masco Corp,37.94,FCFF,48.1,EV/EBITDA,38.89,,Buy
+"Match Group, Inc.",67.27,FCFF,139.24,EV/EBITDA,77.5,,Hold
+MediaZest,0.08,FCFF,0,Price/Sales,0.0733,0.08,Sell
+Medmen,2.54,FCFF,3.62,EV/Sales,15.57,2.18,Buy
+Meituan Dianping,45.01,FCFF,26.19,EV/EBITDA,46.4,,Sell
+Mercari,3230,FCFF,1942.19,Other,2906.2,,Sell
+Merck,78.19,FCFF,35.61,PBV,31.63,,Sell
+Merck & Co. ,78.33,FCFF,69.4,PBV,119.31,,Buy
+Merck & Co. Inc.,78.04,FCFF,67.19,PEG,75,,Sell
+Mimecast,51.17,FCFF,37.94,EV/Sales,55.46,,Hold
+Mimecast,51.17,FCFF,37.94,EV/Sales,55.46,,Hold
+Mitra Adiperkasa,940,FCFF,967,EV/Sales,"IDR1,868",,BUY
+Mitra Adiperkasa,940,FCFF,967,EV/Sales,1868,,BUY
+Moelis,35.1,FCFF,73.32,EV/Sales,35.2,,Buy
+Momo Inc.,24.56,FCFF,33.68,EV/Sales,15.66,,Buy
+Moncler S.p.A.,36.67,FCFF,43.46,EV/Sales,34.33,,Buy
+MongoDB,133.1,FCFF,69.5,Price/Sales,63.77,,Sell
+Morgan Stanley,46.34,Dividends,30.76,PBV,44.31,,Sell
+MSI,77.5,FCFF,96.05,P/E,122,,Buy
+MSI,77.5,FCFF,96.05,P/E,122,,Buy
+MTN,97.19,FCFF,97.83,PBV,191.89,,Hold
+Nano Dimension,0.72,FCFF,1.26,EV/Sales,1.35,,Buy
+Naspers Limited,49.04,FCFF,51.59,EV/EBITDA,50.17,,Buy
+Natura Cosmeticos,51.29,FCFF,33.27,EV/ EBITDA,45.7,,Hold
+Navigator,3.56,FCFE,4.9,PE,6.2,,Buy
+Netflix,385.03,FCFF,221.41,EV/Sales,147.41,,Sell
+Netflix,356.56,FCFF,187.91,PE,172.76,,Sell
+Netflix,361.04,FCFF,206.86,EV/Sales,195.56,,Sell
+Netflix,361.04,FCFF,201.19,EV/Sales,242.5,,Sell
+Netflix,378.17,FCFF,135.81,EV/Sales,49.23,,Sell
+Netflix,361.04,FCFF,338.81,EV/Sales,157.68,,Sell
+Netflix,361.49,FCFF,210.86,EV/Sales,131.87,,Hold
+Netflix,361.04,FCFF,305.58,PS,264.49,,Sell
+Netflix,361.04,FCFF,257.6,EV/EBITDA,94.3,,Sell
+Netflix,361.04,FCFF,201.74,EV/Sales,148.54,,SELL
+Netflix,376.06,FCFF,310.34,PBV,265.42,,Sell
+Netflix,361.04,FCFF,98.7,EV/Sales,128.49,,Sell
+Netflix,361,FCFF,261.77,EV/Sales,230.95,,Sell
+"Netflix, Inc.",361.04,FCFF,288.24,EV/EBITDA,136.37,,Hold
+"Netflix, Inc.",361.04,FCFF3,161.86,PBV,102.62,,Sell
+NeuroMetrix,0.67,FCFE,0.89,PBV,4.33,,Sell
+Newcapec,7.73,FCFE,2.32,PE,12.3,,Sell
+NewsCorp,12.03,FCFF,7.83,EV/EBITDA,29.96,,Sell
+Nike,82.54,FCFF,75.31,EV/Sales,89.5,,Sell
+Nike,83.95,FCFF,45.29,EV/Sales,61.22,,Sell
+Nike,83.95,FCFF,59.32,EV/Sales,79.19,,Sell
+Nike Inc,82.54,FCFF,67.62,PBV,77.25,,Sell
+NINTENDO,706.45,FCFF,143.57,EV/EBITDA,307.4,,Hold
+Nintendo,37000,FCFF,40663.32,EV/EBITDA,33627.3,,Buy
+Nintendo (Yen) ,37000,FCFF,41431.67,EV/EBITDA,38123.55,,Hold
+"Nintendo Co., Ltd.",37000,FCFE,31024.67,PE,27056.376694082835,,Sell
+"Nintendo Co., Ltd.",4676,FCFF,4237,PS,3502,,Hold
+NIO,4.68,FCFF,6.18,EV/Sales,5.57,,Buy
+NIO Inc.,4.58,FCFF,8.05,EV/Sales,4.51,,Buy
+Nordstrom,39.37,FCFF,47.62,PBV,56.11,,Buy
+"Nordstrom, Inc.",39.37,FCFF,38.35,EV/EBITDA,22.88,,Sell
+Norwegian Air Shuttle,38.51,FCFF,0,EV/Sales,0,0.24,Sell
+Norwegian Air Shuttle,38.56,FCFF,21.1,PBV,28.34,0.004,Sell
+Novo Nordisk,48.28,FCFF,34.99,PE,54.73,,Sell
+Nvidia,168.82,FCFF3,183.91,EV/Sales,34.28,,Buy
+Nvidia,168.82,FCFF,239.59,EV/Sales,109.8,,Buy
+NVIDIA Corp.,168.82,FCFF,175.71,EV/EBITDA,114.84,,Buy
+NVIDIA Corporation (NVDA),168.82,FCFF,126.64,PBV,201.62701643999995,,Hold
+Occidental Petroleum (NYSE:OXY),57.48,FCFF,58.86,EV/EBITDA,86.29,,Buy
+"Old Dominion Freight Lines, Inc.",146.38,FCFF,159.29,EV/EBITDA,141.53,,Buy
+Organizacion Soriana,22.93,FCFF,25.09,EV/Sales,42.99,,Hold
+Paddy Power Betfair,69.32,FCFF,62.54,EV/EBITDA,78.5,,Sell
+PayPal,110.41,FCFF,82.49,PE,75,,Sell
+PayPal,110.41,FCFF,76.17,EV/Sales,102.52,88.02,Sell
+"Paypal Holdings, Inc.",110.94,FCFF,121.77,PBV,103.4,,Buy
+Paypal Inc. ,110.41,FCFF,123.16,PEG,109.38,,Hold
+Pepper,5.8,FCFF,5.8,EV/Sales,13.82,,Hold
+Pfizer,40.77,FCFF,41.74,EV/EBITDA,40.61,,Hold
+PG&E,19.52,FCFF,11.77,EV/Sales,57.76,5.06,Hold
+Pinduoduo Inc.,22.4,FCFF,27.62,Other,29.08,,Hold
+Pixelworks Inc,3.11,FCFF,1.97,EV/EBITDA,1.45,,Sell
+Planet Fitness,78.6,FCFF,63.52,EV/Sales,38.89,,SELL
+"Proofpoint, Inc.",118.67,FCFF,111.19,EV/Sales,152.52,,HOLD
+Qiwi plc,877.5,FCFF,421.91,EV/Revenue,3790.17,,Hold
+Ralph Lauren,124.27,FCFF,145.79,EV/Sales,193.4,,Buy
+Raytheon,180.24,FCFF,193.41,EV/EBITDA,186.53,,Buy
+"RealNetworks, Inc.",2.19,FCFF,0.74,EV/Sales,2.2,,Sell
+Regeneron,336.89,FCFE,370.63,PE,247.48,,Buy
+Regenosine,5,FCFF,0.81,EV/Sales,1.15,,Buy
+Regis Corporation,19.12,FCFF,17.56,EV/Sales,23.99,,Buy
+Republic Services,80.61,FCFF,91.83,EV/EBITDA,90.61,,Buy
+Restaurant Brands International,65.66,FCFF,66.59,EV/Sales,69.96,,Hold
+Restoration Hardware,101.31,FCFF,103.69,EV/Sales,142.34,,Hold
+Roku,82.85,FCFF,43.08,EV/Sales,23.4,,Sell
+Roku Inc,82.75,FCFF,54.83,EV/Sales,68.28,,Sell
+"Roku, Inc.",64.31,FCFF,75.2,PBV,121.02,,Buy
+Running Zone,2000000,FCFF,2000000,EV/EBITDA,1000000,,Buy
+S.A.C.I. Falabella (CLP),4651,2Stg - FCFF,3624.22,TEV/Sales,4476.78,,Sell
+Safran SA,123.05,FCFF,133.31,PE,79.12,,Buy
+Sage Therapeutics,169,FCFF,262.46,EV/Sales,241.91,,Buy
+Sales Force,156.9,FCFF,88.41,EV/Sales,37.9,,Sell
+Salesforce,159.93,FCFF,191.2,EV/Sales,174.84,,Buy
+Salesforce,159.94,FCFF,159.46,EV/Sales,165.59,,Buy
+Salesforce,156.07,FCFF,137.67,EV/Sales,132.14,,Hold
+Salesforce,159.94,FCFF,131.54,EV/Sales,123.69,,Sell
+Salesforce,159.94,FCFF,134.89,EV/EBITDA,40.15,,Buy
+Salesforce Inc,153.22,FCFF,179,EV/Sales,171.84,,Hold
+Salesforce.com,162.5,FCFF,93.18,EV/Sales,152,,Sell
+"salesforce.com, inc.",159.93,FCFF,179.79,EV/Sales,215.23,,Buy
+"salesforce.com, inc.",162.15,FCFF,57.65,EV/Sales,182.24,,Sell
+Salvatore Ferragamo,19.35,FCFF,16.7,P/Sales,12.87,,Sell
+Samsung,42900,FCFF,62557,EV/EBITDA,84678,,Buy
+SATS Ltd,5.32,FCFF,4.31,EV/EBITDA,3.97,,Sell
+Saudi Aramco ,0.603,FCFE,0.603,EV/Sales,2.76,,Hold
+Scandic Hotel Group (SHOT),85.4,FCFF,125.15,EV/EBITDA,133.4,,Buy
+Schlumberger,38.94,FCFF,24.74,EV/Sales,18.03,,Sell
+Sempra Energy (NYSE: SRE),126.2,FCFF,171.98,PE,113.07,,Buy
+Servicenow,274,FCFF,105.65,EV/Sales,417.3,,Hold
+Shake Shack,60.39,FCFF,31.19,EV/EBITDA,56.67,,Sell
+Shake Shack,60.39,FCFF,54.5,EV/Sales,58.5,,Sell
+Shake Shack Inc.,60.39,FCFF,39,EV/Sales,50.48,,Sell
+"Shake Shack, Inc.",60.37,FCFF,27.19,EV/EBITDA,35.92,,Sell
+Shopify,259.19,FCFF,95.81,PS,92.04,,Sell
+Shopify,258.69,FCFF,126.11,EV/EBITDA,228.85,,Sell
+Shopify,265.52,FCFF,241.31,EV/Sales,178.38,,Sell
+Shutterfly ,44.07,FCFF,58.58,EV/Sales,40.15,,Buy
+"SIGA Technologies, Inc",5.61,FCFF,4.71,EV/Sales,23.25,,Sell
+Sinclair Broadcast Group,44.95,FCFF,44.95,EV/Sales,27.65,,Sell 
+Sinclair Broadcast Group,44.95,FCFF,46.62,EV/Sales,27.65,,Sell
+SJM,126.9,FCFF,94,EV/EBITDA,53.98,,Sell
+SK Hynix,74400,FCFF,87228,EV/Sales,80126,,Buy
+SL Green Realty Corp (SLG),84.55,Dividends,82.17,TEV/LTM EBIT,113.13,,Hold
+SNAP,11.66,FCFF,7.26,EV/Sales,10.27,9.43,Sell
+Snap,10.49,FCFF,10.49,EV/Sales,7.6,,Hold
+SNAP,11.2,FCFF,6.5,EV/Sales,7.58,,Sell
+Snap,10.49,FCFF,4.22,EV/Sales,5.79,,Sell
+Snap (SNAP),10.5,FCFF,6.4,EV/Sales,3.6,,Sell
+Snap Inc.,10.79,FCFF,14.63,EV/Sales,10.49,,Buy
+Snap Inc.,10.49,FCFF,10.22,EV/Sales,9.75,,Hold
+Snap Inc.,11.39,FCFF,10.33,EV/Sales,7.97,,Buy
+Snap Inc. ,11.17,FCFF,10.29,EV/Sales,9.02,,Sell
+"Snap, Inc.",10.49,FCFF,27.78,PBV,10.93,,Buy
+Snapchat,10.48,FCFF,6.76,EV/Sales,6.54,,Sell
+SNC Lavalin,27.13,FCFF,26.89,EV/Sales,20.14,,Hold
+SNC-Lavalin Group Inc.,27.13,FCFF,26.89,EV/Sales,20.14,,Hold
+Solaria Energia,4.57,FCFF,4.77,PBV,3.73,,Hold
+Southwest,53.9,FCFF,63.14,EV/EBITDA,47.13,,Buy
+Southwest,54.23,FCFF,116.64,EV/EBITDA,79.74,,Buy
+Southwest Airlines,53.37,FCFF,79.54,EV/EBITDA,51.14,,Buy
+Southwest Airlines,52.41,FCFF,57.75,EV/EBITDA,47.17,,Buy
+Southwest Airlines,52.41,FCFF,53.22,EV/EBITDA,128.94,,Buy
+Spotify,137.85,FCFF,130.78,EV/Sales,85.36,,Sell
+Spotify,137.85,FCFF,144.75,EV/Sales,75.87,,Buy
+Spotify,137.85,FCFF,144.75,EV/Sales,75.87,,Buy
+Spotify,137.79,FCFF,140.39,EV/Sales,307.76,,Buy
+Spotify,122.51,FCFF,178.92,EV/Sales,176.97,,Buy
+Spotify,134.16,FCFF,203.31,EV/Sales,181.67,,Buy
+Spotify,137.85,FCFF,163.55437549804347,EV/Sales,194.48628020653666,,Buy
+Spotify,137.85,FCFF,148.27,EV/Sales,265,,Hold
+Spotify,122.51,FCFF,100.96,Other,124.24,,Sell
+Spotify,122.73,FCFF,145.39,EV/Sales,91.35,,Buy
+Spotify (SPOT),137.85,FCFF,153.33,EV/Sales,167.25,,Buy
+Spotify Technology S.A.,137.85,FCFF,150.58,EV/Sales,185.35,,Buy
+Spotify Technology S.A.,137.85,FCFF,80.86,EV/Sales,101.72181155067656,,Sell
+Spotify Technology S.A.,137.85,FCFF,131.34,EV/Sales,73.83,,Sell
+Spotify Technology S.A.,124.23,FCFF,89.02,Other,96.79,,Sell
+Spotify Technology SA,137.85,FCFF,150.8,EV/Sales,188.25,,Buy
+Spring Airlines,39.93,FCFF,32.45,PE,37.85,,Sell
+Square,68.52,FCFF,81.35,Other,52.57,63.65,Buy
+Square,65.99,FCFF,62.03,EV/EBITDA,34.31,,Sell
+Square,68.52,FCFF,52.22,EV/Sales,23.52,,Sell
+Square,68.52,FCFF,59.98,EV/Sales,23.22,,Sell
+Square,65.99,FCFF,56.4,EV/Sales,27.93,,Sell
+Square,65.46,FCFF,43.21,EV/Sales,99.5,,Sell
+Square,65.99,FCFF,81.17,TEV/LTM EBITDA,108.58,,Buy
+Square,65.99,FCFF,81.02,EV/Sales,68.49,,Buy
+Square,65.99,FCFF,41.93,EV/Sales,61.54,,Sell
+Square,65.99,FCFF,69.44,EV/Sales,75.68584057225439,,Buy
+Square,65.99,FCFF,52.1,EV/Sales,51.53,,Sell
+Square Inc,66.53,FCFF,81.76,EV/Sales,92.71,73.88,Buy
+Square Inc.,65.99,FCFF,90.71,EV/Sales,146.57,,Buy
+"Square, Inc.",68.66,FCFF,71.3,EV/Sales,41.19,,Hold
+"Square, Inc.",65.99,FCFF,29.37,EV/Sales,35.5,,Sell
+"Square, Inc.",65.99,2Stg - FCFF,52.05,TEV/Sales,61.2,,Sell
+"Square, Inc. ",65.99,FCFF,63.6,EV/Sales,51.95,,Hold
+"Square, Inc. (NYSE: SQ)",65.99,FCFF,14.17,EV/Sales,67.85,,Hold
+Stamps.com,85.43,FCFF,82.71,EV/Sales,87.88,,Sell
+Stitch Fix,27.01,FCFF,26.87,EV/EBITDA,25.44,,Hold
+Stitch Fix,27,FCFF,37.9,PBV,28.52,,Buy
+Stitch Fix,27,FCFF,37.9,PBV,28.52,,Buy
+Stitch Fix,26.67,FCFF,28.49,EV/Sales,28.35,,Buy
+Stitchfix,27.37,FCFF,28.43,EV/Sales,43.29,,Hold
+Sun Pharma,439.35,FCFF,438.22,PBV,635.4,,Hold
+Suncor Energy,42.76,FCFF,26.92203346033611,EV/EBITDA,40.7,,Sell
+Supernus Pharmaceuticals,36.41,FCFF,40.48,EV/Sales,31.25,,HOLD
+"T. Rowe Price Group, Inc.",105.59,Dividends,93.1,PE,130.34,,Sell
+Tableau,125.52,FCFF,94.78,EV/Sales,113.04,,Sell
+Tableau,124,FCFF,112.4,EV/Sales,73.35,,Hold
+Tableau,124,FCFF,124.82,EV/Sales,115.51,,Hold
+Tableau Software Inc.,124,FCFF,130.89,EV/Sales,126.79,,Buy
+"Tableau Software, Inc (DATA)",124,FCFF,109.83,EV/Sales,124.49,,Hold
+"Tableau Software, Inc.",124,FCFE,121.42,EV/Sales,140.49,,Buy
+"Tableau Software, Inc.",124,FCFF,98.86,Other,90.12,,Sell
+"Tableau Software, Inc.",124,FCFF,142.08,EV/Sales,167.42,,Buy
+"Tableau Software, Inc.",124,FCFF,55.34,EV/Sales,208.52,,Sell
+"Tailored Brands, Inc. (NYSE: TLRD)",7.95,FCFF,13.75,EV/EBITDA,16.41,,Buy
+Taiwan Semiconductor Manufacturing Company,256.5,FCFF,227,PBV,275.17,,Sell
+Taiwan Semiconductor Manufacturing Company,256.5,FCFF,226.996,PBV,275.17,,Sell
+Target,75.95,FCFF,85.87,EV/EBITDA,112.64,,Buy
+Target,75.98,FCFF,64.22,PBV,85.92,,Sell
+Target Corp,74.64,FCFF,75.64,PE,95.02,,Hold
+Target Corp.,83.72,FCFF,83.72,EV/Sales,97.2,,Buy
+Tata Consultancy Services,30.83,FCFF,34.35,PE,31.49,,Buy
+Tata Motors,186.35,FCFF,257.16,EV/EBITDA,INR298.16,,Buy
+Tata Motors,186.35,FCFF,257.16,EV/EBITDA,298.16,,Buy
+Tata Steel,520,FCFF,526.01,EV/EBITDA,687.37,,Buy
+Technogym,10.35,FCFF,6.14,Other,8.32,,Sell
+Teladoc,60.97,FCFF,66.35,EV/Sales,32.91,,Buy
+Tencent,332.9,FCFF,299.02,EV/Sales,222.6,,Hold
+Tencent,332.1,FCFF,214.4,EV/Sales,279.5,,Sell
+Tencent,382,FCFF,296.21,PE,104.45,,Sell
+Tencent Holdings(HKEX:700),382,FCFF,289.36,PE,381.19,,Sell
+Tencent Music Entertainment Group,16.59,FCFF,17.99,EV/EBITDA,12.35,,Hold
+Tesla,267.54,FCFF,502.12,PEG,422.39,,Buy
+Tesla,239.52,HiGrowth,180.1,EV/EBITDA,137.37,,Sell
+Tesla,250.09,FCFF,228.44,EV/Sales,226.73,,Sell
+Tesla,264.47,FCFF,114.86,EV/Sales,34.94,84.67,Sell
+Tesla,239.52,FCFF,193.52,EV/Inv Cap,235.7,,SELL
+"Tesla, Inc.",244.4,FCFF,210.39,EV/Sales,284.02,,Hold
+"Tesla, Inc. (NasdaqGS: TSLA)",238.28,FCFF,225.85,EV/Sales,183.71,,Sell
+The Boeing Company,354.67,FCFF,388.65,EV/EBITDA,458.4787692680411,,Buy
+The Boeing Company,354.67,FCFF,215.64,EV/EBITDA,272.51,,Sell
+The Boeing Company ,376.46,FCFF,573.54,PE,487.89,,Buy
+The Boston Beer Company,329.73,FCFF,264.95,EV/EBITDA,282.83,,Sell
+The Bread Talk Group,0.86,FCFF,1.6,PE,1.17,,Buy
+The Cheesecake Factory,47.77,FCFF,37.26,EV/Sales,62.73,,Hold
+The Clorox Company,148.82,FCFF,125.76,EV/Sales,129.52,,Sell
+The Clorox Company,148.82,FCFF,125.76,EV/Sales,129.52,,Sell
+The Clorox Company,148.82,FCFF,125.76,EV/Sales,129.52,,Sell
+The Estee Lauder Companies Inc,167.29,FCFF,117.61,EV/EBITDA,158.19,,Sell
+The Kroger Co.,25.17,FCFF,53.24,EV/EBITDA,47.69,,Buy
+The Trade Desk,186.03,FCFF,175.11,EV/Sales,137.7,,Sell
+The Warehouse Group,2.13,FCFF,1,EV/Sales,1.49,,Sell
+Thomas Cook Group plc,0.26,FCFF,2.66,EV/Sales,5.26,,Buy
+Tiffany,104.85,FCFF,84.42,EV/EBITDA,68.77,,SELL
+Tiffany,104.85,FCFF,93.44,EV/Sales,84.09,,Sell
+Tiffany & Co.,104.92,FCFF,92.2,PE,91.4,,Sell
+Tiffany & Co.,104.42,FCFF,67.06,PE,73.7,,Sell
+Tiffany and Co.,104.85,FCFF,98.01,PE,89.67,,Sell
+Townsquare Media,6.2,FCFF,9.79,EV/EBITDA,13,,Buy
+TripAdvisor,54.94,FCFE,38.07,EV/Sales,46.3,,Sell
+Trivago,4.21,FCFF,2.38,EV/Sales,5.97,,Sell
+TrueBlue,24,FCFF,14.1,PE,14,,Sell
+Twilio,134.28,FCFF,113.53,EV/Sales,116.15,,Sell
+Twist Bioscience,22,FCFF,22.75,EV/Sales,10.49,,Hold
+Twitter,38.45,FCFF,17.69,EV/Sales,14.56169704,,Sell
+Twitter (TWTR),38.45,FCFF,42.29,EV/EBITDA,41.05,,Buy
+Twitter Inc. (NYSE: TWTR),41.41,FCFF,37.63,EV/Sales,37.63,,Hold
+Ulta,348.15,FCFF,241.93,EV/Sales,327.06,,SELL
+Ulta,335.47,FCFF,302.39,EV/Sales,140.93,,Hold
+Ulta Beauty,342.88,FCFF,271.26,PE,341.28,,Sell
+"Ulta Beauty, Inc.",341.96,FCFF,307.2,PE,341.28,,Buy
+Ultragenyx,62.57,FCFF,45.68,P/S,48.53,,Sell
+Ultragenyx,62.57,FCFF,45.68,P/S,48.53,,Sell
+Under Armour,21.79,FCFF,2.55,EV/EBITDA,11.7,,Sell
+Under Armour,21.79,FCFF,22.6,EV/EBITDA,15.29,,Hold
+"Under Armour, Inc.",19.23,FCFF,11.82,PBV,6.59,,Sell
+"Under Armour, Inc.",21.79,FCFF,17.52,EV/EBITDA,17.91,,Sell
+Unilever,52.9,FCFF,51.57,EV/EBITDA,66.0491732492398,,Hold
+Unilever N.V.,52.9,FCFF,49.82,EV/EBITDA,46.87,,Hold
+Unite Health Group,240.59,FCFF,293.73,EV/Sales,237.31,,Hold
+Unite Health Group,240.59,FCFF,293.73,EV/Sales,237.31,,Buy
+United Parcel Service,99.81,FCFF,127.75,PE,121.19,,Buy
+United Technologies,137.17,FCFF,100.31,EV/EBITDA,129.46,,Sell
+Urban Outfitters,28.05,FCFF,31.79,EV/Sales,18.87,,Buy
+US Steel,15.32,FCFF,27.5,EV/EBIT,26.68,,Buy
+Vail Resorts,225.09,FCFF,184.18,EV/Sales,103.82,,Sell
+Vail Resorts,225.09,FCFF,184.18,EV/Sales,103.82,,Sell
+Varian Medical System,134.87,FCFF,43.46,EV/Sales,173.84,,Buy
+Veeva Systems ,144.16,FCFE,74.82,EV/Sales,50.74,,Sell
+"Verisk Analytics, Inc.",140.63,FCFF,124.53,Other,99.23,,Sell
+Verizon,57.24,FCFF,69.94,Market Cap/EBITDA ,56.4,,Buy
+Vestas,563.2,FCFE,868.8,EV/EBITDA,855.47,,Buy
+Via,531,FCFF,531,EV/Sales,1761,,Sell
+Vinamilk,131100,FCFF,101273,EV/EBITDA,165943,139634,Hold
+Vinda,13.72,FCFF,12.255413521422375,EV/Sales,22,,Sell
+Vingroup,112700,FCFF,42782.65,EV/Sales,42383.6,,Sell
+Visa,161.21,FCFF,173.54,EV/EBITDA,239.29,,Buy
+Visa Inc,160.7,FCFF,143.45,EV/EBITDA,177.94,,Hold
+Vuzix,2.65,FCFF,3.05,EV/Sales,5.68,,Buy
+Walmart,100.35,FCFF,450.1,PE,93.05,,Hold
+Walmart,101.91,FCFF,89.75,PE,110.9,,Hold
+Walmart,103.52,FCFF,86.55,PBV,106.26,,Hold
+Walt Disney,134.04,FCFF,72.03,PS,65.123,,Hold
+Walt Disney Co.,134.07,FCFF,106.13,EV/EBITDA,305.98,,Sell
+Wayfair,144.25,FCFF,123.62,EV/Sales,267.59,,Sell
+Wells Fargo & Company ,47.15,Dividends,46.06,PBV,52.3,,Sell
+WH Group (HKSE:288),0.99,FCFF,1.68,EV/EBITDA,1.13,,Buy
+Williams Companies Inc (WMB),27.55,FCFF,32.23,PE,31.65,,Buy
+Wingstop,75.3,FCFF,37.53,EV/SALES,31.2,,Sell
+Workday,203.53,FCFF,208.51,Other,138.2,,Hold
+Workday,203.53,FCFF,106.54,EV/Sales,106.8,,Hold
+"Workday, Inc.",203.53,FCFF,162.44,EV/Sales,179.16,,Sell
+World Wrestling Entertainment,84.03,FCFF,74.46,PE,34.13,,Sell
+Wyndham Hodels and Resorts,56.59,FCFF,14.49,EV/EBITDA,81.02,,Sell
+"Wynn Resort, Inc.",129.89,FCFF,114.76,PBV,54.12,,Sell
+X5 (GDR),29.36,FCFF,35.12,PBV,43.86,,BUY
+"Xero, Ltd.",38.549862780000005,FCFF3,18.310136130000004,EV/Sales,24.434488650000002,,Sell
+XPO Logistics,61.02,FCFF,46.6,PE,63.02,,Sell
+XPO Logistics,61.45,FCFF,69.46,PE,61.65,,Buy
+Yelp,34.02,FCFF,37.25,EV/Sales,34.01,,HOLD
+Yelp,39.73,FCFF,37.67,PE,38.28,,Hold
+Yelp,33.65,FCFF,10,P/S,32.34,,Hold
+Yelp (YELP),40.98,FCFF,55.72,EV/EBITDA,37.87,,Buy
+Yelp Inc.,34.02,FCFF,24.81,EV/EBITDA,20.9,,Sell
+Yelp Inc. ,40.73,FCFF,33.66,PBV,29.5,,Hold
+"Yelp, Inc",34.02,FCFF,49.97,PBV,36.71,,Buy
+Zillow,40.59,FCFF,35.85,EV/Sales,11.05,,Sell
+Zillow,35.24,FCFF,28.4,EV/Sales,34.78,,Sell
+Zillow,34.2,FCFF,20.47,EV/Sales,35.02,,Sell
+Zillow,35.41,FCFF,44.29,EV/Sales,51.39,,Buy
+Zillow,35.41,FCFF,34.2,EV/Sales,118.23,,Buy
+Zillow,35.41,FCFF,34.2,EV/Sales,118.23,,Buy
+Zillow Group,33.85,FCFF,29.99,EV/Sales,45.58,,Hold
+"Zillow Group, Inc.",35.41,FCFF,36.7,EV/EBITDA,39.12,,Buy
+"Zillow Group, Inc.",36,FCFF,24.42,PE,21.13,,Sell
+Zscaler,73.55,FCFF,65.02,EV/Sales,47.12,,Sell

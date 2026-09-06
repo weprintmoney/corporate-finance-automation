@@ -1,0 +1,42 @@
+---
+title: "Ill5P1"
+status: active
+owner: weprintmoney
+created: 2026-09-02
+last_updated: 2026-09-02
+source_url: https://www.stern.nyu.edu/~adamodar/pc/inv2ed/ill5p1.xls
+---
+
+# Ill5P1
+
+Source: https://www.stern.nyu.edu/~adamodar/pc/inv2ed/ill5p1.xls
+
+Sheets: Sheet 1
+
+## Sheet 1
+
+| BINOMIAL OPTION PRICING MODEL (CALL) |
+|---|
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+|  |
+| t=1 (u) |
+| 70 |
+| 1 |
+| 45.04504504504504 |
+| 24.954954954954957 |
+| t=1(d) |
+| 35 |
+| 0 |
+| 0 |
+| 0 |
+|  |
+|  |
+|  |

@@ -1,0 +1,150 @@
+---
+title: "Margin23"
+status: active
+owner: weprintmoney
+created: 2026-09-02
+last_updated: 2026-09-02
+source_url: https://pages.stern.nyu.edu/~adamodar/pc/archives/margin23.xls
+---
+
+# Margin23
+
+Source: https://pages.stern.nyu.edu/~adamodar/pc/archives/margin23.xls
+
+Sheets: Variables & FAQ, Industry Averages
+
+## Variables & FAQ
+
+| End Game | Measures of profitability and costs, by industry |
+|---|---|
+|  |  |
+| Variable | Explanation |
+| Number of firms | Number of firms in the industry grouping. |
+| Gross Margin | Aggregated gross profits as a percent of aggregated revenues, across companies in the group. |
+| Net Margin | Aggregated net profits as a percent of aggregated revenues, across companies in the group. |
+| Pre-tax, Pre-stock compensation Operating Margin | Aggregated operating profits, prior to taxes and stock compensation, as a percent of aggregated revenues, across companies in the group. |
+| Pre-tax Unadjusted Operating Margin | Aggregated as-stated operating profits, prior to taxes, as a percent of aggregated revenues, across companies in the group. |
+| After-tax Unadjusted Operating Margin | Aggregated as-stated operating profits, after netting effective taxes, as a percent of aggregated revenues, across companies in the group. |
+| Pre-tax Lease adjusted Margin | Aggregated operating profits, adjusted for leases treated as debt, as a percent of aggregated revenues, across companies in the group. |
+| After-tax Lease Adjusted Margin | Aggregated operating profits, adjusted for leases treated as debt and taxes, as a percent of aggregated revenues, across companies in the group. |
+| Pre-tax Lease & R&D adj Margin | Aggregated operating profits, adjusted for leases treated as debt and R&D as a capital expense, as a percent of aggregated revenues, across companies in the group. |
+| After-tax Lease & R&D adj Margin | Aggregated operating profits, adjusted for leases treated as debt and R&D as a capital expense, after effective taxes, as a percent of aggregated revenues, across companies in the group. |
+| EBITDA/Sales | Aggregated EBITDA as a percent of aggregated revenues, across companies in the group. |
+| EBITDASG&A/Sales | Aggregated EBITDA, with SG&A added back, as a percent of aggregated revenues, across companies in the group. |
+| COGS/Sales | Aggregated cost of goods sold (COGS) as a percent of aggregated revenues, across companies in the group. |
+| R&D/Sales | Aggregated R&D costs as a percent of aggregated revenues, across companies in the group. |
+| SG&A/ Sales | Aggregated SG&A costs as a percent of aggregated revenues, across companies in the group. |
+| Stock-Based Compensation/Sales | Aggregated stock-based compensation expensed,  as a percent of aggregated revenues, across companies in the group. |
+| Lease Expense/Sales | Aggregated current year's lease expense, as a percent of aggregated revenues, across companies in the group. |
+|  |  |
+| Lease adjustment to operating income | Operating Income + Current year's lease exp - Lease Asset Depreciation |
+| R&D adjustment to operating income | Operating Income + Current year's R&D exp - Amortization of R&D asset |
+
+## Industry Averages
+
+| Date updated: | 45296.0 |
+|---|---|
+| Created by: | Aswath Damodaran, adamodar@stern.nyu.edu |
+| What is this data? | Profit margins (net, operating and EBITDA) |
+| Home Page: | http://www.damodaran.com |
+| Data website: | https://pages.stern.nyu.edu/~adamodar/New_Home_Page/data.html |
+| Companies in each industry: | https://pages.stern.nyu.edu/~adamodar/pc/datasets/indname.xls |
+| Variable definitions: | https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/variable.htm |
+|  |  |
+| Industry Name | Number of firms |
+| Advertising | 57 |
+| Aerospace/Defense | 70 |
+| Air Transport | 25 |
+| Apparel | 38 |
+| Auto & Truck | 34 |
+| Auto Parts | 39 |
+| Bank (Money Center) | 15 |
+| Banks (Regional) | 625 |
+| Beverage (Alcoholic) | 19 |
+| Beverage (Soft) | 29 |
+| Broadcasting | 22 |
+| Brokerage & Investment Banking | 27 |
+| Building Materials | 44 |
+| Business & Consumer Services | 162 |
+| Cable TV | 10 |
+| Chemical (Basic) | 32 |
+| Chemical (Diversified) | 4 |
+| Chemical (Specialty) | 68 |
+| Coal & Related Energy | 18 |
+| Computer Services | 72 |
+| Computers/Peripherals | 36 |
+| Construction Supplies | 45 |
+| Diversified | 23 |
+| Drugs (Biotechnology) | 572 |
+| Drugs (Pharmaceutical) | 245 |
+| Education | 31 |
+| Electrical Equipment | 103 |
+| Electronics (Consumer & Office) | 13 |
+| Electronics (General) | 129 |
+| Engineering/Construction | 43 |
+| Entertainment | 98 |
+| Environmental & Waste Services | 57 |
+| Farming/Agriculture | 42 |
+| Financial Svcs. (Non-bank & Insurance) | 172 |
+| Food Processing | 82 |
+| Food Wholesalers | 14 |
+| Furn/Home Furnishings | 31 |
+| Green & Renewable Energy | 17 |
+| Healthcare Products | 230 |
+| Healthcare Support Services | 119 |
+| Heathcare Information and Technology | 128 |
+| Homebuilding | 32 |
+| Hospitals/Healthcare Facilities | 32 |
+| Hotel/Gaming | 68 |
+| Household Products | 93 |
+| Information Services | 18 |
+| Insurance (General) | 21 |
+| Insurance (Life) | 23 |
+| Insurance (Prop/Cas.) | 50 |
+| Investments & Asset Management | 334 |
+| Machinery | 103 |
+| Metals & Mining | 68 |
+| Office Equipment & Services | 17 |
+| Oil/Gas (Integrated) | 4 |
+| Oil/Gas (Production and Exploration) | 166 |
+| Oil/Gas Distribution | 24 |
+| Oilfield Svcs/Equip. | 100 |
+| Packaging & Container | 22 |
+| Paper/Forest Products | 7 |
+| Power | 50 |
+| Precious Metals | 61 |
+| Publishing & Newspapers | 21 |
+| R.E.I.T. | 193 |
+| Real Estate (Development) | 17 |
+| Real Estate (General/Diversified) | 11 |
+| Real Estate (Operations & Services) | 60 |
+| Recreation | 55 |
+| Reinsurance | 1 |
+| Restaurant/Dining | 64 |
+| Retail (Automotive) | 30 |
+| Retail (Building Supply) | 16 |
+| Retail (Distributors) | 62 |
+| Retail (General) | 26 |
+| Retail (Grocery and Food) | 14 |
+| Retail (REITs) | 28 |
+| Retail (Special Lines) | 105 |
+| Rubber& Tires | 3 |
+| Semiconductor | 63 |
+| Semiconductor Equip | 30 |
+| Shipbuilding & Marine | 8 |
+| Shoe | 13 |
+| Software (Entertainment) | 84 |
+| Software (Internet) | 35 |
+| Software (System & Application) | 351 |
+| Steel | 29 |
+| Telecom (Wireless) | 13 |
+| Telecom. Equipment | 66 |
+| Telecom. Services | 42 |
+| Tobacco | 16 |
+| Transportation | 36 |
+| Transportation (Railroads) | 4 |
+| Trucking | 22 |
+| Utility (General) | 14 |
+| Utility (Water) | 13 |
+| Total Market | 6481 |
+| Total Market (without financials) | 5214 |
