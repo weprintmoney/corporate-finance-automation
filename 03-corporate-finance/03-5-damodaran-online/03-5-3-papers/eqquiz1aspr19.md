@@ -1,0 +1,50 @@
+---
+title: "Eqquiz1Aspr19"
+status: active
+owner: weprintmoney
+created: 2026-09-02
+last_updated: 2026-09-02
+source_url: https://www.stern.nyu.edu/~adamodar/pdfiles/eqexams/EqQuiz1aSpr19.pdf
+---
+
+## **Quiz 1: Valuation**
+
+Answer all questions and show necessary work. Please be brief. This is an open book, open notes exam.
+
+- 1. Ulysses Inc., a US-based construction company, is considering investing in a 4-year project in Vietnam, funded with 100 million Vietnamese Dong in debt, which will be paid down over the four-year life. You have the following forecasted cashflows (in Vietnamese Dong):
+
+|                        | 1        | 2        | 3        | 4        |
+|------------------------|----------|----------|----------|----------|
+| Net Income             | 100.00 ₫ | 120.00 ₫ | 144.00 ₫ | 172.80 ₫ |
+| + Depreciation         | 50.00 ₫  | 60.00 ₫  | 72.00 ₫  | 86.40 ₫  |
+| Capital Expenditures   | 80.00 ₫  | 96.00 ₫  | 115.20 ₫ | 138.24 ₫ |
+| Chg in Working Capital | 20.00 ₫  | 24.00 ₫  | 28.80 ₫  | 34.56 ₫  |
+| Debt repaid            | 25.00 ₫  | 25.00 ₫  | 25.00 ₫  | 25.00 ₫  |
+| Cash Flow              | 25.00 ₫  | 35.00 ₫  | 47.00 ₫  | 61.40    |
+
+For its US projects, Ulysses uses a cost of equity of 9% and a cost of capital of 7.5%, but it believes that the country risk in Vietnam supports an additional risk premium of 3%. If the inflation rate in Vietnamese Dong is 8% and the inflation rate in the US \$ is 2%, what is the present value of these cash flows? (3 points)
+
+- 2. Komaski Inc. is a Poland-based company that operates in two countries, Germany and Poland, and in two businesses, apparel and retail. You have collected the following information on revenues in each country and business (in millions of Polizh Zlotys):
+
+|                         | Poland   | Germany | <i>Total</i> | <i>EV/Sales</i> | <i>Unlevered Beta</i> |
+|-------------------------|----------|---------|--------------|-----------------|-----------------------|
+| Apparel                 | 600 zt   | 200 zt  | 800 zt       | 2.00            | 0.80                  |
+| Retail                  | 400 zt   | 400 zt  | 800 zt       | 1.50            | 1.20                  |
+| Total                   | 1,000 zt | 600 zt  | 1,600 zt     |                 |                       |
+| Govt Bond Rate (Euros)  | 2.50%    | 1.00%   |              |                 |                       |
+| Govt Bond Rate (Zlotys) | 4.50%    | NA      |              |                 |                       |
+
+- a. Assuming that the local currency default spread for Poland is equal to its default spread in Euros, estimate the risk free rate in Polish Zlotys. (1 point)
+- b. The ERP for Germany (and other mature markets) is 6%. If equity markets in Poland are 1.2 times more risky than Polish bonds, estimate the equity risk premium for Komaski Inc. (2 points)
+
+- c. Assuming that Komaski has a debt to equity ratio of 25% and faces a marginal tax rate of 20%, estimate the beta for the company. (2 points)
+
+- 3. Kienzle Inc. is a retail company that reported an operating loss of \$125 million in the most recent twelve months, but this loss was after an operating lease payment of \$275 million during the period. There are three more years left on the lease, with the following payments coming due each year:
+
+| Year | Lease Commitments (in millions) |
+|------|---------------------------------|
+| 1    | \$250.00                        |
+| 2    | \$200.00                        |
+| 3    | \$150.00                        |
+
+You believe that the contractual commitment should be treated as debt, and that the pre-tax cost of debt for Kienzle Inc is 5%. If you capitalize these commitments, estimate the corrected operating income or loss for the most recent twelve months. (2 points)

@@ -1,0 +1,65 @@
+---
+title: "Session33Soln"
+status: active
+owner: weprintmoney
+created: 2026-09-02
+last_updated: 2026-09-02
+source_url: https://www.stern.nyu.edu/~adamodar/pdfiles/invphilcertificate/postclass/session33soln.pdf
+---
+
+## *Solution*
+
+- 1. Assume that you are valuing a market index, using a dividend discount model. The index is currently trading at 1800, aggregate dividends on the index are expected to be 90 next year and to grow 3% a year in perpetuity. If your require a return of 7.5% to invest in stocks, what is your estimate of how much the index is under or over valued?
+  - a. Overvalued by 50%
+  - b. Overvalued by 10%
+  - c. Correctly valued
+  - **d. Undervalued by 10%**
+  - e. None of the above
+
+*Explanation: Intrinsic value for index = 90/(.975-.03) = 2000*
+
+*The index is at 1800 and is thus undervalued by 10% = 1800/2000-1 = -10%*
+
+- 2. A market strategist argues that stocks are expensive because PE ratios are high today, relative to PE ratios in the past. While that may be true, which of the following factors may explain why stocks may not be over valued, even though PE ratios are high (relative to the past)?
+  - a. Inflation is high, relative to the past
+  - b. Economic growth is low, relative to the past
+  - c. Economic uncertainty is high, relative to the past
+  - **d. Real interest rates are low, relative to the past**
+  - e. None of the above
+
+*Explanation: This is the only factor that would justify higher PE ratios. All of the other choices would depress PE ratios.*
+
+- 3. You have run a regression of Earnings to Price ratios (E/P) for the S&P 500 against 10-year treasury bond rates for the last 50 years and arrived at the following output:
+
+$$E/P = 0.02 + 0.75 (\text{T.Bond rate})$$
+
+If the 10-year treasury bond rate currently is at 4%, what PE ratio would you expect the market to have today?
+
+- a. 12
+- b. 16
+- **c. 20.**
+- d. 25.
+- e. 50
+
+*Explanation: E/P = 0.02 + 0.75 (.04) = 0.05*
+
+*Expected PE = 1/.05 = 20*
+
+- 4. You are comparing the PE ratios across emerging markets and notice big differences in not only the PE ratios, but also in the levels of interest rates, economic growth and country risk. Which of the following combinations would you expect to see in those countries that have the lowest PE ratios?
+  - **a. High interest rates, low economic growth and high country risk**
+
+- b. High interest rates, high economic growth and high country risk
+- c. High interest rates, high economic growth and low country risk
+- d. High interest rates, low economic growth and low country risk
+- e. Low interest rates, low economic growth and low country risk
+
+*Explanation: Each of these factors should depress PE ratios.* 
+
+- 5. In 2003, the average PE ratio in developed markets was about 16, about a third higher than PE ratios in emerging markets. In 2012, the PE ratio in both markets was about 15. Which of the following factors may explain this shift best?
+  - a. Developed markets have become less risky and have less expected growth, relative to emerging markets.
+  - **b. Developed markets have become more risky and have less expected growth, relative to emerging markets.**
+  - c. Developed markets have become more risky and have more expected growth, relative to emerging markets.
+  - d. Developed markets have become less risky and have more expected growth, relative to emerging markets.
+  - e. None of the above
+
+*Explanation: Higher risk and less growth reduce PE ratios. Since the PE ratios for developed markets have decreased, relative to emerging markets, developed markets must have seen increases in risk and/or reduction in expected growth relative to emerging markets.*
