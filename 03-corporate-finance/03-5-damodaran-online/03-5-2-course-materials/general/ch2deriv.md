@@ -1,0 +1,28 @@
+---
+title: "Chapter 2 Derivations"
+status: active
+owner: weprintmoney
+created: 2026-09-04
+last_updated: 2026-09-04
+source_url: http://pages.stern.nyu.edu/~adamodar/New_Home_Page/CFTheory/deriv/ch2deriv.html
+---
+
+Chapter 2 Derivations
+
+### *Discussion Issues and Derivations*
+
+1. *What is the difference between stock price maximization, firm value maximization and stockholder wealth maximization?*  
+   Stock price maximization is the most restrictive of the three objective functions. It requires that managers take decisions that maximize stockholder wealth, that bondholders be fully protected from expropriation, that markets be efficient and that social costs be negligible.   
+   Stockholder wealth maximization is slightly less restrictive, since it does not require that markets be efficient.  
+   Firm value maxmization is the least restrictive, since it does not require that bondholders be protected from expropriation.  
+   Thus, when we make the argument that an action by a firm (such as investing or financing) increases firm value, this increase in firm value will necessarily translate into increasing stockholder wealth and stock price only if the more restrictive assumptions hold. Conversely, an action that increases the stock price in a world where the less restrictive assumptions do not hold, may not necessarily increase firm value.- *What is the objective function in corporate finance for a private firm?*The objective of maximizing stock prices is a relevant objective only for firms which are publicly traded. How, then, can corporate finance principles be adapted for private firms? For firms which are not publicly traded, the objective in decision making is the maximization of firm value. The investment, financing and dividend principles we will develop in the chapters to come apply for both publicly traded firms, which focus on stock prices, and private businesses, that maximize firm value. Since firm value is not observable and has to be estimated, what private businesses will lack is the feedback, sometimes unwelcome, that publicly traded firms get when they make major decisions.  
+     - *What is the objective function for a non-profit organization?*   
+       It is much more difficult to adapt corporate finance principles to not-for-profit organizations, since their objective is often to deliver a service in the most efficient way possible, rather than to make profits. The objective therefore has to be stated in terms of cost efficiency. For instance, the objective of a public school system might be to deliver a quality education (defined in terms of a skill set that every graduate should have) at the lowest cost. This does mean, however, that the skill set has to be both specifically defined and measurable.  
+       - *Are markets short term?*   
+         There are many who believe that stock price maximization leads to a short term focus for manager - see for instance Michael Porter’s book on competitive strategy. The reasoning goes as follows: Stock prices are determined by traders, short term investors and analysts, all of whom hold the stock for short periods and spend their time trying to forecast next quarter's earnings. Managers who concentrate on creating long term value, rather than short term results, will be penalized by markets. Most of the empirical evidence that exists suggests that markets are much more long term than they are given credit for:  
+         (1) There are hundreds of firms, especially small and start-up firms, which do not have any current earnings and cash flows, do not expect to have any in the near future, but which are still able to raise substantial amounts of money on the basis of expectations of success in the future. If markets were in fact as short term as the critics suggest, these firms should be unable to raise funds in the first place.  
+         (2) If the evidence suggests anything, it is that markets do not value current earnings and cash flows enough and value future earnings and cash flows too much. Studies indicate that stocks with low price-earnings ratios, i.e., high current earnings, have generally been underpriced relative to stocks with high price-earnings ratios.  
+         (3) The market response to research and development and investment expenditure is not uniformly negative, as the 'short term' critics would lead you to believe. Instead, the response is tempered, with stock prices, on average, rising on the announcement of R&D and capital expenditures.   
+         - *What is the German/Japanese alternative to stockholder wealth maximization and does it work?   
+           I*n the German and Japanese systems of corporate governance, firms own stakes in other firms, and often make decisions which are in the best interests of the industrial group they belong to, rather than in their own best interests. In this system, the argument goes, firms will keep an eye on each other, rather than ceding power to the stockholders. In addition to being undemocratic - the stockholders are after all the owners of the firm, it suggests a profound suspicion of how stockholders might use the power if they get it and is heavily skewed towards maintaining the power of incumbent managers.  
+           While this approach may protect the system against the waste that is a by-product of stockholder activism and inefficient markets, it has its own disadvantages. Industrial groups are inherently more conservative than investors in allocating resources, and thus are much less likely to finance high risk and venture capital investments by upstarts who do not belong to the group. The other problem is that entire groups can be dragged down by individual firms that have run into trouble.
