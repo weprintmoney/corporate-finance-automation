@@ -28,21 +28,21 @@ IT infrastructure monitoring/observability SaaS company. Taken private 2016 by T
 
 ## Source Key
 
-Cited by these short codes throughout:
+Cited by these short codes throughout. As of 2026-09-07, most of these are now **compiled locally** in [`solarwinds-sources/`](solarwinds-sources/) — see that folder's [README.md](solarwinds-sources/README.md) for the full manifest, what's still missing, and why.
 
-| Code | What it is |
-|------|-----------|
-| **SEC-EDGAR** | SEC EDGAR filings for SWI — 10-K (esp. FY2024, final full public year), 10-Q, 8-K (SUNBURST Dec 2020, Turn/River deal), DEF 14A proxy, and the going-private Schedule 13E-3 / DEFM14A merger proxy (contains the banker's own fairness-opinion DCF/comps) |
-| **REPO-SWI-VAL** | [solarwinds-valuation.md](solarwinds-valuation.md) — this folder's existing 12-step governance/objectives/cost-of-capital research on SWI |
-| **REPO-RATES** | [`03-3-supplemental-data/market-rates.json`](../../03-3-supplemental-data/market-rates.json) — 10Y Treasury, SOFR, Fed Funds; CI-refreshed weekdays |
-| **REPO-BETAS** | [`03-3-supplemental-data/industry-betas.json`](../../03-3-supplemental-data/industry-betas.json) — Damodaran sector unlevered/levered betas |
-| **REPO-COUNTRY-RISK** | [`03-3-supplemental-data/country-risk.json`](../../03-3-supplemental-data/country-risk.json) — country equity risk premiums |
-| **DAMODARAN-SITE** | pages.stern.nyu.edu/~adamodar — live Damodaran datasets/spreadsheets. The repo's local mirror at `03-5-damodaran-online/` is currently excluded from navigation (corrupted import, pending re-fetch) — go to the live NYU site instead |
-| **DAMODARAN-BLOG** | [`03-4-blogs/posts/`](../../03-4-blogs/posts/) — ~680 "Musings on Markets" posts, fully imported and searchable locally |
-| **PEER-FILINGS** | SEC EDGAR filings of comparable public observability/IT-ops SaaS peers — Datadog (DDOG), Dynatrace (DT), PagerDuty (PD) |
-| **DEAL-DOCS** | Turn/River Capital's acquisition press release + the DEFM14A fairness opinion |
-| **LESSON-MATERIALS** | That lesson's own `slides.md` / `reading-*.md` / `spreadsheet-*.md` in the same lesson folder |
-| **NEWS-WEB** | General news/analyst commentary not otherwise covered |
+| Code | What it is | Status |
+|------|-----------|--------|
+| **SEC-EDGAR** | SEC EDGAR filings for SWI — 10-K (FY2024/2023/2020/2018 + a multi-year financial summary), 10-Q, 8-K (SUNBURST Dec 2020, Turn/River deal), DEF 14A proxy, S-1 IPO prospectus, and the going-private merger document | ✅ Compiled — [`solarwinds-sources/sec-filings/`](solarwinds-sources/sec-filings/). **Correction:** the merger document is a **Schedule 14C definitive information statement (DEFM14C)**, not a 13E-3/DEFM14A — Silver Lake's ~75% stake let the board approve by written consent, so no proxy vote (and, per EDGAR's full filing history, no 13E-3) was filed. Use `swi-defm14c-2025-merger-information-statement.md`. |
+| **REPO-SWI-VAL** | [solarwinds-valuation.md](solarwinds-valuation.md) — this folder's existing 12-step governance/objectives/cost-of-capital research on SWI | ✅ Already in repo |
+| **REPO-RATES** | `03-3-supplemental-data/market-rates.json` — 10Y Treasury, SOFR, Fed Funds; supposed to be CI-refreshed weekdays | ⚠️ **This file doesn't exist in the repo** — the CI job that's supposed to create/refresh it appears to have never run or is silently failing. Use [`solarwinds-sources/market-data/treasury-and-fed-rates.md`](solarwinds-sources/market-data/treasury-and-fed-rates.md) instead (manual FRED snapshot, fetched 2026-09-07) until that's fixed. |
+| **REPO-BETAS** | `03-3-supplemental-data/industry-betas.json` — Damodaran sector unlevered/levered betas | ⚠️ **File exists but is an empty stub** (`"industries": {}`) — same broken-CI issue as REPO-RATES. Use [`solarwinds-sources/market-data/damodaran-industry-betas-software.md`](solarwinds-sources/market-data/damodaran-industry-betas-software.md) instead (Software (System & Application) row, fetched fresh from the live Damodaran dataset). |
+| **REPO-COUNTRY-RISK** | `03-3-supplemental-data/country-risk.json` — country equity risk premiums | ⚠️ **File exists but is an empty stub** (`"countries": {}`) — same issue. Use [`solarwinds-sources/market-data/damodaran-country-risk-premium-us.md`](solarwinds-sources/market-data/damodaran-country-risk-premium-us.md) instead. |
+| **DAMODARAN-SITE** | pages.stern.nyu.edu/~adamodar — live Damodaran datasets/spreadsheets. The repo's local mirror at `03-5-damodaran-online/` is currently excluded from navigation (corrupted import, pending re-fetch) | ✅ Partly compiled — industry betas and country risk premium are now in `solarwinds-sources/market-data/` (see REPO-BETAS/REPO-COUNTRY-RISK above). Multiples/margins/growth-rate datasets for Module 4 were **already present locally** before this pass — see `LESSON-MATERIALS` below, lesson-35 specifically. For anything else, go to the live NYU site, not the local mirror. |
+| **DAMODARAN-BLOG** | [`03-4-blogs/posts/`](../../03-4-blogs/posts/) — ~680 "Musings on Markets" posts, fully imported and searchable locally | ✅ Already in repo |
+| **PEER-FILINGS** | SEC EDGAR filings of comparable public observability/IT-ops SaaS peers — Datadog (DDOG), Dynatrace (DT), PagerDuty (PD) | ✅ Compiled — [`solarwinds-sources/peer-filings/`](solarwinds-sources/peer-filings/) (each company's most recent 10-K; all three still independently public) |
+| **DEAL-DOCS** | Turn/River Capital's acquisition press release + fairness opinion | ✅ Compiled — the 8-Ks and the DEFM14C in `solarwinds-sources/sec-filings/` cover this (see the SEC-EDGAR correction above; there is no separate "press release" filing beyond the 8-Ks) |
+| **LESSON-MATERIALS** | That lesson's own `slides.md` / `reading-*.md` / `spreadsheet-*.md` in the same lesson folder | ✅ Already in repo — e.g. lesson-35's `spreadsheet-*.md` files already carry current Damodaran multiples/margins by sector (Software (System & Application) row present) |
+| **NEWS-WEB** | General news/analyst commentary not otherwise covered | ⚠️ **Not compilable as a fixed document** — this is ongoing commentary/sentiment, re-search at time of use. One concrete sub-need — SWI's historical daily stock price series for regression-beta/Jensen's-alpha entries — was attempted and is genuinely unattainable via free automated fetch (Stooq blocks bots, Nasdaq drops delisted tickers); see `solarwinds-sources/README.md` for the workaround (DEF 14A performance-graph data) and paid-terminal alternative. |
 
 
 ## Module 1 — Foundations & Discount Rates (Lessons 1–12)
