@@ -60,5 +60,6 @@ WACC = (E/V) · rₑ + (D/V) · r_d · (1 − t)
 | [03-3-supplemental-data/companies/](03-3-supplemental-data/companies/) | Per-ticker JSON from Financial Modeling Prep: income statement, balance sheet, cash flow |
 | [03-3-supplemental-data/industry-betas.json](03-3-supplemental-data/industry-betas.json) | Damodaran industry betas — refreshed monthly by CI |
 | [03-3-supplemental-data/country-risk.json](03-3-supplemental-data/country-risk.json) | Damodaran country risk premiums — refreshed monthly by CI |
+| [03-7-meetups/CLAUDE.md](03-7-meetups/CLAUDE.md) | Cleaned transcripts of the six optional live Zoom meetups — dialogue format, speaker conventions, and per-meetup index |
 
 > **Excluded from navigation:** `03-5-damodaran-online/` (website archive — datasets, course materials, papers, tools). The import is corrupted and needs to be re-run before this folder is linked from the index again. Do not navigate agents into it in the meantime.
