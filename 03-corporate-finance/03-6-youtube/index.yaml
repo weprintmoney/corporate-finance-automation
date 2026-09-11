@@ -1,5 +1,4823 @@
-generated: 2026-09-02 06:22 UTC
+generated: 2026-09-02 14:35 UTC
 videos:
+- id: 03Sx48LW7qQ
+  title: 'Session 23: The Right Type of Financing'
+  upload_date: '2014-08-25'
+  duration: 1469
+  captions: auto
+  file: 2014/2014-08-25-session-23-the-right-type-of-financing.md
+- id: 3Pn-Hh_GR94
+  title: 'Session 20: Optimal Financing Mix IV - Wrapping up the Cost of Capital Approach'
+  upload_date: '2014-08-25'
+  duration: 1073
+  captions: auto
+  file: 2014/2014-08-25-session-20-optimal-financing-mix-iv-wrapping-up-the-cost-of-capital.md
+- id: 42iyR6Geqiw
+  title: 'Session 15: PE Ratios'
+  upload_date: '2014-08-25'
+  duration: 991
+  captions: auto
+  file: 2014/2014-08-25-session-15-pe-ratios.md
+- id: 7qbQR_5SkIM
+  title: 'Session 22: The Option to Delay (Patents & Natural Resources)'
+  upload_date: '2014-08-25'
+  duration: 956
+  captions: auto
+  file: 2014/2014-08-25-session-22-the-option-to-delay-patents-natural-resources.md
+- id: 83yR6EFEl5Y
+  title: 'Session 9: Terminal Value'
+  upload_date: '2014-08-25'
+  duration: 607
+  captions: auto
+  file: 2014/2014-08-25-session-9-terminal-value.md
+- id: 8gYT3Xgs6NE
+  title: 'Session 7: Estimating Cash Flows'
+  upload_date: '2014-08-25'
+  duration: 1169
+  captions: auto
+  file: 2014/2014-08-25-session-7-estimating-cash-flows.md
+- id: 8vYQpWXQ5hE
+  title: 'Session 2: Intrinsic Value - Foundation'
+  upload_date: '2014-08-25'
+  duration: 691
+  captions: auto
+  file: 2014/2014-08-25-session-2-intrinsic-value-foundation.md
+- id: 8ymeDSfEzrA
+  title: 'Session 23: The Options to Expand and Abandon'
+  upload_date: '2014-08-25'
+  duration: 775
+  captions: auto
+  file: 2014/2014-08-25-session-23-the-options-to-expand-and-abandon.md
+- id: 9XHtztcbbUI
+  title: 'Session 10: Value Enhancement'
+  upload_date: '2014-08-25'
+  duration: 948
+  captions: auto
+  file: 2014/2014-08-25-session-10-value-enhancement.md
+- id: Ae3iitQA9Ms
+  title: 'Session 13: Loose Ends - Distress, Dilution and Illiquidity'
+  upload_date: '2014-08-25'
+  duration: 934
+  captions: auto
+  file: 2014/2014-08-25-session-13-loose-ends-distress-dilution-and-illiquidity.md
+- id: BFFhDAYFZM4
+  title: 'Session 30: Valuation - Cash Flows & Discount Rates'
+  upload_date: '2014-08-25'
+  duration: 996
+  captions: auto
+  file: 2014/2014-08-25-session-30-valuation-cash-flows-discount-rates.md
+- id: C2XMM-E48BA
+  title: 'Session 24: Dividend Policy - Trends & Measures'
+  upload_date: '2014-08-25'
+  duration: 944
+  captions: auto
+  file: 2014/2014-08-25-session-24-dividend-policy-trends-measures.md
+- id: C5ZDAEqQkvA
+  title: 'Session 11: Loose Ends in Valuation'
+  upload_date: '2014-08-25'
+  duration: 796
+  captions: auto
+  file: 2014/2014-08-25-session-11-loose-ends-in-valuation.md
+- id: CKuAStbkjuA
+  title: 'Session 1: Introduction'
+  upload_date: '2014-08-25'
+  duration: 839
+  captions: auto
+  file: 2014/2014-08-25-session-1-introduction.md
+- id: DI4JeKjFlEI
+  title: 'Session 26: Dividend Policy - Assessment'
+  upload_date: '2014-08-25'
+  duration: 1058
+  captions: auto
+  file: 2014/2014-08-25-session-26-dividend-policy-assessment.md
+- id: F_6mcUPfoTk
+  title: 'Session 25: Divided Policy - The Trade Off'
+  upload_date: '2014-08-25'
+  duration: 1238
+  captions: auto
+  file: 2014/2014-08-25-session-25-divided-policy-the-trade-off.md
+- id: HmDQISjLxig
+  title: 'Session 19: Asset Based Valuation'
+  upload_date: '2014-08-25'
+  duration: 852
+  captions: auto
+  file: 2014/2014-08-25-session-19-asset-based-valuation.md
+- id: L2luFJSpQo8
+  title: 'Session 24: Distressed Equity as an option'
+  upload_date: '2014-08-25'
+  duration: 759
+  captions: auto
+  file: 2014/2014-08-25-session-24-distressed-equity-as-an-option.md
+- id: N_FH89DCdGs
+  title: 'Session 6: Cost of Debt and Capital'
+  upload_date: '2014-08-25'
+  duration: 908
+  captions: auto
+  file: 2014/2014-08-25-session-6-cost-of-debt-and-capital.md
+- id: O8KojGTlz-E
+  title: 'Session 17: Book Value Multiples'
+  upload_date: '2014-08-25'
+  duration: 805
+  captions: auto
+  file: 2014/2014-08-25-session-17-book-value-multiples.md
+- id: Q_8rnowvoYw
+  title: 'Session 25: Closing Thoughts'
+  upload_date: '2014-08-25'
+  duration: 542
+  captions: auto
+  file: 2014/2014-08-25-session-25-closing-thoughts.md
+- id: QneDmX_WUyA
+  title: 'Session 12: Acquisition Ornaments: Synergy, control & complexity'
+  upload_date: '2014-08-25'
+  duration: 938
+  captions: auto
+  file: 2014/2014-08-25-session-12-acquisition-ornaments-synergy-control-complexity.md
+- id: T1JKwzJ-KMc
+  title: 'Session 21: The Essence of Real Options'
+  upload_date: '2014-08-25'
+  duration: 948
+  captions: auto
+  file: 2014/2014-08-25-session-21-the-essence-of-real-options.md
+- id: U3D9a_H_Vrs
+  title: 'Session 4: Equity Risk Premiums'
+  upload_date: '2014-08-25'
+  duration: 1010
+  captions: auto
+  file: 2014/2014-08-25-session-4-equity-risk-premiums.md
+- id: VpGrRE6t9U0
+  title: 'Session 27: Dividend Policy - Action & Follow Up'
+  upload_date: '2014-08-25'
+  duration: 1055
+  captions: auto
+  file: 2014/2014-08-25-session-27-dividend-policy-action-follow-up.md
+- id: WDZwqSierZ4
+  title: 'Session 14: Relative Valuation - First Principles'
+  upload_date: '2014-08-25'
+  duration: 1089
+  captions: auto
+  file: 2014/2014-08-25-session-14-relative-valuation-first-principles.md
+- id: Y_xqFmOrP2Y
+  title: 'Session 20: Private Company Valuation'
+  upload_date: '2014-08-25'
+  duration: 958
+  captions: auto
+  file: 2014/2014-08-25-session-20-private-company-valuation.md
+- id: _ECSqmEppqA
+  title: 'Session 18: Revenue Multiples'
+  upload_date: '2014-08-25'
+  duration: 655
+  captions: auto
+  file: 2014/2014-08-25-session-18-revenue-multiples.md
+- id: e1JVOluxr-M
+  title: 'Session 18: Optimal Financing Mix II- The cost of capital approach'
+  upload_date: '2014-08-25'
+  duration: 1150
+  captions: auto
+  file: 2014/2014-08-25-session-18-optimal-financing-mix-ii-the-cost-of-capital-approach.md
+- id: fRNcP9xjk-8
+  title: 'Session 8: Estimating Growth'
+  upload_date: '2014-08-25'
+  duration: 908
+  captions: auto
+  file: 2014/2014-08-25-session-8-estimating-growth.md
+- id: idSng0GyvvM
+  title: 'Session 19: Optimal Financing Mix III - Following up the Cost of Capital Approach'
+  upload_date: '2014-08-25'
+  duration: 1062
+  captions: auto
+  file: 2014/2014-08-25-session-19-optimal-financing-mix-iii-following-up-the-cost-of-capital.md
+- id: kcWtcZHUX6g
+  title: 'Session 21: Optimal Financing Mix V - Alternate Approaches'
+  upload_date: '2014-08-25'
+  duration: 1046
+  captions: auto
+  file: 2014/2014-08-25-session-21-optimal-financing-mix-v-alternate-approaches.md
+- id: nbLwsUUboy0
+  title: 'Session 22: Moving to the Optimal Financing Mix'
+  upload_date: '2014-08-25'
+  duration: 913
+  captions: auto
+  file: 2014/2014-08-25-session-22-moving-to-the-optimal-financing-mix.md
+- id: pQYRAt6Z7Gw
+  title: 'Session 17: Optimal Financing Mix I - The Trade Off'
+  upload_date: '2014-08-25'
+  duration: 1130
+  captions: auto
+  file: 2014/2014-08-25-session-17-optimal-financing-mix-i-the-trade-off.md
+- id: qKy5UGcvWaw
+  title: 'Session 5: Betas (Relative Risk Measures)'
+  upload_date: '2014-08-25'
+  duration: 804
+  captions: auto
+  file: 2014/2014-08-25-session-5-betas-relative-risk-measures.md
+- id: rTHDKTIt200
+  title: 'Session 28: Dividend Policy - The End Game'
+  upload_date: '2014-08-25'
+  duration: 677
+  captions: auto
+  file: 2014/2014-08-25-session-28-dividend-policy-the-end-game.md
+- id: u76ddYwoNUk
+  title: 'Session 29: Valuation - First Steps'
+  upload_date: '2014-08-25'
+  duration: 857
+  captions: auto
+  file: 2014/2014-08-25-session-29-valuation-first-steps.md
+- id: w0WE8jsG-Ig
+  title: 'Session 14: Investment Returns I- Setting the Table'
+  upload_date: '2014-08-25'
+  duration: 1392
+  captions: auto
+  file: 2014/2014-08-25-session-14-investment-returns-i-setting-the-table.md
+- id: xI-KTlxfNDU
+  title: 'Session 16: Other Earnings Multiples'
+  upload_date: '2014-08-25'
+  duration: 741
+  captions: auto
+  file: 2014/2014-08-25-session-16-other-earnings-multiples.md
+- id: xV80dt1OZtQ
+  title: 'Session 3: The Risk Free Rate'
+  upload_date: '2014-08-25'
+  duration: 1056
+  captions: auto
+  file: 2014/2014-08-25-session-3-the-risk-free-rate.md
+- id: znmQ7oMiQrM
+  title: 'Session 1: Introduction to Valuation'
+  upload_date: '2014-08-25'
+  duration: 974
+  captions: auto
+  file: 2014/2014-08-25-session-1-introduction-to-valuation.md
+- id: 0sn1fVNlcn8
+  title: 'Session 16: Value Investors - where''s the beef?'
+  upload_date: '2014-08-26'
+  duration: 1346
+  captions: auto
+  file: 2014/2014-08-26-session-16-value-investors-wheres-the-beef.md
+- id: 2wYJJ_bw1QM
+  title: 'Session 30: Market Timing - Setting the Table'
+  upload_date: '2014-08-26'
+  duration: 587
+  captions: auto
+  file: 2014/2014-08-26-session-30-market-timing-setting-the-table.md
+- id: 3g1KmniI1Hs
+  title: 'Session 33: Market Timing Approaches - Valuing the Market'
+  upload_date: '2014-08-26'
+  duration: 794
+  captions: auto
+  file: 2014/2014-08-26-session-33-market-timing-approaches-valuing-the-market.md
+- id: 3nKBoTR74ug
+  title: 'Session 22: Information Trading - Trading on the news'
+  upload_date: '2014-08-26'
+  duration: 564
+  captions: auto
+  file: 2014/2014-08-26-session-22-information-trading-trading-on-the-news.md
+- id: 45XCT1vVWEA
+  title: 'Session 36: More in Investor Performance- Continuity & Consistency'
+  upload_date: '2014-08-26'
+  duration: 947
+  captions: auto
+  file: 2014/2014-08-26-session-36-more-in-investor-performance-continuity-consistency.md
+- id: 4yjdmylrH68
+  title: 'Session 25: Information Trading - Public InformatIon - Earnings Reports'
+  upload_date: '2014-08-26'
+  duration: 637
+  captions: auto
+  file: 2014/2014-08-26-session-25-information-trading-public-information-earnings-reports.md
+- id: 70k1gqx3sYU
+  title: 'Session 13: Value Investing - The Passive Screeners'
+  upload_date: '2014-08-26'
+  duration: 1416
+  captions: auto
+  file: 2014/2014-08-26-session-13-value-investing-the-passive-screeners.md
+- id: BUGhiSZuLYQ
+  title: 'Session 10: Temporal Patterns'
+  upload_date: '2014-08-26'
+  duration: 715
+  captions: auto
+  file: 2014/2014-08-26-session-10-temporal-patterns.md
+- id: FNF3ncQgABk
+  title: 'Session 6: Trading Costs & Taxes'
+  upload_date: '2014-08-26'
+  captions: none
+  file: null
+- id: Hqol9Fc0PLU
+  title: 'Session 3: Understanding risk - The risk in stocks'
+  upload_date: '2014-08-26'
+  duration: 1688
+  captions: auto
+  file: 2014/2014-08-26-session-3-understanding-risk-the-risk-in-stocks.md
+- id: I3v2yuvJ_Qs
+  title: 'Session 8: Market Efficiency - Testing Market Beating Schemes'
+  upload_date: '2014-08-26'
+  duration: 1785
+  captions: auto
+  file: 2014/2014-08-26-session-8-market-efficiency-testing-market-beating-schemes.md
+- id: P-iCZBjbiH4
+  title: 'Session 7: Market Efficiency - Laying the Groundwork'
+  upload_date: '2014-08-26'
+  duration: 1107
+  captions: auto
+  file: 2014/2014-08-26-session-7-market-efficiency-laying-the-groundwork.md
+- id: QDdrWXPDLmQ
+  title: 'Session 24: Information Trading - Following the analysts'
+  upload_date: '2014-08-26'
+  captions: none
+  file: null
+- id: QxBzKn0wj7U
+  title: 'Session 17: Investing on Hope - Growth & Small Cap Investing'
+  upload_date: '2014-08-26'
+  duration: 946
+  captions: auto
+  file: 2014/2014-08-26-session-17-investing-on-hope-growth-small-cap-investing.md
+- id: RhuhX2VvJqI
+  title: 'Session 12: Introduction to Value Investing'
+  upload_date: '2014-08-26'
+  captions: none
+  file: null
+- id: T3WoIU8_ebQ
+  title: 'Session 9: Random Walks and Momentum'
+  upload_date: '2014-08-26'
+  duration: 898
+  captions: auto
+  file: 2014/2014-08-26-session-9-random-walks-and-momentum.md
+- id: WKiQJryfKsk
+  title: 'Session 27: Too Good to be true? Pure Arbitrage'
+  upload_date: '2014-08-26'
+  captions: none
+  file: null
+- id: XEJockZRcMw
+  title: 'Session 23: Information Trading - Following the insiders'
+  upload_date: '2014-08-26'
+  duration: 750
+  captions: auto
+  file: 2014/2014-08-26-session-23-information-trading-following-the-insiders.md
+- id: b0HNM_3jKvY
+  title: 'Session 34: Market Timing - Does it Work?'
+  upload_date: '2014-08-26'
+  duration: 1053
+  captions: auto
+  file: 2014/2014-08-26-session-34-market-timing-does-it-work.md
+- id: bUJUGsDQ16w
+  title: 'Session 5: Valuation - The Basics'
+  upload_date: '2014-08-26'
+  duration: 1653
+  captions: auto
+  file: 2014/2014-08-26-session-5-valuation-the-basics.md
+- id: dDXFCsJZP2I
+  title: 'Session 14: Value Investing - The Contrarians'
+  upload_date: '2014-08-26'
+  duration: 734
+  captions: auto
+  file: 2014/2014-08-26-session-14-value-investing-the-contrarians.md
+- id: dOtiJHnLQCA
+  title: 'Session 18: Get in on the ground floor - The IPO story'
+  upload_date: '2014-08-26'
+  duration: 823
+  captions: auto
+  file: 2014/2014-08-26-session-18-get-in-on-the-ground-floor-the-ipo-story.md
+- id: dfiWWStJgek
+  title: 'Session 2: Understanding Risk - The Risk in Bonds'
+  upload_date: '2014-08-26'
+  duration: 965
+  captions: auto
+  file: 2014/2014-08-26-session-2-understanding-risk-the-risk-in-bonds.md
+- id: e0i3qH_8R_4
+  title: 'Session 11: Technical Analysis'
+  upload_date: '2014-08-26'
+  duration: 1059
+  captions: auto
+  file: 2014/2014-08-26-session-11-technical-analysis.md
+- id: eQbZlbmbIJs
+  title: 'Session 37: Passive Investing Choices'
+  upload_date: '2014-08-26'
+  duration: 848
+  captions: auto
+  file: 2014/2014-08-26-session-37-passive-investing-choices.md
+- id: eTGOEWtntWI
+  title: 'Session 21: Growth Investing - Against the tide of history?'
+  upload_date: '2014-08-26'
+  duration: 662
+  captions: auto
+  file: 2014/2014-08-26-session-21-growth-investing-against-the-tide-of-history.md
+- id: ewblM3NG028
+  title: 'Session 28: Close Enough? Near Arbitrage'
+  upload_date: '2014-08-26'
+  duration: 807
+  captions: auto
+  file: 2014/2014-08-26-session-28-close-enough-near-arbitrage.md
+- id: gwAlE6q6UuA
+  title: 'Session 19: Growth Investing - Growth at a reasonable price (GARP)'
+  upload_date: '2014-08-26'
+  duration: 811
+  captions: auto
+  file: 2014/2014-08-26-session-19-growth-investing-growth-at-a-reasonable-price-garp.md
+- id: h37fJcDjjWg
+  title: 'Investment Philosophies: Overview of class'
+  upload_date: '2014-08-26'
+  duration: 287
+  captions: auto
+  file: 2014/2014-08-26-investment-philosophies-overview-of-class.md
+- id: kEHvOptWiUs
+  title: 'Session 38: The Grand Finale'
+  upload_date: '2014-08-26'
+  duration: 825
+  captions: auto
+  file: 2014/2014-08-26-session-38-the-grand-finale.md
+- id: lNptwXfmisQ
+  title: 'Session 31: Market Timing - Nonfinancial & Technical Indicators'
+  upload_date: '2014-08-26'
+  duration: 1195
+  captions: auto
+  file: 2014/2014-08-26-session-31-market-timing-nonfinancial-technical-indicators.md
+- id: qaDFkAh3J4k
+  title: 'Session 4: Financial Statement Analysis'
+  upload_date: '2014-08-26'
+  duration: 1220
+  captions: auto
+  file: 2014/2014-08-26-session-4-financial-statement-analysis.md
+- id: rpItkmNa2YE
+  title: 'Session 15: Value Investing - The Activists'
+  upload_date: '2014-08-26'
+  duration: 1319
+  captions: auto
+  file: 2014/2014-08-26-session-15-value-investing-the-activists.md
+- id: s4oaIxJhrO8
+  title: 'Session 35: The case for passive investing -Active Investor Track Records'
+  upload_date: '2014-08-26'
+  duration: 893
+  captions: auto
+  file: 2014/2014-08-26-session-35-the-case-for-passive-investing-active-investor-track.md
+- id: shOnY8QWnDk
+  title: 'Session 20: Activist Growth Investing - Be your own change agent'
+  upload_date: '2014-08-26'
+  duration: 835
+  captions: auto
+  file: 2014/2014-08-26-session-20-activist-growth-investing-be-your-own-change-agent.md
+- id: uHtcrQg2fEI
+  title: 'Session 29: Not Riskless - Pseudo & Speculative Arbitrage'
+  upload_date: '2014-08-26'
+  duration: 870
+  captions: auto
+  file: 2014/2014-08-26-session-29-not-riskless-pseudo-speculative-arbitrage.md
+- id: zNrzqkNkaso
+  title: 'Session 32: Market Timing Approaches - Mean Reversion & Macro Fundamentals'
+  upload_date: '2014-08-26'
+  captions: none
+  file: null
+- id: zY82OrGCf5I
+  title: 'Session 26: Information Trading - Public information, other than earnings'
+  upload_date: '2014-08-26'
+  duration: 1249
+  captions: auto
+  file: 2014/2014-08-26-session-26-information-trading-public-information-other-than-earnings.md
+- id: 2H37SOSDqaA
+  title: 'Session 1: Setting up the class'
+  upload_date: '2014-09-05'
+  duration: 4730
+  captions: auto
+  file: 2014/2014-09-05-session-1-setting-up-the-class.md
+- id: gzmxH6aCkYE
+  title: 'Valuation Tools Webcast #1: Getting Data'
+  upload_date: '2014-09-05'
+  duration: 903
+  captions: auto
+  file: 2014/2014-09-05-valuation-tools-webcast-1-getting-data.md
+- id: imfy-O9QuVc
+  title: 'Valuation Tools Webcast #2: Estimating Risk free Rates'
+  upload_date: '2014-09-12'
+  duration: 838
+  captions: auto
+  file: 2014/2014-09-12-valuation-tools-webcast-2-estimating-risk-free-rates.md
+- id: NZICjFahlPU
+  title: 'Valuation Tools Webcast #3: Implied Equity Risk Premiums'
+  upload_date: '2014-09-18'
+  duration: 1107
+  captions: auto
+  file: 2014/2014-09-18-valuation-tools-webcast-3-implied-equity-risk-premiums.md
+- id: 3xKK2Baiso0
+  title: 'Valuation Tools Webcast #6: Estimating Trailing 12-month number'
+  upload_date: '2014-09-27'
+  duration: 1036
+  captions: auto
+  file: 2014/2014-09-27-valuation-tools-webcast-6-estimating-trailing-12-month-number.md
+- id: Y_UpzqNk3I4
+  title: 'Valuation Tools Webcast #5: Capitalizing R&D'
+  upload_date: '2014-09-27'
+  captions: none
+  file: null
+- id: cxAM6p8dyS4
+  title: 'Valuation Tools Webcast #4: Capitalizing Leases'
+  upload_date: '2014-09-27'
+  captions: none
+  file: null
+- id: An2SduBDYQE
+  title: 'Valuation Tools Webcast #7: Measuring Accounting Returns'
+  upload_date: '2014-10-03'
+  duration: 1242
+  captions: auto
+  file: 2014/2014-10-03-valuation-tools-webcast-7-measuring-accounting-returns.md
+- id: JW-S4BVSZV0
+  title: 'Valuation Tools Webcast #8: Terminal Value'
+  upload_date: '2014-10-08'
+  duration: 875
+  captions: auto
+  file: 2014/2014-10-08-valuation-tools-webcast-8-terminal-value.md
+- id: -sGw4oLPTsM
+  title: 'Valuation Tools Webcast #9: Dealing with Employee Options'
+  upload_date: '2014-10-16'
+  captions: none
+  file: null
+- id: hARFCjXQ-G0
+  title: 'Valuation Tools Webcast #11: Enterprise Value, Firm Value and Equity Value'
+  upload_date: '2014-10-31'
+  duration: 1387
+  captions: auto
+  file: 2014/2014-10-31-valuation-tools-webcast-11-enterprise-value-firm-value-and-equity.md
+- id: ttBmW0Dg0nQ
+  title: 'Valuation Tools Webcast #12: Analyzing data for multiples'
+  upload_date: '2014-11-07'
+  duration: 963
+  captions: auto
+  file: 2014/2014-11-07-valuation-tools-webcast-12-analyzing-data-for-multiples.md
+- id: 7nQ0A-wlcUg
+  title: 'Valuation Tools Webcast #13: The Option to Delay (Valuing Patents)'
+  upload_date: '2014-11-14'
+  duration: 895
+  captions: auto
+  file: 2014/2014-11-14-valuation-tools-webcast-13-the-option-to-delay-valuing-patents.md
+- id: H_MCn5J0jfg
+  title: 'Valuation Tools Webcast #14: Valuing Equity as an Option'
+  upload_date: '2014-11-22'
+  duration: 941
+  captions: auto
+  file: 2014/2014-11-22-valuation-tools-webcast-14-valuing-equity-as-an-option.md
+- id: 6OkATW85CWQ
+  title: 'Corporate Finance Spring 2015: Pre-class Intro'
+  upload_date: '2015-01-28'
+  duration: 117
+  captions: auto
+  file: 2015/2015-01-28-corporate-finance-spring-2015-pre-class-intro.md
+- id: QUqvztYc8rQ
+  title: Valuation Spring 2015 Pre-class Introduction
+  upload_date: '2015-01-28'
+  duration: 93
+  captions: auto
+  file: 2015/2015-01-28-valuation-spring-2015-pre-class-introduction.md
+- id: hc9JuBlfor4
+  title: 'Session 1: Setting the table'
+  upload_date: '2015-02-03'
+  duration: 5402
+  captions: auto
+  file: 2015/2015-02-03-session-1-setting-the-table.md
+- id: l4Vb6mJqURs
+  title: 'Session 1: Introduction to class'
+  upload_date: '2015-02-03'
+  duration: 5400
+  captions: auto
+  file: 2015/2015-02-03-session-1-introduction-to-class.md
+- id: auDyN7CUUes
+  title: 'Session 2: Corporate Governance - The Board of Directors'
+  upload_date: '2015-02-05'
+  duration: 5402
+  captions: auto
+  file: 2015/2015-02-05-session-2-corporate-governance-the-board-of-directors.md
+- id: vglmUsoQnrA
+  title: 'Session 2: Valuation Approaches'
+  upload_date: '2015-02-05'
+  duration: 5400
+  captions: auto
+  file: 2015/2015-02-05-session-2-valuation-approaches.md
+- id: 3yCJeFpgt-Y
+  title: 'In Practice Webcast #1: Corporate Governance'
+  upload_date: '2015-02-06'
+  duration: 834
+  captions: auto
+  file: 2015/2015-02-06-in-practice-webcast-1-corporate-governance.md
+- id: US7KiWAbw7U
+  title: 'Session 3: Balancing Competing Interests'
+  upload_date: '2015-02-10'
+  captions: none
+  file: null
+- id: tWNILsaArzk
+  title: 'Session 3: DCF Basics and the Risk free rate'
+  upload_date: '2015-02-10'
+  duration: 5399
+  captions: auto
+  file: 2015/2015-02-10-session-3-dcf-basics-and-the-risk-free-rate.md
+- id: LJSGhINU2yk
+  title: 'Session 4: Equity Risk Premiums - Historical & Country'
+  upload_date: '2015-02-12'
+  duration: 5401
+  captions: auto
+  file: 2015/2015-02-12-session-4-equity-risk-premiums-historical-country.md
+- id: NhGTHp0ouYk
+  title: 'Session 4: Alternatives to Stock Price Maximization and First Steps on Risk'
+  upload_date: '2015-02-12'
+  duration: 5408
+  captions: auto
+  file: 2015/2015-02-12-session-4-alternatives-to-stock-price-maximization-and-first-steps-on.md
+- id: x_H_4KTeOkc
+  title: 'In-Practice Webcast #2: Analyzing the stockholder base'
+  upload_date: '2015-02-13'
+  duration: 1466
+  captions: auto
+  file: 2015/2015-02-13-in-practice-webcast-2-analyzing-the-stockholder-base.md
+- id: JFcvrF2wIqM
+  title: 'Session 5: Risk and Return Models'
+  upload_date: '2015-02-19'
+  duration: 5402
+  captions: auto
+  file: 2015/2015-02-19-session-5-risk-and-return-models.md
+- id: cWpWGl49UHg
+  title: 'Session 5: Implied Equity Risk Premiums & First steps on relative risk measures'
+  upload_date: '2015-02-19'
+  duration: 5407
+  captions: auto
+  file: 2015/2015-02-19-session-5-implied-equity-risk-premiums-first-steps-on-relative-risk.md
+- id: UzUJzdn7c2w
+  title: 'Valuation Tools Webcast: Reading a 10K'
+  upload_date: '2015-02-20'
+  duration: 2607
+  captions: auto
+  file: 2015/2015-02-20-valuation-tools-webcast-reading-a-10k.md
+- id: XfwURrJXt9E
+  title: 'Session 5: Implied Equity Risk Premiums (Fixed with slides)'
+  upload_date: '2015-02-23'
+  duration: 5402
+  captions: auto
+  file: 2015/2015-02-23-session-5-implied-equity-risk-premiums-fixed-with-slides.md
+- id: kG50tjpthFs
+  title: 'Session 6: Equity Risk Premiums'
+  upload_date: '2015-02-24'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-02-24-session-6-equity-risk-premiums.md
+- id: wGyEpg1aRU0
+  title: 'Session 6: Measuring Beta, cost of debt & capital'
+  upload_date: '2015-02-24'
+  duration: 5073
+  captions: auto
+  file: 2015/2015-02-24-session-6-measuring-beta-cost-of-debt-capital.md
+- id: c21W1nKkq3Y
+  title: 'In Practice Webcast #4: Reading a Regression Beta Page'
+  upload_date: '2015-02-25'
+  duration: 914
+  captions: auto
+  file: 2015/2015-02-25-in-practice-webcast-4-reading-a-regression-beta-page.md
+- id: HQXPbDIRhIQ
+  title: 'Session 7: Beta - Regression Diagnostics and Expected Returns'
+  upload_date: '2015-02-26'
+  duration: 5405
+  captions: auto
+  file: 2015/2015-02-26-session-7-beta-regression-diagnostics-and-expected-returns.md
+- id: v0j-Q8SefNw
+  title: 'Session 7: Earnings and Cash flows -I'
+  upload_date: '2015-02-26'
+  duration: 5404
+  captions: auto
+  file: 2015/2015-02-26-session-7-earnings-and-cash-flows-i.md
+- id: UXI6idVlRas
+  title: 'Session 8: Determinants of Betas'
+  upload_date: '2015-03-02'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-03-02-session-8-determinants-of-betas.md
+- id: WJe1nA8pAMk
+  title: 'Session 8: More on cash flows & first steps on growth'
+  upload_date: '2015-03-03'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-03-03-session-8-more-on-cash-flows-first-steps-on-growth.md
+- id: 4y7ra_tzTyo
+  title: 'Session 9: Fundamental Growth'
+  upload_date: '2015-03-05'
+  duration: 3645
+  captions: auto
+  file: 2015/2015-03-05-session-9-fundamental-growth.md
+- id: clMhxXAFAMI
+  title: 'Session 9: Estimating bottom up betas for companies'
+  upload_date: '2015-03-05'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-03-05-session-9-estimating-bottom-up-betas-for-companies.md
+- id: G75Z1wb3o9Q
+  title: 'In-Practice Webcast #5: Estimating a bottom up beta'
+  upload_date: '2015-03-06'
+  duration: 1000
+  captions: auto
+  file: 2015/2015-03-06-in-practice-webcast-5-estimating-a-bottom-up-beta.md
+- id: OXsDXBXX6Kk
+  title: 'Quiz 1: Review Session'
+  upload_date: '2015-03-07'
+  duration: 4086
+  captions: auto
+  file: 2015/2015-03-07-quiz-1-review-session.md
+- id: U9F8l757sp8
+  title: Review Session for Quiz 1
+  upload_date: '2015-03-07'
+  duration: 3037
+  captions: auto
+  file: 2015/2015-03-07-review-session-for-quiz-1.md
+- id: hfwYFncELWo
+  title: 'Session 10: Debt and its cost'
+  upload_date: '2015-03-09'
+  duration: 3301
+  captions: auto
+  file: 2015/2015-03-09-session-10-debt-and-its-cost.md
+- id: 6a33pxwx1-I
+  title: 'Session 10: Terminal Value'
+  upload_date: '2015-03-10'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-03-10-session-10-terminal-value.md
+- id: R5vaEkbXgDs
+  title: 'Session 11: Loose Ends in Valuation: Cash, Cross holdings & Other Assets'
+  upload_date: '2015-03-12'
+  duration: 5405
+  captions: auto
+  file: 2015/2015-03-12-session-11-loose-ends-in-valuation-cash-cross-holdings-other-assets.md
+- id: cqmkxIvwyfs
+  title: 'Session 11: Cost of Capital & First Steps on Returns'
+  upload_date: '2015-03-12'
+  duration: 5405
+  captions: auto
+  file: 2015/2015-03-12-session-11-cost-of-capital-first-steps-on-returns.md
+- id: whwRBL3EdtY
+  title: 'In Practice Webcast #6: Debt and its Cost'
+  upload_date: '2015-03-12'
+  duration: 1199
+  captions: auto
+  file: 2015/2015-03-12-in-practice-webcast-6-debt-and-its-cost.md
+- id: GrMFRdvmGWw
+  title: 'Session 12: From earnings to time-weighted incremental cash flows'
+  upload_date: '2015-03-23'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-03-23-session-12-from-earnings-to-time-weighted-incremental-cash-flows.md
+- id: _KUbbNMxD6U
+  title: 'Session 12: Last loose ends, narrative + numbers and first valuation'
+  upload_date: '2015-03-24'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-03-24-session-12-last-loose-ends-narrative-numbers-and-first-valuation.md
+- id: B6YmeZgYAAM
+  title: 'Session 13: Dealing with Uncertainty and Equity Analysis'
+  upload_date: '2015-03-25'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-03-25-session-13-dealing-with-uncertainty-and-equity-analysis.md
+- id: aHC4kIWY0kg
+  title: 'Session 13: The Dark Side of Valuation (Valuing markets & young companies)'
+  upload_date: '2015-03-26'
+  duration: 5407
+  captions: auto
+  file: 2015/2015-03-26-session-13-the-dark-side-of-valuation-valuing-markets-young-companies.md
+- id: doAttvLbmiM
+  title: 'Session 14: Project interactions, side costs & benefits'
+  upload_date: '2015-03-30'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-03-30-session-14-project-interactions-side-costs-benefits.md
+- id: X3cVVSBlKho
+  title: 'Session 14: More on the Dark Side (Emerging Market, Financial Service and Transition Companies)'
+  upload_date: '2015-03-31'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-03-31-session-14-more-on-the-dark-side-emerging-market-financial-service.md
+- id: _TDre-6j-ww
+  title: 'Session 15: Valuing Cyclical Companies, Value and Price and first steps on Relative Value'
+  upload_date: '2015-04-02'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-04-02-session-15-valuing-cyclical-companies-value-and-price-and-first-steps.md
+- id: x0VJaqv9YW4
+  title: 'In Practice Webcast #8: Analyzing a typical project'
+  upload_date: '2015-04-03'
+  duration: 730
+  captions: auto
+  file: 2015/2015-04-03-in-practice-webcast-8-analyzing-a-typical-project.md
+- id: ePJ4lE3kk0Q
+  title: 'Session 16: The Debt Equity Trade off'
+  upload_date: '2015-04-06'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-04-06-session-16-the-debt-equity-trade-off.md
+- id: 2RFILo4D6Ww
+  title: 'Session 16: Describing and Analyzing Multiples'
+  upload_date: '2015-04-07'
+  duration: 3231
+  captions: auto
+  file: 2015/2015-04-07-session-16-describing-and-analyzing-multiples.md
+- id: 1amZ8MYn8T0
+  title: 'Session 17: The cost of capital approach to optimizing financing mix'
+  upload_date: '2015-04-09'
+  duration: 2964
+  captions: auto
+  file: 2015/2015-04-09-session-17-the-cost-of-capital-approach-to-optimizing-financing-mix.md
+- id: yf5qbBYdmv0
+  title: 'Session 17: Analyzing multiples (contd) and applying multiples'
+  upload_date: '2015-04-09'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-04-09-session-17-analyzing-multiples-contd-and-applying-multiples.md
+- id: W8t9aDjKgpw
+  title: 'In Practice Webcast #9: The Trade off on Debt'
+  upload_date: '2015-04-10'
+  duration: 1391
+  captions: auto
+  file: 2015/2015-04-10-in-practice-webcast-9-the-trade-off-on-debt.md
+- id: KIwYXWskYYU
+  title: Introduction to Valuation Session
+  upload_date: '2015-04-13'
+  duration: 160
+  captions: auto
+  file: 2015/2015-04-13-introduction-to-valuation-session.md
+- id: LFa-h4zIsdk
+  title: 'Session 18: More on the Cost of Capital Approach to Optimizing Financing Choices'
+  upload_date: '2015-04-13'
+  duration: 5407
+  captions: auto
+  file: 2015/2015-04-13-session-18-more-on-the-cost-of-capital-approach-to-optimizing.md
+- id: gbtB1g2bK4M
+  title: Introduction to corporate finance session
+  upload_date: '2015-04-13'
+  duration: 132
+  captions: auto
+  file: 2015/2015-04-13-introduction-to-corporate-finance-session.md
+- id: rqNsMXGryOs
+  title: 'Session 18: Applying Multiples and Market Regressions'
+  upload_date: '2015-04-14'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-04-14-session-18-applying-multiples-and-market-regressions.md
+- id: PedOLRN-gP8
+  title: 'Session 19: APV & Relative Analysis - Capital Structure'
+  upload_date: '2015-04-16'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-04-16-session-19-apv-relative-analysis-capital-structure.md
+- id: rhCA6-4HKHo
+  title: 'Session 19: Choosing the right multiple, asset based valuation'
+  upload_date: '2015-04-16'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-04-16-session-19-choosing-the-right-multiple-asset-based-valuation.md
+- id: RuaQvw5zHQQ
+  title: 'In Practice Webcast #10: Estimating an Optimal Debt Ratio'
+  upload_date: '2015-04-17'
+  duration: 1189
+  captions: auto
+  file: 2015/2015-04-17-in-practice-webcast-10-estimating-an-optimal-debt-ratio.md
+- id: COvRmoUIctk
+  title: 'Session 20: Moving to Optimal & Designing the Right Debt'
+  upload_date: '2015-04-20'
+  duration: 5404
+  captions: auto
+  file: 2015/2015-04-20-session-20-moving-to-optimal-designing-the-right-debt.md
+- id: NKR6XbUPNbE
+  title: 'Session 20: Valuing Private Business (for sale and IPO)'
+  upload_date: '2015-04-21'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-04-21-session-20-valuing-private-business-for-sale-and-ipo.md
+- id: IYASceAnMPk
+  title: 'Session 21: Debt Design & First Steps on Dividends'
+  upload_date: '2015-04-22'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-04-22-session-21-debt-design-first-steps-on-dividends.md
+- id: I3_UPhHgdEs
+  title: 'Session 21: Real Options - Introduction & Valuing Patents'
+  upload_date: '2015-04-23'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-04-23-session-21-real-options-introduction-valuing-patents.md
+- id: ozpSk80ZNC0
+  title: 'In Practice Webcast #11: Designing Debt'
+  upload_date: '2015-04-24'
+  duration: 1190
+  captions: auto
+  file: 2015/2015-04-24-in-practice-webcast-11-designing-debt.md
+- id: BnzIOCQMzug
+  title: 'Session 22: Natural Resource Options and the Option to Expand'
+  upload_date: '2015-04-28'
+  duration: 3255
+  captions: auto
+  file: 2015/2015-04-28-session-22-natural-resource-options-and-the-option-to-expand.md
+- id: Ds6yjE_YcRA
+  title: 'Session 22: The Trade off on Dividend Policy'
+  upload_date: '2015-04-28'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-04-28-session-22-the-trade-off-on-dividend-policy.md
+- id: n4TV0yVptwc
+  title: 'Session 23: Dividends, Potential Dividends and Cash Balances'
+  upload_date: '2015-04-30'
+  duration: 3362
+  captions: auto
+  file: 2015/2015-04-30-session-23-dividends-potential-dividends-and-cash-balances.md
+- id: xIrDablVQH0
+  title: 'Session 23: Valuing flexibility and distressed equity as options'
+  upload_date: '2015-04-30'
+  duration: 5407
+  captions: auto
+  file: 2015/2015-04-30-session-23-valuing-flexibility-and-distressed-equity-as-options.md
+- id: jmMDsmLUcp8
+  title: 'In Practice Webcast #12: The Trade off on Dividends'
+  upload_date: '2015-05-01'
+  duration: 650
+  captions: auto
+  file: 2015/2015-05-01-in-practice-webcast-12-the-trade-off-on-dividends.md
+- id: lJU-CH7xCbg
+  title: 'In Practice Webcast #13: Dividend Assessment'
+  upload_date: '2015-05-01'
+  duration: 1050
+  captions: auto
+  file: 2015/2015-05-01-in-practice-webcast-13-dividend-assessment.md
+- id: PEcF-LftAM8
+  title: 'In Practice Webcast #13: Dividend Assessment'
+  upload_date: '2015-05-02'
+  duration: 788
+  captions: auto
+  file: 2015/2015-05-02-in-practice-webcast-13-dividend-assessment.md
+- id: 69nS-yQ7IJ0
+  title: 'Session 24: Closing the books on dividends & First steps on value'
+  upload_date: '2015-05-05'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-05-05-session-24-closing-the-books-on-dividends-first-steps-on-value.md
+- id: qtWbRzhmBOY
+  title: 'Session 24: Acquisition Valuation'
+  upload_date: '2015-05-05'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-05-05-session-24-acquisition-valuation.md
+- id: nWprVNdV6Mk
+  title: 'Session 25: More on valuation'
+  upload_date: '2015-05-06'
+  duration: 5407
+  captions: auto
+  file: 2015/2015-05-06-session-25-more-on-valuation.md
+- id: ZG8N6-wzrt0
+  title: 'Session 25: Value Enhancement'
+  upload_date: '2015-05-07'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-05-07-session-25-value-enhancement.md
+- id: owpVuclcX_k
+  title: 'Session 26: Closing and Review'
+  upload_date: '2015-05-11'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-05-11-session-26-closing-and-review.md
+- id: BDEY4XCJrQI
+  title: 'Session 26: The Grand Finale'
+  upload_date: '2015-05-12'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-05-12-session-26-the-grand-finale.md
+- id: Kf2J75wcp0Y
+  title: What is this class about?
+  upload_date: '2015-08-19'
+  duration: 148
+  captions: auto
+  file: 2015/2015-08-19-what-is-this-class-about.md
+- id: ZWwsOan0tHk
+  title: 'The Macro Delusion and Pricing Bubbles: The Good, Bad and the Ugly!'
+  upload_date: '2015-08-31'
+  duration: 976
+  captions: auto
+  file: 2015/2015-08-31-the-macro-delusion-and-pricing-bubbles-the-good-bad-and-the-ugly.md
+- id: CgNbYWCAlKk
+  title: 'Session 1: Introduction to class'
+  upload_date: '2015-09-02'
+  duration: 4806
+  captions: auto
+  file: 2015/2015-09-02-session-1-introduction-to-class.md
+- id: w53VF5Wl4lY
+  title: The Fed did it!
+  upload_date: '2015-09-08'
+  duration: 723
+  captions: auto
+  file: 2015/2015-09-08-the-fed-did-it.md
+- id: Oed9lDWLNf0
+  title: 'Session 2: The Bermuda Triangle of Valuation & the big picture'
+  upload_date: '2015-09-09'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-09-09-session-2-the-bermuda-triangle-of-valuation-the-big-picture.md
+- id: dkiMMEIPrl0
+  title: The Naming Game
+  upload_date: '2015-09-10'
+  duration: 1103
+  captions: auto
+  file: 2015/2015-09-10-the-naming-game.md
+- id: HU6jOtcZh3U
+  title: 'The Uber Narrative Rollercoaster: A Wild Ride!'
+  upload_date: '2015-09-16'
+  duration: 1304
+  captions: auto
+  file: 2015/2015-09-16-the-uber-narrative-rollercoaster-a-wild-ride.md
+- id: YfSkfocRudw
+  title: 'Session 3: The Risk Free Rate'
+  upload_date: '2015-09-16'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-09-16-session-3-the-risk-free-rate.md
+- id: iChidBix2D8
+  title: 'Session 4: Equity Risk Premiums'
+  upload_date: '2015-09-21'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-09-21-session-4-equity-risk-premiums.md
+- id: O69Rnb_lESs
+  title: No happy ending? My Vale Journey
+  upload_date: '2015-09-26'
+  duration: 585
+  captions: auto
+  file: 2015/2015-09-26-no-happy-ending-my-vale-journey.md
+- id: Xshh9a7_wE4
+  title: 'Session 5: ERP and Relative Risk Measures'
+  upload_date: '2015-09-28'
+  captions: none
+  file: null
+- id: Jr4codgQhzg
+  title: 'Session 6: Cost of Debt and Capital'
+  upload_date: '2015-09-30'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-09-30-session-6-cost-of-debt-and-capital.md
+- id: oDcrCKpFYO0
+  title: 'The Price of Scandal: Sturm und Drang at Volkswagen'
+  upload_date: '2015-10-01'
+  duration: 912
+  captions: auto
+  file: 2015/2015-10-01-the-price-of-scandal-sturm-und-drang-at-volkswagen.md
+- id: v8MzdFqMbZM
+  title: 'Session 7: Estimating Earnings'
+  upload_date: '2015-10-05'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-10-05-session-7-estimating-earnings.md
+- id: 4TrnrRnqEuo
+  title: 'Session 8: From Earnings to Cash Flows'
+  upload_date: '2015-10-08'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-10-08-session-8-from-earnings-to-cash-flows.md
+- id: LhkalvrWdUU
+  title: 'Session 9: Analyst Estimates of Growth & Fundamental Growth'
+  upload_date: '2015-10-13'
+  duration: 3667
+  captions: auto
+  file: 2015/2015-10-13-session-9-analyst-estimates-of-growth-fundamental-growth-2.md
+- id: n81XhEAk9ko
+  title: 'Session 9: Analyst Estimates of Growth & Fundamental Growth'
+  upload_date: '2015-10-13'
+  duration: 2797
+  captions: auto
+  file: 2015/2015-10-13-session-9-analyst-estimates-of-growth-fundamental-growth.md
+- id: NvmVdvYelvY
+  title: 'Session 10: Fundamental Growth & Terminal Value'
+  upload_date: '2015-10-14'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-10-14-session-10-fundamental-growth-terminal-value.md
+- id: 53voe62q3DE
+  title: 'The Corporate Life Cycle: Investing, Finance and Management Lessons'
+  upload_date: '2015-10-16'
+  duration: 715
+  captions: auto
+  file: 2015/2015-10-16-the-corporate-life-cycle-investing-finance-and-management-lessons.md
+- id: 7CzaYFdUfQc
+  title: 'Session 11: Choose a DCF Model & Loose Ends in Valuation'
+  upload_date: '2015-10-19'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-10-19-session-11-choose-a-dcf-model-loose-ends-in-valuation.md
+- id: Jnworr-qpN8
+  title: Lyft on or Lyft off? The Other Ride Sharing Companies
+  upload_date: '2015-10-19'
+  duration: 689
+  captions: auto
+  file: 2015/2015-10-19-lyft-on-or-lyft-off-the-other-ride-sharing-companies.md
+- id: bCHnYWEF4UI
+  title: 'A Price Premium for the Prancing Horse: The Ferrari IPO'
+  upload_date: '2015-10-20'
+  duration: 674
+  captions: auto
+  file: 2015/2015-10-20-a-price-premium-for-the-prancing-horse-the-ferrari-ipo.md
+- id: qA3x4vgPc4s
+  title: 'The Future of the Ride Sharing Business: Playing Pundit!'
+  upload_date: '2015-10-21'
+  duration: 911
+  captions: auto
+  file: 2015/2015-10-21-the-future-of-the-ride-sharing-business-playing-pundit.md
+- id: WAiPxHFFHOQ
+  title: Big Deal but is it a good deal? The ABInBev Acquisition of SABMiller
+  upload_date: '2015-10-23'
+  duration: 920
+  captions: auto
+  file: 2015/2015-10-23-big-deal-but-is-it-a-good-deal-the-abinbev-acquisition-of-sabmiller.md
+- id: oqTgu44iUHM
+  title: 'Session 12: More Loose Ends & Narrative and Numbers'
+  upload_date: '2015-10-26'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-10-26-session-12-more-loose-ends-narrative-and-numbers.md
+- id: hsCPurL41tY
+  title: 'Session 13: First Valuations'
+  upload_date: '2015-10-27'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-10-27-session-13-first-valuations.md
+- id: hV_qmHmDP-E
+  title: 'Session 14: More valuations on the dark side'
+  upload_date: '2015-10-28'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-10-28-session-14-more-valuations-on-the-dark-side.md
+- id: v8-aJGb2qe4
+  title: 'Session15: The Last Pieces of Intrinsic Value and First Steps on Pricing'
+  upload_date: '2015-11-02'
+  duration: 5404
+  captions: auto
+  file: 2015/2015-11-02-session15-the-last-pieces-of-intrinsic-value-and-first-steps-on.md
+- id: DIE8niX_-CM
+  title: 'Session 16: Introduction to Relative Valuation (Pricing)'
+  upload_date: '2015-11-04'
+  duration: 3108
+  captions: auto
+  file: 2015/2015-11-04-session-16-introduction-to-relative-valuation-pricing.md
+- id: _UhuQHxs8Eg
+  title: 'Session 17: Pricing - Distribution and Determinants'
+  upload_date: '2015-11-09'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-11-09-session-17-pricing-distribution-and-determinants.md
+- id: 1UJbxudplHM
+  title: 'Session 18: Comparables and Controlling for Pricing Differences'
+  upload_date: '2015-11-12'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-11-12-session-18-comparables-and-controlling-for-pricing-differences.md
+- id: -THL-U7ACBQ
+  title: 'Divergence: The Changing Drug Business'
+  upload_date: '2015-11-13'
+  duration: 606
+  captions: auto
+  file: 2015/2015-11-13-divergence-the-changing-drug-business.md
+- id: qBONKCaAyxo
+  title: 'Runaway Stories and Fairy Tale Endings: The Cautionary Tale of Theranos'
+  upload_date: '2015-11-13'
+  duration: 620
+  captions: auto
+  file: 2015/2015-11-13-runaway-stories-and-fairy-tale-endings-the-cautionary-tale-of-theranos.md
+- id: xzfPeAfJYw8
+  title: 'Checkmate or Stalemate: Valeant''s fall from investing grace'
+  upload_date: '2015-11-13'
+  duration: 733
+  captions: auto
+  file: 2015/2015-11-13-checkmate-or-stalemate-valeants-fall-from-investing-grace.md
+- id: PXFx3Z03A50
+  title: 'Session 19: Closing the Relative Valuation Book & Asset-based Valuation'
+  upload_date: '2015-11-16'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-11-16-session-19-closing-the-relative-valuation-book-asset-based-valuation.md
+- id: Q2eBNHQo1fs
+  title: 'Botox, Viagra or Placebo?: The Pfizer Allergan Deal'
+  upload_date: '2015-11-18'
+  duration: 1088
+  captions: auto
+  file: 2015/2015-11-18-botox-viagra-or-placebo-the-pfizer-allergan-deal.md
+- id: iOBeB_xLcCY
+  title: 'Session 20: Private Company, IPO and VC valuation'
+  upload_date: '2015-11-18'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-11-18-session-20-private-company-ipo-and-vc-valuation.md
+- id: vDPBxX-8DS4
+  title: 'Session 21: Introduction to Real Options'
+  upload_date: '2015-11-23'
+  duration: 3011
+  captions: auto
+  file: 2015/2015-11-23-session-21-introduction-to-real-options.md
+- id: G5nYtBGHsi4
+  title: 'Session 22: The Options to Delay and Expand'
+  upload_date: '2015-11-30'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-11-30-session-22-the-options-to-delay-and-expand.md
+- id: DSgvcfhb354
+  title: 'Session 23: Distressed Equity as an option'
+  upload_date: '2015-12-02'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-12-02-session-23-distressed-equity-as-an-option.md
+- id: -0OxCcgBBdU
+  title: 'Yahoo: The End Game?'
+  upload_date: '2015-12-07'
+  duration: 667
+  captions: auto
+  file: 2015/2015-12-07-yahoo-the-end-game.md
+- id: GvgVP7FkW30
+  title: 'Session 24: Acquisition Valuation'
+  upload_date: '2015-12-07'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-12-07-session-24-acquisition-valuation.md
+- id: MedZ1CxWwIg
+  title: Aging in Dog Years? The Short & Glorious Life of a Tech Company
+  upload_date: '2015-12-09'
+  duration: 649
+  captions: auto
+  file: 2015/2015-12-09-aging-in-dog-years-the-short-glorious-life-of-a-tech-company.md
+- id: sNWbygZ9m88
+  title: 'Session 25: Value Enhancement'
+  upload_date: '2015-12-12'
+  duration: 5406
+  captions: auto
+  file: 2015/2015-12-12-session-25-value-enhancement.md
+- id: 9KjFNxxKpTg
+  title: 'Session 26: Closing and Review'
+  upload_date: '2015-12-14'
+  captions: none
+  file: null
+- id: AgQmAD1kTKA
+  title: 'The Compressed Tech Life Cycle: The Investor Handbook'
+  upload_date: '2015-12-18'
+  duration: 921
+  captions: auto
+  file: 2015/2015-12-18-the-compressed-tech-life-cycle-the-investor-handbook.md
+- id: WJUSokblBcs
+  title: 'The Compressed Tech Life Cycle: The Management Handbook'
+  upload_date: '2015-12-18'
+  duration: 897
+  captions: auto
+  file: 2015/2015-12-18-the-compressed-tech-life-cycle-the-management-handbook.md
+- id: -fmO6btHU28
+  title: 'Intergalactic Finance: Valuing the Star Wars Franchise'
+  upload_date: '2015-12-29'
+  duration: 866
+  captions: auto
+  file: 2015/2015-12-29-intergalactic-finance-valuing-the-star-wars-franchise.md
+- id: ox1ZQ0sbqc8
+  title: Preview of class
+  upload_date: '2016-01-04'
+  duration: 161
+  captions: auto
+  file: 2016/2016-01-04-preview-of-class.md
+- id: 06yBPjxLgcY
+  title: Data Update 2016
+  upload_date: '2016-01-06'
+  duration: 510
+  captions: auto
+  file: 2016/2016-01-06-data-update-2016.md
+- id: ua4oVQ46F98
+  title: 'Session 1 (Undergraduate): Introduction to Class'
+  upload_date: '2016-01-26'
+  duration: 4925
+  captions: auto
+  file: 2016/2016-01-26-session-1-undergraduate-introduction-to-class.md
+- id: SkBNurlXRGs
+  title: 'Session 2 (Undergraduate): More themes in corporate finance & introducing its objective'
+  upload_date: '2016-01-28'
+  duration: 4926
+  captions: auto
+  file: 2016/2016-01-28-session-2-undergraduate-more-themes-in-corporate-finance-introducing.md
+- id: _9OrPhkl8XA
+  title: 'Session 1 (MBA): The Foundations of Corporate Finance'
+  upload_date: '2016-02-01'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-02-01-session-1-mba-the-foundations-of-corporate-finance.md
+- id: IWt9c5AvUwc
+  title: 'Session 3 (Undergraduate): Corporate Governance'
+  upload_date: '2016-02-02'
+  duration: 4926
+  captions: auto
+  file: 2016/2016-02-02-session-3-undergraduate-corporate-governance.md
+- id: d31O4aRU-V0
+  title: 'Session 2 (MBA): The Objective in Corporate Finance'
+  upload_date: '2016-02-03'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-02-03-session-2-mba-the-objective-in-corporate-finance.md
+- id: JGkQzlF4-AM
+  title: 'Session 4 (Undergraduate): Conflicts of Interest and Corporate Objectives'
+  upload_date: '2016-02-04'
+  duration: 4925
+  captions: auto
+  file: 2016/2016-02-04-session-4-undergraduate-conflicts-of-interest-and-corporate-objectives.md
+- id: LyNQJ83doM0
+  title: 'Session 3 (MBA): Managers, Markets and Mayhem'
+  upload_date: '2016-02-08'
+  captions: none
+  file: null
+- id: hgNPhzyt9GY
+  title: 'The Violent Earnings Season: Price and Value Perspectives'
+  upload_date: '2016-02-08'
+  duration: 1011
+  captions: auto
+  file: 2016/2016-02-08-the-violent-earnings-season-price-and-value-perspectives.md
+- id: O0eOdrK85uk
+  title: 'Session 5 (Undergraduate): Risk and Return Models'
+  upload_date: '2016-02-09'
+  duration: 4926
+  captions: auto
+  file: 2016/2016-02-09-session-5-undergraduate-risk-and-return-models.md
+- id: x6mvXMSqEvo
+  title: 'Session 4 (MBA): Closing the books on the objective function'
+  upload_date: '2016-02-10'
+  captions: none
+  file: null
+- id: aDG8HKJQsrU
+  title: 'Session 6 (Undergraduate): Risk free Rates and Risk Premiums (Part 1)'
+  upload_date: '2016-02-11'
+  duration: 4926
+  captions: auto
+  file: 2016/2016-02-11-session-6-undergraduate-risk-free-rates-and-risk-premiums-part-1.md
+- id: U2aYxg7AdJI
+  title: 'The Race to the top: Apple versus Alphabet'
+  upload_date: '2016-02-15'
+  duration: 908
+  captions: auto
+  file: 2016/2016-02-15-the-race-to-the-top-apple-versus-alphabet.md
+- id: ZsjYQ2GTel0
+  title: 'The Disruptive Duo: Amazon and Netflix!'
+  upload_date: '2016-02-17'
+  duration: 811
+  captions: auto
+  file: 2016/2016-02-17-the-disruptive-duo-amazon-and-netflix.md
+- id: v0TdHH8g7cw
+  title: 'Session 5 (MBA): Risk and Return - First Steps'
+  upload_date: '2016-02-17'
+  captions: none
+  file: null
+- id: EAnVj1dJ7dc
+  title: 'Session 7 (Undergraduate): Equity Risk Premiums (Implied) and Company'
+  upload_date: '2016-02-18'
+  duration: 4926
+  captions: auto
+  file: 2016/2016-02-18-session-7-undergraduate-equity-risk-premiums-implied-and-company.md
+- id: D3IGn6tH03c
+  title: 'In Practice 3a: Estimating ERP for a company'
+  upload_date: '2016-02-19'
+  duration: 841
+  captions: auto
+  file: 2016/2016-02-19-in-practice-3a-estimating-erp-for-a-company.md
+- id: dVjSzHBzAUA
+  title: 'Management Matters: Facebook and Twitter'
+  upload_date: '2016-02-19'
+  duration: 861
+  captions: auto
+  file: 2016/2016-02-19-management-matters-facebook-and-twitter.md
+- id: VyhmtQCbOgc
+  title: 'Session 6 (MBA): Risk free Rates and Equity Risk Premiums'
+  upload_date: '2016-02-22'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-02-22-session-6-mba-risk-free-rates-and-equity-risk-premiums.md
+- id: 4v8wnsMevTY
+  title: Icarus or Lazarus? The GoPro and LinkedIn Question
+  upload_date: '2016-02-23'
+  duration: 806
+  captions: auto
+  file: 2016/2016-02-23-icarus-or-lazarus-the-gopro-and-linkedin-question.md
+- id: raSl2NNp1uQ
+  title: 'Session 8 (Undergraduate): Reading a Beta Regression'
+  upload_date: '2016-02-23'
+  duration: 4929
+  captions: auto
+  file: 2016/2016-02-23-session-8-undergraduate-reading-a-beta-regression.md
+- id: -7DYF1dYEuo
+  title: 'Session 7 (MBA): The Greeks are here.. Regression Betas'
+  upload_date: '2016-02-24'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-02-24-session-7-mba-the-greeks-are-here-regression-betas.md
+- id: iqE7iUr53y0
+  title: 'Session 9 (Undergraduate): Determinants of Betas'
+  upload_date: '2016-02-25'
+  duration: 4926
+  captions: auto
+  file: 2016/2016-02-25-session-9-undergraduate-determinants-of-betas.md
+- id: 9t0KEC3NqfA
+  title: 'Session 10 (Undergraduate): Bottom Up Betas'
+  upload_date: '2016-03-01'
+  duration: 4926
+  captions: auto
+  file: 2016/2016-03-01-session-10-undergraduate-bottom-up-betas.md
+- id: N6hPbNg_1fc
+  title: 'Quiz 1: Review Session (Undergraduate)'
+  upload_date: '2016-03-01'
+  duration: 4026
+  captions: auto
+  file: 2016/2016-03-01-quiz-1-review-session-undergraduate.md
+- id: Y1t0fPrfAdo
+  title: 'Session 8 (MBA): Determinants of Betas'
+  upload_date: '2016-03-01'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-03-01-session-8-mba-determinants-of-betas.md
+- id: J5UN2YA0mUE
+  title: 'Session 9 (MBA): Bottom up Betas'
+  upload_date: '2016-03-03'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-03-03-session-9-mba-bottom-up-betas.md
+- id: SPi_es8LCmQ
+  title: 'Session 11(Undergraduate): Debt and its cost'
+  upload_date: '2016-03-03'
+  duration: 2598
+  captions: auto
+  file: 2016/2016-03-03-session-11-undergraduate-debt-and-its-cost.md
+- id: sC3N8Kt8EOw
+  title: 'Session 9 (MBA): Add on to explain bottom up beta'
+  upload_date: '2016-03-03'
+  duration: 698
+  captions: auto
+  file: 2016/2016-03-03-session-9-mba-add-on-to-explain-bottom-up-beta.md
+- id: ZPo46wQGfe0
+  title: Review for Quiz 1 (MBA)
+  upload_date: '2016-03-04'
+  duration: 4026
+  captions: auto
+  file: 2016/2016-03-04-review-for-quiz-1-mba.md
+- id: Lw18Oo8v9SY
+  title: 'Session 10 (MBA): Private Company Betas, Debt and its Cost'
+  upload_date: '2016-03-07'
+  duration: 3026
+  captions: auto
+  file: 2016/2016-03-07-session-10-mba-private-company-betas-debt-and-its-cost.md
+- id: o5nur2yZRiw
+  title: 'Session 12 (Undergraduate): Show me the money (Measuring Investment Returns)'
+  upload_date: '2016-03-08'
+  duration: 4926
+  captions: auto
+  file: 2016/2016-03-08-session-12-undergraduate-show-me-the-money-measuring-investment.md
+- id: e4ES9jYuwwg
+  title: 'Session 11 (MBA): Cost of Capital & First Steps on Investment Analysis'
+  upload_date: '2016-03-09'
+  captions: none
+  file: null
+- id: 4hIu7Gs0-H0
+  title: 'Session 13: From Earnings to Incremental Cash Flows - A Journey'
+  upload_date: '2016-03-10'
+  duration: 4926
+  captions: auto
+  file: 2016/2016-03-10-session-13-from-earnings-to-incremental-cash-flows-a-journey.md
+- id: l2uFBD2v8BI
+  title: 'Negative Interest rates: Impossible, Irrational or Just Unusual'
+  upload_date: '2016-03-11'
+  duration: 1509
+  captions: auto
+  file: 2016/2016-03-11-negative-interest-rates-impossible-irrational-or-just-unusual.md
+- id: dIj36NnSIRE
+  title: 'Session 12 (MBA): Earnings to Cash flows to Incremental Cash Flows'
+  upload_date: '2016-03-21'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-03-21-session-12-mba-earnings-to-cash-flows-to-incremental-cash-flows.md
+- id: hjf2LN04zf8
+  title: 'Session 14 (Undergraduate): Time Weighted Returns & Equity Analysis'
+  upload_date: '2016-03-22'
+  captions: none
+  file: null
+- id: P7cZgQbBhJE
+  title: 'Session 13 (MBA): Time Weighted CF returns, Uncertainty & Equity Analysis'
+  upload_date: '2016-03-23'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-03-23-session-13-mba-time-weighted-cf-returns-uncertainty-equity-analysis.md
+- id: 42tQjOkYyho
+  title: 'Session 15 (Undergraduate): NPV vs IRR, Side Costs and Side Benefits'
+  upload_date: '2016-03-24'
+  captions: none
+  file: null
+- id: Mp8c6dMH6MI
+  title: 'Session 14 (MBA): To NPV and beyond..'
+  upload_date: '2016-03-28'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-03-28-session-14-mba-to-npv-and-beyond.md
+- id: OyHvZC9aT40
+  title: 'Session 16 (Undergraduate): Options in Projects and First Steps on Debt'
+  upload_date: '2016-03-29'
+  duration: 4926
+  captions: auto
+  file: 2016/2016-03-29-session-16-undergraduate-options-in-projects-and-first-steps-on-debt.md
+- id: Lsq-z9P_g0g
+  title: 'Session 15 (MBA): Netflix Case and Closing the Books on Investment Analysis'
+  upload_date: '2016-03-30'
+  captions: none
+  file: null
+- id: rzLi4VJtpOE
+  title: 'Session 17 (Undergraduate): The Netflix Studio - Case Discussion'
+  upload_date: '2016-03-31'
+  captions: none
+  file: null
+- id: 8VS87oLMHRM
+  title: 'Session 16: The Trade off on Debt'
+  upload_date: '2016-04-04'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-04-04-session-16-the-trade-off-on-debt.md
+- id: ETI9lyhZYxw
+  title: 'Session 18 (Undergraduate): The Debt Trade off (continued)'
+  upload_date: '2016-04-06'
+  duration: 2837
+  captions: auto
+  file: 2016/2016-04-06-session-18-undergraduate-the-debt-trade-off-continued.md
+- id: MoccNJKsa8Y
+  title: 'Session 17 (MBA): The MM Theorem & Cost of capital approach'
+  upload_date: '2016-04-06'
+  duration: 3138
+  captions: auto
+  file: 2016/2016-04-06-session-17-mba-the-mm-theorem-cost-of-capital-approach.md
+- id: uW5NK8vkkAw
+  title: 'Session 19 (Undergraduate): More on the debt trade off & the cost of capital approach'
+  upload_date: '2016-04-07'
+  duration: 4926
+  captions: auto
+  file: 2016/2016-04-07-session-19-undergraduate-more-on-the-debt-trade-off-the-cost-of.md
+- id: RUnEPmo1MsE
+  title: 'Session 18 (MBA): The Cost of Capital and Optimizing Debt'
+  upload_date: '2016-04-11'
+  duration: 5227
+  captions: auto
+  file: 2016/2016-04-11-session-18-mba-the-cost-of-capital-and-optimizing-debt.md
+- id: hNSUygf4bxQ
+  title: 'Session 20 (Undergraduate): The Cost of Capital and Financing Mix'
+  upload_date: '2016-04-12'
+  duration: 4925
+  captions: auto
+  file: 2016/2016-04-12-session-20-undergraduate-the-cost-of-capital-and-financing-mix.md
+- id: RT9kr4u1T7Y
+  title: 'Session 21(Undergraduate): APV, Relative Analysis and Debt Mix'
+  upload_date: '2016-04-13'
+  duration: 4926
+  captions: auto
+  file: 2016/2016-04-13-session-21-undergraduate-apv-relative-analysis-and-debt-mix.md
+- id: ucFlqAElUoc
+  title: 'Session 19 (MBA): APV and Relative Assessment - Optimal Financing Mix'
+  upload_date: '2016-04-13'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-04-13-session-19-mba-apv-and-relative-assessment-optimal-financing-mix.md
+- id: ux4jtuWS28M
+  title: 'Session 20 (MBA): Moving to the Optimal & The Right Kind of Debt'
+  upload_date: '2016-04-18'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-04-18-session-20-mba-moving-to-the-optimal-the-right-kind-of-debt.md
+- id: hIYUcaVbJgY
+  title: 'Session 22 (Undergraduate): Moving to the Optimal & The Right Debt'
+  upload_date: '2016-04-19'
+  captions: none
+  file: null
+- id: 1kP56cX6pH8
+  title: 'Session 23: More Debt Design & First Steps on Dividends'
+  upload_date: '2016-04-20'
+  duration: 4925
+  captions: auto
+  file: 2016/2016-04-20-session-23-more-debt-design-first-steps-on-dividends.md
+- id: 7EO4v4qZRdI
+  title: 'Session 21(MBA): More Debt Design & First Steps on Dividends'
+  upload_date: '2016-04-20'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-04-20-session-21-mba-more-debt-design-first-steps-on-dividends.md
+- id: jAhMqNhL5ho
+  title: 'Valeant: Information Vacuums, Management Credibility and Investment Value'
+  upload_date: '2016-04-20'
+  duration: 1240
+  captions: auto
+  file: 2016/2016-04-20-valeant-information-vacuums-management-credibility-and-investment.md
+- id: gg8MhWjWSs8
+  title: 'Quiz 3: Review Webcast'
+  upload_date: '2016-04-23'
+  duration: 4026
+  captions: auto
+  file: 2016/2016-04-23-quiz-3-review-webcast.md
+- id: IcukHbp9c-M
+  title: 'Session 22(MBA): Dividend Trade Off'
+  upload_date: '2016-04-25'
+  duration: 5225
+  captions: auto
+  file: 2016/2016-04-25-session-22-mba-dividend-trade-off.md
+- id: -oF4BOqn7Vc
+  title: 'Session 24 (Undergraduate): The Trade off on Dividends'
+  upload_date: '2016-04-26'
+  duration: 2902
+  captions: auto
+  file: 2016/2016-04-26-session-24-undergraduate-the-trade-off-on-dividends.md
+- id: giYQ2HxeaWg
+  title: 'Quiz3: Review Session (MBA)'
+  upload_date: '2016-04-26'
+  duration: 4027
+  captions: auto
+  file: 2016/2016-04-26-quiz3-review-session-mba.md
+- id: UKZLPVzHawg
+  title: 'Session 23(MBA): FCFE (Potential Dividends) and Cash Balances'
+  upload_date: '2016-04-27'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-04-27-session-23-mba-fcfe-potential-dividends-and-cash-balances.md
+- id: Adu9jYZc9rw
+  title: 'Session 23(MBA): Potential Dividends and Cash Balances'
+  upload_date: '2016-04-28'
+  duration: 3186
+  captions: auto
+  file: 2016/2016-04-28-session-23-mba-potential-dividends-and-cash-balances.md
+- id: Elf69hLDaWQ
+  title: 'Session 25 (Undergraduate): Potential Dividends and Cash Balances'
+  upload_date: '2016-04-28'
+  duration: 4926
+  captions: auto
+  file: 2016/2016-04-28-session-25-undergraduate-potential-dividends-and-cash-balances.md
+- id: GeNNsiBmn64
+  title: 'Session 24 (MBA): Dividend Analysis and First Steps on Valuation'
+  upload_date: '2016-05-02'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-05-02-session-24-mba-dividend-analysis-and-first-steps-on-valuation.md
+- id: cttCBnIDDxA
+  title: 'Session 26 (Undergraduate): Dividend Closing & Valuation Opening'
+  upload_date: '2016-05-02'
+  duration: 4926
+  captions: auto
+  file: 2016/2016-05-02-session-26-undergraduate-dividend-closing-valuation-opening.md
+- id: m3QZnaIU9N8
+  title: 'Journeying to the Dark Side: Coping with Uncertainty'
+  upload_date: '2016-05-02'
+  duration: 956
+  captions: auto
+  file: 2016/2016-05-02-journeying-to-the-dark-side-coping-with-uncertainty.md
+- id: fD4eidcxoEM
+  title: 'The Margin of Safety: Tool for Action or Excuse for Inaction'
+  upload_date: '2016-05-03'
+  duration: 793
+  captions: auto
+  file: 2016/2016-05-03-the-margin-of-safety-tool-for-action-or-excuse-for-inaction.md
+- id: 9OpT-tJDueY
+  title: 'Session 27 (Undergraduate): Valuation'
+  upload_date: '2016-05-04'
+  duration: 4926
+  captions: auto
+  file: 2016/2016-05-04-session-27-undergraduate-valuation.md
+- id: RCUQdSyX-3Y
+  title: 'Session 25(MBA): Valuation Agonistes'
+  upload_date: '2016-05-04'
+  captions: none
+  file: null
+- id: DYkLNdId81w
+  title: 'Session 26 (MBA): The Last Hurrah!'
+  upload_date: '2016-05-09'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-05-09-session-26-mba-the-last-hurrah.md
+- id: jqNG9Tx1FFM
+  title: 'Session 28(Undergraduate): The Last Hurrah'
+  upload_date: '2016-05-10'
+  duration: 4926
+  captions: auto
+  file: 2016/2016-05-10-session-28-undergraduate-the-last-hurrah.md
+- id: WZ7bwKnONsw
+  title: Review for Final Exam
+  upload_date: '2016-05-11'
+  duration: 4026
+  captions: auto
+  file: 2016/2016-05-11-review-for-final-exam.md
+- id: rFd_qEpYFBc
+  title: 'Stare into the Abyss: Facing up to uncertainty with simulations'
+  upload_date: '2016-05-23'
+  duration: 1291
+  captions: auto
+  file: 2016/2016-05-23-stare-into-the-abyss-facing-up-to-uncertainty-with-simulations.md
+- id: iW7LBGwzxsE
+  title: Icahn exits, Buffett enters, Whither Apple? The Big Name Investor Effect
+  upload_date: '2016-06-06'
+  duration: 829
+  captions: auto
+  file: 2016/2016-06-06-icahn-exits-buffett-enters-whither-apple-the-big-name-investor-effect.md
+- id: r1fZSNF4k_E
+  title: A Preview of my Valuation Seminar
+  upload_date: '2016-06-06'
+  duration: 202
+  captions: auto
+  file: 2016/2016-06-06-a-preview-of-my-valuation-seminar.md
+- id: xFRzdGrK6GM
+  title: 'Brexit: The Signals amidst the Noise'
+  upload_date: '2016-07-06'
+  duration: 1150
+  captions: auto
+  file: 2016/2016-07-06-brexit-the-signals-amidst-the-noise.md
+- id: vKYQ8xU_D2g
+  title: 'Tesla: A Story Stock but what''s the story?'
+  upload_date: '2016-07-19'
+  duration: 1214
+  captions: auto
+  file: 2016/2016-07-19-tesla-a-story-stock-but-whats-the-story.md
+- id: nHtUlirA83Q
+  title: Brunelleschi's Dome
+  upload_date: '2016-08-15'
+  duration: 532
+  captions: auto
+  file: 2016/2016-08-15-brunelleschis-dome.md
+- id: FoqyWlfymMk
+  title: 'The Ride Sharing Business: Is this a Bar Mitzvah Moment?'
+  upload_date: '2016-08-17'
+  duration: 1092
+  captions: auto
+  file: 2016/2016-08-17-the-ride-sharing-business-is-this-a-bar-mitzvah-moment.md
+- id: G-DwtMkeNTo
+  title: Introduction to Class
+  upload_date: '2016-08-17'
+  duration: 149
+  captions: auto
+  file: 2016/2016-08-17-introduction-to-class.md
+- id: uzaixCG5H7o
+  title: 'The Bonfire of Venture Capital: The Good, Bad and Ugly side of Cash Burn'
+  upload_date: '2016-08-19'
+  duration: 1261
+  captions: auto
+  file: 2016/2016-08-19-the-bonfire-of-venture-capital-the-good-bad-and-ugly-side-of-cash-burn.md
+- id: eTLkhWwxdg4
+  title: 'Superman and Stocks: It''s not the cape (CAPE), it''s the kryptonite (Cash Flow)'
+  upload_date: '2016-08-24'
+  duration: 1422
+  captions: auto
+  file: 2016/2016-08-24-superman-and-stocks-its-not-the-cape-cape-its-the-kryptonite-cash-flow.md
+- id: wjVA6XqkWuI
+  title: 'Mean Reversion: Statistical Fact or Dangerous Delusion?'
+  upload_date: '2016-08-31'
+  duration: 1441
+  captions: auto
+  file: 2016/2016-08-31-mean-reversion-statistical-fact-or-dangerous-delusion.md
+- id: uR1wbjzPnbc
+  title: 'The Keystone Kops of Valuation: Lazard, Evercore and the TSLA/SCTY Deal'
+  upload_date: '2016-09-07'
+  duration: 1468
+  captions: auto
+  file: 2016/2016-09-07-the-keystone-kops-of-valuation-lazard-evercore-and-the-tsla-scty-deal.md
+- id: v8BNMjoHhAQ
+  title: 'Session 1: Introduction to the Class'
+  upload_date: '2016-09-07'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-09-07-session-1-introduction-to-the-class.md
+- id: _3xvpxBorZI
+  title: 'Session 2: The Bermuda Triangle and Valuation Approaches'
+  upload_date: '2016-09-12'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-09-12-session-2-the-bermuda-triangle-and-valuation-approaches.md
+- id: fumkkYEu_tk
+  title: 'Fairness Opinions: Time to fish or cut bait!'
+  upload_date: '2016-09-14'
+  duration: 1136
+  captions: auto
+  file: 2016/2016-09-14-fairness-opinions-time-to-fish-or-cut-bait.md
+- id: YHClpvRJDV0
+  title: 'Session 3: The Building Blocks for Intrinsic Value & Risk Free Rates'
+  upload_date: '2016-09-16'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-09-16-session-3-the-building-blocks-for-intrinsic-value-risk-free-rates.md
+- id: xrJnIzTY07s
+  title: 'Session 4: More on risk free rates and first steps on equity risk premiums'
+  upload_date: '2016-09-19'
+  duration: 5225
+  captions: auto
+  file: 2016/2016-09-19-session-4-more-on-risk-free-rates-and-first-steps-on-equity-risk.md
+- id: TiJIjG4so4c
+  title: Inauguration of Association of Israeli Appraisers
+  upload_date: '2016-09-20'
+  duration: 124
+  captions: auto
+  file: 2016/2016-09-20-inauguration-of-association-of-israeli-appraisers.md
+- id: Q7Yaw7gSIXY
+  title: 'Session 5: Implied Equity Risk Premiums'
+  upload_date: '2016-09-21'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-09-21-session-5-implied-equity-risk-premiums.md
+- id: SgzufWkvVVo
+  title: 'Session 5: Implied Equity Risk Premium (audio fixed)'
+  upload_date: '2016-09-22'
+  duration: 4613
+  captions: auto
+  file: 2016/2016-09-22-session-5-implied-equity-risk-premium-audio-fixed.md
+- id: QUmVbZz9nb0
+  title: 'Session 6: Measuring Relative Risk and first steps on cost of debt'
+  upload_date: '2016-09-26'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-09-26-session-6-measuring-relative-risk-and-first-steps-on-cost-of-debt.md
+- id: Ak1RHFA4tvM
+  title: 'Session 7: Cost of Debt and Accounting Earnings'
+  upload_date: '2016-09-28'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-09-28-session-7-cost-of-debt-and-accounting-earnings.md
+- id: S8VbQwPl86w
+  title: 'Venture Capital: It is a pricing, not a value, game!'
+  upload_date: '2016-10-03'
+  duration: 1020
+  captions: auto
+  file: 2016/2016-10-03-venture-capital-it-is-a-pricing-not-a-value-game.md
+- id: zn1gSdphq3Y
+  title: 'Session 8: From Earnings to Cash Flows'
+  upload_date: '2016-10-05'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-10-05-session-8-from-earnings-to-cash-flows.md
+- id: dXhAGTSMlF0
+  title: 'Deutsche Bank: A Greek Tragedy at a German Institution?'
+  upload_date: '2016-10-06'
+  duration: 1065
+  captions: auto
+  file: 2016/2016-10-06-deutsche-bank-a-greek-tragedy-at-a-german-institution.md
+- id: pbndB-8QZhM
+  title: 'Session 9: Analyst Estimates of Growth & Fundamental Growth first steps'
+  upload_date: '2016-10-11'
+  duration: 3157
+  captions: auto
+  file: 2016/2016-10-11-session-9-analyst-estimates-of-growth-fundamental-growth-first-steps.md
+- id: cfnPrUTJbYY
+  title: 'Session 10: Growth Estimates and Terminal Value'
+  upload_date: '2016-10-17'
+  captions: none
+  file: null
+- id: ElZQ8C6UWOA
+  title: 'Session 11: Loose Ends in Valuation'
+  upload_date: '2016-10-19'
+  captions: none
+  file: null
+- id: zKBnFYBN4bo
+  title: 'Session 12: Last Loose Ends & Narrative and Numbers'
+  upload_date: '2016-10-25'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-10-25-session-12-last-loose-ends-narrative-and-numbers.md
+- id: hGPalc0Yu7k
+  title: 'Session 13: Story Changes and First DCFs'
+  upload_date: '2016-10-26'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-10-26-session-13-story-changes-and-first-dcfs.md
+- id: qSY3PgFlNMg
+  title: 'Session 14: The Dark Side of Valuation (Young companies)'
+  upload_date: '2016-11-01'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-11-01-session-14-the-dark-side-of-valuation-young-companies.md
+- id: O3mr3Eapmkg
+  title: 'Session 15: More on the Dark Side of Valuation'
+  upload_date: '2016-11-02'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-11-02-session-15-more-on-the-dark-side-of-valuation.md
+- id: 1zxY0rjm7y8
+  title: 'Discount Rate Myth 3: The Discount Rate cannot change in a DCF!'
+  upload_date: '2016-11-04'
+  duration: 579
+  captions: auto
+  file: 2016/2016-11-04-discount-rate-myth-3-the-discount-rate-cannot-change-in-a-dcf.md
+- id: FbjJqlCo1iM
+  title: 'Discount Rate Myth 2: It''s all about D in a DCF'
+  upload_date: '2016-11-04'
+  duration: 581
+  captions: auto
+  file: 2016/2016-11-04-discount-rate-myth-2-its-all-about-d-in-a-dcf.md
+- id: N7EZ8RVJOt4
+  title: 'Discount Rate Myth 4: The Discount Rate is the receptacle for all your hopes & fears'
+  upload_date: '2016-11-04'
+  duration: 723
+  captions: auto
+  file: 2016/2016-11-04-discount-rate-myth-4-the-discount-rate-is-the-receptacle-for-all-your.md
+- id: _uIowZm1DsY
+  title: 'Discount Rate Myth 1: If you don''t like betas, you cannot do DCF'
+  upload_date: '2016-11-04'
+  duration: 824
+  captions: auto
+  file: 2016/2016-11-04-discount-rate-myth-1-if-you-dont-like-betas-you-cannot-do-dcf.md
+- id: vR19Wsp4ks4
+  title: 'Discount Rate Myth 5: As rates approach zero, value goes to infinity!'
+  upload_date: '2016-11-04'
+  duration: 812
+  captions: auto
+  file: 2016/2016-11-04-discount-rate-myth-5-as-rates-approach-zero-value-goes-to-infinity.md
+- id: DeChWXTg7Og
+  title: 'Session 16: Value and Price - Discerning the Difference'
+  upload_date: '2016-11-07'
+  duration: 5225
+  captions: auto
+  file: 2016/2016-11-07-session-16-value-and-price-discerning-the-difference.md
+- id: hm8GzyqiqMA
+  title: 'Session 17: Analyzing Multiples -- Part 1'
+  upload_date: '2016-11-09'
+  duration: 3111
+  captions: auto
+  file: 2016/2016-11-09-session-17-analyzing-multiples-part-1.md
+- id: mgpE3JkcqOw
+  title: 'The Election Surprise: The Trump Election''s Market Effect'
+  upload_date: '2016-11-11'
+  duration: 1495
+  captions: auto
+  file: 2016/2016-11-11-the-election-surprise-the-trump-elections-market-effect.md
+- id: NRFWRuN-Alw
+  title: 'Session 18: Relative Valuation - Analysis and Application'
+  upload_date: '2016-11-14'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-11-14-session-18-relative-valuation-analysis-and-application.md
+- id: 3hlYsm-OgCM
+  title: 'Session 19: Closing the books on Pricing & Asset-based valuation'
+  upload_date: '2016-11-16'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-11-16-session-19-closing-the-books-on-pricing-asset-based-valuation.md
+- id: 5GfeivOkwMY
+  title: 'All in the family: The Ups and Downs of Family Group Companies'
+  upload_date: '2016-11-17'
+  duration: 1443
+  captions: auto
+  file: 2016/2016-11-17-all-in-the-family-the-ups-and-downs-of-family-group-companies.md
+- id: 6Uo5KPa1b_s
+  title: 'Session 20: Private Company Valuation'
+  upload_date: '2016-11-22'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-11-22-session-20-private-company-valuation.md
+- id: q_KuvziB-5g
+  title: 'Faith, Fear and Feedback: Ready for the Valeant Test?'
+  upload_date: '2016-11-22'
+  duration: 974
+  captions: auto
+  file: 2016/2016-11-22-faith-fear-and-feedback-ready-for-the-valeant-test.md
+- id: uxdJj_4gyAI
+  title: 'Session 21: IPO and VC Valuation & First Steps on Real Options'
+  upload_date: '2016-11-28'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-11-28-session-21-ipo-and-vc-valuation-first-steps-on-real-options.md
+- id: 3T5sAeswybo
+  title: 'Terminal Value Myth 5: The Terminal value ate my DCF!'
+  upload_date: '2016-11-30'
+  duration: 511
+  captions: auto
+  file: 2016/2016-11-30-terminal-value-myth-5-the-terminal-value-ate-my-dcf.md
+- id: PjMTqLvdqfI
+  title: 'Terminal Value Myth 3: Growth is good, more growth is better!'
+  upload_date: '2016-11-30'
+  duration: 729
+  captions: auto
+  file: 2016/2016-11-30-terminal-value-myth-3-growth-is-good-more-growth-is-better.md
+- id: Yd8PKNBW5qo
+  title: 'Terminal Value Myth 2: As g approaches r, it is to Infinity and beyond!'
+  upload_date: '2016-11-30'
+  duration: 623
+  captions: auto
+  file: 2016/2016-11-30-terminal-value-myth-2-as-g-approaches-r-it-is-to-infinity-and-beyond.md
+- id: jco_NwmL_2w
+  title: 'Terminal Value Myth 4: Negative Growth Rates are impossible'
+  upload_date: '2016-11-30'
+  duration: 541
+  captions: auto
+  file: 2016/2016-11-30-terminal-value-myth-4-negative-growth-rates-are-impossible.md
+- id: oBRUXeYweQs
+  title: 'Session 22: The Option to Delay'
+  upload_date: '2016-11-30'
+  duration: 3094
+  captions: auto
+  file: 2016/2016-11-30-session-22-the-option-to-delay.md
+- id: qvsp0gRd6EA
+  title: 'Terminal Value Myth 1: Don''t believe in forever? You can''t do DCF!'
+  upload_date: '2016-11-30'
+  duration: 461
+  captions: auto
+  file: 2016/2016-11-30-terminal-value-myth-1-dont-believe-in-forever-you-cant-do-dcf.md
+- id: nTVkx5ghZ3Q
+  title: 'Session 23: The Options to Expand & Abandon, Financial Flexibility and Distressed Equity'
+  upload_date: '2016-12-05'
+  duration: 5225
+  captions: auto
+  file: 2016/2016-12-05-session-23-the-options-to-expand-abandon-financial-flexibility-and.md
+- id: b4g2ojDYHBA
+  title: 'Session 24: Acquisition Valuation'
+  upload_date: '2016-12-07'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-12-07-session-24-acquisition-valuation.md
+- id: wX4ffhjtjfc
+  title: 'Session 25: Value Enhancement'
+  upload_date: '2016-12-12'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-12-12-session-25-value-enhancement.md
+- id: l7T2ZVHdxK8
+  title: 'Active Investing: Rest in Peace or Resurgent Force?'
+  upload_date: '2016-12-14'
+  duration: 1299
+  captions: auto
+  file: 2016/2016-12-14-active-investing-rest-in-peace-or-resurgent-force.md
+- id: 0ymWTOBTI_k
+  title: 'Session 26: The End Game'
+  upload_date: '2016-12-15'
+  duration: 5226
+  captions: auto
+  file: 2016/2016-12-15-session-26-the-end-game.md
+- id: bafT7qUvcOs
+  title: 'Data 2017 Update 1: The Promise and Perils of Data'
+  upload_date: '2017-01-09'
+  duration: 1089
+  captions: auto
+  file: 2017/2017-01-09-data-2017-update-1-the-promise-and-perils-of-data.md
+- id: 5DEhvVjWOEc
+  title: 'Narrative and Numbers: A number cruncher learns to tell stories!'
+  upload_date: '2017-01-11'
+  duration: 510
+  captions: auto
+  file: 2017/2017-01-11-narrative-and-numbers-a-number-cruncher-learns-to-tell-stories.md
+- id: LbwkAT8bSBI
+  title: 'Data 2017 Update 2: The US Markets in 2016'
+  upload_date: '2017-01-13'
+  duration: 773
+  captions: auto
+  file: 2017/2017-01-13-data-2017-update-2-the-us-markets-in-2016.md
+- id: sx_q72vqIGQ
+  title: 'Data 2017 Update 3: Cracking the Currency Code'
+  upload_date: '2017-01-20'
+  duration: 1039
+  captions: auto
+  file: 2017/2017-01-20-data-2017-update-3-cracking-the-currency-code.md
+- id: B7O29gPiPzk
+  title: 'Session 1: Introduction to the Class'
+  upload_date: '2017-01-24'
+  duration: 4924
+  captions: auto
+  file: 2017/2017-01-24-session-1-introduction-to-the-class.md
+- id: BmtdVKFw_mw
+  title: 'Data 2017 Update 4: Country  Risk'
+  upload_date: '2017-01-24'
+  duration: 906
+  captions: auto
+  file: 2017/2017-01-24-data-2017-update-4-country-risk.md
+- id: G-7QrRSao0A
+  title: 'Data 2017 Update 5: A Taxing Year Ahead?'
+  upload_date: '2017-01-25'
+  duration: 1155
+  captions: auto
+  file: 2017/2017-01-25-data-2017-update-5-a-taxing-year-ahead.md
+- id: ee70wA2vfZ4
+  title: 'Session 2: Setting the Table'
+  upload_date: '2017-01-25'
+  duration: 4924
+  captions: auto
+  file: 2017/2017-01-25-session-2-setting-the-table.md
+- id: WLrEXMN0K7U
+  title: 'Data 2017 Update 6: The Cost of Capital'
+  upload_date: '2017-01-26'
+  duration: 837
+  captions: auto
+  file: 2017/2017-01-26-data-2017-update-6-the-cost-of-capital.md
+- id: 1lkf_hQbE3o
+  title: 'Session 1: Introduction to the Class'
+  upload_date: '2017-01-30'
+  duration: 5224
+  captions: auto
+  file: 2017/2017-01-30-session-1-introduction-to-the-class.md
+- id: j32T9W2CefU
+  title: 'Data 2017 Update 7: Of Good and Bad Businesses!'
+  upload_date: '2017-01-30'
+  duration: 777
+  captions: auto
+  file: 2017/2017-01-30-data-2017-update-7-of-good-and-bad-businesses.md
+- id: Pj19yJQgId8
+  title: 'Session 3: DCF Overview and First Steps on Discount Rates'
+  upload_date: '2017-01-31'
+  duration: 4924
+  captions: auto
+  file: 2017/2017-01-31-session-3-dcf-overview-and-first-steps-on-discount-rates.md
+- id: AC5a_KobBNE
+  title: 'Session 2: The Objective in Corporate Finance'
+  upload_date: '2017-02-01'
+  duration: 5225
+  captions: auto
+  file: 2017/2017-02-01-session-2-the-objective-in-corporate-finance.md
+- id: LcEE5ry3wFE
+  title: 'Data 2017 Update 8: Debt, the Dark and Light Side!'
+  upload_date: '2017-02-01'
+  duration: 710
+  captions: auto
+  file: 2017/2017-02-01-data-2017-update-8-debt-the-dark-and-light-side.md
+- id: Y3SP8JSpJ-I
+  title: 'Session 4: Risk free Rates (continued) and first steps on ERP'
+  upload_date: '2017-02-01'
+  duration: 4922
+  captions: auto
+  file: 2017/2017-02-01-session-4-risk-free-rates-continued-and-first-steps-on-erp.md
+- id: 0VW2o4qAL4c
+  title: 'Session 3: Managers, Markets and Morality'
+  upload_date: '2017-02-06'
+  duration: 5224
+  captions: auto
+  file: 2017/2017-02-06-session-3-managers-markets-and-morality.md
+- id: fxq7egTZg0Y
+  title: 'Data 2017 Update 9: Dividends, Rodney Dangerfield of Corporate Finance'
+  upload_date: '2017-02-06'
+  duration: 1110
+  captions: auto
+  file: 2017/2017-02-06-data-2017-update-9-dividends-rodney-dangerfield-of-corporate-finance.md
+- id: uhy3gKcD8lU
+  title: 'Session 5: Implied Equity Risk Premiums'
+  upload_date: '2017-02-06'
+  duration: 4924
+  captions: auto
+  file: 2017/2017-02-06-session-5-implied-equity-risk-premiums.md
+- id: FDscJkpaukY
+  title: 'Session 4: Closing the books on the objective function & Opening the one on Risk'
+  upload_date: '2017-02-08'
+  duration: 5225
+  captions: auto
+  file: 2017/2017-02-08-session-4-closing-the-books-on-the-objective-function-opening-the-one.md
+- id: Wter3P-NPjE
+  title: 'Session 6: Measuring Relative Risk (Equity) & Cost of Debt'
+  upload_date: '2017-02-09'
+  duration: 4924
+  captions: auto
+  file: 2017/2017-02-09-session-6-measuring-relative-risk-equity-cost-of-debt.md
+- id: YocmFq9fpV4
+  title: 'The Greatest Cash Machine in History: An Analysis of Apple (February 2017)'
+  upload_date: '2017-02-09'
+  duration: 968
+  captions: auto
+  file: 2017/2017-02-09-the-greatest-cash-machine-in-history-an-analysis-of-apple-february.md
+- id: 6iPEyhj6QNs
+  title: 'Session 5: Risk & Return Models & The Marginal Investor'
+  upload_date: '2017-02-13'
+  duration: 5224
+  captions: auto
+  file: 2017/2017-02-13-session-5-risk-return-models-the-marginal-investor.md
+- id: axiV63xeOt0
+  title: 'Session 7: Cost of Capital Closure and First Steps on Cash Flows'
+  upload_date: '2017-02-13'
+  duration: 4924
+  captions: auto
+  file: 2017/2017-02-13-session-7-cost-of-capital-closure-and-first-steps-on-cash-flows.md
+- id: Z_VAJQlnR94
+  title: 'Session 8: From Earnings to Cash Flows'
+  upload_date: '2017-02-15'
+  duration: 4925
+  captions: auto
+  file: 2017/2017-02-15-session-8-from-earnings-to-cash-flows.md
+- id: aIRPvY2SQ94
+  title: 'Session 6: Equity Risk Premiums'
+  upload_date: '2017-02-15'
+  duration: 5224
+  captions: auto
+  file: 2017/2017-02-15-session-6-equity-risk-premiums.md
+- id: NDK-N9wb5dw
+  title: 'Snap, the Perishable Picture Company: Valuing the IPO'
+  upload_date: '2017-02-17'
+  duration: 1230
+  captions: auto
+  file: 2017/2017-02-17-snap-the-perishable-picture-company-valuing-the-ipo.md
+- id: AToIQBBnPqk
+  title: 'Session 7: The Beta Regression'
+  upload_date: '2017-02-22'
+  duration: 5224
+  captions: auto
+  file: 2017/2017-02-22-session-7-the-beta-regression.md
+- id: gJAyl9ihPmU
+  title: 'Session 9: Historical, Analyst & Fundamental growth'
+  upload_date: '2017-02-22'
+  duration: 4924
+  captions: auto
+  file: 2017/2017-02-22-session-9-historical-analyst-fundamental-growth.md
+- id: -g3n2NZOCKc
+  title: 'Session 10: Top Down Growth'
+  upload_date: '2017-02-27'
+  duration: 2749
+  captions: auto
+  file: 2017/2017-02-27-session-10-top-down-growth.md
+- id: Wy1B-ZuHsdA
+  title: 'Session 8: The Determinants of Betas'
+  upload_date: '2017-02-27'
+  duration: 5223
+  captions: auto
+  file: 2017/2017-02-27-session-8-the-determinants-of-betas.md
+- id: ogv0t0XccXc
+  title: 'Session 11: Terminal Value and First Steps on Loose Ends'
+  upload_date: '2017-03-01'
+  duration: 4925
+  captions: auto
+  file: 2017/2017-03-01-session-11-terminal-value-and-first-steps-on-loose-ends.md
+- id: tTtX9Zx4mgc
+  title: 'Session 9: Bottom Up Betas'
+  upload_date: '2017-03-01'
+  duration: 5225
+  captions: auto
+  file: 2017/2017-03-01-session-9-bottom-up-betas.md
+- id: 6R5I-7uBuaE
+  title: 'Session 10: Debt and its cost'
+  upload_date: '2017-03-06'
+  duration: 2969
+  captions: auto
+  file: 2017/2017-03-06-session-10-debt-and-its-cost.md
+- id: yBADnM5D2C8
+  title: 'Session 12: Loose Ends in Valuation'
+  upload_date: '2017-03-06'
+  duration: 4924
+  captions: auto
+  file: 2017/2017-03-06-session-12-loose-ends-in-valuation.md
+- id: CInMGK647Ng
+  title: 'Session 11: Cost of Capital & First Steps in Investment Returns'
+  upload_date: '2017-03-08'
+  duration: 5224
+  captions: auto
+  file: 2017/2017-03-08-session-11-cost-of-capital-first-steps-in-investment-returns.md
+- id: NS0fyQWp0tA
+  title: 'Session 13: Stories and Numbers'
+  upload_date: '2017-03-09'
+  duration: 4925
+  captions: auto
+  file: 2017/2017-03-09-session-13-stories-and-numbers.md
+- id: lbkFcq4xyRw
+  title: 'Good Companies, Good Managers, Good Investments: Deciphering the Divide'
+  upload_date: '2017-03-09'
+  duration: 620
+  captions: auto
+  file: 2017/2017-03-09-good-companies-good-managers-good-investments-deciphering-the-divide.md
+- id: zAshTzvWJTI
+  title: 'Data 2017 Update 10: The Pricing Game'
+  upload_date: '2017-03-10'
+  duration: 1026
+  captions: auto
+  file: 2017/2017-03-10-data-2017-update-10-the-pricing-game.md
+- id: uXqFqpQeoZU
+  title: 'Session 14: DCF Valuations - Training Wheels'
+  upload_date: '2017-03-20'
+  duration: 4925
+  captions: auto
+  file: 2017/2017-03-20-session-14-dcf-valuations-training-wheels.md
+- id: vNyYkBLbrRU
+  title: 'Session 12: From Earnings to Cash flows'
+  upload_date: '2017-03-20'
+  duration: 5224
+  captions: auto
+  file: 2017/2017-03-20-session-12-from-earnings-to-cash-flows.md
+- id: 8RkE8ra8o5Y
+  title: 'Session 13: Time Weighted Returns, Equity Analysis and Dealing with Uncertainty'
+  upload_date: '2017-03-22'
+  duration: 5225
+  captions: auto
+  file: 2017/2017-03-22-session-13-time-weighted-returns-equity-analysis-and-dealing-with.md
+- id: IV5pnzXCukE
+  title: 'Session 15: Journeys on the Dark Side of Valuation'
+  upload_date: '2017-03-22'
+  duration: 4924
+  captions: auto
+  file: 2017/2017-03-22-session-15-journeys-on-the-dark-side-of-valuation.md
+- id: cSZ4fjMHazg
+  title: 'Valeant: Damaged Goods or Deeply Discounted Drug Company?'
+  upload_date: '2017-03-23'
+  duration: 1119
+  captions: auto
+  file: 2017/2017-03-23-valeant-damaged-goods-or-deeply-discounted-drug-company.md
+- id: VPo6kzSKD3A
+  title: 'Session 14: Beyond NPV'
+  upload_date: '2017-03-27'
+  duration: 5224
+  captions: auto
+  file: 2017/2017-03-27-session-14-beyond-npv.md
+- id: EQ-7c5gyy6I
+  title: 'Session 16: Intrinsic Value - Wrapping up'
+  upload_date: '2017-03-28'
+  duration: 4924
+  captions: auto
+  file: 2017/2017-03-28-session-16-intrinsic-value-wrapping-up.md
+- id: DZVrrc4u-MI
+  title: 'Session 15: The Home Depot Case & Closing the books on Investment Analysis'
+  upload_date: '2017-03-29'
+  duration: 5224
+  captions: auto
+  file: 2017/2017-03-29-session-15-the-home-depot-case-closing-the-books-on-investment.md
+- id: dzv7NFbL2dM
+  title: 'Session 17: First Steps on Pricing'
+  upload_date: '2017-03-29'
+  duration: 4924
+  captions: auto
+  file: 2017/2017-03-29-session-17-first-steps-on-pricing.md
+- id: T0lBRwFlF3E
+  title: 'Session 16: The Debt Equity Trade off'
+  upload_date: '2017-04-03'
+  duration: 5224
+  captions: auto
+  file: 2017/2017-04-03-session-16-the-debt-equity-trade-off.md
+- id: Yzp6c-pbkRs
+  title: 'Session 18: Money Ball and Analyzing Multiples'
+  upload_date: '2017-04-04'
+  duration: 2830
+  captions: auto
+  file: 2017/2017-04-04-session-18-money-ball-and-analyzing-multiples.md
+- id: 5zAgioxk65A
+  title: 'Session 19: More on Pricing'
+  upload_date: '2017-04-05'
+  duration: 4924
+  captions: auto
+  file: 2017/2017-04-05-session-19-more-on-pricing.md
+- id: JqtdJGh612E
+  title: 'Session 17: The Miller Modigliani Theorem & Financing Hierarchies'
+  upload_date: '2017-04-05'
+  duration: 3175
+  captions: auto
+  file: 2017/2017-04-05-session-17-the-miller-modigliani-theorem-financing-hierarchies.md
+- id: hVZUd2Rce-o
+  title: 'Session 18: Cost of Capital as Financing Mix Optimizer'
+  upload_date: '2017-04-10'
+  duration: 5224
+  captions: auto
+  file: 2017/2017-04-10-session-18-cost-of-capital-as-financing-mix-optimizer.md
+- id: ikvlpnJr6Oc
+  title: 'Session 20: Pricing young companies and across the market'
+  upload_date: '2017-04-10'
+  duration: 4925
+  captions: auto
+  file: 2017/2017-04-10-session-20-pricing-young-companies-and-across-the-market.md
+- id: iqvjWuGxhM4
+  title: 'Session 19: Financing Mix - The Rest of the Story'
+  upload_date: '2017-04-12'
+  duration: 5224
+  captions: auto
+  file: 2017/2017-04-12-session-19-financing-mix-the-rest-of-the-story.md
+- id: tdWFT91enxM
+  title: 'Session 21: Closing up pricing, asset based valuation & private company valuation'
+  upload_date: '2017-04-13'
+  duration: 4924
+  captions: auto
+  file: 2017/2017-04-13-session-21-closing-up-pricing-asset-based-valuation-private-company.md
+- id: RbHsHpLKolQ
+  title: 'Session 22: Private Company Valuation - The Rest of the Story'
+  upload_date: '2017-04-17'
+  captions: none
+  file: null
+- id: xZEG2P4wlYs
+  title: 'Session 20: From actual to optimal and designing debt (intuitive)'
+  upload_date: '2017-04-17'
+  duration: 5225
+  captions: auto
+  file: 2017/2017-04-17-session-20-from-actual-to-optimal-and-designing-debt-intuitive.md
+- id: L_yBanjQNR8
+  title: 'Session 21: Debt Design and Dividend Basics'
+  upload_date: '2017-04-19'
+  duration: 5224
+  captions: auto
+  file: 2017/2017-04-19-session-21-debt-design-and-dividend-basics.md
+- id: i346mocvAf0
+  title: 'Session 23: Real Options Introduction'
+  upload_date: '2017-04-20'
+  duration: 4924
+  captions: auto
+  file: 2017/2017-04-20-session-23-real-options-introduction.md
+- id: 15IOyJDBKoU
+  title: 'Session 24: Natural Resource Reserves, The Option to Expand & Abandon'
+  upload_date: '2017-04-25'
+  duration: 2714
+  captions: auto
+  file: 2017/2017-04-25-session-24-natural-resource-reserves-the-option-to-expand-abandon.md
+- id: taDy3ukoxa0
+  title: 'Session 22: The Dividend Trade off - Good and Bad Reasons for Paying Dividends'
+  upload_date: '2017-04-25'
+  duration: 5224
+  captions: auto
+  file: 2017/2017-04-25-session-22-the-dividend-trade-off-good-and-bad-reasons-for-paying.md
+- id: 4dnCElbdgj4
+  title: 'Session 23: FCFE, Dividends and Cash Balances'
+  upload_date: '2017-04-26'
+  duration: 5225
+  captions: auto
+  file: 2017/2017-04-26-session-23-fcfe-dividends-and-cash-balances-2.md
+- id: IITjF7axd18
+  title: 'Session 23: FCFE, Dividends and Cash Balances'
+  upload_date: '2017-04-26'
+  duration: 3096
+  captions: auto
+  file: 2017/2017-04-26-session-23-fcfe-dividends-and-cash-balances.md
+- id: 40m65uYA360
+  title: 'Session 25: Financial Flexibility and Distressed Equity as Options'
+  upload_date: '2017-04-27'
+  duration: 4924
+  captions: auto
+  file: 2017/2017-04-27-session-25-financial-flexibility-and-distressed-equity-as-options.md
+- id: Ba08M8ZM1sk
+  title: 'Session 24: Closing Dividend Books and Opening Valuation Act'
+  upload_date: '2017-05-01'
+  duration: 5224
+  captions: auto
+  file: 2017/2017-05-01-session-24-closing-dividend-books-and-opening-valuation-act.md
+- id: VCHE9VxnjRI
+  title: 'Session 26: Acquisition Valuation'
+  upload_date: '2017-05-02'
+  duration: 4924
+  captions: auto
+  file: 2017/2017-05-02-session-26-acquisition-valuation.md
+- id: ufg-sMoEWNQ
+  title: Using the Ginzu Spreadsheet in Valuation
+  upload_date: '2017-05-02'
+  duration: 1953
+  captions: auto
+  file: 2017/2017-05-02-using-the-ginzu-spreadsheet-in-valuation.md
+- id: 67CpAPNaizc
+  title: 'Session 25: More on valuation'
+  upload_date: '2017-05-03'
+  duration: 5224
+  captions: auto
+  file: 2017/2017-05-03-session-25-more-on-valuation.md
+- id: qqLxmuWXvr8
+  title: 'Session 27:  Value Enhancement'
+  upload_date: '2017-05-03'
+  duration: 4925
+  captions: auto
+  file: 2017/2017-05-03-session-27-value-enhancement.md
+- id: C-fuirEf0zg
+  title: 'Session 26: The Grand Finale'
+  upload_date: '2017-05-08'
+  duration: 5224
+  captions: auto
+  file: 2017/2017-05-08-session-26-the-grand-finale.md
+- id: nUOe7PldmMA
+  title: 'Session 28: The Last Hurrah!'
+  upload_date: '2017-05-09'
+  duration: 4924
+  captions: auto
+  file: 2017/2017-05-09-session-28-the-last-hurrah.md
+- id: 7WnAkX4fFNI
+  title: 'A Tale of Two Markets: Risk on or Risk off? The best of times or the worst of times?'
+  upload_date: '2017-06-06'
+  duration: 928
+  captions: auto
+  file: 2017/2017-06-06-a-tale-of-two-markets-risk-on-or-risk-off-the-best-of-times-or-the.md
+- id: ZV9cAlFlzEU
+  title: 'Uber''s Bad, Awful, Horrible Week: Doomsday Scenario or Business Reset?'
+  upload_date: '2017-06-21'
+  duration: 1511
+  captions: auto
+  file: 2017/2017-06-21-ubers-bad-awful-horrible-week-doomsday-scenario-or-business-reset.md
+- id: hA3Dgx4ovGM
+  title: 'User and Subscriber Economics/Value: A User-Based Valuation of Uber'
+  upload_date: '2017-06-28'
+  duration: 1671
+  captions: auto
+  file: 2017/2017-06-28-user-and-subscriber-economics-value-a-user-based-valuation-of-uber.md
+- id: MUSuqTyfi8M
+  title: 'User/Subscriber Economics II: Growth, Costs and Business Models'
+  upload_date: '2017-07-05'
+  duration: 1247
+  captions: auto
+  file: 2017/2017-07-05-user-subscriber-economics-ii-growth-costs-and-business-models.md
+- id: vF6oeDet5CA
+  title: 'The Dark Side of Globalization: An Update on Country Risk'
+  upload_date: '2017-07-13'
+  duration: 1283
+  captions: auto
+  file: 2017/2017-07-13-the-dark-side-of-globalization-an-update-on-country-risk.md
+- id: BK0umdfCDbs
+  title: 'Online Education: Promise, Pitfalls and Potential'
+  upload_date: '2017-07-19'
+  duration: 560
+  captions: auto
+  file: 2017/2017-07-19-online-education-promise-pitfalls-and-potential.md
+- id: Fd0TqkW7qHg
+  title: 'Crypto Currency: Hope, Hype and Hoopla!'
+  upload_date: '2017-08-02'
+  duration: 1581
+  captions: auto
+  file: 2017/2017-08-02-crypto-currency-hope-hype-and-hoopla.md
+- id: HxkbUrNYvmY
+  title: 'Tesla: A Disruptive Force with a Debt Problem?'
+  upload_date: '2017-08-11'
+  duration: 1128
+  captions: auto
+  file: 2017/2017-08-11-tesla-a-disruptive-force-with-a-debt-problem.md
+- id: 9a3k7zMIrV4
+  title: 'Tax Reform: Promise of Plenty or Poisoned Chalice?'
+  upload_date: '2017-10-06'
+  duration: 1687
+  captions: auto
+  file: 2017/2017-10-06-tax-reform-promise-of-plenty-or-poisoned-chalice.md
+- id: FSmClzGlODs
+  title: Loss Leader or Value Creator? Breaking down Amazon Prime
+  upload_date: '2017-10-17'
+  duration: 1098
+  captions: auto
+  file: 2017/2017-10-17-loss-leader-or-value-creator-breaking-down-amazon-prime.md
+- id: 8iNeXCAM_Ik
+  title: 'The Bitcoin Boom: Asset, Commodity, Currency or Collectible?'
+  upload_date: '2017-10-24'
+  duration: 889
+  captions: auto
+  file: 2017/2017-10-24-the-bitcoin-boom-asset-commodity-currency-or-collectible.md
+- id: GmH7GdSmSsU
+  title: 'Bitcoin Blowback: Back to the Drawing Board?'
+  upload_date: '2017-10-27'
+  duration: 808
+  captions: auto
+  file: 2017/2017-10-27-bitcoin-blowback-back-to-the-drawing-board.md
+- id: Z0bpQM3gbQk
+  title: 'Data Update 1 for 2018: The Numbers don''t lie, or do they?'
+  upload_date: '2018-01-05'
+  duration: 889
+  captions: auto
+  file: 2018/2018-01-05-data-update-1-for-2018-the-numbers-dont-lie-or-do-they.md
+- id: ihz8RIlZsW4
+  title: 'Data Update 2 for 2018: The (Continued) Resilience of US Equities'
+  upload_date: '2018-01-09'
+  duration: 1012
+  captions: auto
+  file: 2018/2018-01-09-data-update-2-for-2018-the-continued-resilience-of-us-equities.md
+- id: ibaHO1D_GeA
+  title: 'Data Update 3: Taxing Questions'
+  upload_date: '2018-01-12'
+  duration: 1320
+  captions: auto
+  file: 2018/2018-01-12-data-update-3-taxing-questions.md
+- id: j6O0uOkUY90
+  title: 'January 2018 Data Update 4: The Currency Conundrum'
+  upload_date: '2018-01-24'
+  duration: 888
+  captions: auto
+  file: 2018/2018-01-24-january-2018-data-update-4-the-currency-conundrum.md
+- id: mzHKDlM7NRs
+  title: 'January 2018 Data Post 5: Country Risk Update'
+  upload_date: '2018-01-25'
+  duration: 1218
+  captions: auto
+  file: 2018/2018-01-25-january-2018-data-post-5-country-risk-update.md
+- id: ZpcdxVKOY6k
+  title: 'Data Update 6 for 2018: The Cost of Capital'
+  upload_date: '2018-01-26'
+  duration: 1530
+  captions: auto
+  file: 2018/2018-01-26-data-update-6-for-2018-the-cost-of-capital.md
+- id: ANx1NrduyRM
+  title: 'Data Update 7 for 2018: Profits, Excess Returns and Value'
+  upload_date: '2018-01-27'
+  duration: 1478
+  captions: auto
+  file: 2018/2018-01-27-data-update-7-for-2018-profits-excess-returns-and-value.md
+- id: Z229yOq5vjA
+  title: Capital Structure (updated for January 2018)
+  upload_date: '2018-01-30'
+  duration: 911
+  captions: auto
+  file: 2018/2018-01-30-capital-structure-updated-for-january-2018.md
+- id: f-uUo4CmzQ0
+  title: 'Data Update 8 for 2018: Debt and Taxes'
+  upload_date: '2018-01-30'
+  captions: none
+  file: null
+- id: 3W2kpVle12w
+  title: 'In Practice Webcast 7b: Estimating Cost of Capital for a Privately Owned Business'
+  upload_date: '2018-02-01'
+  duration: 793
+  captions: auto
+  file: 2018/2018-02-01-in-practice-webcast-7b-estimating-cost-of-capital-for-a-privately.md
+- id: vrjs-YWTdGY
+  title: 'DataUpdate 9 for 2018: Dividends, Buybacks & Cash Balances'
+  upload_date: '2018-02-04'
+  captions: none
+  file: null
+- id: KPlHg31egeM
+  title: 'January 2018 Data Update 10: The Price is right!'
+  upload_date: '2018-02-06'
+  duration: 999
+  captions: auto
+  file: 2018/2018-02-06-january-2018-data-update-10-the-price-is-right.md
+- id: u85yB7dVShk
+  title: 'Testing Times: Market Turmoil and Investment Serenity'
+  upload_date: '2018-02-10'
+  duration: 972
+  captions: auto
+  file: 2018/2018-02-10-testing-times-market-turmoil-and-investment-serenity.md
+- id: ZN3WKTFCQPI
+  title: 'In Practice Webcast #7a:: Estimating the Cost of Capital for a firm, division or project'
+  upload_date: '2018-02-13'
+  duration: 1464
+  captions: auto
+  file: 2018/2018-02-13-in-practice-webcast-7a-estimating-the-cost-of-capital-for-a-firm.md
+- id: VApq5ZRb1TU
+  title: 'In Practice Webcast 10a: You have an optimal debt ratio, now what?'
+  upload_date: '2018-02-14'
+  duration: 1030
+  captions: auto
+  file: 2018/2018-02-14-in-practice-webcast-10a-you-have-an-optimal-debt-ratio-now-what.md
+- id: s2w8QthE-6o
+  title: 'In Practice Webcast 10c: Estimating an Optimal Debt Ratio - Peer Group or Me Too Capital Structure'
+  upload_date: '2018-02-16'
+  duration: 543
+  captions: auto
+  file: 2018/2018-02-16-in-practice-webcast-10c-estimating-an-optimal-debt-ratio-peer-group.md
+- id: eTKJSj-GIDk
+  title: 'In Practice Webcast 10b: Estimating an Optimal Debt Ratio - Special Cases'
+  upload_date: '2018-02-19'
+  duration: 745
+  captions: auto
+  file: 2018/2018-02-19-in-practice-webcast-10b-estimating-an-optimal-debt-ratio-special-cases.md
+- id: l2db3GkdZmw
+  title: 'In Practice Webcast 13b:  Evaluating Dividend Policy - Peer Group Approach'
+  upload_date: '2018-02-21'
+  duration: 604
+  captions: auto
+  file: 2018/2018-02-21-in-practice-webcast-13b-evaluating-dividend-policy-peer-group-approach.md
+- id: 7XOT9fYKwPA
+  title: 'In Practice Webcast 14a: Valuing Control'
+  upload_date: '2018-02-28'
+  duration: 911
+  captions: auto
+  file: 2018/2018-02-28-in-practice-webcast-14a-valuing-control.md
+- id: WH8lFQxUblE
+  title: 'In Practice Webcast 13a: Following up on Dividend Assessment'
+  upload_date: '2018-02-28'
+  duration: 758
+  captions: auto
+  file: 2018/2018-02-28-in-practice-webcast-13a-following-up-on-dividend-assessment.md
+- id: U_ZfuMb6K3Y
+  title: 'Interest Rates and Stock Prices: Looking Under the Hood!'
+  upload_date: '2018-03-02'
+  duration: 842
+  captions: auto
+  file: 2018/2018-03-02-interest-rates-and-stock-prices-looking-under-the-hood.md
+- id: 9xjRNbM25AI
+  title: 'Damodaran Online: There is an app for that!'
+  upload_date: '2018-03-04'
+  captions: none
+  file: null
+- id: F0nONPyL6CU
+  title: 'Stream On: An IPO Valuation of Spotify!'
+  upload_date: '2018-03-17'
+  duration: 1235
+  captions: auto
+  file: 2018/2018-03-17-stream-on-an-ipo-valuation-of-spotify.md
+- id: vRFSXW00Aq8
+  title: 'Spotify Loose Ends: Pricing, Subscriber Value and Big Data!'
+  upload_date: '2018-03-23'
+  duration: 1014
+  captions: auto
+  file: 2018/2018-03-23-spotify-loose-ends-pricing-subscriber-value-and-big-data.md
+- id: mUZTLz8NvME
+  title: 'Come Easy, Go Easy: The Takedown of the FANG Stocks'
+  upload_date: '2018-04-07'
+  duration: 928
+  captions: auto
+  file: 2018/2018-04-07-come-easy-go-easy-the-takedown-of-the-fang-stocks.md
+- id: mSmgox_zDIg
+  title: 'Facebook: Friendless, but still formidable!'
+  upload_date: '2018-04-10'
+  duration: 1035
+  captions: auto
+  file: 2018/2018-04-10-facebook-friendless-but-still-formidable.md
+- id: 5SpAd30OISc
+  title: 'Netflix: The Future of Entertainment or House of Cards?'
+  upload_date: '2018-04-16'
+  duration: 1288
+  captions: auto
+  file: 2018/2018-04-16-netflix-the-future-of-entertainment-or-house-of-cards.md
+- id: 17UjaSk0x7c
+  title: 'Alphabet Soup: All Alpha (Google), No Bets?'
+  upload_date: '2018-04-19'
+  duration: 814
+  captions: auto
+  file: 2018/2018-04-19-alphabet-soup-all-alpha-google-no-bets.md
+- id: EdRsFU_ptyI
+  title: 'Amazon: Glimpses of Shoeless Joe!'
+  upload_date: '2018-04-26'
+  duration: 1338
+  captions: auto
+  file: 2018/2018-04-26-amazon-glimpses-of-shoeless-joe.md
+- id: T--w6IY-DIE
+  title: 'Walmart''s Flipkart Gambit: Growth Rebirth or Costly Facelift?'
+  upload_date: '2018-05-22'
+  duration: 758
+  captions: auto
+  file: 2018/2018-05-22-walmarts-flipkart-gambit-growth-rebirth-or-costly-facelift.md
+- id: e0x8d3UplxQ
+  title: 'User Based Companies: The Good, the Bad and the Ugly!'
+  upload_date: '2018-05-29'
+  duration: 1018
+  captions: auto
+  file: 2018/2018-05-29-user-based-companies-the-good-the-bad-and-the-ugly.md
+- id: diitEjoruhY
+  title: 'Twists and Turns in the Tesla Story: A Boring, Boneheaded Update!'
+  upload_date: '2018-06-28'
+  duration: 1300
+  captions: auto
+  file: 2018/2018-06-28-twists-and-turns-in-the-tesla-story-a-boring-boneheaded-update.md
+- id: JY5le5IzbgE
+  title: 'Share Count Confusion: Dilution, Employee Options and Multiple Share Classes!'
+  upload_date: '2018-07-26'
+  duration: 1401
+  captions: auto
+  file: 2018/2018-07-26-share-count-confusion-dilution-employee-options-and-multiple-share.md
+- id: GRPDgtQ_yFY
+  title: 'Country Risk 2018: A Mid-Year Update'
+  upload_date: '2018-08-07'
+  duration: 1041
+  captions: auto
+  file: 2018/2018-08-07-country-risk-2018-a-mid-year-update.md
+- id: D-XM-TFUJTU
+  title: Tesla's Going Private? Stray Tweet or Game Changing News?
+  upload_date: '2018-08-10'
+  duration: 1163
+  captions: auto
+  file: 2018/2018-08-10-teslas-going-private-stray-tweet-or-game-changing-news.md
+- id: IGlMmK06brM
+  title: 'Deja Vu in Turkey: Currency Crisis and Corporate Insanity!'
+  upload_date: '2018-08-15'
+  duration: 1166
+  captions: auto
+  file: 2018/2018-08-15-deja-vu-in-turkey-currency-crisis-and-corporate-insanity.md
+- id: 9uOadV2Ar1E
+  title: 'Trillion Dollar Toppers: Market Triggers, Value Drivers and Pricing Catalysts!'
+  upload_date: '2018-09-10'
+  duration: 1133
+  captions: auto
+  file: 2018/2018-09-10-trillion-dollar-toppers-market-triggers-value-drivers-and-pricing.md
+- id: QC2g549wxEM
+  title: 'Trillion Dollar Duo: An Apple and Amazon Retake!'
+  upload_date: '2018-09-19'
+  duration: 963
+  captions: auto
+  file: 2018/2018-09-19-trillion-dollar-duo-an-apple-and-amazon-retake.md
+- id: efE_MJdOzSI
+  title: 'Apple and Amazon at a Trillion $: A Follow up on Uncertainty and Catalysts'
+  upload_date: '2018-09-21'
+  duration: 1582
+  captions: auto
+  file: 2018/2018-09-21-apple-and-amazon-at-a-trillion-a-follow-up-on-uncertainty-and.md
+- id: nBS7aFF0m0I
+  title: 'High and Higher: The Money in Marijuana'
+  upload_date: '2018-10-16'
+  duration: 845
+  captions: auto
+  file: 2018/2018-10-16-high-and-higher-the-money-in-marijuana.md
+- id: -TtZj9pE9nI
+  title: 'An October Surprise: Making Sense of Market Mayhem!'
+  upload_date: '2018-10-29'
+  duration: 1344
+  captions: auto
+  file: 2018/2018-10-29-an-october-surprise-making-sense-of-market-mayhem.md
+- id: _p1mxkW1Fls
+  title: 'The GE End Game: The Bataan Death March or Resurrection?'
+  upload_date: '2018-11-14'
+  duration: 1498
+  captions: auto
+  file: 2018/2018-11-14-the-ge-end-game-the-bataan-death-march-or-resurrection.md
+- id: M4zJmPCuTRE
+  title: Preview of the Class (General and very brief)
+  upload_date: '2018-11-16'
+  duration: 124
+  captions: auto
+  file: 2018/2018-11-16-preview-of-the-class-general-and-very-brief.md
+- id: OiMw4AuMRlE
+  title: Preview of the class (general and brief)
+  upload_date: '2018-11-16'
+  duration: 181
+  captions: auto
+  file: 2018/2018-11-16-preview-of-the-class-general-and-brief.md
+- id: T_9YRZ57-8U
+  title: 'Investment Whiplash: Better lucky than good?'
+  upload_date: '2018-12-03'
+  duration: 967
+  captions: auto
+  file: 2018/2018-12-03-investment-whiplash-better-lucky-than-good.md
+- id: Rpb-HtlSL4I
+  title: Signal or Noise? Yield Curves, Economic Growth and Stock Prices
+  upload_date: '2018-12-07'
+  duration: 978
+  captions: auto
+  file: 2018/2018-12-07-signal-or-noise-yield-curves-economic-growth-and-stock-prices.md
+- id: gKrBfpN3yto
+  title: 'Data Update 1 for 2019: Stocks are risky (in case we had forgotten)!'
+  upload_date: '2019-01-03'
+  duration: 768
+  captions: auto
+  file: 2019/2019-01-03-data-update-1-for-2019-stocks-are-risky-in-case-we-had-forgotten.md
+- id: znoH5PkvNzI
+  title: 'January 2019 Data Update 2: The Bond Market Message'
+  upload_date: '2019-01-07'
+  duration: 658
+  captions: auto
+  file: 2019/2019-01-07-january-2019-data-update-2-the-bond-market-message.md
+- id: t-7OTAGc3g4
+  title: 'January 2019 Data Update 3: Playing the Numbers Game'
+  upload_date: '2019-01-09'
+  duration: 747
+  captions: auto
+  file: 2019/2019-01-09-january-2019-data-update-3-playing-the-numbers-game.md
+- id: 4IxSvyBEK7s
+  title: Introduction to Class
+  upload_date: '2019-01-11'
+  duration: 110
+  captions: auto
+  file: 2019/2019-01-11-introduction-to-class.md
+- id: bzskJZJ_bhM
+  title: 'Back to Class: A Teaching Manifesto!'
+  upload_date: '2019-01-11'
+  duration: 715
+  captions: auto
+  file: 2019/2019-01-11-back-to-class-a-teaching-manifesto.md
+- id: nI_vtGf5_Jc
+  title: 'January 2019 Data Update 4: The Many Faces of Risk!'
+  upload_date: '2019-01-21'
+  duration: 1551
+  captions: auto
+  file: 2019/2019-01-21-january-2019-data-update-4-the-many-faces-of-risk.md
+- id: rxmttgceSjg
+  title: 'Beta Data: Guide to Spreadsheet'
+  upload_date: '2019-01-23'
+  duration: 297
+  captions: auto
+  file: 2019/2019-01-23-beta-data-guide-to-spreadsheet.md
+- id: fxJ5jZwzjIo
+  title: 'January 2019 Data Update 5: Of Hurdle Rates and Funding Costs'
+  upload_date: '2019-01-24'
+  duration: 1556
+  captions: auto
+  file: 2019/2019-01-24-january-2019-data-update-5-of-hurdle-rates-and-funding-costs.md
+- id: ypvQuufNUrY
+  title: 'Cost of Capital Data: Guide to Spreadsheet'
+  upload_date: '2019-01-24'
+  duration: 318
+  captions: auto
+  file: 2019/2019-01-24-cost-of-capital-data-guide-to-spreadsheet.md
+- id: XYRk9z0l3B8
+  title: 'January 2019 Data Update 6: Profitability, Growth and Value'
+  upload_date: '2019-01-27'
+  duration: 1031
+  captions: auto
+  file: 2019/2019-01-27-january-2019-data-update-6-profitability-growth-and-value.md
+- id: kZzwtlIAx4U
+  title: 'Excess Return (EVA) Data: Guide to Spreadsheet'
+  upload_date: '2019-01-27'
+  duration: 728
+  captions: auto
+  file: 2019/2019-01-27-excess-return-eva-data-guide-to-spreadsheet.md
+- id: jP07MQJ-gvQ
+  title: 'Session 1: Setting up the class'
+  upload_date: '2019-01-29'
+  duration: 4805
+  captions: auto
+  file: 2019/2019-01-29-session-1-setting-up-the-class.md
+- id: ZIob25D9uL4
+  title: 'Bias: The Achilles heel of Valuation Practice!'
+  upload_date: '2019-01-30'
+  duration: 707
+  captions: auto
+  file: 2019/2019-01-30-bias-the-achilles-heel-of-valuation-practice.md
+- id: m4IUH0Nd4No
+  title: 'Session 2: Valuation - The Bermuda Triangle and Approaches to Valuation'
+  upload_date: '2019-01-30'
+  duration: 4353
+  captions: auto
+  file: 2019/2019-01-30-session-2-valuation-the-bermuda-triangle-and-approaches-to-valuation.md
+- id: 1UC8QqyeOdY
+  title: 'Session 1: Setting up the class'
+  upload_date: '2019-02-04'
+  duration: 5104
+  captions: auto
+  file: 2019/2019-02-04-session-1-setting-up-the-class.md
+- id: OZAy-9p_qe0
+  title: 'Session 3: Intrinsic Valuation - Baby Steps'
+  upload_date: '2019-02-05'
+  duration: 4805
+  captions: auto
+  file: 2019/2019-02-05-session-3-intrinsic-valuation-baby-steps.md
+- id: TpjOod0ota4
+  title: 'Session 1: Rev your engines...'
+  upload_date: '2019-02-05'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-02-05-session-1-rev-your-engines.md
+- id: ypkeGjeHeKw
+  title: 'January 2019 Data Update 7: Debt - Neither Poison nor Nectar!'
+  upload_date: '2019-02-05'
+  duration: 1302
+  captions: auto
+  file: 2019/2019-02-05-january-2019-data-update-7-debt-neither-poison-nor-nectar.md
+- id: ai159vnoW1o
+  title: 'Session 2: The Objective in Corporate Finance - Utopia'
+  upload_date: '2019-02-06'
+  duration: 5006
+  captions: auto
+  file: 2019/2019-02-06-session-2-the-objective-in-corporate-finance-utopia.md
+- id: 5IEf29yrm54
+  title: 'Session 2: The Bermuda Triangle of Valuation & Valuation Approaches'
+  upload_date: '2019-02-07'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-02-07-session-2-the-bermuda-triangle-of-valuation-valuation-approaches.md
+- id: o5D8F2eec6E
+  title: 'Session 4: First steps on discount rates - Risk free rates and ERP'
+  upload_date: '2019-02-07'
+  duration: 4805
+  captions: auto
+  file: 2019/2019-02-07-session-4-first-steps-on-discount-rates-risk-free-rates-and-erp.md
+- id: PeChOugZl3A
+  title: 'January 2019 Data Update 8: Buybacks - Fact and Fiction'
+  upload_date: '2019-02-08'
+  duration: 1798
+  captions: auto
+  file: 2019/2019-02-08-january-2019-data-update-8-buybacks-fact-and-fiction.md
+- id: q30QmNzRfws
+  title: 'Session 3: Managers, Markets and Morality!'
+  upload_date: '2019-02-11'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-02-11-session-3-managers-markets-and-morality.md
+- id: NwahDcU7f6s
+  title: 'Session 3: First Steps on Intrinsic Value'
+  upload_date: '2019-02-12'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-02-12-session-3-first-steps-on-intrinsic-value.md
+- id: dSYp4s9VHY4
+  title: 'Session 5: Company ERP and Implied ERP'
+  upload_date: '2019-02-12'
+  duration: 4805
+  captions: auto
+  file: 2019/2019-02-12-session-5-company-erp-and-implied-erp.md
+- id: GWRYVxmmmec
+  title: 'Session 4: Risk Free Rates'
+  upload_date: '2019-02-13'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-02-13-session-4-risk-free-rates.md
+- id: uEvrQhSLFko
+  title: 'Session 4: Closure on the Objective Function'
+  upload_date: '2019-02-13'
+  duration: 5104
+  captions: auto
+  file: 2019/2019-02-13-session-4-closure-on-the-objective-function.md
+- id: J8YqkWEcg7M
+  title: 'Session 6: Betas, Costs of Equity and Debt'
+  upload_date: '2019-02-14'
+  duration: 4805
+  captions: auto
+  file: 2019/2019-02-14-session-6-betas-costs-of-equity-and-debt.md
+- id: 8uMsRzH4d9c
+  title: 'Session 5: Risk and Return - First Steps'
+  upload_date: '2019-02-20'
+  duration: 4964
+  captions: auto
+  file: 2019/2019-02-20-session-5-risk-and-return-first-steps.md
+- id: y7KI4W8oSYs
+  title: 'Session 5: Equity Risk Premiums  - Country & Company'
+  upload_date: '2019-02-20'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-02-20-session-5-equity-risk-premiums-country-company.md
+- id: VTgqZLRMhuk
+  title: 'Session 7: From Discount Rates to Cash Flows - The Earnings Start'
+  upload_date: '2019-02-21'
+  duration: 4805
+  captions: auto
+  file: 2019/2019-02-21-session-7-from-discount-rates-to-cash-flows-the-earnings-start.md
+- id: 6tMRA9sMgBo
+  title: 'January 2019 Data Update 9: Playing the Pricing Game'
+  upload_date: '2019-02-22'
+  duration: 1250
+  captions: auto
+  file: 2019/2019-02-22-january-2019-data-update-9-playing-the-pricing-game.md
+- id: YRtgxu52n38
+  title: 'Session 6: Equity Risk Premiums'
+  upload_date: '2019-02-25'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-02-25-session-6-equity-risk-premiums.md
+- id: 2G8D1B-gikM
+  title: 'Session 8: From Earnings to Cash flows'
+  upload_date: '2019-02-27'
+  duration: 4805
+  captions: auto
+  file: 2019/2019-02-27-session-8-from-earnings-to-cash-flows.md
+- id: Lo3qrv1qvqU
+  title: 'Session 6: Betas and Costs of Equity'
+  upload_date: '2019-02-27'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-02-27-session-6-betas-and-costs-of-equity.md
+- id: cXq6VdjhJyY
+  title: 'Investing Idol Worship: The Kraft Heinz Lesson'
+  upload_date: '2019-02-27'
+  duration: 1097
+  captions: auto
+  file: 2019/2019-02-27-investing-idol-worship-the-kraft-heinz-lesson.md
+- id: dcECD7GMbU8
+  title: 'Session 9: Growth Rates - Historical, Outside and Fundamental'
+  upload_date: '2019-02-27'
+  duration: 4805
+  captions: auto
+  file: 2019/2019-02-27-session-9-growth-rates-historical-outside-and-fundamental.md
+- id: wLl6i27xrOI
+  title: 'Session 7: From Discount Rates to Cash Flows'
+  upload_date: '2019-02-27'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-02-27-session-7-from-discount-rates-to-cash-flows.md
+- id: ysxfbr3MdIg
+  title: 'Session 7: Regression Betas'
+  upload_date: '2019-02-27'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-02-27-session-7-regression-betas.md
+- id: QfX27Sr0F18
+  title: 'Session 8: The Determinants of Betas'
+  upload_date: '2019-03-04'
+  duration: 3148
+  captions: auto
+  file: 2019/2019-03-04-session-8-the-determinants-of-betas.md
+- id: ZTw3V_m-I9g
+  title: 'Session 10: Growth Rates, Terminal Value & Model Choice'
+  upload_date: '2019-03-04'
+  duration: 2937
+  captions: auto
+  file: 2019/2019-03-04-session-10-growth-rates-terminal-value-model-choice.md
+- id: dCQadi5hp1o
+  title: 'Session 8: From Earnings to Cash Flows'
+  upload_date: '2019-03-04'
+  duration: 3918
+  captions: auto
+  file: 2019/2019-03-04-session-8-from-earnings-to-cash-flows.md
+- id: -so0PdXyHc8
+  title: Lyfting Off? The Lyft IPO
+  upload_date: '2019-03-08'
+  duration: 1473
+  captions: auto
+  file: 2019/2019-03-08-lyfting-off-the-lyft-ipo.md
+- id: 3qwRhfQb14g
+  title: 'Session 9: Historical Growth and Analyst Estimates of Growth'
+  upload_date: '2019-03-08'
+  duration: 3022
+  captions: auto
+  file: 2019/2019-03-08-session-9-historical-growth-and-analyst-estimates-of-growth.md
+- id: 91l6C2qTZAQ
+  title: 'Session 9: Bottom Up Betas'
+  upload_date: '2019-03-08'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-03-08-session-9-bottom-up-betas.md
+- id: Na8s77sv-j4
+  title: 'Session 11: Loose Ends 1 - Dealing with cash'
+  upload_date: '2019-03-08'
+  duration: 2716
+  captions: auto
+  file: 2019/2019-03-08-session-11-loose-ends-1-dealing-with-cash.md
+- id: jH8L7cW6Yns
+  title: Quiz 1 Review
+  upload_date: '2019-03-09'
+  duration: 1674
+  captions: auto
+  file: 2019/2019-03-09-quiz-1-review.md
+- id: Zb0qKwDngDc
+  title: 'Session 10: Quiz and Private Company Betas'
+  upload_date: '2019-03-12'
+  duration: 3078
+  captions: auto
+  file: 2019/2019-03-12-session-10-quiz-and-private-company-betas.md
+- id: qi6FMvsyAJY
+  title: 'Session 10: Fundamental Growth and Terminal Value'
+  upload_date: '2019-03-12'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-03-12-session-10-fundamental-growth-and-terminal-value.md
+- id: uw3eI-jY-Io
+  title: 'Session 12: Loose Ends in Valuation'
+  upload_date: '2019-03-12'
+  duration: 4805
+  captions: auto
+  file: 2019/2019-03-12-session-12-loose-ends-in-valuation.md
+- id: -dnjz0HLVV0
+  title: 'Session 11: Cost of Capital & First Steps on Returns'
+  upload_date: '2019-03-13'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-03-13-session-11-cost-of-capital-first-steps-on-returns.md
+- id: ZgI5iR5mxXk
+  title: 'Session 11: Picking a DCF Model & Loose Ends in Valuation'
+  upload_date: '2019-03-13'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-03-13-session-11-picking-a-dcf-model-loose-ends-in-valuation.md
+- id: h2C1zcAB25o
+  title: 'Session 13: Stories and Numbers'
+  upload_date: '2019-03-13'
+  duration: 4805
+  captions: auto
+  file: 2019/2019-03-13-session-13-stories-and-numbers.md
+- id: tFfQqYrl9dA
+  title: 'Session 12: Loose Ends and Stories to Numbers'
+  upload_date: '2019-03-25'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-03-25-session-12-loose-ends-and-stories-to-numbers.md
+- id: zdAw6zu4_sM
+  title: 'Session 12: Investment Returns - Earnings to Incremental Cash flows'
+  upload_date: '2019-03-25'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-03-25-session-12-investment-returns-earnings-to-incremental-cash-flows.md
+- id: ytDpENQrwow
+  title: 'Session 14: Stories & Numbers (continued) and Valuation Examples'
+  upload_date: '2019-03-26'
+  duration: 4805
+  captions: auto
+  file: 2019/2019-03-26-session-14-stories-numbers-continued-and-valuation-examples.md
+- id: B-AO5HiqqJs
+  title: 'Session 15: Valuing young companies and mature companies in transition'
+  upload_date: '2019-03-27'
+  duration: 4805
+  captions: auto
+  file: 2019/2019-03-27-session-15-valuing-young-companies-and-mature-companies-in-transition.md
+- id: TcxxTaQNSwc
+  title: 'Session 13: Time Weighted Returns, Equity analysis & Dealing with Uncertainty'
+  upload_date: '2019-03-27'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-03-27-session-13-time-weighted-returns-equity-analysis-dealing-with.md
+- id: Z52Y-q8bgLA
+  title: 'Session 13: More on Stories and first steps on Valuation'
+  upload_date: '2019-03-27'
+  duration: 5104
+  captions: auto
+  file: 2019/2019-03-27-session-13-more-on-stories-and-first-steps-on-valuation.md
+- id: 7KkvCSVClZ4
+  title: 'Session 14: Acquisition Analysis, NPV vs IRR and Side Costs/Benefits'
+  upload_date: '2019-04-01'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-04-01-session-14-acquisition-analysis-npv-vs-irr-and-side-costs-benefits.md
+- id: 3rLnbktwXsI
+  title: 'Session 16: Valuing Distressed & Emerging Market Companies'
+  upload_date: '2019-04-02'
+  duration: 2793
+  captions: auto
+  file: 2019/2019-04-02-session-16-valuing-distressed-emerging-market-companies.md
+- id: pSdXmaYGw9w
+  title: 'Session 14: Valuing Markets and Young Companies'
+  upload_date: '2019-04-02'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-04-02-session-14-valuing-markets-and-young-companies.md
+- id: 5SKNJMkomv4
+  title: 'Session 17: Valuation on the Dark Side (Contd) and First Steps on Pricing'
+  upload_date: '2019-04-04'
+  duration: 4805
+  captions: auto
+  file: 2019/2019-04-04-session-17-valuation-on-the-dark-side-contd-and-first-steps-on-pricing.md
+- id: 8lCgc2o-EcU
+  title: 'Session 15: Excursions on the Dark Side of Valuation'
+  upload_date: '2019-04-04'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-04-04-session-15-excursions-on-the-dark-side-of-valuation.md
+- id: cosSoL0KZQ4
+  title: 'Session 15: The Whole Foods Dining Case, Synergy and Options in Investing'
+  upload_date: '2019-04-04'
+  duration: 5104
+  captions: auto
+  file: 2019/2019-04-04-session-15-the-whole-foods-dining-case-synergy-and-options-in.md
+- id: 1IRM7oP3joM
+  title: 'Quiz Review: Management Options'
+  upload_date: '2019-04-07'
+  duration: 435
+  captions: auto
+  file: 2019/2019-04-07-quiz-review-management-options.md
+- id: DRolm27AV3A
+  title: 'Quiz Review: Cross Holdings'
+  upload_date: '2019-04-07'
+  duration: 587
+  captions: auto
+  file: 2019/2019-04-07-quiz-review-cross-holdings.md
+- id: AQ4DqWmc9WY
+  title: 'Session 18: Pricing Basics'
+  upload_date: '2019-04-09'
+  duration: 4805
+  captions: auto
+  file: 2019/2019-04-09-session-18-pricing-basics.md
+- id: ENF5x_ZjRWM
+  title: 'Session 16: Investment Post Mortem and the Debt Equity Tradoff'
+  upload_date: '2019-04-09'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-04-09-session-16-investment-post-mortem-and-the-debt-equity-tradoff.md
+- id: FhIcztXpAdc
+  title: 'Session 16: Last Intrinsic Valuation Pieces and First Steps on Pricing'
+  upload_date: '2019-04-09'
+  duration: 3099
+  captions: auto
+  file: 2019/2019-04-09-session-16-last-intrinsic-valuation-pieces-and-first-steps-on-pricing.md
+- id: wsSwIfvaIG4
+  title: 'Corporate Finance Quiz 2: Review Session'
+  upload_date: '2019-04-09'
+  duration: 1967
+  captions: auto
+  file: 2019/2019-04-09-corporate-finance-quiz-2-review-session.md
+- id: 8ybJA87F-js
+  title: 'Session 17: To Miller Modigliani and beyond!'
+  upload_date: '2019-04-11'
+  duration: 3098
+  captions: auto
+  file: 2019/2019-04-11-session-17-to-miller-modigliani-and-beyond.md
+- id: XNayhujPx9M
+  title: 'Session 19: More on Pricing'
+  upload_date: '2019-04-11'
+  duration: 4805
+  captions: auto
+  file: 2019/2019-04-11-session-19-more-on-pricing.md
+- id: dF0w3rW5vvI
+  title: 'Session 17: First Steps in Pricing'
+  upload_date: '2019-04-11'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-04-11-session-17-first-steps-in-pricing.md
+- id: Cneg86Iacn8
+  title: 'Session 18: The Cost of Capital Approach to Optimizing Financing Mix'
+  upload_date: '2019-04-15'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-04-15-session-18-the-cost-of-capital-approach-to-optimizing-financing-mix.md
+- id: dIpTChmTB_o
+  title: 'The Uber Launch: Personal Mobility Revolution or Car Service Overreach?'
+  upload_date: '2019-04-15'
+  duration: 1414
+  captions: auto
+  file: 2019/2019-04-15-the-uber-launch-personal-mobility-revolution-or-car-service-overreach.md
+- id: u8qc0XPYeqE
+  title: 'Session 18: Pricing Continued'
+  upload_date: '2019-04-15'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-04-15-session-18-pricing-continued.md
+- id: dKJibZyK9oE
+  title: 'Session 20: Closing thoughts on Pricing and Asset Based Valuation'
+  upload_date: '2019-04-16'
+  duration: 4805
+  captions: auto
+  file: 2019/2019-04-16-session-20-closing-thoughts-on-pricing-and-asset-based-valuation.md
+- id: gyLzlwEGPfs
+  title: 'Session 21: Valuing Private Businesses'
+  upload_date: '2019-04-17'
+  duration: 4805
+  captions: auto
+  file: 2019/2019-04-17-session-21-valuing-private-businesses.md
+- id: k5YsOHw8lD0
+  title: 'Session 19: Optimal Financing Mix - Other Approaches'
+  upload_date: '2019-04-17'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-04-17-session-19-optimal-financing-mix-other-approaches.md
+- id: l4Y5iBTiS94
+  title: 'Session 19: Pricing Closure and Asset Based Valuation'
+  upload_date: '2019-04-17'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-04-17-session-19-pricing-closure-and-asset-based-valuation.md
+- id: VikN0SAc5FE
+  title: 'Session 20: Designing the perfect Debt'
+  upload_date: '2019-04-22'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-04-22-session-20-designing-the-perfect-debt.md
+- id: pZVn7F60Ego
+  title: 'Session 20: Private Company Valuation'
+  upload_date: '2019-04-22'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-04-22-session-20-private-company-valuation.md
+- id: -bAbxwzUzPE
+  title: 'Session 22: Quiz 3 & First Steps on Options'
+  upload_date: '2019-04-23'
+  duration: 2840
+  captions: auto
+  file: 2019/2019-04-23-session-22-quiz-3-first-steps-on-options.md
+- id: 5UNYKC8rYiU
+  title: 'Quiz 3: Review Session'
+  upload_date: '2019-04-23'
+  duration: 2733
+  captions: auto
+  file: 2019/2019-04-23-quiz-3-review-session.md
+- id: j-gzw5manjs
+  title: 'Session 21: Debt Design Closing + First Steps on Dividends'
+  upload_date: '2019-04-24'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-04-24-session-21-debt-design-closing-first-steps-on-dividends.md
+- id: MMhmloRQjdY
+  title: 'Session 21: Real Options - Introduction and First Steps'
+  upload_date: '2019-04-25'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-04-25-session-21-real-options-introduction-and-first-steps.md
+- id: aROlv2qjwyM
+  title: 'Session 23: The Option to Delay'
+  upload_date: '2019-04-25'
+  duration: 4805
+  captions: auto
+  file: 2019/2019-04-25-session-23-the-option-to-delay.md
+- id: fmXIDF19kFE
+  title: 'Session 22: The Dividend Trade off and Potential Dividends (FCFE)'
+  upload_date: '2019-04-29'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-04-29-session-22-the-dividend-trade-off-and-potential-dividends-fcfe.md
+- id: 0F8uR38MO90
+  title: 'Session 22: Quiz 3 and the Options to Expand/Abandon'
+  upload_date: '2019-04-30'
+  duration: 3170
+  captions: auto
+  file: 2019/2019-04-30-session-22-quiz-3-and-the-options-to-expand-abandon.md
+- id: zNh7J0l0yzM
+  title: 'Session 24: Option to Expand, Financial Flexibility & Distressed Equity'
+  upload_date: '2019-04-30'
+  duration: 4805
+  captions: auto
+  file: 2019/2019-04-30-session-24-option-to-expand-financial-flexibility-distressed-equity.md
+- id: 5qNE7qRJk6M
+  title: 'Session 23: Financial Flexibility & Distressed Equity'
+  upload_date: '2019-05-02'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-05-02-session-23-financial-flexibility-distressed-equity.md
+- id: WqfhljBIiWM
+  title: 'Session 23: Dividend Assessment Continued'
+  upload_date: '2019-05-02'
+  duration: 3173
+  captions: auto
+  file: 2019/2019-05-02-session-23-dividend-assessment-continued.md
+- id: inqfR4PNgT4
+  title: 'Session 25: Distressed Equity & Acquisition Analysis'
+  upload_date: '2019-05-02'
+  duration: 4805
+  captions: auto
+  file: 2019/2019-05-02-session-25-distressed-equity-acquisition-analysis.md
+- id: XOCfyjEdg-k
+  title: 'Corporate Finance: Final Exam Review'
+  upload_date: '2019-05-04'
+  duration: 2695
+  captions: auto
+  file: 2019/2019-05-04-corporate-finance-final-exam-review.md
+- id: M8Y4Flf_QrM
+  title: 'Session 24: Valuation 101'
+  upload_date: '2019-05-07'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-05-07-session-24-valuation-101.md
+- id: bgKNMDWyaI8
+  title: 'Session 24: Acquisition Valuation'
+  upload_date: '2019-05-07'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-05-07-session-24-acquisition-valuation.md
+- id: g1R52gCsRuU
+  title: 'Session 26: Acquisition Valuation'
+  upload_date: '2019-05-07'
+  duration: 4805
+  captions: auto
+  file: 2019/2019-05-07-session-26-acquisition-valuation.md
+- id: fNjkDlmra2g
+  title: 'Session 25: Value Enhancement'
+  upload_date: '2019-05-08'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-05-08-session-25-value-enhancement.md
+- id: t8NO5K0hacs
+  title: 'Session 25: Valuation''s Final Pieces'
+  upload_date: '2019-05-08'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-05-08-session-25-valuations-final-pieces.md
+- id: LZeo1Oury3Q
+  title: 'Session 27: Value Enhancement'
+  upload_date: '2019-05-09'
+  duration: 4805
+  captions: auto
+  file: 2019/2019-05-09-session-27-value-enhancement.md
+- id: 7cjjuMDXK0A
+  title: 'Session 26: The Grand Finale!'
+  upload_date: '2019-05-15'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-05-15-session-26-the-grand-finale.md
+- id: r80-5EJqTkk
+  title: 'Session 26: Icing on the Cake!'
+  upload_date: '2019-05-15'
+  duration: 5105
+  captions: auto
+  file: 2019/2019-05-15-session-26-icing-on-the-cake.md
+- id: vXzQGxpglZU
+  title: 'Session 28: The Fat Lady Sings!'
+  upload_date: '2019-05-15'
+  duration: 4805
+  captions: auto
+  file: 2019/2019-05-15-session-28-the-fat-lady-sings.md
+- id: fWmQ44SBpXQ
+  title: Curfew for a Corporate Teenager? Tesla in June 2019
+  upload_date: '2019-06-03'
+  duration: 1700
+  captions: auto
+  file: 2019/2019-06-03-curfew-for-a-corporate-teenager-tesla-in-june-2019.md
+- id: JN6eqkDVgvw
+  title: Macro Bet or Micro Delusion? The Marketing of Beyond Meat
+  upload_date: '2019-06-12'
+  duration: 1129
+  captions: auto
+  file: 2019/2019-06-12-macro-bet-or-micro-delusion-the-marketing-of-beyond-meat.md
+- id: JVg7TOiXUfQ
+  title: 'Country Risk: A 2019 mid-year update'
+  upload_date: '2019-08-13'
+  duration: 1111
+  captions: auto
+  file: 2019/2019-08-13-country-risk-a-2019-mid-year-update.md
+- id: VINIeZ2nHbQ
+  title: 'Shareholder Value to Stakeholder Interests: CEO Capitulation or Empty Doublespeak?'
+  upload_date: '2019-08-28'
+  duration: 1979
+  captions: auto
+  file: 2019/2019-08-28-shareholder-value-to-stakeholder-interests-ceo-capitulation-or-empty.md
+- id: WhDi_2-hvLw
+  title: 'Runaway Story to Meltdown in Motion: The Unraveling of the WeWork IPO'
+  upload_date: '2019-09-09'
+  duration: 1948
+  captions: auto
+  file: 2019/2019-09-09-runaway-story-to-meltdown-in-motion-the-unraveling-of-the-wework-ipo.md
+- id: YrOMbIARyPc
+  title: What do VCs prize and price? Lessons from Peloton, Uber and WeWork IPOs
+  upload_date: '2019-09-17'
+  duration: 1581
+  captions: auto
+  file: 2019/2019-09-17-what-do-vcs-prize-and-price-lessons-from-peloton-uber-and-wework-ipos.md
+- id: bzTZslYv1xc
+  title: 'US Equities: Market Bubble or Groundhog Day?'
+  upload_date: '2019-10-01'
+  duration: 1393
+  captions: auto
+  file: 2019/2019-10-01-us-equities-market-bubble-or-groundhog-day.md
+- id: LCUOb6da95g
+  title: IPO Lessons for Public Market Investors
+  upload_date: '2019-10-11'
+  duration: 1693
+  captions: auto
+  file: 2019/2019-10-11-ipo-lessons-for-public-market-investors.md
+- id: sC7ht0CAQsk
+  title: 'Disrupting the IPO Process: Challenging the Banker-run Model!'
+  upload_date: '2019-10-18'
+  duration: 1703
+  captions: auto
+  file: 2019/2019-10-18-disrupting-the-ipo-process-challenging-the-banker-run-model.md
+- id: Pv0LAhPd3ME
+  title: 'Softbank''s WeWork Rescue: Savior Economics or Sunk Cost Problem?'
+  upload_date: '2019-11-15'
+  duration: 1257
+  captions: auto
+  file: 2019/2019-11-15-softbanks-wework-rescue-savior-economics-or-sunk-cost-problem.md
+- id: 0gWnC0Bvp4c
+  title: 'A Coming-out party for an Oil Colossus: Pricing and Valuing Aramco''s IPO!'
+  upload_date: '2019-11-18'
+  duration: 1892
+  captions: auto
+  file: 2019/2019-11-18-a-coming-out-party-for-an-oil-colossus-pricing-and-valuing-aramcos-ipo.md
+- id: uwP9X7IJj4I
+  title: 'Regime Changes and Value: An Aramco Valuation Follow up!'
+  upload_date: '2019-11-19'
+  duration: 1153
+  captions: auto
+  file: 2019/2019-11-19-regime-changes-and-value-an-aramco-valuation-follow-up.md
+- id: QJ41tvljZHQ
+  title: 'A Teaching Manifesto: An Invitation to my Spring 2020 Classes!'
+  upload_date: '2019-12-19'
+  duration: 1457
+  captions: auto
+  file: 2019/2019-12-19-a-teaching-manifesto-an-invitation-to-my-spring-2020-classes.md
+- id: M9pFTApeo_8
+  title: 'Data Update 1 for 2020: Setting the table'
+  upload_date: '2020-01-13'
+  duration: 949
+  captions: auto
+  file: 2020/2020-01-13-data-update-1-for-2020-setting-the-table.md
+- id: 32oabRFnplQ
+  title: 'Session 1: Introduction to Valuation (and the class)'
+  upload_date: '2020-01-27'
+  duration: 4505
+  captions: auto
+  file: 2020/2020-01-27-session-1-introduction-to-valuation-and-the-class.md
+- id: lFdUSXsoSC0
+  title: 'Data Update 2 for 2020: A Retrospective on a Disruptive Decade (2010-19)'
+  upload_date: '2020-01-27'
+  duration: 1684
+  captions: auto
+  file: 2020/2020-01-27-data-update-2-for-2020-a-retrospective-on-a-disruptive-decade-2010-19.md
+- id: 3YkUN7_Uj0w
+  title: 'An Ode to Luck: Revisiting Tesla in January 2020'
+  upload_date: '2020-01-30'
+  duration: 1076
+  captions: auto
+  file: 2020/2020-01-30-an-ode-to-luck-revisiting-tesla-in-january-2020.md
+- id: S0yIFh3oru8
+  title: 'Session 1: Introduction to Class - Broad themes and class details'
+  upload_date: '2020-02-03'
+  duration: 4804
+  captions: auto
+  file: 2020/2020-02-03-session-1-introduction-to-class-broad-themes-and-class-details.md
+- id: m9ARC3Icpkw
+  title: 'Session 1: Introduction to class'
+  upload_date: '2020-02-04'
+  duration: 4805
+  captions: auto
+  file: 2020/2020-02-04-session-1-introduction-to-class.md
+- id: pv90uvJnaqM
+  title: 'Session 3: First Steps on Intrinsic Valuation'
+  upload_date: '2020-02-04'
+  duration: 4504
+  captions: auto
+  file: 2020/2020-02-04-session-3-first-steps-on-intrinsic-valuation.md
+- id: 8uOeTyoCTY4
+  title: 'Session 2: The Objective in Corporate Finance- The Utopian World'
+  upload_date: '2020-02-05'
+  duration: 4805
+  captions: auto
+  file: 2020/2020-02-05-session-2-the-objective-in-corporate-finance-the-utopian-world.md
+- id: Boe84Hy2DFs
+  title: 'Session 4: Discount Rates - Baby Steps'
+  upload_date: '2020-02-05'
+  duration: 4505
+  captions: auto
+  file: 2020/2020-02-05-session-4-discount-rates-baby-steps.md
+- id: CTB_MxM9k8c
+  title: 'Session 2: Introduction to Valuation'
+  upload_date: '2020-02-05'
+  duration: 4804
+  captions: auto
+  file: 2020/2020-02-05-session-2-introduction-to-valuation.md
+- id: BVc6CfAjAbM
+  title: 'A Do-it-Yourself (DIY) Valuation of Tesla: Of Investment Regret and Disagreement!'
+  upload_date: '2020-02-07'
+  duration: 1190
+  captions: auto
+  file: 2020/2020-02-07-a-do-it-yourself-diy-valuation-of-tesla-of-investment-regret-and.md
+- id: 0IC8i_e9m8Y
+  title: 'Session 3: More on the corporate objective'
+  upload_date: '2020-02-10'
+  duration: 4804
+  captions: auto
+  file: 2020/2020-02-10-session-3-more-on-the-corporate-objective.md
+- id: 0qoheA3R8x4
+  title: 'Data Update 3 for 2020: The Price of Risk'
+  upload_date: '2020-02-11'
+  duration: 782
+  captions: auto
+  file: 2020/2020-02-11-data-update-3-for-2020-the-price-of-risk.md
+- id: CWJUkH6tyqU
+  title: 'Session 3: Intrinsic Valuation 101 - First Steps'
+  upload_date: '2020-02-11'
+  duration: 4804
+  captions: auto
+  file: 2020/2020-02-11-session-3-intrinsic-valuation-101-first-steps.md
+- id: h8y02tnMY_s
+  title: 'Session 5: Equity Risk Premiums - Country Risk and Implied Premiums'
+  upload_date: '2020-02-11'
+  duration: 4505
+  captions: auto
+  file: 2020/2020-02-11-session-5-equity-risk-premiums-country-risk-and-implied-premiums.md
+- id: -cfxqD6b6-k
+  title: 'Session 6: Betas and Costs of Equity'
+  upload_date: '2020-02-12'
+  duration: 4505
+  captions: auto
+  file: 2020/2020-02-12-session-6-betas-and-costs-of-equity.md
+- id: FWdN6SDYIB8
+  title: 'Session 4: Riskfree Rates & Equity Risk Premiums'
+  upload_date: '2020-02-12'
+  duration: 4805
+  captions: auto
+  file: 2020/2020-02-12-session-4-riskfree-rates-equity-risk-premiums.md
+- id: qEyaxsOCO84
+  title: 'Session 4: Closing the books on the Corporate End Game'
+  upload_date: '2020-02-12'
+  duration: 4804
+  captions: auto
+  file: 2020/2020-02-12-session-4-closing-the-books-on-the-corporate-end-game.md
+- id: EF_wMELoY90
+  title: 'Session 5: Marginal Investors, Risk Measures and Models'
+  upload_date: '2020-02-19'
+  duration: 4804
+  captions: auto
+  file: 2020/2020-02-19-session-5-marginal-investors-risk-measures-and-models.md
+- id: PQhZM6Vh4l8
+  title: 'Session 5: Company Exposure to Country Risk & Implied Equity Risk Premiums'
+  upload_date: '2020-02-19'
+  duration: 4804
+  captions: auto
+  file: 2020/2020-02-19-session-5-company-exposure-to-country-risk-implied-equity-risk.md
+- id: zdGX2WvnqUo
+  title: 'Session 7: Costs of debt & capital & first steps on cash flows'
+  upload_date: '2020-02-19'
+  duration: 4504
+  captions: auto
+  file: 2020/2020-02-19-session-7-costs-of-debt-capital-first-steps-on-cash-flows.md
+- id: S_bq0D5h5jU
+  title: 'Data Update 4 for 2020: Country Risk and Currency Questions'
+  upload_date: '2020-02-20'
+  duration: 1414
+  captions: auto
+  file: 2020/2020-02-20-data-update-4-for-2020-country-risk-and-currency-questions.md
+- id: HUDfgfXQaSQ
+  title: 'Session 8: From Earnings to Cash Flows'
+  upload_date: '2020-02-24'
+  duration: 4804
+  captions: auto
+  file: 2020/2020-02-24-session-8-from-earnings-to-cash-flows.md
+- id: MCgY3JGiC-g
+  title: 'Session 6: Betas and Cost of Debt'
+  upload_date: '2020-02-24'
+  duration: 5105
+  captions: auto
+  file: 2020/2020-02-24-session-6-betas-and-cost-of-debt.md
+- id: Or8VGMUOqBY
+  title: 'Session 6: Equity Risk Premiums'
+  upload_date: '2020-02-24'
+  duration: 5105
+  captions: auto
+  file: 2020/2020-02-24-session-6-equity-risk-premiums.md
+- id: 1vJdCpVxO7s
+  title: 'A Viral Market Meltdown: Fear or Fundamentals?'
+  upload_date: '2020-02-26'
+  duration: 951
+  captions: auto
+  file: 2020/2020-02-26-a-viral-market-meltdown-fear-or-fundamentals.md
+- id: GpFE9SsAARc
+  title: 'Session 7: Regressions, Betas and Costs of Equity'
+  upload_date: '2020-02-26'
+  duration: 5105
+  captions: auto
+  file: 2020/2020-02-26-session-7-regressions-betas-and-costs-of-equity.md
+- id: Maz1r9SrD4U
+  title: 'Session 7: From Discount Rates to Cash Flows'
+  upload_date: '2020-02-26'
+  duration: 5104
+  captions: auto
+  file: 2020/2020-02-26-session-7-from-discount-rates-to-cash-flows.md
+- id: TEm-gd6oiX8
+  title: 'Session 9: FCFE and Growth Rates'
+  upload_date: '2020-02-26'
+  duration: 4805
+  captions: auto
+  file: 2020/2020-02-26-session-9-fcfe-and-growth-rates.md
+- id: BZTX1vbUvhg
+  title: 'Data Update 5 for 2020: Costs of debt, equity and capital'
+  upload_date: '2020-02-27'
+  duration: 1220
+  captions: auto
+  file: 2020/2020-02-27-data-update-5-for-2020-costs-of-debt-equity-and-capital.md
+- id: Nfz9XG_Itls
+  title: 'Session 8: Tying up Cash Flows & Moving on to Growth'
+  upload_date: '2020-03-02'
+  duration: 5104
+  captions: auto
+  file: 2020/2020-03-02-session-8-tying-up-cash-flows-moving-on-to-growth.md
+- id: YYxPzwbnJk8
+  title: 'Session 8: The Determinants of Betas (and Macro Risk Exposure)'
+  upload_date: '2020-03-02'
+  duration: 5104
+  captions: auto
+  file: 2020/2020-03-02-session-8-the-determinants-of-betas-and-macro-risk-exposure.md
+- id: 0W3bUiAHVbw
+  title: 'Session 9: Bottom Up Betas'
+  upload_date: '2020-03-04'
+  duration: 5104
+  captions: auto
+  file: 2020/2020-03-04-session-9-bottom-up-betas.md
+- id: cldDNAO1bz4
+  title: 'Session 10: Fundamental Growth and Terminal Value'
+  upload_date: '2020-03-04'
+  duration: 4804
+  captions: auto
+  file: 2020/2020-03-04-session-10-fundamental-growth-and-terminal-value.md
+- id: jHlEl2fAmBs
+  title: 'Session 11: Terminal Value, Picking the right DCF Model and First Loose Ends'
+  upload_date: '2020-03-04'
+  duration: 4805
+  captions: auto
+  file: 2020/2020-03-04-session-11-terminal-value-picking-the-right-dcf-model-and-first-loose.md
+- id: Q4TGIulm76g
+  title: 'Session 9: Quiz and Analyst/Fundamental Growth Rates'
+  upload_date: '2020-03-06'
+  duration: 5105
+  captions: auto
+  file: 2020/2020-03-06-session-9-quiz-and-analyst-fundamental-growth-rates.md
+- id: -zHd8QNxPBo
+  title: 'A Viral Market Meltdown II: Clues in the Market Debris?'
+  upload_date: '2020-03-08'
+  duration: 1132
+  captions: auto
+  file: 2020/2020-03-08-a-viral-market-meltdown-ii-clues-in-the-market-debris.md
+- id: 0UY3mHALsnY
+  title: 'Session 10: Private Company Costs of Equity, Debt & its Cost (SKIP FIRST 40 MINUTES. QUIZ TIME)'
+  upload_date: '2020-03-09'
+  duration: 5104
+  captions: auto
+  file: 2020/2020-03-09-session-10-private-company-costs-of-equity-debt-its-cost-skip-first.md
+- id: dMBAo1_Anb8
+  title: 'Session 12: More Loose Ends in Valuation'
+  upload_date: '2020-03-09'
+  duration: 4805
+  captions: auto
+  file: 2020/2020-03-09-session-12-more-loose-ends-in-valuation.md
+- id: hEz2eqFDtfY
+  title: 'Session 10: Growth (Contd.), Terminal Value and Choosing a DCF Model'
+  upload_date: '2020-03-09'
+  duration: 5105
+  captions: auto
+  file: 2020/2020-03-09-session-10-growth-contd-terminal-value-and-choosing-a-dcf-model.md
+- id: 2TmcmfNfwmo
+  title: 'Session 11: From Discount Rates to Returns'
+  upload_date: '2020-03-11'
+  duration: 5119
+  captions: auto
+  file: 2020/2020-03-11-session-11-from-discount-rates-to-returns.md
+- id: 8LCWV2MGyyg
+  title: 'Session 13: Stories and Numbers'
+  upload_date: '2020-03-11'
+  duration: 4230
+  captions: auto
+  file: 2020/2020-03-11-session-13-stories-and-numbers.md
+- id: qvTw5rSFh5Q
+  title: 'Session 11: Loose Ends in Valuation'
+  upload_date: '2020-03-12'
+  duration: 5042
+  captions: auto
+  file: 2020/2020-03-12-session-11-loose-ends-in-valuation.md
+- id: hMEvkP4Y3uM
+  title: 'A Viral Market Update III: Price vs Value, Investing vs Trading!'
+  upload_date: '2020-03-16'
+  duration: 1415
+  captions: auto
+  file: 2020/2020-03-16-a-viral-market-update-iii-price-vs-value-investing-vs-trading.md
+- id: AVOW5-sUAh0
+  title: 'Data Update 7 for 2020: The Dark Side of Debt'
+  upload_date: '2020-03-21'
+  duration: 835
+  captions: auto
+  file: 2020/2020-03-21-data-update-7-for-2020-the-dark-side-of-debt.md
+- id: Yz2bzPNSS3c
+  title: 'Data Update 6 for 2020: Growth, Profitability and Reinvestment'
+  upload_date: '2020-03-21'
+  duration: 1228
+  captions: auto
+  file: 2020/2020-03-21-data-update-6-for-2020-growth-profitability-and-reinvestment.md
+- id: Q_ZFRyeN_iU
+  title: 'A Viral Market Meltdown IV: Preparing for a post-virus World'
+  upload_date: '2020-03-23'
+  duration: 931
+  captions: auto
+  file: 2020/2020-03-23-a-viral-market-meltdown-iv-preparing-for-a-post-virus-world.md
+- id: 6IXuKpVeL9w
+  title: 'Session 12: Earnings to Time Weighted Incremental Cash flows'
+  upload_date: '2020-03-24'
+  duration: 5192
+  captions: auto
+  file: 2020/2020-03-24-session-12-earnings-to-time-weighted-incremental-cash-flows.md
+- id: mFoufJq97eI
+  title: 'Session 12: Stories to Numbers'
+  upload_date: '2020-03-24'
+  duration: 4873
+  captions: auto
+  file: 2020/2020-03-24-session-12-stories-to-numbers.md
+- id: t2SqbqRjWPc
+  title: 'Session 14: Valuations at last'
+  upload_date: '2020-03-24'
+  captions: none
+  file: null
+- id: --YwcTRedLE
+  title: 'Session 13: Uncertainty in Investing and Equity-focused Analysis'
+  upload_date: '2020-03-25'
+  duration: 4827
+  captions: auto
+  file: 2020/2020-03-25-session-13-uncertainty-in-investing-and-equity-focused-analysis.md
+- id: KNLrudmNAQk
+  title: 'Session 15: More dark side valuations, across the life cycle'
+  upload_date: '2020-03-26'
+  duration: 5316
+  captions: auto
+  file: 2020/2020-03-26-session-15-more-dark-side-valuations-across-the-life-cycle.md
+- id: izlmglnTlvQ
+  title: 'Session 13: More stories to numbers and baby steps on valuation'
+  upload_date: '2020-03-26'
+  duration: 5202
+  captions: auto
+  file: 2020/2020-03-26-session-13-more-stories-to-numbers-and-baby-steps-on-valuation.md
+- id: F9GfXJ-IrSA
+  title: 'Valuation Tools Webcast: Becoming a spreadsheet ninja (not)!'
+  upload_date: '2020-03-27'
+  duration: 2044
+  captions: auto
+  file: 2020/2020-03-27-valuation-tools-webcast-becoming-a-spreadsheet-ninja-not.md
+- id: sWZvhkl_LGA
+  title: 'Session 14: Acquisition Analysis and Investment Decision Rules'
+  upload_date: '2020-03-30'
+  duration: 5167
+  captions: auto
+  file: 2020/2020-03-30-session-14-acquisition-analysis-and-investment-decision-rules.md
+- id: CgtGKRQzLyU
+  title: 'Session 14: Valuing Young Companies'
+  upload_date: '2020-03-31'
+  duration: 5267
+  captions: auto
+  file: 2020/2020-03-31-session-14-valuing-young-companies.md
+- id: L6iMK0Wcykw
+  title: 'A Viral Market Meltdown V:  Back to Basics?'
+  upload_date: '2020-03-31'
+  duration: 1189
+  captions: auto
+  file: 2020/2020-03-31-a-viral-market-meltdown-v-back-to-basics.md
+- id: mOp7n1nnO9s
+  title: 'Session 16: Valuing Emerging Market Companies'
+  upload_date: '2020-03-31'
+  duration: 3143
+  captions: auto
+  file: 2020/2020-03-31-session-16-valuing-emerging-market-companies.md
+- id: yzuirJ9GhLw
+  title: 'Session 15: Netflix Fit Case and Side Costs of Projects'
+  upload_date: '2020-04-01'
+  duration: 5409
+  captions: auto
+  file: 2020/2020-04-01-session-15-netflix-fit-case-and-side-costs-of-projects.md
+- id: 8jcbE0qP0UM
+  title: 'Session 17: Closing the books on Intrinsic value'
+  upload_date: '2020-04-02'
+  duration: 5029
+  captions: auto
+  file: 2020/2020-04-02-session-17-closing-the-books-on-intrinsic-value.md
+- id: Bbb8RrWEAdU
+  title: 'Session 15: Mature companies in transition, Distressed Companies and Emerging Market companies'
+  upload_date: '2020-04-02'
+  duration: 4972
+  captions: auto
+  file: 2020/2020-04-02-session-15-mature-companies-in-transition-distressed-companies-and.md
+- id: ZZSIDJXzIII
+  title: 'Session 16: Wrapping up Investment Analysis'
+  upload_date: '2020-04-06'
+  duration: 3262
+  captions: auto
+  file: 2020/2020-04-06-session-16-wrapping-up-investment-analysis.md
+- id: 3-s8rMVXO94
+  title: 'Session 18: Pricing 101'
+  upload_date: '2020-04-07'
+  duration: 4613
+  captions: auto
+  file: 2020/2020-04-07-session-18-pricing-101.md
+- id: bmFxiCplJbI
+  title: 'Session 16: Truncation Risk and Bank Valuation'
+  upload_date: '2020-04-07'
+  duration: 3364
+  captions: auto
+  file: 2020/2020-04-07-session-16-truncation-risk-and-bank-valuation.md
+- id: loa79x5CcwI
+  title: 'Session 17: First steps on capital structure'
+  upload_date: '2020-04-08'
+  duration: 4947
+  captions: auto
+  file: 2020/2020-04-08-session-17-first-steps-on-capital-structure.md
+- id: zFC4zAJLm1k
+  title: 'A Viral Market Update VI: Updating the Price of Risk (Equity Risk Premiums & Default Spreads)'
+  upload_date: '2020-04-08'
+  duration: 1082
+  captions: auto
+  file: 2020/2020-04-08-a-viral-market-update-vi-updating-the-price-of-risk-equity-risk.md
+- id: 4UcClDskce4
+  title: 'Session 19: More on Pricing..'
+  upload_date: '2020-04-09'
+  duration: 4653
+  captions: auto
+  file: 2020/2020-04-09-session-19-more-on-pricing.md
+- id: kjXBVQx1-ms
+  title: 'Session 17: Last DCF Rites and First Steps in Pricing'
+  upload_date: '2020-04-09'
+  duration: 4947
+  captions: auto
+  file: 2020/2020-04-09-session-17-last-dcf-rites-and-first-steps-in-pricing.md
+- id: 5nSZLVbpG44
+  title: 'Session 18: Optimum Capital Structure - The Cost of Capital Approach'
+  upload_date: '2020-04-12'
+  duration: 3715
+  captions: auto
+  file: 2020/2020-04-12-session-18-optimum-capital-structure-the-cost-of-capital-approach.md
+- id: T4ez-_mDjCk
+  title: 'Session 18: Pricing (continued)'
+  upload_date: '2020-04-12'
+  duration: 4381
+  captions: auto
+  file: 2020/2020-04-12-session-18-pricing-continued.md
+- id: stiZad3NFRQ
+  title: 'Session 19: Pricing Examples'
+  upload_date: '2020-04-15'
+  duration: 3554
+  captions: auto
+  file: 2020/2020-04-15-session-19-pricing-examples.md
+- id: v8Tih7nxt_o
+  title: 'Session 19: Enhanced Cost of Capital, APV and Relative Analysis'
+  upload_date: '2020-04-15'
+  duration: 3668
+  captions: auto
+  file: 2020/2020-04-15-session-19-enhanced-cost-of-capital-apv-and-relative-analysis.md
+- id: -PFyeCieJUA
+  title: 'Session 22: Introduction to Real Options'
+  upload_date: '2020-04-20'
+  duration: 4399
+  captions: auto
+  file: 2020/2020-04-20-session-22-introduction-to-real-options.md
+- id: C2hXfNqvmwo
+  title: 'Session 20: Moving to the Optimal + Debt Design'
+  upload_date: '2020-04-20'
+  duration: 4858
+  captions: auto
+  file: 2020/2020-04-20-session-20-moving-to-the-optimal-debt-design.md
+- id: chfx6qE1LwU
+  title: 'Session 20: Pricing Closure and Asset-based Valuation'
+  upload_date: '2020-04-20'
+  duration: 4993
+  captions: auto
+  file: 2020/2020-04-20-session-20-pricing-closure-and-asset-based-valuation.md
+- id: cVHPnlQ34aw
+  title: 'Session 21: Debt Design Continued'
+  upload_date: '2020-04-22'
+  duration: 4673
+  captions: auto
+  file: 2020/2020-04-22-session-21-debt-design-continued.md
+- id: Ap9UvZ-DfwE
+  title: 'Session 23: The options to expand & abandon, financial flexibility & distressed equity'
+  upload_date: '2020-04-23'
+  duration: 4253
+  captions: auto
+  file: 2020/2020-04-23-session-23-the-options-to-expand-abandon-financial-flexibility.md
+- id: iMngMIRm_4E
+  title: 'Session 21: Private Company Valuation'
+  upload_date: '2020-04-23'
+  duration: 5591
+  captions: auto
+  file: 2020/2020-04-23-session-21-private-company-valuation.md
+- id: Q73AF_osrkI
+  title: 'A Viral Market Update VII: Mayhem with Mulltiples'
+  upload_date: '2020-04-24'
+  duration: 1219
+  captions: auto
+  file: 2020/2020-04-24-a-viral-market-update-vii-mayhem-with-mulltiples.md
+- id: vuj6jLcrvOg
+  title: 'Session 22: Dividends - Measures and Drivers'
+  upload_date: '2020-04-27'
+  duration: 4611
+  captions: auto
+  file: 2020/2020-04-27-session-22-dividends-measures-and-drivers.md
+- id: 8FEYrpRm9Wk
+  title: 'Session 24: Distressed Equity as an Option'
+  upload_date: '2020-04-28'
+  duration: 2217
+  captions: auto
+  file: 2020/2020-04-28-session-24-distressed-equity-as-an-option.md
+- id: DwouwkQZ7hg
+  title: 'Session 22: Basics of Options (for Real Options)'
+  upload_date: '2020-04-28'
+  duration: 3602
+  captions: auto
+  file: 2020/2020-04-28-session-22-basics-of-options-for-real-options.md
+- id: s4FfmvcPYmc
+  title: 'Session 23: Assessing Dividend Policy'
+  upload_date: '2020-04-29'
+  duration: 5047
+  captions: auto
+  file: 2020/2020-04-29-session-23-assessing-dividend-policy.md
+- id: FgGX-bxhuFs
+  title: 'Session 23: Real Options - Patents, Undeveloped Natural Resource Reserves & Options to expand'
+  upload_date: '2020-04-30'
+  duration: 5344
+  captions: auto
+  file: 2020/2020-04-30-session-23-real-options-patents-undeveloped-natural-resource-reserves.md
+- id: LzWrsLhXPa0
+  title: 'Session 25: Acquisition, a Value Destroyer?'
+  upload_date: '2020-04-30'
+  duration: 4775
+  captions: auto
+  file: 2020/2020-04-30-session-25-acquisition-a-value-destroyer.md
+- id: VvvoqmgL4PE
+  title: 'Session 24: Dividend Assessment and first steps on Valuation'
+  upload_date: '2020-05-04'
+  duration: 5022
+  captions: auto
+  file: 2020/2020-05-04-session-24-dividend-assessment-and-first-steps-on-valuation.md
+- id: _SWE2v53AQU
+  title: 'Session 24: The value of flexibility (operating and financial) and distressed equity as an option'
+  upload_date: '2020-05-04'
+  duration: 4945
+  captions: auto
+  file: 2020/2020-05-04-session-24-the-value-of-flexibility-operating-and-financial-and.md
+- id: MPOa1OdL_6o
+  title: 'Session 26: More on acquisitions and first steps on value enhanceement'
+  upload_date: '2020-05-05'
+  duration: 4742
+  captions: auto
+  file: 2020/2020-05-05-session-26-more-on-acquisitions-and-first-steps-on-value-enhanceement.md
+- id: E9vyOZaAPp4
+  title: 'Session 27: The Value of Control'
+  upload_date: '2020-05-07'
+  duration: 4685
+  captions: auto
+  file: 2020/2020-05-07-session-27-the-value-of-control.md
+- id: OPnJrWxmDKU
+  title: 'Session 25: The Value Drivers'
+  upload_date: '2020-05-07'
+  duration: 5284
+  captions: auto
+  file: 2020/2020-05-07-session-25-the-value-drivers.md
+- id: ovCrsa7SFK8
+  title: 'Session 25: Acquisition Valuation'
+  upload_date: '2020-05-07'
+  duration: 4869
+  captions: auto
+  file: 2020/2020-05-07-session-25-acquisition-valuation.md
+- id: OSC6JkTJXqA
+  title: 'Session 26: The Fat Lady is singing!'
+  upload_date: '2020-05-12'
+  duration: 4908
+  captions: auto
+  file: 2020/2020-05-12-session-26-the-fat-lady-is-singing.md
+- id: STUDilkO5Js
+  title: 'Session 26: The Grand Finale'
+  upload_date: '2020-05-12'
+  duration: 5200
+  captions: auto
+  file: 2020/2020-05-12-session-26-the-grand-finale.md
+- id: YxATD06mVwI
+  title: 'Session 28: It''s Over!'
+  upload_date: '2020-05-12'
+  duration: 4458
+  captions: auto
+  file: 2020/2020-05-12-session-28-its-over.md
+- id: h-7G-QI6HKA
+  title: 'A Viral Market Update VIII: A Crisis test of Value vs Growth, Active vs Passive, Small vs Large!'
+  upload_date: '2020-05-13'
+  duration: 1678
+  captions: auto
+  file: 2020/2020-05-13-a-viral-market-update-viii-a-crisis-test-of-value-vs-growth-active-vs.md
+- id: 3cARjvs9fns
+  title: 'A Viral Market Update IX: Making Sense of the Market, A DIY Valuation of the S&P 500'
+  upload_date: '2020-06-04'
+  duration: 1505
+  captions: auto
+  file: 2020/2020-06-04-a-viral-market-update-ix-making-sense-of-the-market-a-diy-valuation.md
+- id: NR0BlxmQpv0
+  title: 'A Viral Market Update X: A Corporate Life Cycle Perspective'
+  upload_date: '2020-06-19'
+  duration: 1254
+  captions: auto
+  file: 2020/2020-06-19-a-viral-market-update-x-a-corporate-life-cycle-perspective.md
+- id: 215r6v4bfhQ
+  title: 'A Viral Market Update XI: An Ode to Flexibility'
+  upload_date: '2020-07-02'
+  duration: 1559
+  captions: auto
+  file: 2020/2020-07-02-a-viral-market-update-xi-an-ode-to-flexibility.md
+- id: Oyq13AcQQGk
+  title: 'Viral Market Update XII: The Resilience of Risk Capital'
+  upload_date: '2020-07-23'
+  duration: 1570
+  captions: auto
+  file: 2020/2020-07-23-viral-market-update-xii-the-resilience-of-risk-capital.md
+- id: 0IlSi0pyQD4
+  title: 'Session 11: Interest Rates - Drivers and Determinants'
+  upload_date: '2020-07-29'
+  duration: 1051
+  captions: auto
+  file: 2020/2020-07-29-session-11-interest-rates-drivers-and-determinants.md
+- id: 3n3816i_vEg
+  title: 'Postcards from the edge: Lessons from the COVID crisis'
+  upload_date: '2020-07-29'
+  duration: 2442
+  captions: auto
+  file: 2020/2020-07-29-postcards-from-the-edge-lessons-from-the-covid-crisis.md
+- id: 4UKaQpe1Yfs
+  title: 'Session 10: Inflation, the Hidden Tax'
+  upload_date: '2020-07-29'
+  duration: 924
+  captions: auto
+  file: 2020/2020-07-29-session-10-inflation-the-hidden-tax.md
+- id: 82V2CafoYs0
+  title: 'Session 8:  Introduction to Equity Valuation'
+  upload_date: '2020-07-29'
+  duration: 652
+  captions: auto
+  file: 2020/2020-07-29-session-8-introduction-to-equity-valuation.md
+- id: BbdbjW8Pq04
+  title: 'Session 5: Measuring Risk'
+  upload_date: '2020-07-29'
+  duration: 1165
+  captions: auto
+  file: 2020/2020-07-29-session-5-measuring-risk.md
+- id: GbpHHt08obE
+  title: 'Session 9:  Introduction to Option Valuation'
+  upload_date: '2020-07-29'
+  duration: 995
+  captions: auto
+  file: 2020/2020-07-29-session-9-introduction-to-option-valuation.md
+- id: PMENh4UWr-Y
+  title: 'Session 6: The Time Value of Money'
+  upload_date: '2020-07-29'
+  duration: 933
+  captions: auto
+  file: 2020/2020-07-29-session-6-the-time-value-of-money.md
+- id: TKoLoLVI_Js
+  title: 'Session 2: The Structure of a Business'
+  upload_date: '2020-07-29'
+  duration: 793
+  captions: auto
+  file: 2020/2020-07-29-session-2-the-structure-of-a-business.md
+- id: aK4qHbDkJ-s
+  title: 'Session 1: First Steps in Finance'
+  upload_date: '2020-07-29'
+  duration: 665
+  captions: auto
+  file: 2020/2020-07-29-session-1-first-steps-in-finance.md
+- id: lj1qoksmKjc
+  title: 'Session 4: What is risk?'
+  upload_date: '2020-07-29'
+  duration: 780
+  captions: auto
+  file: 2020/2020-07-29-session-4-what-is-risk.md
+- id: rBWBUKZd4WY
+  title: 'Session 7:  Valuing Bonds'
+  upload_date: '2020-07-29'
+  duration: 937
+  captions: auto
+  file: 2020/2020-07-29-session-7-valuing-bonds.md
+- id: y_T3kubRm7Q
+  title: 'Session 3: Cash Flows'
+  upload_date: '2020-07-29'
+  captions: none
+  file: null
+- id: 9L8ScAI24l4
+  title: 'From Class Room to Class Zoom: Teaching in COVID Times!'
+  upload_date: '2020-08-05'
+  duration: 1432
+  captions: auto
+  file: 2020/2020-08-05-from-class-room-to-class-zoom-teaching-in-covid-times.md
+- id: FXbXksS4kNs
+  title: 'Session 12: Cracking the Currency Code!'
+  upload_date: '2020-08-14'
+  duration: 951
+  captions: auto
+  file: 2020/2020-08-14-session-12-cracking-the-currency-code.md
+- id: Hr2XfCA3aKk
+  title: 'A Viral Market Update XIII: The Strong (FANGAM) get stronger'
+  upload_date: '2020-08-20'
+  duration: 1632
+  captions: auto
+  file: 2020/2020-08-20-a-viral-market-update-xiii-the-strong-fangam-get-stronger.md
+- id: P_W2qGprPtg
+  title: 'Perception, Illusion and Reality: Stock Splits and Index Inclusions (Exclusions)'
+  upload_date: '2020-09-01'
+  duration: 1709
+  captions: auto
+  file: 2020/2020-09-01-perception-illusion-and-reality-stock-splits-and-index-inclusions.md
+- id: 7rW7lpQZpqY
+  title: 'Session 1: The Financial Statements - An Overview'
+  upload_date: '2020-09-03'
+  duration: 759
+  captions: auto
+  file: 2020/2020-09-03-session-1-the-financial-statements-an-overview.md
+- id: Gr4JwDB1iRM
+  title: 'Session 3A: The Balance Sheet (Examples)'
+  upload_date: '2020-09-03'
+  duration: 1045
+  captions: auto
+  file: 2020/2020-09-03-session-3a-the-balance-sheet-examples.md
+- id: Jbp3-AU9v_g
+  title: 'Accounting 101: A Preview'
+  upload_date: '2020-09-03'
+  duration: 125
+  captions: auto
+  file: 2020/2020-09-03-accounting-101-a-preview.md
+- id: Q8wKr1QDSwg
+  title: 'Session 2: The Income Statement'
+  upload_date: '2020-09-03'
+  duration: 988
+  captions: auto
+  file: 2020/2020-09-03-session-2-the-income-statement.md
+- id: U954oEU7_0w
+  title: 'Session 4A: The Statement of Cash Flows (Examples)'
+  upload_date: '2020-09-03'
+  duration: 936
+  captions: auto
+  file: 2020/2020-09-03-session-4a-the-statement-of-cash-flows-examples.md
+- id: UYxJl2GvdGw
+  title: 'Session 2A: The Income Statement (Examples)'
+  upload_date: '2020-09-03'
+  duration: 1060
+  captions: auto
+  file: 2020/2020-09-03-session-2a-the-income-statement-examples.md
+- id: XobT12fvkXc
+  title: 'Session 4: The Statement of Cash Flows'
+  upload_date: '2020-09-03'
+  duration: 803
+  captions: auto
+  file: 2020/2020-09-03-session-4-the-statement-of-cash-flows.md
+- id: ZXXF-rSaE9E
+  title: 'Session 6: Financial Ratios'
+  upload_date: '2020-09-03'
+  duration: 1092
+  captions: auto
+  file: 2020/2020-09-03-session-6-financial-ratios.md
+- id: cSuc2HHQpxc
+  title: 'Session 3: The Balance Sheet'
+  upload_date: '2020-09-03'
+  duration: 845
+  captions: auto
+  file: 2020/2020-09-03-session-3-the-balance-sheet.md
+- id: o4_GwR_6jR4
+  title: 'Session 5A: Accounting Inconsistencies (Examples)'
+  upload_date: '2020-09-03'
+  duration: 1336
+  captions: auto
+  file: 2020/2020-09-03-session-5a-accounting-inconsistencies-examples.md
+- id: pL2wIDWXN68
+  title: 'Session 6A: Financial Ratios (Examples)'
+  upload_date: '2020-09-03'
+  duration: 1027
+  captions: auto
+  file: 2020/2020-09-03-session-6a-financial-ratios-examples.md
+- id: un6-H_wOizM
+  title: 'Session 5: Accounting Inconsistencies'
+  upload_date: '2020-09-03'
+  duration: 986
+  captions: auto
+  file: 2020/2020-09-03-session-5-accounting-inconsistencies.md
+- id: Vs1g7Epp11w
+  title: 'Doing good or Sounding Good: A Skeptical Look at ESG!'
+  upload_date: '2020-09-21'
+  duration: 1687
+  captions: auto
+  file: 2020/2020-09-21-doing-good-or-sounding-good-a-skeptical-look-at-esg.md
+- id: A4hpXxval_U
+  title: 'Screening for Stocks on S&P Capital IQ: A Quick Tour'
+  upload_date: '2020-10-21'
+  duration: 778
+  captions: auto
+  file: 2020/2020-10-21-screening-for-stocks-on-s-p-capital-iq-a-quick-tour.md
+- id: 4L_ZWyuhb5s
+  title: 'Value Investing II: A Lost Decade!'
+  upload_date: '2020-10-23'
+  duration: 1113
+  captions: auto
+  file: 2020/2020-10-23-value-investing-ii-a-lost-decade.md
+- id: Iv0zmTmKHYg
+  title: 'Value Investing I: The Back Story!'
+  upload_date: '2020-10-23'
+  duration: 1192
+  captions: auto
+  file: 2020/2020-10-23-value-investing-i-the-back-story.md
+- id: dA9AlDAbcMI
+  title: 'Value Investing III: Rebirth, Reincarnation or Requiem?'
+  upload_date: '2020-10-23'
+  duration: 1021
+  captions: auto
+  file: 2020/2020-10-23-value-investing-iii-rebirth-reincarnation-or-requiem.md
+- id: f4skDr1Lqjc
+  title: 'Narrative and Numbers: Light in the Darkness'
+  upload_date: '2020-10-30'
+  duration: 1871
+  captions: auto
+  file: 2020/2020-10-30-narrative-and-numbers-light-in-the-darkness.md
+- id: Tkccwe6MZEA
+  title: 'A Viral Market Update XIV: A Wrap on the COVID market, premature or not!'
+  upload_date: '2020-11-05'
+  duration: 1409
+  captions: auto
+  file: 2020/2020-11-05-a-viral-market-update-xiv-a-wrap-on-the-covid-market-premature-or-not.md
+- id: I2bl-R7vQh8
+  title: The Sharing Economy comes home! The Airbnb IPO (at long last)!
+  upload_date: '2020-12-02'
+  duration: 2124
+  captions: auto
+  file: 2020/2020-12-02-the-sharing-economy-comes-home-the-airbnb-ipo-at-long-last.md
+- id: L-6kF8T4dSs
+  title: Introduction to Corporate Finance Class (Short)
+  upload_date: '2020-12-29'
+  captions: none
+  file: null
+- id: oi6M5KBWydg
+  title: Introduction to Valuation class (Short)
+  upload_date: '2020-12-29'
+  duration: 388
+  captions: auto
+  file: 2020/2020-12-29-introduction-to-valuation-class-short.md
+- id: scBgiC_rzkU
+  title: 'Data Update 1 for 2021: A (Data) Look back at a Most Forgettable Year!'
+  upload_date: '2021-01-09'
+  duration: 1571
+  captions: auto
+  file: 2021/2021-01-09-data-update-1-for-2021-a-data-look-back-at-a-most-forgettable-year.md
+- id: tXPY-34nflM
+  title: 'Marking Time: Another year, a new semester and fresh classes!'
+  upload_date: '2021-01-12'
+  duration: 784
+  captions: auto
+  file: 2021/2021-01-12-marking-time-another-year-a-new-semester-and-fresh-classes.md
+- id: JXq4RINVNEY
+  title: 'Data Update 2 for 2021: The Price of Risk!'
+  upload_date: '2021-01-20'
+  duration: 1381
+  captions: auto
+  file: 2021/2021-01-20-data-update-2-for-2021-the-price-of-risk.md
+- id: KjX-yKQEbuM
+  title: 'Data Update 3 for 2021: The Rest of the (Market) Story'
+  upload_date: '2021-01-28'
+  duration: 2088
+  captions: auto
+  file: 2021/2021-01-28-data-update-3-for-2021-the-rest-of-the-market-story.md
+- id: M5j9DbThuMY
+  title: 'Pitchforks and Torches at GameStop: The Reddit Raid on Hedge Funds!'
+  upload_date: '2021-01-29'
+  duration: 1786
+  captions: auto
+  file: 2021/2021-01-29-pitchforks-and-torches-at-gamestop-the-reddit-raid-on-hedge-funds.md
+- id: Snn-sSB3LqU
+  title: 'Session 1: Class Logistics and Valuation Themes'
+  upload_date: '2021-02-01'
+  duration: 4359
+  captions: auto
+  file: 2021/2021-02-01-session-1-class-logistics-and-valuation-themes.md
+- id: cZM1yU-C6tg
+  title: 'Session 1: Class Logistics and Broad Themes'
+  upload_date: '2021-02-01'
+  duration: 4519
+  captions: auto
+  file: 2021/2021-02-01-session-1-class-logistics-and-broad-themes.md
+- id: s0wmM_KACyc
+  title: 'Session 1: Introduction to class'
+  upload_date: '2021-02-01'
+  duration: 5171
+  captions: auto
+  file: 2021/2021-02-01-session-1-introduction-to-class.md
+- id: gk10Nma7YEs
+  title: 'Session 2: The Bermuda Triangle of Valuation and Valuation Approaches'
+  upload_date: '2021-02-03'
+  duration: 4942
+  captions: auto
+  file: 2021/2021-02-03-session-2-the-bermuda-triangle-of-valuation-and-valuation-approaches.md
+- id: iB_KEfHySyA
+  title: 'Session 2: Shareholders, Stakeholders and the End Game in Business'
+  upload_date: '2021-02-03'
+  duration: 5118
+  captions: auto
+  file: 2021/2021-02-03-session-2-shareholders-stakeholders-and-the-end-game-in-business.md
+- id: tDjw9IB8zvs
+  title: 'The Price/Value Feedback Loop: Revisiting AMC and GME!'
+  upload_date: '2021-02-03'
+  duration: 1105
+  captions: auto
+  file: 2021/2021-02-03-the-price-value-feedback-loop-revisiting-amc-and-gme.md
+- id: xOPw6mZMv8g
+  title: 'Session 2: The Bermuda Triangle of Valuation and Valuation Approaches'
+  upload_date: '2021-02-03'
+  duration: 4665
+  captions: auto
+  file: 2021/2021-02-03-session-2-the-bermuda-triangle-of-valuation-and-valuation-approaches-2.md
+- id: C47pcVUbvSU
+  title: 'Session 3: First Steps on Intrinsic Value'
+  upload_date: '2021-02-08'
+  duration: 4702
+  captions: auto
+  file: 2021/2021-02-08-session-3-first-steps-on-intrinsic-value.md
+- id: pjdytSQhG5E
+  title: 'Session 3: Introduction (wrap up) and First Steps on Intrinsic Value'
+  upload_date: '2021-02-08'
+  duration: 5101
+  captions: auto
+  file: 2021/2021-02-08-session-3-introduction-wrap-up-and-first-steps-on-intrinsic-value.md
+- id: IEEv0pMlb8E
+  title: 'Session 3: Managers and Markets (video fix replacement)'
+  upload_date: '2021-02-09'
+  duration: 4740
+  captions: auto
+  file: 2021/2021-02-09-session-3-managers-and-markets-video-fix-replacement.md
+- id: 1PNZ1lkyRik
+  title: 'Session 4: Risk free Rates and Equity Risk Premiums'
+  upload_date: '2021-02-10'
+  duration: 4831
+  captions: auto
+  file: 2021/2021-02-10-session-4-risk-free-rates-and-equity-risk-premiums.md
+- id: OdM8vJI469c
+  title: 'Session 4: Closing the Books on the Objective Function'
+  upload_date: '2021-02-10'
+  duration: 4953
+  captions: auto
+  file: 2021/2021-02-10-session-4-closing-the-books-on-the-objective-function.md
+- id: P5astftpNI8
+  title: 'Data Update 4 for 2021: The Hurdle Rate'
+  upload_date: '2021-02-10'
+  duration: 1759
+  captions: auto
+  file: 2021/2021-02-10-data-update-4-for-2021-the-hurdle-rate.md
+- id: a0SY8dDhVAw
+  title: 'Session 4: DCF Big Picture and Risk free Rates'
+  upload_date: '2021-02-10'
+  duration: 5026
+  captions: auto
+  file: 2021/2021-02-10-session-4-dcf-big-picture-and-risk-free-rates.md
+- id: zfeygyUpvR0
+  title: 'In Practice Webcast: Introduction to using a Bloomberg Terminal for data collection'
+  upload_date: '2021-02-16'
+  duration: 480
+  captions: auto
+  file: 2021/2021-02-16-in-practice-webcast-introduction-to-using-a-bloomberg-terminal-for.md
+- id: Y897MifXKMA
+  title: 'Session 5: Riskfree Rates Closure and Equity Risk Premiums'
+  upload_date: '2021-02-18'
+  duration: 5256
+  captions: auto
+  file: 2021/2021-02-18-session-5-riskfree-rates-closure-and-equity-risk-premiums.md
+- id: hvMFEyBGysw
+  title: 'Session 5: Company ERP and Implied ERP'
+  upload_date: '2021-02-18'
+  duration: 5088
+  captions: auto
+  file: 2021/2021-02-18-session-5-company-erp-and-implied-erp.md
+- id: jNO0gpaFq6o
+  title: 'Session 6: Implied Equity Risk Premiums'
+  upload_date: '2021-02-18'
+  duration: 4578
+  captions: auto
+  file: 2021/2021-02-18-session-6-implied-equity-risk-premiums.md
+- id: uVqux6Nu8H8
+  title: 'Session 5: Closing the objective function and first steps on risk'
+  upload_date: '2021-02-18'
+  duration: 4931
+  captions: auto
+  file: 2021/2021-02-18-session-5-closing-the-objective-function-and-first-steps-on-risk.md
+- id: YebHCl1KHsA
+  title: 'Session 6: Risk and Return Models & Risk free Rates'
+  upload_date: '2021-02-22'
+  duration: 4806
+  captions: auto
+  file: 2021/2021-02-22-session-6-risk-and-return-models-risk-free-rates.md
+- id: fW4kkhXZifs
+  title: 'Session 6: Betas and beyond!'
+  upload_date: '2021-02-22'
+  duration: 4932
+  captions: auto
+  file: 2021/2021-02-22-session-6-betas-and-beyond.md
+- id: p6QI80ypgZk
+  title: 'Session 7: Betas and beyond!'
+  upload_date: '2021-02-22'
+  duration: 4677
+  captions: auto
+  file: 2021/2021-02-22-session-7-betas-and-beyond.md
+- id: 80rduPdIsWw
+  title: 'Session 8: Cost of Debt and from discount rates to cash flows'
+  upload_date: '2021-02-25'
+  duration: 5129
+  captions: auto
+  file: 2021/2021-02-25-session-8-cost-of-debt-and-from-discount-rates-to-cash-flows.md
+- id: jqKFfCEivYA
+  title: 'Session 7: Equity Risk Premiums & First steps on betas'
+  upload_date: '2021-02-25'
+  duration: 4722
+  captions: auto
+  file: 2021/2021-02-25-session-7-equity-risk-premiums-first-steps-on-betas.md
+- id: qgfmWh-SPAM
+  title: 'Session 7: Cost of Debt and from discount rates to cash flows'
+  upload_date: '2021-02-25'
+  duration: 5030
+  captions: auto
+  file: 2021/2021-02-25-session-7-cost-of-debt-and-from-discount-rates-to-cash-flows.md
+- id: 8JVyDBWGdgk
+  title: 'Session 8: The Greeks are here (Regression Beta)'
+  upload_date: '2021-03-01'
+  duration: 5031
+  captions: auto
+  file: 2021/2021-03-01-session-8-the-greeks-are-here-regression-beta.md
+- id: NKlbvjEzfX4
+  title: 'Session 8: From earnings to cash flows'
+  upload_date: '2021-03-01'
+  duration: 4977
+  captions: auto
+  file: 2021/2021-03-01-session-8-from-earnings-to-cash-flows.md
+- id: r2_ZVAowM5Y
+  title: 'Session 9: Earnings to Cash Flows'
+  upload_date: '2021-03-02'
+  duration: 5036
+  captions: auto
+  file: 2021/2021-03-02-session-9-earnings-to-cash-flows.md
+- id: ZL6H1gB1bAA
+  title: 'Session 9: Growth Rates - Historical, Analyst and Fundamental'
+  upload_date: '2021-03-03'
+  duration: 3556
+  captions: auto
+  file: 2021/2021-03-03-session-9-growth-rates-historical-analyst-and-fundamental.md
+- id: cv_WF2wPd2I
+  title: 'Session 9: Beta Determinants and Bottom up Betas'
+  upload_date: '2021-03-03'
+  duration: 4980
+  captions: auto
+  file: 2021/2021-03-03-session-9-beta-determinants-and-bottom-up-betas.md
+- id: xBfE6rUvCKk
+  title: 'Session 10: Growth Rates - Historical, Analyst and Fundamental'
+  upload_date: '2021-03-03'
+  duration: 4852
+  captions: auto
+  file: 2021/2021-03-03-session-10-growth-rates-historical-analyst-and-fundamental.md
+- id: VJxERUDAOcw
+  title: 'Session 10: More on growth, terminal value and DCF Model Choices'
+  upload_date: '2021-03-08'
+  duration: 5024
+  captions: auto
+  file: 2021/2021-03-08-session-10-more-on-growth-terminal-value-and-dcf-model-choices.md
+- id: qhjkOSZ_LZw
+  title: 'Session 10: Divisional and Private Company Betas & Costs of Equity'
+  upload_date: '2021-03-08'
+  duration: 4041
+  captions: auto
+  file: 2021/2021-03-08-session-10-divisional-and-private-company-betas-costs-of-equity.md
+- id: snJ7jSXGp6M
+  title: 'Session 11: More on growth, terminal value and DCF model parts'
+  upload_date: '2021-03-08'
+  duration: 4733
+  captions: auto
+  file: 2021/2021-03-08-session-11-more-on-growth-terminal-value-and-dcf-model-parts.md
+- id: Kj_PCAki2rg
+  title: 'Session 12: Cash, Cross holdings and Other Assets'
+  upload_date: '2021-03-10'
+  duration: 4767
+  captions: auto
+  file: 2021/2021-03-10-session-12-cash-cross-holdings-and-other-assets.md
+- id: _XrcS7NV_ss
+  title: 'Session 11: Cash, Cross holdings and Other Assets'
+  upload_date: '2021-03-10'
+  duration: 5057
+  captions: auto
+  file: 2021/2021-03-10-session-11-cash-cross-holdings-and-other-assets.md
+- id: qeqBhNG0GPs
+  title: 'Session 11: Costs of Debt and Capital'
+  upload_date: '2021-03-10'
+  duration: 5137
+  captions: auto
+  file: 2021/2021-03-10-session-11-costs-of-debt-and-capital.md
+- id: 9xPIuKk5RFc
+  title: 'Session 12: First Steps in Investment Returns'
+  upload_date: '2021-03-15'
+  duration: 5160
+  captions: auto
+  file: 2021/2021-03-15-session-12-first-steps-in-investment-returns.md
+- id: h52fmhgrDwk
+  title: 'Session 12: Last loose ends, Stories and Numbers'
+  upload_date: '2021-03-15'
+  duration: 5257
+  captions: auto
+  file: 2021/2021-03-15-session-12-last-loose-ends-stories-and-numbers.md
+- id: wF8ckYZNrsM
+  title: 'Session 13: Last loose ends plus Stories & Numbers'
+  upload_date: '2021-03-15'
+  duration: 4796
+  captions: auto
+  file: 2021/2021-03-15-session-13-last-loose-ends-plus-stories-numbers.md
+- id: GGFm9Hke-NU
+  title: 'Session 13: Earnings to Cash flows to Incremental Cash Flows'
+  upload_date: '2021-03-17'
+  duration: 5210
+  captions: auto
+  file: 2021/2021-03-17-session-13-earnings-to-cash-flows-to-incremental-cash-flows.md
+- id: Suzccc0Gc1A
+  title: 'Session 13: More on stories and first valuations'
+  upload_date: '2021-03-17'
+  duration: 4985
+  captions: auto
+  file: 2021/2021-03-17-session-13-more-on-stories-and-first-valuations.md
+- id: uj5xrGBFf44
+  title: 'Session 14: More on stories & numbers and first valuations!'
+  upload_date: '2021-03-17'
+  duration: 5273
+  captions: auto
+  file: 2021/2021-03-17-session-14-more-on-stories-numbers-and-first-valuations.md
+- id: -cNM8nlkVsI
+  title: 'Session 14: Investment Returns - Equity Analysis and Acquisitions'
+  upload_date: '2021-03-22'
+  duration: 4794
+  captions: auto
+  file: 2021/2021-03-22-session-14-investment-returns-equity-analysis-and-acquisitions.md
+- id: JNw19jICg4E
+  title: 'Session 15: Valuing the market and young companies'
+  upload_date: '2021-03-22'
+  duration: 5239
+  captions: auto
+  file: 2021/2021-03-22-session-15-valuing-the-market-and-young-companies.md
+- id: VzFkMJm3Qe8
+  title: Valuation Quiz 2 Review
+  upload_date: '2021-03-22'
+  duration: 1634
+  captions: auto
+  file: 2021/2021-03-22-valuation-quiz-2-review.md
+- id: zKbJ_pPOKSc
+  title: 'Session 14: Valuing markets and young companies'
+  upload_date: '2021-03-22'
+  duration: 5115
+  captions: auto
+  file: 2021/2021-03-22-session-14-valuing-markets-and-young-companies.md
+- id: IYAU_UJenIs
+  title: 'Session 16: Valuing young companies - A Wrap'
+  upload_date: '2021-03-24'
+  duration: 5021
+  captions: auto
+  file: 2021/2021-03-24-session-16-valuing-young-companies-a-wrap.md
+- id: AcQ0UlSzohA
+  title: 'Interest Rates and Stock Prices: More than meets the eye!'
+  upload_date: '2021-03-25'
+  duration: 1293
+  captions: auto
+  file: 2021/2021-03-25-interest-rates-and-stock-prices-more-than-meets-the-eye.md
+- id: 8r2R5th41cU
+  title: 'Session 17: More excursions on the dark side of valuation'
+  upload_date: '2021-03-29'
+  duration: 4955
+  captions: auto
+  file: 2021/2021-03-29-session-17-more-excursions-on-the-dark-side-of-valuation.md
+- id: lGXifp-5eWs
+  title: 'Session 15: Investment Interactions, Side Costs and Side Benefits'
+  upload_date: '2021-03-29'
+  duration: 4982
+  captions: auto
+  file: 2021/2021-03-29-session-15-investment-interactions-side-costs-and-side-benefits.md
+- id: u-PGq2CMWVo
+  title: 'Session 15: More excursions on the dark side of valuation'
+  upload_date: '2021-03-29'
+  duration: 5176
+  captions: auto
+  file: 2021/2021-03-29-session-15-more-excursions-on-the-dark-side-of-valuation.md
+- id: JDsYSp-B9Ac
+  title: 'Session 18: A wrap on intrinsic value'
+  upload_date: '2021-03-31'
+  duration: 5266
+  captions: auto
+  file: 2021/2021-03-31-session-18-a-wrap-on-intrinsic-value.md
+- id: nPLDJRWpNO0
+  title: 'Session 16: The Google Car - Case Discussion and Project Options'
+  upload_date: '2021-03-31'
+  duration: 5294
+  captions: auto
+  file: 2021/2021-03-31-session-16-the-google-car-case-discussion-and-project-options.md
+- id: tg0k8qtiAjo
+  title: 'Session 16: Closing the books on intrinsic value'
+  upload_date: '2021-03-31'
+  duration: 4807
+  captions: auto
+  file: 2021/2021-03-31-session-16-closing-the-books-on-intrinsic-value.md
+- id: -AdZxccWTTI
+  title: 'Session 17: Deconstructing Pricing - Consistency Tests & Playing Moneyball'
+  upload_date: '2021-04-06'
+  duration: 4903
+  captions: auto
+  file: 2021/2021-04-06-session-17-deconstructing-pricing-consistency-tests-playing-moneyball.md
+- id: 1dKg6PXuj2I
+  title: 'Session 19: Pricing Deconstructed - Consistency and Moneyball Tests'
+  upload_date: '2021-04-06'
+  duration: 4511
+  captions: auto
+  file: 2021/2021-04-06-session-19-pricing-deconstructed-consistency-and-moneyball-tests.md
+- id: 8sS2TIvH91o
+  title: 'Session 17: The Debt Equity Trade off'
+  upload_date: '2021-04-06'
+  duration: 4335
+  captions: auto
+  file: 2021/2021-04-06-session-17-the-debt-equity-trade-off.md
+- id: Zg8_mg8hwcc
+  title: 'Session 18: Financing Hierarchies, Miller-Modigliani & Cost of Capital Approach to Debt Optimization'
+  upload_date: '2021-04-07'
+  duration: 5295
+  captions: auto
+  file: 2021/2021-04-07-session-18-financing-hierarchies-miller-modigliani-cost-of-capital.md
+- id: mUcr1QQTmag
+  title: 'Session 18: Pricing Analytics and Examples'
+  upload_date: '2021-04-07'
+  duration: 4796
+  captions: auto
+  file: 2021/2021-04-07-session-18-pricing-analytics-and-examples.md
+- id: n1w3SXbI2lY
+  title: 'Session 20: Pricing Analytics and Examples'
+  upload_date: '2021-04-07'
+  duration: 4566
+  captions: auto
+  file: 2021/2021-04-07-session-20-pricing-analytics-and-examples.md
+- id: 3k0sFaNU_ek
+  title: 'Session 21: Pricing Closure and Asset Based Valuation'
+  upload_date: '2021-04-12'
+  duration: 5418
+  captions: auto
+  file: 2021/2021-04-12-session-21-pricing-closure-and-asset-based-valuation.md
+- id: Xc7LV1TxDaY
+  title: 'Session 19: Enhanced Cost of Capital Approach and Determinants of Optimal'
+  upload_date: '2021-04-12'
+  duration: 5035
+  captions: auto
+  file: 2021/2021-04-12-session-19-enhanced-cost-of-capital-approach-and-determinants-of.md
+- id: lZEDcFcXl-c
+  title: 'Session 19: Pricing Closure and Asset Based Valuation'
+  upload_date: '2021-04-12'
+  duration: 4249
+  captions: auto
+  file: 2021/2021-04-12-session-19-pricing-closure-and-asset-based-valuation.md
+- id: 7pPl7T0hBqU
+  title: 'Session 20: Other Approaches to Optimizing Debt Mix & Follow up'
+  upload_date: '2021-04-14'
+  duration: 5322
+  captions: auto
+  file: 2021/2021-04-14-session-20-other-approaches-to-optimizing-debt-mix-follow-up.md
+- id: lG5OSC6SjYc
+  title: 'Session 20: Private Company Valuation'
+  upload_date: '2021-04-14'
+  duration: 4635
+  captions: auto
+  file: 2021/2021-04-14-session-20-private-company-valuation.md
+- id: xK8uhOCvKfY
+  title: 'Session 22: Valuing Private Businesses'
+  upload_date: '2021-04-14'
+  duration: 4827
+  captions: auto
+  file: 2021/2021-04-14-session-22-valuing-private-businesses.md
+- id: G3Pc-N-oLUk
+  title: 'Quiz 3: Review Session'
+  upload_date: '2021-04-17'
+  duration: 1534
+  captions: auto
+  file: 2021/2021-04-17-quiz-3-review-session.md
+- id: BVYwgAODDx8
+  title: 'Session 23: IPO Valuation and first steps on Real Options'
+  upload_date: '2021-04-21'
+  duration: 4708
+  captions: auto
+  file: 2021/2021-04-21-session-23-ipo-valuation-and-first-steps-on-real-options.md
+- id: Uct2cCx1Jec
+  title: 'The Corporate Tax Question: Facts and Fiction'
+  upload_date: '2021-04-21'
+  duration: 1403
+  captions: auto
+  file: 2021/2021-04-21-the-corporate-tax-question-facts-and-fiction.md
+- id: coK8xfEnUd8
+  title: 'Session 21: IPO Valuation and first steps on Real Options'
+  upload_date: '2021-04-21'
+  duration: 4991
+  captions: auto
+  file: 2021/2021-04-21-session-21-ipo-valuation-and-first-steps-on-real-options.md
+- id: FEridcFHPdQ
+  title: 'Session 21: Debt Design'
+  upload_date: '2021-04-22'
+  duration: 4867
+  captions: auto
+  file: 2021/2021-04-22-session-21-debt-design.md
+- id: HropbTLqi3I
+  title: 'Session 22: Dividend Policy - Beyond Inertia and Me-tooism'
+  upload_date: '2021-04-26'
+  duration: 4833
+  captions: auto
+  file: 2021/2021-04-26-session-22-dividend-policy-beyond-inertia-and-me-tooism.md
+- id: NEe_7rkTNtQ
+  title: 'Session 24: The Options to Delay & Expand'
+  upload_date: '2021-04-26'
+  duration: 4545
+  captions: auto
+  file: 2021/2021-04-26-session-24-the-options-to-delay-expand.md
+- id: UG2T7BoAfmA
+  title: 'Session 22: Valuing options to delay and expand'
+  upload_date: '2021-04-26'
+  duration: 3697
+  captions: auto
+  file: 2021/2021-04-26-session-22-valuing-options-to-delay-and-expand.md
+- id: C57uRkKg_38
+  title: 'Session 23: Option to Abandon, Flexibility and Distressed Equity (as option)'
+  upload_date: '2021-04-28'
+  duration: 4726
+  captions: auto
+  file: 2021/2021-04-28-session-23-option-to-abandon-flexibility-and-distressed-equity-as.md
+- id: YuV8QZyvWX4
+  title: 'Session 23: Actual versus Potential Dividends and Cash/Trust Nexus'
+  upload_date: '2021-04-28'
+  duration: 4894
+  captions: auto
+  file: 2021/2021-04-28-session-23-actual-versus-potential-dividends-and-cash-trust-nexus.md
+- id: q4tDVp9vWPs
+  title: 'Session 25: Options to Abandon, Flexibility and Distressed Equity as an option'
+  upload_date: '2021-04-28'
+  duration: 5091
+  captions: auto
+  file: 2021/2021-04-28-session-25-options-to-abandon-flexibility-and-distressed-equity-as-an.md
 - id: _8HYZ-BaBSA
   title: 'Valuation: Final Exam Review Session'
   upload_date: '2021-05-01'
