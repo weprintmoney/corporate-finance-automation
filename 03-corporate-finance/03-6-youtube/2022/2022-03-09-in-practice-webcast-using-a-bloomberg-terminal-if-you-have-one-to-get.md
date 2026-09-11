@@ -1,0 +1,27 @@
+---
+title: 'In Practice Webcast: Using a Bloomberg Terminal (if you have one) to get Default Spreads'
+status: active
+owner: weprintmoney
+created: '2026-09-01'
+last_updated: '2026-09-01'
+---
+
+# In Practice Webcast: Using a Bloomberg Terminal (if you have one) to get Default Spreads
+
+> Source: [YouTube](https://www.youtube.com/watch?v=1W_E8NrwCYE) — Aswath Damodaran on Valuation. Uploaded 2022-03-09. Duration 5:13. Auto-generated captions converted to markdown. Expect missing punctuation and occasional mis-transcriptions.
+
+## Transcript
+
+hi welcome this is going to be a very short session it's about using a bloomberg terminal if you have access to one to get information about debt default spreads cost of debt etc now there are three functions i want to focus on that you might find useful on bloomberg to get updated data the first is if you want to get default spreads by country remember the sovereign default spread market gives you updated values to get default spreads by country type it go first get on a bloomberg terminal and type in sovr what you will get are default spreads i've actually set my default to be 10 year spreads but you can you know i think the default the default on bloomberg is five-year spreads but you can change that to 10-year spreads you can sort the countries by region you can sort them alphabetically i prefer to
+
+sort them all alphabetically and in fact if you want to look at percentage changes let's say i want to look at the last month you know if i think default spreads have changed a lot in the last month i can change it to a month this will give you at least the current default spreads for every country on which there are sovereign cds spreads only about 75 countries so don't get too excited your country might not be on the list second i want to talk about how to get updated corporate default spreads the function for this is fiw when you type in fiw the page that shows up will have nothing on it don't freak out go into where it says lbu stat index whatever the default is whatever you see there click all outstanding bonds magically you're going to get default spreads now of course this is
+
+default spreads across all bonds with ratings let's say you want to look at only corporate bonds or only bonds with 10 year maturities go into asset class i've clicked corporates but if you don't pay corporates it will give you all bonds municipals governments etc i've clicked corporate bonds let's say you want to look at only u.s corporate bonds because when you bring in chinese bonds and indian bonds you're going to get some country default spread in there so these are all corporate bonds in the u.s broken down by rating and of course you can go from aaa all the way down to d these are the current spreads they actually give it by maturity if you wanted just for a particular maturity class let's say you're interested in only the seven to ten years just type in seven to ten you're going to see the
+
+default spreads by rating neat right so a typical seven to ten year aaa rated corporate bond in the u.s right now is a default spread of 89 basis points now if you want to see how much country risk matters let's click away from the u.s and make it china now you're not going to get as many corporate bonds if you're outside the u.s but if you take the difference between what you get for an a plus chinese corporate bond and compare it to an a plus u.s corporate bond that difference is that residue of country risk that shows up so it's a very very useful function if you want to get updated to false spreads you're saying what if i don't have a bloomberg you can get much of the same information online it'll take a little more work finally there's one final function i
+
+want to take you through and this is on a particular company let's say i want to look at apple so let's say i look for apple as a stock and i get the apple functions and let's assume i want to find out the distribution of debt maturities when the debt comes to you for apple type in ddis
+
+and what you're going to get is a distribution of debt at apple by year it will also give you a weighted average maturity for that debt incidentally if you're within a company's functions and you're looking up more information on sets here's a final piece that you can use crpr that'll actually give you all of the different ratings attached to the company right now by different ratings agencies so let's summarize the four functions sovr will give you the current sovereign default spreads by country for all the countries for which there are those sovereign cds spreads fiw will allow you to get updated corporate default spreads you got to click through and make sure you picked all bonds and then you got to go through and make sure it's u.s and corporate to get those current default spreads by maturity once you want to do this for an
+
+individual company you find the company first wherever it is and once you've in the company's page type in ddis will give you the distribution of debt and when it comes to you on a weighted average maturity and since you're in the companies page if you type in crpr you'll get the current ratings for that company right now so it'll allow you to get information about the detna company on an updated basis again if you don't have access to bloomberg not the end of the world but it does help to have a bloomberg terminal to get the data quicker so i hope you found the session useful and thank you very much for tuning in

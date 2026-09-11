@@ -37,7 +37,9 @@ The course follows Damodaran's standard valuation framework: estimate a risk-adj
   │   ├── companies/         Per-ticker financial statements from SEC via FMP
   │   ├── industry-betas.json  Damodaran industry betas
   │   └── country-risk.json  Damodaran country risk premiums
-  └── 03-4-blogs/              Damodaran "Musings on Markets" archive (~680 posts)
+  ├── 03-4-blogs/              Damodaran "Musings on Markets" archive (~680 posts)
+  └── 03-6-youtube/            Transcripts of Damodaran's YouTube channel (~1,400 videos)
+      └── index.yaml         Video map: id → file, title, date, duration
 ```
 
 Each folder has a `CLAUDE.md` that orients an AI session to that subject — formulas, conventions, and a doc index. Navigation from root to any lesson takes three hops: `CLAUDE.md` → subject `CLAUDE.md` → `03-2-course-content/CLAUDE.md` → `lesson-index.yaml` → lesson folder.
@@ -102,6 +104,7 @@ Three GitHub Actions workflows keep valuation inputs current:
 | `refresh-market-rates` | Weekdays 9 AM CT | FRED: 10-yr Treasury, SOFR, Fed Funds | `03-3-supplemental-data/market-rates.json` |
 | `fetch-company-financials` | Manual (enter ticker) | FMP: income statement, balance sheet, cash flow | `03-3-supplemental-data/companies/{ticker}.json` |
 | `refresh-damodaran` | 1st of each month | Damodaran: industry betas, country risk | `03-3-supplemental-data/industry-betas.json` + `country-risk.json` |
+| `refresh-youtube-transcripts` | Mondays 1 PM UTC | Captions for new videos on Damodaran's YouTube channel | `03-6-youtube/<year>/*.md` + `index.yaml` |
 
 **Required GitHub secrets:**
 - `FRED_API_KEY` — free at [fred.stlouisfed.org](https://fred.stlouisfed.org/docs/api/api_key.html)
