@@ -19,19 +19,19 @@ WhatsApp group: [Corp Finance Fall 2026](https://chat.whatsapp.com/ChFjKrUfgTyIq
 | Name | Location | WhatsApp | LinkedIn | Background |
 |------|----------|----------|----------|------------|
 | Charlcye Mitchell | Austin, TX, USA | @MotivateMe (admin) | [LinkedIn](https://www.linkedin.com/in/camitchell) | Product Manager; agentic AI systems; teaching community AI courses |
-| Luisa Ghied | Sweden (Filipino) | +46 76 588 96 52 | — | Finance career-builder |
+| Luisa Ghied | Sweden (Filipino) | — | — | Finance career-builder |
 | Jose Domingo Rivarola Reisz | Lima, Peru | @josedomingo.rivarola.reisz | [LinkedIn](https://pe.linkedin.com/in/domingo-rivarola-64a44b15b) | Arbitration & litigation lawyer; teaches evidence law at PUCP; LLM UVA |
-| Mehdi Benmebarek | Paris, France | +33 6 58 74 37 37 | [LinkedIn](https://www.linkedin.com/in/mehdi-benmebarek-4273425/) | Strategy & BD; 20+ yrs aerospace/defense, professional services, identity security |
+| Mehdi Benmebarek | Paris, France | — | [LinkedIn](https://www.linkedin.com/in/mehdi-benmebarek-4273425/) | Strategy & BD; 20+ yrs aerospace/defense, professional services, identity security |
 | Edy Jimenez | Dominican Republic | @eejimenezt | [LinkedIn](https://do.linkedin.com/in/edyjimeneztoribio) | VP Commerce, AES Dominicana; energy sector across LatAm & Caribbean |
 | Matthias Wiltschek | Vienna, Austria | — | [LinkedIn](https://at.linkedin.com/in/matthias-wiltschek-73783810b) | M&A and post-merger integration at a manufacturing company |
-| Hugo Nieto | Mexico City, Mexico | +52 55 5106 5029 | [LinkedIn](https://www.linkedin.com/in/hugo-nieto-6952b31ab/) | Investment banking, valuation, capital raising |
+| Hugo Nieto | Mexico City, Mexico | — | [LinkedIn](https://www.linkedin.com/in/hugo-nieto-6952b31ab/) | Investment banking, valuation, capital raising |
 | Grace Liu | Mainland China | — | — | 20 yrs food manufacturing & international trading |
-| Simona Morachioli | Tuscany, Italy | +39 346 807 7654 | [LinkedIn](https://it.linkedin.com/in/simona-morachioli) | Chief Transformation Officer, PE-backed pharma; engineer by training |
+| Simona Morachioli | Tuscany, Italy | — | [LinkedIn](https://it.linkedin.com/in/simona-morachioli) | Chief Transformation Officer, PE-backed pharma; engineer by training |
 | Horton Fisher | USA | — | [LinkedIn](https://www.linkedin.com/in/horton-fisher-0729b6217/) | NYU Stern MBA |
-| Valentyn Burianov | Ukraine | +380 97 625 4550 | [LinkedIn](https://www.linkedin.com/in/valentyn-burianov-23a824359/) | — |
-| Aldo | Italy | +39 347 253 0726 | — | — |
-| Allan | Malta | +356 7947 5088 | — | — |
-| Jennifer Conrad | — | +1 347 564 8137 | — | — |
+| Valentyn Burianov | Ukraine | — | [LinkedIn](https://www.linkedin.com/in/valentyn-burianov-23a824359/) | — |
+| Aldo | Italy | — | — | — |
+| Allan | Malta | — | — | — |
+| Jennifer Conrad | — | — | — | — |
 
 *Sources: Brightspace discussion board + WhatsApp group. Last updated 2026-09-01.*
 
