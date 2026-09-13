@@ -32,8 +32,13 @@ WhatsApp group: [Corp Finance Fall 2026](https://chat.whatsapp.com/ChFjKrUfgTyIq
 | Aldo | Italy | — | — | — |
 | Allan | Malta | — | — | — |
 | Jennifer Conrad | — | — | — | — |
+| Tulika Gupta | New York, NY, USA | — | [LinkedIn](https://www.linkedin.com/in/tulika-gupta-b1037789/) | 2nd-year MPA candidate, Columbia SIPA (Climate, Energy & Environment); ex-Council on Energy, Environment and Water (CEEW), India |
+| Obiajulu Morah | Lagos, Nigeria | — | [LinkedIn](https://ng.linkedin.com/in/obiajulu-morah-071299b2) | Head of Strategy; corporate finance & strategy background (Adino Capital) |
+| Hari Rangarajan | Pittsburgh, PA, USA | — | — | Software developer at Google, AI & Infrastructure; MS Software Engineering, Carnegie Mellon |
+| Ashish Batra | India | — | — | 28 yrs in VLSI/semiconductor domain |
+| Diane Harkleroad | Berlin, Germany | — | [LinkedIn](https://www.linkedin.com/in/diane-harkleroad-0b763710/) | Investment Manager, sustainable agroforestry portfolio (Latin America), 12Tree Finance |
 
-*Sources: Brightspace discussion board + WhatsApp group. Last updated 2026-09-01.*
+*Sources: Brightspace discussion board + WhatsApp group. Last updated 2026-09-12.*
 
 ## Top-level Folders
 
