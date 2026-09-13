@@ -9,7 +9,7 @@ Informal shared context repository for the NYU Corporate Finance (Damodaran) Fal
 | Role | Name | Contact |
 |------|------|---------|
 | Instructor | Aswath Damodaran | [LinkedIn](https://www.linkedin.com/in/aswathdamodaran/) |
-| TA | Roberto Chavez | rchavezg.nyu@yahoo.com · WhatsApp +51995957995 · @rchavezgam |
+| TA | Roberto Chavez | rchavezg.nyu@yahoo.com · @rchavezgam |
 | Maintainer | Charlcye Mitchell | `weprintmoney` on GitHub |
 
 WhatsApp group: [Corp Finance Fall 2026](https://chat.whatsapp.com/ChFjKrUfgTyIqNdsau2Bhv) (13 members)
