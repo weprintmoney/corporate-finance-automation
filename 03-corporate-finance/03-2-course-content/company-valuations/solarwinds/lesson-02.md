@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 02: The Objective: Utopia and Let Down (corp
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 02: The Objective: Utopia and Let Down (corporate governance)
@@ -30,6 +30,10 @@ last_updated: 2026-09-20
     - Sources needed: Merger background/process disclosure — special committee formation, independent financial advisor engagement, vote structure/thresholds.
     - Where to find: DEAL-DOCS — Turn/River DEFM14A/Schedule 13E-3 ("Background of the Merger" and special-committee sections); REPO-SWI-VAL for existing shareholder/power-structure baseline.
     - Answer: No majority-of-minority condition, no genuine special committee, and no vote at all — the minority got price protection and zero process control. Silver Lake and Thoma Bravo, holding ~65% jointly, executed a written stockholder consent on February 7, 2025, the same day the merger agreement was signed, satisfying the only stockholder-approval condition before any public stockholder learned of the deal (swi-8k-2025-02-07-merger-agreement-announcement.md, Items 5.07 and 8.01). The "Transaction Committee" of three directors — Bock, Sundaram and Widmann — is described as "independent and disinterested" and was formed "for convenience and efficiency, and not due to any actual or perceived conflict of interest," but Michael Widmann is a sitting Managing Director of Silver Lake and one of its three board designees (swi-defm14c-2025-merger-information-statement.md, "Background of the Merger"; swi-def14a-2024.md, director bios). One third of the committee overseeing a controller-driven sale worked for the controller. What the minority did get: two independent fairness opinions (Goldman Sachs and Jefferies), a 30-day post-signing window-shop, and DGCL §262 appraisal rights available specifically to holders other than the Principal Stockholders. Notably the deal was not structured as a Rule 13e-3 going-private transaction — no SC 13E-3 was filed — so the board never had to make the "fair to unaffiliated stockholders" determination that regime compels.
+
+## Cumulative Project — Questions for This Lesson
+
+Module 1's `lesson-overview.md` files (Lessons 1–12) don't carry a separate "## Project Questions" section — that section only starts appearing at Lesson 13 (see `03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-13/lesson-overview.md` onward). For Module 1, the Cumulative Project's equivalent deliverable is the 12-step cost-of-capital report already in [`valuation-report.md`](valuation-report.md) (Steps 2–12, plus the summary WACC table) — that work is complete. See [`README.md`](README.md) for the two confirmed corrections to that report's own figures (the equity-value/WACC-weight error and the Silver Lake/Thoma Bravo ownership-concentration error) that this lesson-by-lesson project surfaced independently but did not rewrite back into the report itself.
 
 ## Notes
 

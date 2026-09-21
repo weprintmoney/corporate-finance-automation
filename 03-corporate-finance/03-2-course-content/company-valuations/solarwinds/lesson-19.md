@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 19: Follow-Up: Value Impact and Stress-Testi
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 19: Follow-Up: Value Impact and Stress-Testing the Optimal Debt Ratio
@@ -23,6 +23,14 @@ last_updated: 2026-09-20
     - Sources needed: SWI's historical operating-income volatility across past downturns; term loan covenant thresholds (minimum coverage triggers); rating agency downside scenarios.
     - Where to find: SEC-EDGAR — SWI 10-K FY2024 (debt footnote covenants) and historical 10-Ks 2019–2024 (EBIT trend across any downturn); REPO-SWI-VAL (Step 12, 1.95x interest coverage).
     - Answer: The synthetic rating is fragile; the covenant is nearly untrippable — and SWI's own history already ran this experiment. On FY2024 gross interest expense of $112.435M (swi-10k-fy2024.md, Note 16, not the repo's estimated $107.2M), EBIT of $208.4M gives 1.85x coverage; a 10% EBIT decline takes it to 1.67x (still B3/B-), 20% to 1.48x (Caa/CCC) and 30% to 1.30x (Caa/CCC) — a two-notch synthetic downgrade on a 20% drop. The covenant tells a completely different story: the springing 7.40:1.00 first lien net leverage test would need Adjusted EBITDA to fall from $384.7M to about $134.6M, a 65% decline, and only bites at all if revolver borrowings exceed 35% of the $130.0M commitment, which they did not (swi-10k-fy2024.md, Note 9). The decisive evidence is the record: EBIT-based net interest coverage was 0.81x in FY2018, 0.74x in FY2019, 0.69x in FY2020, negative in FY2021 and 0.86x in FY2022 excluding the $891.1M goodwill impairment, against net interest expense of $142.0M, $108.1M, $75.9M, $64.5M and $83.4M (swi-10k-fy2018.md, swi-10k-fy2020.md, swi-10k-fy2023.md, swi-multi-year-financials.md) — SWI spent essentially its entire public life below 1x EBIT coverage while rated B+, and never breached a covenant or defaulted. So no, this structure is not fragile in any covenant sense; the binding constraint is cash, where $104.5M of interest already absorbs 55.5% of operating cash flow, and a roughly 45% decline in operating cash flow — not a 20% EBIT decline — is what would actually force the issue.
+
+## Cumulative Project — Questions for This Lesson
+
+- **If you move to the optimal debt ratio (given the cost of capital) approach, what consequences do you see for the value of your firm and the value of equity in the firm?**
+  As established above (Part 1), moving from the repo's 23% to Lesson 18's EBIT-based 13% optimum on the synthetic-spread schedule raises firm value from $5,717M to $6,133M — a $416M gain (+7.3%), worth about $2.42/share on 171.6M shares. Recomputing from the corrected current ratio of 28.8% (Lesson 13) rather than the repo's 23.1% only widens this modestly, since 28.8% sits further out on the same rising portion of the cost-of-capital curve — the direction and order of magnitude are unchanged. The more important finding, also established above, is that this financing-driven value is small relative to the deal: it's under 10% of firm value, dwarfed by the ~$1B+ swing Lesson 32's terminal-value-consistency correction implies. Moving toward the optimum would raise equity value roughly dollar-for-dollar with the firm-value gain (debt held fixed in dollar terms while the discount rate on unchanged cash flows falls), a straightforward mechanical consequence rather than a re-rating of the underlying business.
+
+- **Bringing in reasonable constraints into the cost of capital approach, what would your recommended debt ratio be for this firm?**
+  Given the "if you're going to make a mistake, be under-levered" guidance this lesson's own Part 2 invokes, and the sharp asymmetry Lesson 18 documents — a 3-notch rating cliff and a spread jump from 1.25% to 3.00% between 13% and 15% debt — the reasonable-constraints recommendation is to sit just below that cliff, in the **13%–17% band**, rather than optimize to the exact EBIT-based minimum. That means paying down roughly $200–280M of the current $1,285.0M of debt from the corrected 28.8% ratio, not adding more. This is directionally what SWI's own sponsors actually did in FY2022 (a $664.4M voluntary and refinancing paydown, established in Lesson 26 Part 2), evidence the constrained recommendation matches revealed sponsor behavior rather than being a purely theoretical target.
 
 ## Notes
 

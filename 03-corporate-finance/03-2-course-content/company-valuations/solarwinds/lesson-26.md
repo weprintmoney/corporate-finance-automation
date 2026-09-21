@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 26: Assessing Dividend Policy and Free Cash 
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 26: Assessing Dividend Policy and Free Cash Flow to Equity
@@ -23,6 +23,17 @@ last_updated: 2026-09-20
     - Sources needed: SWI's year-by-year cash-and-equivalents balance FY2019–FY2024; FCFE computed for the same years to see whether cash consistently under- or over-shot what was paid out or used for debt paydown.
     - Where to find: SEC-EDGAR — SWI 10-Ks FY2019–FY2024, balance sheets (cash & equivalents line item) and selected financial data; REPO-SWI-VAL for FY2024 baseline EBIT/EBITDA/debt figures to cross-reference the trend.
     - Answer: Yes, twice — and the sponsors deflated both balloons deliberately, so SWI never needed a Kerkorian. Year-end cash from the cash flow statements in `swi-10k-fy2020.md`, `swi-10k-fy2023.md` and `swi-10k-fy2024.md`: $382.6M (2018), $173.4M (2019, drained by the Samanage acquisition), $370.5M (2020), **$732.1M (2021)**, $121.7M (2022), $284.7M (2023), $251.9M (2024). The 2021 balloon was extreme — cash equal to **101.9% of that year's revenue** — inflated by the $505.6M net distribution received from N-able at separation ($324.7M of intercompany debt repayment plus a $238.2M one-time dividend, net of $57.3M left with N-able). It was resolved inside twelve months: SWI paid the $237.2M special dividend in August 2021 and then prepaid **$664.4M of the term loan in FY2022**, taking cash to $121.7M. The second, smaller balloon came in FY2023, when $183.5M of CFO met only $18.8M of buybacks and $9.3M of amortization, building cash $163.0M — and that too was swept out by the $168.2M special dividend the following April. So the sponsors ran the internal-activist function themselves, in the correct sequence for a 3.2x-levered borrower: deleverage first, then distribute the residual. The terminal return to shareholders was the cash-out sale itself at $18.50.
+
+## Cumulative Project — Questions for This Lesson
+
+- **How much has your company returned to its stockholders, in the form of dividends and stock buybacks in the last five years?**
+  Approximately **$450.7M** over FY2020–FY2024: $237.2M special dividend (2021) + $168.2M special dividend (2024), established in Lesson 24's dividend table, plus $18.8M of buybacks in FY2023 and $26.5M of "repurchases" in FY2024 (established in this lesson's Part 2 answer and Lesson 27 Part 2 — the FY2024 figure is RSU tax withholding rather than a discretionary open-market buyback, so genuinely discretionary repurchases are smaller than the headline total). No distributions occurred in FY2020, FY2022, or FY2025 (private by April).
+
+- **How much cash could your company have returned in the last five years? (Estimate FCFE)**
+  Only FY2024 has a fully built FCFE figure in this project: **$127.0M** on the strict formula (net income + D&A − capex − ΔWC − net debt repayment, established above) or **$167.8M** on the CFO-based measure Lesson 27 Part 2 uses, which is the number that actually matches the $168.2M 2024 dividend almost exactly. FY2020–FY2023 FCFE isn't separately built in this project — `swi-10k-fy2020.md` and `swi-10k-fy2023.md` are compiled and would support the same build for those two years, but FY2021 and FY2022 exist here only via the summary figures in `swi-multi-year-financials.md`, which lacks the working-capital and capex line-item detail FCFE requires. A genuine five-year FCFE total would need those two years' full cash-flow statements fetched fresh (accession numbers are listed in `sources/README.md`), which wasn't done for this project.
+
+- **If there is a difference, where is it showing up (cash balances, debt ratios)?**
+  In cash balances, precisely — this project already traced the mechanism in this lesson's Part 2 answer above rather than needing to re-derive it here. Two cash "balloons" built up (year-end cash of $732.1M in 2021, driven by the N-able separation distribution, and $284.7M in 2023, driven by a light-distribution year) and were both swept down the following year — the 2021 balloon via the August 2021 dividend plus a $664.4M debt paydown in FY2022, the 2023 balloon via the April 2024 dividend. So the "difference" between what was distributed and what any single year's FCFE could support doesn't show up as a persistent cash hoard or a rising debt ratio; it shows up as a one-year lag between cash accumulation and its release, with debt reduction (not accumulation) absorbing the surplus in the one year measured precisely (FY2022).
 
 ## Notes
 

@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 33: Firm-to-Equity Bridge"
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 33: Firm-to-Equity Bridge
@@ -23,6 +23,20 @@ last_updated: 2026-09-20
     - Sources needed: SWI's FY2024 outstanding stock options/RSUs, exercise prices, remaining contractual life, and the diluted share count used in reported EPS.
     - Where to find: SEC-EDGAR — SWI 10-K FY2024, Item 8 stock-based-compensation footnote, plus DEF 14A proxy (equity grant detail); REPO-SWI-VAL (no equity-bridge or options work exists there yet).
     - Answer: The overhang is 7.2% of shares, and the naive diluted treatment overstates value by $1.00/share (5.1%). At 2024 year-end SWI had 12,214,062 units outstanding under the 2018 Plan — 9,960,353 RSUs (weighted-average grant fair value $10.86, 1.3 years remaining, $141.9M intrinsic) and 2,253,709 PSUs ($10.05, 0.7 years, $32.1M intrinsic) — plus just 113,430 fully-exercisable options at a $0.98 weighted-average exercise price with 2.6 years left and $1.5M of intrinsic value, against 171,566,604 shares outstanding: 12,327,492 units, or 7.19% (`swi-10k-fy2024.md` Note 10; the merger agreement's Capitalization Date schedule in `swi-defm14c-2025-merger-information-statement.md` confirms 113,430 options at $0.98, 9,869,552 time-vesting RSUs, 1,068,068 earned PSUs and 2,371,282 unearned PSUs at maximum). Applying the lecture's method to my $3,408.8M DCF equity value: the options are so deep in the money that option value collapses to intrinsic value, 113,430 × ($18.50 − $0.98) = **$2.0M**, leaving $3,406.8M over 183,780,666 real-plus-restricted shares = **$18.54/share**. The naive route — dividing by the 174,491K diluted count behind the reported $0.64 diluted EPS — gives $19.54, because the treasury-stock method drops unvested service-condition RSUs entirely. Here the option-pricing refinement is worth $0.01/share and the share-count definition is worth a dollar; that is the practical lesson.
+
+## Cumulative Project — Questions for This Lesson
+
+- **How much cash does your firm have? Would you attach a discount or premium to it?**
+  $251.85M of cash plus $7.47M of short-term investments at FY2024 year-end (established above). As established above, theory says discount it (ROIC 6.7% against a 10.33% WACC puts SWI in the "market doesn't trust the cash" bucket), but the discount is immaterial in dollar terms — even Damodaran's full 31% haircut is worth only $0.43/share — and neither fairness opinion actually applied one; both added cash back at face value. Management's own behavior (paying $168.2M of it out as a special dividend rather than reinvesting) is the more informative signal than any formal discount.
+
+- **Does your firm have minority cross holdings? What is their value?**
+  None are disclosed anywhere in the compiled sources — no equity-method investment or minority-stake line appears on SWI's balance sheet in any of the FY2018, FY2020, FY2023, or FY2024 10-Ks reviewed across this project. This question doesn't apply to SWI.
+
+- **Does your firm have majority cross holdings? How have you incorporated their value?**
+  Also none currently. SWI's one historical majority holding — N-able, Inc. — was fully separated via a spin-off completed in 2021 (established in Lessons 8, 16, 26), not retained as a consolidated majority stake, and SWI shows no non-controlling-interest line in any reviewed balance sheet. This question doesn't apply post-separation.
+
+- **Have managers in the firm been compensated with equity options or restricted stock? How does that affect your value per share?**
+  Yes, extensively — as established above, 12,327,492 RSU/PSU/option units were outstanding at FY2024 year-end against 171,566,604 shares (a 7.19% overhang), and the golden-parachute disclosure (established in Lesson 2 Part 2) shows RSU acceleration is 88.4% of the executive change-of-control payout, scaling one-for-one with deal price. Applying the lecture's prescribed method (value equity, subtract options at their option/intrinsic value, divide by actual-plus-restricted rather than diluted shares) — established above — gives $18.54/share on a $3,408.8M DCF equity value, versus $19.54/share using the naive diluted-share treasury-stock-method count. The $1.00/share (5.1%) difference is entirely a share-count-definition effect, since the options themselves are so deep in the money that their option value collapses to intrinsic value regardless of method.
 
 ## Notes
 

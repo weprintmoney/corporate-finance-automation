@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 09: Beta Fundamentals"
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 09: Beta Fundamentals
@@ -23,6 +23,10 @@ last_updated: 2026-09-20
     - Sources needed: SWI's total debt and market value of equity (last public-era market cap) to compute debt-to-equity; marginal tax rate; unlevered beta for the observability/IT-ops software sector.
     - Where to find: SEC-EDGAR (10-K FY2024 balance sheet for total debt; income statement for effective/marginal tax rate; last 10-K/DEF14A for share count and price); REPO-BETAS (Damodaran sector unlevered betas — software/IT services).
     - Answer: Roughly a quarter of the levered beta, once the inputs are right. Debt is the $1,235.7M term loan principal plus $49.4M of capitalized operating leases = $1,285.0M; equity is $3,202.9M at the $18.50 deal price on 173.1M shares (D/E = 40.1%) or $2,604.9M at the last undisturbed close of $15.18 on 171.6M shares (D/E = 49.3%) (swi-10k-fy2024.md, Notes 7 and 9; swi-defm14c-2025-merger-information-statement.md). Relevering the 1.2482 cash-corrected unlevered beta at a 25% marginal rate (federal 21% plus blended state — the reported −7.8% effective rate is a valuation-allowance artifact, not a marginal rate) gives 1.62 at the deal price and 1.71 at the undisturbed price, so financial leverage contributes 0.37–0.46 of beta, or 23–27% of the total (damodaran-industry-betas-software.md). That also condemns the repo's Step 11, whose D/E of 0.281 came from treating the $4.4B headline enterprise value as equity: correcting it raises the levered beta by 0.07–0.16 and the cost of equity by 30–70bp. Empirically none of this leverage showed up in the traded beta of 0.55–0.88, which indicts the regression rather than the Hamada arithmetic.
+
+## Cumulative Project — Questions for This Lesson
+
+Module 1's `lesson-overview.md` files (Lessons 1–12) don't carry a separate "## Project Questions" section — that section only starts appearing at Lesson 13 (see `03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-13/lesson-overview.md` onward). For Module 1, the Cumulative Project's equivalent deliverable is the 12-step cost-of-capital report already in [`valuation-report.md`](valuation-report.md) (Steps 2–12, plus the summary WACC table) — that work is complete. See [`README.md`](README.md) for the two confirmed corrections to that report's own figures (the equity-value/WACC-weight error and the Silver Lake/Thoma Bravo ownership-concentration error) that this lesson-by-lesson project surfaced independently but did not rewrite back into the report itself.
 
 ## Notes
 

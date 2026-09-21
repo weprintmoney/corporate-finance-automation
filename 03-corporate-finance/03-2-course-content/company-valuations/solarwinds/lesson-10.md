@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 10: Bottom-up Betas"
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 10: Bottom-up Betas
@@ -23,6 +23,10 @@ last_updated: 2026-09-20
     - Sources needed: Revenue/segment split between legacy monitoring and newer AIOps/observability lines; peer betas for each sub-category.
     - Where to find: SEC-EDGAR (10-K Item 1 business/product discussion); PEER-FILINGS for comparable pure-plays (Dynatrace/Datadog skew toward modern observability); DEAL-DOCS (Turn/River's stated rationale may discuss strategic segments).
     - Answer: Yes in principle, and it is not buildable from these sources. Squadcast appears nowhere in the FY2024 10-K, the merger information statement, or either 2025 8-K, and "AIOps" is never used as a segment or reporting concept — the only AI reference is machine-learning automation inside the ITSM product (swi-10k-fy2024.md, Item 1). Turn/River states no observability rationale either; the one strategic comment on record is that in June 2024 Turn/River told a Silver Lake director it was interested in acquiring only SWI's database management and ITSM business lines, not the whole company (swi-defm14c-2025-merger-information-statement.md, Background of the Merger) — the opposite of an AI-observability thesis. The strongest signal available is the bankers' peer sets: Goldman used Cisco, F5, Informatica, IBM, Open Text, Oracle, Progress and Qualys; Jefferies used Akamai, Check Point, Informatica, NetApp, NetScout, OneSpan, Open Text, Progress, Qualys, TeamViewer, Teradata and Trend Micro — mature infrastructure and security software, with Datadog, Dynatrace and PagerDuty deliberately excluded. If you insist on a segment hurdle rate, relever Software (Internet) at 1.5905 for new observability work against 1.2482 for the legacy book, which at the same 40.1% D/E produces betas of 2.07 versus 1.62 and a ~200bp spread in cost of equity (damodaran-industry-betas-software.md) — but label that an assumption, not a disclosure.
+
+## Cumulative Project — Questions for This Lesson
+
+Module 1's `lesson-overview.md` files (Lessons 1–12) don't carry a separate "## Project Questions" section — that section only starts appearing at Lesson 13 (see `03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-13/lesson-overview.md` onward). For Module 1, the Cumulative Project's equivalent deliverable is the 12-step cost-of-capital report already in [`valuation-report.md`](valuation-report.md) (Steps 2–12, plus the summary WACC table) — that work is complete. See [`README.md`](README.md) for the two confirmed corrections to that report's own figures (the equity-value/WACC-weight error and the Silver Lake/Thoma Bravo ownership-concentration error) that this lesson-by-lesson project surfaced independently but did not rewrite back into the report itself.
 
 ## Notes
 

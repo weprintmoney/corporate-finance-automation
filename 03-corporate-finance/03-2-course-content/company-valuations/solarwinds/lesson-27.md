@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 27: Dividend Policy Assessment"
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 27: Dividend Policy Assessment
@@ -23,6 +23,14 @@ last_updated: 2026-09-20
     - Sources needed: SWI's cash-flow statements 2019–2024 (dividends paid, buybacks executed, debt issuance/repayment) to compute FCFE and compare it against actual cash returned.
     - Where to find: SEC-EDGAR — SWI 10-Ks FY2019–FY2024, Item 8 cash flow statements (financing activities section); REPO-SWI-VAL (no FCFE or distribution-history work exists there yet — would need to be built fresh).
     - Answer: No BP pattern — and correct the premise: SWI *did* pay dividends, $405.4M of them. A $1.50/share, $237.2M special dividend was paid 2021-08-24 (`swi-10k-fy2023.md`, Dividend Policy) and a $1.00/share, $168.2M special dividend on 2024-04-15 (`swi-10k-fy2024.md`, Note 2). Neither was funded by SWI borrowing: the 2021 payout came out of the $505.6M "Distribution from spin-off of discontinued operations, net" that N-able paid up on separation — $324.7M of intercompany repayment plus a $238.2M one-time dividend, net of $57.3M left behind (`swi-10k-fy2023.md` financing activities and Note on the Separation) — which is a one-step-removed version of the BP pattern, since the cash originated in leverage placed on the business being spun out, not on SWI. The 2024 payout matched FCFE almost exactly: CFO $188.3M − $20.5M of total capitalized spend ($5.6M PP&E + $14.4M capitalized software + $0.5M intangibles) − $0 net debt repayment (revolver $10.0M drawn, $10.0M repaid) = $167.8M of FCFE against $168.2M distributed, with the $26.5M of "repurchases" being RSU tax withholding rather than discretionary buybacks. Silver Lake sold because the returns never cleared the hurdle, not because distributions were straining the balance sheet.
+
+## Cumulative Project — Questions for This Lesson
+
+- **If your firm has returned less cash than it can over time and has a big cash balance, do you trust the firm with your cash?**
+  On the theoretical trust test above, no — ROIC never cleared the ~10.1%–10.33% WACC in 2021–2024, so cash retained inside SWI would be reinvested below the hurdle rate. But the empirical premise doesn't hold for long: SWI did briefly run big cash balances (Lesson 26 Part 2 — $732.1M at year-end 2021, 101.9% of that year's revenue; $284.7M at year-end 2023), but both were swept out within about a year via a special dividend (and, in 2022, a $664.4M debt paydown) rather than left to accumulate. So the theoretical answer ("no, don't trust the reinvestment decision") and the empirical answer ("but they didn't sit on it") point in different directions — the sponsors behaved as if they already distrusted their own reinvestment capacity, which is the internally consistent response to a sub-hurdle ROIC.
+
+- **If your firm has returned more cash than it can over time, should it scale back cash return?**
+  SWI did overdistribute relative to a single year's FCFE — FY2024's $194.7M of dividends plus repurchases against $127.0M–$167.8M of FCFE (established above, a 116%–153% payout ratio depending on the FCFE definition used) — but no, it should not scale back, for the same reason Lesson 26 Part 1 classifies this as "a Disney case, not a BP case": the gap was funded by drawing down a cash balance built up the prior year (cash fell from $284.7M to $251.9M), not by new borrowing. Scaling back would only make sense if the overdistribution were debt-funded or persistent; here it is neither — it's the tail end of the same balloon-and-release pattern the previous question describes, and with ROIC still below WACC, continuing to return any genuinely excess cash remains the correct call.
 
 ## Notes
 

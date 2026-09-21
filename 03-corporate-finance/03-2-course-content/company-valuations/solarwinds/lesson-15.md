@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 15: Incremental Cash Flows and Time-Weighted
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 15: Incremental Cash Flows and Time-Weighted Returns
@@ -23,6 +23,11 @@ last_updated: 2026-09-20
     - Sources needed: Banker's DCF assumptions (discount rate, terminal growth rate) from the merger proxy; peer long-term growth assumptions for comparison.
     - Where to find: DEAL-DOCS (Turn/River DEFM14A fairness opinion DCF); PEER-FILINGS (DDOG, DT growth-rate context); DAMODARAN-SITE (long-term GDP growth constraint data).
     - Answer: 2–3% is defensible and both banker DCFs respected the constraint — the indefensible assumption sits in the explicit forecast, not the terminal value. Goldman Sachs used perpetuity growth rates of 2.0%–3.0% with discount rates of 9%–11%, implying terminal NTM Adjusted EBITDA exit multiples of 6.5x–9.8x; Jefferies used 2.5%–3.5% with a 10.70%–11.70% WACC range, both over six-year explicit forecasts (2025–2030), not ten (swi-defm14c-2025-merger-information-statement.md, Opinion of Goldman Sachs and Opinion of Jefferies). Both ranges sit well below the 4.77% 10-year Treasury (treasury-and-fed-rates.md), so Damodaran's cap — terminal growth cannot exceed the risk-free rate as a proxy for nominal economic growth — is satisfied with room to spare, and Goldman's implied terminal multiple is below the ~10.9x LTM Adjusted EBITDA the deal itself paid. The problem is the ramp: management's LRP takes revenue from $796.9M to $1,273M (8.1% CAGR) and EBIT from $208.4M to $511M (16.1% CAGR, operating margin 26.2% → 40.1%) after an actual FY2019–FY2024 revenue CAGR of 3.6% (swi-defm14c-2025-merger-information-statement.md, Certain Company Financial Forecasts; swi-multi-year-financials.md). Meanwhile Datadog grew 27.7% to $3,427M in FY2025 and Dynatrace 18.8% to $2,018M in FY2026 — both already larger than SWI's entire 2030 target (ddog-datadog-10k.md, dt-dynatrace-10k.md). The value is manufactured in that six-year acceleration, not the 2.5% tail.
+
+## Cumulative Project — Questions for This Lesson
+
+- **If you can identify a typical project for your firm, what pattern of cash flows do you foresee for the project?**
+  Building on Lesson 14's identification of SWI's typical project (an annual subscription contract, increasingly displacing the legacy perpetual-license-plus-maintenance sale), the cash-flow pattern is: cash collected upfront or annually in advance at signing/renewal (creating a deferred-revenue liability that grew $10.559M in FY2024 alone, per this lesson's Part 1 answer above), revenue recognized ratably over the contract term, and near-zero incremental investment required to deliver it — SWI's entire FY2024 capitalized spend was $20.478M against $796.9M of revenue. There is effectively no "initial outlay, then payback" curve the way a manufacturing or infrastructure project would have; the cash comes in ahead of the accounting revenue, at a marginal cost close to the cost of support and hosting, and the only real "investment" is the R&D and sales cost of winning or renewing the contract in the first place (both of which are expensed, not capitalized, per Lesson 14 MD&A discussion). At the portfolio level this produces the pattern this project keeps finding: high, stable, recurring cash flow (93.5% of FY2024 revenue was recurring, per Lesson 9) with almost no reinvestment drag — which is exactly why FCFF ($197.3M per Lesson 14 Part 1, or $153.8M on the base-year DCF build in Lesson 30) tracks so close to after-tax EBIT rather than falling well below it the way a capital-intensive business's would.
 
 ## Notes
 

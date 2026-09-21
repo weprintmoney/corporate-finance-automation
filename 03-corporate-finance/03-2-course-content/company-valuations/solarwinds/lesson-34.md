@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 34: Applied DCF Valuation and the Value of C
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 34: Applied DCF Valuation and the Value of Control
@@ -23,6 +23,20 @@ last_updated: 2026-09-20
     - Sources needed: an "optimal" restructured SWI valuation (alternate reinvestment/ROIC mix, an optimal debt ratio if one can be derived) to compare against the status-quo DCF from Lesson 34 Part 1, plus SWI's unaffected pre-announcement trading price.
     - Where to find: REPO-SWI-VAL (Step 2 governance assessment documents the weak-governance finding already; an optimal-debt-ratio/optimal-value analysis is not yet built there); SEC-EDGAR (SWI pre-announcement trading price, 8-K deal announcement); DEAL-DOCS (Turn/River offer premium over the unaffected share price).
     - Answer: The $3.32/share premium (22% over the $15.18 undisturbed close, ~$614M on 185.0M shares) is real control value — but it is *governance-discount recapture*, not operating improvement, and the financing lever actually destroys value. My status-quo DCF on management's existing plan already reaches $18.42, so essentially the whole premium is the gap between intrinsic value and a public price that Goldman's own table shows stuck at 8.8x EV/NTM EBITDA in 2024 and 9.4x in early 2025 while its selected software comparables traded at 12.8x and 14.0x (`swi-defm14c-2025-merger-information-statement.md`). Testing lever three explicitly: Turn/River's committed $2,225M first lien + $525M second lien + $200M revolver takes market debt from 26% to ~58% of capital and debt/adjusted EBITDA from 3.1x to 7.2x; re-levering Damodaran's 1.2482 cash-corrected unlevered beta at that D/E of 1.381 gives beta 2.54, cost of equity 16.1% (4.77% + 2.54 × 4.46%) and WACC ≈ **11.5%** — higher than the 10.33% at 26% — while interest of ~$296M against $208M of EBIT makes the tax shield unusable. SWI was already close to its WACC-minimizing ratio (~30%, WACC ~10.16%), so levers one, two and four are the only places optimal value could hide, and Turn/River's own second lien being partly taken by Thoma Bravo tells you the deal was about resetting the equity basis and IRR, not raising ROIC. One correction to Step 2: the controlling block was Silver Lake *and* Thoma Bravo at ~65% of voting power, not Silver Lake alone at ~75%.
+
+## Cumulative Project — Questions for This Lesson
+
+- **What is the status quo value of your firm?**
+  **$18.42/share** ($4,356M enterprise value), the full DCF this lesson's Part 1 answer above builds directly from management's own forecasts and the corrected 10.33%/10.1%-vintage WACC — within 0.4% of the $18.50 actual deal price.
+
+- **If you were running this firm, what would you change about the way the firm is run (in terms of investing, financing and dividend decisions)?**
+  Three changes, and they cut in different directions on value. Investing: correct the terminal-year reinvestment inconsistency this project's own Lesson 32 identifies — management's plan implicitly assumes near-zero reinvestment while growing 8.6% in perpetuity, which is mathematically inconsistent with g/ROIC; a realistic mature-firm plan reinvests 24.2% of after-tax operating income at maturity, not a negative amount. Financing: hold leverage near the ~28%–30% band this project's own optimal-debt-ratio work (Lessons 18, 20, 36) finds close to right, rather than following Turn/River's actual move to ~58%–60% of capital, which this project shows *raises* WACC to ~11.5% rather than lowering it (established in this lesson's Part 2 answer above). Dividends: return sub-hurdle cash consistently every year ROIC falls short of WACC (which was every year 2021–2024, per Lesson 28's cumulative-project answer), not opportunistically in only two of five years.
+
+- **What is the value of your firm with these changes made?**
+  Lower than the status quo — a genuinely unusual finding worth stating plainly rather than assuming "optimal always beats status quo." Fixing only the reinvestment inconsistency (holding growth internally consistent with a mature-firm ROIC = WACC assumption) drops implied value per share from $18.42 to **$13.32** (established in Lesson 32 Part 2), because the status-quo DCF's near-parity with the deal price was itself built on the same overly generous terminal-reinvestment assumption. The financing and dividend changes described above don't add value back on top of that — this project's own work (Lesson 19) finds the financing-optimization gap was small (under 1% of firm value) and the dividend-timing change is a policy-consistency point, not a cash-flow-generating one. Net: a firm run exactly as this project would recommend is worth *less* than what was actually paid, which is the strongest evidence in this whole project that the $18.50 price was underwritten by an inconsistent growth assumption rather than by genuine operating improvement potential.
+
+- **What is the likelihood that this change will happen?**
+  Low — the new owner moved in the opposite direction on the one lever it controls. Turn/River's actual 2025 financing (established above and in Lessons 19–20) re-levers to roughly 58%–60% of capital, the reverse of the "hold leverage near 28%–30%" recommendation, and there is no evidence in the compiled sources (which end at the April 2025 closing 8-K) that management's growth/reinvestment plan was revised downward toward the internally consistent case. The buyer's revealed actions point toward resetting the equity basis and IRR (established in Lesson 36's synthesis), not toward the more conservative, internally consistent operating plan this answer recommends.
 
 ## Notes
 

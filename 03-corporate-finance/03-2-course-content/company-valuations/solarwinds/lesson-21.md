@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 21: Adjusted Present Value and the Relative 
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 21: Adjusted Present Value and the Relative Approach to Debt Ratios
@@ -23,6 +23,20 @@ last_updated: 2026-09-20
     - Sources needed: Peer debt-to-capital and debt-to-EV ratios for DDOG, DT, PD from a comparable fiscal period; a narrower "observability SaaS" sector average rather than Damodaran's broad software-industry average.
     - Where to find: PEER-FILINGS (DDOG/DT/PD 10-Ks and 10-Qs for debt and market cap); REPO-BETAS (Damodaran's broad software-industry debt-ratio averages, as a fallback since no observability-specific subsector exists); REPO-SWI-VAL for SWI's own current debt-ratio figures to run the comparison against.
     - Answer: It contradicts sharply, and the sector comparison is the side that is wrong. SWI runs 27.7% debt-to-capital (28.5% with leases, 29.4% debt-to-EV) versus Dynatrace at ~0% (a $400M revolver undrawn but for $1.0M of letters of credit, against $1,224M of cash and securities), Datadog at 2.2% ($1.0B of 2029 converts against a ~$45B equity base), and PagerDuty at 22.3% on paper ($402.5M of converts) but net-cash-positive in substance — all from `peer-filings/`. Damodaran's 309-firm Software (System & Application) average is 5.58% D/E, i.e. 5.29% debt-to-capital (`market-data/damodaran-industry-betas-software.md`), so SWI sits at roughly 5x the sector and 13x the observability median. This is the Vale case, not the Disney case: the peer set is not a valid comparison group because none of these companies could service SWI's debt — Datadog's EBIT is negative and Dynatrace and PagerDuty are sub-2% on EBIT/EV, against SWI's 4.96% EBIT/EV, 48.3% adjusted-EBITDA margin and $5.6M of PP&E capex on $796.9M of revenue. Staying close to the sector here would mean surrendering a real, cash-paying tax shield in order to have company in a mistake. The one legitimate caveat: SWI's 28% was 2016 LBO residue, not a considered choice, so it arrived at the defensible answer by accident.
+
+## Cumulative Project — Questions for This Lesson
+
+- **What is the expected tax benefit from borrowing money in the APV approach?**
+  Two consistent estimates bracket it. On Miller's PV(tax benefit) = t × D convention for roughly permanent debt: 25% × $1,285.0M (corrected total debt, Lesson 13) ≈ **$321.3M**. On the annuity convention used elsewhere in this project (Lesson 17): the $28.1M annual shield (25% × $112.435M interest expense) capitalized at the 7.11% pre-tax cost of debt gives ≈ **$395M**. Both are the same order of magnitude and both rely on a real, usable shield — SWI paid $61.5M of actual cash taxes in FY2024 (established repeatedly, e.g. Lessons 17, 20), so this isn't a theoretical benefit sitting unused against NOLs.
+
+- **What is the bankruptcy cost as a percent of value at your firm? (If you can estimate it)**
+  As established above, the honest answer splits into two pieces rather than one number: indirect/going-concern costs are low (5% of firm value is Lesson 20's SUNBURST-anchored estimate — the closest real-world stress test available), while cost given an actual default would be severe on the unsecured/equity side, since 78.7% of total assets are goodwill and intangibles with limited standalone resale value (Note this doesn't threaten the first-lien lenders, who are secured on the whole enterprise). Multiplying a low probability of default at SWI's current 1.85x–3.42x coverage (depending on EBIT vs. EBITDA measure, Lesson 12) by the 5% indirect-cost estimate implies an *expected* bankruptcy cost of well under 1% of firm value at the current leverage point — this is an inference from the pieces this project has already established, not a modeled default-probability curve, and the compiled sources don't support more precision than that.
+
+- **What is the optimal debt ratio using the APV approach?**
+  Not precisely computable from compiled sources (no default-probability curve by leverage level exists here), but directionally inferable: because expected bankruptcy costs appear trivial at moderate leverage (previous answer) while the tax benefit scales roughly linearly with debt up to the point coverage becomes genuinely strained, the APV framework likely supports **debt at or above the corrected current 28.8%** — closer to the conclusion Lesson 20 reaches from the EBIT/EV driver ("SWI... had room rather than being stretched") than to Lesson 18's more conservative 13%–17% cost-of-capital-approach band.
+
+- **If it is different from the optimal using the cost of capital approach, how would you explain the difference?**
+  The two approaches price bankruptcy risk differently. The cost-of-capital approach (Lesson 18) infers default risk entirely through market or synthetic credit spreads, which are set by lenders/rating agencies and embed a risk premium, illiquidity, and conservative-severity assumptions well beyond the "expected loss" APV tries to isolate. APV separates the tax benefit from the *expected* bankruptcy cost directly — and this lesson's SUNBURST-anchored evidence (a severe, real-world reputational shock that produced only a temporary renewal dip and no revenue decline) suggests the true expected indirect cost is smaller than what a credit spread like SWI's B+ (2.74%) or its EBIT-synthetic B3/B- (5.50%) is pricing in. That gap — spreads pricing in more distress-cost than SWI's own operating history supports — is exactly why the APV read tolerates more leverage than the cost-of-capital schedule's kink between 13% and 15% (Lesson 18 Part 2).
 
 ## Notes
 

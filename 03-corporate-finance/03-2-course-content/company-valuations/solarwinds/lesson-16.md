@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 16: Currency Consistency and Uncertainty in 
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 16: Currency Consistency and Uncertainty in Investment Analysis
@@ -23,6 +23,14 @@ last_updated: 2026-09-20
     - Sources needed: Disclosed cybersecurity opex trend since 2021; customer churn/retention data pre- vs. post-SUNBURST; disclosed total cost of the SUNBURST incident (legal, remediation) vs. ongoing security spend.
     - Where to find: SEC-EDGAR — SWI 10-Ks FY2021–FY2024 (MD&A cybersecurity expense discussion; Legal Proceedings/SUNBURST litigation costs); SEC-EDGAR — DEF 14A (Cybersecurity Committee charter); NEWS-WEB (analyst estimates of total SUNBURST cost).
     - Answer: The spend passed the test decisively, and the cheapest hedge SWI held was insurance it had already bought. Net Cyber Incident costs ran $3.485M (FY2020), $33.114M (FY2021), $26.233M (FY2022), −$2.084M (FY2023) and $10.256M (FY2024) — $71.0M cumulative over five years, about 1.8% of a single year's revenue (swi-10k-fy2020.md and swi-10k-fy2023.md / swi-10k-fy2024.md, MD&A non-GAAP reconciliations). The FY2023 negative figure is the punchline: SWI collected $50.0M of D&O insurance proceeds against a $26.0M class-action settlement, so a pre-existing hedge more than covered the largest realized loss (swi-10k-fy2024.md, MD&A Operating Activities). On the benefit side, the maintenance renewal rate fell from 94% (FY2019) to 91% (FY2020) and 93% (FY2022), then recovered to 96% (FY2023) and 97% (FY2024), while subscription net retention rose from 97% to 99% — retention ended above pre-breach levels (swi-10k-fy2020.md; swi-10k-fy2023.md and swi-10k-fy2024.md, MD&A). Against $71M of net incident cost plus Secure by Design spend embedded in an R&D line that grew from $75.9M to $108.6M (swi-multi-year-financials.md), SWI preserved a customer base whose renewals now exceed pre-incident rates and sold for roughly 5.2x revenue. There was no cheaper alternative on offer: the counterfactual was not spending and watching a 97% renewal rate decay, and the Technology and Cybersecurity Committee is board time, not capital (swi-def14a-2024.md; swi-10k-fy2024.md, Item 1C).
+
+## Cumulative Project — Questions for This Lesson
+
+- **If your firm has foreign operations, what currency are the operations reported in?**
+  SWI consolidates everything into USD for external reporting, but its foreign subsidiaries keep local books in local functional currencies first — Item 7A (established in this lesson's Part 1 answer above and in Lesson 23) names EUR, GBP and AUD as the disclosed exposures, with European operations (Cork, Ireland; Brno, Czech Republic; Krakow, Poland) run through Euro-functional subsidiaries before being remeasured/translated into USD for the consolidated 10-K. International revenue was $280.336M (35.2% of the $796.895M total, per the FY2024 geographic footnote, Note 16) — the figure this lesson corrects from the "31%"/MD&A "69% North America" premise.
+
+- **What cost of equity/capital would you use for the foreign operations, given currency choice and business?**
+  Extending this lesson's Part 1 currency-consistency theorem: for a Euro-denominated sub-analysis of the European operations, the correct move is the same 10.33%-vintage or corrected ~10.1% USD WACC (Lesson 13) converted via the PPP identity, not a separately-estimated "European cost of capital." Using the same 54bp inflation-differential adjustment computed above (ECB 2.0% target vs. ~2.5% expected US inflation), a EUR WACC of roughly 9.6%–9.8% is the theoretically consistent figure — it must produce the identical USD-converted NPV as discounting USD cash flows at the USD WACC, by construction. The business risk (beta) shouldn't change just because the cash flows are booked in euros: SWI's European operations sell the same subscription/maintenance monitoring products as the US business, so there's no basis in the filings for a different unlevered beta by geography — the only legitimate currency adjustment is the risk-free-rate/inflation swap this lesson's theorem specifies, not a business-risk premium. The compiled sources don't support a Eurozone-specific risk-free rate or ERP (per this lesson's Part 1 answer, only US market data is in the compiled snapshot), so treat 9.6%–9.8% as an assumption-driven estimate, not a sourced figure.
 
 ## Notes
 

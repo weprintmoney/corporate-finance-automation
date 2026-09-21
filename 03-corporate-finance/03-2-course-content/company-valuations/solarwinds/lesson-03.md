@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 03: The Objective: Reality and Reaction (sta
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 03: The Objective: Reality and Reaction (stated objectives)
@@ -23,6 +23,10 @@ last_updated: 2026-09-20
     - Sources needed: SWI stock price/trading multiple history 2020–2025 vs. observability peers, outcome of the SEC's 2023 fraud charges against SWI and its CISO.
     - Where to find: SEC-EDGAR — SWI 8-Ks (Dec 2020 SUNBURST disclosure) and SEC litigation release re: 2023 CISO charges; PEER-FILINGS — DDOG/DT/PD trading multiples for comparison; NEWS-WEB — stock price history and analyst commentary on any "SUNBURST discount."
     - Answer: The discount was permanent, and it was the market — not the regulator — that imposed it. Goldman's own multiple history shows SWI's average EV/NTM EBITDA at 15.9× in 2019 and 15.7× in 2020 against a software peer average of 10.9× and 10.8× — a ~46% *premium* — then 8.8× in 2024 and 9.4× in 2025 YTD against peers at 12.8× and 14.0× — a 31–33% *discount* (swi-defm14c-2025-merger-information-statement.md, "Selected Public Company Comparables Analysis"). That is a ~79-point swing in relative rating that never reversed in four years. Total shareholder return confirms it: $100 invested 12/31/2019 was $51 at 12/31/2023 while the S&P 500 IT index was $211 (swi-def14a-2024.md, Pay versus Performance). The $18.50 price was a 22% premium to an undisturbed $15.18 that was simultaneously the 52-week *high* — bottom-quartile against Goldman's premia-paid study (25th percentile 19%, 75th percentile 50%). Meanwhile the SEC's case largely collapsed: on July 18, 2024 the SDNY granted the motion to dismiss "in large part," leaving one claim about the online Security Statement, against an accrued loss contingency the company called immaterial (swi-10k-fy2024.md, Note 15). One correction to the premise: Thompson's replacement was announced December 7, 2020 and filed December 9 — *before* the December 14 SUNBURST 8-K, which Thompson himself signed as CEO (swi-8k-2020-12-09-sunburst-disclosure.md; swi-8k-2020-12-14-sunburst-followup.md). The CEO change wasn't the market self-correcting; it was already scheduled.
+
+## Cumulative Project — Questions for This Lesson
+
+Module 1's `lesson-overview.md` files (Lessons 1–12) don't carry a separate "## Project Questions" section — that section only starts appearing at Lesson 13 (see `03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-13/lesson-overview.md` onward). For Module 1, the Cumulative Project's equivalent deliverable is the 12-step cost-of-capital report already in [`valuation-report.md`](valuation-report.md) (Steps 2–12, plus the summary WACC table) — that work is complete. See [`README.md`](README.md) for the two confirmed corrections to that report's own figures (the equity-value/WACC-weight error and the Silver Lake/Thoma Bravo ownership-concentration error) that this lesson-by-lesson project surfaced independently but did not rewrite back into the report itself.
 
 ## Notes
 

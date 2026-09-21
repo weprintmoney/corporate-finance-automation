@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 08: Regression Betas"
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 08: Regression Betas
@@ -23,6 +23,10 @@ last_updated: 2026-09-20
     - Sources needed: SWI's regression beta output (beta, standard error, R-squared) against the S&P 500 over ~5 years of monthly returns pre-April 2025.
     - Where to find: NEWS-WEB / a financial data terminal (Bloomberg/Capital IQ) beta page if accessible; otherwise self-computed from the raw price data in Part 1's sources; REPO-BETAS gives an industry-level cross-check rather than a firm-specific number.
     - Answer: A monthly firm-specific regression is not attainable from the compiled sources, so the best available substitute is the DEF 14A pay-versus-performance table, which indexes $100 invested on 12/31/2019: SWI at 81, 57, 38, 51 for 2020–2023 against the S&P 500 Information Technology index at 142, 190, 135, 211 (swi-def14a-2024.md, Pay versus Performance). Converting those to annual returns (SWI −19.0%, −29.6%, −33.3%, +34.2%; index +42.0%, +33.8%, −29.0%, +56.3%) and regressing gives a beta of 0.55 with an R² of 0.43 and a standard error of 0.44 — with only four observations, the 95% confidence interval runs from roughly −1.4 to +2.5. That interval contains zero, one, and the industry beta simultaneously, which is Damodaran's point stated brutally: the estimate is arithmetically real and informationally empty, and the repo's cited 0.88 regression beta is inside it too, so quoting either number to two decimals is false precision. Discard the regression rather than averaging it in, and relever the Software (System & Application) cash-corrected unlevered beta of 1.2482 to SWI's own capital structure instead (damodaran-industry-betas-software.md).
+
+## Cumulative Project — Questions for This Lesson
+
+Module 1's `lesson-overview.md` files (Lessons 1–12) don't carry a separate "## Project Questions" section — that section only starts appearing at Lesson 13 (see `03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-13/lesson-overview.md` onward). For Module 1, the Cumulative Project's equivalent deliverable is the 12-step cost-of-capital report already in [`valuation-report.md`](valuation-report.md) (Steps 2–12, plus the summary WACC table) — that work is complete. See [`README.md`](README.md) for the two confirmed corrections to that report's own figures (the equity-value/WACC-weight error and the Silver Lake/Thoma Bravo ownership-concentration error) that this lesson-by-lesson project surfaced independently but did not rewrite back into the report itself.
 
 ## Notes
 

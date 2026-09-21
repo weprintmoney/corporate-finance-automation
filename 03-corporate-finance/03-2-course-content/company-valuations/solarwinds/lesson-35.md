@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 35: Multiples"
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 35: Multiples
@@ -23,6 +23,20 @@ last_updated: 2026-09-20
     - Sources needed: SWI's and peers' growth rates, margins, and a risk/beta proxy, to run a comparable-firms regression of the chosen multiple against those drivers.
     - Where to find: PEER-FILINGS — DDOG/DT/PD financials (growth, margin, ROIC inputs); REPO-SWI-VAL (beta and risk inputs already built at Steps 8–11); SEC-EDGAR — SWI's own growth/margin history (10-Ks FY2021–FY2024).
     - Answer: Deserved, and the driver is growth — not SUNBURST. On earnings multiples SWI does look cheap: at $18.50 the deal is 20.97x EV/EBIT ($4,370.2M ÷ $208.4M), 11.36x EV/adjusted EBITDA ($4,370.2M ÷ $384.7M) and 30.6x trailing P/E ($3,422.9M ÷ $111.9M), against Damodaran's Software (System & Application) aggregates of **39.48x EV/EBIT**, **28.43x EV/EBITDA** and 42.07x aggregate market cap/trailing net income (`spreadsheet-vebitda24.md`, `spreadsheet-pedata24.md`). Regress against the drivers and the discount vanishes: the sector's expected five-year growth is **24.30%** versus SWI's 8.1% management CAGR, so SWI's PEG is 3.78 against the sector's **1.73** — growth-adjusted, SWI is more than twice as expensive as its sector. The price-to-book test is the Deutsche Bank case verbatim: SWI's ROE is 7.99% ($111.9M ÷ $1,400.7M) against the sector's 24.44%, and Damodaran's (ROE − g)/(k_e − g) at an 11.75% cost of equity and 2.5% growth justifies a P/BV of just **0.59x** while the deal paid 2.44x (`spreadsheet-pbvdata24.md`). SUNBURST reputational overhang is not needed to explain any of it — 99% net retention says the customers stayed. A 6.7% ROIC against a 10.33% WACC and 5% growth against peers' 19–28% explains the whole gap.
+
+## Cumulative Project — Questions for This Lesson
+
+- **What multiples of earnings, book value and revenue does your company trade at?**
+  At the $18.50 deal price, all established above: EV/Revenue 5.48x, EV/EBIT 20.97x, EV/EBITDA (adjusted) 11.36x, trailing P/E 30.6x, and P/BV 2.44x ($3,422.9M ÷ $1,400.714M book equity).
+
+- **Which of these multiples is the best one to price your company on?**
+  Not a single one cleanly — book value and unadjusted trailing earnings are both unreliable, and the honest answer is EV/EBITDA against the *right* peer set, sanity-checked against precedent transactions. Book value fails outright: Lesson 14 shows invested capital turns negative once 2016-LBO goodwill ($2,363.2M) is stripped out, so P/BV is measuring the sponsors' original purchase price, not the operating business. Trailing P/E is distorted by one-off items (Lesson 29's finding that FY2024 net income reflects a −7.8% valuation-allowance-driven tax rate, not a marginal one). EV/Revenue is clean but ignores the margin gap that's most of what actually differentiates SWI from peers. EV/EBITDA, applied against comparable *mature* software names rather than high-growth SaaS peers, best captures both profitability and the growth/risk differences this project has already quantified.
+
+- **What are the "comparable" firms that you would use in pricing your company?**
+  Not DDOG/DT/PD — Lesson 21 Part 2 already disqualifies that set as the wrong comparison group (the "Vale case": none of them could service SWI's debt or match its margin/growth profile). The right set is the one SWI's own bankers actually used: Goldman's mature-infrastructure-software peers (Cisco, F5, Informatica, IBM, Open Text, Oracle, Progress, Qualys) and Jefferies' broader set adding Akamai, Check Point, NetApp, NetScout, OneSpan, Teradata, TeamViewer and Trend Micro (established in Lessons 10 and 11) — companies matched on maturity and growth profile, not on being in the same product category.
+
+- **Based upon the multiple and comparables, what price would you attach to your company?**
+  Below $18.50 on every multiples-based method this project has run, which is itself the finding. Jefferies' own precedent-transaction work (median EV/LTM revenue of 3.3x across 12 comparable software take-privates, established in Lesson 35 Part 1) implies **$7.70–$14.20/share**. The PEG-adjusted earnings approach — applying the sector's own growth-adjusted multiple (PEG 1.73) to SWI's 8.1% management-forecast growth rather than the sector's 24.30% — implies roughly 14x trailing earnings, or **≈$9.13/share** ($111.9M × 14 ÷ 171.6M shares). The regression-based P/BV approach (Lesson 35 Part 2's (ROE−g)/(k_e−g) justified multiple of 0.59x) implies **≈$4.82/share** ($1,400.714M × 0.59 ÷ 171.6M). None of these approach $18.50 — only the full DCF built on management's own uncorrected growth plan (Lesson 34's $18.42) gets close, which is consistent with this project's repeated finding that the deal premium is better explained as governance-discount recapture (Lesson 34 Part 2) than as a fundamentals-justified multiple.
 
 ## Notes
 

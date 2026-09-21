@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 32: Terminal Value"
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 32: Terminal Value
@@ -23,6 +23,17 @@ last_updated: 2026-09-20
     - Sources needed: SWI's D&A vs. CapEx run-rate and capitalized-software-development policy; an assumed stable-growth ROIC for the terminal period.
     - Where to find: SEC-EDGAR — SWI 10-K FY2024 (CapEx/D&A and capitalized-software footnotes); REPO-RATES (risk-free rate as the terminal growth-rate cap); REPO-SWI-VAL (Step 12 WACC as the pre-convergence starting cost of capital; no terminal-value work exists there yet).
     - Answer: The internally consistent reinvestment rate is **24.2%**, management's terminal year assumes **−10.8%**, and closing that gap costs about $5 per share. Management's 2030E has capitalized expenditures of $27M against D&A of $25M, a $3M working-capital investment and a $46M deferred-revenue inflow — net reinvestment of −$41M on EBIT(1−t) of $381M ($511M EBIT − $130M cash taxes) — while revenue still grows 8.6% (`swi-defm14c-2025-merger-information-statement.md`, Financial Forecasts). Consistency requires reinvestment rate = g/ROIC: at g = 2.5% and a stable-growth ROIC set equal to the 10.33% WACC, that is 2.5/10.33 = 24.2%, so terminal FCFF is $381M × 0.758 = $288.8M rather than the $419M implied, and terminal value falls from $5,485M ($419M × 1.025 ÷ 0.0783) to $3,780M. Push that through the equity bridge and value per share drops from **$18.42 to $13.32** — below the $15.18 undisturbed price, meaning $18.50 is only defensible if SWI earns excess returns in perpetuity while reinvesting nothing. This is not a hidden-capex problem: capitalized software development is disclosed as its own investing line ($14.4M in FY2024) and internal-use software is amortized straight-line under the Note 2 policy in `swi-10k-fy2024.md`, and the 2.5% terminal growth sits well inside the 4.77% 10-year Treasury cap in `treasury-and-fed-rates.md`. It is a "growth for free" problem.
+
+## Cumulative Project — Questions for This Lesson
+
+- **When (in what year) will your firm be a mature firm (where you can estimated terminal value)?**
+  Mechanically, for DCF terminal-value purposes: **2030**, the end of management's own six-year explicit forecast window (2025–2030), which both Goldman and Jefferies used as the point to switch to a terminal-value calculation (established above). Substantively, though, this project's own Lesson 1 answer already classified SWI as sitting in the mature, "financing-and-dividend" stage of the corporate life cycle as of **FY2024 itself** — slow revenue growth (3.6%–5.25% CAGR), margin expansion through disinvestment, a first-ever special dividend, and sponsors selling down their stake. The tension between those two answers is itself informative: management's plan asks the market to treat an already-mature company as if it needs six more years to "become" mature, which is part of why Lesson 31 finds the plan's 8.1% revenue CAGR unsupported by SWI's own reinvestment and ROIC.
+
+- **What will your firm's growth rate be in perpetuity after that point in time?**
+  **2.5%**, the figure Lesson 15 and Lesson 32 Part 2 both use, sitting inside the range both banks actually applied (Goldman 2.0%–3.0%, Jefferies 2.5%–3.5%) and comfortably below the 4.77% 10-year Treasury this project treats as the cap on perpetual growth (established repeatedly, e.g. Lessons 15 and 32).
+
+- **What return on and cost of capital would you give your firm, when it becomes a mature firm?**
+  Cost of capital: roughly **10.1%** using this project's corrected weights and beta (Lesson 13), or the report's uncorrected 10.33% if that vintage of the WACC build is preferred — either way, consistency requires holding the mature-firm cost of capital at whatever WACC feeds the explicit-period discounting. Return on capital: per the internal-consistency rule Lesson 32 Part 2 applies (reinvestment rate = g ÷ ROIC), a mature firm in stable growth is standardly assumed to earn ROIC equal to its WACC — no excess returns in perpetuity — which at g = 2.5% and ROIC = WACC implies a terminal reinvestment rate of **24.2%** (2.5% ÷ 10.33%), not the negative reinvestment rate management's own terminal year assumes. That gap — a mature-firm ROIC assumption of "just clears WACC" versus management's implicit assumption of persistent excess returns funded by negative reinvestment — is the single largest valuation correction this project identifies (established above: implied value per share falls from $18.42 to $13.32 once fixed).
 
 ## Notes
 

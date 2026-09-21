@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 07: Country Risk Premiums"
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 07: Country Risk Premiums
@@ -23,6 +23,10 @@ last_updated: 2026-09-20
     - Sources needed: SWI 10-K/10-Q geographic revenue split (domestic vs. international, ideally by region); country-level ERP table.
     - Where to find: SEC-EDGAR (10-K geographic revenue note); DAMODARAN-SITE (current ERP by country); REPO-COUNTRY-RISK; REPO-SWI-VAL (check whether a cost-of-equity section already exists and what ERP it assumed).
     - Answer: Using the actual footnote weights of 64.8% US / 35.2% international against the compiled 4.46% US total ERP, the revenue-weighted premium lands between 4.46% (international carrying developed-market risk identical to the US) and 4.81% (international carrying a flat 100bp premium) (swi-10k-fy2024.md, Note 16; damodaran-country-risk-premium-us.md). The repo's existing Step 7 answer of 4.56% sits inside that band and survives as a number, but its inputs don't: the 69% weight is North America rather than the US, and the 20% EMEA / 11% APAC-LatAm split appears nowhere in any SWI filing — it was invented. Use 4.46% as the base case and 4.81% as the high case; the WACC swing between them is roughly 40bp, which is not where this valuation is won or lost. The error actually worth fixing is in the repo's Step 11, which used the $4.4B headline deal value as market value of equity — $4.4B is enterprise value, while equity was $18.50 × 173.1M shares = $3.20B (swi-defm14c-2025-merger-information-statement.md, beneficial ownership table) — and that single substitution understates D/E, the levered beta, and the cost of equity by far more than any country-risk refinement will move them.
+
+## Cumulative Project — Questions for This Lesson
+
+Module 1's `lesson-overview.md` files (Lessons 1–12) don't carry a separate "## Project Questions" section — that section only starts appearing at Lesson 13 (see `03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-13/lesson-overview.md` onward). For Module 1, the Cumulative Project's equivalent deliverable is the 12-step cost-of-capital report already in [`valuation-report.md`](valuation-report.md) (Steps 2–12, plus the summary WACC table) — that work is complete. See [`README.md`](README.md) for the two confirmed corrections to that report's own figures (the equity-value/WACC-weight error and the Silver Lake/Thoma Bravo ownership-concentration error) that this lesson-by-lesson project surfaced independently but did not rewrite back into the report itself.
 
 ## Notes
 

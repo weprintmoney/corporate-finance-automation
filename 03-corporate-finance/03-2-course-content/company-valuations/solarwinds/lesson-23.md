@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 23: Designing the Right Type of Financing"
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 23: Designing the Right Type of Financing
@@ -23,6 +23,17 @@ last_updated: 2026-09-20
     - Sources needed: SWI's revenue-by-geography breakdown; confirmation of the term loan's currency denomination and any disclosed FX hedging program.
     - Where to find: SEC-EDGAR — SWI 10-K FY2024, Item 7A (market-risk disclosures covering geographic revenue mix and FX hedging) and debt footnote (loan currency); REPO-SWI-VAL for the $1,235M debt figure to confirm the currency assumption being tested.
     - Answer: SWI's mismatch is worse than Disney's, and it had the fix sitting unused inside its own credit agreement. The FY2024 geographic note in `swi-10k-fy2024.md` splits revenue $516.6M United States and $280.3M international — **35.2% foreign versus Disney's 18%** — while the debt is 100% dollar-denominated ("$1.24 billion U.S. dollar term loans"), so FX-denominated debt is 0% against Disney's 5.49%. Nor is it hedged away: Item 7A states "we hedge only to a limited extent at this time" and "as of December 31, 2024 and 2023, we did not have any forward contracts outstanding," with exposure concentrated in EUR, GBP and AUD routed through Euro-functional European subsidiaries. The cost shows up in equity — a $39.5M foreign currency translation loss in 2024 alone. Applying the lesson's second remedy, SWI already held the instrument: a $112.5M multicurrency revolving tranche it never drew (`swi-10k-fy2024.md` debt footnote), enough to denominate ~9% of debt in the right currencies. And a swap would have been trivially available at its size. This was a live, unforced mismatch, and Turn/River inherits it with less disclosure pressure to fix it.
+
+## Cumulative Project — Questions for This Lesson
+
+- **Given its asset/project characteristics, what is the right type of debt for your firm?**
+  Synthesizing this lesson's two answers above: SWI's ideal debt is floating-rate (matching its real, contractually-embedded pricing power — annual price increases on renewing maintenance and subscription contracts), short-to-medium duration with regular amortization (matching the ~1-year renewal cycle of its typical project, established in Lessons 14–15), and denominated across USD/EUR/GBP in proportion to its revenue mix (35.2% international, per this lesson's Part 2 answer) rather than 100% USD.
+
+- **What are the actual debt characteristics?**
+  As established above: the First Lien Term Loan is floating-rate (SOFR + 2.75%, correct on that dimension), but amortizes only 0.25% per quarter with $1,173.9M of the $1,235.7M face value as a February 2030 bullet (wrong duration — a ~5-year bullet funding ~1-year cash-flow commitments), and is 100% USD-denominated with no forward contracts outstanding and an unused $112.5M multicurrency revolver tranche (wrong currency mix, given 35.2% foreign revenue).
+
+- **If there is a mismatch, what is the best way to fix it?**
+  Two distinct, low-cost fixes were sitting unused inside SWI's own credit agreement, as this lesson's Part 2 answer above already identifies. For the duration mismatch, converting even a modest portion of the bullet to scheduled term amortization (or issuing a shorter-tenor tranche alongside it) would align debt service with the annual-renewal cash-flow pattern without changing the total debt load. For the currency mismatch, simply drawing the existing $112.5M multicurrency revolver tranche in EUR/GBP — already contractually available, never used — would have covered roughly 9% of debt in the right currencies at negligible incremental cost; a swap on the remaining USD principal would have been available at SWI's size and credit quality. Both fixes were available and unused, which is why this lesson's own Part 2 answer calls the currency mismatch "a live, unforced mismatch" rather than an unavoidable one.
 
 ## Notes
 
