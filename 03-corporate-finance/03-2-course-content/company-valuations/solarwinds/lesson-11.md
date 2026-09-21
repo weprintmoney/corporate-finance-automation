@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 11: The \"Right\" Beta"
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 11: The "Right" Beta
@@ -23,6 +23,10 @@ last_updated: 2026-09-20
     - Sources needed: SWI's last public-era regression beta and R-squared (pre-April 2025); how diversified Turn/River's own portfolio is (a diversified PE fund holding many companies argues against needing the total-beta adjustment).
     - Where to find: NEWS-WEB / financial data terminal for SWI's last regression beta and R² before delisting; Turn/River's own investor materials (fund size, number of portfolio companies) via DEAL-DOCS or NEWS-WEB.
     - Answer: No total-beta adjustment. Bookscape was one family's undiversified wealth in a single store; Turn/River funded this with a $1,670.0M aggregate equity commitment spread across multiple affiliated investment funds plus an unnamed institutional co-investor and $225.0M of SWI's own cash (swi-8k-2025-02-07-merger-agreement-announcement.md; swi-defm14c-2025-merger-information-statement.md) — the compiled sources give no Turn/River fund size or portfolio count, but a multi-fund sponsor syndicating a check alongside a co-investor is a diversified holder by construction. The adjustment that actually belongs here is leverage, not diversification: $2.75B of new term debt ($2.225B first lien plus $525M second lien) against $1,670.0M of equity is a D/E of 164.7%, which relevers the 1.2482 unlevered beta to 2.79 and yields a cost of equity of 4.77% + 2.79 × 4.46% = 17.2% (damodaran-industry-betas-software.md; treasury-and-fed-rates.md). That alone accounts for most of a sponsor's 20%+ target return, with the remainder explained by illiquidity and a five-to-seven-year exit horizon. The repo's total-beta route to a 25.6% cost of equity — dividing by a 0.337 sector correlation that isn't even in the compiled beta file — double-counts firm-specific risk Turn/River has in fact diversified away; reserve total beta for a genuinely single-owner case.
+
+## Cumulative Project — Questions for This Lesson
+
+Module 1's `lesson-overview.md` files (Lessons 1–12) don't carry a separate "## Project Questions" section — that section only starts appearing at Lesson 13 (see `03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-13/lesson-overview.md` onward). For Module 1, the Cumulative Project's equivalent deliverable is the 12-step cost-of-capital report already in [`valuation-report.md`](valuation-report.md) (Steps 2–12, plus the summary WACC table) — that work is complete. See [`README.md`](README.md) for the two confirmed corrections to that report's own figures (the equity-value/WACC-weight error and the Silver Lake/Thoma Bravo ownership-concentration error) that this lesson-by-lesson project surfaced independently but did not rewrite back into the report itself.
 
 ## Notes
 

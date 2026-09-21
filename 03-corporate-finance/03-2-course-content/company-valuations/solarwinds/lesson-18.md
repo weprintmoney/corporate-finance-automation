@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 18: The Cost of Capital Approach to the Opti
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 18: The Cost of Capital Approach to the Optimal Debt Ratio
@@ -23,6 +23,14 @@ last_updated: 2026-09-20
     - Sources needed: Damodaran's current interest-coverage-to-rating lookup table (EBIT-based and any EBITDA-adjusted variant); rating agencies' actual methodology commentary on SWI post-Turn/River.
     - Where to find: DAMODARAN-SITE (live synthetic rating/ratings lookup table); SEC-EDGAR — SWI 8-K (S&P/Moody's rating action rationale post-Turn/River deal); REPO-SWI-VAL (Step 12, EBIT vs. EBITDA divergence discussion).
     - Answer: Use EBIT for the decision and treat the EBITDA run as the upside case — but the choice is decisive, not cosmetic, and pretending otherwise is the real error. Re-running the same iterative loop with Adjusted EBITDA of $384.7M as the numerator moves the WACC minimum from 13% debt (10.26%) to 25% debt (10.06%) and places SWI's current 23.1% essentially at the optimum (10.09%, coverage 4.91x → A3/A-). A 12-percentage-point swing in the answer from a single input choice is the whole lesson. SWI does have a legitimate claim on a middle numerator, because $52.9M of its $74.4M of D&A is amortization of 2016-LBO acquired intangibles that will never be repurchased in cash; using EBIT plus acquisition amortization ($261.3M) puts the optimum at 17% with a WACC of 10.20%. The market's verdict sits in that same middle: S&P rated SWI B+ (2.74% spread) against an EBIT-synthetic B- (5.50%) and an EBITDA-synthetic A-, and the term loan actually priced at SOFR + 2.75% for a 7.11% year-end rate (swi-10k-fy2024.md, Note 9). Given "if you're going to make a mistake, be under-levered," take the EBIT-to-cash-EBIT answer of 13–17% and call SWI over-levered — the kink between 13% and 15%, where the synthetic rating falls three notches from A3/A- to Ba2/BB and the spread jumps from 1.25% to 3.00%, is precisely the cliff the advice is about.
+
+## Cumulative Project — Questions for This Lesson
+
+- **What is your firm's current debt ratio (and cost of capital)?**
+  Using the corrected market weights established in Lesson 13: debt $1,285.0M against equity $3,174.0M gives a current debt ratio of **28.8%**, at a WACC of roughly **10.1%** (cost of equity 12.0%, after-tax cost of debt 5.33%). This is the figure to use going forward in this project rather than `valuation-report.md`'s uncorrected 23.1%/10.33%, which mis-stated market equity as the $4.4B enterprise value (see [`README.md`](README.md)).
+
+- **Based upon the cost of capital approach, what is the optimal debt ratio for your firm?**
+  As established above, the answer is genuinely sensitive to one modeling choice: iterating the synthetic-rating/Hamada schedule on EBIT-based interest coverage puts the WACC-minimizing point at **13% debt** (10.26%), while the same schedule on Adjusted-EBITDA-based coverage moves it to **25% debt** (10.06%) — a 12-point swing from a single input. Splitting the difference with an EBIT-plus-acquisition-amortization numerator (justified because $52.9M of SWI's D&A is 2016-LBO purchase-accounting amortization that will never be repurchased in cash) lands the optimum at **17%** (WACC 10.20%). Against the corrected current ratio of 28.8% above, SWI reads as modestly over-levered under the EBIT and blended measures, and roughly at its optimum only under the more generous EBITDA measure — the same conclusion this lesson's own Part 2 answer reaches, now cross-checked against the corrected (not the repo's) current-ratio figure.
 
 ## Notes
 

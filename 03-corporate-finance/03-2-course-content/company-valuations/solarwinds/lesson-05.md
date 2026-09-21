@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 05: The Risk Free Rate"
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 05: The Risk Free Rate
@@ -23,6 +23,10 @@ last_updated: 2026-09-20
     - Sources needed: Country-level (not just region-level) revenue breakdown for SWI's APAC/LatAm segment, local government bond rates and sovereign ratings for those specific countries.
     - Where to find: SEC-EDGAR — SWI 10-K FY2024 geographic revenue footnote (may only disclose region-level); REPO-COUNTRY-RISK — country ERP/default-spread data by country; REPO-SWI-VAL — Step 7 (existing region-level country-risk weighting).
     - Answer: You can't, and you shouldn't want to — this is a genuine limit of public disclosure. SolarWinds' geographic footnote is a two-line disclosure: "United States, country of domicile $516,559" and "International $280,336," with the explicit statement that "[o]ther than the United States, no single country accounted for 10% or more of our total revenues during these periods" (swi-10k-fy2024.md, Note 16). There is no region level, let alone country level — so the repo's 69% / 20% EMEA / 11% APAC+LatAm split in Step 7 is an analyst estimate that cannot be traced to the filing, and country-specific risk-free rates for an undisclosed slice would be false precision. Run the sensitivity to see how little is at stake: substituting the disclosed 64.8% / 35.2% weights and blending international at ~4.80% gives 0.648 × 4.46% + 0.352 × 4.80% = 4.58%, against the repo's 4.56% (damodaran-country-risk-premium-us.md, US total ERP 4.46%). That 2 bp of ERP moves the cost of equity ~3 bp at a levered beta of 1.55 and the WACC ~2 bp against a 10.33% base. Keep one USD discount rate, apply the local-default-spread netting method only where a filing actually names material country exposure, and spend the effort on the beta — which swings WACC by 236 bp.
+
+## Cumulative Project — Questions for This Lesson
+
+Module 1's `lesson-overview.md` files (Lessons 1–12) don't carry a separate "## Project Questions" section — that section only starts appearing at Lesson 13 (see `03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-13/lesson-overview.md` onward). For Module 1, the Cumulative Project's equivalent deliverable is the 12-step cost-of-capital report already in [`valuation-report.md`](valuation-report.md) (Steps 2–12, plus the summary WACC table) — that work is complete. See [`README.md`](README.md) for the two confirmed corrections to that report's own figures (the equity-value/WACC-weight error and the Silver Lake/Thoma Bravo ownership-concentration error) that this lesson-by-lesson project surfaced independently but did not rewrite back into the report itself.
 
 ## Notes
 

@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 20: Weak Links in the Cost-of-Capital Approa
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 20: Weak Links in the Cost-of-Capital Approach & Optimal Debt Ratios Across Company Types
@@ -23,6 +23,17 @@ last_updated: 2026-09-20
     - Sources needed: SWI's EBIT/EV ratio computed consistently across FY2018–FY2024 (post-IPO), and the same ratio for comparable public SaaS peers to benchmark against.
     - Where to find: REPO-SWI-VAL (SWI EBIT $208.4M, adjusted debt $1,317M, D/V 23.1%, marginal tax rate 25% — Steps 11–13); SEC-EDGAR — SWI 10-Ks FY2018–FY2024 for historical EBIT; PEER-FILINGS (DDOG, DT, PD 10-Ks/10-Qs for EBIT and market cap to build comparable EBIT/EV ratios).
     - Answer: The premise is backwards — SWI's EBIT/EV is not low, it is the highest in the peer set by a wide margin, and this driver says SWI had room rather than being stretched. `swi-10k-fy2024.md` gives 174.491M diluted shares, so equity at the $18.50 deal price is $3,228M, not the $4,400M in REPO-SWI-VAL (that figure is enterprise value, and the 237M share count in Step 4 is wrong); EV = $3,228M + $1,235.7M debt − $259.3M cash = $4,204M, so EBIT/EV = 208.4/4,204 = **4.96%**. Peers from `peer-filings/`: Dynatrace $245.4M EBIT on ~$13.4B EV = 1.83%, PagerDuty $5.8M on ~$1.57B = 0.37%, Datadog *negative* ($44.4M operating loss). Correcting the equity value also raises real leverage to 27.7% debt-to-capital (28.5% including the $49.4M of operating lease liabilities), not 23.1%. The tax shield is genuinely usable — SWI paid $61.5M of cash taxes in FY2024 — so this driver supports the leverage it carried and arguably more; what actually caps SWI is the coverage driver, with interest coverage of only 1.85x on $112.4M of gross interest expense, which is why incremental debt prices at a B3/B- spread.
+
+## Cumulative Project — Questions for This Lesson
+
+- **If your company is a commodity or cyclical company, how would you adjust your optimal debt ratio to reflect earnings volatility?**
+  Doesn't apply — SWI is neither. As established above (this lesson's Part 1), FY2020–FY2024 core-business revenue never declined year over year even through the SUNBURST crisis (it dipped only in growth *rate*, not level), and 93.5% of FY2024 revenue is contractually recurring (Lesson 9). A commodity/cyclical firm would need a lower optimal debt ratio to preserve coverage through a demand trough; SWI's demonstrated earnings stability is the opposite case, and is one reason (alongside the tax-shield analysis above) this project finds SWI had room to carry debt, not a reason to cut it further.
+
+- **If your company is part of a family group, what other considerations might come into play in determining your optimal debt ratio?**
+  Doesn't apply in the family-business sense (no controlling family, no cross-guarantees to sister companies) — but SWI's closest analogue is its sponsor-group structure, and the same logic runs through it. Nine Thoma Bravo funds and four Silver Lake vehicles held ~65%–66% of voting power together (established in Lessons 2, 4, 33, 34, 36; corrected from the report's "Silver Lake alone ~75%" — see [`README.md`](README.md)). A multi-fund PE sponsor group, like a family group, can cross-subsidize or extract cash across portfolio companies in ways a pure market-based optimal-ratio calculation doesn't capture — the 2025 recapitalization, where Thoma Bravo affiliates reportedly took part of the new second-lien tranche, is exactly this kind of sponsor-group consideration layered on top of the arithmetic optimum.
+
+- **If your company is privately owned, how would your optimal debt ratio be computed differently?**
+  This one applies directly, since SWI went private in April 2025. Two mechanical changes: first, there is no public market price for equity, so the market-value weights this project uses throughout (Lesson 13's $3,174.0M) must be replaced with a negotiated equity check — Turn/River's committed $1,670.0M (established in Lesson 11) — which is a governance/valuation number, not a price-discovered one, and is inherently harder to mark to market period-to-period. Second, private-equity ownership changes the return benchmark: Turn/River's own required return is a fund-level IRR target (typically 20%+) rather than a diversified public shareholder's CAPM cost of equity, so "optimal" shifts from minimizing a market-observed WACC toward maximizing sponsor IRR within debt-service constraints — precisely the tension Lesson 6 Part 1 and Lesson 34 Part 2 both find: Turn/River's actual re-leveraging to ~58%–60% of capital *raises* WACC (to roughly 11.5%) rather than minimizing it, because the private-ownership optimization target is IRR on the equity check, not firm-wide cost of capital.
 
 ## Notes
 

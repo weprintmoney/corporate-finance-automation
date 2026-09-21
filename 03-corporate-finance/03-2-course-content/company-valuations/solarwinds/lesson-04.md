@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 04: Define and Measure Risk"
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 04: Define and Measure Risk
@@ -30,6 +30,10 @@ last_updated: 2026-09-20
     - Sources needed: SWI market cap and price-to-book ratio at FY2024 year-end, Fama-French size/value factor return data.
     - Where to find: SEC-EDGAR — SWI 10-K FY2024 balance sheet (book equity) plus market cap from shares outstanding × price; DAMODARAN-SITE — for small-cap/proxy premium data; REPO-SWI-VAL — Step 8/9 for the existing beta baseline.
     - Answer: No — don't swap in a Fama-French proxy; fix the beta bottom-up instead. The inputs first: book equity was $1,400.714M on 171,566,604 shares = $8.16 book value per share (swi-10k-fy2024.md, consolidated balance sheets). The 12/31/2024 close isn't in the compiled sources, but it is derivable: Turn/River's $17.50–$18.00 December 27 offer was disclosed as a 25%–29% premium to the 30-day VWAP through December 24, 2024, which backs out to ~$14.00 (swi-defm14c-2025-merger-information-statement.md, "Background of the Merger"). That puts year-end market cap at ~$2.40B with P/B ≈ 1.72× and book-to-market ≈ 0.58 — genuinely small-cap (SWI joined the S&P SmallCap 600 in 2024) and genuinely a value stock, so a three-factor model would load positively on both SMB and HML. The problem is that Damodaran's own work says the size premium isn't there: he documents that it dissipated after 1981, vanishes outside January, vanishes when microcaps are excluded, and that his implied expected return on the S&P 600 SmallCap index was 7.61% — *below* the S&P 500 (03-4-blogs/posts/2015-04-11-the-small-cap-premium-where-is-the-beef.md). Do the arithmetic on the alternative anyway: bolting a conventional 3%–5% size premium onto the existing 11.75% cost of equity gives 14.75%–16.75% and a WACC of roughly 12.6%–14.2%, above the top of both banks' ranges and inconsistent with a deal that actually closed at $18.50. The low P/B is a pricing observation about a de-rated mature company, not a risk premium to be discounted with.
+
+## Cumulative Project — Questions for This Lesson
+
+Module 1's `lesson-overview.md` files (Lessons 1–12) don't carry a separate "## Project Questions" section — that section only starts appearing at Lesson 13 (see `03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-13/lesson-overview.md` onward). For Module 1, the Cumulative Project's equivalent deliverable is the 12-step cost-of-capital report already in [`valuation-report.md`](valuation-report.md) (Steps 2–12, plus the summary WACC table) — that work is complete. See [`README.md`](README.md) for the two confirmed corrections to that report's own figures (the equity-value/WACC-weight error and the Silver Lake/Thoma Bravo ownership-concentration error) that this lesson-by-lesson project surfaced independently but did not rewrite back into the report itself.
 
 ## Notes
 

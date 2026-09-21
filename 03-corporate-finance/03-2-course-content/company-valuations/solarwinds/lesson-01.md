@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 01: Valuation: The Big Picture / What is Cor
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 01: Valuation: The Big Picture / What is Corporate Finance?
@@ -23,6 +23,10 @@ last_updated: 2026-09-20
     - Sources needed: 5-year revenue growth and margin trend, capex/R&D-to-revenue ratio trend, buyback/dividend history, Turn/River deal rationale commentary.
     - Where to find: SEC-EDGAR — SWI 10-K FY2024 (Selected Financial Data / 5-year trends) and prior 10-Ks FY2019–2023 for trend; DEAL-DOCS — Turn/River press release for stated acquisition rationale.
     - Answer: Mature, late-stage, financing-and-dividend — and every input points the same way. Revenue compounded at just 3.6%/yr from FY2019 ($669.1M) to FY2024 ($796.9M) and only 2.7%/yr from FY2020, while adjusted EBITDA margin climbed 39.0% → 43.3% → 48.3% and capex fell from 2.4% to 0.7% of revenue — margin expansion bought with disinvestment, which is the textbook mature-firm signature (swi-multi-year-financials.md; swi-10k-fy2024.md non-GAAP reconciliation). The company then paid its first-ever dividend ($1.00/share, $168.2M, April 2024) and the sponsors sold down from 88.8% of the stock at 12/31/2018 to 65.0% at 12/31/2024 (swi-10k-fy2018.md and swi-10k-fy2024.md, Item 1A). Turn/River's own stated rationale isn't in the compiled sources (press releases are Exhibit 99.1 and were not captured), but the sale process answers the question more honestly: 13 counterparties were approached, nine signed NDAs, three submitted indications of interest all "significantly lower than $18.50 per share" on a present-value basis and then withdrew, and a second round contacted 20+ more buyers with none producing an executable transaction (swi-defm14c-2025-merger-information-statement.md, "Recommendation of the Board; Reasons for the Merger"). Both fairness-opinion peer sets confirm the classification: Goldman benchmarked SWI against Cisco, IBM, Oracle, OpenText and Progress, and Jefferies added Teradata, TeamViewer and Trend Micro — no Datadog, no Dynatrace. Silver Lake's exit implied a mature asset with no strategic bid, not an investment-stage growth story.
+
+## Cumulative Project — Questions for This Lesson
+
+Module 1's `lesson-overview.md` files (Lessons 1–12) don't carry a separate "## Project Questions" section — that section only starts appearing at Lesson 13 (see `03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-13/lesson-overview.md` onward). For Module 1, the Cumulative Project's equivalent deliverable is the 12-step cost-of-capital report already in [`valuation-report.md`](valuation-report.md) (Steps 2–12, plus the summary WACC table) — that work is complete. See [`README.md`](README.md) for the two confirmed corrections to that report's own figures (the equity-value/WACC-weight error and the Silver Lake/Thoma Bravo ownership-concentration error) that this lesson-by-lesson project surfaced independently but did not rewrite back into the report itself.
 
 ## Notes
 

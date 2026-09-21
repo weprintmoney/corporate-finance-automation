@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 06: Equity Risk Premiums"
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 06: Equity Risk Premiums
@@ -23,6 +23,10 @@ last_updated: 2026-09-20
     - Sources needed: Documentation of Damodaran's current country-risk-premium methodology and the raw default spreads/CDS spreads by country used to build it.
     - Where to find: REPO-COUNTRY-RISK (country-risk.json) — methodology notes/field definitions; DAMODARAN-SITE — live "Country Default Spreads and Risk Premiums" dataset; REPO-SWI-VAL — Step 7 existing weighted-ERP calc for comparison.
     - Answer: It's the scaled approach, and switching methods is a rounding error. Damodaran's own description of the method is the "Scaled Default Spread" — take the sovereign default spread and scale it by the ratio of equity-index volatility to government-bond volatility, using an emerging-market equity index versus an emerging-market bond index to produce one global scalar applied across countries (03-4-blogs/posts/2012-07-02-equity-risk-premiums-globalization-and-country-risk.md, approach C; 03-4-blogs/posts/2017-01-24-january-2017-data-update-4-country-risk-update.md, which puts that scalar at 1.23 in January 2017 against an earlier 1.5 convention). The compiled dataset carries no methodology note, but the arithmetic gives it away: US total ERP 4.46% minus the 4.23% mature-market premium leaves a 0.23% CRP on an Aa1 sovereign, which a raw Aa1 default spread of roughly 0.17%–0.19% reproduces only after scaling by ~1.2–1.35 (damodaran-country-risk-premium-us.md). Switching to raw spreads would therefore cut CRPs by roughly 25%, i.e., ~5 bp on the US and proportionally on the international slice. For SolarWinds that slice is 35.2% of revenue (Note 16 discloses no APAC/LatAm breakout at all, so the "~11%" weight isn't traceable to the filing), so even a 10 bp change in the international CRP moves the weighted ERP ~4 bp, the cost of equity ~6 bp and the WACC ~4 bp. Against the 236 bp of WACC that separates the regression beta (7.97%) from the bottom-up beta (10.33%), the CRP methodology question is noise — get the beta right and stop tuning the ERP.
+
+## Cumulative Project — Questions for This Lesson
+
+Module 1's `lesson-overview.md` files (Lessons 1–12) don't carry a separate "## Project Questions" section — that section only starts appearing at Lesson 13 (see `03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-13/lesson-overview.md` onward). For Module 1, the Cumulative Project's equivalent deliverable is the 12-step cost-of-capital report already in [`valuation-report.md`](valuation-report.md) (Steps 2–12, plus the summary WACC table) — that work is complete. See [`README.md`](README.md) for the two confirmed corrections to that report's own figures (the equity-value/WACC-weight error and the Silver Lake/Thoma Bravo ownership-concentration error) that this lesson-by-lesson project surfaced independently but did not rewrite back into the report itself.
 
 ## Notes
 

@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 12: Debt: Measure and Cost"
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 12: Debt: Measure and Cost
@@ -23,6 +23,10 @@ last_updated: 2026-09-20
     - Sources needed: SWI's credit rating, if any (S&P/Moody's on its credit facility); operating income and interest expense (for interest coverage ratio); current default spread by rating.
     - Where to find: SEC-EDGAR (10-K Debt note may disclose facility ratings; income statement for interest coverage inputs); NEWS-WEB for S&P/Moody's rating actions around the 2025 Turn/River deal financing; DAMODARAN-SITE for the current interest-coverage-to-rating lookup table (repo mirror excluded — go direct).
     - Answer: There is no actual rating to use. The FY2024 10-K discloses no S&P or Moody's issuer or facility rating anywhere — the only ratings reference in the entire filing is a generic remark about derivative counterparties' high credit ratings (swi-10k-fy2024.md, Item 7A) — so Damodaran's "just use the actual rating" advice has nothing to attach to, and the repo's "B+ from S&P" claim is unsupported by any compiled source. Synthetically, EBIT of $208.419M over gross interest expense of $112.435M is 1.85x coverage, which falls in the 1.5–2.0x band (B3/B− on the smaller-firm table), while adjusted-EBITDA coverage of $384.699M/$112.435M = 3.42x and gross leverage of 3.2x point several notches higher — the classic EBIT-versus-EBITDA gap for an LBO carrying acquired-intangible amortization. Skip the rating detour and use the observed market rate, which Damodaran prefers whenever it exists: the term loan is priced at SOFR + 2.75% with a 7.11% effective rate at 12/31/2024, which at the compiled SOFR of 3.66% implies 6.41% today (swi-10k-fy2024.md, Note 9; treasury-and-fed-rates.md). Turn/River's financing made the credit materially worse — $2.75B of new first- and second-lien term debt funded at closing (swi-8k-2025-04-16-merger-closing.md) is roughly 7.1x FY2024 adjusted EBITDA versus 3.2x before, pushing pro-forma EBIT coverage to about 1.0x and the synthetic rating into CCC territory; the compiled documents don't disclose the new pricing, so that final step is an estimate rather than a lookup.
+
+## Cumulative Project — Questions for This Lesson
+
+Module 1's `lesson-overview.md` files (Lessons 1–12) don't carry a separate "## Project Questions" section — that section only starts appearing at Lesson 13 (see `03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-13/lesson-overview.md` onward). For Module 1, the Cumulative Project's equivalent deliverable is the 12-step cost-of-capital report already in [`valuation-report.md`](valuation-report.md) (Steps 2–12, plus the summary WACC table) — that work is complete. See [`README.md`](README.md) for the two confirmed corrections to that report's own figures (the equity-value/WACC-weight error and the Silver Lake/Thoma Bravo ownership-concentration error) that this lesson-by-lesson project surfaced independently but did not rewrite back into the report itself.
 
 ## Notes
 

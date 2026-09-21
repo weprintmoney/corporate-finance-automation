@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 13: Cost of Capital Weights (Market vs. Book
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 13: Cost of Capital Weights (Market vs. Book Value)
@@ -23,6 +23,26 @@ last_updated: 2026-09-20
     - Sources needed: Product-line revenue/margin split (even if not formally segment-reported) and comparable pure-play betas for on-prem vs. cloud-native observability peers.
     - Where to find: SEC-EDGAR — SWI 10-K FY2024, Item 1 Business (product description); PEER-FILINGS (Datadog, Dynatrace 10-Ks for product-line economics); REPO-BETAS (industry-betas.json, software subsector splits).
     - Answer: Yes, split them — but the spread is narrower than intuition suggests and it runs the opposite way from how a blended WACC allocates capital. No product-line margin data exists: SWI operates as a single reportable segment with the CEO as CODM reviewing only consolidated results (swi-10k-fy2024.md, Note 16). The best available proxy is the revenue-line split — subscription $304.5M (38.2%), maintenance $440.6M (55.3%), license $51.8M (6.5%) — so legacy perpetual plus maintenance is 61.8% of revenue and shrinking (maintenance −4.6%, license −17.0%) while subscription grew 30.0% (swi-10k-fy2024.md, Statements of Operations and MD&A). Mapping legacy on-prem to Damodaran's Software (System & Application) cash-corrected unlevered beta of 1.2482 and cloud-native observability to Software (Internet) at 1.5905, then relevering both at SWI's D/E of 0.299, gives hurdle rates of 10.25% and 11.71% respectively — a 146bp spread around a revenue-weighted 10.81% (damodaran-industry-betas-software.md). That gap is decision-relevant: a single 10.33% WACC under-charges the risky observability build-out and over-charges the Orion cash cow, which systematically biases SWI toward exactly the reinvestment its strategy already favors.
+
+## Cumulative Project — Questions for This Lesson
+
+- **Counting both interest bearing debt and lease commitments, what is the market debt ratio for the firm?**
+  Total debt is $1,285.0M — the $1,235.662M First Lien Term Loan at face value plus the $49.365M present value of operating lease liabilities disclosed in the FY2024 lease footnote (established above and in Lesson 12; not the repo's guessed ~$82M lease figure). Market value of equity at the $18.50 deal price on the 171,566,604 shares outstanding per the FY2024 10-K balance sheet is $3,174.0M ($3,422.5M on the 185.0M fully-diluted share count Lessons 33–34 use for the DCF bridge). That puts the market debt ratio at **28.8%** (27.3% fully diluted) — materially different from `valuation-report.md`'s 23.1%, which used the $4.4B deal *enterprise* value as if it were equity (see [`README.md`](README.md)). This is the corrected weight this project's WACC work (Lessons 18–22) builds on.
+
+- **What is the levered beta for the firm?**
+  Relevering Damodaran's cash-corrected Software (System & Application) unlevered beta of 1.2482 (`damodaran-industry-betas-software.md`) at the corrected D/E of ~40% ($1,285.0M ÷ $3,174.0M) and a 25% marginal tax rate: β_L = 1.2482 × [1 + 0.75 × 0.405] = **1.62** — the same figure this project converges on independently in Lessons 9–11. That is well above the repo's reported 0.88 regression beta (shown unreliable in Lessons 4 and 8 — thin float, corporate-action noise) and also above its reported 1.55 levered beta (which used the enterprise-value-based D/E of 0.281).
+
+- **If you can allocate debt across different divisions/businesses, what is the debt ratio for each business that the firm is in?**
+  You can't from disclosure — SWI "operate[s] as a single reportable segment," with the CEO as CODM and one company-wide credit facility (`swi-10k-fy2024.md`, Note 16; established in Lessons 10 and 14). There is no divisional balance sheet to allocate debt against, and inventing one would be fabricating data the filings don't support. The best available split is a revenue-line proxy, not a business-line one: subscription $304.5M (38.2%) versus maintenance + license $492.4M (61.8%) — the split this lesson's Part 2 answer above already uses as a stand-in for "legacy on-prem" versus "newer observability."
+
+- **What is the levered beta for each division/business?**
+  Using that same revenue-line proxy, Part 2's answer above relevers Software (System & Application) at 1.2482 for the legacy/maintenance book and Software (Internet) at 1.5905 for the SaaS/observability line, both at SWI's own D/E — giving levered betas of roughly 1.62 (legacy) and 1.98–2.07 (observability), depending on which D/E vintage is used. Treat this as an assumption built on a revenue-mix proxy, not a disclosed segment beta — SWI itself draws no such line, so the numbers are illustrative of the method, not a reported fact.
+
+- **What is the cost of capital of the firm, using market values for weights? How different would it have been, if you had used book values?**
+  Market-value WACC: E/V 71.2% (equity $3,174.0M), D/V 28.8% (debt $1,285.0M), cost of equity 4.77% + 1.62 × 4.46% = 12.0%, after-tax cost of debt 7.11% × 0.75 = 5.33% (year-end 2024 effective term-loan rate, established in Lesson 12) → WACC = 0.712 × 12.0% + 0.288 × 5.33% ≈ **10.1%**. Book-value WACC, reweighting the same component costs: book equity $1,400.714M and book debt $1,206.586M (`swi-10k-fy2024.md` balance sheet; established in Lesson 29) give E/V 53.7% / D/V 46.3% → WACC = 0.537 × 12.0% + 0.463 × 5.33% ≈ **8.9%**. Book weights understate SWI's true cost of capital by roughly 120bp, because book equity is artificially depressed relative to market value (the 2016 LBO wrote most of the purchase price to goodwill that was never marked back up, and FY2022 impaired $891.1M of it), overweighting the cheaper debt tranche — a direct numerical illustration of this lesson's own Part 1 point that "there is no good reason for using book value weights."
+
+- **What are the costs of capital of each of the company's divisions/businesses?**
+  Combining the divisional betas above with the same 4.77% risk-free rate, 4.46% ERP, and 5.33% after-tax cost of debt at a common ~40% D/E: legacy/on-prem cost of equity ≈ 4.77% + 1.62 × 4.46% = 12.0% → divisional WACC ≈ **10.1%** (identical to the firm-wide figure, since it uses the same beta and D/E); observability/SaaS cost of equity ≈ 4.77% + 2.0 × 4.46% ≈ 13.7% → divisional WACC ≈ **11.3%**. The roughly 120bp spread is the same conclusion as Part 2's answer above (a 146bp spread on the report's uncorrected D/E), just recomputed on corrected weights — a single blended 10.1% WACC still under-charges the riskier observability build-out and over-charges the Orion cash cow.
 
 ## Notes
 

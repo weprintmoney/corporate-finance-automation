@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 25: Three Schools of Thought on Dividends; G
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 25: Three Schools of Thought on Dividends; Good and Bad Reasons to Pay Them
@@ -23,6 +23,14 @@ last_updated: 2026-09-20
     - Sources needed: Actual restrictive covenants on SWI's First Lien Term Loan governing dividends/distributions; any management/board commentary explicitly justifying the no-dividend capital-allocation policy.
     - Where to find: SEC-EDGAR — SWI 10-K FY2024 (Item 5 dividend policy statement; debt footnote/credit agreement exhibit for distribution covenants) and MD&A capital-allocation discussion; DEF 14A for any board-level rationale.
     - Answer: The lenders were not the protected party — the wealth transfer ran in the classic direction, and SWI's covenant package was too weak to stop it. `swi-10k-fy2024.md` shows the Credit Agreement restricts the ability to "pay dividends and distributions on, or redeem, repurchase or retire our capital stock" only "subject to certain exceptions," and its sole financial covenant — a first lien net leverage ratio not exceeding 7.40 to 1.00 — is a springing test that applies only when revolver borrowings exceed 35% of commitments. The revolver was undrawn at both year-ends, so that covenant was never live, and the 7.40x trigger is in any case more than double SWI's actual 3.21x gross leverage. The restricted-payment baskets duly permitted $405.4M of leakage to equity while $1.24B of first-lien debt stayed outstanding: $237.2M in 2021, funded by passing through the $238.2M one-time dividend SWI received from N-able at separation, and $168.2M in 2024. On signaling, management deliberately neutralized the content by labelling both payments "special" and one-time rather than initiating a regular dividend — sensible while subscription revenue was growing 30% and license revenue falling 17% (FY2024), since a recurring dividend would have signalled the transition was finished. Item 5 offers no affirmative rationale, only that any future dividend depends on "our level of indebtedness and restrictions imposed by our credit agreement" — a controlling-owner decision, not a policy.
+
+## Cumulative Project — Questions for This Lesson
+
+- **What does the trade off on dividends look like for your firm? (What are the benefits of paying more dividends? What are the costs of paying more dividends?)**
+  The benefits dominate, for reasons this lesson's two answers above already establish. Benefit side: ROIC never cleared WACC in any year 2021–2024 (established in Lessons 14 and 27), so cash paid out avoids being reinvested below the hurdle rate; the controlling holders are largely tax-exempt/foreign PE fund LPs, so the tax-clientele cost that normally discourages dividends (established above, "the more the tax rates diverge, the more dividends will matter") is close to zero for SWI's actual marginal investor; and the wealth-transfer-to-bondholders risk this lesson's Part 2 flags is empirically small — the covenant package never came close to binding (springing test at 7.40x against actual 3.21x gross leverage). Cost side: the signaling risk is real but manageable — a *regular* dividend would have told the market the subscription transition was finished and growth had stalled, undercutting the growth narrative management was still selling; and any payout large enough to threaten the modest cash buffer needed for working-capital seasonality (established in Lesson 26, two "cash balloon" build-and-release cycles) would be a genuine, if small, flexibility cost.
+
+- **Given that trade off, do you think that your company should be paying high, low or no dividends?**
+  High — but structured as special/opportunistic distributions, not a smooth regular dividend, which is exactly what SWI's board actually did. Given ROIC below WACC in every year this project has been able to compute, low or no dividends would leave cash trapped earning sub-hurdle returns inside the firm (the condition Lesson 22 and Lesson 27 both flag as the trigger for "return the cash"). A *regular* high dividend would solve the capital-allocation problem but create the signaling cost described above. The special-dividend structure SWI used — $237.2M in 2021 tied to the N-able separation, $168.2M in 2024 timed to a specific cash build (established in Lesson 26 Part 2) — captures the benefit (sub-hurdle cash returned to a tax-indifferent controlling holder) while avoiding the regular-dividend signal, which is the analytically correct answer given this firm's specific ownership structure and return profile.
 
 ## Notes
 

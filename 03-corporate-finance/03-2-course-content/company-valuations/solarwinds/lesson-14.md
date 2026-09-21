@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 14: Cash Flows vs. Accounting Earnings (Retu
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 14: Cash Flows vs. Accounting Earnings (Return on Invested Capital)
@@ -23,6 +23,23 @@ last_updated: 2026-09-20
     - Sources needed: After-tax operating income (EBIT × (1 − tax rate)) and total invested capital, computed both with and without acquisition-related goodwill/intangibles.
     - Where to find: SEC-EDGAR — SWI 10-K FY2024, Balance Sheet (goodwill/intangibles line) and Income Statement; REPO-SWI-VAL (WACC = 10.33%, Step 12 EBIT figure).
     - Answer: No — SWI fails the test, and the answer flips violently on the goodwill question. After-tax operating income of $156.3M (EBIT $208.419M × 0.75) against book invested capital of $2,348.0M (equity $1,400.714M + total debt $1,206.586M − cash and short-term investments $259.323M) gives ROIC of 6.66%, an excess return of −3.67pp versus the repo's 10.33% WACC and roughly $86M of economic value destroyed — in SWI's best operating year since the re-IPO (swi-10k-fy2024.md, Consolidated Balance Sheets and Statements of Operations). Strip out 2016-LBO-vintage goodwill of $2,363.175M and net intangibles of $128.940M — together 78.7% of total assets — and invested capital goes to negative $144M, making ROIC mathematically infinite. That is the real finding: SWI has essentially no tangible capital base ($16.0M of PP&E), so "return on invested capital" here is a statement about what the sponsors paid in 2016, not about how well the operating business converts capital into profit. The damning detail is that SWI already wrote off $891.1M of goodwill in FY2022 and still cannot clear 10.33%; on FY2023's EBIT of $150.4M, ROIC was only 4.8% (swi-multi-year-financials.md).
+
+## Cumulative Project — Questions for This Lesson
+
+- **What return on capital did your firm generate last year?**
+  As established above: FY2024 ROIC was **6.66%** — after-tax operating income of $156.3M (EBIT $208.419M × 0.75) over book invested capital of $2,348.0M (equity $1,400.714M + total debt $1,206.586M − cash and short-term investments $259.323M). That is an excess return of roughly −3.7 percentage points against the corrected market-value WACC of ~10.1%–10.33% (Lesson 13) — SWI destroyed value in its best operating year since the re-IPO.
+
+- **If you have returns on capital over time for your firm, is there a trend in those returns?**
+  Yes, a clear but insufficient upward trend: ROIC was negative in FY2021 (EBIT −$32.9M), 2.2% in FY2022 (on impairment-adjusted EBIT of $71.5M), 4.8% in FY2023, and 6.7% in FY2024 (figures reused from Lessons 27/31/36, `swi-multi-year-financials.md` and `swi-10k-fy2023.md`/`swi-10k-fy2024.md`). Four straight years of improvement, entirely consistent with the subscription-mix shift and margin expansion documented in Lessons 1 and 3 — but the trend never crosses the ~10.1%–10.33% WACC line, so "improving" and "value-creating" are not the same finding here.
+
+- **How do the returns on capital (equity) compare to the costs of capital (equity)?**
+  On equity specifically: FY2024 ROE was 7.99% ($111.9M net income ÷ $1,400.714M book equity), established in Lesson 35's price-to-book regression, against a corrected cost of equity of 12.0% (Lesson 13) — a gap of roughly 4 percentage points, slightly wider than the ROIC-vs-WACC gap because SWI's modest financial leverage (D/E ≈ 40%) does not do enough work to lift ROE to the cost-of-equity hurdle the way it would for a company earning positive economic spreads. Both the capital-wide and equity-only tests fail the same way.
+
+- **Is there a typical project for this firm? If yes, what does it look like in terms of life (long term or short term), investment needs and cash flow patterns?**
+  Yes, and it has split in two as the subscription transition has progressed. The legacy "project" is a perpetual-license sale plus an annually renewing maintenance contract — long-lived in that the maintenance annuity persists for years (97% renewal rate, FY2024), but requiring almost no incremental investment once sold (SWI's total FY2024 capitalized spend was just $20.478M, or 2.6% of revenue — established in Lesson 15). The newer "project" is an annual subscription contract — established in Lesson 23 as "the majority of our contracts include annual subscription periods" — nominally short-term (one-year renewal cycles) but economically long-lived in aggregate given 99% net retention, and equally light on investment: incremental revenue is bought for roughly $2.91 of net reinvestment per dollar (sales-to-capital ≈ 0.34, or 14.9 on an incremental basis — Lesson 31). Both project types share the same cash-flow signature: minimal upfront capital, cash collected annually in advance (deferred revenue), and a multi-year tail of renewal cash flow rather than a single large payback event.
+
+- **Are the projects in the future likely to look like the projects in the past? Why or why not?**
+  Partly. The *economics* of the typical project (asset-light, high renewal-dependent margin, near-zero incremental capital) are likely to persist — SWI's cost structure and go-to-market model aren't changing. What is changing is the *mix*: subscription revenue grew 30.0% while maintenance fell 4.6% and license fell 17.0% in FY2024 (Lesson 13's Part 2 answer), so future "typical projects" will increasingly be annual subscription renewals rather than perpetual-license-plus-maintenance sales. That shift changes the revenue-recognition pattern (ratable over the contract term rather than partly upfront at license sale) without changing the underlying capital intensity — consistent with the near-zero fundamental growth rate Lesson 31 finds even as the mix keeps shifting.
 
 ## Notes
 

@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 31: Growth Estimation"
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-09-21
 ---
 
 # SolarWinds (SWI) — Lesson 31: Growth Estimation
@@ -23,6 +23,20 @@ last_updated: 2026-09-20
     - Sources needed: SWI's multi-year revenue growth and operating-margin trend by segment/mix (subscription vs. license), plus CapEx and working-capital investment per dollar of incremental revenue.
     - Where to find: SEC-EDGAR — SWI 10-Ks FY2021–FY2024 (MD&A subscription ARR and margin disclosures); PEER-FILINGS — DDOG/DT sales-to-capital ratios as an asset-light SaaS cross-check; REPO-SWI-VAL (no growth-rate or sales-to-capital work exists there yet).
     - Answer: Yes, model it Baidu-style — SWI's returns are far too unstable for a fundamentals approach (EBIT went −$819.6M → $150.4M → $208.4M in three years, margin −113.9% → 19.8% → 26.2%, subscription revenue $167.7M → $304.5M while license fell $92.8M → $51.8M). But the book sales-to-capital ratio is useless: revenue $796.9M ÷ invested capital $2,348.0M = **0.34**, and stripping the $2,363.2M of LBO goodwill makes invested capital *negative* (−$15.2M). The defensible number is incremental: FY2024's $38.155M of added revenue on $2.562M of net reinvestment = **14.9**, essentially identical to Datadog's 14.2 (revenue $3,427.2M ÷ invested capital of $3,732.2M equity + $983.4M converts − $4,474.8M cash and securities = $240.8M), with PagerDuty at 1.20. The honest treatment capitalizes R&D, and there SWI looks bad, not asset-light: $108.6M of R&D plus $2.6M of net reinvestment bought $38.2M of incremental revenue — a sales-to-capital of 0.34, or $2.91 spent per incremental revenue dollar, versus Datadog's 0.48 ($2.08 per dollar). Use 3–4x for the explicit-forecast years with a margin glide from 26.2% toward management's 32–40%, and flag that SWI converts R&D into revenue *less* efficiently than the fastest-growing peer.
+
+## Cumulative Project — Questions for This Lesson
+
+- **What is the historical growth rate in your company's revenues? EBIT? Net income?**
+  Revenue: 3.6% CAGR FY2019→FY2024 ($669.1M → $796.9M, established in Lesson 1), or 5.25% CAGR FY2022→FY2024 ($719.4M → $796.9M, established above) on the more recent, less SUNBURST-distorted window. EBIT: not a clean single CAGR — established above and in Lesson 29, EBIT went −$32.9M (FY2021) → −$819.6M (FY2022, dominated by an $891.1M one-time goodwill impairment) → $150.4M (FY2023) → $208.4M (FY2024); on impairment-adjusted EBIT the cleaner run is $71.5M → $150.4M → $208.4M, +38.6% FY2023→FY2024 alone. Net income isn't meaningfully summarized by a historical CAGR either: FY2024's $111.9M reflects a −7.8% effective tax rate driven by a valuation-allowance reversal (established in Lesson 30), so year-to-year net income swings are dominated by non-operating and tax items rather than a stable operating trend — revenue and impairment-adjusted EBIT are the more honest growth metrics here.
+
+- **What are analysts or managers projecting as an expected growth rate in the future?**
+  Management's own long-range plan, disclosed in the merger proxy and established above, projects revenue growing from $796.9M to $1,273M by 2030 — an **8.1% CAGR**, more than double the trailing 3.6%–5.25% actual rate — with EBIT margin expanding from 26.2%/32.7% to 40.1%. The one external analyst data point in the compiled sources is blunter: the median pre-deal sell-side price target was **$15.00** (established above), below even the $15.18 undisturbed close, implying the Street did not buy into management's acceleration case.
+
+- **Assuming that your company continues to earn its current ROIC/ROE and maintaining its existing reinvestment rate, what would the expected growth rate be in earnings?**
+  Essentially zero, on the fundamentals this lesson's own answer above already computes: reinvestment rate × ROIC was **−1.6%** in FY2023 (a working-capital release outweighing minimal capex) and **+0.1%** in FY2024. Neither year supports growth in the 5%–8% range actually observed or projected — the fundamentals formula says SWI's earnings, held to its own actual reinvestment behavior, should be flat to slightly declining, which is the same "growth for free" tension Lesson 32 Part 2 later quantifies precisely at the terminal-value stage.
+
+- **If margins are changing, what are your estimates of revenue growth, margins and reinvestment for the future?**
+  Margins are changing — adjusted EBITDA margin expanded from 39.0% to 48.3% FY2022→FY2024 (Lesson 1) — but the honest forward estimate is more conservative than management's plan. A defensible base case: revenue growth closer to the trailing 5%–5.25% actual rate than management's 8.1% (there is no disclosed driver — new product, new geography, or M&A — that would justify doubling the growth rate, and Squadcast, the one candidate, doesn't appear anywhere in the compiled filings per Lesson 10 Part 2); continued but decelerating margin expansion (perhaps 100–150bp/year rather than the ~7–8pp of cumulative expansion management's plan requires by 2030); and reinvestment consistent with the low observed sales-to-capital ratio (0.34 book, 14.9 incremental, established above) — i.e., very little capital required per dollar of whatever growth actually materializes. This more conservative scenario is close to what Lesson 32 Part 2 finds necessary to make the terminal year internally consistent (24.2% terminal reinvestment at a 2.5% perpetual growth rate), reinforcing that management's uncorrected plan overstates both the growth rate and understates the reinvestment it requires.
 
 ## Notes
 
