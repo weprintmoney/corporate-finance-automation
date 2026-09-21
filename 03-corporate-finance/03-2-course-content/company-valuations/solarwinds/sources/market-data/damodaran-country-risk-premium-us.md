@@ -8,7 +8,7 @@ last_updated: 2026-09-07
 
 # Damodaran Country Risk Premium — United States
 
-Extracted from Damodaran's live current dataset (`https://pages.stern.nyu.edu/~adamodar/pc/datasets/ctryprem.xlsx`, sheet "ERPs by country", dated by Damodaran as updated 2026-01-01, sovereign ratings refreshed 2026-02-16), fetched 2026-09-07 — because this repo's own `03-3-supplemental-data/country-risk.json` is an **empty stub** (`"countries": {}`, its CI refresh never actually populated it — see the parent `solarwinds-sources/README.md`).
+Extracted from Damodaran's live current dataset (`https://pages.stern.nyu.edu/~adamodar/pc/datasets/ctryprem.xlsx`, sheet "ERPs by country", dated by Damodaran as updated 2026-01-01, sovereign ratings refreshed 2026-02-16), fetched 2026-09-07 — because this repo's own `03-3-supplemental-data/country-risk.json` is an **empty stub** (`"countries": {}`, its CI refresh never actually populated it — see the parent `sources/README.md`).
 
 SolarWinds is US-domiciled (Austin, TX), so the United States row is the relevant one for the base-case cost of equity. Country risk only becomes relevant to the SWI analysis when a lesson asks about the geographic-revenue mix (SWI's non-US revenue, ~31% of total per `swi-10k-fy2024.md`) or an explicit Eurozone/ECB comparison.
 

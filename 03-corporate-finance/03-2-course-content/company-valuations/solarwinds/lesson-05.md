@@ -1,0 +1,29 @@
+---
+title: "SolarWinds (SWI) — Lesson 05: The Risk Free Rate"
+status: active
+owner: weprintmoney
+created: 2026-09-20
+last_updated: 2026-09-20
+---
+
+# SolarWinds (SWI) — Lesson 05: The Risk Free Rate
+
+### Lesson 05 — The Risk Free Rate
+
+- **Lesson 05, Session 5 · Part 1 — "Matching the Risk-Free Rate to Currency and Time Horizon"** ([transcript](../../01-foundations-and-discount-rates/lesson-05/session-5-part-1.md))
+    - Quote: "There is no global risk-free rate."
+    - Question for SWI: The valuation currently uses the 10-year UST as the risk-free rate given USD reporting — but SolarWinds draws ~31% of revenue internationally and, post-2025, sits inside Turn/River's private capital structure with new acquisition debt. Does the "match currency to the analysis" principle still hold cleanly, or does the new ownership structure require a blended/entity-specific risk-free rate going forward?
+    - Sources needed: Post-acquisition (2025) financing structure and debt currency mix for the $4.4B Turn/River deal; current international revenue mix.
+    - Where to find: SEC-EDGAR — SWI 10-K FY2024 (revenue by geography) and going-private 8-K/DEFM14A (financing sources); REPO-RATES — current 10Y UST already used as the analysis risk-free rate.
+    - Answer: The principle holds cleanly — keep the single USD 10-year Treasury, currently 4.77% (treasury-and-fed-rates.md, DGS10 as of 2026-09-03). Two corrections to the premise. The international share is 35.2%, not 31%: the geographic footnote reports United States $516,559K and International $280,336K of $796,895K total, and the "69%" figure in MD&A is *North America*, which includes Canada (swi-10k-fy2024.md, Note 16). And the new capital structure is *less* multicurrency, not more: the April 2025 financing is a $2.225B first-lien term facility plus a $200.0M revolver and a $525.0M second-lien term facility, all USD-denominated, replacing a facility that had contained a $112.5M multicurrency revolver tranche (swi-8k-2025-04-16-merger-closing.md, Item 1.01; swi-10k-fy2024.md, Note 9). SolarWinds' functional currency is USD, it reports in USD, and it now borrows exclusively in USD, so a blended or entity-specific risk-free rate would introduce error rather than remove it. What the LBO actually changes is leverage — D/E moved from 0.28 to roughly 1.65 ($2.75B debt against Turn/River's $1.670B equity commitment) — which belongs in beta and the capital-structure weights, not in the risk-free rate.
+
+- **Lesson 05, Session 5 · Part 2 — "Netting Out the Default Spread — Risk-Free Rates in Difficult Currencies"** ([transcript](../../01-foundations-and-discount-rates/lesson-05/session-5-part-2.md))
+    - Quote: "The key to currency is to stay consistent, pick a currency and do both your returns and your hurdle rate in that currency."
+    - Question for SWI: The repo's country-risk weighting bundles SWI's ~11% APAC/LatAm revenue into a single blended CRP. Should that slice instead get country-specific risk-free rates (netting local default spreads per this lesson's method) rather than folding everything back into one USD discount rate, and would that meaningfully move the already-computed weighted cost of capital?
+    - Sources needed: Country-level (not just region-level) revenue breakdown for SWI's APAC/LatAm segment, local government bond rates and sovereign ratings for those specific countries.
+    - Where to find: SEC-EDGAR — SWI 10-K FY2024 geographic revenue footnote (may only disclose region-level); REPO-COUNTRY-RISK — country ERP/default-spread data by country; REPO-SWI-VAL — Step 7 (existing region-level country-risk weighting).
+    - Answer: You can't, and you shouldn't want to — this is a genuine limit of public disclosure. SolarWinds' geographic footnote is a two-line disclosure: "United States, country of domicile $516,559" and "International $280,336," with the explicit statement that "[o]ther than the United States, no single country accounted for 10% or more of our total revenues during these periods" (swi-10k-fy2024.md, Note 16). There is no region level, let alone country level — so the repo's 69% / 20% EMEA / 11% APAC+LatAm split in Step 7 is an analyst estimate that cannot be traced to the filing, and country-specific risk-free rates for an undisclosed slice would be false precision. Run the sensitivity to see how little is at stake: substituting the disclosed 64.8% / 35.2% weights and blending international at ~4.80% gives 0.648 × 4.46% + 0.352 × 4.80% = 4.58%, against the repo's 4.56% (damodaran-country-risk-premium-us.md, US total ERP 4.46%). That 2 bp of ERP moves the cost of equity ~3 bp at a levered beta of 1.55 and the WACC ~2 bp against a 10.33% base. Keep one USD discount rate, apply the local-default-spread netting method only where a filing actually names material country exposure, and spend the effort on the beta — which swings WACC by 236 bp.
+
+## Notes
+
+This lesson's core point — there is no global risk-free rate; pick a currency and stay consistent — turns out to hold exactly for SWI, in both directions the questions probe. Using the USD 10-year Treasury remains correct even after the 2025 LBO, because SWI's debt, reporting currency, and functional currency are all USD, and going further to country-specific risk-free-rate netting is blocked by disclosure: the 10-K's geographic footnote is only a two-line US/international split with no country-level detail. It matters for SWI mainly as a "don't over-engineer this" result — the corrected 35.2% international revenue share (not 31%, and not the MD&A's 69% North America figure) moves the weighted ERP by only a few basis points, far less than the beta-construction error carried through Lessons 8–11. This connects directly to Lessons 6–7, which build the equity risk premium on top of this risk-free-rate foundation.

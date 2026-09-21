@@ -1,0 +1,29 @@
+---
+title: "SolarWinds (SWI) — Lesson 13: Cost of Capital Weights (Market vs. Book Value)"
+status: active
+owner: weprintmoney
+created: 2026-09-20
+last_updated: 2026-09-20
+---
+
+# SolarWinds (SWI) — Lesson 13: Cost of Capital Weights (Market vs. Book Value)
+
+### Lesson 13 — Cost of Capital Weights (Market vs. Book Value)
+
+- **Lesson 13, Session 13 · Part 1 — "Why Book Value Weights Don't Hold Up: Converting Book Debt to Market Debt"** ([transcript](../../02-investment-returns-and-financing/lesson-13/session-13-part-1.md))
+    - Quote: "There is no good reason for using book value weights."
+    - Question for SWI: SWI's cost-of-capital weights in the repo's existing analysis treat the First Lien Term Loan as book ≈ market (floating rate), but do they capture SWI's operating lease commitments as debt the way Damodaran's Disney bond-equivalent method does — and if converted to a present value at SWI's pre-tax cost of debt, would adding lease-debt shift the 76.9%/23.1% equity/debt weighting meaningfully?
+    - Sources needed: FY2024 lease footnote (future minimum lease payments by year, weighted-average remaining lease term/discount rate) and the pre-tax cost of debt to discount them.
+    - Where to find: SEC-EDGAR — SWI 10-K FY2024, Notes to Financial Statements (Leases); REPO-SWI-VAL (Step 12 debt figures, for the discount rate to apply).
+    - Answer: No — lease-debt barely moves the weights, and the repo's own lease estimate errs in the safe direction. The FY2024 lease footnote shows total minimum lease payments of $53.592M (2025 $15.650M, 2026 $15.610M, 2027 $14.456M, 2028 $4.855M, 2029 $1.276M, thereafter $1.745M) less $4.227M imputed interest, for a reported PV of $49.365M at a 4.8% weighted-average discount rate over a 3.6-year weighted-average remaining term (swi-10k-fy2024.md, Note 7 — Leases). Discounting that same stream at the repo's 7.42% pre-tax cost of debt gives $45.4M, not the repo's guessed $82M — the repo assumed ~$20M/year of lease expense when actual FY2024 total lease cost was $14.492M. Substituting $45.4M takes total debt from $1,317M to $1,281M and the weights from 23.1%/76.9% to 22.6%/77.4%, worth about 3bp of WACC — immaterial. The weighting error that does matter sits elsewhere: the repo uses $4,400M as market value of equity, but the closing 8-K states total consideration payable to stockholders was approximately $3.206 billion (swi-8k-2025-04-16-merger-closing.md), confirming $4.4B was enterprise value; correcting equity to $3.21B moves the debt weight to 28.6%, a 5.5-point shift that dwarfs the lease adjustment.
+
+- **Lesson 13, Session 13 · Part 2 — "Bringing Cost of Equity and Debt Together: WACC as Hurdle Rate"** ([transcript](../../02-investment-returns-and-financing/lesson-13/session-13-part-2.md))
+    - Quote: "That cost of capital is going to become a hurdle rate for your company."
+    - Question for SWI: SolarWinds reports as a single segment, so the repo uses one company-wide WACC (10.33%) — but given the lecture's divisional cost-of-capital approach (different hurdle rates for Disney's theme parks vs. gaming), should legacy on-prem/Orion monitoring and newer SaaS/observability offerings inside SWI actually carry different hurdle rates given their different risk and growth profiles?
+    - Sources needed: Product-line revenue/margin split (even if not formally segment-reported) and comparable pure-play betas for on-prem vs. cloud-native observability peers.
+    - Where to find: SEC-EDGAR — SWI 10-K FY2024, Item 1 Business (product description); PEER-FILINGS (Datadog, Dynatrace 10-Ks for product-line economics); REPO-BETAS (industry-betas.json, software subsector splits).
+    - Answer: Yes, split them — but the spread is narrower than intuition suggests and it runs the opposite way from how a blended WACC allocates capital. No product-line margin data exists: SWI operates as a single reportable segment with the CEO as CODM reviewing only consolidated results (swi-10k-fy2024.md, Note 16). The best available proxy is the revenue-line split — subscription $304.5M (38.2%), maintenance $440.6M (55.3%), license $51.8M (6.5%) — so legacy perpetual plus maintenance is 61.8% of revenue and shrinking (maintenance −4.6%, license −17.0%) while subscription grew 30.0% (swi-10k-fy2024.md, Statements of Operations and MD&A). Mapping legacy on-prem to Damodaran's Software (System & Application) cash-corrected unlevered beta of 1.2482 and cloud-native observability to Software (Internet) at 1.5905, then relevering both at SWI's D/E of 0.299, gives hurdle rates of 10.25% and 11.71% respectively — a 146bp spread around a revenue-weighted 10.81% (damodaran-industry-betas-software.md). That gap is decision-relevant: a single 10.33% WACC under-charges the risky observability build-out and over-charges the Orion cash cow, which systematically biases SWI toward exactly the reinvestment its strategy already favors.
+
+## Notes
+
+Module 2 opens by asking whether book weights, and a single company-wide WACC, hold up for SWI — the answer to both is a qualified no. Lease-debt turns out to be immaterial to the equity/debt weighting (about 3 basis points of WACC), but the equity-value mistake this lesson names explicitly — using the $4.4B enterprise value as market value of equity instead of the ~$3.2B actually paid to stockholders — is the single biggest weighting error in the whole report; see the correction in [`README.md`](README.md) rather than re-deriving the ~5.5-point weight shift here. Part 2's divisional-hurdle-rate exercise similarly finds a real but modest 146bp spread between legacy and observability betas, useful context but secondary to the equity-value fix. This lesson is where the WACC build (Lessons 1–12's inputs) gets assembled into the hurdle rate that Lessons 14, 18, and 27–36 test cash flows and returns against.

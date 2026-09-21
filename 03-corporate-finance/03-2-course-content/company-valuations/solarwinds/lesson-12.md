@@ -1,0 +1,29 @@
+---
+title: "SolarWinds (SWI) — Lesson 12: Debt: Measure and Cost"
+status: active
+owner: weprintmoney
+created: 2026-09-20
+last_updated: 2026-09-20
+---
+
+# SolarWinds (SWI) — Lesson 12: Debt: Measure and Cost
+
+### Lesson 12 — Debt: Measure and Cost
+
+- **Lesson 12, Session 12 · Part 1 — "Cost of Debt and What Counts as Debt"** ([transcript](../../01-foundations-and-discount-rates/lesson-12/session-12-part-1.md))
+    - Quote: "All interest-bearing obligations are, obviously, debt. All lease commitments are debt."
+    - Question for SWI: What does SWI's total debt load actually include once lease commitments are counted per Damodaran's three criteria (fixed payment, tax-deductible, loss-of-control on default) — not just what's labeled "debt" on the balance sheet?
+    - Sources needed: SWI's 10-K balance sheet (term loan/notes) and lease footnote (operating lease right-of-use assets/liabilities under ASC 842).
+    - Where to find: SEC-EDGAR (10-K FY2024 — Debt note and Leases note).
+    - Answer: $1,285.0M — not the $1,206.6M the balance sheet labels as debt. Start from the First Lien Term Loan at face value of $1,235.662M rather than the $1,206.586M carrying amount net of $29.076M of unamortized discount and issuance costs, then add the $49.365M present value of operating lease liabilities ($13.661M current plus $35.704M non-current), which clears all three of Damodaran's tests: $53.592M of contractually fixed undiscounted minimums, tax-deductible, and default-triggering (swi-10k-fy2024.md, balance sheet and Notes 7 and 9). Nothing further needs capitalizing — SWI had no finance leases in any of FY2022–FY2024 and the $130.0M revolver was fully undrawn — and the lease footnote even supplies the discount rate (4.8% weighted average over a 3.6-year weighted-average term), so no synthetic annuity estimate is required. What emphatically does not count is the $389.3M of deferred revenue ($343.4M current plus $45.9M non-current): a customer prepayment is not an interest-bearing fixed obligation whose non-payment forfeits control of the firm. The repo's Step 12 figure of ~$82M of lease debt, built from an assumed $20M of annual rent, overstates the real number by two-thirds — the disclosed present value is $49.4M and actual FY2024 operating lease cost was $12.954M.
+
+- **Lesson 12, Session 12 · Part 2 — "From Ratings to Cost of Debt — Actual vs. Synthetic Ratings"** ([transcript](../../01-foundations-and-discount-rates/lesson-12/session-12-part-2.md))
+    - Quote: "If you have an actual rating, don't go looking for trouble. Just use the actual rating."
+    - Question for SWI: Does SWI carry an actual credit rating on its LBO-era term loan/notes, or does it need a synthetic rating built from its interest coverage ratio — and how did either change once Turn/River's 2025 acquisition likely added leverage?
+    - Sources needed: SWI's credit rating, if any (S&P/Moody's on its credit facility); operating income and interest expense (for interest coverage ratio); current default spread by rating.
+    - Where to find: SEC-EDGAR (10-K Debt note may disclose facility ratings; income statement for interest coverage inputs); NEWS-WEB for S&P/Moody's rating actions around the 2025 Turn/River deal financing; DAMODARAN-SITE for the current interest-coverage-to-rating lookup table (repo mirror excluded — go direct).
+    - Answer: There is no actual rating to use. The FY2024 10-K discloses no S&P or Moody's issuer or facility rating anywhere — the only ratings reference in the entire filing is a generic remark about derivative counterparties' high credit ratings (swi-10k-fy2024.md, Item 7A) — so Damodaran's "just use the actual rating" advice has nothing to attach to, and the repo's "B+ from S&P" claim is unsupported by any compiled source. Synthetically, EBIT of $208.419M over gross interest expense of $112.435M is 1.85x coverage, which falls in the 1.5–2.0x band (B3/B− on the smaller-firm table), while adjusted-EBITDA coverage of $384.699M/$112.435M = 3.42x and gross leverage of 3.2x point several notches higher — the classic EBIT-versus-EBITDA gap for an LBO carrying acquired-intangible amortization. Skip the rating detour and use the observed market rate, which Damodaran prefers whenever it exists: the term loan is priced at SOFR + 2.75% with a 7.11% effective rate at 12/31/2024, which at the compiled SOFR of 3.66% implies 6.41% today (swi-10k-fy2024.md, Note 9; treasury-and-fed-rates.md). Turn/River's financing made the credit materially worse — $2.75B of new first- and second-lien term debt funded at closing (swi-8k-2025-04-16-merger-closing.md) is roughly 7.1x FY2024 adjusted EBITDA versus 3.2x before, pushing pro-forma EBIT coverage to about 1.0x and the synthetic rating into CCC territory; the compiled documents don't disclose the new pricing, so that final step is an estimate rather than a lookup.
+
+## Notes
+
+Lesson 12 closes Module 1 by defining debt properly (fixed, tax-deductible, default-triggering — which pulls operating leases in but leaves deferred revenue out) and by settling actual-versus-synthetic ratings. For SWI, correcting the debt figure to $1,285.0M (versus the balance sheet's $1,206.6M and the report's overstated ~$82M of lease debt) is a small fix, but discovering that SWI has no actual credit rating anywhere in its filings is a bigger one — the report's "B+ from S&P" claim can't be traced to any compiled source, and the EBIT-based synthetic rating (B3/B−) sits meaningfully below what the EBITDA-based coverage would imply, a gap Lesson 18 later exploits to find the optimal-debt-ratio "kink." This lesson's market-observed cost of debt (7.11% effective, SOFR + 2.75%) is the number Lesson 13 uses directly to assemble the WACC, closing out Module 1's discount-rate build.

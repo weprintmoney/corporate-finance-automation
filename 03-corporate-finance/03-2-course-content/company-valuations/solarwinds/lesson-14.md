@@ -1,0 +1,29 @@
+---
+title: "SolarWinds (SWI) — Lesson 14: Cash Flows vs. Accounting Earnings (Return on Invested Capital)"
+status: active
+owner: weprintmoney
+created: 2026-09-20
+last_updated: 2026-09-20
+---
+
+# SolarWinds (SWI) — Lesson 14: Cash Flows vs. Accounting Earnings (Return on Invested Capital)
+
+### Lesson 14 — Cash Flows vs. Accounting Earnings (Return on Invested Capital)
+
+- **Lesson 14, Session 14 · Part 1 — "Show Me the Money: From Accounting Earnings to Cash Flows"** ([transcript](../../02-investment-returns-and-financing/lesson-14/session-14-part-1.md))
+    - Quote: "It's not show me the accounting income, it's not show me the earnings, it's show me the money."
+    - Question for SWI: SWI carries a large EBIT-to-Adjusted-EBITDA gap ($208.4M vs. $384.7M per the repo, driven largely by amortization of intangibles from the 2016 LBO) — applying the lecture's three adjustments (add back D&A, subtract capex, subtract change in working capital), what is SWI's actual FY2024 free cash flow to the firm, and how much of that EBIT/EBITDA gap is genuinely non-cash amortization versus real, ongoing capitalized R&D needs?
+    - Sources needed: FY2024 Consolidated Statement of Cash Flows (D&A add-back, capex line) and balance sheet working-capital accounts (AR, AP, deferred revenue).
+    - Where to find: SEC-EDGAR — SWI 10-K FY2024, Consolidated Statement of Cash Flows and Item 7 MD&A (non-GAAP Adjusted EBITDA reconciliation).
+    - Answer: FY2024 FCFF is about $197M, and the repo's explanation of the EBIT/EBITDA gap is wrong. EBIT of $208.419M × (1 − 25%) = $156.3M, plus D&A of $74.352M, less total capital spending of $20.478M (PP&E $5.611M + capitalized software $14.401M + intangibles $0.466M), less a $12.85M increase in non-cash working capital (AR +$12.869M, prepaids +$0.117M, AP −$2.194M, accrued liabilities −$8.226M, deferred revenue +$10.559M) gives FCFF of $197.3M (swi-10k-fy2024.md, Consolidated Statements of Cash Flows). Of the $176.3M EBIT-to-Adjusted-EBITDA gap, only $52.9M — 30% — is acquisition-related amortization (acquired technologies $7.069M + acquired intangibles $45.846M); the largest single component is stock-based compensation at $78.3M, 44% of the gap, which Damodaran insists is a real expense that must never be added back (swi-10k-fy2024.md, MD&A Adjusted EBITDA reconciliation). The residual $21.4M of D&A is organic depreciation and capitalized-software amortization, and it almost exactly matches the $20.5M of annual reinvestment — a genuine recurring replacement cost, not a paper charge. Net conclusion: Adjusted EBITDA of $384.7M overstates sustainable cash earnings by roughly $100M once SBC and real reinvestment go back in, so the "48% EBITDA margin" story is a non-GAAP artifact, not a cash fact.
+
+- **Lesson 14, Session 14 · Part 2 — "Return on Invested Capital vs. Cost of Capital, and the Country Risk Premium"** ([transcript](../../02-investment-returns-and-financing/lesson-14/session-14-part-2.md))
+    - Quote: "It looks like Disney is generating a 4.8% excess return over and above its cost of capital."
+    - Question for SWI: Running the same excess-return test the lecture runs for Disney/Vale/Baidu — what is SWI's company-wide return on invested capital (after-tax operating income ÷ book invested capital) for FY2024, and does it clear the repo's 10.33% WACC, and does the answer flip materially depending on whether 2016-LBO-vintage goodwill/intangibles are included in invested capital?
+    - Sources needed: After-tax operating income (EBIT × (1 − tax rate)) and total invested capital, computed both with and without acquisition-related goodwill/intangibles.
+    - Where to find: SEC-EDGAR — SWI 10-K FY2024, Balance Sheet (goodwill/intangibles line) and Income Statement; REPO-SWI-VAL (WACC = 10.33%, Step 12 EBIT figure).
+    - Answer: No — SWI fails the test, and the answer flips violently on the goodwill question. After-tax operating income of $156.3M (EBIT $208.419M × 0.75) against book invested capital of $2,348.0M (equity $1,400.714M + total debt $1,206.586M − cash and short-term investments $259.323M) gives ROIC of 6.66%, an excess return of −3.67pp versus the repo's 10.33% WACC and roughly $86M of economic value destroyed — in SWI's best operating year since the re-IPO (swi-10k-fy2024.md, Consolidated Balance Sheets and Statements of Operations). Strip out 2016-LBO-vintage goodwill of $2,363.175M and net intangibles of $128.940M — together 78.7% of total assets — and invested capital goes to negative $144M, making ROIC mathematically infinite. That is the real finding: SWI has essentially no tangible capital base ($16.0M of PP&E), so "return on invested capital" here is a statement about what the sponsors paid in 2016, not about how well the operating business converts capital into profit. The damning detail is that SWI already wrote off $891.1M of goodwill in FY2022 and still cannot clear 10.33%; on FY2023's EBIT of $150.4M, ROIC was only 4.8% (swi-multi-year-financials.md).
+
+## Notes
+
+Lesson 14's "show me the money" principle and its ROIC-vs-WACC excess-return test are applied to SWI back to back, and both answers become load-bearing for the rest of the project. The FCFF build here (~$197M) shows the 48% Adjusted EBITDA margin overstates sustainable cash earnings by roughly $100M once stock-based compensation and real reinvestment are put back — a correction to the D&A-versus-real-depreciation split that Lesson 30 refines further for the base-year DCF. The ROIC test finds SWI failing its own WACC hurdle every recent year, but flags that the entire finding hinges on whether 2016-LBO goodwill counts as invested capital — a distinction that isn't a technicality here, since SWI's tangible capital base is essentially zero. This ROIC-below-WACC result is the thread Lessons 27 and 36 pick back up as the central "why did Silver Lake sell" answer.

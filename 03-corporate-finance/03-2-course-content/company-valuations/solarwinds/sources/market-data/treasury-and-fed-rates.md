@@ -8,7 +8,7 @@ last_updated: 2026-09-07
 
 # Market Rates Snapshot
 
-Fetched directly from FRED (Federal Reserve Economic Data) on 2026-09-07, because this repo's own `03-3-supplemental-data/market-rates.json` — the file the course materials are supposed to point to — **does not exist** (see the parent `solarwinds-sources/README.md` for the full note on this).
+Fetched directly from FRED (Federal Reserve Economic Data) on 2026-09-07, because this repo's own `03-3-supplemental-data/market-rates.json` — the file the course materials are supposed to point to — **does not exist** (see the parent `sources/README.md` for the full note on this).
 
 ## Latest values (as of 2026-09-03, most recent business day at fetch time)
 
