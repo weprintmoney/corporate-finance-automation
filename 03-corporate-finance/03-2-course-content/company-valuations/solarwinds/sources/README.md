@@ -1,6 +1,6 @@
 # SolarWinds (SWI) — Compiled Sources
 
-Source materials actually gathered for [`solarwinds-lesson-questions.md`](../solarwinds-lesson-questions.md), so the ~130 "Where to find" pointers in that document lead to something already sitting in this repo instead of a fresh search each time. Everything here was fetched from public sources on **2026-09-07**; treat anything time-sensitive (rates, betas, ERP) as a snapshot, not a live feed.
+Source materials actually gathered for the SolarWinds lesson-by-lesson question log — now split across [`../README.md`](../README.md) and the per-lesson `../lesson-NN.md` files — so the ~130 "Where to find" pointers in that material lead to something already sitting in this repo instead of a fresh search each time. Everything here was fetched from public sources on **2026-09-07**; treat anything time-sensitive (rates, betas, ERP) as a snapshot, not a live feed.
 
 ## What's compiled
 
@@ -21,7 +21,7 @@ Source materials actually gathered for [`solarwinds-lesson-questions.md`](../sol
 | `swi-8k-2020-12-14-sunburst-followup.md` | Follow-up SUNBURST disclosure | 2020-12-14 |
 | `swi-multi-year-financials.md` | Revenue/EBIT/net income/R&D/capex, FY2017–FY2024, derived from SEC's XBRL company-facts API | fetched 2026-09-07 |
 
-**Correction to the main document:** every "Where to find" citation for the merger document in `solarwinds-lesson-questions.md` says "Schedule 13E-3 / DEFM14A." That's wrong. Silver Lake's ~75% stake let the board approve the merger by **written stockholder consent**, so no vote was solicited and no proxy was filed — the actual document is a **Schedule 14C definitive information statement (DEFM14C)**, and there is no SC 13E-3 on file for this deal at all (confirmed via SEC EDGAR's full filing history for CIK 1739942 — the merger doesn't appear to have been structured as a Rule 13e-3 affiliate going-private transaction). Use `swi-defm14c-2025-merger-information-statement.md`, not a 13E-3.
+**Correction to the main document:** every "Where to find" citation for the merger document in the lesson-by-lesson question log says "Schedule 13E-3 / DEFM14A." That's wrong. Silver Lake's ~75% stake let the board approve the merger by **written stockholder consent**, so no vote was solicited and no proxy was filed — the actual document is a **Schedule 14C definitive information statement (DEFM14C)**, and there is no SC 13E-3 on file for this deal at all (confirmed via SEC EDGAR's full filing history for CIK 1739942 — the merger doesn't appear to have been structured as a Rule 13e-3 affiliate going-private transaction). Use `swi-defm14c-2025-merger-information-statement.md`, not a 13E-3.
 
 **Why FY2018/2020/2023/2024 and not all seven years:** these four anchor the arc the lesson questions actually ask about (first post-IPO year, the SUNBURST-impact year, the year before the deal, the final year) at a manageable total size. `swi-multi-year-financials.md` fills the gap for the numbers-only trend lines (FY2017–2024 revenue/EBIT/net income/R&D/capex) without needing all seven full 10-Ks. If a specific question needs FY2019, FY2021, or FY2022 in full, refetch with the accession numbers in the table below.
 
@@ -60,7 +60,7 @@ All three are still independently public as of this fetch — none of the "PEER-
 
 ## A repo problem this surfaced
 
-`solarwinds-lesson-questions.md` cites `REPO-RATES`, `REPO-BETAS`, and `REPO-COUNTRY-RISK` (18 times combined) as if `03-3-supplemental-data/{market-rates.json,industry-betas.json,country-risk.json}` are live, CI-refreshed data files — that's what the top-level `CLAUDE.md` and the `/evaluate-company` command docs both claim. In practice:
+The SolarWinds lesson-by-lesson question log cites `REPO-RATES`, `REPO-BETAS`, and `REPO-COUNTRY-RISK` (18 times combined) as if `03-3-supplemental-data/{market-rates.json,industry-betas.json,country-risk.json}` are live, CI-refreshed data files — that's what the top-level `CLAUDE.md` and the `/evaluate-company` command docs both claim. In practice:
 
 - `market-rates.json` **does not exist** in the repo at all.
 - `industry-betas.json` and `country-risk.json` **exist but are empty stubs** — `{"industries": {}}` and `{"countries": {}}` respectively, with only a `source_url` and a note that the CI job should populate them.

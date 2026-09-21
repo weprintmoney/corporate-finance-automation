@@ -8,7 +8,7 @@ last_updated: 2026-09-07
 
 # Damodaran Industry Betas — Software Sector
 
-Extracted from Damodaran's live current dataset (`https://pages.stern.nyu.edu/~adamodar/pc/datasets/betas.xls`, sheet "Industry Averages", dated by Damodaran as updated 2026-01-05), fetched 2026-09-07 — because this repo's own `03-3-supplemental-data/industry-betas.json` is an **empty stub** (`"industries": {}`, its CI refresh never actually populated it — see the parent `solarwinds-sources/README.md`).
+Extracted from Damodaran's live current dataset (`https://pages.stern.nyu.edu/~adamodar/pc/datasets/betas.xls`, sheet "Industry Averages", dated by Damodaran as updated 2026-01-05), fetched 2026-09-07 — because this repo's own `03-3-supplemental-data/industry-betas.json` is an **empty stub** (`"industries": {}`, its CI refresh never actually populated it — see the parent `sources/README.md`).
 
 SolarWinds' relevant classification is **Software (System & Application)**.
 
