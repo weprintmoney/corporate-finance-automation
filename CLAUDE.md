@@ -37,8 +37,9 @@ WhatsApp group: [Corp Finance Fall 2026](https://chat.whatsapp.com/ChFjKrUfgTyIq
 | Hari Rangarajan | Pittsburgh, PA, USA | — | — | Software developer at Google, AI & Infrastructure; MS Software Engineering, Carnegie Mellon |
 | Ashish Batra | India | — | — | 28 yrs in VLSI/semiconductor domain |
 | Diane Harkleroad | Berlin, Germany | — | [LinkedIn](https://www.linkedin.com/in/diane-harkleroad-0b763710/) | Investment Manager, sustainable agroforestry portfolio (Latin America), 12Tree Finance |
+| Yuriko Sonambela | Indonesia | — | [LinkedIn](https://www.linkedin.com/in/yurikosonambela/) | Manager, Corporate Planning at PT Merdeka Copper Gold Tbk; budget & forecasting, mining sector; engineering background |
 
-*Sources: Brightspace discussion board + WhatsApp group. Last updated 2026-09-12.*
+*Sources: Brightspace discussion board + WhatsApp group. Last updated 2026-09-22.*
 
 ## Top-level Folders
 
