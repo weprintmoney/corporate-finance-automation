@@ -21,7 +21,8 @@ Garbled proper nouns and factual slips in the source are marked inline with `[ed
 | File | Description |
 |------|-------------|
 | [meetup-1-2026-09-08.md](meetup-1-2026-09-08.md) | Meetup 1 — the three corporate finance decisions, hurdle rates, debt vs. equity, value as the end game, Petrobras, the shareholder-priority contract argument, ESG critique, corporate life cycle, final project framing |
-| _(pending)_ | Meetups 2–6 — Sept 22, Oct 6, Oct 20, Nov 3, Nov 30 |
+| [meetup-2-2026-09-22.md](meetup-2-2026-09-22.md) | Meetup 2 — risk-free rates across currencies (euro, dollar after the US downgrade, Brazil, Turkey, Ukraine), hurdle rates as thermometers, building a cost of capital, why projects use company weights, why companies take bad investments, software moats under AI disruption, the AI "factory" and who captures the value |
+| _(pending)_ | Meetups 3–6 — Oct 6, Oct 20, Nov 3, Nov 30 |
 
 ## Note on folder numbering
 
