@@ -14,8 +14,12 @@ SMALL = [(-1e5, .14), (.5, .105), (.8, .08), (1.25, .065), (1.5, .055), (2, .045
 RATINGS = ["D", "C", "CC", "CCC", "B-", "B", "B+", "BB", "BB+", "BBB", "A-", "A", "A+", "AA", "AAA"]
 
 # Shared inputs (lessons 9-13): cash-corrected Software (System & Application) unlevered beta,
-# rf and ERP as used in lesson 34, 25% marginal tax rate.
-BU, RF, ERP, T, G = 1.2482, .0477, .0446, .25, .025
+# ERP as used in lesson 34, 25% marginal tax rate.
+# rf nets Damodaran's US default spread (0.22%) out of the 4.77% 10-year Treasury. The 4.46% ERP
+# already includes a 0.23% US country risk premium, so the gross Treasury would count US default
+# risk twice (lesson 05, Meetup 2 lens).
+TREASURY_10Y, US_DEFAULT_SPREAD = .0477, .0022
+BU, RF, ERP, T, G = 1.2482, TREASURY_10Y - US_DEFAULT_SPREAD, .0446, .25, .025
 
 # Lesson 34 FCFF: management's uFCF (DEFM14C) less stock-based compensation, 2025-2030.
 FCFF = [212, 258, 297, 338, 379, 419]

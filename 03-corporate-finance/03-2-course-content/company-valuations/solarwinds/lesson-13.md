@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 13: Cost of Capital Weights (Market vs. Book
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-10-05
+last_updated: 2026-10-06
 ---
 
 # SolarWinds (SWI) — Lesson 13: Cost of Capital Weights (Market vs. Book Value)
@@ -56,3 +56,8 @@ Module 2 opens by asking whether book weights, and a single company-wide WACC, h
 - **Cost-of-debt sensitivity.** Capital IQ reports a weighted-average interest rate on long-term debt of 8.2% for FY2024 and 8.9% for FY2023, against the 7.11% year-end rate used here. The year-end rate is the better forward-looking input. Using 8.2% would raise the after-tax cost of debt by about 0.8 points and WACC by about 0.2 points.
 - **Face versus carrying value.** This lesson uses the $1,235.7M face value of the term loan. Capital IQ's $1,256.0M total debt uses the $1,206.6M carrying value plus leases. The difference is about $29M and does not move the weights.
 - Source: [`sources/capital-iq/valuation-and-capital-structure.md`](sources/capital-iq/valuation-and-capital-structure.md).
+
+## Netted risk-free rate (2026-10-06)
+
+The WACC figures above use the gross 4.77% 10-year Treasury. The 4.46% ERP already includes a 0.23% US country risk premium, so that counts US default risk twice (Meetup 2 lens in [lesson-05.md](lesson-05.md)). With rf netted to 4.55%, the market-value WACC is **9.94%** rather than ~10.1%: cost of equity 4.55% + 1.62 × 4.46% = 11.79%, and 0.714 × 11.79% + 0.286 × 5.33% = 9.94% on Capital IQ's 28.6% debt weight. Every equity-funded figure here falls by about 0.22 × E/V, or roughly 0.16 points: legacy/on-prem about 9.9%, observability/SaaS about 11.1%. The ~120bp divisional spread is unchanged. Recomputed in [`capital-iq-rerun.md`](capital-iq-rerun.md).
+
