@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 14: Cash Flows vs. Accounting Earnings (Retu
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-21
+last_updated: 2026-10-06
 ---
 
 # SolarWinds (SWI) — Lesson 14: Cash Flows vs. Accounting Earnings (Return on Invested Capital)
@@ -44,3 +44,16 @@ last_updated: 2026-09-21
 ## Notes
 
 Lesson 14's "show me the money" principle and its ROIC-vs-WACC excess-return test are applied to SWI back to back, and both answers become load-bearing for the rest of the project. The FCFF build here (~$197M) shows the 48% Adjusted EBITDA margin overstates sustainable cash earnings by roughly $100M once stock-based compensation and real reinvestment are put back — a correction to the D&A-versus-real-depreciation split that Lesson 30 refines further for the base-year DCF. The ROIC test finds SWI failing its own WACC hurdle every recent year, but flags that the entire finding hinges on whether 2016-LBO goodwill counts as invested capital — a distinction that isn't a technicality here, since SWI's tangible capital base is essentially zero. This ROIC-below-WACC result is the thread Lessons 27 and 36 pick back up as the central "why did Silver Lake sell" answer.
+
+## Meetup 2 lens: the investments, not the financing, decide the outcome
+
+In [Meetup 2](../../../03-7-meetups/meetup-2-2026-09-22.md) (2026-09-22), Damodaran argued that no company becomes great by optimizing its debt mix or dividend policy. By his judgment about 60% of the projects companies take have negative NPV, and that's knowable going in, because people decide first and do the analysis afterwards.
+
+- **On SWI's numbers, the investment gap dwarfs the financing gap.** ROIC of 6.66% against a 10.10% WACC on $2,348.0M of invested capital loses about $80.8M of value a year ((6.66% − 10.10%) × $2,348.0M). Moving to the optimal debt ratio is worth $241–419M once (`capital-iq-rerun.md`). The return shortfall erases that whole gain in 3.0–5.2 years.
+- **The netted risk-free rate doesn't rescue it.** At the 9.94% WACC from Lesson 5's meetup note, the gap is 3.28 points, or about $77.0M a year.
+- **The shortfall sits in acquired capital, which is where "decide first" does its work.** Goodwill and intangibles ($2,492.1M) exceed total invested capital (above). Acquisitions are the decisions most often justified with the words that came up in the meetup: "strategic," "synergy," "potential." They have to clear the hurdle on the price paid, not on how well the business runs afterwards.
+- **Management's own plan says SWI crosses the hurdle in 2027.** To earn 10.10% on $2,348.0M, SWI needs after-tax operating income of $237.1M, or EBIT of $316.2M at a 25% tax rate ($311.2M at 9.94%). The LRP shows EBIT of $307M in 2026E and $352M in 2027E (`swi-defm14c-2025-merger-information-statement.md`). That would be the first year above the cost of capital in the FY2021–FY2024 record above. But the LRP's EBIT is Adjusted EBITDA less SBC less D&A (2025E: $412M − $82M − $58M = $272M), not GAAP operating income, so the comparison needs checking.
+
+**What this confirms:** The ROIC-below-WACC conclusion holds, and the meetup sets its priority. Lessons 17–19 put most of their effort into a debt ratio worth about $1.30–2.26 a share. The return on capital is the bigger lever.
+
+**Open question:** The 2027 crossover depends on the LRP's growth ramp, which Lesson 15 flags as the least credible part of the plan.
