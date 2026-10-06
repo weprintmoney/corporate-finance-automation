@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 13: Cost of Capital Weights (Market vs. Book
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-10-05
 ---
 
 # SolarWinds (SWI) — Lesson 13: Cost of Capital Weights (Market vs. Book Value)
@@ -49,3 +49,10 @@ last_updated: 2026-09-20
 Module 2 opens by asking whether book weights, and a single company-wide WACC, hold up for SWI — the answer to both is a qualified no. Lease-debt turns out to be immaterial to the equity/debt weighting (about 3 basis points of WACC), but the equity-value mistake this lesson names explicitly — using the $4.4B enterprise value as market value of equity instead of the ~$3.2B actually paid to stockholders — is the single biggest weighting error in the whole report; see the correction in [`README.md`](README.md) rather than re-deriving the ~5.5-point weight shift here. Part 2's divisional-hurdle-rate exercise similarly finds a real but modest 146bp spread between legacy and observability betas, useful context but secondary to the equity-value fix. This lesson is where the WACC build (Lessons 1–12's inputs) gets assembled into the hurdle rate that Lessons 14, 18, and 27–36 test cash flows and returns against.
 
 **Differential hurdle rates are not sum-of-the-parts.** Part 2's divisional-WACC exercise above answers a narrower question than a true SOTP valuation would. It applies two discount rates to the same consolidated cash-flow build so a blended WACC's misallocation becomes visible — the legacy/maintenance book and the subscription/observability book are still valued inside one DCF (Lessons 14, 18, 27–36), never as two independent cash-flow projections discounted separately and then added together. A real SOTP needs segment-level revenue *and* margin, not just the revenue-line split used here — and Lesson 10 already establishes that SWI's single-segment disclosure (one CODM, one consolidated P&L) makes that data unavailable, so building two separate DCFs would mean fabricating the segment cash flows, not modeling them. The revenue-mix proxy above is explicitly the project's stand-in for that missing split, not a completed SOTP. If SWI ever reported true segment financials, that disclosure is the trigger to revisit this as an actual sum-of-the-parts build rather than a differential-discount-rate adjustment.
+
+## Capital IQ cross-check (2026-10-05)
+
+- **Weights confirmed.** Capital IQ's Dec-2024 capitalization gives debt of 28.6% and equity of 71.4% at the $18.31 pre-announcement price, against 28.8% and 71.2% here at $18.50. Its market cap of $3,173.0M matches the $3,174.0M above, and its deal record gives $3,420.9M of equity on the diluted count, against $3,422.9M in Lesson 29.
+- **Cost-of-debt sensitivity.** Capital IQ reports a weighted-average interest rate on long-term debt of 8.2% for FY2024 and 8.9% for FY2023, against the 7.11% year-end rate used here. The year-end rate is the better forward-looking input. Using 8.2% would raise the after-tax cost of debt by about 0.8 points and WACC by about 0.2 points.
+- **Face versus carrying value.** This lesson uses the $1,235.7M face value of the term loan. Capital IQ's $1,256.0M total debt uses the $1,206.6M carrying value plus leases. The difference is about $29M and does not move the weights.
+- Source: [`sources/capital-iq/valuation-and-capital-structure.md`](sources/capital-iq/valuation-and-capital-structure.md).

@@ -37,15 +37,17 @@ CIQ's description: provider of IT service management, network monitoring and obs
 
 The 2015 LBO (announced October 2015, closed 2016) was valued at **$4,639.85M** in CIQ, in line with the ~$4.5B in the README. The CIQ **Public Ownership** page (institutional holders from 13F filings) did not load, so the holder list at delisting is not captured here. See the DEF 14A and DEFM14C in `../sec-filings/` for beneficial ownership.
 
-## Corporate governance (Takeover Defenses page, last public state)
+## Corporate governance (Takeover Defenses page)
+
+**Caution:** this page appears to reflect the post-closing charter (the newest documents listed are dated 2025-04-16), not the last public-company state. It conflicts with the 2024 DEF 14A on board classification, so none of these rows should be cited for the public period without checking the proxy in `../sec-filings/swi-def14a-2024.md`.
 
 | Provision | Value |
 |---|---|
 | State of incorporation | Delaware |
-| Classified (staggered) board | **No**, one-year director terms |
+| Classified (staggered) board | CIQ shows **No**, one-year terms. **The 2024 DEF 14A says the opposite: nine directors in three classes with staggered three-year terms.** Use the proxy for the public period. |
 | Cumulative voting | No |
 | Supermajority to amend charter or bylaws | No (50%) |
-| Shareholders can act by written consent without board approval | **Yes**, at 50% (this is what let the sponsors approve the sale) |
+| Shareholders can act by written consent without board approval | CIQ shows **Yes**, at 50%. The sale itself was approved by sponsor written consent under the stockholders' agreement (see the Schedule 14C). Not checked against the proxy. |
 | Shareholders can call special meetings | **No** |
 | Shareholders can change board size | No |
 | Removal of directors only for cause | No |
@@ -119,7 +121,7 @@ Selected metrics versus the peer group mean (LTM Dec-2024):
 | Total debt / revenue | 1.58x | 0.56x |
 | Current ratio | 0.85x | 1.83x |
 
-Use the **bb-** score and the 0.43% default probability as a cross-check on the synthetic-rating approach in Lesson 12. A bb- rating sits at roughly a 2.5% to 3.5% spread over Treasuries in Damodaran's ratings table (see `spreadsheet-ratings.md` in the Lesson 12 folder), against the 7.11% actual term-loan coupon.
+Use the **bb-** score and the 0.43% default probability as a cross-check on the synthetic-rating approach in Lesson 12. On the smaller-firm table in `spreadsheet-ratings.md` (Lesson 12 folder), B1/B+ carries a 3.81% default spread and Ba2/BB carries 2.74%, so a bb- score sits between them. The table has no Ba3 row. Compare that to the 7.11% actual term-loan coupon. Capital IQ's EBITDA coverage of 2.56x maps to B1/B+ on the same table.
 
 ## Not available (checked, empty or failed)
 

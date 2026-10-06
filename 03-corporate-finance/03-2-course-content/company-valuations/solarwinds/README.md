@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Course Project Overview"
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-20
+last_updated: 2026-10-05
 ---
 
 # SolarWinds (SWI) — Course Project Overview
@@ -49,6 +49,7 @@ Cited by these short codes throughout. As of 2026-09-07, most of these are now *
 | **DEAL-DOCS** | Turn/River Capital's acquisition press release + fairness opinion | ✅ Compiled — the 8-Ks and the DEFM14C in `sources/sec-filings/` cover this (see the SEC-EDGAR correction above; there is no separate "press release" filing beyond the 8-Ks) |
 | **LESSON-MATERIALS** | That lesson's own `slides.md` / `reading-*.md` / `spreadsheet-*.md` in the same lesson folder | ✅ Already in repo — e.g. lesson-35's `spreadsheet-*.md` files already carry current Damodaran multiples/margins by sector (Software (System & Application) row present) |
 | **NEWS-WEB** | General news/analyst commentary not otherwise covered | ⚠️ **Not compilable as a fixed document** — this is ongoing commentary/sentiment, re-search at time of use. One concrete sub-need — SWI's historical daily stock price series for regression-beta/Jensen's-alpha entries — was attempted and is genuinely unattainable via free automated fetch (Stooq blocks bots, Nasdaq drops delisted tickers); see `sources/README.md` for the workaround (DEF 14A performance-graph data) and paid-terminal alternative. |
+| **CAPITAL-IQ** | S&P Capital IQ pulls from the NYU academic account: annual financials, multiples, debt tranches, the Turn/River transaction record, comparable deals, a peer set, governance and credit indicators | ✅ Compiled 2026-10-05 — [`sources/capital-iq/`](sources/capital-iq/). Price history, consensus estimates and 13F ownership were unavailable in the account. Its governance page reflects the post-closing charter and conflicts with the 2024 proxy on board classification, so use the proxy. |
 
 ## How this folder is organized
 
