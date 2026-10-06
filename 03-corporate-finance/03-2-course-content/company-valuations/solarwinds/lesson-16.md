@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 16: Currency Consistency and Uncertainty in 
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-21
+last_updated: 2026-10-06
 ---
 
 # SolarWinds (SWI) — Lesson 16: Currency Consistency and Uncertainty in Investment Analysis
@@ -35,3 +35,18 @@ last_updated: 2026-09-21
 ## Notes
 
 Lesson 16 covers keeping currency consistent between cash flows and the discount rate, and testing whether a hedge's benefit exceeds its cost. For SWI, Part 1's currency-consistency theorem confirms — again — that the single-USD WACC is correct, while correcting the international revenue weight to the disclosed 35.2% (not the "31%" premise or the MD&A's 69% North America figure); Part 2 finds SWI's post-SUNBURST cybersecurity spend passed its own cost/benefit test decisively, with retention ending above pre-breach levels and a D&O insurance recovery that more than covered the largest realized cost. Read together with Lesson 23 Part 2, though, there's a real tension worth flagging: this lesson concludes the currency question is basically settled at the WACC level, while Lesson 23 finds SWI's actual debt is 0% FX-denominated against a genuine 35.2% foreign-revenue base with no forward contracts outstanding — currency consistency in the discount rate doesn't mean the balance sheet is currency-matched. Connects forward to Lesson 21's bankruptcy-cost calibration, which also uses SUNBURST as its empirical anchor.
+
+## Meetup 2 lens: hurdle rates are thermometers, so test the moat with data
+
+In [Meetup 2](../../../03-7-meetups/meetup-2-2026-09-22.md) (2026-09-22), Damodaran argued that hurdle rates measure risk but can't solve uncertainty: "They're like thermometers." The way to learn which software moats survive AI is to track actual revenue drop-offs, not to argue from a list.
+
+- **An "AI premium" on the discount rate hides the assumption.** Adding 100bp to the 10.10% WACC cuts the DCF from $18.94 to $15.91 a share (FCFF and net debt from `tools/capital-structure-rerun.py`, track C). That equals cutting FCFF by 12.4% in every year forever (EV $4,500M → $3,941M). Stated as a cash-flow cut, it can be checked against renewal data. Stated as a rate, it can't.
+- **This doesn't conflict with Lesson 13's divisional rates.** The ~11.3% observability WACC comes from a higher peer beta, which measures market risk. It shouldn't be pushed higher to absorb disruption risk.
+- **SUNBURST was a real moat test, and SWI passed it.** The renewal data in Part 2 above (94% → 91% → 97%) is the kind of evidence Damodaran asked for. It supports the workflow and human-inertia moats he discussed. But it tested a reputational shock, not a cheaper substitute. He also expects B2B software to fade faster than B2C, and SWI is B2B.
+- **The FY2024 revenue declines are self-inflicted, not AI.** License fell 17.0% ($62.4M → $51.8M) and maintenance fell 4.6% ($462.1M → $440.6M), while subscription rose 30.0% ($234.2M → $304.5M) (`swi-10k-fy2024.md`, MD&A). That is SWI moving its own customers to subscriptions. Unlike the incumbents Damodaran described, SWI did cannibalize, but within the same products.
+- **Watch renewals, not revenue, and use the right renewal number.** The 10-K says a renewal decline reaches revenue over the following four quarters or more, so revenue is the lagging signal. The 97% maintenance renewal rate also excludes customers who move to subscription, which flatters it during the transition. The cleaner test is retention of total recurring revenue, and that needs cohort data not in `sources/`.
+- **One moat to mark down.** Damodaran said data collected across many clients is a stronger moat than one client's data, because a single client can take its data elsewhere. Observability telemetry is mostly the customer's own data, so it's likely the weaker kind. That is an inference; the filings don't describe data rights.
+
+**What this confirms:** Part 2's verdict on the security spend holds. What changes is how to model AI: as renewal and pricing scenarios in the cash flows, not as a higher discount rate.
+
+**Open question:** SWI went private in April 2025, so the post-2024 renewal data that would show whether its moats hold against AI isn't public.

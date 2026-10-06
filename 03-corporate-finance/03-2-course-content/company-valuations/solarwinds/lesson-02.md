@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 02: The Objective: Utopia and Let Down (corp
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-21
+last_updated: 2026-10-06
 ---
 
 # SolarWinds (SWI) — Lesson 02: The Objective: Utopia and Let Down (corporate governance)
@@ -38,3 +38,17 @@ Module 1's `lesson-overview.md` files (Lessons 1–12) don't carry a separate "#
 ## Notes
 
 This lesson tests the four linkages the "Utopian" stock-price-maximization model assumes — stockholder-manager alignment, lender protection, no social costs — against real disclosures, one linkage per video part. For SWI, the lender-protection linkage holds surprisingly well (secured first-lien debt with a change-of-control default clause), the managerial-alignment linkage holds for RSU acceleration but not for the flat-fee transaction bonuses, and the minority-protection linkage essentially fails (a same-day written consent left no vote and only a conflicted "independent" committee member). It matters for SWI because these three answers are the first place the project pressure-tests the ~75%-Silver-Lake-control narrative against the actual DEFM14C — and each one is a reminder that the real block was Silver Lake **and** Thoma Bravo together at roughly 65%, not Silver Lake alone at ~75%; see the correction in [`README.md`](README.md) rather than re-deriving it here. This connects forward to Lesson 3's stated-objectives analysis and to Lesson 36's final four-stakeholder synthesis, which revisits the same "whose interests drove the sale" question with the full record in hand.
+
+## Meetup 1 lens: the board that didn't bark
+
+In [Meetup 1](../../../03-7-meetups/meetup-1-2026-09-08.md) (2026-09-08), Damodaran argued that the best clue to a company's governance is often a board that never pushes back. He added that US companies disclose director conflicts in the DEF 14A, and almost nobody reads it. Reading SWI's 2024 proxy and the merger information statement with that in mind:
+
+- **The "independent" count included the controller's people.** The proxy lists nine directors, eight of them independent under NYSE rules (`swi-def14a-2024.md`, Corporate Governance). Only the CEO is excluded, so the eight include all three Silver Lake designees. Kenneth Hao is Silver Lake's Chairman and Managing Partner. Michael Widmann is a Silver Lake Managing Director. Douglas Smith was a Silver Lake senior advisor from 2016 to 2019. Three of the eight "independent" directors worked for the 36.56% holder, now or recently.
+- **The second controller had a veto but no board seat.** Thoma Bravo owned 29.79% and left its three board seats, and the seat it nominates jointly with Silver Lake, vacant. Under the stockholders' agreement it still had to give written consent to any change of control, any new debt or asset deal above $300.0M, and any hiring or firing of the CEO (`swi-def14a-2024.md`, Stockholders' Agreement). It held real power without ever casting a board vote.
+- **One disclosed conflict that Part 3 doesn't mention.** Bock (Chairman and Transaction Committee member) and Widmann also sat on N-able's board. Under the separation agreement, SWI must indemnify N-able for liabilities tied to the Cyber Incident (`swi-def14a-2024.md`, Certain Relationships and Related Party Transactions). So two of the three committee members sat on the board of a company SWI indemnifies. It isn't a conflict over the Turn/River price. It is the kind of DEF 14A disclosure Damodaran says investors skip.
+- **The controller's employee ran the channel to the buyer.** Widmann met Turn/River on June 20, November 26, December 5–7 and December 20, 2024. Silver Lake representatives, alongside Goldman Sachs and Jefferies, held conversations with 20+ financial suitors (`swi-defm14c-2025-merger-information-statement.md`, Background of the Merger). The filing describes the June meeting as part of exploring "investments for Silver Lake". The charter also gave up the company's claim to business opportunities presented to the Sponsors and their designated directors (`swi-def14a-2024.md`, Corporate Opportunities).
+- **Nothing on the record barked.** The board approved the merger unanimously (`swi-defm14c-2025-merger-information-statement.md`). The compiled filings record no dissent, abstention or recusal. They also contain no press coverage, so Damodaran's Tesla test (has a director ever been quoted pushing back?) can't be run from `sources/`.
+
+**What this changes:** It confirms the Notes' finding that the minority-protection linkage fails, and widens it. The problem is bigger than one conflicted member on a three-person committee. The board's independence count included three Silver Lake designees. Thoma Bravo exercised its control through a contract rather than a board seat. Silver Lake's own managing director handled most of the contact with the buyer.
+
+**Open question:** Who negotiated the price, the Transaction Committee or Widmann? The DEFM14C has management negotiating at the committee's direction after December 28, 2024, while Widmann carried the earlier contacts. A line-by-line read of the Background section would settle how much of the price-setting happened before the committee took over.

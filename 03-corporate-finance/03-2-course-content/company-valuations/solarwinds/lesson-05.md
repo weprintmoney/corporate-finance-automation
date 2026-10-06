@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 05: The Risk Free Rate"
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-21
+last_updated: 2026-10-06
 ---
 
 # SolarWinds (SWI) — Lesson 05: The Risk Free Rate
@@ -31,3 +31,19 @@ Module 1's `lesson-overview.md` files (Lessons 1–12) don't carry a separate "#
 ## Notes
 
 This lesson's core point — there is no global risk-free rate; pick a currency and stay consistent — turns out to hold exactly for SWI, in both directions the questions probe. Using the USD 10-year Treasury remains correct even after the 2025 LBO, because SWI's debt, reporting currency, and functional currency are all USD, and going further to country-specific risk-free-rate netting is blocked by disclosure: the 10-K's geographic footnote is only a two-line US/international split with no country-level detail. It matters for SWI mainly as a "don't over-engineer this" result — the corrected 35.2% international revenue share (not 31%, and not the MD&A's 69% North America figure) moves the weighted ERP by only a few basis points, far less than the beta-construction error carried through Lessons 8–11. This connects directly to Lessons 6–7, which build the equity risk premium on top of this risk-free-rate foundation.
+
+## Meetup 2 lens: net the default spread out of the Treasury rate
+
+In [Meetup 2](../../../03-7-meetups/meetup-2-2026-09-22.md) (2026-09-22), Damodaran said the US Treasury rate is no longer a true dollar risk-free rate now that the US has lost its AAA rating. He uses a rate about 22bp below the Treasury, to be consistent with how he cleans default risk out of every other government's bond.
+
+- **This project has not netted it out.** Both answers above use the gross 10-year Treasury of 4.77% (`treasury-and-fed-rates.md`, DGS10 as of 2026-09-03). So do Lesson 13's WACC and the rerun script (`tools/capital-structure-rerun.py`, `RF = .0477`).
+- **The current pairing counts US default risk twice.** The 4.46% US equity risk premium is the 4.23% mature-market premium plus a 0.23% US country risk premium (`damodaran-country-risk-premium-us.md`). Damodaran measures that premium against the netted rate. On 2026-01-01 he took the 4.18% Treasury, subtracted 0.23%, and got a 3.95% dollar risk-free rate (`03-4-blogs/posts/2026-02-01-data-update-4-for-2026-the-global-perspective.md`). Adding 4.46% to a gross 4.77% puts the US default spread in both the rate and the premium. His June 2025 post names this exact double-count as the reason to net (`2025-06-02-sovereign-ratings-default-risk-and-markets-the-moody-s-downgrade-aftermath.md`).
+- **Recalculated at 22bp:** rf = 4.77% − 0.22% = 4.55%. Levered beta is unchanged at 1.622 (1.2482 × [1 + 0.75 × 1,256.0/3,142.1]). Cost of equity = 4.55% + 1.622 × 4.46% = 11.79%, down from 12.01%. The 7.11% pre-tax cost of debt stays, because it is an observed loan rate (Lesson 12), not rf plus a spread. WACC = 71.4% × 11.79% + 28.6% × 7.11% × 0.75 = 8.42% + 1.52% = **9.94%**, down from 10.10%. Using the dataset's 0.23% gives rf 4.54% and the same 9.94%.
+- **Downstream (rerun script with RF = 4.55%, recommended track C):** DCF value per share rises from $18.94 to $19.49, which is 5.4% above the $18.50 deal price instead of 2.4%. The EBIT-coverage optimum stays at 17%. The upper case moves from 21% to 22%. The value gain from moving to the optimum becomes $261–435M (was $241–419M).
+- **The bankers' ranges no longer both bracket it.** 9.94% sits inside Goldman's 9%–11% but below Jefferies' 10.70%–11.70% (`swi-defm14c-2025-merger-information-statement.md`; Lesson 15).
+
+**What this changes:** The answer above is right that SWI needs one USD rate. It's wrong that the rate is the Treasury itself. Use 4.55% and carry it through Lessons 13, 18, 19 and 34 and the rerun script. The "deal priced at status-quo value" conclusion in Lesson 34 still holds within about 5%, but the deal now looks slightly cheap rather than fair.
+
+**Open questions:**
+- **Valuation date.** 4.77% is a September 2026 rate, while the DCF is compared with a February 2025 deal price. The early-2025 Treasury is not in `sources/`.
+- **Spread vintage.** The meetup and the July 2026 post use 0.22%. The dataset behind the 4.46% ERP uses 0.23%. Match the spread to the ERP vintage. The difference is 1bp.

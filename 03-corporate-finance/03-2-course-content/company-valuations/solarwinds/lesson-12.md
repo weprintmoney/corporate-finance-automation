@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 12: Debt: Measure and Cost"
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-10-05
+last_updated: 2026-10-06
 ---
 
 # SolarWinds (SWI) — Lesson 12: Debt: Measure and Cost
@@ -38,3 +38,17 @@ Lesson 12 closes Module 1 by defining debt properly (fixed, tax-deductible, defa
 - **Coverage on Capital IQ's EBITDA.** Capital IQ's EBITDA of $288.0M over $112.4M of gross interest is 2.56x. That falls in the 2.5x to 3.0x band (B1/B+, 3.81% spread) of the smaller-firm table. It sits between the EBIT result (1.85x, B3/B−) and the company-adjusted EBITDA result (3.42x, Ba2/BB), and it lines up with the B+ the report claims.
 - **Debt and rate.** Capital IQ's term loan balance of $1,206.6M is carrying value, the same as the balance sheet figure above, and its 7.11% coupon matches the 10-K. The $2.75B of new first- and second-lien debt matches Capital IQ's record of the financing commitment ($2,225M first lien and $525M second lien, plus a $200M revolver). Its weighted-average rate for FY2024 is 8.2%, which reflects higher rates earlier in the year. See Lesson 13 for the sensitivity.
 - Source: [`sources/capital-iq/valuation-and-capital-structure.md`](sources/capital-iq/valuation-and-capital-structure.md), [`governance-ownership-and-credit.md`](sources/capital-iq/governance-ownership-and-credit.md).
+
+## Meetup 1 lens: read default risk the way a lender does
+
+In [Meetup 1](../../../03-7-meetups/meetup-1-2026-09-08.md) (2026-09-08), Damodaran argued that relying on a credit rating hands the default judgment to Moody's or S&P. A lender should instead ask how much debt the firm has and what it uses to service that debt, across several years rather than one. SWI has no agency rating (above), so this is the only route available. Applied over FY2019–FY2024:
+
+- **The debt went down every year.** Total debt fell from $2,020.5M at the end of 2019 to $1,256.0M at the end of 2024. Net debt fell from $1,847.1M to $996.6M (`financial-statements-annual.md`).
+- **Cash covered interest in every year, including the SUNBURST years.** Operating cash flow before interest covered cash interest 3.1x in FY2019, 5.1x in FY2020 and 3.1x in FY2021, after removing N-able's discontinued-operations cash flow. It covered 2.9x in FY2022, 2.6x in FY2023 and 2.8x in FY2024 (`financial-statements-annual.md`, cash flow statement and supplemental). EBIT coverage was below 1x for most of the same period (Lesson 19). The gap is mostly non-cash amortization and stock-based compensation.
+- **The lenders' own verdict improved.** The term loan margin was SOFR + 3.75% at the end of 2023 (`swi-10k-fy2023.md`, debt note). Amendments 7 (January 2024) and 8 (July 2024) cut it to SOFR + 2.75% (`swi-10k-fy2024.md`, Note 9). Between the two cuts, the lenders' terms allowed the $168.2M special dividend. The lenders priced the risk themselves and grew more comfortable while EBIT coverage still read B−.
+- **Where that margin sits on the ratings table.** On the smaller-firm table, Ba2/BB carries a 2.74% default spread and B1/B+ carries 3.81% (`governance-ownership-and-credit.md`). The 2.75% margin lines up with Ba2/BB, though a spread over SOFR and a default spread over Treasuries aren't measured from the same base. Capital IQ's model score of bb− falls between the two. Three non-agency reads (lender pricing, the Capital IQ model, Capital IQ EBITDA coverage at B1/B+) all sit two to three notches above the EBIT-based B−.
+- **Stock-based compensation counts differently for lenders and for valuation.** The cash-flow view adds back $76.5M of stock-based compensation (`financial-statements-annual.md`). That is fair for a lender's question, because the expense dilutes shareholders rather than using cash that would otherwise pay interest. It is not fair for valuation, where Damodaran charges it as a real expense (Lesson 14). One part does use cash: the $26.5M SWI paid to cover employees' RSU taxes in FY2024 (`swi-10k-fy2024.md`, MD&A).
+
+**What this changes:** It confirms Part 2's choice of the observed 7.11% rate over the synthetic B− rating, and adds a reason. The market rate is the lenders' own multi-year default assessment, and it improved through 2024. It also suggests the EBIT-based B− overstates SWI's default risk when setting the cost of debt.
+
+**Open question:** If lenders price SWI on cash flow, then the EBIT-coverage schedule used in Lesson 18 and the rerun may set spreads too high at every debt level. That would push the optimal debt ratio up. Rerunning the schedule on cash-flow coverage would show whether 17%–21% holds.

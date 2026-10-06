@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 01: Valuation: The Big Picture / What is Cor
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-21
+last_updated: 2026-10-06
 ---
 
 # SolarWinds (SWI) — Lesson 01: Valuation: The Big Picture / What is Corporate Finance?
@@ -31,3 +31,19 @@ Module 1's `lesson-overview.md` files (Lessons 1–12) don't carry a separate "#
 ## Notes
 
 This opening lesson sets the frame the whole project runs on: split a firm into assets-in-place versus growth assets, then place it on the corporate life-cycle curve. For SWI, both exercises land on the same conclusion from different angles — FY2024 capital allocation was dominated by a special dividend rather than reinvestment, and every trend line (slow revenue growth, margin expansion through disinvestment, a first-ever dividend, sponsors selling down) points to a mature, financing-and-dividend-stage company rather than a growth story. That classification isn't just descriptive; it's the premise every later module builds on — Module 2's financing-mix analysis (Lessons 17–19) and Module 3's dividend-policy analysis (Lessons 25–27) both take "mature company" as a given rather than re-deriving it. No WACC-weight, ownership-concentration, or dividend correction is directly implicated in this lesson's own answers, though later lessons revisit the ownership split with the correction documented in [`README.md`](README.md).
+
+## Meetup 1 lens: the harvest was right; the question is who got paid
+
+In [Meetup 1](../../../03-7-meetups/meetup-1-2026-09-08.md) (2026-09-08), Damodaran argued that harvesting cash is the end game for an aging business ("the fact that they were old made them pay dividends"). He used Petrobras to show a firm that broke all three principles: it invested below the hurdle rate, chose a debt mix that raised it, and paid dividends it couldn't afford. Testing SWI's FY2024 capital allocation against the same three principles:
+
+- **Investment: SWI fails the return test, but not the way Petrobras did.** ROIC was 6.66% against a ~10.1% WACC (Lesson 14). Petrobras kept pouring money into projects that earned less than the hurdle rate. SWI did the opposite: reinvestment was $128.6M, 16.1% of revenue, and capex fell to 0.7% of revenue (above). The return shortfall sits on 2016 LBO goodwill, which is a past purchase price, not a current investment choice. When a business can't earn its cost of capital, spending little on it is the right response.
+- **Dividend: SWI could afford it.** The $168.2M special dividend was covered by ~$197M of FCFF (Lesson 14), $201.1M of levered free cash flow and $259.3M of year-end cash and short-term investments (`financial-statements-annual.md`). Petrobras paid dividends while its free cash flow was negative; SWI's was positive. The 2021 dividend of $237.2M passed through the $238.2M one-time dividend N-able paid SWI at the spin-off (`swi-10k-fy2023.md`, Separation note).
+- **Financing: this is the one place SWI resembles Petrobras, and only slightly.** Debt was ~29% of market capital against a 17%–21% optimum, which is $332–508M too much ([`capital-iq-rerun.md`](capital-iq-rerun.md)). The same $168.2M could have retired a third to a half of that excess. The WACC cost was small, 10.10% against 9.99%–10.06%, so this was a mild breach, not Petrobras-scale.
+- **The shareholder base decided the form of the payout.** SWI did no open-market buybacks. The $26.5M of FY2024 "repurchases" was shares withheld to cover RSU taxes (`swi-10k-fy2024.md`, MD&A financing cash flows). With the sponsors holding 66.34% (Silver Lake 36.56%, Thoma Bravo 29.79%; `swi-def14a-2024.md`), a buyback would only have paid them cash if they sold shares. The pro-rata dividend paid them about $111.6M ($61.5M and $50.1M) with no sale. The meetup's tax argument for buybacks can't be tested: the sponsor funds' tax position isn't in the compiled sources.
+- **The timing fits a controlling holder that couldn't sell.** The board ended its market check on November 29, 2023. All three bidders had come in at $12.00–$14.00 per share and then withdrawn (`swi-defm14c-2025-merger-information-statement.md`, Background of the Merger). The dividend was declared on March 15, 2024 (`swi-10k-fy2024.md`). The filings don't say why. The sequence is consistent with Damodaran's Petrobras point that whoever controls the board sets the payout policy.
+
+**What this changes:** Part 1 treats the dividend as a charge against SWI ("the money went to the sponsors, not to the observability platform"). By the meetup's standard, the investment side of that criticism is backwards. A firm earning below its cost of capital should return cash rather than reinvest it. The valid criticism is narrower: the cash went to equity holders while the firm carried $332–508M of excess debt. Part 2's mature, financing-and-dividend classification is confirmed.
+
+**Open questions:**
+- Did N-able borrow to fund the $238.2M it paid SWI in 2021? If it did, the 2021 dividend was debt-funded one step removed. N-able's filings aren't in `sources/`.
+- The 1.31× dividend-to-reinvestment ratio in Part 1 only means something if SWI had projects that cleared its hurdle rate. Nothing in the compiled sources shows that it did.
