@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 19: Follow-Up: Value Impact and Stress-Testi
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-21
+last_updated: 2026-10-06
 ---
 
 # SolarWinds (SWI) — Lesson 19: Follow-Up: Value Impact and Stress-Testing the Optimal Debt Ratio
@@ -35,3 +35,7 @@ last_updated: 2026-09-21
 ## Notes
 
 Lesson 19 stress-tests the optimal-debt-ratio conclusion from Lesson 18: how much real value is on the table from moving to it, and how fragile is the current structure to a downturn. For SWI, the value-transfer reframe (Part 1) finds the financing-savings opportunity was modest (roughly $32–49M, well under 1% of firm value) and, tellingly, Turn/River moved leverage the opposite direction anyway, taking debt toward ~60% of capital; the stress test (Part 2) finds the *synthetic rating* is fragile to an EBIT decline but the *actual covenant* is nearly untrippable, and SWI's own multi-year history of sub-1x EBIT coverage without a single covenant breach or default is direct evidence the theoretical fragility overstates the real risk. Both parts reinforce the Lesson 17–18 conclusion that SWI's leverage, while a 2016-LBO legacy, was closer to appropriate than intuition suggests — the real financing-value question was never "can SWI service this debt" but "why did the sponsor add so much more of it." This closes Module 2 and hands off to Module 3's broader financing-mix questions in Lessons 20–23.
+
+## Rerun (2026-10-06): value and paydown figures
+
+The $416M gain and the $200–280M paydown above were built on the $5,717M firm value and the 13% optimum. On the corrected inputs (firm value ~$4.4B, optimum 17%–21%, current ratio 28.6%), moving to the optimum is worth **$241–419M**, about $1.30–2.26 per share on 185.0M diluted shares. That takes a paydown of roughly **$330–510M**, not $200–280M. The direction of the conclusion is unchanged: the value-creating move was to retire debt, and Turn/River added it. Full comparison and script: [`capital-iq-rerun.md`](capital-iq-rerun.md).

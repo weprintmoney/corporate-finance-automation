@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 18: The Cost of Capital Approach to the Opti
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-10-05
+last_updated: 2026-10-06
 ---
 
 # SolarWinds (SWI) — Lesson 18: The Cost of Capital Approach to the Optimal Debt Ratio
@@ -69,3 +69,7 @@ The three questions below come from Damodaran's *Corporate Life Cycle* book, Cha
 - **Actual rating.** The Part 2 answer cites an S&P B+ rating, but Lesson 12 finds no rating in any compiled source. Capital IQ does not settle this.
 - **Board classification checked.** The classified board with staggered three-year terms described above is correct per the 2024 DEF 14A. Capital IQ's governance page says otherwise but reflects the post-closing charter.
 - Source: [`sources/capital-iq/governance-ownership-and-credit.md`](sources/capital-iq/governance-ownership-and-credit.md).
+
+## Rerun (2026-10-06): optimum is 17%, not 13%
+
+The 13% optimum above was computed on a firm value of $5,717M, which carries the report's equity-vs-enterprise-value error. On the corrected ~$4.4B firm value, the same smaller-firm table and Hamada loop put the optimum at **17%** (EBIT coverage, Capital IQ's $218.7M EBIT) and **21%** (Capital IQ's standardized EBITDA of $273.5M, or EBIT plus the $52.9M of 2016-LBO amortization, which give nearly the same figure). The 25% EBITDA-case optimum above relied on company-adjusted EBITDA of $384.7M, which adds back stock-based compensation. Read the range as **17%–21%**, not 13%–25%. SWI's ~29% is over-levered on every defensible measure. Full comparison and script: [`capital-iq-rerun.md`](capital-iq-rerun.md).
