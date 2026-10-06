@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 09: Beta Fundamentals"
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-21
+last_updated: 2026-10-05
 ---
 
 # SolarWinds (SWI) — Lesson 09: Beta Fundamentals
@@ -31,3 +31,7 @@ Module 1's `lesson-overview.md` files (Lessons 1–12) don't carry a separate "#
 ## Notes
 
 Lesson 9 decomposes beta into its three determinants — business risk, operating leverage, financial leverage — and this is the lesson that most directly diagnoses what's wrong with the report's existing beta build. Part 1 establishes that SWI's underlying business (mission-critical monitoring, 93.5% recurring revenue) is genuinely low-risk, so the company's risk is almost entirely a financial-leverage story; Part 2 quantifies that story and, in doing so, catches the report's Step 11 debt-to-equity error at its source — using the $4.4B enterprise value as if it were equity value, understating D/E and therefore the levered beta and cost of equity. This is the first lesson to name that specific error explicitly; see the correction documented in [`README.md`](README.md) rather than re-deriving it in every later lesson that touches beta or WACC weights. It sets up Lesson 10's decision to use one industry-wide unlevered beta (since SWI is single-business) and Lesson 13's cost-of-capital-weights rebuild.
+
+## Capital IQ cross-check (2026-10-05)
+
+- **Share count discrepancy.** This lesson's deal-price equity of $3,202.9M uses 173.1M shares, which I could not source. Lesson 13 uses 171.6M basic shares ($3,174.0M), and Capital IQ's balance sheet and Key Stats both show 171.6M, with a market cap of $3,173.0M at $18.49. Capital IQ's deal record implies about 184.9M diluted shares at $18.50. On 171.6M shares, D/E is 40.5% and the relevered beta is about 1.63, against 40.1% and 1.62 above. Financial leverage still contributes about 0.38 of beta, or 23% of the total, so the conclusion is unchanged. Prefer 171.6M for consistency with Lesson 13. Sources: [`sources/capital-iq/valuation-and-capital-structure.md`](sources/capital-iq/valuation-and-capital-structure.md), [`turn-river-transaction.md`](sources/capital-iq/turn-river-transaction.md).

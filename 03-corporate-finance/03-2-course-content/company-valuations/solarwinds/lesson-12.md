@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 12: Debt: Measure and Cost"
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-21
+last_updated: 2026-10-05
 ---
 
 # SolarWinds (SWI) — Lesson 12: Debt: Measure and Cost
@@ -31,3 +31,10 @@ Module 1's `lesson-overview.md` files (Lessons 1–12) don't carry a separate "#
 ## Notes
 
 Lesson 12 closes Module 1 by defining debt properly (fixed, tax-deductible, default-triggering — which pulls operating leases in but leaves deferred revenue out) and by settling actual-versus-synthetic ratings. For SWI, correcting the debt figure to $1,285.0M (versus the balance sheet's $1,206.6M and the report's overstated ~$82M of lease debt) is a small fix, but discovering that SWI has no actual credit rating anywhere in its filings is a bigger one — the report's "B+ from S&P" claim can't be traced to any compiled source, and the EBIT-based synthetic rating (B3/B−) sits meaningfully below what the EBITDA-based coverage would imply, a gap Lesson 18 later exploits to find the optimal-debt-ratio "kink." This lesson's market-observed cost of debt (7.11% effective, SOFR + 2.75%) is the number Lesson 13 uses directly to assemble the WACC, closing out Module 1's discount-rate build.
+
+## Capital IQ cross-check (2026-10-05)
+
+- **Rating.** Capital IQ also shows no agency rating. It does show a statistical CreditModel score of bb- (2024-12-31) and a 0.43% market-signal default probability (2025-04-16). These are model outputs, not S&P ratings, so the "B+ from S&P" question stays open. Lesson 18's Part 2 answer also cites an S&P B+ rating, which conflicts with this lesson's finding. One of the two needs a source.
+- **Coverage on Capital IQ's EBITDA.** Capital IQ's EBITDA of $288.0M over $112.4M of gross interest is 2.56x. That falls in the 2.5x to 3.0x band (B1/B+, 3.81% spread) of the smaller-firm table. It sits between the EBIT result (1.85x, B3/B−) and the company-adjusted EBITDA result (3.42x, Ba2/BB), and it lines up with the B+ the report claims.
+- **Debt and rate.** Capital IQ's term loan balance of $1,206.6M is carrying value, the same as the balance sheet figure above, and its 7.11% coupon matches the 10-K. The $2.75B of new first- and second-lien debt matches Capital IQ's record of the financing commitment ($2,225M first lien and $525M second lien, plus a $200M revolver). Its weighted-average rate for FY2024 is 8.2%, which reflects higher rates earlier in the year. See Lesson 13 for the sensitivity.
+- Source: [`sources/capital-iq/valuation-and-capital-structure.md`](sources/capital-iq/valuation-and-capital-structure.md), [`governance-ownership-and-credit.md`](sources/capital-iq/governance-ownership-and-credit.md).

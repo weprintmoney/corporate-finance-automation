@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 35: Multiples"
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-21
+last_updated: 2026-10-05
 ---
 
 # SolarWinds (SWI) — Lesson 35: Multiples
@@ -41,3 +41,10 @@ last_updated: 2026-09-21
 ## Notes
 
 Lesson 35 distinguishes pricing (multiples) from valuing (DCF) and, in Part 2, backs out what actually drives a multiple rather than assuming "cheap" means undervalued. For SWI, Part 1 finds the deal's revenue multiple (~5.5x) is actually a premium versus both Damodaran's sector average and Jefferies' own precedent-transaction comps, while SWI's earnings multiples look cheap in absolute terms; Part 2 shows that earnings-multiple discount is fully explained by growth and ROE gaps against the sector — no SUNBURST reputational discount is needed, because retention data already rules that story out. This closes the loop opened in Lesson 3's discussion of the SUNBURST market discount and Lesson 28's peer-benchmarking exercise, both of which independently concluded the same thing: SWI's valuation gap versus peers is fundamentals-driven, not sentiment-driven. It hands off directly to Lesson 36's course-synthesis lesson, which pulls this multiples read together with the DCF, ROIC, and governance findings into one final verdict.
+
+## Capital IQ cross-check (2026-10-05)
+
+- **The precedent set decides the conclusion.** Capital IQ's own comparable-transactions list for SolarWinds has 14 other deals, mostly security software and many by Thoma Bravo or Vista. Its median EV/LTM revenue is about 9x, against SolarWinds' 5.5x. On that set, Turn/River did not pay up. Capital IQ's set is dominated by faster-growing security targets with thin EBITDA, so Jefferies' 3.3x median across 12 software take-privates remains the better match. The "paid up" conclusion above depends on that choice and should be stated that way. The closest Capital IQ deals in profile are Imperva (2018, 5.2x) and Barracuda (2017, 3.8x).
+- **Deal multiples confirmed.** Capital IQ's implied multiples at the offer are 5.5x LTM revenue and 15.3x LTM EBITDA, on enterprise value of $4,419.5M and equity value of $3,420.9M.
+- **Peers today.** At 2026-10-02 prices, N-able, SolarWinds' own spin-off, trades at 2.1x revenue and 15.0x EBITDA, and PagerDuty at 2.3x revenue. Datadog and Dynatrace trade at 24.2x and 7.7x revenue. Software multiples have fallen sharply since the deal date, so any peer comparison here is date-sensitive.
+- Source: [`sources/capital-iq/comparable-transactions-and-quick-comps.md`](sources/capital-iq/comparable-transactions-and-quick-comps.md), [`peer-set-observability-itops.md`](sources/capital-iq/peer-set-observability-itops.md).
