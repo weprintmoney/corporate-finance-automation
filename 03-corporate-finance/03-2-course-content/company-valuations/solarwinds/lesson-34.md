@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 34: Applied DCF Valuation and the Value of C
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-09-21
+last_updated: 2026-10-06
 ---
 
 # SolarWinds (SWI) — Lesson 34: Applied DCF Valuation and the Value of Control
@@ -41,3 +41,20 @@ last_updated: 2026-09-21
 ## Notes
 
 This is the project's capstone valuation lesson: build the complete Disney-style DCF, then separate the deal premium into "value of control" using the four restructuring levers. Part 1's status-quo DCF, built entirely from management's own forecasts and the corrected WACC, lands at $18.42 versus the actual $18.50 deal price — within 0.4% — with stock-based compensation identified as the single factor that determines whether the number lands near the deal price or 39% higher. Part 2 then shows that near-exact match means the acquisition premium is almost entirely governance-discount recapture (the public market never priced SWI at its own intrinsic value) rather than an operating turnaround, and — consistent with Lesson 18's optimal-debt-ratio finding — that Turn/River's own re-leveraging plan actually *raises* WACC rather than lowering it, meaning the deal's return comes from resetting the equity basis and IRR, not from raising ROIC. This lesson also carries the ownership-concentration correction (Silver Lake and Thoma Bravo together at ~65%, not Silver Lake alone at ~75%) documented fully in [`README.md`](README.md). It sets up Lesson 35's multiples cross-check and Lesson 36's final synthesis.
+
+## Meetup 3 lens: who bears the loss?
+
+In [Meetup 3](../../../03-7-meetups/meetup-3-2026-10-06.md) (2026-10-06), Damodaran argued that debt creates value only through the interest tax deduction, and that a financing structure is fragile when someone other than the company's own equity investors absorbs the downside. Applied to the Turn/River financing above:
+
+- **Before the buyout, the debt earned its keep.** SWI carried 26%–29% debt against a WACC-minimizing range of 13%–25% (Lesson 18), so it was modestly over-levered. But the shield was real: $112.4M of interest at 25% saved about $28M a year, because SWI paid $61.5M of cash taxes (Lesson 17).
+- **After the buyout, most of the added debt fails the tax-savings test.** Roughly $296M of interest against $208M of EBIT means much of the deduction can't be used, so the incremental ~$1.5B of debt adds risk without adding value. WACC rises from 10.33% to about 11.5% (above). This is the meetup's "isn't debt just cheaper?" error at scale: borrowing pushes up both the cost of equity and the cost of debt.
+- **Turn/River's $1,670.0M of equity is first loss.** That is the healthy case by the meetup's standard: the investors who chose the risk bear it.
+- **The lenders are lending against real cash flow, not a promise.** 93.5% of revenue is recurring (Lesson 9), and revenue held its level through SUNBURST (Lesson 20). That is the opposite of the meetup's data-center example, where lenders finance capacity ahead of revenue.
+- **Customers are the risk-bearers nobody priced.** Interest absorbed 55.5% of operating cash flow before the buyout (Lesson 17) and takes more after it. For a security-sensitive vendor with a federal customer base that has already been breached once, the downside of a cash squeeze lands partly on customers, through less R&D and security spending. That is the analogue of the meetup's depositors.
+- **A seller moved into the debt.** Thoma Bravo took part of the second lien, moving from first-loss owner to senior-to-equity creditor.
+- **Why borrow without the tax benefit?** The meetup's answer for private firms fits: to avoid putting in more equity and diluting ownership. Leverage raises the fund's equity IRR. It does not raise the company's value.
+
+**Open questions:**
+- Lesson 18 puts the optimum at 13%–25% and this lesson puts it near 30%, from different betas. Reconcile the two before the final submission.
+- The ~$296M interest figure is an estimate. Second-lien pricing is not in `sources/`, so check it against the April 2025 credit agreements.
+- The AI risk to observability renewals is the downside case that 7.2x leverage leaves little room for. SUNBURST tested a reputational shock, not a pricing shock.
