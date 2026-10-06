@@ -51,4 +51,4 @@ In [Meetup 1](../../../03-7-meetups/meetup-1-2026-09-08.md) (2026-09-08), Damoda
 
 **What this changes:** It confirms Part 2's choice of the observed 7.11% rate over the synthetic B− rating, and adds a reason. The market rate is the lenders' own multi-year default assessment, and it improved through 2024. It also suggests the EBIT-based B− overstates SWI's default risk when setting the cost of debt.
 
-**Open question:** If lenders price SWI on cash flow, then the EBIT-coverage schedule used in Lesson 18 and the rerun may set spreads too high at every debt level. That would push the optimal debt ratio up. Rerunning the schedule on cash-flow coverage would show whether 17%–21% holds.
+**Open question:** If lenders price SWI on cash flow, then the EBIT-coverage schedule used in Lesson 18 and the rerun may set spreads too high at every debt level. That would push the optimal debt ratio up. Rerunning the schedule on cash-flow coverage would show whether 17%–22% holds.

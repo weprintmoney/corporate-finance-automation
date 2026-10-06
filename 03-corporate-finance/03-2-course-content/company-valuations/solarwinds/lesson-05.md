@@ -42,7 +42,7 @@ In [Meetup 2](../../../03-7-meetups/meetup-2-2026-09-22.md) (2026-09-22), Damoda
 - **Downstream (rerun script with RF = 4.55%, recommended track C):** DCF value per share rises from $18.94 to $19.49, which is 5.4% above the $18.50 deal price instead of 2.4%. The EBIT-coverage optimum stays at 17%. The upper case moves from 21% to 22%. The value gain from moving to the optimum becomes $261–435M (was $241–419M).
 - **The bankers' ranges no longer both bracket it.** 9.94% sits inside Goldman's 9%–11% but below Jefferies' 10.70%–11.70% (`swi-defm14c-2025-merger-information-statement.md`; Lesson 15).
 
-**What this changes:** The answer above is right that SWI needs one USD rate. It's wrong that the rate is the Treasury itself. Use 4.55% and carry it through Lessons 13, 18, 19 and 34 and the rerun script. The "deal priced at status-quo value" conclusion in Lesson 34 still holds within about 5%, but the deal now looks slightly cheap rather than fair.
+**What this changes:** The answer above is right that SWI needs one USD rate. It's wrong that the rate is the Treasury itself. Use 4.55%. This has now been carried through Lessons 13, 18, 19 and 34, the rerun script and [`capital-iq-rerun.md`](capital-iq-rerun.md). The "deal priced at status-quo value" conclusion in Lesson 34 still holds within about 5%, but the deal now looks slightly cheap rather than fair.
 
 **Open questions:**
 - **Valuation date.** 4.77% is a September 2026 rate, while the DCF is compared with a February 2025 deal price. The early-2025 Treasury is not in `sources/`.
