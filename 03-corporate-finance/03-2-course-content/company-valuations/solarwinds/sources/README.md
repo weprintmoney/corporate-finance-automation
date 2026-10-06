@@ -4,6 +4,10 @@ Source materials actually gathered for the SolarWinds lesson-by-lesson question 
 
 ## What's compiled
 
+### `capital-iq/` — S&P Capital IQ pulls (2026-10-05)
+
+Financial statements, multiples, debt detail, the Turn/River transaction record, comparable deals, a peer set and governance data from the NYU academic account. See [capital-iq/README.md](capital-iq/README.md) for the file list and what the account could not provide.
+
 ### `sec-filings/` — SolarWinds Corp (SEC CIK 0001739942, ticker SWI while public)
 
 | File | What it is | Filed |
