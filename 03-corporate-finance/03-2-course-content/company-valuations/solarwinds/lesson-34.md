@@ -46,7 +46,7 @@ This is the project's capstone valuation lesson: build the complete Disney-style
 
 In [Meetup 3](../../../03-7-meetups/meetup-3-2026-10-06.md) (2026-10-06), Damodaran argued that debt creates value only through the interest tax deduction, and that a financing structure is fragile when someone other than the company's own equity investors absorbs the downside. Applied to the Turn/River financing above:
 
-- **Before the buyout, the debt earned its keep.** SWI carried 26%–29% debt against a WACC-minimizing range of 13%–25% (Lesson 18), so it was modestly over-levered. But the shield was real: $112.4M of interest at 25% saved about $28M a year, because SWI paid $61.5M of cash taxes (Lesson 17).
+- **Before the buyout, the debt earned its keep.** SWI carried about 29% debt against a WACC-minimizing range of 17%–21% (rerun below), so it was over-levered by 8–12 points. But the shield was real: $112.4M of interest at 25% saved about $28M a year, because SWI paid $61.5M of cash taxes (Lesson 17).
 - **After the buyout, most of the added debt fails the tax-savings test.** Roughly $296M of interest against $208M of EBIT means much of the deduction can't be used, so the incremental ~$1.5B of debt adds risk without adding value. WACC rises from 10.33% to about 11.5% (above). This is the meetup's "isn't debt just cheaper?" error at scale: borrowing pushes up both the cost of equity and the cost of debt.
 - **Turn/River's $1,670.0M of equity is first loss.** That is the healthy case by the meetup's standard: the investors who chose the risk bear it.
 - **The lenders are lending against real cash flow, not a promise.** 93.5% of revenue is recurring (Lesson 9), and revenue held its level through SUNBURST (Lesson 20). That is the opposite of the meetup's data-center example, where lenders finance capacity ahead of revenue.
@@ -55,6 +55,12 @@ In [Meetup 3](../../../03-7-meetups/meetup-3-2026-10-06.md) (2026-10-06), Damoda
 - **Why borrow without the tax benefit?** The meetup's answer for private firms fits: to avoid putting in more equity and diluting ownership. Leverage raises the fund's equity IRR. It does not raise the company's value.
 
 **Open questions:**
-- Lesson 18 puts the optimum at 13%–25% and this lesson puts it near 30%, from different betas. Reconcile the two before the final submission.
+- ~~Lesson 18 puts the optimum at 13%–25% and this lesson puts it near 30%.~~ Resolved in the rerun below: the optimum is 17%–21%.
 - The ~$296M interest figure is an estimate. Second-lien pricing is not in `sources/`, so check it against the April 2025 credit agreements.
 - The AI risk to observability renewals is the downside case that 7.2x leverage leaves little room for. SUNBURST tested a reputational shock, not a pricing shock.
+
+## Rerun (2026-10-06): the pre-buyout optimum was 17%–21%, not ~30%
+
+The Part 2 answer above says SWI "was already close to its WACC-minimizing ratio (~30%, WACC ~10.16%)" and recommends holding leverage near 28%–30%. That ~30% is only reproducible with company-adjusted EBITDA ($384.7M) as the coverage numerator. On EBIT, or on Capital IQ's standardized EBITDA of $273.5M, the optimum is **17%–21%**. So SWI was 8–12 points over-levered before Turn/River, and the buyout moved it much further from the optimum, not from near it.
+
+The status-quo DCF above ($18.42) used 10.33% WACC and net debt excluding leases. Rerun with leases in net debt, it gives **$18.94** at the 7.11% year-end loan rate (WACC 10.10%) and **$18.16** at Capital IQ's 8.2% FY2024 average rate (WACC 10.33%). Both are within about 2% of the $18.50 deal price, so the "deal priced at status-quo value" conclusion holds. Full comparison and script: [`capital-iq-rerun.md`](capital-iq-rerun.md).

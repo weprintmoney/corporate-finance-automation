@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Course Project Overview"
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-10-05
+last_updated: 2026-10-06
 ---
 
 # SolarWinds (SWI) — Course Project Overview
@@ -57,6 +57,7 @@ This project applies each lecture's concepts to a real company — SolarWinds (N
 
 - **[`valuation-report.md`](valuation-report.md)** — the original Module 1, 12-step cost-of-capital report (Steps 2–12 + summary WACC table). See the material caution above for two confirmed errors in its WACC weights and ownership-concentration claims, plus the dividend correction.
 - **[`valuation-report-standalone.html`](valuation-report-standalone.html)** — a standalone HTML render of the report above.
+- **[`capital-iq-rerun.md`](capital-iq-rerun.md)** — 2026-10-06 rerun of cost of capital, optimal debt ratio and the DCF on SEC-only vs. Capital IQ inputs, with the script in [`tools/`](tools/). It supersedes the optimal-debt figures in lessons 18, 19 and 34.
 - **[`sources/`](sources/)** — compiled source documents (SEC filings, peer filings, market data) backing every answer below. See [`sources/README.md`](sources/README.md) for the full manifest, what's still missing, and why.
 - **`lesson-01.md` through `lesson-36.md`** — one file per lesson. Each carries that lesson's quote/question/sources/answer entries verbatim, plus a `## Notes` section synthesizing what the lesson taught, why it mattered for this analysis, and how it connects to adjacent lessons. Lesson 24 has no transcript — see `lesson-24.md` for why.
 
