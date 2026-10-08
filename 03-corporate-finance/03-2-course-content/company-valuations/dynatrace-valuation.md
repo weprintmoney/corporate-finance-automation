@@ -22,7 +22,7 @@ A **"What changed"** table sits directly under the Summary. Capital IQ's latest 
 
 **Dynatrace, Inc.** (NYSE: DT) — an AI-powered, cloud-native "unified observability and security" software platform (application performance monitoring, infrastructure monitoring, log analytics, digital experience, and security), founded in 2005, headquartered in Waltham, Massachusetts, ~5,600 employees (2026), roughly 4,100 customers. Originally a Compuware product line, carved out and taken private by Thoma Bravo in 2014, then IPO'd on NYSE in August 2019. Fiscal year ends March 31.
 
-FY2026 (ended March 31, 2026): revenue **$2,018.4M, +19% reported / +17% constant currency** (the prior version of this report said +16%; that was wrong), ARR $2.14B (+17%), net retention 110%, GAAP operating margin 12%, non-GAAP operating margin 29%. Last twelve months to 2026-06-30 per Capital IQ: revenue $2,095.6M, EBITDA $291.4M, EBIT $273.1M, net income $151.4M, cash from operations $598.4M, capex $27.8M, stock-based compensation $301.3M (14.4% of revenue), R&D $509.0M (24.3%).
+FY2026 (ended March 31, 2026): revenue **$2,018.4M, +19% reported / +17% constant currency** (the prior version of this report said +16%; that was wrong), ARR $2,053.6M at year-end and $2,136.0M at 2026-06-30 (+17%), net retention 110%, GAAP operating margin 12%, non-GAAP operating margin 29%. Last twelve months to 2026-06-30 per Capital IQ: revenue $2,095.6M, EBITDA $291.4M, EBIT $273.1M, net income $151.4M, cash from operations $598.4M, capex $27.8M, stock-based compensation $301.3M (14.4% of revenue), R&D $509.0M (24.3%).
 
 | Market snapshot (Capital IQ, 2026-10-07) | Value |
 |---|---:|
@@ -34,7 +34,7 @@ FY2026 (ended March 31, 2026): revenue **$2,018.4M, +19% reported / +17% constan
 | Total debt (2026-06-30, operating leases only) | $159.3M |
 | Float | 99.3% |
 
-**The Arize AI acquisition closed on 2026-10-01** — $915 million (~$815M cash plus replacement equity awards), signed 2026-08-13. Dynatrace guided it as ~200 basis points accretive to FY2027 ARR growth (~$40M) and ~175 basis points dilutive to FY2027 non-GAAP operating margin, with margin expansion resuming from FY2028. Arize's co-founders (Jason Lopatecki and Aparna Dhinakaran) joined Dynatrace; Lopatecki continues to lead the Arize team inside COO Rick McConnell's organization.
+**The Arize AI acquisition closed on 2026-10-01** — $915 million (~$815M cash plus replacement equity awards), signed 2026-08-13. Dynatrace guided it as ~200 basis points accretive to FY2027 ARR growth (~$40M) and ~175 basis points dilutive to FY2027 non-GAAP operating margin, with margin expansion resuming from FY2028. Arize's co-founders (Jason Lopatecki and Aparna Dhinakaran) joined Dynatrace; Lopatecki continues to lead the Arize team reporting into CEO Rick McConnell's organization.
 
 **Five days after signing Arize, Dynatrace priced its first funded debt since 2022** — the exchangeable notes described in Step 12 — and on 2026-09-24 signed a new credit agreement. The purchase was therefore financed with convertible debt, not the revolver draw the prior version of this report assumed.
 ---
