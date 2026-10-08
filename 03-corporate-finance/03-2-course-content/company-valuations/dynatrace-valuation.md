@@ -3,24 +3,40 @@ title: "Dynatrace, Inc. — Module 1 Valuation: Cost of Capital Analysis"
 status: active
 owner: weprintmoney
 created: 2026-09-28
-last_updated: 2026-09-28
+last_updated: 2026-10-07
 ---
 
 # Company Valuation: Dynatrace, Inc.
 *Applied Corporate Finance — Module 1 Analysis*
 
-**A note on data availability:** Dynatrace (NYSE: DT) is a real, SEC-reporting public company, so most inputs below are sourced from primary filings (10-K, 10-Q, 8-K, DEF 14A, S-1/424B4) and its own investor-relations releases, cross-checked against secondary financial-data sites. None of this checkout's pre-fetched data files are populated for this report: there is no `companies/DT.json` (the `companies/` folder doesn't exist in this checkout at all), no `market-rates.json` (also absent), and `industry-betas.json` / `country-risk.json` exist but are empty stubs (`"industries": {}` / `"countries": {}`, last touched 2026-09-01, CI refresh apparently not yet run). Every rate and beta input below is therefore either live-web-sourced or drawn from the Damodaran dataset spreadsheets already checked into this repo's Lesson 10/12 folders (`spreadsheet-totalbeta24.md`, `spreadsheet-ratings.md`) — the same fallback this repo's MinIO report used for its industry-beta input, and exactly what Module 1 teaches when the live feeds are thin. Several points where third-party aggregator sites (Fintel, GuruFocus, WallStreetZen, TickerGate) are quoting **stale, years-old figures as if current** were caught and are flagged explicitly below rather than repeated as fact — most notably Thoma Bravo's ownership stake (see Step 4). Every estimated (not directly sourced) figure is flagged inline and again in the Data Provenance section at the end.
+**Refreshed 2026-10-07 with S&P Capital IQ data.** The 2026-09-28 version of this report was built from SEC filings and free aggregator sites. This version replaces the market, ownership, capital-structure and geography inputs with Capital IQ pulls dated 2026-10-07 (classic platform, company ID 628406634), and it changes three conclusions:
 
+1. **"No funded debt" is no longer true.** On 2026-08-20 Dynatrace LLC closed **$1.4375B of 0.00% Exchangeable Senior Notes due 2031**. Steps 9, 11 and 12 are rebuilt around that.
+2. **The risk-free rate is netted.** Following the Meetup 2 lens this repo applied to SolarWinds on 2026-10-06, the risk-free rate is the 10-year Treasury less Damodaran's 0.22% US default spread, and US revenue carries a 4.46% equity risk premium (4.23% mature premium plus a 0.23% US country risk premium).
+3. **The Arize acquisition has closed** (2026-10-01), so the balance sheet is shown pro forma for the notes and the purchase.
+
+A **"What changed"** table sits directly under the Summary. Capital IQ's latest reported balance sheet is 2026-06-30, which predates both the notes and the Arize close; every pro forma figure is flagged as an estimate. Capital IQ consensus estimates are deliberately not reproduced in this public repo. Damodaran inputs (industry beta, ratings table) still come from the spreadsheets checked into the Lesson 10 and 12 folders, because `industry-betas.json` and `country-risk.json` are still empty stubs.
 ---
 
 ## Step 1 — Company Selected
 
-**Dynatrace, Inc.** (NYSE: DT) — an AI-powered, cloud-native "unified observability and security" software platform (application performance monitoring, infrastructure monitoring, log analytics, digital experience, and security), founded in 2005, headquartered in Waltham, Massachusetts, ~5,600 employees (2026). Originally a Compuware product line, carved out and taken private by Thoma Bravo in 2014, then IPO'd on NYSE in August 2019. Fiscal year ends March 31.
+**Dynatrace, Inc.** (NYSE: DT) — an AI-powered, cloud-native "unified observability and security" software platform (application performance monitoring, infrastructure monitoring, log analytics, digital experience, and security), founded in 2005, headquartered in Waltham, Massachusetts, ~5,600 employees (2026), roughly 4,100 customers. Originally a Compuware product line, carved out and taken private by Thoma Bravo in 2014, then IPO'd on NYSE in August 2019. Fiscal year ends March 31.
 
-FY2026 (ended March 31, 2026): revenue $2.02B (+16% YoY), annual recurring revenue (ARR) surpassed $2B, GAAP operating margin 12%, non-GAAP operating margin 29%. Q1 FY2027 (ended June 30, 2026): revenue $555M, ARR +17% YoY. Q2 FY2027 guidance: revenue $565–570M (15–16% constant-currency growth), non-GAAP operating margin 29.5–30%.
+FY2026 (ended March 31, 2026): revenue **$2,018.4M, +19% reported / +17% constant currency** (the prior version of this report said +16%; that was wrong), ARR $2,053.6M at year-end and $2,136.0M at 2026-06-30 (+17%), net retention 110%, GAAP operating margin 12%, non-GAAP operating margin 29%. Last twelve months to 2026-06-30 per Capital IQ: revenue $2,095.6M, EBITDA $291.4M, EBIT $273.1M, net income $151.4M, cash from operations $598.4M, capex $27.8M, stock-based compensation $301.3M (14.4% of revenue), R&D $509.0M (24.3%).
 
-**On August 13, 2026, Dynatrace signed a definitive agreement to acquire Arize AI** — an AI observability/evaluation startup — for **$915 million** (~$815M cash plus replacement equity awards for Arize employees), funded via cash on hand and/or Dynatrace's existing $400M revolving credit facility. The deal is expected to close in Dynatrace's fiscal Q2 or early fiscal Q3 2027 (roughly calendar Q3–Q4 2026), subject to customary closing conditions. Dynatrace has stated the deal will be **~200 basis points accretive to FY2027 ARR growth (~$40M)** and **~175 basis points dilutive to FY2027 non-GAAP operating margin**, with margin expansion resuming from FY2028. Arize's co-founders (Jason Lopatecki and Aparna Dhinakaran) join Dynatrace at close; Lopatecki continues to lead the Arize team, reporting to Dynatrace COO Rick McConnell's organization. This context shapes several steps below and is addressed directly in the closing Appendix.
+| Market snapshot (Capital IQ, 2026-10-07) | Value |
+|---|---:|
+| Share price | $59.81 |
+| Shares outstanding | 289.0M |
+| Market capitalization | $17,285M |
+| Cash and short-term investments (2026-06-30) | $1,108.9M |
+| Long-term marketable securities (2026-06-30) | $47.1M |
+| Total debt (2026-06-30, operating leases only) | $159.3M |
+| Float | 99.3% |
 
+**The Arize AI acquisition closed on 2026-10-01** — $915 million (~$815M cash plus replacement equity awards), signed 2026-08-13. Dynatrace guided it as ~200 basis points accretive to FY2027 ARR growth (~$40M) and ~175 basis points dilutive to FY2027 non-GAAP operating margin, with margin expansion resuming from FY2028. Arize's co-founders (Jason Lopatecki and Aparna Dhinakaran) joined Dynatrace; Lopatecki continues to lead the Arize team reporting into CEO Rick McConnell's organization.
+
+**Five days after signing Arize, Dynatrace priced its first funded debt since 2022** — the exchangeable notes described in Step 12 — and on 2026-09-24 signed a new credit agreement. The purchase was therefore financed with convertible debt, not the revolver draw the prior version of this report assumed.
 ---
 
 ## Step 2 — Corporate Governance
@@ -33,11 +49,10 @@ Two directors were added in quick succession in mid-2026: **George Riedel and Da
 ### Governance Assessment
 Dynatrace was a Thoma Bravo **"controlled company" at IPO**: per the 2019 S-1/424B4, Thoma Bravo funds held ~59.6%–69.3% of voting power pre-offering; per the 2020 secondary-offering prospectus, ~52.1% post-offering. Controlled-company status under NYSE rules meant the board did not need an independent majority or independent nominating/compensation committees at that time. **That era is over.** Per Dynatrace's own proxy disclosures, Thoma Bravo's stake had fallen to under 5% by mid-2024 (see Step 4) — the board is now majority-independent (9 of 10) and no single sponsor controls it.
 
-The classified-board structure is, on its own, a management-entrenching feature in the Lesson 2/3 governance taxonomy (it slows a takeover or a full board replacement to multiple annual cycles). In practice, though, an activist investor — **Starboard Value LP**, which disclosed a "significant stake" in Dynatrace in April 2026 and publicly (via a letter from managing member Peter Feld) argued the stock was undervalued versus peers and pushed for margin expansion, a much larger buyback ($2.5B+ over three years, versus the $1B program Dynatrace had just announced in February 2026), and consideration of "all options to maximize shareholder value" — won two board seats within about three months, without a proxy contest reaching a shareholder vote. That is a real (if imperfect) demonstration of shareholder accountability operating alongside a nominally entrenching board structure.
+The classified-board structure is, on its own, a management-entrenching feature in the Lesson 2/3 governance taxonomy (it slows a takeover or a full board replacement to multiple annual cycles). In practice, though, an activist investor — **Starboard Value LP**, which disclosed a "significant stake" in Dynatrace in April 2026 and publicly (via a letter from managing member Peter Feld) argued the stock was undervalued versus peers and pushed for margin expansion, a much larger buyback ($2.5B+ over three years, versus the $1B program Dynatrace had just announced in February 2026), and consideration of "all options to maximize shareholder value" — won two board seats within about nine weeks, without a proxy contest reaching a shareholder vote. That is a real (if imperfect) demonstration of shareholder accountability operating alongside a nominally entrenching board structure.
 
 ### Power Structure
 Two distinct forces are visible in 2026: (1) a large, diversified institutional shareholder base (BlackRock, Vanguard, etc. — see Step 4) that is largely passive and price-taking, and (2) a concentrated activist (Starboard) that is actively and successfully steering capital-allocation decisions via board representation. The party setting Dynatrace's share price on the margin (diversified index/active managers) and the party currently disciplining management's capital-allocation choices (a concentrated activist) are not the same investor — a live instance of the tension Lessons 2 and 3 ask you to identify.
-
 ---
 
 ## Step 3 — Stated Objectives
@@ -46,26 +61,38 @@ Two distinct forces are visible in 2026: (1) a large, diversified institutional 
 Management has stated a combined growth-and-profitability target: having discussed a "Rule of 40" framework historically, Dynatrace announced it will hold an **Investor Day following its Q2 FY2027 results to lay out a path to "Rule of 50" by fiscal 2029** — i.e., an explicit target that revenue growth plus non-GAAP operating margin should sum to 50, not a pure growth or pure stock-price framing. Separately, under direct activist pressure, management reiterated a shareholder-return commitment: it completed a $500M buyback program in February 2026 (11.4M shares repurchased for $478.7M in FY2026) and immediately authorized a new **$1B program** the same month; it repurchased a further $275M of stock (7.1M shares) in Q1 FY2027 alone.
 
 ### Inferred Focus (Tension With Stated Goals)
-Here is the tell: **three weeks after settling with Starboard** — an investor explicitly asking for *more* capital discipline and *less* strategic spending — Dynatrace signed the $915M Arize deal, which management itself disclosed as ARR-accretive but margin-dilutive for FY2027. Buybacks continued in parallel (Q1 FY2027 repurchases occurred before the Arize signing). Read together, this is not "stock price maximization" in the simple textbook sense, nor is it pure capital-return discipline as Starboard wanted. It looks like management is pursuing **category-leadership / strategic-value maximization** (first-mover claim on the emerging "AI observability" layer, ahead of Datadog or others building or buying the same capability) while *simultaneously* trying to keep the activist's capital-return ask satisfied — a genuine attempt to do both at once, which is exactly the kind of real-world conflict-of-objectives Lesson 3 asks you to name rather than paper over.
+Here is the tell: **six weeks after Starboard's directors joined the board** (2026-07-01 to 2026-08-13) — an investor explicitly asking for *more* capital discipline and *less* strategic spending — Dynatrace signed the $915M Arize deal, which management itself disclosed as ARR-accretive but margin-dilutive for FY2027. Buybacks continued in parallel (Q1 FY2027 repurchases occurred before the Arize signing). Read together, this is not "stock price maximization" in the simple textbook sense, nor is it pure capital-return discipline as Starboard wanted. It looks like management is pursuing **category-leadership / strategic-value maximization** (first-mover claim on the emerging "AI observability" layer, ahead of Datadog or others building or buying the same capability) while *simultaneously* trying to keep the activist's capital-return ask satisfied — a genuine attempt to do both at once, which is exactly the kind of real-world conflict-of-objectives Lesson 3 asks you to name rather than paper over.
 
+### Update 2026-10-07 — How the tension was financed
+The financing makes the "do both at once" reading concrete. Capital IQ shows **$728.3M of buybacks in the twelve months to 2026-06-30**, against $570.6M of free cash flow (cash from operations less capex). Then, alongside the notes, Dynatrace repurchased about 2.83M more shares at $47.61 (~$134.7M) and paid ~$145.9M for a note hedge. Management returned more cash than the business generated, bought Arize, and filled the gap with zero-coupon exchangeable debt. The stated "Rule of 50 by fiscal 2029" target is the scoreboard that has to justify it; the Investor Day that will lay out the path has not happened yet.
 ---
 
 ## Step 4 — Share Classes and Marginal Investor
 
 ### Share Structure
-**Single class of common stock, one vote per share** — confirmed via Dynatrace's 2019 S-1/424B4 and 2020 424B4 secondary-offering prospectuses. No dual-class structure. **290,228,871 shares outstanding** as of July 6, 2026 (DEF 14A record date).
+**Single class of common stock, one vote per share** — confirmed via Dynatrace's 2019 S-1/424B4 and 2020 424B4 secondary-offering prospectuses. No dual-class structure. **289.0M shares outstanding** (Capital IQ, 2026-10-07; 290.2M at the July 6, 2026 proxy record date, before the August repurchase).
 
-### Largest Shareholders
-This is where the record needs a correction. Multiple current-dated aggregator pages (Fintel, GuruFocus, WallStreetZen, TickerGate) list **Thoma Bravo LP at "146.16M shares / ~50.6%"** as if that were today's ownership. That figure is real — but it is the **2020 secondary-offering** number (146,160,127 shares / ~52.1% of voting power), frozen in time and still being served by aggregators years later. Dynatrace's own proxy disclosures show **Thoma Bravo's stake had fallen below 5% by mid-2024** — meaning Thoma Bravo is very likely no longer a top-5 holder today, though this report could not independently confirm an exact current percentage (flagged in Data Provenance; Thoma Bravo affiliates did file a Schedule 13D/13D-A in 2026, so *some* reportable stake persists, but the aggregator figure should not be trusted).
+### Largest Shareholders (Capital IQ ownership summary, 2026-10-07)
 
-Current largest holders per Fintel/Nasdaq institutional-holdings aggregation (Sept 2026): **BlackRock** (~34.95M shares, ~11.75%), **Vanguard Group** (~32.0M shares, ~10.61%) plus **Vanguard Capital Management** (~13.21M shares, ~4.44%), and **Pictet Asset Management** (~14.32M shares, ~4.95%). Separately, **Starboard Value LP** holds an activist stake described in press coverage as "significant"/"substantial" (exact percentage not independently confirmed in sources retrieved).
+| Holder | % of shares | Type |
+|---|---:|---|
+| BlackRock | 12.09% (34.95M shares) | Index / diversified |
+| Vanguard Portfolio Management | 5.47% | Index / diversified |
+| Vanguard Capital Management | 5.22% | Index / diversified |
+| UBS Asset Management | 5.02% | Diversified |
+| Pictet Asset Management | 4.95% | Active, diversified |
+| **Starboard Value** | **3.07% (8,866,692 shares)** | Activist, concentrated |
+| D.E. Shaw | 1.35% | Hedge fund |
+
+By holder type: traditional investment managers 81.4%, hedge funds 11.9%. **Thoma Bravo does not appear among the top holders**, which settles the question the prior version left open: the "50.6%" figure still served by aggregator sites is the 2020 number and should be ignored.
+
+The prior version could only describe Starboard's stake as "significant". Capital IQ puts it at **3.07%**. Capital IQ's activism screen records the Starboard campaign as launched 2026-04-27 and "Successful" on 2026-07-01, and a separate Pictet campaign dated 2026-01-16 with status "Announced". A 3% holder won two board seats in about nine weeks.
 
 ### Marginal Investor
-Large, diversified institutional asset managers (index funds and active managers) — not a founder/sponsor bloc. This is a direct contrast with this repo's MinIO report, where the marginal "investor" was a concentrated founder/VC syndicate.
+Large, diversified institutional asset managers (index funds and active managers) — not a founder/sponsor bloc. With a 99.3% float there is no controlling holder at all.
 
 ### Likely Diversification of Marginal Investor
-Highly diversified. BlackRock, Vanguard, and Pictet hold DT as one position among thousands; none is exposed to Dynatrace-specific risk in an undiversifiable way. This supports using **market (levered) beta**, not total beta, as the correct discount-rate input for Dynatrace — see Step 11. The qualifier: Starboard's activist stake is, by definition, concentrated and actively trying to influence firm decisions — a live example of a non-diversified holder shaping outcomes even though the *modal* shareholder is diversified.
-
+Highly diversified. BlackRock, Vanguard, UBS and Pictet hold DT as one position among thousands. This supports using **market (levered) beta**, not total beta, as the discount-rate input — see Step 11. The qualifier stands: Starboard is concentrated and is actively shaping capital allocation, even though at 3.07% it is not the investor setting the price.
 ---
 
 ## Step 5 — Currency and Risk-Free Rate
@@ -74,75 +101,75 @@ Highly diversified. BlackRock, Vanguard, and Pictet hold DT as one position amon
 **USD.** Dynatrace is a US SEC filer reporting under US GAAP.
 
 ### Revenue Currencies
-Materially mixed, and disclosed: Dynatrace stated in its Q1 FY2027 commentary that **"nearly 40% of the company's business [is] denominated in foreign currency,"** citing a $23M incremental FY2027 ARR headwind from USD strength. Geographic revenue split (FY2026 10-K, by customer location): North America 50%, EMEA 32%, Asia Pacific (APJ) 10%, Latin America 8% (see Step 7).
+Materially mixed, and disclosed: Dynatrace stated in its Q1 FY2027 commentary that **"nearly 40% of the company's business [is] denominated in foreign currency,"** citing a $23M incremental FY2027 ARR headwind from USD strength. Capital IQ's geographic segments (Step 7) put 54% of FY2026 revenue outside the United States.
 
 ### Analysis Currency and Rationale
-USD — matches the reporting currency and gives access to the deepest, most liquid sovereign yield curve, the standard justification for defaulting to the home-reporting currency. The 40% foreign-revenue mix is a real, disclosed currency-mismatch exposure (unlike MinIO's report in this repo, where the same assumption had to be inferred rather than sourced).
+USD — matches the reporting currency and the currency of the new notes.
 
 ### Risk-Free Rate
-**≈5.20%** — US 10-year Treasury yield, as of the week of September 22–28, 2026 (TradingEconomics / CNBC; the 10-year printed 5.21% on September 28, 2026, up ~0.46pt over the trailing month on hawkish Fed commentary, firm inflation-expectations data, and rising fiscal-deficit concerns). This continues the same elevated-rate regime flagged two weeks earlier in this repo's MinIO report (5.01% on Sept 15, 2026) — rates have kept climbing since.
+**5.06%** — the US 10-year Treasury par yield of **5.28% on 2026-10-07** (it traded above 5.35% intraday, the highest since 2002) **less Damodaran's 0.22% US default spread**.
 
+Why net it: the US is no longer rated Aaa by Moody's, so the Treasury yield includes a small default premium and is not a clean risk-free rate. Damodaran's 2026 equity risk premium for the US (4.46%) already carries a 0.23% US country risk premium. Using the gross 5.28% and the 4.46% together would count US default risk twice. This is the same adjustment this repo made for SolarWinds on 2026-10-06. The prior version of this report used the gross 5.20%.
+
+The Treasury has risen 8 basis points since the 2026-09-28 version and 27 since the mid-September MinIO report.
 ---
 
 ## Step 6 — Equity Risk Premium (Mature Market)
 
 ### Current Mature Market ERP
-**4.23%** — Damodaran's confirmed implied ERP at the start of 2026 (S&P 500 level 6,845.5; expected return on stocks 8.41% minus the 10-year T-bond rate at the time, 4.18%, equals 4.23%).
+**4.23%** — Damodaran's implied ERP at the start of 2026 (S&P 500 at 6,845.5; expected return on stocks 8.41% minus the then 10-year T-bond rate of 4.18%).
 
 ### Method and Source
-Implied (forward-looking) ERP: solve for the discount rate that equates the current index level to the present value of expected future cash flows (dividends + buybacks, grown at expected earnings growth), then subtract the risk-free rate. Damodaran now recomputes this monthly rather than only annually, publishing updates on his own site. **The live September 2026 monthly figure was not independently retrievable via web search at the time of writing** — his site requires a direct visit that wasn't accessible through the tools used here — so the confirmed January 2026 figure (4.23%) is used, flagged as dated. Given the September 2026 rate spike (Step 5), the live implied ERP plausibly sits at or above 4.23% today (ERP and rates have historically moved together in comparable selloffs) — same caveat this repo's MinIO report carried forward from two weeks earlier.
-
+Implied (forward-looking) ERP: solve for the discount rate that equates the current index level to the present value of expected future cash flows, then subtract the risk-free rate. Damodaran updates it monthly. The later readings found were **4.37% at the start of March 2026 and 4.51% in mid-March 2026**. **The October 2026 figure was not found.** This report stays on the January 4.23% so it matches the 0.22% / 0.23% US spread figures and the SolarWinds work, and shows the sensitivity instead: each 0.25 point on the ERP moves Dynatrace's bottom-up cost of equity by about 0.33 points. At 4.51% the bottom-up WACC would be about 11.4% rather than 11.1%.
 ---
 
 ## Step 7 — Country Risk and Weighted ERP
 
 ### Best Measure of Country Exposure
-Revenue by customer geography — standard for an enterprise software company (production/reserves-based measures apply to extractive industries, not applicable here).
+Revenue by customer geography — standard for an enterprise software company.
 
 ### Geographic Breakdown
-Sourced directly from the FY2026 10-K (revenue by customer location, $2,018.4M total):
+Capital IQ geographic segments, FY2026, $2,018.4M total. Capital IQ splits the United States from the rest of North America, which the prior version (10-K continent-level percentages) could not.
 
-| Region | % of Revenue | Country ERP (estimated) |
-|--------|--------------:|--------------------------|
-| North America | 50% | 4.23% (mature-market baseline; predominantly US/Canada, Aaa) |
-| EMEA | 32% | ≈4.6% (predominantly Western Europe, Aaa/Aa; small periphery-country spread) |
-| Asia Pacific (APJ) | 10% | ≈5.0% (mostly developed APAC — Japan, Australia, Singapore — plus some emerging-market exposure) |
-| Latin America | 8% | ≈7.5% (Brazil/Mexico-type sovereign spreads) |
+| Region | Revenue ($M) | % of Revenue | ERP used |
+|--------|-------------:|-------------:|----------|
+| United States | 927.7 | 46.0% | 4.46% (4.23% + 0.23% US country risk premium) |
+| North America ex-US | 89.8 | 4.4% | 4.23% (Canada, Aaa) — estimated |
+| EMEA | 648.9 | 32.1% | ≈4.6% — estimated |
+| Asia Pacific | 193.1 | 9.6% | ≈5.0% — estimated |
+| Latin America | 158.9 | 7.9% | ≈7.5% — estimated |
 
-**Important caveat:** the 10-K discloses only continent-level revenue, not country-level detail, and this checkout's `country-risk.json` is an empty stub (no populated Damodaran country-ERP table to pull exact per-country spreads from). The per-region ERP figures above are therefore **estimated** using standard Damodaran-style regional groupings, not pulled directly from a populated dataset — flagged in Data Provenance.
+**Caveat, unchanged:** neither the 10-K nor Capital IQ gives country-level revenue, and `country-risk.json` is an empty stub, so the non-US regional premiums are estimates from standard Damodaran-style groupings.
 
 ### Weighted Average ERP
-0.50×4.23% + 0.32×4.6% + 0.10×5.0% + 0.08×7.5% = 2.12% + 1.47% + 0.50% + 0.60% = **≈4.69%**, rounded to **≈4.7%** — modestly above the pure mature-market ERP (4.23%), reflecting Dynatrace's real (if modest) EMEA/APJ/LatAm exposure.
+0.460×4.46% + 0.044×4.23% + 0.321×4.6% + 0.096×5.0% + 0.079×7.5% = 2.05% + 0.19% + 1.48% + 0.48% + 0.59% = **≈4.79%**, rounded to **≈4.8%** (prior version: ≈4.7%, with the US at 4.23%).
 
 ### Why This ERP Might Change
-Arize's customer base (per public reporting, largely US-based AI/ML engineering teams at research-heavy organizations) could initially concentrate Dynatrace's revenue mix further toward North America rather than diversify it internationally. Longer-term, Dynatrace has stated ambitions in EMEA/APJ cloud-migration accounts, which would push the weighted ERP up modestly. FX-driven ARR headwinds (Step 5) are already a live, disclosed risk factor independent of any country-risk-premium math.
-
+Arize's customers are largely US-based AI engineering teams, so the acquisition tilts the mix toward the US at the margin. The larger effect runs the other way over time: 54% of Dynatrace revenue is outside the US, and 32% is in EMEA, where the EU AI Act obligations fall. Latin America at 7.9% of revenue contributes 12% of the weighted premium.
 ---
 
 ## Step 8 — Regression Beta
 
 ### Regression Beta
-**≈0.71–0.74** (5-year monthly beta, S&P 500 benchmark implied) — Yahoo Finance reports 0.74, stockanalysis.com reports 0.71; call it **≈0.72**.
+**0.77** — Capital IQ 5-year beta, 2026-10-07. Free sources a week earlier showed 0.71–0.74 (stockanalysis.com, Yahoo Finance). The prior version used ≈0.72.
 
 ### Index, Time Period, R-squared
-Index: S&P 500 (standard default for both platforms). Period: 5 years, monthly returns. **R-squared was not disclosed by either free source** — that level of regression detail typically requires a paid terminal (Bloomberg/CapIQ), which wasn't accessible here. Flagged as not found rather than estimated.
+5 years of returns against the S&P 500. **R-squared is still not found**: Capital IQ's tearsheet shows the beta without regression statistics, and the Chart Builder that would produce them is broken in this account.
 
 ### Reliability Assessment
-This number is genuinely striking for a software/SaaS name: it implies Dynatrace trades with *below-market* volatility, while this repo's own industry-beta dataset (Step 10) puts the broader "Software (System & Application)" bucket's unlevered beta well above 1.0. Two explanations compete, and the missing R² makes it impossible to fully arbitrate between them: (1) Dynatrace's business genuinely is more defensive than the median software name — high recurring-revenue visibility, mission-critical embedded product, a "Rule of 40+" profile that institutional holders have historically rewarded with lower volatility (consistent with Starboard's argument that the stock traded cheap versus peers despite that profile); or (2) the regression is picking up noise or period-specific artifacts — a 5-year monthly window spans both the 2022 rate-shock software drawdown and the 2023–2026 recovery, and beta estimates over such windows are exactly what Lesson 8 warns are "backward-looking and noisy." Treat 0.72 as a real but soft input, not a settled answer — this is precisely why Step 10's bottom-up approach exists.
-
+A 0.77 beta says Dynatrace moves less than the market, while Damodaran's "Software (System & Application)" bucket (Step 10) has an unlevered beta of 1.27 and Datadog's Capital IQ beta is 1.51. Two explanations compete: (1) the business is more defensive than the median software name — contracted ARR, 110% net retention, 27% free-cash-flow margin, and for most of the window a net-cash balance sheet with heavy buybacks; or (2) the window is unrepresentative — it spans the 2022 software drawdown, the 2023–2025 recovery, and a 2026 in which an activist campaign and a re-rating drove the stock on company-specific news, which lowers correlation with the index and therefore beta. The second reading matters more now: the 52-week move from $31.64 to about $60 is mostly Starboard, the buyback and Arize, not the market. Treat 0.77 as a soft input.
 ---
 
 ## Step 9 — Beta Fundamentals
 
 ### Product/Service Beta Expectation
-Dynatrace sells a recurring-revenue, subscription-based observability/AI-observability platform embedded in customers' production infrastructure — high switching costs, low demand-elasticity to short-run macro swings, but still ultimately tied to enterprise IT/cloud capex cycles. Expect a **moderate** business beta — likely below the broader software-industry average given the defensiveness of an entrenched, mission-critical product, which is consistent with the low regression beta in Step 8. No separately disclosed business segments, so a single blended beta is appropriate (also true post-Arize, until/unless Dynatrace begins segment reporting for it).
+Dynatrace sells a recurring-revenue, subscription-based observability platform embedded in customers' production infrastructure — high switching costs, low short-run demand elasticity, but tied to enterprise IT and cloud budgets. Expect a **moderate** business beta, below the broader software average. No separately disclosed business segments, so a single blended beta is appropriate. Arize adds a younger, usage-driven, AI-budget-exposed revenue line; at ~$40M of ARR against $2.14B it is under 2% of the base and does not move the blended beta yet.
 
 ### Operating Leverage Effect
-High fixed-cost structure typical of enterprise software: FY2026 GAAP operating margin was only 12% against a 29% non-GAAP operating margin — the gap is driven substantially by stock-based compensation and acquisition-related amortization, not by a genuinely high-variable-cost model. A high fixed-cost base amplifies operating-income sensitivity to revenue swings (pushing beta up), but this is materially offset by Dynatrace's unusually predictable, contracted ARR base (pulling realized volatility back down) — a real tension that likely explains part of the gap between the low regression beta and the higher industry-bucket beta.
+High fixed-cost structure: R&D is 24.3% of revenue and stock-based compensation 14.4% (Capital IQ, LTM). GAAP operating margin is ~13% against ~29% non-GAAP; the gap is mostly stock-based compensation and acquisition amortization, which will grow with Arize. High fixed costs push beta up; a contracted ARR base pulls realized volatility back down.
 
 ### Financial Leverage Effect
-**Effectively none today.** Dynatrace repaid its Term Loan B in full in December 2022 and carries no other funded debt; its $400M revolving credit facility was $399M available (essentially undrawn) as of December 31, 2025. Financial leverage is not currently amplifying Dynatrace's beta at all (D/E ≈ 0, before lease debt — see Step 11). Funding part of the ~$815M Arize cash consideration via the revolver would modestly raise leverage post-close, but even a full $400M draw would be small relative to Dynatrace's ~$16.8B equity value — not enough to meaningfully move beta or WACC.
-
+**Changed since the prior version.** Dynatrace had no funded debt from December 2022 until 2026-08-20, when it closed $1.4375B of 0.00% exchangeable notes (Step 12). On the convertible-split treatment in Step 11, debt is now about 6.5% of capital and lifts the bottom-up beta from 1.27 to 1.34. It is still a lightly levered company. The more meaningful change is the cash position: about $1.16B of cash and securities and no funded debt at 2026-06-30 has become, on this report's pro forma estimate, roughly $1.5B of cash against $1.6B of debt and leases. **Net cash of about $1.0B has become roughly zero.**
 ---
 
 ## Step 10 — Bottom-Up Unlevered Beta
@@ -159,123 +186,173 @@ The direct pure-play comp set has shrunk materially since the course's underlyin
 
 ### Estimated Unlevered Beta
 **≈1.27.** This is notably higher than Dynatrace's own regression beta (≈0.72, Step 8) — the industry bucket includes a large tail of smaller, higher-beta, less-profitable software names, while Dynatrace itself is a large, profitable, low-volatility outlier within that bucket. Both numbers are carried forward below rather than collapsed into one, so the divergence stays visible.
-
 ---
 
 ## Step 11 — Levered Beta and Total Beta
 
 ### Inputs
 - Unlevered beta: 1.2725 (Step 10)
-- Debt/Equity ratio: **≈0.98%** — $164.3M of capitalized operating-lease debt (Step 12) against a market value of equity of ≈$16.8B (290.2M shares × ≈$57.95/share, Sept 2026); **no funded interest-bearing debt** outstanding
-- Marginal tax rate: ~25% (blended US federal + state statutory assumption — see Step 12 for why the reported effective rate isn't used directly)
+- Market value of equity: **$17,285M** (289.0M shares × $59.81, Capital IQ 2026-10-07)
+- Debt: **≈$1,194M** — the straight-debt component of the exchangeable notes (≈$1,034M, Step 12) plus operating lease liabilities ($159.3M)
+- Debt/Equity: **≈6.9%** (prior version: 0.98%, leases only)
+- Marginal tax rate: 25%
 - Correlation with market: 0.3374 (industry average, Step 10)
 
 ### Levered Beta (Hamada)
-β_levered = β_unlevered × [1 + (1 − t) × D/E] = 1.2725 × [1 + (0.75 × 0.0098)] = 1.2725 × 1.00735 ≈ **1.282** — barely different from the unlevered beta, because Dynatrace currently carries almost no debt.
+β_levered = 1.2725 × [1 + (1 − 0.25) × 0.0691] = 1.2725 × 1.0518 ≈ **1.34** (prior version: 1.28).
+
+Two alternative treatments give nearly the same answer: counting the notes at full face value ($1,437.5M) gives D/E 9.2% and a levered beta of 1.36; adding the conversion-option value to equity gives D/E 6.75% and 1.34. The convertible treatment is not what drives the answer.
 
 ### Total Beta
-Total Beta = Levered Beta / Correlation with market = 1.282 / 0.3374 ≈ **3.80**.
+1.338 / 0.3374 ≈ **3.97**. Shown for completeness only.
 
 ### Interpretation
-Unlike this repo's MinIO report — where total beta was the operative number because MinIO's actual owners are a concentrated founder/VC syndicate — **total beta is not the right lens for Dynatrace.** Step 4 established that Dynatrace's marginal investor is a diversified institutional base (BlackRock, Vanguard, etc.), which is exactly the investor total beta is *not* meant for; it's shown here only for methodological completeness and as a direct contrast case within this same repo. The number that matters for Dynatrace is the **levered (market) beta**, and even there, two candidates diverge sharply: ≈1.28 bottom-up vs. ≈0.72 regression. Both are carried into the Step 12 summary rather than forced into a single answer.
-
+**Total beta is not the right lens for Dynatrace.** Step 4 established a 99.3% float held by diversified institutions. The number that matters is the levered market beta, and the two candidates still diverge sharply: **≈1.34 bottom-up vs. 0.77 regression**. Both are carried into the summary.
 ---
 
 ## Step 12 — Cost of Debt
 
+### What Dynatrace Now Owes
+
+| Instrument | Amount | Terms | Source |
+|---|---:|---|---|
+| 0.00% Exchangeable Senior Notes due 2031-09-01 (issuer Dynatrace LLC) | $1,437.5M face (includes the $187.5M option) | Priced 2026-08-18, closed 2026-08-20; exchange price ≈$64.27, a 35% premium to $47.61 | Company press releases / 8-K (web) |
+| Note hedge and warrants | ≈$145.9M hedge cost; warrant strike ≈$107.12 | Lifts the effective dilution threshold from $64.27 to $107.12 | Same |
+| Revolving credit facility | Undrawn | New credit agreement signed 2026-09-24; Capital IQ still shows the old facility maturing 2027-12-02 | Capital IQ capital-structure detail / Key Developments |
+| Operating lease liabilities | $159.3M (current $23.1M + long-term $136.2M) | 4.0% weighted discount rate | Capital IQ balance sheet, 2026-06-30 |
+
+At $59.81 the stock is 7% below the $64.27 exchange price, so the notes are close to the money.
+
 ### Bond Rating and Spread
-**None.** Dynatrace has never issued public bonds and has no Moody's/S&P corporate credit rating. Its only funded facility is a $400M senior secured revolving credit facility (essentially undrawn — $399M available as of Dec 31, 2025), after fully repaying its Term Loan B in December 2022.
+**No rating found.** Capital IQ's S&P ratings page for Dynatrace is empty. The notes are unrated and pay no coupon, so there is no traded straight-debt spread to read.
 
 ### Synthetic Rating
-This is a case where the honest answer is a flag, not a fabricated number. GAAP operating income (EBIT) for FY2026 was **$245M**. Interest expense is effectively **zero** — with no funded debt, Dynatrace has historically run a small *net interest income* position (e.g., $12.8M in Q1 FY2025 alone) rather than an expense. That makes the interest-coverage ratio undefined in the economically meaningful sense used by the ratings spreadsheet (`spreadsheet-ratings.md`) — not "very high," but genuinely not computable as a ratio, because there is no real interest expense to divide by. Mechanically mapping this to the sheet's top bracket (interest coverage > 8.5x → Aaa/AAA, spread 0.74% in that dated vintage) is directionally right but degenerate — manufacturing a coverage ratio from a near-zero denominator would create false precision, the same posture this repo's MinIO report took when funded debt was absent.
+The prior version called the coverage ratio "not economically meaningful" because there was no interest expense. There is still almost none in the accounts (Capital IQ LTM interest expense $0.8M, interest income $45.1M), because the coupon is zero. But a zero coupon is not a zero cost: Dynatrace paid for the borrowing with a conversion option. The honest test is what the interest bill would be if the same $1,437.5M were straight debt.
 
-| Metric | Value |
-|--------|-------|
-| EBIT (GAAP operating income, FY2026) | $245M |
-| Interest expense | ≈$0 (net interest income positive; no funded debt) |
-| Interest coverage ratio | Not economically meaningful — no real interest expense to divide by |
-| Synthetic rating | Aaa/AAA-equivalent (directional, not a literal computed rating) |
-| Default spread | 0.74% (top bracket, `spreadsheet-ratings.md` — dated vintage) |
-| Pre-tax cost of debt (synthetic) | ≈5.20% + 0.74% = **≈5.94%** |
+| Read | Interest used | Coverage | Rating (large-firm table) | Spread |
+|---|---:|---:|---|---:|
+| As reported | $0.8M | 341× | Aaa/AAA | 0.74% |
+| **Imputed straight debt (used)** | **$106M** ($1,437.5M × 6.95% + $6.4M lease interest) | **2.6×** | **Baa2/BBB** | **1.89%** |
+| Stress: same interest, EBIT 10% lower | $106M | 2.4× | Ba1/BB+ | 2.20% |
 
-### Actual vs. Synthetic Rating — Differences and Explanation
-No actual rating exists to compare against (no public debt issued). The synthetic "Aaa-equivalent" read is consistent with what a lender would likely offer a company sitting on ~$1.15B of cash and marketable securities (as of June 30, 2026) against no funded debt — but it isn't a market-tested number the way an actual issued-bond spread would be.
+EBIT is Capital IQ's LTM $273.1M plus the $6.4M of lease interest. The BBB row is self-consistent: assume a 1.89% spread, compute the interest, and the coverage (2.6×) maps back to BBB. It sits near the bottom of the BBB band (2.5×–3.0×). The read is conservative in two ways. It uses GAAP EBIT, which is after $301M of stock-based compensation; and it ignores about $1.5B of pro forma cash. It will weaken in FY2027 as Arize dilutes margin and adds amortization.
+
+**Pre-tax cost of debt: 5.06% + 1.89% = ≈6.95%** (prior version: 5.94% at the Aaa spread). The ratings table is the dated vintage checked into Lesson 12.
 
 ### Market Value of Debt
-**$0** in funded interest-bearing debt as of the most recent quarter reported. This will change modestly once the Arize acquisition closes (cash consideration funded via cash-on-hand and/or the $400M revolver), but even a full revolver draw would leave debt small relative to Dynatrace's ~$16.8B equity value.
+Following the course treatment of convertibles, the notes are split into straight debt and an equity option:
+
+- Straight-debt component: $1,437.5M ÷ 1.0695^4.9 ≈ **$1,034M**
+- Conversion option (equity): ≈ **$403M**
+- Plus lease liabilities: $159.3M
+- **Debt for the cost of capital ≈ $1,194M**, or 6.5% of capital
+
+The market price of the notes was not found, so the option value is the residual at face, not a traded value.
+
+### Pro Forma Cash (estimate)
+$1,108.9M cash and short-term investments + $47.1M long-term securities + $1,437.5M note proceeds − $145.9M note hedge − $134.7M concurrent buyback − $815M Arize cash ≈ **$1.5B**. This ignores issuance fees, warrant proceeds, cash generated since June 30 and any further buybacks, so treat it as ±$150M. Against $1,596.8M of face debt plus leases, net debt is roughly zero.
 
 ### Lease Debt Capitalization
-Under ASC 842, Dynatrace's balance sheet already reports the capitalized present value of its lease obligations directly — no separate manual capitalization (of the kind Damodaran's pre-ASC-842-era spreadsheet walks through) is needed. Per the FY2026 10-K: total operating lease liabilities **$164.3M** (current $22.6M + noncurrent ≈$141.7M), weighted-average remaining lease term 8.0 years, weighted-average discount rate 4.0%, FY2026 operating lease expense $17.2M.
+Under ASC 842 the balance sheet already carries the capitalized leases: $159.3M at 2026-06-30 ($164.3M at fiscal year-end), 8.0-year weighted remaining term, 4.0% discount rate.
 
 ### Marginal Tax Rate
-**~25%** (blended US federal + state statutory assumption — the standard convention this course uses for the tax shield, distinct from the *effective* rate). Dynatrace's FY2026 *effective* GAAP tax rate is not representative of an ongoing marginal rate: income tax expense swung from a $260.3M *benefit* in FY2025 to $137.1M of *expense* in FY2026, primarily because FY2025 included a one-time ~$320.9M tax benefit tied to an IP transfer of global economic rights to Switzerland. Using the reported effective rate directly would import that one-time noise into the WACC — the marginal/statutory convention avoids it.
-
+**25%** (blended US federal and state statutory convention). The reported effective rate is unusable: Capital IQ shows **49.4% for the LTM and 45.7% for FY2026** ($147.8M of tax on $299.2M of pre-tax income), after a $260.3M tax *benefit* in FY2025 tied to the IP transfer to Switzerland. Because the notes pay no cash coupon, the tax shield in practice comes from the note hedge's tax treatment, not from interest; the 25% is a convention here, and at 6.5% debt it moves WACC by under 0.1 point.
 ---
 
 ## Summary — Cost of Capital Inputs
 
 | Input | Value |
 |-------|-------|
-| Risk-free rate | 5.20% (US 10-yr Treasury, ~Sept 26–28, 2026 — sourced) |
-| Mature market ERP | 4.23% (Damodaran implied ERP, confirmed Jan 2026 update — sourced, dated) |
-| Weighted ERP (country-adjusted) | ≈4.7% (region weights sourced from 10-K; per-region ERPs estimated — country-risk.json empty in this checkout) |
-| Regression beta (5Y monthly, S&P 500) | ≈0.72 (Yahoo/stockanalysis — sourced; R² not disclosed) |
-| Bottom-up unlevered beta (Software System & App industry, Jan-2024 vintage) | 1.27 (sourced, dated) |
-| Levered beta (Hamada, D/E≈1%) | ≈1.28 |
-| Total beta (shown for contrast only — not operative; marginal investor is diversified) | ≈3.80 |
-| **Cost of equity — bottom-up basis (primary)** | **≈11.1%** (5.20% + 1.28 × 4.7%) |
-| Cost of equity — regression basis (cross-check) | ≈8.6% (5.20% + 0.72 × 4.7%) |
-| Pre-tax cost of debt (synthetic, Aaa-equivalent) | ≈5.94% |
-| After-tax cost of debt (25% marginal rate) | ≈4.46% |
-| Debt/Capital ratio | ≈1.0% (lease debt only; no funded debt outstanding) |
-| **WACC — bottom-up basis (primary)** | **≈11.0%** |
-| WACC — regression basis (cross-check) | ≈8.55% |
+| Risk-free rate | **5.06%** (5.28% 10-yr Treasury on 2026-10-07 less 0.22% US default spread) |
+| Mature market ERP | 4.23% (Damodaran, January 2026; October figure not found) |
+| Weighted ERP (country-adjusted) | ≈4.79% (Capital IQ region weights; US at 4.46%; non-US regional premiums estimated) |
+| Regression beta (5Y, S&P 500) | 0.77 (Capital IQ; R² not found) |
+| Bottom-up unlevered beta (Software System & Application, Jan-2024 vintage) | 1.27 |
+| Debt/Equity | ≈6.9% (notes' debt component + leases, over market cap) |
+| Levered beta (Hamada) | ≈1.34 |
+| Total beta (contrast only) | ≈3.97 |
+| **Cost of equity — bottom-up (primary)** | **≈11.5%** (5.06% + 1.338 × 4.79%) |
+| Cost of equity — regression (cross-check) | ≈8.75% (5.06% + 0.77 × 4.79%) |
+| Pre-tax cost of debt (synthetic Baa2/BBB on imputed interest) | ≈6.95% |
+| After-tax cost of debt (25%) | ≈5.21% |
+| Debt/Capital | ≈6.5% |
+| **WACC — bottom-up (primary)** | **≈11.1%** |
+| WACC — regression (cross-check) | ≈8.5% |
 
-**Read this as two answers, and use the bottom-up one as primary — that's what Lessons 9–10 argue for.** The regression beta (0.72) is the more recent, market-observed number, but Lesson 8's own critique applies directly to it here: it's backward-looking, its R² is unpublished (so its reliability can't be assessed), and it sits well below what Dynatrace's industry peer group implies. The bottom-up estimate (≈11.0% WACC) is the more defensible hurdle rate for capital-budgeting decisions — including, notably, evaluating whether the Arize acquisition clears a reasonable return bar, which is exactly the kind of decision this cost of capital exists to inform.
+### What changed from the 2026-09-28 version
 
+| Input | 2026-09-28 | 2026-10-07 | Why |
+|---|---:|---:|---|
+| Share price / market cap | ≈$57.95 / ≈$16.8B | $59.81 / $17.3B | Capital IQ |
+| Risk-free rate | 5.20% gross | 5.06% netted (5.28% gross) | Treasury up 8bp; US default spread netted out |
+| Weighted ERP | ≈4.7% | ≈4.79% | US at 4.46%; Capital IQ splits US from rest of North America |
+| Regression beta | ≈0.72 | 0.77 | Capital IQ |
+| Funded debt | $0 | $1,437.5M face 0% exchangeable notes | Issued 2026-08-20; missed by the prior version |
+| D/E | 0.98% | ≈6.9% | Notes |
+| Levered beta | 1.28 | 1.34 | Notes |
+| Synthetic rating / spread | Aaa-equivalent / 0.74% | Baa2/BBB / 1.89% | Coverage on imputed straight-debt interest |
+| Pre-tax cost of debt | 5.94% | 6.95% | Rating |
+| Cost of equity (bottom-up) | ≈11.1% | ≈11.5% | Leverage and ERP up, risk-free down |
+| **WACC (bottom-up)** | **≈11.0%** | **≈11.1%** | Higher cost of equity offset by 6.5% debt at 5.2% after tax |
+| WACC (regression) | ≈8.55% | ≈8.5% | — |
+| Starboard stake | "significant" | 3.07% | Capital IQ |
+| FY2026 revenue growth | +16% | +19% reported / +17% cc | Correction |
+
+**The headline number barely moved; what sits underneath it did.** Use the bottom-up ≈11.1% as the hurdle rate, for the reasons Lessons 9–10 give: the regression beta is backward-looking, its R² is unknown, and its window is dominated by company-specific events. The two changes that matter for judgment are that Dynatrace is now a BBB-type borrower on an honest coverage test rather than a AAA-by-default one, and that its $1B net-cash cushion has been spent.
+
+**Applied to Arize:** at an 11.1% cost of capital, $915M has to earn about **$100M a year of after-tax operating income with no growth, or about $65M growing at 4% forever**, to be worth what was paid. Arize is guided to add about $40M of ARR in FY2027 while costing 175 basis points of margin (about $40M on $2.3B of revenue). The purchase only clears the hurdle through cross-sell into Dynatrace's ~4,100 customers.
 ---
 
 ## Data Provenance — What's Sourced vs. Estimated vs. Not Found
 
-**Sourced (SEC filings, company IR, or live web search, confirmed):**
-- Arize acquisition terms, financial framing (+200bps ARR / −175bps margin), closing timeline, founder retention (Dynatrace IR press release, 8-K, BusinessWire, Yahoo Finance, MSSP Alert, Arize's own blog)
-- Board composition, classified structure, Cybersecurity Committee, 2026 board appointments and their explicit link to Starboard Value engagement (DEF 14A, Nasdaq/GuruFocus press coverage, 8-K exhibits)
-- Starboard Value activist campaign timeline and demands (WSJ via Yahoo Finance, Investing.com, Boston Globe, Hedgeweek)
-- Geographic revenue split, FY2026 financials, GAAP/non-GAAP operating income and margin, lease liabilities and terms, credit facility status, buyback program history (FY2026 10-K, earnings releases, 8-Ks)
-- Share count and record date (DEF 14A); single-class/one-vote structure and historical Thoma Bravo voting percentages at IPO and 2020 secondary (S-1/424B4 prospectuses)
-- Current institutional holders (BlackRock, Vanguard, Pictet — Fintel/Nasdaq aggregation)
-- Risk-free rate (TradingEconomics/CNBC, ~Sept 26–28, 2026)
-- Damodaran's confirmed January 2026 implied ERP (his own SSRN/blog summary)
-- Damodaran industry beta/correlation for "Software (System & Application)" (this repo's own `spreadsheet-totalbeta24.md`, Jan 2024 vintage)
-- Regression beta (Yahoo Finance, stockanalysis.com)
-- Analyst ratings/price targets and 52-week range (Investing.com, Defense World, public.com)
+**Capital IQ (classic platform, company ID 628406634, pulled 2026-10-07):**
+- Tearsheet: price, shares, market cap, 5-year beta, float
+- Income statement and cash flow (LTM to 2026-06-30 and FY2026): revenue, EBITDA, EBIT, net income, interest expense and income, tax, R&D, stock-based compensation, cash from operations, capex, buybacks
+- Balance sheet and capitalization: cash, securities, lease liabilities, total debt
+- Geographic segments (FY2026)
+- Ownership summary and holder-type split; investor activism screen (Starboard, Pictet)
+- Capital-structure detail (revolver status and maturity); S&P ratings page (empty)
 
-**Estimated or assumed (flagged, not fabricated as fact):**
-- Per-region country ERPs within Step 7's weighting (10-K gives region revenue %, not country-level detail; this checkout's `country-risk.json` is an empty stub)
-- Marginal tax rate (~25%) — standard blended statutory assumption, used explicitly instead of the distorted FY2026 effective rate
-- Synthetic "Aaa-equivalent" rating/spread — directional read only; the underlying interest-coverage ratio isn't economically computable given ~$0 interest expense
+**SEC filings, company releases and web search:**
+- Exchangeable notes terms: size, pricing and closing dates, exchange price, hedge cost, warrant strike, concurrent repurchase
+- Arize terms, guidance and 2026-10-01 close; new credit agreement dated 2026-09-24
+- Board composition and Starboard settlement (DEF 14A, 8-K exhibits, press)
+- ARR, net retention, customer count, constant-currency growth, Rule of 50 target (10-K, earnings materials)
+- 10-year Treasury yield, 2026-10-07 (Treasury par yield; Trading Economics showed 5.32%)
+- Damodaran implied ERP (January and March 2026), US default spread 0.22% and US country risk premium 0.23% (as used in this repo's SolarWinds work)
+- Damodaran industry beta and ratings table (this repo's `spreadsheet-totalbeta24.md`, `spreadsheet-ratings.md`)
 
-**Not found / flagged as unverifiable through the tools used here:**
-- Thoma Bravo's *current* (2026) ownership percentage — proxy disclosures confirm it fell below 5% by mid-2024, but several current-dated aggregator sites are serving a stale 2020-era ~50.6% figure as if current; neither this report nor those sites should be read as giving a precise current number
-- Starboard Value LP's exact current ownership percentage (described only as "significant"/"substantial" in press coverage)
-- Regression beta's R-squared (requires a paid data terminal)
-- Live September 2026 Damodaran monthly implied ERP (his site's monthly update wasn't independently retrievable; the confirmed January 2026 figure is used instead, flagged as dated)
-- Full 10-person board roster (only six names — McConnell, Capone, Lifshatz, Riedel, Streetman, Thota — surfaced through the sources retrieved)
+**Estimated or assumed:**
+- Non-US regional ERPs in Step 7
+- Marginal tax rate of 25%
+- Synthetic rating: built on imputed straight-debt interest, not on reported interest
+- Split of the notes into debt (≈$1,034M) and option (≈$403M) at face value
+- Pro forma cash of ≈$1.5B (no fees, warrant proceeds, post-June cash flow or later buybacks)
 
+**Not found:**
+- October 2026 Damodaran implied ERP
+- Regression R-squared
+- A credit rating, or a market price for the notes
+- Terms of the 2026-09-24 credit agreement (size, pricing, maturity)
+- Full 10-person board roster (Capital IQ's board page did not load)
+- Arize's standalone revenue, margin or retention
+
+**Deliberately omitted:** Capital IQ consensus estimates (kept out of this public repo).
 ---
 
 ## Appendix — Reading This for a Job Candidate
 
 ### 1. How is Dynatrace doing right now?
-Genuinely well, and accelerating. FY2026 revenue grew 16% to $2.02B with ARR crossing $2B; Q1 FY2027 ARR growth stepped up to 17%, and management is guiding Q2 FY2027 to 15–16% constant-currency growth with non-GAAP operating margin near 30%. The stock has nearly doubled off its 52-week low ($31.64) to a 52-week high around $57–58 in September 2026, market cap ≈$16.8B, and analyst sentiment is strongly positive (consensus Buy, 46% Strong Buy, price targets raised to $62–68 by Morgan Stanley, UBS, Needham, and BMO after a wave of September 2026 upgrades). The one real wart is the gap between GAAP (12%) and non-GAAP (29%) operating margin — heavily driven by stock-based comp and acquisition amortization — which is part of why an activist saw room to push. Competitively, the observability market has consolidated hard: New Relic went private in 2023 and Splunk was absorbed into Cisco in 2024, leaving Datadog as the dominant large pure-play and Dynatrace as the profitable, lower-beta "compounder" in the category rather than the fastest grower — which is exactly the profile Starboard argued the market was under-crediting.
+Well, and the market agrees. FY2026 revenue grew 19% to $2.02B, ARR is $2.14B growing 17%, net retention is 110%, and free cash flow runs at about 27% of revenue. The stock has gone from a 52-week low of $31.64 to about $60; market cap is $17.3B. Three warts: GAAP operating margin is ~13% against ~29% non-GAAP because stock-based compensation is 14% of revenue; the GAAP tax rate is running near 49%; and the balance sheet that used to carry $1B of net cash is now roughly neutral. The category has consolidated (New Relic private in 2023, Splunk into Cisco in 2024). Dynatrace is the profitable compounder; Datadog is the fast grower. The companion [Datadog valuation](datadog-valuation.md) shows the two have nearly the same cost of capital (≈11%), so the gap in their revenue multiples is a growth gap, not a risk gap.
 
 ### 2. What does this suggest about the Arize acquisition's real purpose?
-Read Steps 2 and 3 together and the logic is plain: Dynatrace just went through an activist campaign explicitly demanding *more* capital discipline and *less* strategic spending, settled it by adding two Starboard-linked directors, and then three weeks later signed a $915M acquisition that management itself disclosed as margin-dilutive. That is a deliberate, board-approved bet that category position in "AI observability" (evaluating and tracing LLM/agent behavior in production, connected to Dynatrace's existing infrastructure/APM telemetry) is worth spending freshly-earned activist credibility on. The board's newest addition, Chandu Thota (ex-Google/Microsoft AI-infrastructure exec, appointed just two weeks before the Arize signing), and the decision to keep Arize's founders in place reporting to COO Rick McConnell rather than absorbing the team quietly, both point the same direction: this is a capability-and-community acquisition, not a tuck-in. **"Success" to Dynatrace's leadership almost certainly means:** hitting the self-disclosed +200bps ARR / −175bps margin targets close to exactly (credibility with a board that now includes activist-aligned directors watching capital allocation closely), a demonstrable cross-sell attach rate of AI-observability into Dynatrace's large existing enterprise base within 12–18 months, margin recovery resuming on schedule into FY2028, and preserving Arize's standing with the open-source/ML-engineering developer community that is part of why Dynatrace bought rather than built.
+Read Steps 2, 3 and 12 together. Dynatrace settled with an activist that wanted more capital return and less strategic spending, added two Starboard-linked directors on 2026-07-01, signed a $915M margin-dilutive acquisition six weeks later, and five days after that sold $1.44B of zero-coupon exchangeable notes while buying back more stock. It did not choose between Starboard and Arize; it borrowed to do both. That is a board-approved bet that position in AI observability is worth giving up the net-cash balance sheet. **Success for leadership means:** hitting the disclosed +200bps ARR / −175bps margin numbers, showing a measurable attach rate into the ~4,100-customer base within 12–18 months, resuming margin expansion in FY2028, getting the stock above the $64.27 exchange price for the right reasons, and keeping Arize's standing with the open-source developer community.
 
-### 3. What should a Senior AI Product Manager, Observability joining Arize/Dynatrace actually expect in year one?
-Expect the job to be measured against the numbers management already put in front of the Street, not against a green-field roadmap:
-- **The ARR-accretion commitment is the real scoreboard.** The ~$40M / 200bps FY2027 ARR contribution was disclosed publicly before this person was likely even hired — expect heavy weight on cross-sell/attach-rate motion into Dynatrace's existing enterprise accounts, probably more than on Arize-standalone new-logo growth, because that's the number leadership will be asked about on the next earnings call.
-- **Margin discipline will be watched, not assumed away.** With an activist-aligned board in the room and a stated margin-recovery-by-FY2028 promise, expect a tight, provable-payback bar on any new investment that risks widening the −175bps hit further than guided — this is not a "build first, monetize later" environment for at least the first year.
-- **Developer/community credibility is a real, tracked asset, not just a talking point.** Arize built its reputation in the open-source ML-observability/tracing community; retaining that adoption funnel is plausibly part of why Dynatrace bought rather than built in-house, so expect leadership to care about community metrics (OSS adoption, developer sentiment) alongside contract ARR.
-- **Expect a dual-reporting, pre-integration structure, not a merged org.** Lopatecki continues leading the Arize team reporting into McConnell's organization — a PM joining "on the Arize side" should expect to navigate both Arize and Dynatrace platform/AI stakeholders simultaneously, plus the ordinary post-close friction of packaging Arize into Dynatrace's subscription pricing model and clearing Dynatrace's much larger, more regulated enterprise customers' procurement/security bars.
-- **The close itself may not have happened yet.** Target close is Dynatrace's fiscal Q2 or early fiscal Q3 2027 (roughly calendar Q3–Q4 2026) — someone joining "today" is plausibly starting in a pre-close or just-closed integration phase, meaning year one may genuinely begin with integration mechanics rather than a clean roadmap sprint.
+### 3. What should a Senior AI Product Manager, Observability joining Arize/Dynatrace expect in year one?
+- **The ARR-accretion commitment is the scoreboard.** About $40M of ARR in FY2027 was promised publicly. Expect cross-sell and attach rate into Dynatrace accounts to outweigh Arize-standalone new logos.
+- **The hurdle is high and now explicit.** At an ≈11% cost of capital the purchase needs roughly $65–100M a year of after-tax operating income to pay for itself. Standalone Arize cannot do that; only attach into the base can. Roadmap proposals that shorten time-to-value for a Dynatrace enterprise customer are the ones that map to the number.
+- **Margin discipline is real.** An activist-aligned board, a BBB-type balance sheet rather than a cash pile, and a promise of margin recovery by FY2028 mean a provable-payback bar on new investment.
+- **Geography matters to the roadmap.** 54% of revenue is outside the US and 32% is in EMEA. Data residency, sovereign deployment and EU AI Act evidence are revenue-protection features for this base, not nice-to-haves.
+- **Developer credibility is a tracked asset.** Phoenix and OpenInference adoption are part of what was bought.
+- **Integration is the first job.** The deal closed 2026-10-01. Year one starts with packaging Arize into Dynatrace's subscription model and clearing enterprise procurement and security bars.
+- **Watch the Investor Day.** The Rule of 50 path for FY2029 will state what Arize is expected to contribute. That is the number to design toward.
