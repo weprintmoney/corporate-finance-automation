@@ -50,14 +50,17 @@ TOC structure — lessons are D2L modules there).
 
 ## Skills
 
+### `/value-company`
+
+Values any company across all 36 lessons. Skill folder: `.claude/skills/value-company/` (start with `SKILL.md`).
+
+A run compiles sources, fills a cited ledger (`inputs.yaml`), answers every question the course asks (the twelve Module 1 steps, the cumulative-project questions from lessons 13–36, and one question per lecture video), runs the model (cost of capital, optimal debt, FCFE vs. cash returned, DCF, multiples), and writes the report and a plain-language walkthrough. Output lands in:
+```
+03-corporate-finance/03-2-course-content/company-valuations/<company-slug>/
+```
+
+Invoke it with `/value-company <company>` (optionally `module-1`, `through-module-2`, `through-module-3`, or `full`).
+
 ### `/evaluate-company`
 
-Walks through a 12-step company valuation project tied to Module 1 lessons.  
-Command file: `.claude/commands/evaluate-company.md`
-
-Each step reads the relevant lesson, researches your chosen company on the web, and appends findings to a report saved at:
-```
-03-corporate-finance/03-2-course-content/company-valuations/<company-slug>-valuation.md
-```
-
-Invoke it by typing `/evaluate-company` in any Claude Code session in this repo.
+The Module 1 scope of `/value-company`, kept under its original name. Command file: `.claude/commands/evaluate-company.md`.

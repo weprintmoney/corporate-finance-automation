@@ -1,0 +1,950 @@
+# Transcript layer of the question bank: one entry per lecture video part (68 parts; lesson 24 has
+# no transcript). Each entry carries the anchoring quote, the concept the lecture teaches, and a
+# company-agnostic question template. The run instantiates {company} and answers it.
+#
+# Seeded from the SolarWinds project (company-valuations/solarwinds/lesson-NN.md), generalized
+# 2026-10-24. Transcript paths are relative to the repo root.
+#
+# applies_to: all | public | delisted | private | foreign-public
+
+- id: l01-p1
+  lesson: 1
+  part: 1
+  title: "The Financial Balance Sheet and the Singular Objective of Maximizing Firm Value"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-01/session-1-part-1.md
+  quote: You want to make your business the most valuable business you can.
+  concept: The financial balance sheet splits a company into assets in place and growth assets; every decision is judged by whether it raises firm value.
+  question: >-
+    Split {company}'s balance sheet into assets in place and growth assets. In the base year, how did
+    capital allocation (R&D, capital spending, acquisitions) divide between defending the existing
+    business and funding growth, and does that split match what management says the strategy is?
+  inputs: [company.rd_expense, company.capex, company.history, governance.objectives]
+  applies_to: [all]
+
+- id: l01-p2
+  lesson: 1
+  part: 2
+  title: "Companies Age Like Human Beings — Placing the Company on the Corporate Life Cycle"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-01/session-1-part-2.md
+  quote: The third theme is that companies, just like human beings, age.
+  concept: Companies move through a life cycle (start-up, growth, mature, decline) and the right investing, financing and payout decisions change with the stage.
+  question: >-
+    Where does {company} sit on the corporate life cycle, judged by revenue growth, margins,
+    reinvestment, and how it uses cash? Does management's behaviour (acquisitions, payouts, any sale
+    of the business) agree with that placement, or is the company refusing to act its age?
+  inputs: [company.history, company.capex, company.rd_expense]
+  applies_to: [all]
+
+- id: l02-p1
+  lesson: 2
+  part: 1
+  title: "The Four Linkages Behind the Utopian World of Stock Price Maximization"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-02/session-2-part-1.md
+  quote: Finally, in this Utopian world, there are no social costs or social benefits.
+  concept: Stock price maximization only equals value maximization if four links hold - managers serve stockholders, lenders are protected, markets are efficient, and there are no social costs.
+  question: >-
+    For each of the four linkages, where is {company} weakest? In particular, how are its lenders
+    protected (covenants, change-of-control terms), and has any recent event tested that protection?
+  inputs: [debt.covenants, governance.controlling_holders, governance.board]
+  applies_to: [all]
+
+- id: l02-p2
+  lesson: 2
+  part: 2
+  title: "Golden Parachutes, Poison Pills, and Managerial Self-Interest at Shareholder Expense"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-02/session-2-part-2.md
+  quote: Given a choice between their interest and what's in the best interest of stockholders, managers often put their interest over stockholder interests.
+  concept: Managers can entrench themselves and reward themselves at stockholders' expense; pay and takeover defenses show whose side the board is on.
+  question: >-
+    What do {company}'s executive pay and change-of-control agreements reward: closing a deal, the
+    share price, or long-run value? Are there golden parachutes, poison pills, or other devices that
+    protect managers rather than stockholders?
+  inputs: [governance.change_of_control_payouts, governance.board]
+  applies_to: [public, delisted, foreign-public]
+
+- id: l02-p3
+  lesson: 2
+  part: 3
+  title: "Where the Power Lies — Reading Top Shareholders to Judge Minority Protection"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-02/session-2-part-3.md
+  quote: Institutional investors, when they don't like the way a company is run, tend to sell their shares and move on.
+  concept: The list of top shareholders tells you who holds power and whether minority holders have any protection.
+  question: >-
+    Who are {company}'s top shareholders, and what protections exist for minority holders
+    (independent committees, majority-of-minority votes, limits on controlling votes)? Do the
+    institutional holders fight when they disagree, or just sell?
+  inputs: [governance.controlling_holders, governance.share_classes]
+  applies_to: [all]
+
+- id: l03-p1
+  lesson: 3
+  part: 1
+  title: "Intermediate Objectives — Why Market Share and Revenue Growth Are Not Enough"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-03/session-3-part-1.md
+  quote: Maximizing market share by itself is a dumb objective, and here's why.
+  concept: Intermediate goals like market share or growth are only useful if they lead to value; chased on their own they destroy it.
+  question: >-
+    Which headline metric does {company}'s management steer by (revenue, market share, recurring
+    revenue, margin, earnings per share)? Is it a genuine proxy for value, or is it being hit in
+    ways that damage value (discounting, bundling, under-investment)?
+  inputs: [governance.objectives, company.history]
+  applies_to: [all]
+
+- id: l03-p2
+  lesson: 3
+  part: 2
+  title: "Self-Correcting Markets — Bond Covenants, Activist Investors, and the Imperial CEO"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-03/session-3-part-2.md
+  quote: Left to their own devices, markets figure out ways to punish companies that essentially violate the rules.
+  concept: When the links break, markets self-correct through covenants, activists, takeovers and reputational damage.
+  question: >-
+    Has {company} had a day of reckoning (a scandal, covenant breach, activist campaign, failed deal,
+    or regulatory action)? Did markets, lenders or the board correct it, and did the correction leave
+    a lasting mark on value or was it priced away?
+  inputs: [company.history, governance.board]
+  applies_to: [all]
+
+- id: l04-p1
+  lesson: 4
+  part: 1
+  title: "Danger Plus Opportunity — The Ingredients of a Good Risk and Return Model"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-04/session-4-part-1.md
+  quote: Risk is equal to danger plus opportunity.
+  concept: A usable risk model must measure risk, separate rewarded from unrewarded risk, and turn it into an expected return; CAPM does this with one beta.
+  question: >-
+    Does a single-beta model price the risks that matter most for {company} (customer concentration,
+    regulation, tail events)? Which of those fall into the diversifiable, unpriced bucket, and does
+    {company}'s actual marginal investor diversify them away?
+  inputs: [governance.marginal_investor, country.exposures]
+  applies_to: [all]
+
+- id: l04-p2
+  lesson: 4
+  part: 2
+  title: "Climbing the Risk Ladder — From Firm-Specific Risk to the Market Portfolio"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-04/session-4-part-2.md
+  quote: Beta is not a measure of total risk.
+  concept: Firm-specific risk averages out in a portfolio; only market risk is rewarded, and beta measures only that.
+  question: >-
+    Which of {company}'s recent shocks were firm-specific and which were market-wide? If the marginal
+    investor is not diversified, does a market beta understate the risk they actually bear?
+  inputs: [beta.regression_beta, governance.marginal_investor, company.history]
+  applies_to: [all]
+
+- id: l04-p3
+  lesson: 4
+  part: 3
+  title: "Proxy Models and the Weakness of Beta — Does the CAPM Actually Work?"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-04/session-4-part-3.md
+  quote: The actual number is well below 10%.
+  concept: Beta explains little of the variation in returns; proxy models (size, price-to-book) are an alternative with their own weaknesses.
+  question: >-
+    Would a proxy-based cost of equity (using {company}'s size and price-to-book) give a materially
+    different number than the CAPM estimate, and if so, which is more defensible for this company?
+  inputs: [company.equity_value, company.equity_book, beta.unlevered_bottom_up]
+  applies_to: [public, delisted, foreign-public]
+
+- id: l05-p1
+  lesson: 5
+  part: 1
+  title: "Matching the Risk-Free Rate to Currency and Time Horizon"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-05/session-5-part-1.md
+  quote: There is no global risk-free rate.
+  concept: The risk-free rate depends on the currency and horizon of the cash flows; pick the currency, then the matching government bond.
+  question: >-
+    What currency are {company}'s cash flows in, what is the right risk-free rate in that currency
+    and horizon, and does any part of the business (foreign revenue, foreign debt, a new owner's
+    capital structure) argue for a different currency choice?
+  inputs: [meta.currency, market.risk_free_rate, country.exposures, debt.currency]
+  applies_to: [all]
+
+- id: l05-p2
+  lesson: 5
+  part: 2
+  title: "Netting Out the Default Spread — Risk-Free Rates in Difficult Currencies"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-05/session-5-part-2.md
+  quote: The key to currency is to stay consistent, pick a currency and do both your returns and your hurdle rate in that currency.
+  concept: A government bond in a risky currency includes a default spread; net it out to get the risk-free rate, and keep cash flows and discount rate in one currency.
+  question: >-
+    If any of {company}'s revenue or debt is in a currency whose government bond is not risk-free,
+    what default spread must be netted out to get the risk-free rate, and does treating that slice
+    separately move the cost of capital?
+  inputs: [country.exposures, debt.currency, market.risk_free_rate]
+  applies_to: [all]
+
+- id: l06-p1
+  lesson: 6
+  part: 1
+  title: "Survey, Historical, and Implied Premiums — Three Ways to Estimate the ERP"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-06/session-6-part-1.md
+  quote: That 10-year risk premium is pure noise, so I have to go back as far as I can because I need the data.
+  concept: The equity risk premium can be surveyed, measured from history, or implied from today's prices; implied is forward-looking and the course's choice.
+  question: >-
+    Which equity risk premium does the valuation of {company} use (survey, historical, implied), why,
+    and what would the cost of equity be under the other two? If {company} is private, does a
+    market-implied premium still apply, or does the owner's required return replace it?
+  inputs: [market.mature_erp, governance.marginal_investor]
+  applies_to: [all]
+
+- id: l06-p2
+  lesson: 6
+  part: 2
+  title: "Scaling Sovereign Default Spreads Into Country Equity Risk Premiums"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-06/session-6-part-2.md
+  quote: I would argue that equities are riskier than bonds.
+  concept: A country's equity risk premium is its default spread scaled up by how much riskier its stocks are than its bonds.
+  question: >-
+    Which method produced the country risk premiums applied to {company} (the raw default spread, or
+    the spread scaled by relative equity volatility), and how much does the choice of method move
+    the weighted equity risk premium?
+  inputs: [country.exposures, country.weighted_erp]
+  applies_to: [all]
+
+- id: l07-p1
+  lesson: 7
+  part: 1
+  title: "Implied Equity Risk Premiums and Building Country Risk Off Them"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-07/session-7-part-1.md
+  quote: a company's risk does not come from where it's incorporated but from where it does business.
+  concept: Country risk follows where revenues and operations are, not the country of incorporation.
+  question: >-
+    How much of {company}'s revenue (or production, if that is the better measure) comes from outside
+    its home country, and what is its revenue-weighted equity risk premium compared with the flat
+    home-country number?
+  inputs: [country.exposures, country.weighted_erp, market.mature_erp]
+  applies_to: [all]
+
+- id: l07-p2
+  lesson: 7
+  part: 2
+  title: "Company Equity Risk Premiums and Implied ERP"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-07/session-7-part-2.md
+  quote: For every one of these companies, I'm looking past the country of incorporation to where they do business.
+  concept: Build a company-specific ERP from the mature-market premium plus weighted country premiums.
+  question: >-
+    What is {company}'s weighted equity risk premium in numbers, which single country exposure moves
+    it most, and what would make that exposure change?
+  inputs: [country.exposures, country.weighted_erp]
+  applies_to: [all]
+
+- id: l08-p1
+  lesson: 8
+  part: 1
+  title: "Estimating Regression Betas — The Four Choices"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-08/session-8-part-1.md
+  quote: There's a reason why services latch on to the S&P 500 for U.S. companies.
+  concept: A regression beta depends on four choices - the index, the return interval, the window, and whether returns include dividends.
+  question: >-
+    For {company}, which index, return interval and window are available for a regression beta, and
+    are they clean enough (listing age, thin trading, a delisting, a change in the business) to give
+    a usable estimate?
+  inputs: [beta.regression_beta]
+  applies_to: [public, delisted, foreign-public]
+
+- id: l08-p2
+  lesson: 8
+  part: 2
+  title: "Interpreting the Regression Beta — Jensen's Alpha, Standard Error, R-Squared"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-08/session-8-part-2.md
+  quote: Standard errors are features, not bugs. They're part of the process, we've got to learn to deal with them.
+  concept: The regression's intercept (Jensen's alpha) measures past performance, the standard error sets the confidence interval, and R-squared is the share of risk that is market risk.
+  question: >-
+    What are {company}'s regression beta, standard error, R-squared and Jensen's alpha, what do they
+    say about past performance and about how much of its risk is firm-specific, and is the confidence
+    interval too wide to trust on its own?
+  inputs: [beta.regression_beta, beta.regression_se, beta.regression_r2, beta.jensens_alpha]
+  applies_to: [public, delisted, foreign-public]
+
+- id: l09-p1
+  lesson: 9
+  part: 1
+  title: "Determinants of Beta and Regression Pitfalls — Stories Behind Company Betas"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-09/session-9-part-1.md
+  quote: Companies that produce very discretionary products will have high betas.
+  concept: Beta comes from what the company sells (discretionary or not), its cost structure, and its debt; regression betas can mislead when the company has changed.
+  question: >-
+    Is what {company} sells discretionary or essential for its customers, and does that explain where
+    its beta sits relative to its peers? Has the business changed enough that a historical beta no
+    longer describes it?
+  inputs: [peers, beta.unlevered_bottom_up, beta.regression_beta]
+  applies_to: [all]
+
+- id: l09-p2
+  lesson: 9
+  part: 2
+  title: "The Three Determinants of Beta — Business, Operating Leverage, Financial Leverage"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-09/session-9-part-2.md
+  quote: It makes your equity earnings much more volatile and through that, it makes your beta higher.
+  concept: Levered beta = unlevered beta × (1 + (1 − t) × D/E); debt raises the equity beta mechanically.
+  question: >-
+    Separate {company}'s equity beta into business risk, operating leverage and financial leverage.
+    At its current debt-to-equity ratio and marginal tax rate, how much of the levered beta comes
+    from debt alone?
+  inputs: [company.debt_total, company.equity_value, beta.unlevered_bottom_up, market.tax_rate_marginal]
+  applies_to: [all]
+
+- id: l10-p1
+  lesson: 10
+  part: 1
+  title: "Bottom-Up Betas — Why They Beat Regression"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-10/session-10-part-1.md
+  quote: A bottom-up beta is more precise, more forward-looking, and more dynamic than a regression beta.
+  concept: Averaging the unlevered betas of many comparable firms cuts the standard error and reflects the business as it is now.
+  question: >-
+    Is {company} single-business enough to use one industry unlevered beta, or does it have segments
+    different enough to need separate betas weighted by value? Which comparable set, and why?
+  inputs: [beta.segments, beta.unlevered_bottom_up, peers]
+  applies_to: [all]
+
+- id: l10-p2
+  lesson: 10
+  part: 2
+  title: "Bottom-Up Beta by Business — Aggregating and Levering"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-10/session-10-part-2.md
+  quote: Because the movie business is riskier than Disney as a company, you should demand much more of it, a higher hurdle rate.
+  concept: Each business inside a company deserves its own hurdle rate; the company-wide rate is a weighted average.
+  question: >-
+    If {company} has businesses with different risk, what hurdle rate should each carry, which one is
+    riskier than the company as a whole, and where would using one company-wide rate lead to the
+    wrong investment decision?
+  inputs: [beta.segments, market.risk_free_rate, country.weighted_erp]
+  applies_to: [all]
+
+- id: l11-p1
+  lesson: 11
+  part: 1
+  title: "Bottom-Up Betas Across Companies — Multi- and Single-Business Cases"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-11/session-11-part-1.md
+  quote: My sample size would be far too small if I focused just on Brazilian companies.
+  concept: Go global for the comparable sample when the home-country sample is too small; business risk travels across borders.
+  question: >-
+    Should {company}'s comparable set be global rather than home-country only, to get a large enough
+    sample? What does the broader sample change in the unlevered beta, and does it introduce
+    companies that are not really comparable?
+  inputs: [beta.unlevered_bottom_up, peers]
+  applies_to: [all]
+
+- id: l11-p2
+  lesson: 11
+  part: 2
+  title: "Betas and Cost of Equity for Private Businesses — Total Beta"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-11/session-11-part-2.md
+  quote: You cannot use a market beta to come up with the cost of equity because that market beta focuses only on the risk you cannot diversify away.
+  concept: An undiversified owner bears all the risk, so the right beta is total beta = market beta ÷ √R².
+  question: >-
+    Is {company}'s owner or marginal investor diversified? If not, what is the total beta (market beta
+    divided by the square root of R-squared) and the resulting cost of equity, and when during
+    {company}'s ownership history would total beta have been the right measure?
+  inputs: [beta.unlevered_bottom_up, beta.regression_r2, beta.total_beta, governance.marginal_investor]
+  applies_to: [all]
+
+- id: l12-p1
+  lesson: 12
+  part: 1
+  title: "Cost of Debt and What Counts as Debt"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-12/session-12-part-1.md
+  quote: All interest-bearing obligations are, obviously, debt. All lease commitments are debt.
+  concept: Debt is any commitment that is fixed, tax-deductible, and whose non-payment can cost control of the firm; leases qualify, deferred revenue does not.
+  question: >-
+    What is {company}'s total debt once leases and every other fixed, tax-deductible,
+    default-triggering commitment are counted? What on the balance sheet looks like debt but fails
+    the test, and what is off the balance sheet but passes it?
+  inputs: [company.debt_face, company.debt_book, company.lease_debt, company.deferred_revenue, company.debt_total]
+  applies_to: [all]
+
+- id: l12-p2
+  lesson: 12
+  part: 2
+  title: "From Ratings to Cost of Debt — Actual vs. Synthetic Ratings"
+  transcript: 03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-12/session-12-part-2.md
+  quote: If you have an actual rating, don't go looking for trouble. Just use the actual rating.
+  concept: Use an agency rating when one exists; otherwise build a synthetic rating from interest coverage; a market rate on the company's own debt beats both.
+  question: >-
+    Does {company} have an agency rating? If not, what synthetic rating does its interest coverage
+    imply, and is there an observed market rate on its own debt that is a better estimate than
+    either? If the synthetic and observed numbers disagree, what explains the gap?
+  inputs: [debt.rating_actual, company.ebit, company.interest_expense, debt.kd_pretax_observed, modeling_choices.coverage_numerator]
+  applies_to: [all]
+
+- id: l13-p1
+  lesson: 13
+  part: 1
+  title: "Why Book Value Weights Don't Hold Up: Converting Book Debt to Market Debt"
+  transcript: 03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-13/session-13-part-1.md
+  quote: There is no good reason for using book value weights.
+  concept: Cost-of-capital weights use market values; convert book debt to market value and add the present value of leases.
+  question: >-
+    What are {company}'s market-value debt and equity weights, with lease debt included, and how
+    different are they from book weights? Does including leases change the weights enough to matter?
+  inputs: [company.debt_total, company.lease_debt, company.equity_value, company.equity_book, company.debt_book]
+  applies_to: [all]
+
+- id: l13-p2
+  lesson: 13
+  part: 2
+  title: "Bringing Cost of Equity and Debt Together: WACC as Hurdle Rate"
+  transcript: 03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-13/session-13-part-2.md
+  quote: That cost of capital is going to become a hurdle rate for your company.
+  concept: The cost of capital is the hurdle rate for the company's investments; divisions with different risk get different hurdle rates.
+  question: >-
+    What is {company}'s cost of capital, and should different parts of the business carry different
+    hurdle rates? If the company reports one segment but runs businesses with different risk and
+    growth, what would the divisional rates be?
+  inputs: [beta.segments, company.debt_total, company.equity_value, market.risk_free_rate, country.weighted_erp]
+  applies_to: [all]
+
+- id: l14-p1
+  lesson: 14
+  part: 1
+  title: "Show Me the Money: From Accounting Earnings to Cash Flows"
+  transcript: 03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-14/session-14-part-1.md
+  quote: It's not show me the accounting income, it's not show me the earnings, it's show me the money.
+  concept: Cash flow = after-tax operating income + depreciation − capital spending − change in working capital; R&D is really capital spending.
+  question: >-
+    Starting from {company}'s operating income, what are the adjustments (depreciation, capital
+    spending, working capital, expensed R&D) that get to free cash flow to the firm? How much of the
+    gap between operating income and EBITDA is non-cash amortization versus real reinvestment?
+  inputs: [company.ebit, company.da, company.capex, company.change_wc, company.rd_expense, company.acquisition_amortization, company.sbc]
+  applies_to: [all]
+
+- id: l14-p2
+  lesson: 14
+  part: 2
+  title: "Return on Invested Capital vs. Cost of Capital, and the Country Risk Premium"
+  transcript: 03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-14/session-14-part-2.md
+  quote: It looks like Disney is generating a 4.8% excess return over and above its cost of capital.
+  concept: Return on invested capital compared with the cost of capital is the quickest test of whether past investments created value.
+  question: >-
+    What return on invested capital did {company} earn in the base year, does it clear the cost of
+    capital, and does the answer flip if acquisition goodwill is excluded from invested capital?
+  inputs: [company.ebit, company.invested_capital, company.goodwill, market.tax_rate_marginal]
+  applies_to: [all]
+
+- id: l15-p1
+  lesson: 15
+  part: 1
+  title: "Sunk Costs, Non-Incremental G&A, and Time-Weighting Cash Flows"
+  transcript: 03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-15/session-15-part-1.md
+  quote: The first rule in capital budgeting is you have sunk cost, money were already spent, don't consider them.
+  concept: Only incremental cash flows count - ignore sunk costs and allocated overhead that would exist anyway.
+  question: >-
+    For {company}'s typical project (an acquisition, a product line, a plant), which costs already
+    spent are sunk, and which allocated overheads are truly incremental? What does a typical project
+    look like in life, investment needs and cash-flow pattern?
+  inputs: [company.capex, company.rd_expense, company.history]
+  applies_to: [all]
+
+- id: l15-p2
+  lesson: 15
+  part: 2
+  title: "NPV, IRR, and Terminal Value via the Growing Perpetuity"
+  transcript: 03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-15/session-15-part-2.md
+  quote: If you take a project with an NPV of $3.3 billion, your value will increase by $3.3 billion.
+  concept: Net present value adds directly to firm value; terminal value uses a growing perpetuity whose growth cannot exceed the economy's.
+  question: >-
+    What terminal growth rate is defensible for {company}, and does any disclosed valuation of it
+    (a fairness opinion, an analyst model, management's plan) use a growth rate above the risk-free
+    rate or the economy's growth?
+  inputs: [market.terminal_growth, market.risk_free_rate, forecast.management_growth, forecast.analyst_growth]
+  applies_to: [all]
+
+- id: l16-p1
+  lesson: 16
+  part: 1
+  title: "Currency Consistency: Redoing the DCF in a Foreign Currency"
+  transcript: 03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-16/session-16-part-1.md
+  quote: A good project in U.S. dollars should remain a good project in nominal Reais.
+  concept: A project's value does not depend on the currency it is analyzed in, as long as cash flows and discount rate use the same currency and consistent inflation.
+  question: >-
+    If {company} has foreign operations, what currency should they be valued in, and would a
+    foreign-currency analysis at a matching discount rate give the same answer as the home-currency
+    one? What inflation differential does the conversion assume?
+  inputs: [country.exposures, meta.currency, market.risk_free_rate]
+  applies_to: [all]
+
+- id: l16-p2
+  lesson: 16
+  part: 2
+  title: "Payback, What-If Analysis, Monte Carlo, and the Hedging Decision"
+  transcript: 03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-16/session-16-part-2.md
+  quote: Does hedging that risk create a benefit that is greater than the cost?
+  concept: Hedge a risk only when the benefit to the company exceeds the cost and investors cannot diversify it more cheaply themselves.
+  question: >-
+    Which risks does {company} hedge or insure against (currency, interest rates, commodity, cyber,
+    regulatory), and does the benefit exceed the cost? Could investors diversify any of these more
+    cheaply than the company can hedge them?
+  inputs: [debt.rate_type, country.exposures, company.history]
+  applies_to: [all]
+
+- id: l17-p1
+  lesson: 17
+  part: 1
+  title: "Debt vs. Equity and the Corporate Life Cycle"
+  transcript: 03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-17/session-17-part-1.md
+  quote: One of the most common problems among corporations is corporations that refuse to act their age.
+  concept: Financing should match the life-cycle stage - young firms use equity, mature firms can carry debt.
+  question: >-
+    Does {company}'s leverage fit its life-cycle stage, or is it a legacy of past ownership (a
+    buyout, a founder's aversion to debt, a family tradition)? How has the debt ratio moved over the
+    years in the ledger, and does the trend match the company's age?
+  inputs: [company.history, company.debt_total, company.equity_value]
+  applies_to: [all]
+
+- id: l17-p2
+  lesson: 17
+  part: 2
+  title: "The Trade-Off on Debt: Tax Benefits, Discipline, Bankruptcy and Agency Costs"
+  transcript: 03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-17/session-17-part-2.md
+  quote: The biggest plus of using debt is the tax code rewards you for borrowing money.
+  concept: Debt brings tax savings and discipline; it costs expected bankruptcy, agency conflicts with lenders, and lost flexibility.
+  question: >-
+    For {company}, how large are the tax benefit and the discipline benefit of debt against the
+    bankruptcy, agency and flexibility costs? Judged qualitatively from the trade-off alone, does
+    the company carry too much or too little debt?
+  inputs: [market.tax_rate_marginal, company.debt_total, debt.covenants, company.goodwill, company.rd_expense]
+  applies_to: [all]
+
+- id: l18-p1
+  lesson: 18
+  part: 1
+  title: "The Cost of Capital Approach to the Optimal Debt Ratio"
+  transcript: 03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-18/session-18-part-1.md
+  quote: The optimal debt ratio for this company, if I stay true to the notion of minimizing cost of capital, is 40% debt.
+  concept: Vary the debt ratio, relever beta and re-rate the debt at each step, and the debt ratio that minimizes the cost of capital is the optimum.
+  question: >-
+    Where does {company}'s cost of capital bottom out as the debt ratio is varied from 0% to 70%, and
+    does its current ratio sit below, at, or above that point? How steep is the curve on each side
+    of the minimum?
+  inputs: [company.ebit, company.debt_total, company.equity_value, beta.unlevered_bottom_up, market.risk_free_rate, country.weighted_erp, market.tax_rate_marginal, modeling_choices.firm_size_table]
+  applies_to: [all]
+
+- id: l18-p2
+  lesson: 18
+  part: 2
+  title: "The Iterative Rating Loop and the Kink in the Cost of Capital Curve"
+  transcript: 03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-18/session-18-part-2.md
+  quote: My advice to companies is if you're going to make a mistake, be under-levered rather than over-levered.
+  concept: The rating and the interest rate depend on each other, so the loop iterates; the choice of coverage numerator can move the optimum, and under-levering is the safer error.
+  question: >-
+    Which coverage numerator (operating income, operating income plus acquisition amortization, or
+    EBITDA) does {company}'s optimum depend on, and how far does the optimum move between them? Which
+    one is defensible for this company, and where is the kink in the curve?
+  inputs: [modeling_choices.coverage_numerator, company.ebit, company.ebitda_standardized, company.acquisition_amortization, company.sbc]
+  applies_to: [all]
+
+- id: l19-p1
+  lesson: 19
+  part: 1
+  title: "From Lower Cost of Capital to Real Value: Financing Savings and the Buyback Premium"
+  transcript: 03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-19/session-19-part-1.md
+  quote: That 19.6 billion is not value creation in the traditional sense, it's a value transfer.
+  concept: Moving to the optimum saves a percentage of firm value every year; the capitalized savings are the value gained, and the buyback price decides who captures it.
+  question: >-
+    What are the annual financing savings from moving {company} to its optimal debt ratio, what are
+    they worth capitalized as a growing perpetuity, and who captures that value (the price at which
+    shares are bought back, or a distribution to the owner)?
+  inputs: [company.debt_total, company.equity_value, company.shares_basic, market.terminal_growth]
+  applies_to: [all]
+
+- id: l19-p2
+  lesson: 19
+  part: 2
+  title: "Breakeven Buyback Pricing, Stress-Testing the Optimal, and Rating Constraints"
+  transcript: 03-corporate-finance/03-2-course-content/02-investment-returns-and-financing/lesson-19/session-19-part-2.md
+  quote: Just because of excess debt capacity doesn't mean they can use it to do whatever they want.
+  concept: Stress the optimum by cutting operating income; impose a rating floor if lenders or managers require one; the recommended ratio may sit below the unconstrained optimum.
+  question: >-
+    How far could {company}'s operating income fall before the optimum shifts or a covenant or rating
+    floor binds? Given those constraints, what debt ratio would you recommend, and how does it compare
+    with the unconstrained optimum?
+  inputs: [company.ebit, company.interest_expense, debt.covenants, company.history]
+  applies_to: [all]
+
+- id: l20-p1
+  lesson: 20
+  part: 1
+  title: "Letting Operating Income React to Distress"
+  transcript: 03-corporate-finance/03-2-course-content/03-financing-mix-and-dividends/lesson-20/session-20-part-1.md
+  quote: In other words, the caution I'd added earlier about it's better to be underlevered than overlevered, applies in spades now.
+  concept: When a lower rating costs customers and suppliers, operating income falls with leverage, and the optimum moves lower.
+  question: >-
+    If {company}'s rating fell, how much operating income would it lose through customer flight,
+    supplier terms or lost contracts? Is a small indirect-cost sensitivity (a few percent) or a large
+    one the right assumption for this business, and what past shock gives evidence?
+  inputs: [company.history, company.ebit, debt.rating_actual]
+  applies_to: [all]
+
+- id: l20-p2
+  lesson: 20
+  part: 2
+  title: "The Four Drivers of Optimal Leverage"
+  transcript: 03-corporate-finance/03-2-course-content/03-financing-mix-and-dividends/lesson-20/session-20-part-2.md
+  quote: If you pay no taxes, if you have zero tax rate, debt cannot help you.
+  concept: Optimal leverage rises with the tax rate and with operating income as a share of firm value, and falls with business risk and with the relative cost of debt.
+  question: >-
+    Where does {company} sit on the four drivers of optimal leverage - marginal tax rate, operating
+    income as a share of firm value, business risk, and the relative price of debt versus equity -
+    and how does its operating-income-to-value ratio compare with peers that carry different debt?
+  inputs: [market.tax_rate_marginal, company.ebit, company.debt_total, company.equity_value, beta.unlevered_bottom_up, peers]
+  applies_to: [all]
+
+- id: l21-p1
+  lesson: 21
+  part: 1
+  title: "APV: Unlevered Firm Value, Tax Benefits, and Expected Bankruptcy Costs"
+  transcript: 03-corporate-finance/03-2-course-content/03-financing-mix-and-dividends/lesson-21/session-21-part-1.md
+  quote: As you borrow more money, you're increasing the probability that you will go bankrupt, right?
+  concept: Adjusted present value = unlevered firm value + tax benefits of debt − expected bankruptcy cost (probability × cost).
+  question: >-
+    Under the adjusted-present-value approach, what are {company}'s unlevered value, the present
+    value of its tax benefits from debt, and its expected bankruptcy cost? What indirect-cost
+    assumption is defensible for this kind of business, and what evidence supports it?
+  inputs: [market.tax_rate_marginal, company.debt_total, company.equity_value, debt.rating_actual]
+  applies_to: [all]
+
+- id: l21-p2
+  lesson: 21
+  part: 2
+  title: "The Relative Approach: Comparing to Sector Averages and Regression-Based Refinement"
+  transcript: 03-corporate-finance/03-2-course-content/03-financing-mix-and-dividends/lesson-21/session-21-part-2.md
+  quote: By staying close to the sector, you're, in effect, making sure that if you make a mistake, you'll always have lots of company.
+  concept: Compare the debt ratio with the sector, adjusted for the company's own characteristics; agreement with the intrinsic approach is reassuring, conflict needs an explanation.
+  question: >-
+    How does {company}'s debt ratio compare with its sector and its closest peers, and does the
+    comparison agree with or contradict the cost-of-capital answer? If they conflict, which one is
+    wrong and why?
+  inputs: [peers, company.debt_total, company.equity_value]
+  applies_to: [all]
+
+- id: l22-p1
+  lesson: 22
+  part: 1
+  title: "Under-Levered vs. Over-Levered: Takeover Risk, Bankruptcy Threat, and the Good Projects Test"
+  transcript: 03-corporate-finance/03-2-course-content/03-financing-mix-and-dividends/lesson-22/session-22-part-1.md
+  quote: Having too little debt might make you the target of a hostile acquisition.
+  concept: An under-levered firm risks a takeover and should move fast; an over-levered firm risks distress; the path depends on how good its projects are.
+  question: >-
+    Is {company} under- or over-levered? If under, is it a takeover target (past returns, size,
+    ownership)? If over, how close is distress? How good are its available projects, and what is the
+    best path and speed to the optimum - recapitalize, or change financing of future projects?
+  inputs: [company.debt_total, company.equity_value, governance.controlling_holders, beta.jensens_alpha, company.history]
+  applies_to: [all]
+
+- id: l23-p1
+  lesson: 23
+  part: 1
+  title: "Matching Debt to Assets: The Five Questions That Design the Perfect Financing"
+  transcript: 03-corporate-finance/03-2-course-content/03-financing-mix-and-dividends/lesson-23/session-23-part-1.md
+  quote: You'd like to issue debt that behaves like equity, that gives you the flexibility of equity while giving you the tax benefits of debt.
+  concept: Debt should match the assets it funds in maturity, currency, cyclicality and inflation exposure; floating-rate debt suits firms with pricing power.
+  question: >-
+    Given the life, currency, cyclicality and pricing power of {company}'s assets, what should its
+    debt look like in maturity, fixed versus floating, and currency? Does the company have the pricing
+    power that floating-rate debt requires?
+  inputs: [debt.rate_type, debt.maturity_years, debt.currency, country.exposures, company.history]
+  applies_to: [all]
+
+- id: l23-p2
+  lesson: 23
+  part: 2
+  title: "Fixing Debt/Asset Mismatches: Swaps vs. New-Project Financing"
+  transcript: 03-corporate-finance/03-2-course-content/03-financing-mix-and-dividends/lesson-23/session-23-part-2.md
+  quote: There are two ways in which companies can adjust debt that doesn't match.
+  concept: A mismatch can be fixed with derivatives (swaps) or by financing new projects differently.
+  question: >-
+    Where does {company}'s actual debt mismatch its assets (currency, maturity, rate type)? Is the
+    better fix a swap or a different financing of future projects, and what would it cost?
+  inputs: [debt.rate_type, debt.maturity_years, debt.currency, country.exposures]
+  applies_to: [all]
+
+- id: l25-p1
+  lesson: 25
+  part: 1
+  title: "Three Schools of Thought on Dividends and the Ex-Dividend Day as a Tax-Preference Test"
+  transcript: 03-corporate-finance/03-2-course-content/03-financing-mix-and-dividends/lesson-25/session-25-part-1.md
+  quote: The more the tax rates diverge, the more dividends will matter.
+  concept: Dividends can be neutral, bad (tax disadvantaged) or good (clientele, signalling); the ex-dividend price drop reveals the marginal investor's tax preference.
+  question: >-
+    Who holds {company}'s shares, what are their tax preferences, and which school of thought on
+    dividends applies? If the company has paid dividends, what does the ex-dividend price behaviour
+    say about the marginal investor?
+  inputs: [governance.marginal_investor, governance.controlling_holders, company.history]
+  applies_to: [all]
+
+- id: l25-p2
+  lesson: 25
+  part: 2
+  title: "Bad Reasons vs. Good Reasons to Pay Dividends: Clientele, Signaling, and Wealth Transfer From Bondholders"
+  transcript: 03-corporate-finance/03-2-course-content/03-financing-mix-and-dividends/lesson-25/session-25-part-2.md
+  quote: When you pay a dividend, you might be transferring wealth from the bondholders or lenders to the equity investors.
+  concept: Good reasons for dividends are a clientele and a credible signal; bad reasons include habit and taking value from lenders.
+  question: >-
+    What are {company}'s actual reasons for its payout policy (a clientele, signalling, lender
+    restrictions, controlling-holder preference, habit), and are they good ones? Would a change in
+    payout signal something the company does not intend?
+  inputs: [debt.covenants, company.history, governance.controlling_holders]
+  applies_to: [all]
+
+- id: l26-p1
+  lesson: 26
+  part: 1
+  title: "FCFE as the Potential Dividend: Computing It and Reading the Payout Gap"
+  transcript: 03-corporate-finance/03-2-course-content/03-financing-mix-and-dividends/lesson-26/session-26-part-1.md
+  quote: If you're already in a hole, you need to stop digging.
+  concept: Free cash flow to equity = net income − (capex − depreciation) − change in working capital + net new debt; it is what the company could pay out.
+  question: >-
+    What was {company}'s free cash flow to equity in each of the last five years, and did the cash it
+    returned (dividends plus buybacks) fall short of, match, or exceed it? If it paid out more than it
+    earned, where did the money come from?
+  inputs: [company.history]
+  applies_to: [all]
+
+- id: l26-p2
+  lesson: 26
+  part: 2
+  title: "Cash Accumulation and What Happens When Payout Falls Short of Capacity"
+  transcript: 03-corporate-finance/03-2-course-content/03-financing-mix-and-dividends/lesson-26/session-26-part-2.md
+  quote: The point I'm trying to make is when you hold back cash, your cash balance balloons out.
+  concept: Cash not returned shows up as a growing cash balance, debt paydown, or acquisitions; large balances invite activists.
+  question: >-
+    Where did the gap between {company}'s free cash flow to equity and the cash it returned show up:
+    the cash balance, debt paydown, or acquisitions? Did any shareholder act as an activist to force
+    the cash out?
+  inputs: [company.history, company.cash, company.debt_total, governance.controlling_holders]
+  applies_to: [all]
+
+- id: l27-p1
+  lesson: 27
+  part: 1
+  title: "Companies Earn the Right to Accumulate Cash: The Dividend Assessment Matrix"
+  transcript: 03-corporate-finance/03-2-course-content/04-dividends-and-valuation/lesson-27/session-27-part-1.md
+  quote: Companies earn the right to accumulate cash. They're not endowed with that right.
+  concept: Trust management with cash only if returns on capital beat the cost of capital and the stock has done well; otherwise push the cash out.
+  question: >-
+    Has {company} earned the right to hold cash? Over the current management's tenure, has return on
+    capital beaten the cost of capital, and has the stock beaten the market? Which cell of the
+    dividend assessment matrix does the company fall in?
+  inputs: [company.history, company.invested_capital, beta.jensens_alpha]
+  applies_to: [all]
+
+- id: l27-p2
+  lesson: 27
+  part: 2
+  title: "Dividend Addicts, Family Subsidies, and Control: Assessing Dividend Policy"
+  transcript: 03-corporate-finance/03-2-course-content/04-dividends-and-valuation/lesson-27/session-27-part-2.md
+  quote: So BP kept putting off the bad decision year after year after year hoping that something good will happen.
+  concept: Companies that borrow to keep paying dividends, or pay to subsidize a controlling holder, are deferring a bad decision.
+  question: >-
+    Did {company} ever fund dividends or buybacks with new borrowing, or pay out to serve a
+    controlling holder's needs rather than its own capacity? What pressure did that create, and
+    what decision was being deferred?
+  inputs: [company.history, governance.controlling_holders]
+  applies_to: [all]
+
+- id: l28-p1
+  lesson: 28
+  part: 1
+  title: "Me-Too Corporate Finance: Benchmarking Dividend Policy Against the Peer Group"
+  transcript: 03-corporate-finance/03-2-course-content/04-dividends-and-valuation/lesson-28/session-28-part-1.md
+  quote: Much of corporate finance is what I call 'me-too corporate finance.'
+  concept: Payout policy is often copied from peers; a regression of payout on growth, risk and leverage shows what the company should pay given its own characteristics.
+  question: >-
+    How does {company}'s payout compare with its peers, and what would a regression of payout on
+    growth, beta and leverage predict for a company with its characteristics? Is the company
+    copying its sector, or diverging for a reason?
+  inputs: [peers, company.history]
+  applies_to: [all]
+
+- id: l29-p1
+  lesson: 29
+  part: 1
+  title: "Three Ways to Value a Company and the Four Questions Behind Every DCF"
+  transcript: 03-corporate-finance/03-2-course-content/04-dividends-and-valuation/lesson-29/session-29-part-1.md
+  quote: When you have shifting, unstable, or unpredictable debt ratios, you should be valuing the entire firm.
+  concept: Value the whole firm (cash flows before debt) when the debt ratio is unstable; value equity directly only when leverage is stable.
+  question: >-
+    Given how {company}'s debt ratio has moved over the years in the ledger, should it be valued as
+    a firm (cash flows before debt payments) or as equity (cash flows after them)? What four inputs
+    will the DCF need, and which is the hardest to estimate here?
+  inputs: [company.history, company.debt_total, company.equity_value]
+  applies_to: [all]
+
+- id: l30-p1
+  lesson: 30
+  part: 1
+  title: "Three Cash Flow Definitions and Matching Discount Rates"
+  transcript: 03-corporate-finance/03-2-course-content/04-dividends-and-valuation/lesson-30/session-30-part-1.md
+  quote: So free cash flow to equity is after debt payments, free cash flow to the firm is before debt payments.
+  concept: Dividends, free cash flow to equity and free cash flow to the firm are different cash flows and each pairs with its own discount rate.
+  question: >-
+    What is {company}'s base-year free cash flow to the firm (after-tax operating income minus net
+    capital spending minus the change in working capital), what reinvestment rate does it imply, and
+    which discount rate pairs with it?
+  inputs: [company.ebit, market.tax_rate_marginal, market.tax_rate_effective, company.capex, company.da, company.change_wc, company.sbc]
+  applies_to: [all]
+
+- id: l31-p1
+  lesson: 31
+  part: 1
+  title: "Growth Has to Be Earned: Reinvestment, Return, and the Fundamental Growth Rate"
+  transcript: 03-corporate-finance/03-2-course-content/04-dividends-and-valuation/lesson-31/session-31-part-1.md
+  quote: The growth of a company is not something that you and I can come up with or endow the company with.
+  concept: Expected growth = reinvestment rate × return on capital; growth that is not paid for with reinvestment is not real.
+  question: >-
+    What growth rate do {company}'s actual reinvestment rate and return on invested capital justify,
+    and how does it compare with management's plan and analysts' numbers? If the company is growing
+    faster than the fundamentals allow, where is the growth coming from?
+  inputs: [company.history, company.invested_capital, forecast.management_growth, forecast.analyst_growth]
+  applies_to: [all]
+
+- id: l31-p2
+  lesson: 31
+  part: 2
+  title: "From ROE Decomposition to a Revenue-Based Growth Model"
+  transcript: 03-corporate-finance/03-2-course-content/04-dividends-and-valuation/lesson-31/session-31-part-2.md
+  quote: This approach to estimating growth based on fundamentals works if you have a stable return on equity and a stable return on capital.
+  concept: When returns are unstable, forecast revenue growth, a margin path, and reinvestment from a sales-to-capital ratio instead.
+  question: >-
+    Are {company}'s margins and returns stable enough for the fundamental growth formula? If not,
+    what revenue growth, margin path and sales-to-capital ratio should drive the forecast, and what
+    does the company's own history say that ratio is?
+  inputs: [company.history, forecast.sales_to_capital, company.rd_expense, peers]
+  applies_to: [all]
+
+- id: l32-p1
+  lesson: 32
+  part: 1
+  title: "Capping the Growth Rate: How Long Should the Growth Period Last?"
+  transcript: 03-corporate-finance/03-2-course-content/04-dividends-and-valuation/lesson-32/session-32-part-1.md
+  quote: The bigger your competitive advantages and the more sustainable they are, the longer your growth period can be.
+  concept: The length of the high-growth period depends on the size and durability of competitive advantages.
+  question: >-
+    How durable are {company}'s competitive advantages (switching costs, brand, network, cost
+    position), and how long a growth period do they justify before the company is treated as
+    mature? What evidence (retention, share, margins versus peers) supports the choice?
+  inputs: [forecast.growth_period_years, company.history, peers]
+  applies_to: [all]
+
+- id: l32-p2
+  lesson: 32
+  part: 2
+  title: "Valuing a Mature Company and Avoiding the Terminal Value Inconsistency Trap"
+  transcript: 03-corporate-finance/03-2-course-content/04-dividends-and-valuation/lesson-32/session-32-part-2.md
+  quote: If your net CapEx is zero, and your change in working capital is zero, you're reinvesting nothing, right?
+  concept: In the terminal year, reinvestment must equal growth divided by return on capital; assuming growth with zero reinvestment inflates value.
+  question: >-
+    In {company}'s terminal year, what reinvestment rate is consistent with the perpetual growth rate
+    and the stable return on capital? Does the forecast avoid the trap of capital spending that
+    exactly offsets depreciation while growth continues?
+  inputs: [forecast.stable_roic, market.terminal_growth, forecast.years, company.capex, company.da]
+  applies_to: [all]
+
+- id: l33-p1
+  lesson: 33
+  part: 1
+  title: "From Firm Value to Equity Value: Discounting Cash, Premiuming Cash, and Valuing Cross-Holdings"
+  transcript: 03-corporate-finance/03-2-course-content/04-dividends-and-valuation/lesson-33/session-33-part-1.md
+  quote: A dollar in cash is valued at about 69 cents. That's a 31% discount.
+  concept: Cash is worth face value unless the market expects it to be wasted (discount) or invested well (premium); cross-holdings need their own value.
+  question: >-
+    Should {company}'s cash be valued at face, at a discount, or at a premium, judged by its record of
+    returns versus the cost of capital and how it has used cash? Does it hold stakes in other
+    companies, and how are they valued?
+  inputs: [company.cash, company.cross_holdings, company.minority_interests, company.history, company.invested_capital]
+  applies_to: [all]
+
+- id: l33-p2
+  lesson: 33
+  part: 2
+  title: "Cross-Holding Shortcuts, Other Assets, and Equity Options as a Second Claim on Equity"
+  transcript: 03-corporate-finance/03-2-course-content/04-dividends-and-valuation/lesson-33/session-33-part-2.md
+  quote: You have to net out the value of that second claim if you want the value per share as a common stockholder.
+  concept: Options and restricted stock are a claim on equity; value them as options, subtract from equity value, then divide by basic shares.
+  question: >-
+    How large are {company}'s outstanding options and restricted stock units, and how much does
+    valuing them as a claim and dividing by basic shares change value per share compared with the
+    diluted-share shortcut?
+  inputs: [company.options_value, company.shares_basic, company.shares_diluted, company.sbc]
+  applies_to: [public, delisted, foreign-public]
+
+- id: l34-p1
+  lesson: 34
+  part: 1
+  title: "Stories Into Numbers: Building the Full DCF Valuation"
+  transcript: 03-corporate-finance/03-2-course-content/04-dividends-and-valuation/lesson-34/session-34-part-1.md
+  quote: A good valuation is a bridge between stories and numbers.
+  concept: Every valuation rests on a story about the company; the numbers (cash flows, growth, risk, terminal value) must follow from it.
+  question: >-
+    What is the status-quo story for {company} - how it will grow, what margins it will earn, how
+    much it must reinvest, how risky it is - and what intrinsic value per share does the full DCF
+    produce from that story? How does it compare with the market price or the last transaction?
+  inputs: [forecast.years, forecast.growth_period_years, forecast.stable_roic, market.terminal_growth, company.debt_total, company.cash, company.shares_basic, company.share_price]
+  applies_to: [all]
+
+- id: l34-p2
+  lesson: 34
+  part: 2
+  title: "The Value of Control: Status Quo vs. Optimal, and the Four Levers to Restructure a Company"
+  transcript: 03-corporate-finance/03-2-course-content/04-dividends-and-valuation/lesson-34/session-34-part-2.md
+  quote: "The value of control in any company is the difference between two values: the status quo value and the optimal value."
+  concept: Value of control = optimal value − status-quo value; the levers are operating efficiency, reinvestment and returns, financing mix, and the growth period.
+  question: >-
+    What would change about {company} if it were run optimally (operations, reinvestment, financing
+    mix, growth period), what is it worth with those changes, how large is the value of control, and
+    how likely is it that the change happens given who controls the company?
+  inputs: [governance.controlling_holders, forecast.years, company.debt_total, company.equity_value]
+  applies_to: [all]
+
+- id: l35-p1
+  lesson: 35
+  part: 1
+  title: "Pricing vs. Valuing: Defining, Describing, Analyzing, and Applying Multiples"
+  transcript: 03-corporate-finance/03-2-course-content/04-dividends-and-valuation/lesson-35/session-35-part-1.md
+  quote: You're trying to attach a number to a company based on how similar companies are being priced out there.
+  concept: A multiple must be defined consistently (numerator and denominator match), described across the sample, and applied to comparable firms.
+  question: >-
+    On a consistently defined multiple and peer set, where does {company} sit relative to its peers:
+    at a premium, a discount, or in line? Which multiple fits this business best, and why?
+  inputs: [peers, company.equity_value, company.debt_total, company.cash, company.revenue, company.ebitda_standardized, company.net_income, company.equity_book]
+  applies_to: [all]
+
+- id: l35-p2
+  lesson: 35
+  part: 2
+  title: "Backing Out What Drives a Multiple: Why Cheap Stocks Usually Deserve to Be Cheap"
+  transcript: 03-corporate-finance/03-2-course-content/04-dividends-and-valuation/lesson-35/session-35-part-2.md
+  quote: Most companies that look cheap deserve to be cheap.
+  concept: Multiples are driven by growth, risk and cash-flow quality; a low multiple is usually explained by weak fundamentals, not mispricing.
+  question: >-
+    If {company} looks cheap or expensive against its peers, is that explained by its growth, risk
+    and margins (a regression of the multiple on those drivers), or is there a mispricing left over?
+  inputs: [peers, company.history]
+  applies_to: [all]
+
+- id: l36-p1
+  lesson: 36
+  part: 1
+  title: "Ten Lessons Revisited: Governance, Risk, and the Marginal Investor"
+  transcript: 03-corporate-finance/03-2-course-content/04-dividends-and-valuation/lesson-36/session-36-part-1.md
+  quote: Not everyone will agree on every decision being the best decision from their interests.
+  concept: Stockholders, lenders, managers and society have different interests; good corporate finance names the conflict rather than pretending it away.
+  question: >-
+    Across stockholders, lenders, managers and society, whose interests have driven {company}'s
+    biggest decisions in the years in the ledger, and where is the sharpest conflict? Does the
+    governance work in the earlier lessons answer this, or leave it open?
+  inputs: [governance.controlling_holders, governance.board, debt.covenants, company.history]
+  applies_to: [all]
+
+- id: l36-p2
+  lesson: 36
+  part: 2
+  title: "The Trade-Off on Debt and the Three First Principles of Corporate Finance"
+  transcript: 03-corporate-finance/03-2-course-content/04-dividends-and-valuation/lesson-36/session-36-part-2.md
+  quote: If you cannot find investments that make your hurdle rate, find a way to get the cash back to your stockholders.
+  concept: Investment, financing and dividend decisions are one system - invest when returns beat the hurdle rate, finance to minimize it, and return what cannot be invested well.
+  question: >-
+    For {company}, tie the three first principles together: did its return on capital clear its cost
+    of capital, was its capital structure near the optimum, and did its payout follow from the first
+    two answers? What one-paragraph narrative explains the company as it is run today?
+  inputs: [company.history, company.invested_capital, company.debt_total, company.equity_value]
+  applies_to: [all]

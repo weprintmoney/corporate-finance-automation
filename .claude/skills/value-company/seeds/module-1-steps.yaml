@@ -1,0 +1,134 @@
+# Module 1 layer of the question bank: the twelve cost-of-capital steps, one per lesson 1-12.
+# Lessons 1-12 have no "Project Questions" section in their lesson-overview.md; these steps are
+# the Module 1 equivalent. Reading paths are relative to 03-corporate-finance/03-2-course-content.
+
+- id: m1-step-01
+  lesson: 1
+  title: Pick a company
+  read: [01-foundations-and-discount-rates/lesson-01/lesson-overview.md, 01-foundations-and-discount-rates/lesson-01/slides.md]
+  questions:
+    - Which company, and why is it a good subject (data available, decisions to judge)?
+    - Where does it sit on the corporate life cycle, judged by growth, margins, reinvestment and cash use?
+  produces: [meta.company, meta.type, meta.base_year, meta.currency]
+  applies_to: [all]
+
+- id: m1-step-02
+  lesson: 2
+  title: Corporate governance
+  read: [01-foundations-and-discount-rates/lesson-02/lesson-overview.md, 01-foundations-and-discount-rates/lesson-02/slides.md]
+  questions:
+    - Who sits on the board of directors?
+    - Whose interests are they most likely to serve?
+    - Where does power lie (shareholders, managers, inside shareholders, another party), and what measure of governance strength supports that?
+  produces: [governance.board, governance.controlling_holders, governance.change_of_control_payouts]
+  applies_to: [all]
+
+- id: m1-step-03
+  lesson: 3
+  title: Stated objectives
+  read: [01-foundations-and-discount-rates/lesson-03/lesson-overview.md, 01-foundations-and-discount-rates/lesson-03/slides.md]
+  questions:
+    - If the firm states goals, what is it targeting (growth, profitability, stock price, value)?
+    - If it states none, what does its behaviour say the primary focus is?
+  produces: [governance.objectives]
+  applies_to: [all]
+
+- id: m1-step-04
+  lesson: 4
+  title: Share classes and the marginal investor
+  read: [01-foundations-and-discount-rates/lesson-04/lesson-overview.md, 01-foundations-and-discount-rates/lesson-04/slides.md]
+  questions:
+    - How many classes of shares exist and what are the voting rights of each?
+    - Who are the largest shareholders?
+    - Is the marginal investor an individual or an institution?
+    - Is that marginal investor diversified?
+  produces: [governance.share_classes, governance.marginal_investor, company.shares_basic]
+  applies_to: [all]
+
+- id: m1-step-05
+  lesson: 5
+  title: Currency and risk-free rate
+  read: [01-foundations-and-discount-rates/lesson-05/lesson-overview.md, 01-foundations-and-discount-rates/lesson-05/slides.md]
+  questions:
+    - What currency does the company report in?
+    - What currencies are its revenues in?
+    - What currency will the analysis use, and why?
+    - What is the risk-free rate in that currency, after netting any sovereign default spread?
+  produces: [meta.currency, market.risk_free_rate]
+  applies_to: [all]
+
+- id: m1-step-06
+  lesson: 6
+  title: Mature-market equity risk premium
+  read: [01-foundations-and-discount-rates/lesson-06/lesson-overview.md, 01-foundations-and-discount-rates/lesson-06/slides.md]
+  questions:
+    - What is the equity risk premium for a mature market today, by which method (implied, historical, survey), from which source?
+  produces: [market.mature_erp]
+  applies_to: [all]
+
+- id: m1-step-07
+  lesson: 7
+  title: Country risk and weighted ERP
+  read: [01-foundations-and-discount-rates/lesson-07/lesson-overview.md, 01-foundations-and-discount-rates/lesson-07/slides.md]
+  questions:
+    - What is the best measure of the company's country exposure (revenues, production, assets)?
+    - What is the geographic breakdown of that measure?
+    - What is the weighted average ERP?
+    - Why might that ERP change?
+  produces: [country.exposures, country.weighted_erp]
+  applies_to: [all]
+
+- id: m1-step-08
+  lesson: 8
+  title: Regression beta
+  read: [01-foundations-and-discount-rates/lesson-08/lesson-overview.md, 01-foundations-and-discount-rates/lesson-08/slides.md]
+  questions:
+    - What is the regression beta, against which index, over what window and interval?
+    - What are the standard error and R-squared, and is the estimate reliable?
+  produces: [beta.regression_beta, beta.regression_se, beta.regression_r2, beta.jensens_alpha]
+  applies_to: [public, delisted, foreign-public]
+
+- id: m1-step-09
+  lesson: 9
+  title: Beta fundamentals
+  read: [01-foundations-and-discount-rates/lesson-09/lesson-overview.md, 01-foundations-and-discount-rates/lesson-09/slides.md]
+  questions:
+    - From what the company sells, should its beta be high or low? Do its businesses differ?
+    - From its cost structure (fixed vs. variable), what beta would you expect?
+    - How much does its borrowing raise its beta?
+  produces: []
+  applies_to: [all]
+
+- id: m1-step-10
+  lesson: 10
+  title: Bottom-up unlevered beta
+  read: [01-foundations-and-discount-rates/lesson-10/lesson-overview.md, 01-foundations-and-discount-rates/lesson-10/slides.md, 01-foundations-and-discount-rates/lesson-10/spreadsheet-bottomup-beta.md]
+  questions:
+    - What is the bottom-up unlevered beta from comparable firms, cash-corrected?
+    - If the company has several businesses, what is each segment's beta and the weighted average?
+  produces: [beta.unlevered_bottom_up, beta.segments]
+  applies_to: [all]
+
+- id: m1-step-11
+  lesson: 11
+  title: Levered beta and total beta
+  read: [01-foundations-and-discount-rates/lesson-11/lesson-overview.md, 01-foundations-and-discount-rates/lesson-11/slides.md]
+  questions:
+    - What is the levered beta at the company's current debt-to-equity ratio and marginal tax rate?
+    - What would the total beta be if all risk counted, and when would that be the right measure?
+  produces: [beta.total_beta]
+  applies_to: [all]
+
+- id: m1-step-12
+  lesson: 12
+  title: Cost of debt
+  read: [01-foundations-and-discount-rates/lesson-12/lesson-overview.md, 01-foundations-and-discount-rates/lesson-12/slides.md, 01-foundations-and-discount-rates/lesson-12/spreadsheet-ratings.md]
+  questions:
+    - Does the company have an agency rating? What default spread and pre-tax cost of debt does it imply?
+    - What synthetic rating does interest coverage imply, and what cost of debt?
+    - If the two differ, why?
+    - What is the market value of interest-bearing debt?
+    - What is the debt value of lease commitments?
+    - What marginal tax rate applies to the after-tax cost of debt?
+  produces: [debt.rating_actual, debt.kd_pretax_observed, company.debt_face, company.lease_debt, company.debt_total, market.tax_rate_marginal]
+  applies_to: [all]
