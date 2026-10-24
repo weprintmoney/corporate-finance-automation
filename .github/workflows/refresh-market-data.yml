@@ -1,0 +1,44 @@
+name: Refresh Market Data and Blog Archive
+
+# Keeps 03-3-supplemental-data/ and 03-4-blogs/posts/ current so /value-company never runs on stale
+# inputs. The run fails (and GitHub emails the owner) when a source can't be parsed or a snapshot is
+# past its refresh window — that usually means Damodaran renamed a file; fix the URL pattern in
+# scripts/refresh-market-data.py.
+
+on:
+  schedule:
+    # Mondays 14:00 UTC. Damodaran posts the monthly ERP workbook in the first days of each month.
+    - cron: '0 14 * * 1'
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: pip install xlrd==2.0.1 openpyxl==3.1.5
+
+      - name: Fetch rates, ERP, ratings table, country risk, industry betas
+        run: python3 scripts/refresh-market-data.py
+
+      - name: Fetch new Damodaran blog posts
+        run: python3 03-corporate-finance/03-4-blogs/fetch-archive.py
+
+      - name: Commit if anything changed
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add 03-corporate-finance/03-3-supplemental-data/*.json 03-corporate-finance/03-4-blogs/posts
+          git diff --staged --quiet && echo "No changes." || (
+            git commit -m "data: refresh market data and blog archive $(date -u +%Y-%m-%d)" &&
+            git push
+          )

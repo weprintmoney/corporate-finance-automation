@@ -15,7 +15,7 @@ convention as convert-damodaran-html.py (/pc/datasets/ -> datasets,
 logs to scripts/unclassified.json for manual review).
 
 Uses xlrd (legacy .xls) + openpyxl (.xlsx), same pair as
-scripts/fetch-damodaran.py.
+scripts/refresh-market-data.py.
 
 Requires: pip install xlrd openpyxl
 

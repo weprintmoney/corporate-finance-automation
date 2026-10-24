@@ -30,7 +30,11 @@ The first eleven items are errors that were actually made in the SolarWinds proj
 
 12. **Terminal consistency.** Terminal reinvestment rate = terminal growth ÷ stable ROIC. Terminal growth ≤ risk-free rate. Confirm the model output shows both.
 13. **Currency consistency.** Risk-free rate, ERP, cash flows, and the debt rate are all in `meta.currency`.
-14. **Dates.** Every market input has an `as_of`. Flag anything older than 90 days at the analysis date.
+14. **Dates.** Every market input has an `as_of`, and the validator passes its windows (rates 14 days, ERP 45, ratings table and betas 400). No current rate, premium, beta or spread is taken from a lesson spreadsheet or an earlier valuation.
+14a. **Risk-free rate and ERP on the same base.** `market.risk_free_rate` = `govt_bond_rate` − `sovereign_default_spread`, and `mature_erp` is the implied premium over that netted rate. A gross Treasury rate paired with a premium over the netted rate (or the reverse) is a finding.
+14b. **Cost of debt base.** A rating-based cost of debt is the government bond rate plus the spread, not the netted risk-free rate plus the spread. `model-output.md` section 1 shows which.
+14c. **Debt that is easy to miss.** Check the lease note for leases signed but not yet commenced, the commitments and guarantees notes for joint-venture or special-purpose-vehicle debt, and the debt note for capitalized interest. Each one is in the ledger or ruled out with the note cited.
+14d. **Inflated coverage.** If the company lengthened depreciation lives or capitalizes interest, the synthetic rating is recomputed without the benefit and the difference is stated.
 15. **Peers.** Same fiscal period, same multiple definition (numerator and denominator match), and the peer list in the ledger matches the one used in lesson 35.
 16. **Options and RSUs.** Valued as a claim and subtracted from equity value; per-share value uses basic shares, not diluted.
 17. **Cash.** The cash figure used in net debt matches the balance sheet, and lesson 33 says whether it is valued at face, discounted, or at a premium.

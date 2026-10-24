@@ -12,9 +12,11 @@
 #     They are NOT SolarWinds data. The validator warns on each one and rejects them in any
 #     ledger outside this examples/ folder.
 #
-# The real figures are the "C: recommended" track of capital-iq-rerun.md. Running tools/model.py
-# on this file reproduces it: WACC 10.10%, optimal debt 17% (EBIT coverage) and 21% (EBIT plus
-# acquisition amortization), value of moving $419.0M and $241.3M, DCF $18.94 per diluted share.
+# The company figures are the "C: recommended" track of capital-iq-rerun.md. The market block was
+# moved to the skill's 2026-10 conventions (risk-free rate net of the US Aa1 spread, ERP measured
+# over it, January 2026 ratings table, cost of debt built on the Treasury rate), so tools/model.py no
+# longer reproduces that file's results (WACC 10.10%, optimal debt 17% / 21%, DCF $18.94). The
+# SolarWinds project predates the skill and is due a rerun under /value-company.
 #
 # Strings with commas are quoted.
 
@@ -45,16 +47,19 @@ modeling_choices:
   terminal_method: fcff_growth   # the rerun grew final-year FCFF at g; the course default is consistent_reinvestment
 
 market:
-  risk_free_rate: {value: 0.0477, source: "company-valuations/solarwinds/tools/capital-structure-rerun.py (RF)", as_of: "2026-09-07", note: "10-year US Treasury"}
-  mature_erp: {value: 0.0446, source: "company-valuations/solarwinds/tools/capital-structure-rerun.py (ERP)", as_of: "2026-09-07"}
+  govt_bond_rate: {value: 0.0529, source: "03-corporate-finance/03-3-supplemental-data/market-rates.json damodaran_monthly.treasury_10y (ERPOct26.xlsx)", as_of: "2026-10-01", note: "10-year US Treasury"}
+  sovereign_default_spread: {value: 0.0022, source: "03-corporate-finance/03-3-supplemental-data/market-rates.json damodaran_monthly.us_sovereign_default_spread (ERPOct26.xlsx)", as_of: "2026-10-01", note: "Moody's Aa1"}
+  risk_free_rate: {value: 0.0507, source: "03-corporate-finance/03-3-supplemental-data/market-rates.json damodaran_monthly.dollar_riskfree_rate (ERPOct26.xlsx)", as_of: "2026-10-01", note: "Treasury rate net of the Aa1 default spread"}
+  mature_erp: {value: 0.0392, source: "03-corporate-finance/03-3-supplemental-data/market-rates.json damodaran_monthly.implied_erp_over_dollar_riskfree (ERPOct26.xlsx)", as_of: "2026-10-01", note: "implied ERP over the dollar risk-free rate, rounded"}
+  ratings_table: {value: ratings-spreads-2026-01-01.json, source: "03-corporate-finance/03-3-supplemental-data/ratings-spreads.json (Damodaran ratings.xls)", as_of: "2026-01-01"}
   tax_rate_marginal: {value: 0.25, source: "company-valuations/solarwinds/tools/capital-structure-rerun.py (T)", as_of: "2026-10-06"}
   terminal_growth: {value: 0.025, source: "company-valuations/solarwinds/tools/capital-structure-rerun.py (G); below the risk-free rate", as_of: "2026-10-06"}
 
 country:
   exposures:
-    - {country: United States, weight: 0.69, erp: 0.0446, measure: revenues, source: "company-valuations/solarwinds/valuation-report.md Step 5 (North America about 69% of revenue)", as_of: "2024-12-31"}
-    - {country: Rest of world, weight: 0.31, erp: 0.0446, measure: revenues, source: "company-valuations/solarwinds/valuation-report.md Step 5; mature-market premium applied to the whole as a simplification for this fixture", as_of: "2024-12-31"}
-  weighted_erp: {value: 0.0446, source: "computed from exposures above", as_of: "2026-10-06"}
+    - {country: United States, weight: 0.69, erp: 0.0392, measure: revenues, source: "company-valuations/solarwinds/valuation-report.md Step 5 (North America about 69% of revenue)", as_of: "2024-12-31"}
+    - {country: Rest of world, weight: 0.31, erp: 0.0392, measure: revenues, source: "company-valuations/solarwinds/valuation-report.md Step 5; mature-market premium applied to the whole as a simplification for this fixture", as_of: "2024-12-31"}
+  weighted_erp: {value: 0.0392, source: "computed from exposures above", as_of: "2026-10-06"}
 
 beta:
   unlevered_bottom_up: {value: 1.2482, source: "company-valuations/solarwinds/tools/capital-structure-rerun.py (BU); cash-corrected Software (System & Application)", as_of: "2026-09-07"}

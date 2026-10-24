@@ -1,6 +1,872 @@
 {
-  "updated": "2026-10-01",
+  "as_of": "2026-01-05",
+  "fetched": "2026-10-24",
   "source_url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/betas.xls",
-  "note": "Damodaran refreshes annually in January. Re-run this script after each update.",
-  "industries": {}
+  "note": "US companies. Damodaran refreshes in January.",
+  "industries": {
+    "Advertising": {
+      "firms": 52,
+      "beta": 1.210506967409714,
+      "de_ratio": 0.4020006635676013,
+      "effective_tax_rate": 0.050166601892135954,
+      "unlevered_beta": 0.930085673859911,
+      "cash_to_firm_value": 0.07730501181468243,
+      "unlevered_beta_cash_corrected": 1.0080098903421257
+    },
+    "Aerospace/Defense": {
+      "firms": 79,
+      "beta": 0.945491480030761,
+      "de_ratio": 0.1556259774178424,
+      "effective_tax_rate": 0.1157525444051738,
+      "unlevered_beta": 0.846668742124111,
+      "cash_to_firm_value": 0.026120466599857,
+      "unlevered_beta_cash_corrected": 0.8693772823914925
+    },
+    "Air Transport": {
+      "firms": 23,
+      "beta": 1.185465100406711,
+      "de_ratio": 0.91170567766528,
+      "effective_tax_rate": 0.0829257860360182,
+      "unlevered_beta": 0.7040501862693873,
+      "cash_to_firm_value": 0.0710560236928952,
+      "unlevered_beta_cash_corrected": 0.7579038179118688
+    },
+    "Apparel": {
+      "firms": 35,
+      "beta": 0.9358744642979875,
+      "de_ratio": 0.31292274379874546,
+      "effective_tax_rate": 0.09612500297378584,
+      "unlevered_beta": 0.7579820882045375,
+      "cash_to_firm_value": 0.04603963126378228,
+      "unlevered_beta_cash_corrected": 0.794563498700363
+    },
+    "Auto & Truck": {
+      "firms": 33,
+      "beta": 1.4564933048347815,
+      "de_ratio": 0.19695879853744616,
+      "effective_tax_rate": 0.03737150993812953,
+      "unlevered_beta": 1.2690329072913427,
+      "cash_to_firm_value": 0.029913881635151476,
+      "unlevered_beta_cash_corrected": 1.3081652064358895
+    },
+    "Auto Parts": {
+      "firms": 35,
+      "beta": 1.3394463651948414,
+      "de_ratio": 0.4146400386187307,
+      "effective_tax_rate": 0.14999691449019154,
+      "unlevered_beta": 1.0217137832780625,
+      "cash_to_firm_value": 0.09447030010863032,
+      "unlevered_beta_cash_corrected": 1.1283051051783621
+    },
+    "Bank (Money Center)": {
+      "firms": 15,
+      "beta": 0.7610461819725333,
+      "de_ratio": 1.6418966357638234,
+      "effective_tax_rate": 0.1843478364577707,
+      "unlevered_beta": 0.3410587595479105,
+      "cash_to_firm_value": 0.2316616747591599,
+      "unlevered_beta_cash_corrected": 0.4438913800649
+    },
+    "Banks (Regional)": {
+      "firms": 568,
+      "beta": 0.3984765556409175,
+      "de_ratio": 0.5210229274429405,
+      "effective_tax_rate": 0.17609708151159398,
+      "unlevered_beta": 0.2865156418030888,
+      "cash_to_firm_value": 0.23481406998633866,
+      "unlevered_beta_cash_corrected": 0.3744392448485997
+    },
+    "Beverage (Alcoholic)": {
+      "firms": 14,
+      "beta": 0.8124756277132766,
+      "de_ratio": 0.4333840741223201,
+      "effective_tax_rate": 0.12349880380286866,
+      "unlevered_beta": 0.6131715419678557,
+      "cash_to_firm_value": 0.02368469924364032,
+      "unlevered_beta_cash_corrected": 0.6280466376925842
+    },
+    "Beverage (Soft)": {
+      "firms": 27,
+      "beta": 0.6414687070147179,
+      "de_ratio": 0.20587118525522147,
+      "effective_tax_rate": 0.0684627965508008,
+      "unlevered_beta": 0.5556711918551647,
+      "cash_to_firm_value": 0.034395917959575265,
+      "unlevered_beta_cash_corrected": 0.5754648330410659
+    },
+    "Broadcasting": {
+      "firms": 24,
+      "beta": 0.47075204848634544,
+      "de_ratio": 0.8585429035988935,
+      "effective_tax_rate": 0.07728859528725333,
+      "unlevered_beta": 0.28636169661672445,
+      "cash_to_firm_value": 0.09175881700704047,
+      "unlevered_beta_cash_corrected": 0.315292569835984
+    },
+    "Brokerage & Investment Banking": {
+      "firms": 32,
+      "beta": 1.171457071047836,
+      "de_ratio": 1.3557362534403625,
+      "effective_tax_rate": 0.15273177578181318,
+      "unlevered_beta": 0.5808487698048416,
+      "cash_to_firm_value": 0.14506015247562656,
+      "unlevered_beta_cash_corrected": 0.6794030848916329
+    },
+    "Building Materials": {
+      "firms": 41,
+      "beta": 1.1115321733442423,
+      "de_ratio": 0.25998303924525584,
+      "effective_tax_rate": 0.1802113978781021,
+      "unlevered_beta": 0.9301623477287291,
+      "cash_to_firm_value": 0.03161305724944799,
+      "unlevered_beta_cash_corrected": 0.9605275604881124
+    },
+    "Business & Consumer Services": {
+      "firms": 155,
+      "beta": 0.8879785335242745,
+      "de_ratio": 0.19716100170472986,
+      "effective_tax_rate": 0.10382630217002471,
+      "unlevered_beta": 0.7735875598670026,
+      "cash_to_firm_value": 0.04024363311198222,
+      "unlevered_beta_cash_corrected": 0.8060249314889546
+    },
+    "Cable TV": {
+      "firms": 9,
+      "beta": 0.7407444081777597,
+      "de_ratio": 1.469394514839746,
+      "effective_tax_rate": 0.10643042905457614,
+      "unlevered_beta": 0.3523921209643926,
+      "cash_to_firm_value": 0.028893507091752747,
+      "unlevered_beta_cash_corrected": 0.36287690746362616
+    },
+    "Chemical (Basic)": {
+      "firms": 29,
+      "beta": 1.0122471500989898,
+      "de_ratio": 0.9935397565078776,
+      "effective_tax_rate": 0.07683856093152415,
+      "unlevered_beta": 0.5800328658623819,
+      "cash_to_firm_value": 0.08912014780552291,
+      "unlevered_beta_cash_corrected": 0.6367830669050106
+    },
+    "Chemical (Diversified)": {
+      "firms": 4,
+      "beta": 0.8507028562562596,
+      "de_ratio": 1.7610998877970157,
+      "effective_tax_rate": 0.0,
+      "unlevered_beta": 0.36655193179254153,
+      "cash_to_firm_value": 0.09748112709643042,
+      "unlevered_beta_cash_corrected": 0.40614323179001943
+    },
+    "Chemical (Specialty)": {
+      "firms": 59,
+      "beta": 0.9697828817775749,
+      "de_ratio": 0.29882962373710314,
+      "effective_tax_rate": 0.13675158334443216,
+      "unlevered_beta": 0.7922271711710575,
+      "cash_to_firm_value": 0.039108107846628735,
+      "unlevered_beta_cash_corrected": 0.8244706586041288
+    },
+    "Coal & Related Energy": {
+      "firms": 16,
+      "beta": 1.0709931914897641,
+      "de_ratio": 0.07142984737214478,
+      "effective_tax_rate": 0.03125,
+      "unlevered_beta": 1.0165349872490315,
+      "cash_to_firm_value": 0.14030603264913963,
+      "unlevered_beta_cash_corrected": 1.1824381999346527
+    },
+    "Computer Services": {
+      "firms": 64,
+      "beta": 1.0878559034733686,
+      "de_ratio": 0.25100122596094754,
+      "effective_tax_rate": 0.10526994226576537,
+      "unlevered_beta": 0.9155102559970569,
+      "cash_to_firm_value": 0.048030253728172795,
+      "unlevered_beta_cash_corrected": 0.9617009989891427
+    },
+    "Computers/Peripherals": {
+      "firms": 36,
+      "beta": 1.3503292085851684,
+      "de_ratio": 0.04624738158842277,
+      "effective_tax_rate": 0.05911353077642165,
+      "unlevered_beta": 1.3050624188250832,
+      "cash_to_firm_value": 0.01474015694541099,
+      "unlevered_beta_cash_corrected": 1.3245870396777912
+    },
+    "Construction Supplies": {
+      "firms": 40,
+      "beta": 1.1503560568511637,
+      "de_ratio": 0.17621949339337503,
+      "effective_tax_rate": 0.16038852383860958,
+      "unlevered_beta": 1.0160678372067562,
+      "cash_to_firm_value": 0.029385735087736495,
+      "unlevered_beta_cash_corrected": 1.0468296973758173
+    },
+    "Diversified": {
+      "firms": 20,
+      "beta": 0.8809551761105191,
+      "de_ratio": 0.15552702199112797,
+      "effective_tax_rate": 0.02756045788007777,
+      "unlevered_beta": 0.7889302024061987,
+      "cash_to_firm_value": 0.06424659262771254,
+      "unlevered_beta_cash_corrected": 0.8430962646682882
+    },
+    "Drugs (Biotechnology)": {
+      "firms": 496,
+      "beta": 1.1352650325488571,
+      "de_ratio": 0.13039813617119383,
+      "effective_tax_rate": 0.010795122386082115,
+      "unlevered_beta": 1.034128692045902,
+      "cash_to_firm_value": 0.04198898589831489,
+      "unlevered_beta_cash_corrected": 1.079453865168337
+    },
+    "Drugs (Pharmaceutical)": {
+      "firms": 228,
+      "beta": 0.9828330980612211,
+      "de_ratio": 0.14537075884184583,
+      "effective_tax_rate": 0.029938702770438724,
+      "unlevered_beta": 0.8862112018778732,
+      "cash_to_firm_value": 0.031607075278297876,
+      "unlevered_beta_cash_corrected": 0.915135973481584
+    },
+    "Education": {
+      "firms": 32,
+      "beta": 0.7809055888612572,
+      "de_ratio": 0.24378635749927063,
+      "effective_tax_rate": 0.15540367121320292,
+      "unlevered_beta": 0.6601955817730791,
+      "cash_to_firm_value": 0.08255178105333023,
+      "unlevered_beta_cash_corrected": 0.719599829329938
+    },
+    "Electrical Equipment": {
+      "firms": 112,
+      "beta": 1.2511238546074688,
+      "de_ratio": 0.12003228885644493,
+      "effective_tax_rate": 0.048160938724098754,
+      "unlevered_beta": 1.1477945494288007,
+      "cash_to_firm_value": 0.03531033289858355,
+      "unlevered_beta_cash_corrected": 1.1898070318069807
+    },
+    "Electronics (Consumer & Office)": {
+      "firms": 8,
+      "beta": 0.8659780184815811,
+      "de_ratio": 0.058043138538441966,
+      "effective_tax_rate": 0.0,
+      "unlevered_beta": 0.8298525821858579,
+      "cash_to_firm_value": 0.10516119216152936,
+      "unlevered_beta_cash_corrected": 0.9273766123201671
+    },
+    "Electronics (General)": {
+      "firms": 114,
+      "beta": 0.9714771307987942,
+      "de_ratio": 0.1101176648064408,
+      "effective_tax_rate": 0.08036356729856782,
+      "unlevered_beta": 0.8973653021365886,
+      "cash_to_firm_value": 0.04276394737105285,
+      "unlevered_beta_cash_corrected": 0.9374545595854545
+    },
+    "Engineering/Construction": {
+      "firms": 48,
+      "beta": 1.2099722611351151,
+      "de_ratio": 0.1401147535589371,
+      "effective_tax_rate": 0.1363531807406391,
+      "unlevered_beta": 1.094912241925567,
+      "cash_to_firm_value": 0.03738629027811922,
+      "unlevered_beta_cash_corrected": 1.137436783693752
+    },
+    "Entertainment": {
+      "firms": 92,
+      "beta": 0.8251696372652437,
+      "de_ratio": 0.15913861576824234,
+      "effective_tax_rate": 0.03304355681192803,
+      "unlevered_beta": 0.7371838269272858,
+      "cash_to_firm_value": 0.03364109650880357,
+      "unlevered_beta_cash_corrected": 0.7628468307830948
+    },
+    "Environmental & Waste Services": {
+      "firms": 53,
+      "beta": 0.9454812982377585,
+      "de_ratio": 0.2144746613305266,
+      "effective_tax_rate": 0.04267831701608498,
+      "unlevered_beta": 0.814469065497658,
+      "cash_to_firm_value": 0.012488380313177587,
+      "unlevered_beta_cash_corrected": 0.8247690956344971
+    },
+    "Farming/Agriculture": {
+      "firms": 35,
+      "beta": 1.1291737409456368,
+      "de_ratio": 0.5184849801548149,
+      "effective_tax_rate": 0.06294399257877176,
+      "unlevered_beta": 0.8130198178522071,
+      "cash_to_firm_value": 0.03873786848086313,
+      "unlevered_beta_cash_corrected": 0.8457836746022086
+    },
+    "Financial Svcs. (Non-bank & Insurance)": {
+      "firms": 176,
+      "beta": 0.9697132427444908,
+      "de_ratio": 2.721299675975284,
+      "effective_tax_rate": 0.12056567700542625,
+      "unlevered_beta": 0.3188823716863237,
+      "cash_to_firm_value": 0.026932527562606865,
+      "unlevered_beta_cash_corrected": 0.32770838684759396
+    },
+    "Food Processing": {
+      "firms": 78,
+      "beta": 0.6074530378003583,
+      "de_ratio": 0.43733857874231813,
+      "effective_tax_rate": 0.10372593278493082,
+      "unlevered_beta": 0.45741810112318915,
+      "cash_to_firm_value": 0.025575346289782346,
+      "unlevered_beta_cash_corrected": 0.46942377677075875
+    },
+    "Food Wholesalers": {
+      "firms": 13,
+      "beta": 0.866641638658665,
+      "de_ratio": 0.4696855126722596,
+      "effective_tax_rate": 0.09152840668006618,
+      "unlevered_beta": 0.6408819228030607,
+      "cash_to_firm_value": 0.010617965508753957,
+      "unlevered_beta_cash_corrected": 0.6477598141678518
+    },
+    "Furn/Home Furnishings": {
+      "firms": 27,
+      "beta": 0.8231584740017082,
+      "de_ratio": 0.42333374568083953,
+      "effective_tax_rate": 0.11382525542555506,
+      "unlevered_beta": 0.6247880689027374,
+      "cash_to_firm_value": 0.04192766167124481,
+      "unlevered_beta_cash_corrected": 0.6521303704400933
+    },
+    "Green & Renewable Energy": {
+      "firms": 15,
+      "beta": 0.8563295187054536,
+      "de_ratio": 1.1310960720897125,
+      "effective_tax_rate": 0.0,
+      "unlevered_beta": 0.46330103394106914,
+      "cash_to_firm_value": 0.019020611588943564,
+      "unlevered_beta_cash_corrected": 0.4722841676536161
+    },
+    "Healthcare Products": {
+      "firms": 204,
+      "beta": 0.9085611350704943,
+      "de_ratio": 0.12785158403919683,
+      "effective_tax_rate": 0.048453372827770576,
+      "unlevered_beta": 0.829063339182968,
+      "cash_to_firm_value": 0.032539271140781846,
+      "unlevered_beta_cash_corrected": 0.8569477958661521
+    },
+    "Healthcare Support Services": {
+      "firms": 104,
+      "beta": 0.8719538873399333,
+      "de_ratio": 0.354253188687874,
+      "effective_tax_rate": 0.09799646168506736,
+      "unlevered_beta": 0.6889158973179456,
+      "cash_to_firm_value": 0.07512556581743074,
+      "unlevered_beta_cash_corrected": 0.7448750574739688
+    },
+    "Heathcare Information and Technology": {
+      "firms": 115,
+      "beta": 1.1083338991481437,
+      "de_ratio": 0.1574134360720486,
+      "effective_tax_rate": 0.06381881317110165,
+      "unlevered_beta": 0.9913008450033202,
+      "cash_to_firm_value": 0.024622228934280354,
+      "unlevered_beta_cash_corrected": 1.016325032628335
+    },
+    "Homebuilding": {
+      "firms": 30,
+      "beta": 0.9106178132748846,
+      "de_ratio": 0.21344150553857202,
+      "effective_tax_rate": 0.16989203344780976,
+      "unlevered_beta": 0.7849604569802948,
+      "cash_to_firm_value": 0.0800055981891012,
+      "unlevered_beta_cash_corrected": 0.8532230798743929
+    },
+    "Hospitals/Healthcare Facilities": {
+      "firms": 31,
+      "beta": 0.7996783314027625,
+      "de_ratio": 0.5992038400269105,
+      "effective_tax_rate": 0.11347796258733156,
+      "unlevered_beta": 0.5517295035260499,
+      "cash_to_firm_value": 0.02324362589938683,
+      "unlevered_beta_cash_corrected": 0.5648588718287879
+    },
+    "Hotel/Gaming": {
+      "firms": 63,
+      "beta": 1.0803675683074194,
+      "de_ratio": 0.39750202770666376,
+      "effective_tax_rate": 0.08308178299623932,
+      "unlevered_beta": 0.8322513645728964,
+      "cash_to_firm_value": 0.049603347588982626,
+      "unlevered_beta_cash_corrected": 0.8756884427797555
+    },
+    "Household Products": {
+      "firms": 110,
+      "beta": 0.8155158251324154,
+      "de_ratio": 0.18147628375519134,
+      "effective_tax_rate": 0.06500436608160612,
+      "unlevered_beta": 0.7178159032286779,
+      "cash_to_firm_value": 0.03138813877470186,
+      "unlevered_beta_cash_corrected": 0.7410769287097494
+    },
+    "Information Services": {
+      "firms": 15,
+      "beta": 0.9205673234850804,
+      "de_ratio": 0.3316984905170498,
+      "effective_tax_rate": 0.18162842926123732,
+      "unlevered_beta": 0.7371769598623608,
+      "cash_to_firm_value": 0.025357620838586878,
+      "unlevered_beta_cash_corrected": 0.7563563575971642
+    },
+    "Insurance (General)": {
+      "firms": 21,
+      "beta": 0.6719750422408106,
+      "de_ratio": 0.2562761358769038,
+      "effective_tax_rate": 0.12768801589234566,
+      "unlevered_beta": 0.5636395230036526,
+      "cash_to_firm_value": 0.024967292240062125,
+      "unlevered_beta_cash_corrected": 0.5780724262046252
+    },
+    "Insurance (Life)": {
+      "firms": 20,
+      "beta": 0.6444930925180267,
+      "de_ratio": 0.6783987776748907,
+      "effective_tax_rate": 0.15186017647763664,
+      "unlevered_beta": 0.4271563388858468,
+      "cash_to_firm_value": 0.1966940474769901,
+      "unlevered_beta_cash_corrected": 0.5317480065275768
+    },
+    "Insurance (Prop/Cas.)": {
+      "firms": 57,
+      "beta": 0.4841100151289049,
+      "de_ratio": 0.1482928711512957,
+      "effective_tax_rate": 0.1836669176395358,
+      "unlevered_beta": 0.43565645519640217,
+      "cash_to_firm_value": 0.046752606734882574,
+      "unlevered_beta_cash_corrected": 0.4570234949231456
+    },
+    "Investments & Asset Management": {
+      "firms": 283,
+      "beta": 0.6595817512663942,
+      "de_ratio": 0.3268818496772947,
+      "effective_tax_rate": 0.03534923619833761,
+      "unlevered_beta": 0.5297158729912839,
+      "cash_to_firm_value": 0.0992207600520097,
+      "unlevered_beta_cash_corrected": 0.588064033338367
+    },
+    "Machinery": {
+      "firms": 105,
+      "beta": 0.9636207903494385,
+      "de_ratio": 0.14692301552763604,
+      "effective_tax_rate": 0.13373442732400442,
+      "unlevered_beta": 0.8679764970807725,
+      "cash_to_firm_value": 0.029141915386561183,
+      "unlevered_beta_cash_corrected": 0.8940302510086939
+    },
+    "Metals & Mining": {
+      "firms": 73,
+      "beta": 1.0430314762308461,
+      "de_ratio": 0.10984521282049067,
+      "effective_tax_rate": 0.02516414295193868,
+      "unlevered_beta": 0.963642813760502,
+      "cash_to_firm_value": 0.046322445348490886,
+      "unlevered_beta_cash_corrected": 1.0104492960544031
+    },
+    "Office Equipment & Services": {
+      "firms": 14,
+      "beta": 1.334375038621748,
+      "de_ratio": 0.4810247634925184,
+      "effective_tax_rate": 0.12297383351664745,
+      "unlevered_beta": 0.980603950937201,
+      "cash_to_firm_value": 0.055467908881732406,
+      "unlevered_beta_cash_corrected": 1.0381901897861687
+    },
+    "Oil/Gas (Integrated)": {
+      "firms": 4,
+      "beta": 0.2993819796439979,
+      "de_ratio": 0.13845002805508974,
+      "effective_tax_rate": 0.2824095529705382,
+      "unlevered_beta": 0.2712192455295165,
+      "cash_to_firm_value": 0.024405283836666014,
+      "unlevered_beta_cash_corrected": 0.2780040123588666
+    },
+    "Oil/Gas (Production and Exploration)": {
+      "firms": 142,
+      "beta": 0.72140595546977,
+      "de_ratio": 0.37587625587778695,
+      "effective_tax_rate": 0.06664478996170788,
+      "unlevered_beta": 0.562759894026207,
+      "cash_to_firm_value": 0.027276696052157344,
+      "unlevered_beta_cash_corrected": 0.5785405692885324
+    },
+    "Oil/Gas Distribution": {
+      "firms": 23,
+      "beta": 0.6692224517144899,
+      "de_ratio": 0.5852713715207659,
+      "effective_tax_rate": 0.09166185880832112,
+      "unlevered_beta": 0.4650757918129057,
+      "cash_to_firm_value": 0.008908789544758232,
+      "unlevered_beta_cash_corrected": 0.46925629740907565
+    },
+    "Oilfield Svcs/Equip.": {
+      "firms": 97,
+      "beta": 0.9512418716285248,
+      "de_ratio": 0.37360623860545034,
+      "effective_tax_rate": 0.08746367186047936,
+      "unlevered_beta": 0.7430388962534321,
+      "cash_to_firm_value": 0.055928142862870525,
+      "unlevered_beta_cash_corrected": 0.7870575641420728
+    },
+    "Packaging & Container": {
+      "firms": 19,
+      "beta": 1.0219297750432532,
+      "de_ratio": 0.55109591650755,
+      "effective_tax_rate": 0.1557025871337487,
+      "unlevered_beta": 0.7230693503118022,
+      "cash_to_firm_value": 0.03460978570776237,
+      "unlevered_beta_cash_corrected": 0.7489917958635104
+    },
+    "Paper/Forest Products": {
+      "firms": 6,
+      "beta": 0.9579784309693652,
+      "de_ratio": 0.43688176160689357,
+      "effective_tax_rate": 0.08598511133455124,
+      "unlevered_beta": 0.7215533176034462,
+      "cash_to_firm_value": 0.06252225788526006,
+      "unlevered_beta_cash_corrected": 0.7696751455408247
+    },
+    "Power": {
+      "firms": 46,
+      "beta": 0.4824326713170223,
+      "de_ratio": 0.7414865026995126,
+      "effective_tax_rate": 0.12748334654668436,
+      "unlevered_beta": 0.31002381536217716,
+      "cash_to_firm_value": 0.0144784011965326,
+      "unlevered_beta_cash_corrected": 0.31457840775745605
+    },
+    "Precious Metals": {
+      "firms": 56,
+      "beta": 0.8365606512291942,
+      "de_ratio": 0.07281104300881082,
+      "effective_tax_rate": 0.05974812957530874,
+      "unlevered_beta": 0.7932430128835662,
+      "cash_to_firm_value": 0.04531636337243584,
+      "unlevered_beta_cash_corrected": 0.8308962073401722
+    },
+    "Publishing & Newspapers": {
+      "firms": 19,
+      "beta": 0.563007176601541,
+      "de_ratio": 0.2393987480231246,
+      "effective_tax_rate": 0.10205812286876828,
+      "unlevered_beta": 0.47730712965508676,
+      "cash_to_firm_value": 0.06754838821026646,
+      "unlevered_beta_cash_corrected": 0.511884073790114
+    },
+    "R.E.I.T.": {
+      "firms": 190,
+      "beta": 0.6417984635762964,
+      "de_ratio": 0.844629934379348,
+      "effective_tax_rate": 0.01581382585274235,
+      "unlevered_beta": 0.39290436962561487,
+      "cash_to_firm_value": 0.019067870320492734,
+      "unlevered_beta_cash_corrected": 0.40054184967311207
+    },
+    "Real Estate (Development)": {
+      "firms": 14,
+      "beta": 0.8435660615974878,
+      "de_ratio": 1.0182937484544488,
+      "effective_tax_rate": 0.04907001511578525,
+      "unlevered_beta": 0.4782878873556669,
+      "cash_to_firm_value": 0.15212760300522743,
+      "unlevered_beta_cash_corrected": 0.564103618717777
+    },
+    "Real Estate (General/Diversified)": {
+      "firms": 12,
+      "beta": 0.8099864769457396,
+      "de_ratio": 0.5356019016772732,
+      "effective_tax_rate": 0.046482967477014005,
+      "unlevered_beta": 0.57785949402086,
+      "cash_to_firm_value": 0.07830585713347422,
+      "unlevered_beta_cash_corrected": 0.6269536358598106
+    },
+    "Real Estate (Operations & Services)": {
+      "firms": 54,
+      "beta": 0.9654974066610451,
+      "de_ratio": 0.24642281273824773,
+      "effective_tax_rate": 0.08697440271481936,
+      "unlevered_beta": 0.8148915126864962,
+      "cash_to_firm_value": 0.04978497600878914,
+      "unlevered_beta_cash_corrected": 0.8575864326620388
+    },
+    "Recreation": {
+      "firms": 49,
+      "beta": 1.0234727002249695,
+      "de_ratio": 0.6299053181462322,
+      "effective_tax_rate": 0.11454512843876968,
+      "unlevered_beta": 0.6950913817523879,
+      "cash_to_firm_value": 0.05622187183502513,
+      "unlevered_beta_cash_corrected": 0.7364987182992697
+    },
+    "Reinsurance": {
+      "firms": 1,
+      "beta": 0.5813323223955235,
+      "de_ratio": 0.4346722815513458,
+      "effective_tax_rate": 0.3035856573705179,
+      "unlevered_beta": 0.43840910722706555,
+      "cash_to_firm_value": 0.24111508039357982,
+      "unlevered_beta_cash_corrected": 0.5777016987693434
+    },
+    "Restaurant/Dining": {
+      "firms": 64,
+      "beta": 0.9240873147803257,
+      "de_ratio": 0.2721981524363927,
+      "effective_tax_rate": 0.09916012680622868,
+      "unlevered_beta": 0.767419655502052,
+      "cash_to_firm_value": 0.01990750943642716,
+      "unlevered_beta_cash_corrected": 0.7830073823550779
+    },
+    "Retail (Automotive)": {
+      "firms": 34,
+      "beta": 0.9360151956832995,
+      "de_ratio": 0.45355394519631387,
+      "effective_tax_rate": 0.10773098945749512,
+      "unlevered_beta": 0.6984325625385885,
+      "cash_to_firm_value": 0.020772624176115553,
+      "unlevered_beta_cash_corrected": 0.713248607812822
+    },
+    "Retail (Building Supply)": {
+      "firms": 14,
+      "beta": 1.5353094340291733,
+      "de_ratio": 0.2328921812948963,
+      "effective_tax_rate": 0.11839851054454309,
+      "unlevered_beta": 1.3070143643127536,
+      "cash_to_firm_value": 0.008076989118458873,
+      "unlevered_beta_cash_corrected": 1.3176570660974836
+    },
+    "Retail (Distributors)": {
+      "firms": 62,
+      "beta": 0.9484338145727029,
+      "de_ratio": 0.2823636659199003,
+      "effective_tax_rate": 0.14586482228388625,
+      "unlevered_beta": 0.7826829040437357,
+      "cash_to_firm_value": 0.02363818330183412,
+      "unlevered_beta_cash_corrected": 0.8016320288830955
+    },
+    "Retail (General)": {
+      "firms": 23,
+      "beta": 0.8052405395912856,
+      "de_ratio": 0.07943684178442863,
+      "effective_tax_rate": 0.19099933477629175,
+      "unlevered_beta": 0.7599637023048608,
+      "cash_to_firm_value": 0.02684541547980239,
+      "unlevered_beta_cash_corrected": 0.7809280399984467
+    },
+    "Retail (Grocery and Food)": {
+      "firms": 15,
+      "beta": 1.1183037944931133,
+      "de_ratio": 0.5195017227110472,
+      "effective_tax_rate": 0.12221523285745305,
+      "unlevered_beta": 0.804751465127235,
+      "cash_to_firm_value": 0.051404586626224706,
+      "unlevered_beta_cash_corrected": 0.8483611176919518
+    },
+    "Retail (REITs)": {
+      "firms": 26,
+      "beta": 0.620739021744814,
+      "de_ratio": 0.5641981493610073,
+      "effective_tax_rate": 0.016032624227080367,
+      "unlevered_beta": 0.4361730155949174,
+      "cash_to_firm_value": 0.014779130344806164,
+      "unlevered_beta_cash_corrected": 0.442715972660596
+    },
+    "Retail (Special Lines)": {
+      "firms": 94,
+      "beta": 1.0893996802924664,
+      "de_ratio": 0.19760978860946327,
+      "effective_tax_rate": 0.10067307943310284,
+      "unlevered_beta": 0.9487830646597303,
+      "cash_to_firm_value": 0.05299501204866487,
+      "unlevered_beta_cash_corrected": 1.0018775790318082
+    },
+    "Rubber& Tires": {
+      "firms": 3,
+      "beta": 0.5294301574135339,
+      "de_ratio": 3.5847235984078427,
+      "effective_tax_rate": 0.0,
+      "unlevered_beta": 0.14353369356004206,
+      "cash_to_firm_value": 0.07012413369742923,
+      "unlevered_beta_cash_corrected": 0.15435790814828812
+    },
+    "Semiconductor": {
+      "firms": 66,
+      "beta": 1.5181994029054893,
+      "de_ratio": 0.02591104732744511,
+      "effective_tax_rate": 0.05106370873021537,
+      "unlevered_beta": 1.48925822268736,
+      "cash_to_firm_value": 0.010228996908406993,
+      "unlevered_beta_cash_corrected": 1.5046492754744247
+    },
+    "Semiconductor Equip": {
+      "firms": 31,
+      "beta": 1.3972234247394333,
+      "de_ratio": 0.04861265405817292,
+      "effective_tax_rate": 0.099620953538418,
+      "unlevered_beta": 1.3480733569303134,
+      "cash_to_firm_value": 0.03134157978115816,
+      "unlevered_beta_cash_corrected": 1.3916911563373942
+    },
+    "Shipbuilding & Marine": {
+      "firms": 8,
+      "beta": 0.7529325380371511,
+      "de_ratio": 0.22550196647883228,
+      "effective_tax_rate": 0.052561473759605716,
+      "unlevered_beta": 0.644012905556584,
+      "cash_to_firm_value": 0.02535523030781677,
+      "unlevered_beta_cash_corrected": 0.6607667999490512
+    },
+    "Shoe": {
+      "firms": 11,
+      "beta": 1.0173183278612625,
+      "de_ratio": 0.11944728476926639,
+      "effective_tax_rate": 0.11861173771031724,
+      "unlevered_beta": 0.9336746513867349,
+      "cash_to_firm_value": 0.0664997484206909,
+      "unlevered_beta_cash_corrected": 1.0001868235248257
+    },
+    "Software (Entertainment)": {
+      "firms": 77,
+      "beta": 1.028311248084757,
+      "de_ratio": 0.02044609811708157,
+      "effective_tax_rate": 0.05286401405640245,
+      "unlevered_beta": 1.0127806880948524,
+      "cash_to_firm_value": 0.007750679559072728,
+      "unlevered_beta_cash_corrected": 1.0206917427212765
+    },
+    "Software (Internet)": {
+      "firms": 29,
+      "beta": 1.6886761161660595,
+      "de_ratio": 0.12298911343132386,
+      "effective_tax_rate": 0.03054366211647507,
+      "unlevered_beta": 1.5460643073174678,
+      "cash_to_firm_value": 0.027953523483810944,
+      "unlevered_beta_cash_corrected": 1.5905250877083126
+    },
+    "Software (System & Application)": {
+      "firms": 309,
+      "beta": 1.276648178078175,
+      "de_ratio": 0.05577131922321719,
+      "effective_tax_rate": 0.05509792802786181,
+      "unlevered_beta": 1.225391886520662,
+      "cash_to_firm_value": 0.018272345449553515,
+      "unlevered_beta_cash_corrected": 1.2481994174665423
+    },
+    "Steel": {
+      "firms": 19,
+      "beta": 1.062846247426205,
+      "de_ratio": 0.23512925389922143,
+      "effective_tax_rate": 0.09275991753479733,
+      "unlevered_beta": 0.9035142702396447,
+      "cash_to_firm_value": 0.04384254495118023,
+      "unlevered_beta_cash_corrected": 0.9449429751018495
+    },
+    "Telecom (Wireless)": {
+      "firms": 12,
+      "beta": 0.5381352736640138,
+      "de_ratio": 0.519466977505286,
+      "effective_tax_rate": 0.04023108287054421,
+      "unlevered_beta": 0.3872590553991877,
+      "cash_to_firm_value": 0.013153696058015397,
+      "unlevered_beta_cash_corrected": 0.39242083985345116
+    },
+    "Telecom. Equipment": {
+      "firms": 57,
+      "beta": 0.9232195753877382,
+      "de_ratio": 0.09222748494322085,
+      "effective_tax_rate": 0.07062863646712804,
+      "unlevered_beta": 0.8634913488563035,
+      "cash_to_firm_value": 0.02677918368244727,
+      "unlevered_beta_cash_corrected": 0.8872512120358865
+    },
+    "Telecom. Services": {
+      "firms": 39,
+      "beta": 0.6287201518745624,
+      "de_ratio": 0.9606320738181406,
+      "effective_tax_rate": 0.034002984466728295,
+      "unlevered_beta": 0.3654342533759909,
+      "cash_to_firm_value": 0.042112948613688424,
+      "unlevered_beta_cash_corrected": 0.38150035836387236
+    },
+    "Tobacco": {
+      "firms": 10,
+      "beta": 0.794314579701523,
+      "de_ratio": 0.22968502777837752,
+      "effective_tax_rate": 0.1476725198349122,
+      "unlevered_beta": 0.6775903166712723,
+      "cash_to_firm_value": 0.01840866034890952,
+      "unlevered_beta_cash_corrected": 0.6902977739311797
+    },
+    "Transportation": {
+      "firms": 19,
+      "beta": 0.8599219267913129,
+      "de_ratio": 0.3644955938376248,
+      "effective_tax_rate": 0.08538457407963723,
+      "unlevered_beta": 0.67531101084817,
+      "cash_to_firm_value": 0.05089848894324419,
+      "unlevered_beta_cash_corrected": 0.7115266417564335
+    },
+    "Transportation (Railroads)": {
+      "firms": 4,
+      "beta": 0.9751457485154854,
+      "de_ratio": 0.2779156347027222,
+      "effective_tax_rate": 0.16983557424101936,
+      "unlevered_beta": 0.8069481235657714,
+      "cash_to_firm_value": 0.008324868096860625,
+      "unlevered_beta_cash_corrected": 0.8137222539977831
+    },
+    "Trucking": {
+      "firms": 26,
+      "beta": 1.0113489285521289,
+      "de_ratio": 0.25231648451786204,
+      "effective_tax_rate": 0.12598448805395965,
+      "unlevered_beta": 0.8504180575613394,
+      "cash_to_firm_value": 0.021215013874322366,
+      "unlevered_beta_cash_corrected": 0.8688507380232171
+    },
+    "Utility (General)": {
+      "firms": 14,
+      "beta": 0.2394349278899265,
+      "de_ratio": 0.8148428973368238,
+      "effective_tax_rate": 0.12765942282237325,
+      "unlevered_beta": 0.14861284002770483,
+      "cash_to_firm_value": 0.003337758963226501,
+      "unlevered_beta_cash_corrected": 0.14911053505258812
+    },
+    "Utility (Water)": {
+      "firms": 14,
+      "beta": 0.4126827948416138,
+      "de_ratio": 0.6235944507219604,
+      "effective_tax_rate": 0.11191995155470791,
+      "unlevered_beta": 0.281177328534438,
+      "cash_to_firm_value": 0.004586510588919464,
+      "unlevered_beta_cash_corrected": 0.28247289345133525
+    },
+    "Total Market": {
+      "firms": 5994,
+      "beta": 0.9121109366553466,
+      "de_ratio": 0.3517124831873864,
+      "effective_tax_rate": 0.08301735903677065,
+      "unlevered_beta": 0.7217298803492256,
+      "cash_to_firm_value": 0.044973172975268344,
+      "unlevered_beta_cash_corrected": 0.7557168656692986
+    },
+    "Total Market (without financials)": {
+      "firms": 4822,
+      "beta": 0.9912959719564087,
+      "de_ratio": 0.17287966628456633,
+      "effective_tax_rate": 0.071032603531751,
+      "unlevered_beta": 0.8775172986449091,
+      "cash_to_firm_value": 0.026027829613027353,
+      "unlevered_beta_cash_corrected": 0.9009675279492425
+    }
+  }
 }
