@@ -1,0 +1,34 @@
+name: Value Company Tools
+
+on:
+  pull_request:
+    paths:
+      - '.claude/skills/value-company/**'
+      - '03-corporate-finance/03-2-course-content/**/lesson-overview.md'
+      - '03-corporate-finance/03-2-course-content/lesson-index.yaml'
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: pip install pyyaml
+
+      - name: Question bank is current
+        run: python3 .claude/skills/value-company/tools/build-question-bank.py --check
+
+      - name: Example ledger validates
+        run: python3 .claude/skills/value-company/tools/validate-ledger.py .claude/skills/value-company/examples/solarwinds-inputs.yaml
+
+      - name: Model runs on the example ledger
+        run: python3 .claude/skills/value-company/tools/model.py .claude/skills/value-company/examples/solarwinds-inputs.yaml > /tmp/model-output.md && head -40 /tmp/model-output.md
+
+      - name: Walkthrough sample traces to the example
+        run: |
+          awk '/^## A worked sample/{f=1} f' .claude/skills/value-company/walkthrough-template.md | sed 's/^> \{0,1\}//' > /tmp/sample.md
+          python3 .claude/skills/value-company/tools/check-walkthrough.py /tmp/sample.md .claude/skills/value-company/examples/solarwinds-inputs.yaml /tmp/model-output.md

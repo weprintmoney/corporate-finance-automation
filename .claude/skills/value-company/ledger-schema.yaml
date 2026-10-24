@@ -1,0 +1,127 @@
+# Ledger schema for /value-company
+#
+# inputs.yaml holds every input number for one company's valuation. Computed results never go
+# here; they go to model-output.md. Each input leaf is a mapping:
+#
+#   value: <number or string>
+#   source: <file in sources/ plus the note or section, or the document name if not compiled>
+#   as_of: YYYY-MM-DD
+#   note: <optional, one line>
+#   estimate: true          # optional; private-company bounding figures
+#   range: [low, high]      # optional; required when estimate is true
+#
+# No other keys are allowed in a leaf; the validator rejects them. Quote any string that contains
+# a comma or a colon, or YAML will split it.
+#
+# Lists of years (company.history, forecast.years) use plain scalars inside each row and one
+# source/as_of per row.
+#
+# Units: currency amounts in millions of meta.currency unless the field says otherwise. Rates and
+# ratios as decimals (0.0477, not 4.77%). Shares in millions.
+#
+# "required_for" lists the company types that must supply the field. "used_by" lists lessons.
+
+meta:
+  company:            {type: string, required_for: [all], description: "Legal name"}
+  slug:               {type: string, required_for: [all], description: "kebab-case folder name"}
+  ticker:             {type: string, required_for: [public, delisted, foreign-public], description: "Exchange ticker, or null"}
+  type:               {type: enum, values: [public, delisted, private, foreign-public], required_for: [all]}
+  home_country:       {type: string, required_for: [all]}
+  currency:           {type: string, required_for: [all], description: "Analysis currency (ISO code)"}
+  reporting_currency: {type: string, required_for: [all]}
+  accounting_basis:   {type: string, required_for: [foreign-public], description: "US GAAP, IFRS, or local"}
+  fiscal_year_end:    {type: string, required_for: [all], description: "e.g. 12-31"}
+  base_year:          {type: integer, required_for: [all], description: "Latest full fiscal year used as the base"}
+  analysis_date:      {type: date, required_for: [all]}
+  price_basis:        {type: string, required_for: [delisted], description: "last-unaffected or deal: which one company.share_price is"}
+  analyst:            {type: string, required_for: [all]}
+  omitted:            {type: list, required_for: [], description: "Fields left out, each with a one-line reason"}
+
+modeling_choices:
+  coverage_numerator:  {type: enum, values: [ebit, ebit_plus_acquisition_amortization, ebitda], default: ebit, used_by: [12, 18, 19], description: "Numerator for interest coverage in the synthetic rating and the optimal-debt loop; the model also reports the other two"}
+  firm_size_table:     {type: enum, values: [large, small], default: small, used_by: [12, 18], description: "Damodaran's ratings table; large for market cap above about $5B"}
+  sbc_treatment:       {type: enum, values: [expense, addback], default: expense, used_by: [14, 30, 34], description: "Stock-based compensation charged as an expense (course default) or added back"}
+  firm_value_basis:    {type: enum, values: [market, deal], default: market, used_by: [18, 19], description: "Debt plus equity at market, or the deal enterprise value for a delisted company"}
+  beta_source:         {type: enum, values: [bottom_up, regression, total], default: bottom_up, used_by: [8, 10, 11, 13]}
+  kd_source:           {type: enum, values: [observed, synthetic, actual_rating], default: observed, used_by: [12, 13], description: "Which pre-tax cost of debt the cost of capital uses"}
+  terminal_method:     {type: enum, values: [consistent_reinvestment, fcff_growth], default: consistent_reinvestment, used_by: [32, 34], description: "Terminal value from after-tax EBIT with reinvestment = g / stable ROIC (lesson 32), or final-year FCFF grown at g; the model prints both"}
+
+market:
+  risk_free_rate:      {type: rate, required_for: [all], used_by: [5, 13, 32], description: "10-year government bond yield in meta.currency, default spread netted if not AAA"}
+  mature_erp:          {type: rate, required_for: [all], used_by: [6, 13], description: "Implied equity risk premium for a mature market"}
+  tax_rate_marginal:   {type: rate, required_for: [all], used_by: [9, 12, 13, 17, 18, 21], description: "Statutory marginal rate in the home country"}
+  tax_rate_effective:  {type: rate, required_for: [], used_by: [30], description: "Base-year effective rate, if used for base-year cash flow"}
+  terminal_growth:     {type: rate, required_for: [all], used_by: [15, 19, 32, 34], description: "Perpetual growth rate; must not exceed risk_free_rate"}
+
+country:
+  exposures:           {type: list, required_for: [all], used_by: [7, 16], description: "Rows of {country, weight, erp, measure}; weights sum to 1; measure is revenues, production, or assets"}
+  weighted_erp:        {type: rate, required_for: [all], used_by: [7, 13], description: "Sum of weight × erp; the model recomputes and checks it"}
+
+beta:
+  regression_beta:     {type: number, required_for: [], used_by: [4, 8], description: "Against the home index, with window and interval in note"}
+  regression_se:       {type: number, required_for: [], used_by: [8]}
+  regression_r2:       {type: number, required_for: [], used_by: [8, 11]}
+  jensens_alpha:       {type: rate, required_for: [], used_by: [8, 22, 27]}
+  unlevered_bottom_up: {type: number, required_for: [all], used_by: [10, 11, 13, 18], description: "Industry unlevered beta, cash-corrected, or the weighted segment beta"}
+  segments:            {type: list, required_for: [], used_by: [10, 13], description: "Rows of {name, weight, industry, unlevered_beta}; weights sum to 1"}
+  total_beta:          {type: number, required_for: [private], used_by: [11], description: "Market beta divided by the square root of R-squared"}
+
+company:
+  shares_basic:        {type: number, required_for: [public, delisted, foreign-public], used_by: [4, 13, 33], description: "Cover-page basic shares outstanding, millions"}
+  shares_diluted:      {type: number, required_for: [public, delisted, foreign-public], used_by: [33], description: "From the EPS note"}
+  share_price:         {type: number, required_for: [public, delisted, foreign-public], used_by: [13, 29, 35]}
+  equity_value:        {type: number, required_for: [all], used_by: [9, 13, 18, 29, 35], description: "shares_basic × share_price for listed companies; last round or estimate for private"}
+  equity_book:         {type: number, required_for: [], used_by: [13, 35], description: "Book value of equity"}
+  debt_face:           {type: number, required_for: [all], used_by: [12, 13], description: "Interest-bearing debt at face value"}
+  debt_book:           {type: number, required_for: [], used_by: [12, 13], description: "Carrying value, if different from face"}
+  lease_debt:          {type: number, required_for: [all], used_by: [12, 13], description: "Present value of lease liabilities from the lease note"}
+  debt_total:          {type: number, required_for: [all], used_by: [12, 13, 18, 19, 22, 33], description: "debt_face (or debt_book; say which) + lease_debt"}
+  deferred_revenue:    {type: number, required_for: [], used_by: [12], description: "Recorded so the walkthrough can say it is not debt"}
+  cash:                {type: number, required_for: [all], used_by: [26, 33]}
+  minority_interests:  {type: number, required_for: [], used_by: [33]}
+  cross_holdings:      {type: number, required_for: [], used_by: [33], description: "Market or estimated value of minority holdings in other companies"}
+  options_value:       {type: number, required_for: [], used_by: [33], description: "Value of outstanding options and RSUs as a claim; note the method"}
+  revenue:             {type: number, required_for: [all], used_by: [1, 29, 31, 35]}
+  ebit:                {type: number, required_for: [all], used_by: [12, 14, 18, 20, 30], description: "Operating income as reported, SBC expensed"}
+  ebitda_standardized: {type: number, required_for: [], used_by: [18], description: "EBIT + D&A, no SBC or one-off add-backs"}
+  ebitda_adjusted:     {type: number, required_for: [], used_by: [18], description: "The company's own adjusted EBITDA, labeled as such"}
+  acquisition_amortization: {type: number, required_for: [], used_by: [14, 18], description: "Amortization of acquired intangibles inside D&A"}
+  interest_expense:    {type: number, required_for: [all], used_by: [12, 18, 19], description: "Gross interest expense"}
+  net_income:          {type: number, required_for: [all], used_by: [26, 29, 31]}
+  da:                  {type: number, required_for: [all], used_by: [14, 26, 30], description: "Depreciation and amortization"}
+  capex:               {type: number, required_for: [all], used_by: [14, 26, 30, 32]}
+  change_wc:           {type: number, required_for: [all], used_by: [14, 26, 30], description: "Increase in non-cash working capital (positive = cash used)"}
+  rd_expense:          {type: number, required_for: [], used_by: [1, 14, 31]}
+  sbc:                 {type: number, required_for: [], used_by: [14, 18, 30, 34], description: "Stock-based compensation expense"}
+  invested_capital:    {type: number, required_for: [all], used_by: [14, 31], description: "Book equity + book debt − cash, or operating assets basis; say which"}
+  goodwill:            {type: number, required_for: [], used_by: [14, 31]}
+  history:             {type: list, required_for: [all], used_by: [1, 24, 26, 27, 29, 31], description: "One row per fiscal year, five if available: revenue, ebit, net_income, da, capex, change_wc, dividends, buybacks, debt_issued, debt_repaid, cash, debt_total, invested_capital, share_price_year_end; one source and as_of per row"}
+
+debt:
+  rating_actual:       {type: string, required_for: [all], used_by: [12, 18], description: "Agency rating with the action cited, or null with a note that filings disclose none"}
+  kd_pretax_observed:  {type: rate, required_for: [], used_by: [12, 13], description: "Rate on the company's own debt at the base-year end"}
+  rate_type:           {type: enum, values: [fixed, floating, mixed], required_for: [all], used_by: [23]}
+  currency:            {type: string, required_for: [all], used_by: [5, 23]}
+  maturity_years:      {type: number, required_for: [], used_by: [23], description: "Weighted average remaining maturity"}
+  revolver_undrawn:    {type: number, required_for: [], used_by: [12, 22]}
+  covenants:           {type: string, required_for: [], used_by: [2, 17, 19, 25], description: "One paragraph: maintenance covenants, restricted payments, change of control"}
+
+governance:
+  board:               {type: list, required_for: [public, delisted, foreign-public], used_by: [2], description: "Rows of {name, role, independent, affiliated_with}"}
+  controlling_holders: {type: list, required_for: [all], used_by: [2, 4, 22, 25, 36], description: "Rows of {name, pct, source, as_of}; each holder separate"}
+  share_classes:       {type: string, required_for: [all], used_by: [4]}
+  marginal_investor:   {type: string, required_for: [all], used_by: [4, 11, 25], description: "Who sets the price, and whether diversified"}
+  objectives:          {type: string, required_for: [all], used_by: [3], description: "Stated goals, quoted, with where they were stated"}
+  change_of_control_payouts: {type: string, required_for: [], used_by: [2]}
+
+forecast:
+  years:               {type: list, required_for: [all], used_by: [31, 32, 34], description: "Rows of {year, revenue, ebit_margin, reinvestment, fcff}; fcff may be given directly or derived"}
+  growth_period_years: {type: integer, required_for: [all], used_by: [32]}
+  stable_roic:         {type: rate, required_for: [all], used_by: [32, 34], description: "Return on capital in the terminal period; terminal reinvestment = terminal_growth / stable_roic"}
+  sales_to_capital:    {type: number, required_for: [], used_by: [31], description: "Incremental revenue per dollar of reinvestment"}
+  management_growth:   {type: rate, required_for: [], used_by: [31], description: "Management's stated growth, with where it was stated"}
+  analyst_growth:      {type: rate, required_for: [], used_by: [31]}
+  wacc_stable:         {type: rate, required_for: [], used_by: [32, 34], description: "Cost of capital in the terminal period if different from the current one"}
+
+peers:
+  _row:                {type: list, required_for: [all], used_by: [9, 11, 21, 28, 35], description: "Rows of {name, ticker, fiscal_period, enterprise_value, revenue, ebitda, net_income, equity_book, market_cap, growth, ebit_margin, beta, debt_ratio, payout, source, as_of}"}
