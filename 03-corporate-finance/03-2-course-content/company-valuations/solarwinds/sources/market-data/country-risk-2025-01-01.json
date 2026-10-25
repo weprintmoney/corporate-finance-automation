@@ -1,0 +1,1257 @@
+{
+  "as_of": "2025-01-01",
+  "fetched": "2026-10-25",
+  "source_url": "https://pages.stern.nyu.edu/~adamodar/pc/archives/ctryprem24.xlsx",
+  "note": "Rating-based default spreads and premiums. Damodaran updates in January and July.",
+  "mature_market_erp": 0.0433,
+  "us_erp": null,
+  "countries": {
+    "Abu Dhabi": {
+      "region": "Middle East",
+      "moodys_rating": "Aa2",
+      "default_spread": 0.0048889784279692525,
+      "erp": 0.04988788795457764,
+      "country_risk_premium": 0.0065878879545776415
+    },
+    "Albania": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "Ba3",
+      "default_spread": 0.035619699975204554,
+      "erp": 0.09129746938335138,
+      "country_risk_premium": 0.047997469383351386
+    },
+    "Andorra (Principality of)": {
+      "region": "Western Europe",
+      "moodys_rating": "Baa1",
+      "default_spread": 0.015830977766757577,
+      "erp": 0.06463220861482283,
+      "country_risk_premium": 0.021332208614822837
+    },
+    "Angola": {
+      "region": "Africa",
+      "moodys_rating": "B3",
+      "default_spread": 0.06437154930159515,
+      "erp": 0.13004052473527228,
+      "country_risk_premium": 0.08674052473527227
+    },
+    "Argentina": {
+      "region": "Central and South America",
+      "moodys_rating": "Ca",
+      "default_spread": 0.11884873749896685,
+      "erp": 0.20344841908628034,
+      "country_risk_premium": 0.16014841908628033
+    },
+    "Armenia": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "Ba3",
+      "default_spread": 0.035619699975204554,
+      "erp": 0.09129746938335138,
+      "country_risk_premium": 0.047997469383351386
+    },
+    "Aruba": {
+      "region": "Caribbean",
+      "moodys_rating": "Baa3",
+      "default_spread": 0.021767594429291676,
+      "erp": 0.07263178684538141,
+      "country_risk_premium": 0.02933178684538141
+    },
+    "Australia": {
+      "region": "Australia & New Zealand",
+      "moodys_rating": "Aaa",
+      "default_spread": 0.0,
+      "erp": 0.0433,
+      "country_risk_premium": 0.0
+    },
+    "Austria": {
+      "region": "Western Europe",
+      "moodys_rating": "Aa1",
+      "default_spread": 0.003957744441689394,
+      "erp": 0.04863305215370571,
+      "country_risk_premium": 0.005333052153705709
+    },
+    "Azerbaijan": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "Ba1",
+      "default_spread": 0.024794104884701216,
+      "erp": 0.0767100031982152,
+      "country_risk_premium": 0.033410003198215195
+    },
+    "Bahamas": {
+      "region": "Caribbean",
+      "moodys_rating": "B1",
+      "default_spread": 0.04458282709314818,
+      "erp": 0.10337526396674374,
+      "country_risk_premium": 0.06007526396674373
+    },
+    "Bahrain": {
+      "region": "Middle East",
+      "moodys_rating": "B2",
+      "default_spread": 0.05447718819737168,
+      "erp": 0.116707894351008,
+      "country_risk_premium": 0.07340789435100802
+    },
+    "Bangladesh": {
+      "region": "Asia",
+      "moodys_rating": "B2",
+      "default_spread": 0.05447718819737168,
+      "erp": 0.116707894351008,
+      "country_risk_premium": 0.07340789435100802
+    },
+    "Barbados": {
+      "region": "Caribbean",
+      "moodys_rating": "B3",
+      "default_spread": 0.06437154930159515,
+      "erp": 0.13004052473527228,
+      "country_risk_premium": 0.08674052473527227
+    },
+    "Belarus": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "C",
+      "default_spread": 0.175,
+      "erp": 0.2791121249739206,
+      "country_risk_premium": 0.2358121249739206
+    },
+    "Belgium": {
+      "region": "Western Europe",
+      "moodys_rating": "Aa3",
+      "default_spread": 0.005936616662534093,
+      "erp": 0.051299578230558564,
+      "country_risk_premium": 0.007999578230558566
+    },
+    "Belize": {
+      "region": "Central and South America",
+      "moodys_rating": "Caa1",
+      "default_spread": 0.07426591040581865,
+      "erp": 0.14337315511953655,
+      "country_risk_premium": 0.10007315511953656
+    },
+    "Benin": {
+      "region": "Africa",
+      "moodys_rating": "B1",
+      "default_spread": 0.04458282709314818,
+      "erp": 0.10337526396674374,
+      "country_risk_premium": 0.06007526396674373
+    },
+    "Bermuda": {
+      "region": "Caribbean",
+      "moodys_rating": "A2",
+      "default_spread": 0.00838110587651872,
+      "erp": 0.054593522207847384,
+      "country_risk_premium": 0.011293522207847389
+    },
+    "Bolivia": {
+      "region": "Central and South America",
+      "moodys_rating": "Caa3",
+      "default_spread": 0.09906001529051987,
+      "erp": 0.17678315831775177,
+      "country_risk_premium": 0.13348315831775176
+    },
+    "Bosnia and Herzegovina": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "B3",
+      "default_spread": 0.06437154930159515,
+      "erp": 0.13004052473527228,
+      "country_risk_premium": 0.08674052473527227
+    },
+    "Botswana": {
+      "region": "Africa",
+      "moodys_rating": "A3",
+      "default_spread": 0.011873233325068186,
+      "erp": 0.05929915646111713,
+      "country_risk_premium": 0.01599915646111713
+    },
+    "Brazil": {
+      "region": "Central and South America",
+      "moodys_rating": "Ba1",
+      "default_spread": 0.024794104884701216,
+      "erp": 0.0767100031982152,
+      "country_risk_premium": 0.033410003198215195
+    },
+    "Bulgaria": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "Baa1",
+      "default_spread": 0.015830977766757577,
+      "erp": 0.06463220861482283,
+      "country_risk_premium": 0.021332208614822837
+    },
+    "Burkina Faso": {
+      "region": "Africa",
+      "moodys_rating": "Caa1",
+      "default_spread": 0.07426591040581865,
+      "erp": 0.14337315511953655,
+      "country_risk_premium": 0.10007315511953656
+    },
+    "Cambodia": {
+      "region": "Asia",
+      "moodys_rating": "B2",
+      "default_spread": 0.05447718819737168,
+      "erp": 0.116707894351008,
+      "country_risk_premium": 0.07340789435100802
+    },
+    "Cameroon": {
+      "region": "Africa",
+      "moodys_rating": "Caa1",
+      "default_spread": 0.07426591040581865,
+      "erp": 0.14337315511953655,
+      "country_risk_premium": 0.10007315511953656
+    },
+    "Canada": {
+      "region": "North America",
+      "moodys_rating": "Aaa",
+      "default_spread": 0.0,
+      "erp": 0.0433,
+      "country_risk_premium": 0.0
+    },
+    "Cape Verde": {
+      "region": "Africa",
+      "moodys_rating": "B2",
+      "default_spread": 0.05447718819737168,
+      "erp": 0.116707894351008,
+      "country_risk_premium": 0.07340789435100802
+    },
+    "Cayman Islands": {
+      "region": "Caribbean",
+      "moodys_rating": "Aa3",
+      "default_spread": 0.005936616662534093,
+      "erp": 0.051299578230558564,
+      "country_risk_premium": 0.007999578230558566
+    },
+    "Chile": {
+      "region": "Central and South America",
+      "moodys_rating": "A2",
+      "default_spread": 0.00838110587651872,
+      "erp": 0.054593522207847384,
+      "country_risk_premium": 0.011293522207847389
+    },
+    "China": {
+      "region": "Asia",
+      "moodys_rating": "A1",
+      "default_spread": 0.006984254897098934,
+      "erp": 0.05271126850653949,
+      "country_risk_premium": 0.00941126850653949
+    },
+    "Colombia": {
+      "region": "Central and South America",
+      "moodys_rating": "Baa2",
+      "default_spread": 0.01885748822216712,
+      "erp": 0.06871042496765661,
+      "country_risk_premium": 0.025410424967656622
+    },
+    "Congo (Democratic Republic of)": {
+      "region": "Africa",
+      "moodys_rating": "B3",
+      "default_spread": 0.06437154930159515,
+      "erp": 0.13004052473527228,
+      "country_risk_premium": 0.08674052473527227
+    },
+    "Congo (Republic of)": {
+      "region": "Africa",
+      "moodys_rating": "Caa2",
+      "default_spread": 0.08916565418629636,
+      "erp": 0.16345052793348747,
+      "country_risk_premium": 0.12015052793348746
+    },
+    "Cook Islands": {
+      "region": "Australia & New Zealand",
+      "moodys_rating": "B1",
+      "default_spread": 0.04458282709314818,
+      "erp": 0.10337526396674374,
+      "country_risk_premium": 0.06007526396674373
+    },
+    "Costa Rica": {
+      "region": "Central and South America",
+      "moodys_rating": "Ba3",
+      "default_spread": 0.035619699975204554,
+      "erp": 0.09129746938335138,
+      "country_risk_premium": 0.047997469383351386
+    },
+    "C\u00f4te d'Ivoire": {
+      "region": "Africa",
+      "moodys_rating": "Ba2",
+      "default_spread": 0.029799487560955448,
+      "erp": 0.08345474562790181,
+      "country_risk_premium": 0.04015474562790182
+    },
+    "Croatia": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "A3",
+      "default_spread": 0.011873233325068186,
+      "erp": 0.05929915646111713,
+      "country_risk_premium": 0.01599915646111713
+    },
+    "Cuba": {
+      "region": "Caribbean",
+      "moodys_rating": "Ca",
+      "default_spread": 0.11884873749896685,
+      "erp": 0.20344841908628034,
+      "country_risk_premium": 0.16014841908628033
+    },
+    "Curacao": {
+      "region": "Caribbean",
+      "moodys_rating": "Baa3",
+      "default_spread": 0.021767594429291676,
+      "erp": 0.07263178684538141,
+      "country_risk_premium": 0.02933178684538141
+    },
+    "Cyprus": {
+      "region": "Western Europe",
+      "moodys_rating": "A3",
+      "default_spread": 0.011873233325068186,
+      "erp": 0.05929915646111713,
+      "country_risk_premium": 0.01599915646111713
+    },
+    "Czech Republic": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "Aa3",
+      "default_spread": 0.005936616662534093,
+      "erp": 0.051299578230558564,
+      "country_risk_premium": 0.007999578230558566
+    },
+    "Denmark": {
+      "region": "Western Europe",
+      "moodys_rating": "Aaa",
+      "default_spread": 0.0,
+      "erp": 0.0433,
+      "country_risk_premium": 0.0
+    },
+    "Dominican Republic": {
+      "region": "Caribbean",
+      "moodys_rating": "Ba3",
+      "default_spread": 0.035619699975204554,
+      "erp": 0.09129746938335138,
+      "country_risk_premium": 0.047997469383351386
+    },
+    "Ecuador": {
+      "region": "Central and South America",
+      "moodys_rating": "Caa3",
+      "default_spread": 0.09906001529051987,
+      "erp": 0.17678315831775177,
+      "country_risk_premium": 0.13348315831775176
+    },
+    "Egypt": {
+      "region": "Africa",
+      "moodys_rating": "Caa1",
+      "default_spread": 0.07426591040581865,
+      "erp": 0.14337315511953655,
+      "country_risk_premium": 0.10007315511953656
+    },
+    "El Salvador": {
+      "region": "Central and South America",
+      "moodys_rating": "B3",
+      "default_spread": 0.06437154930159515,
+      "erp": 0.13004052473527228,
+      "country_risk_premium": 0.08674052473527227
+    },
+    "Estonia": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "A1",
+      "default_spread": 0.006984254897098934,
+      "erp": 0.05271126850653949,
+      "country_risk_premium": 0.00941126850653949
+    },
+    "Ethiopia": {
+      "region": "Africa",
+      "moodys_rating": "Caa2",
+      "default_spread": 0.08916565418629636,
+      "erp": 0.16345052793348747,
+      "country_risk_premium": 0.12015052793348746
+    },
+    "Fiji": {
+      "region": "Asia",
+      "moodys_rating": "B1",
+      "default_spread": 0.04458282709314818,
+      "erp": 0.10337526396674374,
+      "country_risk_premium": 0.06007526396674373
+    },
+    "Finland": {
+      "region": "Western Europe",
+      "moodys_rating": "Aa1",
+      "default_spread": 0.003957744441689394,
+      "erp": 0.04863305215370571,
+      "country_risk_premium": 0.005333052153705709
+    },
+    "France": {
+      "region": "Western Europe",
+      "moodys_rating": "Aa3",
+      "default_spread": 0.005936616662534093,
+      "erp": 0.051299578230558564,
+      "country_risk_premium": 0.007999578230558566
+    },
+    "Gabon": {
+      "region": "Africa",
+      "moodys_rating": "Caa2",
+      "default_spread": 0.08916565418629636,
+      "erp": 0.16345052793348747,
+      "country_risk_premium": 0.12015052793348746
+    },
+    "Georgia": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "Ba2",
+      "default_spread": 0.029799487560955448,
+      "erp": 0.08345474562790181,
+      "country_risk_premium": 0.04015474562790182
+    },
+    "Germany": {
+      "region": "Western Europe",
+      "moodys_rating": "Aaa",
+      "default_spread": 0.0,
+      "erp": 0.0433,
+      "country_risk_premium": 0.0
+    },
+    "Ghana": {
+      "region": "Africa",
+      "moodys_rating": "Caa2",
+      "default_spread": 0.08916565418629636,
+      "erp": 0.16345052793348747,
+      "country_risk_premium": 0.12015052793348746
+    },
+    "Greece": {
+      "region": "Western Europe",
+      "moodys_rating": "Ba1",
+      "default_spread": 0.024794104884701216,
+      "erp": 0.0767100031982152,
+      "country_risk_premium": 0.033410003198215195
+    },
+    "Guatemala": {
+      "region": "Central and South America",
+      "moodys_rating": "Ba1",
+      "default_spread": 0.024794104884701216,
+      "erp": 0.0767100031982152,
+      "country_risk_premium": 0.033410003198215195
+    },
+    "Guernsey (States of)": {
+      "region": "Western Europe",
+      "moodys_rating": "A1",
+      "default_spread": 0.006984254897098934,
+      "erp": 0.05271126850653949,
+      "country_risk_premium": 0.00941126850653949
+    },
+    "Honduras": {
+      "region": "Central and South America",
+      "moodys_rating": "B1",
+      "default_spread": 0.04458282709314818,
+      "erp": 0.10337526396674374,
+      "country_risk_premium": 0.06007526396674373
+    },
+    "Hong Kong": {
+      "region": "Asia",
+      "moodys_rating": "Aa3",
+      "default_spread": 0.005936616662534093,
+      "erp": 0.051299578230558564,
+      "country_risk_premium": 0.007999578230558566
+    },
+    "Hungary": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "Baa2",
+      "default_spread": 0.01885748822216712,
+      "erp": 0.06871042496765661,
+      "country_risk_premium": 0.025410424967656622
+    },
+    "Iceland": {
+      "region": "Western Europe",
+      "moodys_rating": "A1",
+      "default_spread": 0.006984254897098934,
+      "erp": 0.05271126850653949,
+      "country_risk_premium": 0.00941126850653949
+    },
+    "India": {
+      "region": "Asia",
+      "moodys_rating": "Baa3",
+      "default_spread": 0.021767594429291676,
+      "erp": 0.07263178684538141,
+      "country_risk_premium": 0.02933178684538141
+    },
+    "Indonesia": {
+      "region": "Asia",
+      "moodys_rating": "Baa2",
+      "default_spread": 0.01885748822216712,
+      "erp": 0.06871042496765661,
+      "country_risk_premium": 0.025410424967656622
+    },
+    "Iraq": {
+      "region": "Middle East",
+      "moodys_rating": "Caa1",
+      "default_spread": 0.07426591040581865,
+      "erp": 0.14337315511953655,
+      "country_risk_premium": 0.10007315511953656
+    },
+    "Ireland": {
+      "region": "Western Europe",
+      "moodys_rating": "Aa3",
+      "default_spread": 0.005936616662534093,
+      "erp": 0.051299578230558564,
+      "country_risk_premium": 0.007999578230558566
+    },
+    "Isle of Man": {
+      "region": "Western Europe",
+      "moodys_rating": "Aa3",
+      "default_spread": 0.005936616662534093,
+      "erp": 0.051299578230558564,
+      "country_risk_premium": 0.007999578230558566
+    },
+    "Israel": {
+      "region": "Middle East",
+      "moodys_rating": "Baa1",
+      "default_spread": 0.015830977766757577,
+      "erp": 0.06463220861482283,
+      "country_risk_premium": 0.021332208614822837
+    },
+    "Italy": {
+      "region": "Western Europe",
+      "moodys_rating": "Baa3",
+      "default_spread": 0.021767594429291676,
+      "erp": 0.07263178684538141,
+      "country_risk_premium": 0.02933178684538141
+    },
+    "Jamaica": {
+      "region": "Caribbean",
+      "moodys_rating": "B1",
+      "default_spread": 0.04458282709314818,
+      "erp": 0.10337526396674374,
+      "country_risk_premium": 0.06007526396674373
+    },
+    "Japan": {
+      "region": "Asia",
+      "moodys_rating": "A1",
+      "default_spread": 0.006984254897098934,
+      "erp": 0.05271126850653949,
+      "country_risk_premium": 0.00941126850653949
+    },
+    "Jersey (States of)": {
+      "region": "Western Europe",
+      "moodys_rating": "Aa2",
+      "default_spread": 0.0048889784279692525,
+      "erp": 0.04988788795457764,
+      "country_risk_premium": 0.0065878879545776415
+    },
+    "Jordan": {
+      "region": "Middle East",
+      "moodys_rating": "Ba3",
+      "default_spread": 0.035619699975204554,
+      "erp": 0.09129746938335138,
+      "country_risk_premium": 0.047997469383351386
+    },
+    "Kazakhstan": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "Baa1",
+      "default_spread": 0.015830977766757577,
+      "erp": 0.06463220861482283,
+      "country_risk_premium": 0.021332208614822837
+    },
+    "Kenya": {
+      "region": "Africa",
+      "moodys_rating": "Caa1",
+      "default_spread": 0.07426591040581865,
+      "erp": 0.14337315511953655,
+      "country_risk_premium": 0.10007315511953656
+    },
+    "Korea": {
+      "region": "Asia",
+      "moodys_rating": "Aa2",
+      "default_spread": 0.0048889784279692525,
+      "erp": 0.04988788795457764,
+      "country_risk_premium": 0.0065878879545776415
+    },
+    "Kuwait": {
+      "region": "Middle East",
+      "moodys_rating": "A1",
+      "default_spread": 0.006984254897098934,
+      "erp": 0.05271126850653949,
+      "country_risk_premium": 0.00941126850653949
+    },
+    "Kyrgyzstan": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "B3",
+      "default_spread": 0.06437154930159515,
+      "erp": 0.13004052473527228,
+      "country_risk_premium": 0.08674052473527227
+    },
+    "Laos": {
+      "region": "Asia",
+      "moodys_rating": "Caa3",
+      "default_spread": 0.09906001529051987,
+      "erp": 0.17678315831775177,
+      "country_risk_premium": 0.13348315831775176
+    },
+    "Latvia": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "A3",
+      "default_spread": 0.011873233325068186,
+      "erp": 0.05929915646111713,
+      "country_risk_premium": 0.01599915646111713
+    },
+    "Lebanon": {
+      "region": "Middle East",
+      "moodys_rating": "C",
+      "default_spread": 0.175,
+      "erp": 0.2791121249739206,
+      "country_risk_premium": 0.2358121249739206
+    },
+    "Liechtenstein": {
+      "region": "Western Europe",
+      "moodys_rating": "Aaa",
+      "default_spread": 0.0,
+      "erp": 0.0433,
+      "country_risk_premium": 0.0
+    },
+    "Lithuania": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "A2",
+      "default_spread": 0.00838110587651872,
+      "erp": 0.054593522207847384,
+      "country_risk_premium": 0.011293522207847389
+    },
+    "Luxembourg": {
+      "region": "Western Europe",
+      "moodys_rating": "Aaa",
+      "default_spread": 0.0,
+      "erp": 0.0433,
+      "country_risk_premium": 0.0
+    },
+    "Macao": {
+      "region": "Asia",
+      "moodys_rating": "Aa3",
+      "default_spread": 0.005936616662534093,
+      "erp": 0.051299578230558564,
+      "country_risk_premium": 0.007999578230558566
+    },
+    "Macedonia": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "Ba3",
+      "default_spread": 0.035619699975204554,
+      "erp": 0.09129746938335138,
+      "country_risk_premium": 0.047997469383351386
+    },
+    "Malaysia": {
+      "region": "Asia",
+      "moodys_rating": "A3",
+      "default_spread": 0.011873233325068186,
+      "erp": 0.05929915646111713,
+      "country_risk_premium": 0.01599915646111713
+    },
+    "Maldives": {
+      "region": "Asia",
+      "moodys_rating": "Caa2",
+      "default_spread": 0.08916565418629636,
+      "erp": 0.16345052793348747,
+      "country_risk_premium": 0.12015052793348746
+    },
+    "Mali": {
+      "region": "Africa",
+      "moodys_rating": "Caa2",
+      "default_spread": 0.08916565418629636,
+      "erp": 0.16345052793348747,
+      "country_risk_premium": 0.12015052793348746
+    },
+    "Malta": {
+      "region": "Western Europe",
+      "moodys_rating": "A2",
+      "default_spread": 0.00838110587651872,
+      "erp": 0.054593522207847384,
+      "country_risk_premium": 0.011293522207847389
+    },
+    "Mauritius": {
+      "region": "Africa",
+      "moodys_rating": "Baa3",
+      "default_spread": 0.021767594429291676,
+      "erp": 0.07263178684538141,
+      "country_risk_premium": 0.02933178684538141
+    },
+    "Mexico": {
+      "region": "Central and South America",
+      "moodys_rating": "Baa2",
+      "default_spread": 0.01885748822216712,
+      "erp": 0.06871042496765661,
+      "country_risk_premium": 0.025410424967656622
+    },
+    "Moldova": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "B3",
+      "default_spread": 0.06437154930159515,
+      "erp": 0.13004052473527228,
+      "country_risk_premium": 0.08674052473527227
+    },
+    "Mongolia": {
+      "region": "Asia",
+      "moodys_rating": "B2",
+      "default_spread": 0.05447718819737168,
+      "erp": 0.116707894351008,
+      "country_risk_premium": 0.07340789435100802
+    },
+    "Montenegro": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "B1",
+      "default_spread": 0.04458282709314818,
+      "erp": 0.10337526396674374,
+      "country_risk_premium": 0.06007526396674373
+    },
+    "Montserrat": {
+      "region": "Caribbean",
+      "moodys_rating": "Baa3",
+      "default_spread": 0.021767594429291676,
+      "erp": 0.07263178684538141,
+      "country_risk_premium": 0.02933178684538141
+    },
+    "Morocco": {
+      "region": "Africa",
+      "moodys_rating": "Ba1",
+      "default_spread": 0.024794104884701216,
+      "erp": 0.0767100031982152,
+      "country_risk_premium": 0.033410003198215195
+    },
+    "Mozambique": {
+      "region": "Africa",
+      "moodys_rating": "Caa2",
+      "default_spread": 0.08916565418629636,
+      "erp": 0.16345052793348747,
+      "country_risk_premium": 0.12015052793348746
+    },
+    "Namibia": {
+      "region": "Africa",
+      "moodys_rating": "B1",
+      "default_spread": 0.04458282709314818,
+      "erp": 0.10337526396674374,
+      "country_risk_premium": 0.06007526396674373
+    },
+    "Nepal": {
+      "region": "Asia",
+      "moodys_rating": "Ba3",
+      "default_spread": 0.035619699975204554,
+      "erp": 0.09129746938335138,
+      "country_risk_premium": 0.047997469383351386
+    },
+    "Netherlands": {
+      "region": "Western Europe",
+      "moodys_rating": "Aaa",
+      "default_spread": 0.0,
+      "erp": 0.0433,
+      "country_risk_premium": 0.0
+    },
+    "New Zealand": {
+      "region": "Australia & New Zealand",
+      "moodys_rating": "Aaa",
+      "default_spread": 0.0,
+      "erp": 0.0433,
+      "country_risk_premium": 0.0
+    },
+    "Nicaragua": {
+      "region": "Central and South America",
+      "moodys_rating": "B2",
+      "default_spread": 0.05447718819737168,
+      "erp": 0.116707894351008,
+      "country_risk_premium": 0.07340789435100802
+    },
+    "Niger": {
+      "region": "Africa",
+      "moodys_rating": "Caa3",
+      "default_spread": 0.09906001529051987,
+      "erp": 0.17678315831775177,
+      "country_risk_premium": 0.13348315831775176
+    },
+    "Nigeria": {
+      "region": "Africa",
+      "moodys_rating": "Caa1",
+      "default_spread": 0.07426591040581865,
+      "erp": 0.14337315511953655,
+      "country_risk_premium": 0.10007315511953656
+    },
+    "Norway": {
+      "region": "Western Europe",
+      "moodys_rating": "Aaa",
+      "default_spread": 0.0,
+      "erp": 0.0433,
+      "country_risk_premium": 0.0
+    },
+    "Oman": {
+      "region": "Middle East",
+      "moodys_rating": "Ba1",
+      "default_spread": 0.024794104884701216,
+      "erp": 0.0767100031982152,
+      "country_risk_premium": 0.033410003198215195
+    },
+    "Pakistan": {
+      "region": "Asia",
+      "moodys_rating": "Caa2",
+      "default_spread": 0.08916565418629636,
+      "erp": 0.16345052793348747,
+      "country_risk_premium": 0.12015052793348746
+    },
+    "Panama": {
+      "region": "Central and South America",
+      "moodys_rating": "Baa3",
+      "default_spread": 0.021767594429291676,
+      "erp": 0.07263178684538141,
+      "country_risk_premium": 0.02933178684538141
+    },
+    "Papua New Guinea": {
+      "region": "Asia",
+      "moodys_rating": "B2",
+      "default_spread": 0.05447718819737168,
+      "erp": 0.116707894351008,
+      "country_risk_premium": 0.07340789435100802
+    },
+    "Paraguay": {
+      "region": "Central and South America",
+      "moodys_rating": "Baa3",
+      "default_spread": 0.021767594429291676,
+      "erp": 0.07263178684538141,
+      "country_risk_premium": 0.02933178684538141
+    },
+    "Peru": {
+      "region": "Central and South America",
+      "moodys_rating": "Baa1",
+      "default_spread": 0.015830977766757577,
+      "erp": 0.06463220861482283,
+      "country_risk_premium": 0.021332208614822837
+    },
+    "Philippines": {
+      "region": "Asia",
+      "moodys_rating": "Baa2",
+      "default_spread": 0.01885748822216712,
+      "erp": 0.06871042496765661,
+      "country_risk_premium": 0.025410424967656622
+    },
+    "Poland": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "A2",
+      "default_spread": 0.00838110587651872,
+      "erp": 0.054593522207847384,
+      "country_risk_premium": 0.011293522207847389
+    },
+    "Portugal": {
+      "region": "Western Europe",
+      "moodys_rating": "A3",
+      "default_spread": 0.011873233325068186,
+      "erp": 0.05929915646111713,
+      "country_risk_premium": 0.01599915646111713
+    },
+    "Qatar": {
+      "region": "Middle East",
+      "moodys_rating": "Aa2",
+      "default_spread": 0.0048889784279692525,
+      "erp": 0.04988788795457764,
+      "country_risk_premium": 0.0065878879545776415
+    },
+    "Ras Al Khaimah (Emirate of)": {
+      "region": "Middle East",
+      "moodys_rating": "A3",
+      "default_spread": 0.011873233325068186,
+      "erp": 0.05929915646111713,
+      "country_risk_premium": 0.01599915646111713
+    },
+    "Romania": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "Baa3",
+      "default_spread": 0.021767594429291676,
+      "erp": 0.07263178684538141,
+      "country_risk_premium": 0.02933178684538141
+    },
+    "Rwanda": {
+      "region": "Africa",
+      "moodys_rating": "B2",
+      "default_spread": 0.05447718819737168,
+      "erp": 0.116707894351008,
+      "country_risk_premium": 0.07340789435100802
+    },
+    "Saudi Arabia": {
+      "region": "Middle East",
+      "moodys_rating": "Aa3",
+      "default_spread": 0.005936616662534093,
+      "erp": 0.051299578230558564,
+      "country_risk_premium": 0.007999578230558566
+    },
+    "Senegal": {
+      "region": "Africa",
+      "moodys_rating": "B1",
+      "default_spread": 0.04458282709314818,
+      "erp": 0.10337526396674374,
+      "country_risk_premium": 0.06007526396674373
+    },
+    "Serbia": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "Ba2",
+      "default_spread": 0.029799487560955448,
+      "erp": 0.08345474562790181,
+      "country_risk_premium": 0.04015474562790182
+    },
+    "Sharjah": {
+      "region": "Middle East",
+      "moodys_rating": "Ba1",
+      "default_spread": 0.024794104884701216,
+      "erp": 0.0767100031982152,
+      "country_risk_premium": 0.033410003198215195
+    },
+    "Singapore": {
+      "region": "Asia",
+      "moodys_rating": "Aaa",
+      "default_spread": 0.0,
+      "erp": 0.0433,
+      "country_risk_premium": 0.0
+    },
+    "Slovakia": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "A3",
+      "default_spread": 0.011873233325068186,
+      "erp": 0.05929915646111713,
+      "country_risk_premium": 0.01599915646111713
+    },
+    "Slovenia": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "A3",
+      "default_spread": 0.011873233325068186,
+      "erp": 0.05929915646111713,
+      "country_risk_premium": 0.01599915646111713
+    },
+    "Solomon Islands": {
+      "region": "Asia",
+      "moodys_rating": "Caa1",
+      "default_spread": 0.07426591040581865,
+      "erp": 0.14337315511953655,
+      "country_risk_premium": 0.10007315511953656
+    },
+    "South Africa": {
+      "region": "Africa",
+      "moodys_rating": "Ba2",
+      "default_spread": 0.029799487560955448,
+      "erp": 0.08345474562790181,
+      "country_risk_premium": 0.04015474562790182
+    },
+    "Spain": {
+      "region": "Western Europe",
+      "moodys_rating": "Baa1",
+      "default_spread": 0.015830977766757577,
+      "erp": 0.06463220861482283,
+      "country_risk_premium": 0.021332208614822837
+    },
+    "Sri Lanka": {
+      "region": "Asia",
+      "moodys_rating": "Ca",
+      "default_spread": 0.11884873749896685,
+      "erp": 0.20344841908628034,
+      "country_risk_premium": 0.16014841908628033
+    },
+    "St. Maarten": {
+      "region": "Caribbean",
+      "moodys_rating": "Ba2",
+      "default_spread": 0.029799487560955448,
+      "erp": 0.08345474562790181,
+      "country_risk_premium": 0.04015474562790182
+    },
+    "St. Vincent & the Grenadines": {
+      "region": "Caribbean",
+      "moodys_rating": "B3",
+      "default_spread": 0.06437154930159515,
+      "erp": 0.13004052473527228,
+      "country_risk_premium": 0.08674052473527227
+    },
+    "Suriname": {
+      "region": "Central and South America",
+      "moodys_rating": "Caa1",
+      "default_spread": 0.07426591040581865,
+      "erp": 0.14337315511953655,
+      "country_risk_premium": 0.10007315511953656
+    },
+    "Swaziland": {
+      "region": "Africa",
+      "moodys_rating": "B2",
+      "default_spread": 0.05447718819737168,
+      "erp": 0.116707894351008,
+      "country_risk_premium": 0.07340789435100802
+    },
+    "Sweden": {
+      "region": "Western Europe",
+      "moodys_rating": "Aaa",
+      "default_spread": 0.0,
+      "erp": 0.0433,
+      "country_risk_premium": 0.0
+    },
+    "Switzerland": {
+      "region": "Western Europe",
+      "moodys_rating": "Aaa",
+      "default_spread": 0.0,
+      "erp": 0.0433,
+      "country_risk_premium": 0.0
+    },
+    "Taiwan": {
+      "region": "Asia",
+      "moodys_rating": "Aa3",
+      "default_spread": 0.005936616662534093,
+      "erp": 0.051299578230558564,
+      "country_risk_premium": 0.007999578230558566
+    },
+    "Tajikistan": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "B3",
+      "default_spread": 0.06437154930159515,
+      "erp": 0.13004052473527228,
+      "country_risk_premium": 0.08674052473527227
+    },
+    "Tanzania": {
+      "region": "Africa",
+      "moodys_rating": "B1",
+      "default_spread": 0.04458282709314818,
+      "erp": 0.10337526396674374,
+      "country_risk_premium": 0.06007526396674373
+    },
+    "Thailand": {
+      "region": "Asia",
+      "moodys_rating": "Baa1",
+      "default_spread": 0.015830977766757577,
+      "erp": 0.06463220861482283,
+      "country_risk_premium": 0.021332208614822837
+    },
+    "Togo": {
+      "region": "Africa",
+      "moodys_rating": "B3",
+      "default_spread": 0.06437154930159515,
+      "erp": 0.13004052473527228,
+      "country_risk_premium": 0.08674052473527227
+    },
+    "Trinidad and Tobago": {
+      "region": "Caribbean",
+      "moodys_rating": "Ba2",
+      "default_spread": 0.029799487560955448,
+      "erp": 0.08345474562790181,
+      "country_risk_premium": 0.04015474562790182
+    },
+    "Tunisia": {
+      "region": "Africa",
+      "moodys_rating": "Caa2",
+      "default_spread": 0.08916565418629636,
+      "erp": 0.16345052793348747,
+      "country_risk_premium": 0.12015052793348746
+    },
+    "Turkey": {
+      "region": "Western Europe",
+      "moodys_rating": "B1",
+      "default_spread": 0.04458282709314818,
+      "erp": 0.10337526396674374,
+      "country_risk_premium": 0.06007526396674373
+    },
+    "Turks and Caicos Islands": {
+      "region": "Caribbean",
+      "moodys_rating": "Baa1",
+      "default_spread": 0.015830977766757577,
+      "erp": 0.06463220861482283,
+      "country_risk_premium": 0.021332208614822837
+    },
+    "Uganda": {
+      "region": "Africa",
+      "moodys_rating": "B3",
+      "default_spread": 0.06437154930159515,
+      "erp": 0.13004052473527228,
+      "country_risk_premium": 0.08674052473527227
+    },
+    "Ukraine": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "Ca",
+      "default_spread": 0.11884873749896685,
+      "erp": 0.20344841908628034,
+      "country_risk_premium": 0.16014841908628033
+    },
+    "United Arab Emirates": {
+      "region": "Middle East",
+      "moodys_rating": "Aa2",
+      "default_spread": 0.0048889784279692525,
+      "erp": 0.04988788795457764,
+      "country_risk_premium": 0.0065878879545776415
+    },
+    "United Kingdom": {
+      "region": "Western Europe",
+      "moodys_rating": "Aa3",
+      "default_spread": 0.005936616662534093,
+      "erp": 0.051299578230558564,
+      "country_risk_premium": 0.007999578230558566
+    },
+    "United States": {
+      "region": "North America",
+      "moodys_rating": "Aaa",
+      "default_spread": 0.0,
+      "erp": 0.0433,
+      "country_risk_premium": 0.0
+    },
+    "Uruguay": {
+      "region": "Central and South America",
+      "moodys_rating": "Baa1",
+      "default_spread": 0.015830977766757577,
+      "erp": 0.06463220861482283,
+      "country_risk_premium": 0.021332208614822837
+    },
+    "Uzbekistan": {
+      "region": "Eastern Europe & Russia",
+      "moodys_rating": "Ba3",
+      "default_spread": 0.035619699975204554,
+      "erp": 0.09129746938335138,
+      "country_risk_premium": 0.047997469383351386
+    },
+    "Venezuela": {
+      "region": "Central and South America",
+      "moodys_rating": "C",
+      "default_spread": 0.175,
+      "erp": 0.2791121249739206,
+      "country_risk_premium": 0.2358121249739206
+    },
+    "Vietnam": {
+      "region": "Asia",
+      "moodys_rating": "Ba2",
+      "default_spread": 0.029799487560955448,
+      "erp": 0.08345474562790181,
+      "country_risk_premium": 0.04015474562790182
+    },
+    "Zambia": {
+      "region": "Africa",
+      "moodys_rating": "Caa2",
+      "default_spread": 0.08916565418629636,
+      "erp": 0.16345052793348747,
+      "country_risk_premium": 0.12015052793348746
+    },
+    "Algeria": {
+      "region": 69.25,
+      "moodys_rating": 0.08345474562790181,
+      "default_spread": 0.04015474562790181,
+      "erp": 0.02979948756095544,
+      "country_risk_premium": null
+    },
+    "Brunei": {
+      "region": 81.75,
+      "moodys_rating": 0.051299578230558564,
+      "default_spread": 0.007999578230558566,
+      "erp": 0.005936616662534093,
+      "country_risk_premium": null
+    },
+    "Gambia": {
+      "region": 67.5,
+      "moodys_rating": 0.10337526396674374,
+      "default_spread": 0.06007526396674374,
+      "erp": 0.04458282709314819,
+      "country_risk_premium": null
+    },
+    "Guinea": {
+      "region": 57.75,
+      "moodys_rating": 0.16345052793348747,
+      "default_spread": 0.12015052793348746,
+      "erp": 0.08916565418629636,
+      "country_risk_premium": null
+    },
+    "Guinea-Bissau": {
+      "region": 63.25,
+      "moodys_rating": 0.13004052473527228,
+      "default_spread": 0.08674052473527227,
+      "erp": 0.06437154930159515,
+      "country_risk_premium": null
+    },
+    "Guyana": {
+      "region": 75.75,
+      "moodys_rating": 0.06463220861482283,
+      "default_spread": 0.02133220861482283,
+      "erp": 0.015830977766757574,
+      "country_risk_premium": null
+    },
+    "Haiti": {
+      "region": 54.75,
+      "moodys_rating": 0.20344841908628034,
+      "default_spread": 0.16014841908628033,
+      "erp": 0.11884873749896686,
+      "country_risk_premium": null
+    },
+    "Iran": {
+      "region": 63.75,
+      "moodys_rating": 0.13004052473527228,
+      "default_spread": 0.08674052473527227,
+      "erp": 0.06437154930159515,
+      "country_risk_premium": null
+    },
+    "Korea, D.P.R.": {
+      "region": 51,
+      "moodys_rating": 0.20344841908628034,
+      "default_spread": 0.16014841908628033,
+      "erp": 0.11884873749896686,
+      "country_risk_premium": null
+    },
+    "Liberia": {
+      "region": 58.25,
+      "moodys_rating": 0.16345052793348747,
+      "default_spread": 0.12015052793348746,
+      "erp": 0.08916565418629636,
+      "country_risk_premium": null
+    },
+    "Libya": {
+      "region": 74.5,
+      "moodys_rating": 0.06463220861482283,
+      "default_spread": 0.02133220861482283,
+      "erp": 0.015830977766757574,
+      "country_risk_premium": null
+    },
+    "Madagascar": {
+      "region": 64.5,
+      "moodys_rating": 0.116707894351008,
+      "default_spread": 0.073407894351008,
+      "erp": 0.05447718819737166,
+      "country_risk_premium": null
+    },
+    "Malawi": {
+      "region": 57.75,
+      "moodys_rating": 0.16345052793348747,
+      "default_spread": 0.12015052793348746,
+      "erp": 0.08916565418629636,
+      "country_risk_premium": null
+    },
+    "Myanmar": {
+      "region": 56,
+      "moodys_rating": 0.17678315831775177,
+      "default_spread": 0.13348315831775176,
+      "erp": 0.09906001529051987,
+      "country_risk_premium": null
+    },
+    "Russia": {
+      "region": 69.25,
+      "moodys_rating": 0.08345474562790181,
+      "default_spread": 0.04015474562790181,
+      "erp": 0.02979948756095544,
+      "country_risk_premium": null
+    },
+    "Sierra Leone": {
+      "region": 59.5,
+      "moodys_rating": 0.16345052793348747,
+      "default_spread": 0.12015052793348746,
+      "erp": 0.08916565418629636,
+      "country_risk_premium": null
+    },
+    "Somalia": {
+      "region": 55.5,
+      "moodys_rating": 0.17678315831775177,
+      "default_spread": 0.13348315831775176,
+      "erp": 0.09906001529051987,
+      "country_risk_premium": null
+    },
+    "Sudan": {
+      "region": 43.5,
+      "moodys_rating": 0.2791121249739206,
+      "default_spread": 0.23581212497392057,
+      "erp": 0.17499999999999996,
+      "country_risk_premium": null
+    },
+    "Syria": {
+      "region": 46.5,
+      "moodys_rating": 0.2791121249739206,
+      "default_spread": 0.23581212497392057,
+      "erp": 0.17499999999999996,
+      "country_risk_premium": null
+    },
+    "Yemen, Republic": {
+      "region": 51.5,
+      "moodys_rating": 0.20344841908628034,
+      "default_spread": 0.16014841908628033,
+      "erp": 0.11884873749896686,
+      "country_risk_premium": null
+    },
+    "Zimbabwe": {
+      "region": 57.75,
+      "moodys_rating": 0.16345052793348747,
+      "default_spread": 0.12015052793348746,
+      "erp": 0.08916565418629636,
+      "country_risk_premium": null
+    }
+  },
+  "requested_as_of": "2025-02-05"
+}

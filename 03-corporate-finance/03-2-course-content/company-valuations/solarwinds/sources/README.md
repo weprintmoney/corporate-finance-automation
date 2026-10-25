@@ -1,85 +1,65 @@
+---
+title: "SolarWinds (SWI) — Source Manifest"
+status: active
+owner: weprintmoney
+created: 2026-09-07
+last_updated: 2026-10-25
+---
+
 # SolarWinds (SWI) — Compiled Sources
 
-Source materials actually gathered for the SolarWinds lesson-by-lesson question log — now split across [`../README.md`](../README.md) and the per-lesson `../lesson-NN.md` files — so the ~130 "Where to find" pointers in that material lead to something already sitting in this repo instead of a fresh search each time. Everything here was fetched from public sources on **2026-09-07**; treat anything time-sensitive (rates, betas, ERP) as a snapshot, not a live feed.
+Every document the ledger (`../inputs.yaml`) cites. Filings were fetched from SEC EDGAR (CIK 0001739942) on 2026-09-07. Market and peer data were fetched on 2026-10-25, as of the analysis date, 2025-02-05.
 
-## What's compiled
-
-### `capital-iq/` — S&P Capital IQ pulls (2026-10-05)
-
-Financial statements, multiples, debt detail, the Turn/River transaction record, comparable deals, a peer set and governance data from the NYU academic account. See [capital-iq/README.md](capital-iq/README.md) for the file list and what the account could not provide.
-
-### `sec-filings/` — SolarWinds Corp (SEC CIK 0001739942, ticker SWI while public)
+## `filings/` — the company's own statements
 
 | File | What it is | Filed |
 |---|---|---|
-| `swi-10k-fy2024.md` | Final full-year 10-K as a public company — the primary analytical anchor | 2025-02-19 |
-| `swi-10k-fy2023.md` | Prior-year 10-K, for trend comparison | 2024-02-16 |
-| `swi-10k-fy2020.md` | The SUNBURST-impact fiscal year | 2021-03-01 |
-| `swi-10k-fy2018.md` | First 10-K after the Oct 2018 re-IPO | 2019-02-25 |
-| `swi-def14a-2024.md` | Last annual proxy before the Turn/River deal (board, exec comp, beneficial ownership) | 2024-04-11 |
-| `swi-s1-2018-ipo-prospectus.md` | 2018 IPO prospectus — pre-IPO capital structure, use of proceeds | 2018-09-21 |
-| `swi-defm14c-2025-merger-information-statement.md` | **The going-private deal document** — merger terms, background of the merger, financial advisor's fairness opinion | 2025-03-27 |
-| `swi-8k-2025-02-07-merger-agreement-announcement.md` | Announces the Merger Agreement with Turn/River | 2025-02-07 |
-| `swi-8k-2025-04-16-merger-closing.md` | Deal closing | 2025-04-16 |
-| `swi-8k-2020-12-09-sunburst-disclosure.md` | Initial SUNBURST disclosure | 2020-12-09 |
-| `swi-8k-2020-12-14-sunburst-followup.md` | Follow-up SUNBURST disclosure | 2020-12-14 |
-| `swi-multi-year-financials.md` | Revenue/EBIT/net income/R&D/capex, FY2017–FY2024, derived from SEC's XBRL company-facts API | fetched 2026-09-07 |
+| `swi-10k-fy2024.md` | FY2024 10-K, the base year and last full year as a public company. Feeds most `company.*` and `debt.*` fields and the 2023–2024 history rows | 2025-02-19 |
+| `swi-10k-fy2023.md` | FY2023 10-K, for the 2022 balance sheet | 2024-02-16 |
+| `swi-10k-fy2020.md` | FY2020 10-K, the SUNBURST year | 2021-03-01 |
+| `swi-10k-fy2018.md` | FY2018 10-K, the first after the October 2018 IPO | 2019-02-25 |
+| `swi-def14a-2024.md` | 2024 proxy, the last before the deal: board, pay, beneficial ownership, stockholders' agreement | 2024-04-11 |
+| `swi-s1-2018-ipo-prospectus.md` | IPO prospectus: pre-IPO capital structure and use of proceeds | 2018-09-21 |
+| `swi-8k-2020-12-09-sunburst-disclosure.md`, `swi-8k-2020-12-14-sunburst-followup.md` | SUNBURST disclosures | 2020-12 |
+| `swi-multi-year-financials.md` | Revenue, EBIT, net income, R&D and capex for FY2017–2024 from the SEC XBRL company-facts API | fetched 2026-09-07 |
 
-**Correction to the main document:** every "Where to find" citation for the merger document in the lesson-by-lesson question log says "Schedule 13E-3 / DEFM14A." That's wrong. Silver Lake's ~75% stake let the board approve the merger by **written stockholder consent**, so no vote was solicited and no proxy was filed — the actual document is a **Schedule 14C definitive information statement (DEFM14C)**, and there is no SC 13E-3 on file for this deal at all (confirmed via SEC EDGAR's full filing history for CIK 1739942 — the merger doesn't appear to have been structured as a Rule 13e-3 affiliate going-private transaction). Use `swi-defm14c-2025-merger-information-statement.md`, not a 13E-3.
+**Not fetched:** the FY2019, FY2021 and FY2022 10-Ks. Years before 2022 include N-able, which was spun off in July 2021, so they are not comparable. FY2022 flows come from the FY2024 10-K's three-year statements, and the 2022 balance sheet from the FY2023 10-K. Accessions for the missing 10-Ks: FY2019 0001739942-20-000011, FY2021 0001739942-22-000020, FY2022 0001739942-23-000019, at `https://www.sec.gov/Archives/edgar/data/1739942/<accession-no-dashes>/`.
 
-**Why FY2018/2020/2023/2024 and not all seven years:** these four anchor the arc the lesson questions actually ask about (first post-IPO year, the SUNBURST-impact year, the year before the deal, the final year) at a manageable total size. `swi-multi-year-financials.md` fills the gap for the numbers-only trend lines (FY2017–2024 revenue/EBIT/net income/R&D/capex) without needing all seven full 10-Ks. If a specific question needs FY2019, FY2021, or FY2022 in full, refetch with the accession numbers in the table below.
+## `deal-docs/` — the going-private transaction
 
-<details>
-<summary>Accession numbers for filings not fetched in full (fetch on demand)</summary>
-
-| Filing | Accession | Primary doc |
+| File | What it is | Filed |
 |---|---|---|
-| 10-K FY2019 | 0001739942-20-000011 | swi-2019123110xk.htm |
-| 10-K FY2021 | 0001739942-22-000020 | swi-20211231.htm |
-| 10-K FY2022 | 0001739942-23-000019 | swi-20221231.htm |
-| DEF 14A 2023 | 0001739942-23-000040 | swi-20230412.htm |
-| DEF 14A 2022 | 0001739942-22-000031 | swi2022def14a.htm |
+| `swi-defm14c-2025-merger.md` | Definitive information statement (Schedule 14C). Silver Lake and Thoma Bravo approved by written consent, so there was no vote, no DEFM14A and no 13E-3. Background of the merger, Goldman Sachs and Jefferies fairness opinions, management forecasts 2025–2030 (`forecast.years`), golden parachutes, record-date share count | 2025-03-27 |
+| `swi-8k-2025-02-07-merger-agreement.md` | Merger agreement announced | 2025-02-07 |
+| `swi-8k-2025-04-16-merger-closing.md` | Closing | 2025-04-16 |
 
-URL pattern: `https://www.sec.gov/Archives/edgar/data/1739942/<accession-no-dashes>/<primary-doc>`
+## `market-data/` — as of 2025-02-05
 
-</details>
+Written by `python3 scripts/refresh-market-data.py --as-of 2025-02-05 --out <dir>` on 2026-10-25, then copied here with their dates in the names.
 
-### `peer-filings/` — comparable public observability/IT-ops SaaS companies
-
-| File | Company | Fiscal year end |
+| File | What it is | Feeds |
 |---|---|---|
-| `ddog-datadog-10k.md` | Datadog, Inc. (DDOG) | FY2025 (filed 2026-02-18) |
-| `dt-dynatrace-10k.md` | Dynatrace, Inc. (DT) | FY2026 (fiscal year ends March; filed 2026-05-20) |
-| `pd-pagerduty-10k.md` | PagerDuty, Inc. (PD) | FY2026 (fiscal year ends January; filed 2026-03-12) |
+| `rates-2025-02-05.md` | The rates used, with both the monthly Damodaran and the daily FRED figures | read first |
+| `market-rates-2025-02-05.json` | Damodaran ERPFeb25.xlsx (start of February 2025) and FRED closes on 2025-02-05 | `market.govt_bond_rate`, `market.mature_erp` |
+| `ratings-spreads-2025-01-01.json` | Damodaran's coverage-to-rating-to-spread tables, January 2025 edition (`ratings24.xls`) | `market.ratings_table` |
+| `industry-betas-2025-01-05.json` | Damodaran US industry betas, January 2025 (`betas24.xls`) | `beta.unlevered_bottom_up` |
+| `country-risk-2025-01-01.json` | Damodaran country risk, January 2025 (`ctryprem24.xlsx`). The regional EMEA premium and the US 25% marginal tax rate come from the same workbook's Regional Weighted Averages and Country Tax Rates sheets (URL in the file's `source_url`) | `market.sovereign_default_spread`, `country.exposures`, `market.tax_rate_marginal` |
 
-All three are still independently public as of this fetch — none of the "PEER-FILINGS" citations in the main document need redirecting.
+## `peer-filings/`
 
-### `market-data/`
-
-| File | Fixes/replaces |
+| File | What it is |
 |---|---|
-| `treasury-and-fed-rates.md` | `03-3-supplemental-data/market-rates.json` — **see note below, that file doesn't exist** |
-| `damodaran-industry-betas-software.md` | `03-3-supplemental-data/industry-betas.json` — **see note below, that file is an empty stub** |
-| `damodaran-country-risk-premium-us.md` | `03-3-supplemental-data/country-risk.json` — **see note below, that file is an empty stub** |
+| `peer-facts-2025-02-05.md` | Eight peers from Jefferies' fairness-opinion set: fiscal-2024 fundamentals from SEC XBRL company facts, plus closing prices on 2025-02-05. Explains why each was chosen, and why Datadog, Dynatrace and PagerDuty were rejected |
 
-## A repo problem this surfaced
+## `capital-iq/` — cross-check only
 
-The SolarWinds lesson-by-lesson question log cites `REPO-RATES`, `REPO-BETAS`, and `REPO-COUNTRY-RISK` (18 times combined) as if `03-3-supplemental-data/{market-rates.json,industry-betas.json,country-risk.json}` are live, CI-refreshed data files — that's what the top-level `CLAUDE.md` and the `/evaluate-company` command docs both claim. In practice:
+Capital IQ pulls from the NYU academic account, 2026-10-05; see `capital-iq/README.md`. The ledger cites filings, not these files, wherever a filing has the number. Capital IQ standardizes some lines differently: its EBIT of $218.7M excludes $10.3M of unusual items that GAAP operating income of $208.4M includes. Its governance page reflects the post-closing charter; use the proxy.
 
-- `market-rates.json` **does not exist** in the repo at all.
-- `industry-betas.json` and `country-risk.json` **exist but are empty stubs** — `{"industries": {}}` and `{"countries": {}}` respectively, with only a `source_url` and a note that the CI job should populate them.
+## Could not be obtained
 
-Whatever CI job is supposed to refresh these either never ran or has been silently failing. I didn't try to fix that job — I don't know its expected schema or where it lives, and guessing at it risks producing a differently-shaped file than whatever CI eventually writes. The three `market-data/` files above are a manual snapshot workaround for this specific analysis, not a fix to the underlying automation. Worth raising separately.
-
-## Marked unattainable (with why)
-
-| What's needed | Why it's not compiled here |
-|---|---|
-| **SWI daily/historical stock price series** (2018 IPO – 2025 delisting), needed for regression-beta and Jensen's-alpha calculations in several Module 1/4 entries | Stooq blocks automated fetches behind a JS proof-of-work challenge; Nasdaq's public quote API drops delisted symbols entirely ("Symbol not exists"). No free, script-fetchable source found. **Workaround already available:** the stock-performance graphs in `swi-def14a-2024.md` (and the two other DEF 14As, if fetched) give indexed 5-year return data at annual points — not a full daily series, but usable for a rough return calc. A full daily series would need a paid terminal (Bloomberg/CapIQ/Refinitiv) or a manual export from Yahoo Finance's historical-data page. |
-| **Bloomberg / Capital IQ beta or comps** — cited once in the main document as a fallback source | No subscription access. The document already names the fallback (self-computed from raw price data / `REPO-BETAS` industry cross-check), which is the path actually usable here. |
-| **Full Moody's/S&P rating-action reports** on SWI (cited for the post-Turn/River rating action) | Full agency reports are subscription-gated. Headline rating actions are sometimes covered in free financial press — that's a live search at time of use, not a fixed document to compile once. |
-| **"Analyst commentary" / general news reaction** (the generic half of several `NEWS-WEB` citations — e.g. opoinion on whether the take-private was opportunistic, post-SUNBURST customer-churn commentary) | Not a fixed document by nature — it's an ongoing sentiment/commentary search. Re-run at the time the specific question is actually being answered rather than treating it as something to pre-fetch once. |
-
-## Regenerating everything
-
-Every fetch command is documented in its own file above (SEC EDGAR URLs, Damodaran URLs, FRED URLs). All SEC EDGAR requests require a descriptive `User-Agent` header (SEC's fair-access policy) — e.g. `-H "User-Agent: Your-Project-Name your-email@example.com"`.
+| What | Why | Effect |
+|---|---|---|
+| SWI daily price history | Free sources no longer serve delisted tickers (Yahoo: "symbol may be delisted"; Nasdaq drops them; Stooq blocks scripts), and Capital IQ's chart module did not load | No regression beta, R², or Jensen's alpha. The bottom-up beta is used, and those fields are listed under `meta.omitted` |
+| Analyst consensus growth | Capital IQ estimates grid was empty | Management's forecast in the deal document is used |
+| Agency credit rating | The 10-K and the deal document disclose none; agency reports are subscription-only | `debt.rating_actual` is null; the synthetic rating is used |
+| Informatica's price on 2025-02-05 | Acquired since; not in free price sources | Dropped from the peer set |
