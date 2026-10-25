@@ -33,10 +33,11 @@ The course follows Damodaran's standard valuation framework: estimate a risk-adj
   │   ├── 04-dividends-and-valuation/           Lessons 27–36
   │   └── company-valuations/  Output reports from /evaluate-company runs
   ├── 03-3-supplemental-data/  Live data refreshed by CI
-  │   ├── market-rates.json  US 10-yr Treasury, SOFR, Fed Funds (updated weekdays)
+  │   ├── market-rates.json  Treasury, US default spread, risk-free rate, implied ERP (weekly)
+  │   ├── ratings-spreads.json  Coverage → rating → default spread tables (weekly)
   │   ├── companies/         Per-ticker financial statements from SEC via FMP
-  │   ├── industry-betas.json  Damodaran industry betas
-  │   └── country-risk.json  Damodaran country risk premiums
+  │   ├── industry-betas.json  Damodaran industry betas (weekly)
+  │   └── country-risk.json  Damodaran country risk premiums (weekly)
   ├── 03-4-blogs/              Damodaran "Musings on Markets" archive (~680 posts)
   └── 03-6-youtube/            Transcripts of Damodaran's YouTube channel (~1,400 videos)
       └── index.yaml         Video map: id → file, title, date, duration
@@ -101,21 +102,19 @@ Three GitHub Actions workflows keep valuation inputs current:
 
 | Workflow | Trigger | What it fetches | Output |
 |----------|---------|----------------|--------|
-| `refresh-market-rates` | Weekdays 9 AM CT | FRED: 10-yr Treasury, SOFR, Fed Funds | `03-3-supplemental-data/market-rates.json` |
+| `refresh-market-data` | Mondays 2 PM UTC | Damodaran: monthly ERP workbook, ratings table, country risk, industry betas. FRED: latest 10-yr Treasury, SOFR, Fed Funds. New Damodaran blog posts. Fails if a source can't be parsed or a file is past its refresh window | `03-3-supplemental-data/*.json` + `03-4-blogs/posts/` |
 | `fetch-company-financials` | Manual (enter ticker) | FMP: income statement, balance sheet, cash flow | `03-3-supplemental-data/companies/{ticker}.json` |
-| `refresh-damodaran` | 1st of each month | Damodaran: industry betas, country risk | `03-3-supplemental-data/industry-betas.json` + `country-risk.json` |
 | `refresh-youtube-transcripts` | Mondays 1 PM UTC | Captions for new videos on Damodaran's YouTube channel | `03-6-youtube/<year>/*.md` + `index.yaml` |
 
 **Required GitHub secrets:**
-- `FRED_API_KEY` — free at [fred.stlouisfed.org](https://fred.stlouisfed.org/docs/api/api_key.html)
 - `FMP_API_KEY` — free tier at [financialmodelingprep.com](https://financialmodelingprep.com)
 
 You can also run the scripts locally:
 
 ```bash
-FRED_API_KEY=your_key python3 scripts/fetch-market-data.py
+pip install xlrd openpyxl && python3 scripts/refresh-market-data.py   # no API key needed
+python3 scripts/refresh-market-data.py --check                         # how old each snapshot is
 FMP_API_KEY=your_key python3 scripts/fetch-company-data.py AAPL
-pip install xlrd openpyxl && python3 scripts/fetch-damodaran.py
 ```
 
 ---

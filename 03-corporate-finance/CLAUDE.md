@@ -55,11 +55,12 @@ WACC = (E/V) · rₑ + (D/V) · r_d · (1 − t)
 | [03-2-course-content/CLAUDE.md](03-2-course-content/CLAUDE.md) | All 36 lesson folders — navigation guide and lesson-index.yaml pointer |
 | [03-2-course-content/lesson-index.yaml](03-2-course-content/lesson-index.yaml) | Full lesson map: folder paths, topics, and which file types are present per lesson |
 | [03-4-blogs/README.md](03-4-blogs/README.md) | Damodaran "Musings on Markets" archive fetcher — pulls all posts to `posts/` for local text analysis |
-| [03-4-blogs/posts/](03-4-blogs/posts/) | Full Damodaran blog archive (~680 posts, 2008–present) |
-| [03-3-supplemental-data/market-rates.json](03-3-supplemental-data/market-rates.json) | Live rates from FRED: 10-year Treasury, SOFR, Fed Funds — refreshed weekdays by CI |
+| [03-4-blogs/posts/](03-4-blogs/posts/) | Full Damodaran blog archive (~680 posts, 2008–present) — new posts added weekly by CI |
+| [03-3-supplemental-data/market-rates.json](03-3-supplemental-data/market-rates.json) | Damodaran's monthly ERP workbook (10-year Treasury, US Aa1 default spread, dollar risk-free rate, implied ERP over each) plus latest FRED 10-year, SOFR, Fed Funds — refreshed weekly by CI (`scripts/refresh-market-data.py`) |
+| [03-3-supplemental-data/ratings-spreads.json](03-3-supplemental-data/ratings-spreads.json) | Damodaran interest coverage → synthetic rating → default spread tables (large, small, financial) — refreshed weekly by CI |
 | [03-3-supplemental-data/companies/](03-3-supplemental-data/companies/) | Per-ticker JSON from Financial Modeling Prep: income statement, balance sheet, cash flow |
-| [03-3-supplemental-data/industry-betas.json](03-3-supplemental-data/industry-betas.json) | Damodaran industry betas — refreshed monthly by CI |
-| [03-3-supplemental-data/country-risk.json](03-3-supplemental-data/country-risk.json) | Damodaran country risk premiums — refreshed monthly by CI |
+| [03-3-supplemental-data/industry-betas.json](03-3-supplemental-data/industry-betas.json) | Damodaran US industry betas, unlevered and cash-corrected — refreshed weekly by CI |
+| [03-3-supplemental-data/country-risk.json](03-3-supplemental-data/country-risk.json) | Damodaran country ratings, default spreads, ERPs (January or July edition, whichever is newer) — refreshed weekly by CI |
 | [03-6-youtube/CLAUDE.md](03-6-youtube/CLAUDE.md) | Transcript archive of Damodaran's YouTube channel (~1,400 videos) — layout + caveats |
 | [03-6-youtube/index.yaml](03-6-youtube/index.yaml) | Video map: id → transcript file, title, upload date, duration, caption type |
 | [03-7-meetups/CLAUDE.md](03-7-meetups/CLAUDE.md) | Cleaned transcripts of the six optional live Zoom meetups — dialogue format, speaker conventions, and per-meetup index |

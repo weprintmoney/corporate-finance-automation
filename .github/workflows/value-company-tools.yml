@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - '.claude/skills/value-company/**'
+      - 'scripts/refresh-market-data.py'
       - '03-corporate-finance/03-2-course-content/**/lesson-overview.md'
       - '03-corporate-finance/03-2-course-content/lesson-index.yaml'
 
@@ -18,6 +19,9 @@ jobs:
           python-version: '3.12'
 
       - run: pip install pyyaml
+
+      - name: Market-data refresher compiles
+        run: python3 -m py_compile scripts/refresh-market-data.py
 
       - name: Question bank is current
         run: python3 .claude/skills/value-company/tools/build-question-bank.py --check

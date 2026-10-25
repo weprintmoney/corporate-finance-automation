@@ -63,7 +63,7 @@ Decide the analysis currency in Phase 0; if it is not the reporting currency, co
 | Company statements: website, press releases, funding announcements, any audited numbers released | revenue, headcount, funding, ownership | `filings/<slug>-company-statements.md` |
 | Trade press and reputable profiles | bounding ranges for revenue, margins, debt | `filings/<slug>-press-profile.md` |
 | Industry unlevered beta and total beta (lesson 11) | `beta.unlevered_bottom_up`, `beta.total_beta` | `market-data/damodaran-industry-betas-<sector>.md` |
-| Ratings-to-spread table (lesson 12 / 18 spreadsheet) | synthetic rating from whatever EBIT and interest can be bounded | `market-data/ratings-and-spreads.md` |
+| Ratings-to-spread table (current `ratings-spreads.json` snapshot) | synthetic rating from whatever EBIT and interest can be bounded | `market-data/ratings-spreads-<as_of>.json` |
 
 Every estimated number is a `{value, source, as_of, estimate: true, range: [low, high]}` leaf. The walkthrough calls each one an estimate. Questions tagged `applies_to: [public, delisted]` are skipped and listed.
 
@@ -71,14 +71,21 @@ Every estimated number is a `{value, source, as_of, estimate: true, range: [low,
 
 | Item | Origin | Check first |
 |---|---|---|
-| Risk-free rate (10-year government bond in the analysis currency) | FRED (US) or the central bank | `03-corporate-finance/03-3-supplemental-data/market-rates.json` |
-| Mature-market ERP (implied) | Damodaran's current ERP page | none |
-| Country risk premiums | Damodaran country risk dataset | `03-3-supplemental-data/country-risk.json` |
-| Industry unlevered betas, cash-corrected | Damodaran betas dataset | `03-3-supplemental-data/industry-betas.json` |
-| Ratings-to-spread tables (large and small firm) | lesson 18 `spreadsheet-cost-of-capital-optimal.md`, "Default Spreads and Ratios" | in repo |
-| Marginal tax rate by country | lesson 12 `spreadsheet-countrytaxrates24.md` | in repo |
+All of these come from `python3 scripts/refresh-market-data.py`, which writes them to `03-corporate-finance/03-3-supplemental-data/` with an `as_of` date. A weekly CI job runs the same script; run it again at the start of every valuation anyway.
 
-If a supplemental-data file is missing or its data block is empty, fetch directly, save under `market-data/` with the fetch date, and note it in the manifest.
+| Item | Ledger fields | File and key |
+|---|---|---|
+| 10-year Treasury on the analysis date | `market.govt_bond_rate` | `market-rates.json` → `fred_latest.treasury_10y` |
+| US sovereign default spread (Aa1) | `market.sovereign_default_spread` | `market-rates.json` → `damodaran_monthly.us_sovereign_default_spread` |
+| Risk-free rate | `market.risk_free_rate` | govt_bond_rate − sovereign_default_spread |
+| Mature-market ERP, implied, over the risk-free rate | `market.mature_erp` | `market-rates.json` → `damodaran_monthly.implied_erp_over_dollar_riskfree` |
+| SOFR (floating-rate debt benchmark) | `debt.kd_pretax_observed` check | `market-rates.json` → `fred_latest.sofr` |
+| Country risk premiums and sovereign default spreads | `country.exposures[].erp`, non-US `sovereign_default_spread` | `country-risk.json` → `countries` |
+| Industry unlevered betas, cash-corrected | `beta.unlevered_bottom_up`, `beta.segments` | `industry-betas.json` → `industries` |
+| Ratings-to-spread tables (large, small, financial) | `market.ratings_table` | copy `ratings-spreads.json` to `sources/market-data/ratings-spreads-<as_of>.json` |
+| Marginal tax rate by country | `market.tax_rate_marginal` | `country-risk.json` has no tax column; use lesson 12 `spreadsheet-countrytaxrates24.md` and check the country's current statutory rate |
+
+The lesson spreadsheets teach the method; their numbers are as old as the lesson. Never take a current rate, premium, beta or spread from them. If the refresh fails, stop and report which source broke.
 
 ## Peers, all types
 

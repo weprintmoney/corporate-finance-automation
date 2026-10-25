@@ -47,8 +47,11 @@ modeling_choices:
   terminal_method:     {type: enum, values: [consistent_reinvestment, fcff_growth], default: consistent_reinvestment, used_by: [32, 34], description: "Terminal value from after-tax EBIT with reinvestment = g / stable ROIC (lesson 32), or final-year FCFF grown at g; the model prints both"}
 
 market:
-  risk_free_rate:      {type: rate, required_for: [all], used_by: [5, 13, 32], description: "10-year government bond yield in meta.currency, default spread netted if not AAA"}
-  mature_erp:          {type: rate, required_for: [all], used_by: [6, 13], description: "Implied equity risk premium for a mature market"}
+  govt_bond_rate:      {type: rate, required_for: [all], used_by: [5, 12, 18], description: "10-year government bond yield in meta.currency on the analysis date. Base for the cost of debt: rating default spreads are measured over it"}
+  sovereign_default_spread: {type: rate, required_for: [all], used_by: [5], description: "Default spread for the government's rating (US: Aa1 since Moody's May 2025 downgrade). 0 only for a Aaa government, with the rating cited"}
+  risk_free_rate:      {type: rate, required_for: [all], used_by: [5, 13, 32], description: "govt_bond_rate − sovereign_default_spread. Base for the cost of equity; the validator checks the identity"}
+  mature_erp:          {type: rate, required_for: [all], used_by: [6, 13], description: "Implied equity risk premium measured over risk_free_rate (Damodaran's 'with default spread' figure, not the one over the Treasury)"}
+  ratings_table:       {type: string, required_for: [all], used_by: [12, 18], description: "Path, relative to inputs.yaml, of the ratings-spreads.json snapshot this valuation uses (sources/market-data/ratings-spreads-<as_of>.json); as_of is the table's own date"}
   tax_rate_marginal:   {type: rate, required_for: [all], used_by: [9, 12, 13, 17, 18, 21], description: "Statutory marginal rate in the home country"}
   tax_rate_effective:  {type: rate, required_for: [], used_by: [30], description: "Base-year effective rate, if used for base-year cash flow"}
   terminal_growth:     {type: rate, required_for: [all], used_by: [15, 19, 32, 34], description: "Perpetual growth rate; must not exceed risk_free_rate"}
@@ -74,8 +77,10 @@ company:
   equity_book:         {type: number, required_for: [], used_by: [13, 35], description: "Book value of equity"}
   debt_face:           {type: number, required_for: [all], used_by: [12, 13], description: "Interest-bearing debt at face value"}
   debt_book:           {type: number, required_for: [], used_by: [12, 13], description: "Carrying value, if different from face"}
+  debt_market:         {type: number, required_for: [], used_by: [12, 13], description: "Fixed-rate debt priced as a bond at today's pre-tax cost of debt (coupon = interest, maturity = debt.maturity_years); floating-rate debt at face. Use when rates moved since issuance"}
   lease_debt:          {type: number, required_for: [all], used_by: [12, 13], description: "Present value of lease liabilities from the lease note"}
-  debt_total:          {type: number, required_for: [all], used_by: [12, 13, 18, 19, 22, 33], description: "debt_face (or debt_book; say which) + lease_debt"}
+  off_balance_sheet_debt: {type: number, required_for: [], used_by: [12, 13], description: "Fixed commitments that pass the debt test but are not on the balance sheet: leases signed but not yet commenced, guarantees of joint-venture or special-purpose-vehicle debt, take-or-pay capacity contracts. Note says what is included"}
+  debt_total:          {type: number, required_for: [all], used_by: [12, 13, 18, 19, 22, 33], description: "debt_face, debt_book or debt_market (say which) + lease_debt + off_balance_sheet_debt"}
   deferred_revenue:    {type: number, required_for: [], used_by: [12], description: "Recorded so the walkthrough can say it is not debt"}
   cash:                {type: number, required_for: [all], used_by: [26, 33]}
   minority_interests:  {type: number, required_for: [], used_by: [33]}
@@ -87,6 +92,8 @@ company:
   ebitda_adjusted:     {type: number, required_for: [], used_by: [18], description: "The company's own adjusted EBITDA, labeled as such"}
   acquisition_amortization: {type: number, required_for: [], used_by: [14, 18], description: "Amortization of acquired intangibles inside D&A"}
   interest_expense:    {type: number, required_for: [all], used_by: [12, 18, 19], description: "Gross interest expense"}
+  interest_capitalized: {type: number, required_for: [], used_by: [12, 18], description: "Interest capitalized into construction in progress (debt note or cash-flow statement); added to interest_expense for coverage"}
+  depreciation_life_change: {type: string, required_for: [], used_by: [12, 14, 30], description: "Any change in useful lives of servers, equipment or plant in the last three years, with the earnings effect the company disclosed"}
   net_income:          {type: number, required_for: [all], used_by: [26, 29, 31]}
   da:                  {type: number, required_for: [all], used_by: [14, 26, 30], description: "Depreciation and amortization"}
   capex:               {type: number, required_for: [all], used_by: [14, 26, 30, 32]}

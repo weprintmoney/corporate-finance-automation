@@ -5,13 +5,16 @@ Checks:
   - every field the schema requires for this company type is present (or listed in meta.omitted)
   - every input leaf is {value, source, as_of}; estimates carry a range
   - list rows (history, exposures, forecast years, peers, controlling holders) carry source and as_of
-  - identities: equity = shares × price, debt_total = debt + leases, weights sum to one,
+  - identities: equity = shares × price, debt_total = debt + leases + off-balance-sheet debt,
+    risk-free rate = government bond rate − sovereign default spread, weights sum to one,
     weighted ERP matches exposures, terminal growth ≤ risk-free rate, years are consecutive
-  - staleness: market inputs older than 90 days at the analysis date (warning)
+  - the ratings table: the snapshot file exists and is no older than RATINGS_TABLE_MAX_DAYS
+  - staleness: rates and ERP past their windows are errors; other market inputs past 90 days warn
 
 Usage: python3 validate-ledger.py <inputs.yaml> [--schema <ledger-schema.yaml>]
 Exit 1 on any ERROR. Warnings do not fail.
 """
+import json
 import os
 import sys
 from datetime import date, datetime
@@ -22,6 +25,20 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_SCHEMA = os.path.join(HERE, "..", "ledger-schema.yaml")
 
 LEAF_SECTIONS = ["market", "beta", "company", "debt", "forecast"]
+
+# How old an input may be at the analysis date. Rates move tens of basis points a month (the 10-year
+# rose 54bp in September 2026), so they must be read close to the analysis date. Damodaran publishes the
+# implied ERP monthly and the ratings table and industry betas each January.
+MAX_AGE_DAYS = {
+    "market.govt_bond_rate": 14,
+    "market.risk_free_rate": 14,
+    "market.sovereign_default_spread": 200,
+    "market.mature_erp": 45,
+    "market.ratings_table": 400,
+    "beta.unlevered_bottom_up": 400,
+}
+RATINGS_TABLE_MAX_DAYS = 400
+US_DOWNGRADE = date(2025, 5, 16)     # Moody's moved the US from Aaa to Aa1
 LIST_FIELDS_WITH_SOURCE = ["company.history", "country.exposures", "forecast.years", "peers", "governance.controlling_holders"]
 SCALAR_LISTS = ["company.history", "country.exposures", "beta.segments", "forecast.years", "peers",
                 "governance.board", "governance.controlling_holders", "meta.omitted"]
@@ -140,11 +157,13 @@ def main(argv):
     if sb and price and E:
         if abs(sb * price - E) / E > 0.01:
             errors.append("company.equity_value {:.1f} differs from shares_basic × share_price {:.1f} by more than 1%".format(E, sb * price))
-    D, Df, Db, Dl = num("company.debt_total"), num("company.debt_face"), num("company.debt_book"), num("company.lease_debt")
+    D, Dl = num("company.debt_total"), num("company.lease_debt")
+    Dobs = num("company.off_balance_sheet_debt") or 0.0
     if D is not None and Dl is not None:
-        candidates = [x + Dl for x in (Df, Db) if x is not None]
+        bases = [num("company.debt_face"), num("company.debt_book"), num("company.debt_market")]
+        candidates = [x + Dl + Dobs for x in bases if x is not None]
         if candidates and all(abs(c - D) / D > 0.005 for c in candidates):
-            errors.append("company.debt_total {:.1f} is neither debt_face nor debt_book plus lease_debt ({})".format(
+            errors.append("company.debt_total {:.1f} is not debt_face, debt_book or debt_market plus lease_debt and off_balance_sheet_debt ({})".format(
                 D, ", ".join("{:.1f}".format(c) for c in candidates)))
     exposures = get(L, "country.exposures") or []
     if exposures:
@@ -161,6 +180,13 @@ def main(argv):
         if abs(wsum - 1) > 0.005:
             errors.append("beta.segments weights sum to {:.3f}, not 1".format(wsum))
     g, rf, t = num("market.terminal_growth"), num("market.risk_free_rate"), num("market.tax_rate_marginal")
+    tb, sov = num("market.govt_bond_rate"), num("market.sovereign_default_spread")
+    if rf is not None and tb is not None and sov is not None and abs(tb - sov - rf) > 0.0005:
+        errors.append("market.risk_free_rate {:.4f} is not govt_bond_rate {:.4f} − sovereign_default_spread {:.4f}".format(rf, tb, sov))
+    adate = parse_date(get(L, "meta.analysis_date"))
+    if sov == 0 and get(L, "meta.currency") == "USD" and adate and adate >= US_DOWNGRADE:
+        errors.append("market.sovereign_default_spread is 0, but the US has been rated Aa1, not Aaa, since {}; "
+                      "use the Aa1 spread from market-rates.json".format(US_DOWNGRADE))
     if g is not None and rf is not None and g > rf:
         errors.append("market.terminal_growth {:.4f} exceeds the risk-free rate {:.4f}".format(g, rf))
     if t is not None and not 0 <= t <= 0.5:
@@ -174,13 +200,38 @@ def main(argv):
     if ebit is not None and interest:
         print("coverage check: EBIT {:.1f} / interest {:.1f} = {:.2f}x".format(ebit, interest, ebit / interest))
 
+    # --- ratings table ----------------------------------------------------------------------------
+    rel = val(get(L, "market.ratings_table"))
+    if rel:
+        tpath = os.path.join(os.path.dirname(os.path.abspath(ledger_path)), str(rel))
+        try:
+            with open(tpath) as fh:
+                table = json.load(fh)
+            tdate = parse_date(table.get("as_of"))
+            if not all(len(table.get(k) or []) == 15 for k in ("large", "small")):
+                errors.append("market.ratings_table {} lacks 15-row large and small tables".format(rel))
+            if not tdate:
+                errors.append("market.ratings_table {} has no as_of date".format(rel))
+            elif adate and (adate - tdate).days > RATINGS_TABLE_MAX_DAYS:
+                errors.append("market.ratings_table {} is from {}, {} days before the analysis date (limit {}); "
+                              "snapshot the current table from 03-3-supplemental-data/ratings-spreads.json".format(
+                                  rel, tdate, (adate - tdate).days, RATINGS_TABLE_MAX_DAYS))
+        except (OSError, ValueError) as exc:
+            errors.append("market.ratings_table {} cannot be read ({})".format(rel, exc))
+
     # --- staleness -------------------------------------------------------------------------------
-    adate = parse_date(get(L, "meta.analysis_date"))
     if adate:
-        for name, leaf in (L.get("market") or {}).items():
-            d = parse_date(leaf.get("as_of")) if isinstance(leaf, dict) else None
-            if d and (adate - d).days > 90:
-                warnings.append("market.{} is {} days older than the analysis date".format(name, (adate - d).days))
+        for section in ("market", "beta"):
+            for name, leaf in (L.get(section) or {}).items():
+                d = parse_date(leaf.get("as_of")) if isinstance(leaf, dict) else None
+                if not d:
+                    continue
+                path, age = "{}.{}".format(section, name), (adate - d).days
+                limit = MAX_AGE_DAYS.get(path)
+                if limit is not None and age > limit:
+                    errors.append("{} is {} days older than the analysis date (limit {}); refresh it".format(path, age, limit))
+                elif limit is None and section == "market" and age > 90:
+                    warnings.append("{} is {} days older than the analysis date".format(path, age))
 
     for w in warnings:
         print("WARN  " + w)

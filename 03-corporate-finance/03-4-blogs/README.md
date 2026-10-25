@@ -3,7 +3,7 @@ title: "Damodaran Blog Archive — Fetcher"
 status: active
 owner: weprintmoney
 created: 2026-08-27
-last_updated: 2026-08-27
+last_updated: 2026-10-24
 ---
 
 # Damodaran Blog Archive
@@ -15,17 +15,16 @@ Local mirror of Aswath Damodaran's [*Musings on Markets*](https://aswathdamodara
 | File | Purpose |
 |------|---------|
 | `fetch-archive.py` | Pulls every post from Blogger's public JSON feed, converts each to markdown with attribution frontmatter, and writes to `posts/`. |
-| `.gitignore` | Excludes `posts/` from git — the mirror stays on disk, not in history. |
-| `README.md` | This file. |
 
-## Why `posts/` is gitignored
 
-Blog posts are copyrighted by the author. Fetching them into a private working directory for personal analysis is fine; committing the full text to a repo (even a private one) is a different act. Keeping `posts/` out of git lets us rebuild the mirror any time from source while the repo itself only ships the fetcher.
+## Keeping it current
+
+`posts/` is committed. The weekly **Refresh Market Data and Blog Archive** workflow (`.github/workflows/refresh-market-data.yml`) runs the fetcher and commits any new posts, so the archive needs no manual updates.
 
 ## Run it
 
 ```bash
-cd corporate-finance/blogs
+cd 03-corporate-finance/03-4-blogs
 python3 fetch-archive.py            # first run: pulls all ~680 posts
 python3 fetch-archive.py            # subsequent runs: only writes new/missing files
 python3 fetch-archive.py --refresh  # force re-download of everything

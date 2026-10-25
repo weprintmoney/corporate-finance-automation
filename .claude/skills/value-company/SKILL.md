@@ -83,7 +83,18 @@ Follow `source-plans.md` for the company's type. Produce:
 
 - `sources/<group>/<file>.md` for each document (filings, peer filings, market data), converted to markdown.
 - `sources/README.md`: a manifest listing every file, what it is, where it came from, and when it was fetched. Also list what could not be obtained and why.
-- Market data snapshot: risk-free rate, mature-market ERP, country risk premiums, industry betas, the ratings-to-spread table. Each with its fetch date. Check `03-corporate-finance/03-3-supplemental-data/` first; if a file is missing or its data block is empty, fetch directly and say so in the manifest.
+- Market data snapshot. Never use a number from a lesson spreadsheet or a past valuation for current market data; those carry the year they were built (the lesson 18 ratings table is from 2013).
+  1. Run `python3 scripts/refresh-market-data.py` (needs `pip install xlrd openpyxl`). It pulls Damodaran's current ERP workbook, ratings table, country risk and industry betas, plus the latest FRED closes, into `03-corporate-finance/03-3-supplemental-data/`, then checks every file's age. If a fetch fails, run `python3 scripts/refresh-market-data.py --check`. A stale file stops the run; tell the user which source broke rather than falling back to an older number.
+  2. Copy `ratings-spreads.json` to `sources/market-data/ratings-spreads-<as_of>.json` and point `market.ratings_table` at it. Save the rates you use to `sources/market-data/rates-<analysis_date>.md`, showing both the monthly Damodaran figures and the latest FRED close.
+  3. Fill the rate fields from `market-rates.json`:
+     - `govt_bond_rate`: the latest 10-year close (`fred_latest.treasury_10y`), dated by its own date.
+     - `sovereign_default_spread`: `damodaran_monthly.us_sovereign_default_spread`.
+     - `risk_free_rate`: the bond rate minus that spread.
+     - `mature_erp`: `damodaran_monthly.implied_erp_over_dollar_riskfree`. That is the premium measured over the netted rate; never pair it with the gross Treasury rate.
+     - If the latest close differs from `damodaran_monthly.treasury_10y` by more than 0.25 percentage points, say so in the walkthrough and show the cost of capital at both rates.
+  4. For a non-US currency, use that government's bond and the default spread for its rating from `country-risk.json` (lesson 5).
+
+  Every snapshot carries an `as_of` date, and the validator rejects inputs past their windows: 14 days for rates, 45 for the ERP, 400 for the ratings table and betas.
 
 Append to `walkthrough.md`: a short section called "Where the numbers come from" that names each group of documents in plain words.
 
