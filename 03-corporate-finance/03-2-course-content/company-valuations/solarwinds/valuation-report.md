@@ -1,426 +1,150 @@
 ---
-title: "Company Valuation: SolarWinds (SWI)"
+title: "SolarWinds (SWI) — Valuation Report"
 status: active
 owner: weprintmoney
-created: 2026-08-27
-last_updated: 2026-08-27
+created: 2026-10-25
+last_updated: 2026-10-25
 ---
 
-# Company Valuation: SolarWinds (SWI)
-*Applied Corporate Finance — Module 1 Analysis*
+# SolarWinds (SWI) — Valuation Report
 
-> **Note on timing:** SolarWinds (NYSE: SWI) was acquired by Turn/River Capital and taken private in April 2025 for $18.50/share (~$4.4 billion). This analysis uses FY2024 10-K data — the final full year as a public company — as the valuation base. Cost of capital rates (risk-free, ERP) are current as of August 27, 2026.
+Valued as of 2025-02-05, the last undisturbed trading day before Turn/River's $18.50 cash offer was announced. Every number cites the ledger (`inputs.yaml` field) or the model (`model-output.md` section). The working for each step is in `lesson-01.md` … `lesson-36.md`; the plain-language version is `walkthrough.md`.
 
----
+## 1. Company and story
 
-## Step 2 — Corporate Governance
+SolarWinds sold IT monitoring software to network and systems engineers, a business it was moving from perpetual licenses to subscriptions. In FY2024 revenue was $796.9M, operating income $208.4M and net income $111.9M (`company.revenue`, `company.ebit`, `company.net_income`). Revenue grew from $758.7M in 2023 (`company.history`). A company growing about 5% a year at a 26% operating margin is a mature business. Management's own plan in the deal document called for 8.12% annual revenue growth to 2030 (`forecast.management_growth`). The plan carried the EBIT margin from 32.69% in 2025 to 40.14% in 2030 (`forecast.years`).
 
-### Board of Directors
+Two private-equity firms controlled it:
+- **Silver Lake** held 36.56% (`governance.controlling_holders`).
+- **Thoma Bravo** held 29.79%.
 
-SolarWinds had a board that reflected its PE-sponsor-heavy ownership structure throughout its public life (NYSE: SWI, 2018–2025). Key members included:
+Each had to consent to any change of control (`governance.marginal_investor`). They took it private in 2016 and re-listed it in 2018. They took cash out through special dividends, including $168.2M in 2024 (`company.history`). In February 2025 they consented to the sale by written consent, so public stockholders never voted.
 
-- **Sudhakar Ramakrishna** — President, CEO, and board member (appointed January 2021 following the SUNBURST cyberattack disclosure)
-- **Silver Lake designees** — including Egon Durban (Silver Lake co-CEO) and representatives from Silver Lake Partners, the dominant shareholder (~75% of shares)
-- **Thoma Bravo designees** — Thoma Bravo co-led the 2016 take-private of SolarWinds alongside Silver Lake; Thoma Bravo progressively reduced its stake post-re-IPO
-- **Independent directors** — added following SUNBURST to strengthen cybersecurity governance; a Cybersecurity Committee was established in 2021
+The question this report answers is what SolarWinds was worth to a diversified investor on 2025-02-05. The answer is set against the two prices that matter: the $15.18 market price (`company.share_price`) and the $18.50 deal price (`company.deal_price`).
 
-Silver Lake and Thoma Bravo collectively held approximately 65% of voting securities at IPO (October 2018) and Silver Lake's stake rose to ~75% as Thoma Bravo sold down its position. By the time the Turn/River acquisition closed in April 2025, Silver Lake was the dominant shareholder driving the sale.
-
-### Governance Assessment
-
-SolarWinds exhibits hallmarks of **PE-controlled public company governance**: board seats reserved for sponsor nominees, limited independence from founders/major investors, and a board whose primary obligation runs to the sponsor rather than the dispersed public float. Several objective weaknesses:
-
-- **Concentrated voting control:** Silver Lake effectively controlled board composition and major decisions; minority public shareholders had limited ability to influence outcomes.
-- **SUNBURST governance failure (Dec 2020):** The nation-state supply-chain cyberattack — which compromised ~18,000 customers including US federal agencies — exposed deep gaps in security oversight and was partly attributed to governance failures. This led to regulatory scrutiny from the SEC and a governance reform agenda under incoming CEO Ramakrishna.
-- **CEO succession fragility:** Kevin Thompson (prior CEO) resigned days after SUNBURST disclosure. The abrupt transition and the circumstances around it raised questions about board oversight of operational risk.
-- **Post-reform improvements:** The board added a Cybersecurity Committee, established new oversight protocols, and brought in Ramakrishna specifically for crisis management and reputation rebuilding.
-
-### Power Structure
-
-Power lies squarely with **inside shareholders** — specifically Silver Lake Partners. The public float was a minority economic interest with little governance voice. The board served Silver Lake's interests (maximizing exit value), which were generally but not always aligned with all shareholders. The 2025 sale to Turn/River Capital at $18.50/share was a Silver Lake-driven transaction.
-
----
-
-## Step 3 — Stated Objectives
-
-### Stated Goals
-
-SolarWinds' stated investor objectives in 2024 centered on:
-
-1. **Subscription revenue growth** — transitioning from perpetual-license to recurring SaaS/subscription revenue. In 2024, subscription ARR growth was the primary reported KPI.
-2. **EBITDA margin expansion** — Adjusted EBITDA of $384.7M (48% margin) in 2024, with stated aim to sustain margins near 48–50%.
-3. **Observability and AI integration** — management positioned SolarWinds as evolving from monitoring tools to a unified observability + AIOps platform; acquisition of Squadcast (March 2025) reflected this.
-4. **Revenue growth** — ~5% YoY total revenue growth in 2024; management guided modest acceleration as subscription mix increases.
-
-### Inferred Focus
-
-The company was explicitly focused on **higher value** (via subscription transition improving revenue quality and multiples) rather than pure earnings maximization. With Silver Lake as controlling shareholder and a pending sale, the ultimate objective was **maximizing sale price** — a clean expression of firm value maximization. The subscription-first strategy, EBITDA margin defense, and the Turn/River deal at $18.50 (approximately 5.5× 2024 revenue) all point to value-oriented decision-making under PE ownership.
-
----
-
-## Step 4 — Share Classes and Marginal Investor
-
-### Share Structure
-
-SolarWinds had a **single class of common shares** with one vote per share. There was no dual-class structure. The company issued approximately 237 million diluted shares outstanding at the time of the Turn/River acquisition (~$4.4B ÷ $18.50).
-
-### Largest Shareholders (pre-acquisition)
-
-| Shareholder | Approximate Stake | Notes |
-|-------------|------------------|-------|
-| Silver Lake Partners | ~74–75% | Dominant PE sponsor; controlled board |
-| Thoma Bravo | Reduced post-IPO | Sold down over 2018–2023 period |
-| Index funds (Vanguard, BlackRock, iShares) | ~5–8% combined | Passive institutional; Small/Mid-cap indices |
-| Public float (diversified institutions) | ~15–20% | Primarily institutional |
-
-S&P assigned SolarWinds as a small-cap by the time the deal closed; the public float was concentrated in passive index funds.
-
-### Marginal Investor
-
-Despite the heavily PE-owned structure, the marginal investor setting prices in the public market was most likely a **diversified institutional investor** — index fund or active institutional fund. Silver Lake was not actively trading; price discovery was driven by the smaller public float held by institutions.
-
-### Likely Diversification of Marginal Investor
-
-**Yes — highly diversified.** Index funds and institutional equity managers who held the public float are diversified across hundreds or thousands of holdings. This validates using market (levered) beta rather than total beta for cost of equity, even though PE-sponsor concentration means some company-specific risk is borne by Silver Lake as an inside shareholder.
-
----
-
-## Step 5 — Currency and Risk-Free Rate
-
-### Reporting Currency
-
-SolarWinds reports financial statements in **US Dollars (USD)**. The company is incorporated in Austin, Texas and headquartered in the US.
-
-### Revenue Currencies
-
-SolarWinds generates revenue globally but the majority is billed in USD:
-- **North America: ~69%** of total revenue (primarily USD; some CAD)
-- **International (EMEA + APAC): ~31%** of total revenue (mix of EUR, GBP, AUD, and other currencies, but contracts for enterprise software are often invoiced in USD globally)
-
-The international business does carry some natural currency exposure, primarily EUR and GBP, but hedging at the contract level (USD invoicing) reduces effective translation risk.
-
-### Analysis Currency and Rationale
-
-**USD.** SolarWinds reports in USD, is domiciled in the US, and ~69% of revenue originates in North America. The USD is the natural analysis currency. Using USD avoids artificial translation adjustments and is consistent with how the company is benchmarked by investors and analysts.
-
-### Risk-Free Rate
-
-**4.68%** — US 10-year Treasury yield as of August 27, 2026. Source: US Treasury daily yield curve data. This is above the 12-month average of 4.29%, reflecting a mild yield backup over the summer 2026 period.
-
----
-
-## Step 6 — Equity Risk Premium (Mature Market)
-
-### Current Mature Market ERP
-
-**4.42%** — Damodaran implied ERP for the US equity market, estimated as of July 1, 2026 with the S&P 500 at 7,499. This is the implied ERP backed out from current equity prices and expected future cash flows (analogous to yield-to-maturity on a bond).
-
-Note: Damodaran updated his methodology following the May 2025 Moody's downgrade of the US from Aaa to Aa1, adding a small sovereign spread to the risk-free rate adjustment.
-
-### Method and Source
-
-- **Method:** Implied (current market prices → solve for ERP that makes DCF value = market price). Preferred over historical average because it is forward-looking and reflects today's market pricing.
-- **Source:** Damodaran, *Equity Risk Premiums (ERP): Determinants, Estimates and Implications — The 2026 Edition* (SSRN); elitecurrensea.com synthesis of July 2026 Damodaran workbook.
-- The historical risk premium (S&P 500 vs. T-bill, long run) is approximately 4.5–5.5%, so the implied 4.42% is consistent with long-run history.
-
----
-
-## Step 7 — Country Risk and Weighted ERP
-
-### Best Measure of Country Exposure
-
-For SolarWinds — a pure software company with a global SaaS go-to-market — **revenues** are the best proxy for country risk exposure. SolarWinds has no significant physical manufacturing assets or mineral reserves; revenue by region reflects where risk is borne.
-
-### Geographic Breakdown
-
-Revenue segmentation from FY2024 10-K (approximated from disclosures):
-
-| Region | % of Revenue | Country ERP | Country Risk Premium (CRP) |
-|--------|-------------|-------------|---------------------------|
-| United States / North America | 69% | 4.45% | ~0.03% (US post-Moody's downgrade) |
-| EMEA (primarily Western Europe) | ~20% | ~4.60% | ~0.18% avg (UK, Germany, Benelux) |
-| APAC + LatAm | ~11% | ~5.20% | ~0.78% avg (mix of developed + emerging) |
-
-Note: Damodaran's July 2026 US ERP of 4.45% already incorporates the small Aa1 country premium following the Moody's downgrade.
-
-### Weighted Average ERP
-
-Weighted ERP = (0.69 × 4.45%) + (0.20 × 4.60%) + (0.11 × 5.20%)
-
-= 3.07% + 0.92% + 0.57% = **4.56%**
-
-Rounding: **4.56%** (weighted ERP incorporating country risk).
-
-### Why ERP Might Change
-
-1. **US dollar and geopolitical risk:** Further sovereign credit concerns (e.g., additional Moody's/S&P downgrades) would raise the US CRP.
-2. **Mix shift to international:** Management stated intent to grow international revenue as a percentage — increasing weight toward higher-CRP regions would raise the weighted ERP modestly.
-3. **Macro regime:** If S&P 500 valuations compress (lower prices relative to earnings), the implied ERP mechanically rises; the reverse is also true.
-4. **Private company status:** Now that SolarWinds is private (Turn/River Capital), there is no publicly observable ERP signal — future refinancing costs and PE return hurdles replace the public market ERP as the relevant discount rate reference.
-
----
-
-## Step 8 — Regression Beta
-
-### Regression Beta
-
-**0.88** — SolarWinds' regression beta vs. S&P 500, estimated from its period as a publicly traded company (NYSE: SWI, October 2018 – April 2025).
-
-### Index, Time Period, R-squared
-
-- **Index:** S&P 500 (standard benchmark for US equity beta)
-- **Time period:** Approximately 2018–2025 (full NYSE trading history); the most commonly cited figure of 0.88 reflects approximately 2–5 years of weekly returns as reported by StockAnalysis.com at or near delisting
-- **R-squared:** Not directly retrieved; Software (System & Application) sector has an average market correlation of 0.337 (Damodaran 2024 data), implying R² ≈ 11–12% for the average software firm. SolarWinds, given its PE-concentrated ownership reducing price discovery, likely had a lower R² than typical software peers — perhaps 10–15%.
-
-### Reliability Assessment
-
-**Low-to-moderate reliability.** Several factors impair the regression beta:
-
-1. **Short public history with structural breaks:** SolarWinds was private 2016–2018, re-IPO'd October 2018, and was delisted April 2025. The sample is short and includes the SUNBURST crisis (December 2020 to mid-2021) — a period of dramatic company-specific price moves unrelated to market movements — which distorts the regression.
-2. **PE-dominated float:** Silver Lake held ~75% of shares; thin float means the regression reflects a limited number of marginal investors, not the full ownership risk.
-3. **Beta < 1.0 is probably understated:** A true enterprise software company with significant operating leverage and PE-style financial leverage would be expected to have market beta > 1.0. The 0.88 figure likely reflects anchoring to Silver Lake's non-trading behavior, and/or the defensive qualities of SolarWinds' government customer base reducing traded price volatility.
-
-**Conclusion:** The regression beta of 0.88 is unreliable as a forward-looking risk measure. The bottom-up approach (Step 10) is preferred.
-
----
-
-## Step 9 — Beta Fundamentals
-
-### Product/Service Beta Expectation
-
-SolarWinds provides **enterprise IT monitoring, observability, and service management software** — delivered increasingly as SaaS. Key factors:
-
-- **Sticky, mission-critical products** → lower beta. IT monitoring is non-discretionary for enterprise operations; SolarWinds' Orion platform and SaaS products have high switching costs and long customer relationships. Government/SLED customers are particularly non-cyclical.
-- **Enterprise IT spending is mildly cyclical** → modest market risk. In recessions, enterprises may delay product upgrades or new module purchases, creating some cyclicality.
-- **SaaS transition increases revenue predictability** → lowers beta. Subscription contracts reduce revenue variance vs. perpetual licenses.
-- **Competition from cloud-native observability players (Datadog, New Relic, Dynatrace) adds disruption risk** → slightly higher beta via secular business risk.
-
-**Expected beta based on product/service profile:** **0.9–1.2** (mildly above market, with government/enterprise stickiness as the moderating factor).
-
-### Operating Leverage Effect
-
-SolarWinds has **high operating leverage**:
-- Gross margin: ~89.5% ($713.6M gross profit on $796.9M revenue)
-- R&D and G&A are largely fixed
-- A 1% decline in revenue flows through almost entirely to operating income
-
-High operating leverage amplifies the cyclicality inherent in the business, pushing beta higher than the product stickiness alone would imply. The high margins also mean that small revenue misses create large operating income swings.
-
-### Financial Leverage Effect
-
-Substantial. At FY2024 year-end:
-- Financial debt: **$1.235 billion** (First Lien Term Loan)
-- Market value of equity (at acquisition price): **~$4.4 billion**
-- D/E ratio: **0.281** (28.1%)
-
-The Hamada equation shows that financial leverage amplifies the unlevered beta. At a D/E of 0.281 and marginal tax rate of 25%, the leverage multiplier is 1.211, adding ~21% to the unlevered beta. This pushes the levered beta meaningfully above the unlevered business beta, consistent with the PE-sponsored capital structure SolarWinds carried.
-
----
-
-## Step 10 — Bottom-Up Unlevered Beta
-
-### Business Segments
-
-SolarWinds is a **single-segment enterprise software company** focused on IT Operations Management (ITOM) and increasingly observability. No material segment reporting is disclosed; all revenue flows from the core monitoring/observability/ITSM product portfolio.
-
-### Comparable Firms / Industry Group
-
-Using Damodaran's January 2024 US sector beta dataset (most recent available in this repo):
-
-| Segment | Industry (Damodaran) | Firms in Group | Avg Unlevered Beta | Weight |
-|---------|---------------------|---------------|-------------------|--------|
-| Enterprise IT Software | Software (System & Application) | 351 | 1.2725 | 100% |
-
-SolarWinds maps cleanly to the "Software (System & Application)" category — this group includes enterprise software companies selling monitoring, ERP, CRM, and application management tools to businesses (not gaming or consumer/internet software).
-
-Average correlation with market for this sector: **0.337**
-Total Unlevered Beta (undiversified investor): **3.772**
-
-### Estimated Unlevered Beta
-
-**1.27** (= industry average unlevered beta from Damodaran Software/System & Application, Jan 2024).
-
-No segment weighting is necessary (single business). A slight downward adjustment could be argued for SolarWinds' government customer base (lower cyclicality), but using the industry average without adjustment is the cleaner approach and avoids cherry-picking.
-
----
-
-## Step 11 — Levered Beta and Total Beta
-
-### Inputs
+## 2. Cost of capital
 
 | Input | Value | Source |
-|-------|-------|--------|
-| Unlevered beta | 1.2725 | Damodaran Software (System & Application), Jan 2024 |
-| Market value of debt | $1,235M | FY2024 10-K (floating rate term loan; book ≈ market) |
-| Market value of equity | $4,400M | Turn/River acquisition price × diluted shares |
-| D/E ratio | 0.2807 | $1,235M ÷ $4,400M |
-| Marginal tax rate | 25% | Federal 21% + blended state ~4% |
+|---|---|---|
+| Risk-free rate | 4.43% | `market.risk_free_rate`: 10-year Treasury on 2025-02-05; the US was rated Aaa, so the default spread was 0 |
+| Equity risk premium | 4.92% | `country.weighted_erp`: 4.27% implied premium on US revenue, plus an EMEA country premium on the 35.18% of revenue earned abroad |
+| Unlevered beta | 1.22 | `beta.unlevered_bottom_up`: software industry, cash-corrected, January 2025 |
+| Levered beta | 1.6714 | model §1, at a debt-to-equity ratio of 0.4933 |
+| Cost of equity | 12.65% | model §1 |
+| Pre-tax cost of debt | 7.11% | `debt.kd_pretax_observed`: the term loan's rate, SOFR plus 2.75% |
+| After-tax cost of debt | 5.33% | model §1, at the 25% marginal tax rate |
+| Debt ratio | 33.03% | model §1: debt $1,285.0M and equity $2,604.9M at market |
+| **Cost of capital** | **10.23%** | model §1 |
 
-### Levered Beta (Hamada)
+**Debt** is the loan at face value, $1,235.7M, plus leases of $49.4M (`company.debt_total`):
+- **Deferred revenue** of $389.3M is a service obligation, not debt.
+- **Cloud purchase commitments** of $68.4M were checked and ruled out (`company.off_balance_sheet_debt`).
+- **No interest is capitalized** and depreciation lives did not change, so operating income is not flattered by either.
 
-Levered β = Unlevered β × [1 + (1 − t) × (D/E)]
+**Credit:**
+- No agency rating is disclosed (`debt.rating_actual`).
+- Interest coverage of 1.85x earns a synthetic B- on Damodaran's January 2025 small-firm table, which implies an 8.85% cost of debt (model §2). That is above the 7.11% the loan actually paid. Secured lenders likely priced the loan on adjusted EBITDA of $384.7M (`company.ebitda_adjusted`), which adds back stock-based compensation and gives 3.42x coverage and a BB rating (model §2). The course measures coverage on operating income after those costs.
 
-= 1.2725 × [1 + (1 − 0.25) × 0.2807]
+**Cross-check against the deal:**
+- Goldman Sachs used 9% to 11% and Jefferies 10.70% to 11.70% (`facts.goldman-dcf-discount-rate-range`, `facts.jefferies-dcf-discount-rate-range`).
+- 10.23% sits inside Goldman's range. Their per-share DCF ranges were $14.30 to $23.70 (Goldman) and $14.70 to $19.70 (Jefferies, with stock-based compensation charged) (`facts.gs-dcf-range`, `facts.jefferies-dcf-range`). Both sit wholly above this report's $13.00. Section 6 explains the gap.
 
-= 1.2725 × [1 + 0.2105]
+## 3. Investment returns
 
-= 1.2725 × 1.2105
+SolarWinds earned a return on invested capital of 6.66% against its 10.23% cost of capital. That destroyed $84.0M of value in FY2024 on an economic-value-added basis (model §8). Return on equity was 7.99% against a 12.65% cost of equity.
 
-= **1.54**
+The book measure is distorted. Invested capital of $2,348.0M is all goodwill from the 2016 buyout (goodwill is 100.65% of it, model §8). Strip out the goodwill and the operating assets earn far more than the capital tied up in them. What fails the test is the price Silver Lake and Thoma Bravo paid in 2016. For a new owner the relevant question is not past returns but whether new investment earns its cost. Management's forecast reinvests little. In 2030, capital spending is $27M against depreciation and amortization of $25M, and the cash flow is lifted by $46M of new deferred revenue (`facts.forecast-2030-detail`).
 
-### Total Beta
+## 4. Financing mix and the path to the optimum
 
-Total beta captures all risk — market + firm-specific — relevant for an undiversified owner (such as Turn/River Capital post-acquisition).
+At the actual 33% debt ratio, the cost of capital is 10.31% on the model's iterated rating. The minimum is 10.03% at 21% debt, under the chosen numerator, EBIT (model §3):
+- **Moving to the optimum** saves $10.9M a year, worth $144.4M in perpetuity.
+- **Debt above the optimum:** SolarWinds carried $468.1M more debt than the optimum.
 
-Using the sector average market correlation of 0.337:
+The answer depends on how coverage is measured:
 
-Total Levered β = Levered β ÷ Correlation with market
+| Coverage numerator | Optimal debt ratio | Value of moving |
+|---|---|---|
+| EBIT (chosen) | 21% | $144.4M |
+| EBIT + acquisition amortization | 26% | $44.3M |
+| EBITDA | 28% | $28.0M |
 
-= 1.54 ÷ 0.337
+All three say SolarWinds was over-levered. Even the most generous one puts the optimum below 33%. The stress test in model §4 points the same way: if operating income falls 30%, the optimum drops to 14%. The adjusted-present-value approach (model §9) reaches the same 21% optimum, with a 25% bankruptcy cost and Altman's default rates by rating. It values moving from 33% at $220.3M; a 10% bankruptcy cost would push the optimum to 40%.
 
-= **4.57**
+The path to the optimum is to pay down debt, not to issue equity. The term loan is floating-rate debt maturing in February 2030 (`debt.maturity_years`, `debt.covenants`). Cutting it by the $468.1M excess would take about two years of forecast free cash flow ($212.0M in 2025, `forecast.years`) with no further dividends. The loan's type fits the business: dollar debt for a company that reports in dollars, repayable as subscription cash comes in. Its size is the problem.
 
-This is substantially higher than the levered market beta, reflecting the large amount of firm-specific risk in SolarWinds:
-- Single-company software concentration
-- Ongoing cybersecurity/reputational legacy of SUNBURST
-- Execution risk in the SaaS transition
-- PE-sponsor competitive exit dynamics
+## 5. Dividend policy
 
-### Interpretation
+Over 2022–2024, free cash flow to equity totaled −$419.8M against $224.6M returned (model §5), with the $906.4M of non-cash impairments in 2022 added back. The negative total is 2022's $664.4M loan repayment, funded from cash left by the N-able spin-off.
 
-| Investor type | Beta to use | Cost of equity |
-|---------------|-------------|---------------|
-| Diversified institutional (public markets) | Levered β = 1.54 | ~11.9% |
-| Undiversified PE owner (Turn/River Capital) | Total β = 4.57 | ~25.9%* |
+The years that describe the business are 2023 and 2024:
 
-*Total beta cost of equity: 4.68% + 4.57 × 4.56% = 4.68% + 20.8% = 25.5% — this explains why PE funds require high IRRs (typically 20–25%+) to compensate for their concentrated risk exposure.
+| Year | FCFE | Cash returned | Of which |
+|---|---|---|---|
+| 2023 | $59.4M | $18.8M | shares withheld for employees' taxes |
+| 2024 | $127.0M | $194.7M | $168.2M special dividend + $26.5M of withheld shares |
 
-The regression beta (0.88) is significantly below the bottom-up levered beta (1.54), consistent with the reliability concerns raised in Step 8 (thin float, PE anchor, structural breaks).
+The 2024 dividend paid out more than the year generated and ran the cash balance down from $289.2M to $259.3M (model §5). That is the pattern of a controlling owner harvesting cash ahead of an exit. The lesson 26 judgment: return of cash was appropriate for a mature company whose projects did not earn their cost of capital. But it should have gone to debt reduction first, given the over-leverage in section 4.
 
----
+## 6. Discounted cash flow
 
-## Step 12 — Cost of Debt
+Cash flows are management's 2025–2030 forecast (`forecast.years`) with stock-based compensation charged as an expense: free cash flow to the firm rises from $212.0M to $419.0M. They are discounted at 10.23% (model §6).
 
-### Bond Rating and Spread
+| Bridge | Status quo | At the optimal mix |
+|---|---|---|
+| Present value of 2025–2030 cash flows | $1,321.6M | |
+| Present value of terminal value | $2,122.7M | |
+| Enterprise value | $3,444.3M | $3,533.4M |
+| Less debt, plus cash | debt $1,285.0M, cash $259.3M | |
+| − Options and restricted stock | $187.0M | |
+| **Value per share** | **$13.00** | **$13.52** |
 
-SolarWinds Holdings, Inc. carried a **B+ rating from S&P** as a public company (pre-Turn/River). At closing of the Turn/River acquisition in April 2025, S&P assigned a **B issuer credit rating with stable outlook** to Starlight Parent LLC (the new private entity doing business as SolarWinds).
+**The terminal value is the whole argument.** The model shows two methods (model §6):
+- **Final-year cash flow grown at 2.5% forever:** $5,552.5M.
+- **Operating income less the reinvestment needed to grow at 2.5%** (lesson 32's consistent-reinvestment method, at a stable return on capital of 10%): $3,808.9M.
 
-Using current Damodaran default spreads (2024/2025 edition):
-- B+ (Ba1) default spread: **2.74%**
-- B (Ba2/B2) default spread: **4.35%**
+In management's 2030 forecast, free cash flow of $419.0M is larger than after-tax operating income. Capital spending ($27M) barely exceeds depreciation ($25M), and customers prepay $46M more in deferred revenue than the year before (`facts.forecast-2030-detail`). Deferred revenue can grow that fast only while the business grows fast, not forever. Growing that cash flow forever assumes SolarWinds grows without ever reinvesting, which no company can do. The course method costs $1,743.6M of terminal value. That is the difference between $18.67 a share, almost exactly the deal price, and $13.00 (model §6). The choice of a 10% stable return on capital is not what drives the gap. At 30%, three times the cost of capital, value is still $15.75 (model §6 sensitivity). Matching the final-year cash flow would need reinvestment of −9.33% of operating income forever: the company would have to shrink its capital while growing.
 
-Pre-tax cost of debt (using pre-acquisition B+ rating + current risk-free):
-4.68% + 2.74% = **7.42%**
+Against the prices, $13.00 is 0.86 times the $15.18 market price and 0.70 times the $18.50 deal price (model §6). Other per-share shortcuts:
+- **Diluted shares:** dividing by them instead of subtracting options gives $13.86.
+- **Optimal debt ratio:** moving to it adds $0.52 a share ($13.52) in the DCF. The other two measures give more: annual savings capitalized give $0.84 a share and adjusted present value $1.28 (model §6 reconciliation, §9). They differ in basis. The DCF prices today's debt at its actual 7.11% rate, while the other two price both ends on the synthetic ratings.
 
-Post-acquisition (using B rating):
-4.68% + 4.35% = **9.03%**
+## 7. Relative valuation
 
-For this analysis I use the **B+ spread (7.42%)** since the valuation is based on FY2024 data when SolarWinds was a public, B+-rated entity.
+SolarWinds traded at these multiples against the medians of the eight fairness-opinion peers (model §7, `peers`):
 
-### Synthetic Rating
+| Multiple | SolarWinds | Peer median |
+|---|---|---|
+| Enterprise value / revenue | 4.56x | 3.32x |
+| Enterprise value / EBITDA | 12.84x | 16.39x |
+| Price / earnings | 23.28x | 26.57x |
+| Price / book | 1.86x | 4.58x |
 
-| Metric | Value | Notes |
-|--------|-------|-------|
-| EBIT (Operating Income) | $208.4M | FY2024 10-K |
-| Interest expense (est.) | $107.2M | Q1 2024 net interest = $26.8M × 4 |
-| Interest coverage ratio | **1.95×** | $208.4M ÷ $107.2M |
-| Firm size classification | Smaller/riskier | Revenue <$5B |
-| Synthetic rating (Damodaran) | **B3/B-** | ICR 1.5–1.999 per smaller-firm table |
-| Default spread (B3/B-) | **6.04%** | |
-| Pre-tax cost of debt (synthetic) | **10.72%** | 4.68% + 6.04% |
+The multiples disagree, and for a reason:
+- **Revenue multiple:** SolarWinds looks expensive on revenue because its margins are higher than the peers'.
+- **EBITDA multiple:** it looks cheap on EBITDA. That is what slower growth predicts: the peers that set the median, such as Qualys growing 9.6% (`peers`), earn higher multiples.
+- **Implied values:** after the same subtraction for options and restricted stock as the DCF, the peer-median revenue multiple implies $8.34 a share and the EBITDA multiple $19.95 (model §7).
+- **Price to book** is set aside. SolarWinds' book equity rests on buyout goodwill, and two peers' book equity has been shrunk by buybacks. NetApp's and Teradata's price-to-book ratios are above 20x, so the 4.58x median says little.
+- **Fiscal years differ:** NetApp's ends in April 2024, NetScout's in March 2024 and Open Text's in June 2024, against SolarWinds' December 2024. Each peer's latest year ended by the valuation date is used; trailing-twelve-month figures would align them better.
 
-### Actual vs. Synthetic Rating — Differences and Explanation
+Read together, the multiples span $8.34 to $19.95 and bracket both prices. They do not overturn the DCF. The market was not mispricing SolarWinds against its peers at $15.18.
 
-The synthetic rating (B-) is two notches below the actual B+ rating — a meaningful divergence. Three explanations:
+## 8. Final narrative
 
-1. **Damodaran's rating table uses EBIT, not EBITDA.** SolarWinds' adjusted EBITDA is $384.7M vs. EBIT of $208.4M — a $176.3M difference driven by D&A (including amortization of acquired intangibles from the original 2016 LBO). Lenders and rating agencies routinely use EBITDA/debt coverage, which would give a ratio of 384.7/107.2 = 3.59× — mapping to a Ba2/BB range in the Damodaran table.
-2. **Secured first-lien debt.** The term loan is first-lien secured, which improves recovery in default scenarios and warrants a higher rating vs. unsecured debt.
-3. **Recurring SaaS revenue.** Rating agencies give credit for high revenue predictability (ARR) and low churn, which reduces financial risk beyond what EBIT coverage alone captures.
+On the rates of 2025-02-05, SolarWinds as run was worth about $13.00 a share to a diversified investor. That is below the $15.18 it traded at and well below the $18.50 Turn/River paid. Three things close the gap to the deal price, and only one is in this model:
+- **Financing:** moving to the optimal debt ratio is worth $0.52 a share (model §6).
+- **Terminal value:** management's cash flows grown without reinvestment would justify the deal price. The course method says they cannot be.
+- **Control:** a private-equity buyer can cut costs and lever up in ways a public company with a diffuse float cannot. The lesson 34 answer sizes the operating levers as judgment calls, not model outputs.
 
-**Using actual B+ rating and market-implied spread (2.74%) is more appropriate here.** The synthetic rate (10.72%) materially overstates the cost of debt because the EBIT-based coverage ratio misses the amortization buffer.
+For the public stockholders, the deal was a good price: $18.50 for a stock that traded at $15.18 and was worth less than either on a consistent-reinvestment basis. For Silver Lake and Thoma Bravo, it was an exit at a price inside both advisers' DCF ranges. Our reading, not stated in the deal document, is this: those ranges sit above $13.00 mainly because the advisers grew the final-year cash flow at 2% to 3.5% (`facts.gs-perpetuity-growth-range`, `facts.jefferies-perpetuity-growth-range`). That method assumes no reinvestment.
 
-**Market rate check:** The actual term loan was priced at SOFR + 3.25%. At SOFR ~4.0% (estimated August 2026), this implies ~7.25% — very close to our B+ spread estimate of 7.42%.
+The board's process is the governance weakness. The two sponsors' consent rights meant the 34% public float had no vote. The CEO's $22.99M golden parachute (`governance.change_of_control_payouts`) was mostly $19.94M of accelerated equity that paid on closing. That tied management's reward to getting a deal done rather than to long-run value.
 
-### Market Value of Debt
+## What would change the answer
 
-| Component | Value | Notes |
-|-----------|-------|-------|
-| First Lien Term Loan (principal) | $1,235.7M | December 31, 2024; floating rate — book ≈ market |
-| Operating lease liability (estimated) | ~$55M | Software companies with consolidated office footprint; SolarWinds restructured leases post-SUNBURST |
-| **Total adjusted debt** | **~$1,291M** | |
-
-### Lease Debt Capitalization
-
-Operating lease commitments are modest given SolarWinds' ongoing office consolidation. Using a simplified approach (Damodaran methodology):
-
-Estimated operating lease expense: ~$20M/year (consistent with a reduced, restructured real estate footprint)
-At pre-tax cost of debt of 7.42%, PV of 5-year annuity:
-Debt value of leases ≈ $20M × [(1 − (1.0742)^−5) / 0.0742] ≈ **$82M**
-
-Adjusted EBIT (adding back lease portion):
-$208.4M + ($20M − $14M depreciation) ≈ **$214.4M**
-
-Adjusted total debt: $1,235M + $82M = **$1,317M**
-
-Adjusted D/E: $1,317M / $4,400M = **0.299**
-
-For WACC calculation, I use the adjusted total debt of **$1,317M**.
-
-### Marginal Tax Rate
-
-**25%** (statutory federal 21% + blended state average ~4%). SolarWinds had a tax *benefit* of $8.1M in FY2024 due to reversal of uncertain tax positions and deferred tax assets — this does not reflect the marginal tax rate applicable to the tax shield on incremental borrowing. The statutory rate is the correct rate for WACC purposes.
-
----
-
-## Summary — Cost of Capital Inputs
-
-### Capital Structure (adjusted for leases)
-
-| Component | Value |
-|-----------|-------|
-| Market value of equity | $4,400M |
-| Total adjusted debt (debt + lease) | $1,317M |
-| Total capital (V) | $5,717M |
-| Equity weight (E/V) | 76.9% |
-| Debt weight (D/V) | 23.1% |
-
-### Cost of Capital Computation
-
-| Input | Value | Source / Notes |
-|-------|-------|---------------|
-| Risk-free rate | 4.68% | US 10-year Treasury, August 27, 2026 |
-| Mature market ERP | 4.42% | Damodaran implied, S&P 500 at 7,499, July 2026 |
-| Country-weighted ERP | **4.56%** | Revenue-weighted: 69% US, 20% EMEA, 11% APAC/LatAm |
-| Regression beta | 0.88 | Historical NYSE:SWI vs. S&P 500 (unreliable — see Step 8) |
-| Unlevered beta (bottom-up) | 1.2725 | Damodaran Software (System & Application), Jan 2024 |
-| Adjusted D/E ratio | 0.299 | Includes lease capitalization |
-| Levered beta (Hamada) | **1.55** | 1.2725 × [1 + 0.75 × 0.299] |
-| Total levered beta | **4.60** | 1.55 ÷ 0.337 (sector correlation) |
-| **Cost of equity** | **11.75%** | 4.68% + 1.55 × 4.56% |
-| Pre-tax cost of debt | 7.42% | B+ rating: r_f + 2.74% spread |
-| After-tax cost of debt | **5.57%** | 7.42% × (1 − 0.25) |
-| **WACC** | **10.33%** | 0.769 × 11.75% + 0.231 × 5.57% |
-
-### WACC Calculation
-
-WACC = (E/V) × r_e + (D/V) × r_d × (1 − t)
-
-= (0.769 × 11.75%) + (0.231 × 7.42% × 0.75)
-
-= 9.03% + 1.29%
-
-= **10.33%**
-
-### Sensitivity: Regression Beta vs. Bottom-Up Beta
-
-| Beta approach | Beta | Cost of Equity | WACC |
-|---------------|------|---------------|------|
-| Regression (historical) | 0.88 | 8.70% | 7.97% |
-| Bottom-up (preferred) | 1.55 | 11.75% | **10.33%** |
-| Total beta (PE perspective) | 4.60 | 25.64% | — |
-
-The bottom-up WACC of **~10.3%** is the preferred estimate. The regression beta understates risk given the structural issues identified in Step 8. The total beta perspective (25%+ cost of equity) is most relevant to Turn/River Capital as an undiversified PE owner.
-
----
-
-*Report generated: 2026-08-27 | Data sources: SolarWinds FY2024 10-K (SEC EDGAR), Damodaran ERP/Beta datasets (Jan–Jul 2026), US Treasury daily yield curve.*
+| If | Then |
+|---|---|
+| Stable return on capital were higher than 10% (lasting competitive advantage) | Value rises, but slowly: $14.38 at 15%, $15.07 at 20%, $15.75 at 30% (model §6). No positive return on capital reaches the deal price |
+| International revenue carried only the Western European premium | The cost of capital falls by roughly three-tenths of a point; value rises |
+| Operating income fell 30% | The optimal debt ratio falls to 14% (model §4), and the over-leverage is worse |
+| The cloud purchase commitments counted as debt | Debt rises by about 5%; value per share falls by the commitments' present value spread over 171.6M shares |

@@ -5,6 +5,10 @@ on:
     paths:
       - '.claude/skills/value-company/**'
       - 'scripts/refresh-market-data.py'
+      - '03-corporate-finance/03-2-course-content/company-valuations/*/inputs.yaml'
+      - '03-corporate-finance/03-2-course-content/company-valuations/*/model-output.md'
+      - '03-corporate-finance/03-2-course-content/company-valuations/*/walkthrough.md'
+      - '03-corporate-finance/03-2-course-content/company-valuations/*/sources/market-data/**'
       - '03-corporate-finance/03-2-course-content/**/lesson-overview.md'
       - '03-corporate-finance/03-2-course-content/lesson-index.yaml'
 
@@ -21,18 +25,28 @@ jobs:
       - run: pip install pyyaml
 
       - name: Market-data refresher compiles
-        run: python3 -m py_compile scripts/refresh-market-data.py
+        run: python3 -m py_compile scripts/refresh-market-data.py .claude/skills/value-company/tools/fetch-peer-facts.py
 
       - name: Question bank is current
         run: python3 .claude/skills/value-company/tools/build-question-bank.py --check
 
-      - name: Example ledger validates
-        run: python3 .claude/skills/value-company/tools/validate-ledger.py .claude/skills/value-company/examples/solarwinds-inputs.yaml
-
-      - name: Model runs on the example ledger
-        run: python3 .claude/skills/value-company/tools/model.py .claude/skills/value-company/examples/solarwinds-inputs.yaml > /tmp/model-output.md && head -40 /tmp/model-output.md
-
-      - name: Walkthrough sample traces to the example
+      - name: Every company ledger validates, and its model output is current
         run: |
+          set -e
+          for L in 03-corporate-finance/03-2-course-content/company-valuations/*/inputs.yaml; do
+            D=$(dirname "$L")
+            python3 .claude/skills/value-company/tools/validate-ledger.py "$L"
+            python3 .claude/skills/value-company/tools/model.py "$L" > /tmp/model-output.md
+            if [ -f "$D/model-output.md" ]; then
+              diff -u "$D/model-output.md" /tmp/model-output.md || { echo "::error::$D/model-output.md is stale or hand-edited; rerun model.py"; exit 1; }
+            fi
+            if [ -f "$D/walkthrough.md" ]; then
+              python3 .claude/skills/value-company/tools/check-walkthrough.py "$D/walkthrough.md" "$L" /tmp/model-output.md
+            fi
+          done
+
+      - name: Walkthrough template's worked sample traces to the SolarWinds ledger
+        run: |
+          SW=03-corporate-finance/03-2-course-content/company-valuations/solarwinds
           awk '/^## A worked sample/{f=1} f' .claude/skills/value-company/walkthrough-template.md | sed 's/^> \{0,1\}//' > /tmp/sample.md
-          python3 .claude/skills/value-company/tools/check-walkthrough.py /tmp/sample.md .claude/skills/value-company/examples/solarwinds-inputs.yaml /tmp/model-output.md
+          python3 .claude/skills/value-company/tools/check-walkthrough.py /tmp/sample.md $SW/inputs.yaml $SW/model-output.md

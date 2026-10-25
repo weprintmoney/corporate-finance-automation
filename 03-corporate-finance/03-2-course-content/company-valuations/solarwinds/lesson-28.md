@@ -1,27 +1,35 @@
 ---
-title: "SolarWinds (SWI) — Lesson 28: Peer Group Benchmarking (Dividend Policy)"
+title: "SolarWinds (SWI) — Lesson 28: Me-Too Dividend Policy and Peer Group Assessment"
 status: active
 owner: weprintmoney
-created: 2026-09-20
-last_updated: 2026-09-21
+created: 2026-10-25
+last_updated: 2026-10-25
 ---
 
-# SolarWinds (SWI) — Lesson 28: Peer Group Benchmarking (Dividend Policy)
+# SolarWinds (SWI) — Lesson 28: Me-Too Dividend Policy and Peer Group Assessment
 
-### Lesson 28 — Peer Group Benchmarking (Dividend Policy)
+### Lesson 28 — Me-Too Dividend Policy and Peer Group Assessment
 
 - **Lesson 28, Session 28 · Part 1 — "Me-Too Corporate Finance: Benchmarking Dividend Policy Against the Peer Group"** ([transcript](../../04-dividends-and-valuation/lesson-28/session-28-part-1.md))
     - Quote: "Much of corporate finance is what I call 'me-too corporate finance.'"
-    - Question for SWI: SWI competes in the observability/IT-ops SaaS sector alongside Datadog, Dynatrace, and PagerDuty — none of which pay dividends. Does SWI's own dividend/buyback policy match that "me-too" zero-payout sector norm, or did SWI diverge because its PE-controlled, EBITDA-margin-focused profile behaves more like a mature company than a growth SaaS peer — and what would a payout regression against peer growth, beta, and leverage predict for SWI specifically?
-    - Sources needed: dividend yield / payout ratio (or documented absence) for DDOG, DT, and PD, plus regression inputs (beta, growth, debt ratio) for that peer set and for SWI.
-    - Where to find: PEER-FILINGS — DDOG/DT/PD 10-Ks (capital-return footnotes); SEC-EDGAR — SWI 10-K FY2024 (capital-return disclosures); REPO-SWI-VAL (beta already computed at Steps 8–11, reusable as a regression input; no payout-ratio work exists there yet).
-    - Answer: SWI diverged from the sector norm, and it was right to. All three peers have zero dividend payout — Datadog "never declared or paid any cash dividends" (`ddog-datadog-10k.md`), Dynatrace "never declared or paid any dividends" (`dt-dynatrace-10k.md`), PagerDuty "never declared or paid any cash dividends" (`pd-pagerduty-10k.md`) — but two of them do buy back stock: DT completed a $500M program in February 2026 and authorized a fresh $1B, and PD ran $100M (2024) plus $200M (2025) programs. SWI is the mirror image: $405.4M of special dividends ($237.2M in 2021, $168.2M in 2024) and essentially no discretionary buybacks. A payout regression on the standard drivers predicts exactly that divergence: SWI grew 5.0% versus DDOG's 27.7% ($3,427.2M revenue) and DT's 18.8% ($2,018.4M), its 48.3% adjusted EBITDA margin dwarfs DT's 12.2% GAAP operating margin and DDOG's −1.3%, its levered beta is 1.55 versus Damodaran's 1.2766 sector average (`damodaran-industry-betas-software.md`), and it carries $1.21B of term debt against peers' $0–$1.0B of converts. Low growth, high margin, high leverage and sub-hurdle returns all load the predicted payout upward — copying the peers' zero-dividend template would have been textbook me-too corporate finance.
+    - Question for SolarWinds: How does SolarWinds' payout compare with its peers, and what would a regression of payout on growth, beta and leverage predict for a company with its characteristics? Is the company copying its sector, or diverging for a reason?
+    - Sources needed: Peer payout ratios; sector averages; the lesson's regression; SolarWinds' growth, beta and debt ratio.
+    - Where to find: `peers` (`payout`, `growth`, `debt_ratio`) and `company.history` in `inputs.yaml`; model-output.md §1 and §5; `04-dividends-and-valuation/lesson-28/spreadsheet-divfcfe24.md` (Damodaran sector table, January 2025); `lesson-28/slides.md` (regression).
+    - Answer: SolarWinds diverged in 2024, and not for a reason the peers share.
+        - Peers (`peers`): five of the eight pay no dividend (payout 0.0 for Akamai, NetScout, OneSpan, Qualys, Teradata); Progress pays 46.05%; NetApp and Open Text pay dividends that the SEC data did not tag, so the ledger leaves them null. The sector norm is no dividend, with some buybacks.
+        - Sector table: Damodaran's Software (System & Application) group of 351 firms paid out 27.22% of net income as dividends and returned 80.36% counting buybacks, and returned 86.53% of FCFE before debt flows (facts.sector-software-payout).
+        - SolarWinds 2024: dividends of $168.2M on net income of $111.9M is a 150% payout; with the $26.5M of buybacks, 174%; cash returned over FCFE is 153% ($194.7M ÷ $127.0M, §5). In 2022 and 2023 it paid no dividend.
+        - Regression: the lesson's market regression (January 2014 US companies) is payout = 0.649 − 0.296 × beta − 0.800 × expected growth + 0.300 × debt-to-capital (facts.payout-regression-2014; signs checked by reproducing the slide's Disney figure of 26.95%). With SolarWinds' levered beta of 1.6714 and debt-to-capital of 33.03% (§1) and management's growth of 8.12% (`forecast.management_growth`, since analyst growth is omitted), predicted payout is 18.8% (facts.predicted-payout-swi). Caveats: the coefficients are ten years old and the lesson reports an R-squared of only 19.6%, so treat the prediction as a rough marker.
+        - Copying or diverging: not copying. The actual 2024 payout was eight times the predicted one. It is a special dividend by two controlling holders, not a payout policy. In the two years without one, SolarWinds looked like its peers.
 
 ## Cumulative Project — Questions for This Lesson
 
-- **How does your company dividend and cash return policy measure up against other companies in the sector? / Given how much other companies in the sector are returning to stockholders, is your company returning too much or too little?**
-  As established above, SWI is the clear outlier against its observability/IT-ops SaaS peer set: DDOG, DT, and PD have all "never declared or paid any cash dividends," and only two of the three run buyback programs at all, while SWI paid $405.4M across two special dividends and ran comparatively minor buybacks (established in Lesson 26). Measured against the sector alone, SWI already returns dramatically more. But measured against its *own* fundamentals — the more decision-relevant benchmark this lesson's own answer above insists on — the honest read is that SWI arguably returned **too little**, not too much: ROIC sat below the ~10.1%–10.33% WACC in every year this project computed it (2021 negative, 2.2% in 2022, 4.8% in 2023, 6.7% in 2024 — established in Lessons 14 and 27), yet SWI only distributed cash in two of those five years. A firm with persistently sub-hurdle returns has a standing case for returning excess cash every year it fails the test, not opportunistically — so while SWI is right to reject the sector's "me-too" zero-payout template, the payout regression this lesson runs would actually predict an even higher, more consistent payout than what SWI delivered.
+- **How does your company dividend and cash return policy measure up against other companies in the sector?**
+  Against the eight peers (`peers`) it is an outlier in 2024: a 150% dividend payout against a peer median of 0.0 among those with a recorded payout, and 27.22% for the wider software group (facts.sector-software-payout). Counting buybacks, 174% of net income against the group's 80.36%. Over the three years it looks closer: $224.6M returned in all (§5), mostly in one year.
+
+- **Given how much other companies in the sector are returning to stockholders, is your company returning too much or too little?**
+  In 2024, too much against the sector and against the regression's 18.8%; it also exceeded its own FCFE by 53%. Over 2023–2024 together it returned 115% of FCFE ($213.5M against $186.4M, §5), which is not far above capacity. Given returns on capital below the cost of capital (§8: 6.66% against 10.23%), returning cash is the right direction; the issue is that it was lumpy and paid to a holder base where two sponsors held 66.35% (`governance.controlling_holders`).
 
 ## Notes
 
-Lesson 28's "me-too corporate finance" idea — that firms often copy peer policy rather than deriving it from their own drivers — gets a clean test here, and SWI passes it by *not* being a me-too follower. Every payout-relevant driver (growth, margin, leverage, ROIC) points the opposite direction from its zero-dividend observability peers, so SWI's divergence into special dividends was the analytically correct call, not an anomaly to explain away. This closes the loop opened in Lessons 25–27: the dividend-policy assessment across this project consistently finds SWI's actual behavior — return cash, don't chase peer-template growth investing — matches what the fundamentals prescribe. It connects to Lesson 35's multiples work, which runs a similar peer-regression exercise (there for pricing multiples rather than payout) and reaches the same "the discount/premium is deserved by the fundamentals" conclusion.
+Payout was not modeled in the course DCF (lesson 34 values cash flow to the firm). The peer payout field is thin, which limits the benchmark: two of eight are null and five are zero. The peer set is the eight fairness-opinion companies, not Datadog, Dynatrace and PagerDuty. A true re-run of the regression would need the January 2025 coefficients, which are not in the lesson folder.

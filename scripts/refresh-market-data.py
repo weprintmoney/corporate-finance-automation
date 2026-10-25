@@ -14,6 +14,14 @@ Writes four JSON files. Each carries `as_of` (the date the publisher says the da
 Usage:
   python3 scripts/refresh-market-data.py            fetch everything, rewrite the files, then --check
   python3 scripts/refresh-market-data.py --check    fetch nothing; exit 1 if a file is missing or stale
+  python3 scripts/refresh-market-data.py --as-of YYYY-MM-DD --out DIR
+                                                    the same four files as they stood on a past date,
+                                                    written to DIR (never to the shared snapshot)
+
+--as-of is for valuing a company at a past date, such as a delisted company on its last unaffected
+trading day. It reads the ERP workbook for that month, the FRED closes on or before the date, and the
+January editions of the ratings table, country risk and betas from Damodaran's archive. In --as-of mode
+`fred_latest` means the latest close on or before the date.
 
 Fetching needs `pip install xlrd openpyxl`; --check needs only the standard library. No API keys.
 
@@ -41,7 +49,10 @@ CTRYPREM = BASE + "/pc/datasets/ctryprem.xlsx"                 # January update
 CTRYPREM_JULY = BASE + "/pc/datasets/ctrypremJuly{yy}.xlsx"    # July update, separate file
 BETAS = BASE + "/pc/datasets/betas.xls"
 ERP_PATTERN = BASE + "/pc/implprem/ERP{month}{yy}.xlsx"
-FRED_CSV = "https://fred.stlouisfed.org/graph/fredgraph.csv?id={series}&cosd={start}"
+# Damodaran's archive names January editions by the prior year: betas24.xls is the 1/25 update.
+ARCHIVE = {"ratings": BASE + "/pc/archives/ratings{yy}.xls", "ctryprem": BASE + "/pc/archives/ctryprem{yy}.xlsx",
+           "betas": BASE + "/pc/archives/betas{yy}.xls"}
+FRED_CSV = "https://fred.stlouisfed.org/graph/fredgraph.csv?id={series}&cosd={start}&coed={end}"
 FRED_SERIES = {"treasury_10y": "DGS10", "sofr": "SOFR", "fed_funds_effective": "DFF"}
 
 MAX_AGE_DAYS = {
@@ -83,9 +94,8 @@ def value_right_of(rows, label):
 
 # ---- market-rates.json ------------------------------------------------------------------------
 
-def find_erp_workbook(tmp):
+def find_erp_workbook(tmp, today):
     """Damodaran names the file by month, inconsistently: ERPOct26, ERPJuly26, ERPSept25."""
-    today = date.today()
     for back in range(4):
         y, m = today.year, today.month - back
         if m < 1:
@@ -104,9 +114,9 @@ def find_erp_workbook(tmp):
     fail("no ERP workbook for this month or the three before it ({})".format(ERP_PATTERN))
 
 
-def fred_latest(series, tmp):
-    start = (date.today() - timedelta(days=21)).isoformat()
-    path = fetch(FRED_CSV.format(series=series, start=start), os.path.join(tmp, series + ".csv"))
+def fred_latest(series, tmp, today):
+    start = (today - timedelta(days=21)).isoformat()
+    path = fetch(FRED_CSV.format(series=series, start=start, end=today.isoformat()), os.path.join(tmp, series + ".csv"))
     rows = []
     for line in open(path):
         parts = line.strip().split(",")
@@ -117,22 +127,15 @@ def fred_latest(series, tmp):
     return {"value": rows[-1][1], "date": rows[-1][0], "source_url": "https://fred.stlouisfed.org/series/" + series}
 
 
-def market_rates(tmp):
+def market_rates(tmp, today):
     import openpyxl
-    url, path, month = find_erp_workbook(tmp)
+    url, path, month = find_erp_workbook(tmp, today)
     ws = openpyxl.load_workbook(path, data_only=True, read_only=True)["Impl premium calculator"]
     rows = [list(r) for r in ws.iter_rows(values_only=True)]
-    erp = {
-        "treasury_10y": value_right_of(rows, "US 10-year treasury rate ="),
-        "us_sovereign_default_spread": value_right_of(rows, "Default spread for"),
-        "dollar_riskfree_rate": value_right_of(rows, "Default-risk-adjusted US dollar riskfree"),
-        "implied_erp_over_dollar_riskfree": value_right_of(rows, "Implied Equity Risk Premium (with default"),
-        "implied_erp_over_treasury": value_right_of(rows, "Implied Equity Risk Premium (with US tre"),
-        "sp500_level": value_right_of(rows, "Enter current level of index"),
-    }
-    missing = [k for k, v in erp.items() if v is None]
-    if missing:
-        fail("ERP workbook layout changed; could not read {}".format(", ".join(missing)))
+    if month < US_DOWNGRADE_MONTH and value_right_of(rows, "Default spread for") is None:
+        erp = pre_downgrade_rates(rows)
+    else:
+        erp = post_downgrade_rates(rows)
     if abs(erp["treasury_10y"] - erp["us_sovereign_default_spread"] - erp["dollar_riskfree_rate"]) > 0.0005:
         fail("ERP workbook is inconsistent: Treasury minus sovereign spread is not the dollar risk-free rate")
     return {
@@ -145,16 +148,46 @@ def market_rates(tmp):
                  "company's default spread, because rating spreads are measured over Treasuries. "
                  "fred_latest is the most recent daily close, for checking how far rates moved since."),
         "damodaran_monthly": erp,
-        "fred_latest": fred_all(tmp),
+        "fred_latest": fred_all(tmp, today),
     }
 
 
-def fred_all(tmp):
+# Workbooks before the June 2025 update predate Moody's downgrade of the US (2025-05-16): the US was
+# rated Aaa, the sheet has a single risk-free rate and a single implied premium, and the spread is zero.
+US_DOWNGRADE_MONTH = date(2025, 6, 1)
+
+
+def pre_downgrade_rates(rows):
+    tbond = value_right_of(rows, "Enter current long term risk free rate")
+    implied = value_right_of(rows, "Implied Risk Premium in current level of Index")
+    level = value_right_of(rows, "Enter current level of index")
+    if None in (tbond, implied, level):
+        fail("pre-downgrade ERP workbook layout changed; could not read the risk-free rate, premium or index level")
+    return {"treasury_10y": tbond, "us_sovereign_default_spread": 0.0, "dollar_riskfree_rate": tbond,
+            "implied_erp_over_dollar_riskfree": implied, "implied_erp_over_treasury": implied, "sp500_level": level}
+
+
+def post_downgrade_rates(rows):
+    erp = {
+        "treasury_10y": value_right_of(rows, "US 10-year treasury rate ="),
+        "us_sovereign_default_spread": value_right_of(rows, "Default spread for"),
+        "dollar_riskfree_rate": value_right_of(rows, "Default-risk-adjusted US dollar riskfree"),
+        "implied_erp_over_dollar_riskfree": value_right_of(rows, "Implied Equity Risk Premium (with default"),
+        "implied_erp_over_treasury": value_right_of(rows, "Implied Equity Risk Premium (with US tre"),
+        "sp500_level": value_right_of(rows, "Enter current level of index"),
+    }
+    missing = [k for k, v in erp.items() if v is None]
+    if missing:
+        fail("ERP workbook layout changed; could not read {}".format(", ".join(missing)))
+    return erp
+
+
+def fred_all(tmp, today):
     """A cross-check only, so a FRED outage is recorded rather than fatal."""
     out = {}
     for key, series in FRED_SERIES.items():
         try:
-            out[key] = fred_latest(series, tmp)
+            out[key] = fred_latest(series, tmp, today)
         except Exception as exc:
             print("refresh-market-data: FRED {} unavailable ({})".format(series, exc))
             out[key] = {"value": None, "error": str(exc)}
@@ -166,9 +199,10 @@ def fred_all(tmp):
 RATING_CELL = re.compile(r"^[A-Za-z0-9]+/[A-Z]+[+-]?$")      # "Aaa/AAA", "B3/B-"
 
 
-def ratings_spreads(tmp):
+def ratings_spreads(tmp, archive_year=None):
     import xlrd
-    sheet = xlrd.open_workbook(fetch(RATINGS_XLS, os.path.join(tmp, "ratings.xls"))).sheet_by_index(0)
+    url = ARCHIVE["ratings"].format(yy=str(archive_year - 1)[2:]) if archive_year else RATINGS_XLS
+    sheet = xlrd.open_workbook(fetch(url, os.path.join(tmp, "ratings.xls"))).sheet_by_index(0)
     blocks = {}                                               # (column, first row) -> rows
     open_block = {}                                           # column -> key of the block still growing
     for r in range(sheet.nrows):
@@ -185,42 +219,52 @@ def ratings_spreads(tmp):
                 blocks[key] = []
                 open_block[c] = key
             blocks[key].append({"row": r, "min_coverage": lo, "rating": cell.strip(), "spread": spread})
-    tables = {k: v for k, v in blocks.items() if len(v) == 15}
-    if len(tables) != 3:
-        fail("ratings.xls layout changed; expected three 15-row tables, found {}".format(len(tables)))
-    # Layout: large-firm table top left, financial-firm table top right, small-firm table below.
-    top_row = min(r for _, r in tables)
-    top = sorted(k for k in tables if k[1] == top_row)
-    below = [k for k in tables if k[1] != top_row]
-    if len(top) != 2 or len(below) != 1:
-        fail("ratings.xls layout changed; cannot tell the large, financial and small tables apart")
+    # Each 15-row table sits under a title such as "For smaller and riskier non-financial service firms".
+    # Some editions add a utilities table; name every table by its title, then require the three we use.
+    named = {}
+    for (c, r), rows in blocks.items():
+        if len(rows) != 15:
+            continue
+        title = " ".join(str(sheet.cell_value(rr, cc)).lower() for rr in range(max(0, r - 4), r)
+                         for cc in range(max(0, c - 2), min(sheet.ncols, c + 2)))
+        for key, words in [("small", ("smaller",)), ("utilities", ("infrastructure", "utilit")),
+                           ("large", ("large",)), ("financial", ("financial",))]:
+            if any(w in title for w in words):
+                named.setdefault(key, (c, r))
+                break
+    if not all(k in named for k in ("large", "small", "financial")):
+        fail("ratings.xls layout changed; found tables {} but need large, small and financial".format(sorted(named)))
+    tables = {k: blocks[v] for k, v in named.items()}
 
-    text = open(fetch(RATINGS_HTML, os.path.join(tmp, "ratings.html")), encoding="latin-1").read()
-    m = re.search(r"as of\s+([A-Za-z]+)\s+(\d{4})", text)
-    if not m:
-        fail("ratings page no longer states 'as of <Month> <Year>'")
-    as_of = datetime.strptime("{} {}".format(m.group(1), m.group(2)), "%B %Y").date()
+    if archive_year:
+        as_of = date(archive_year, 1, 1)                      # archived files are the January editions
+    else:
+        text = open(fetch(RATINGS_HTML, os.path.join(tmp, "ratings.html")), encoding="latin-1").read()
+        m = re.search(r"as of\s+([A-Za-z]+)\s+(\d{4})", text)
+        if not m:
+            fail("ratings page no longer states 'as of <Month> <Year>'")
+        as_of = datetime.strptime("{} {}".format(m.group(1), m.group(2)), "%B %Y").date()
 
-    def clean(key):
-        return [{k: v for k, v in row.items() if k != "row"} for row in tables[key]]
+    def clean(name):
+        return [{k: v for k, v in row.items() if k != "row"} for row in tables[name]]
 
     return {
         "as_of": as_of.isoformat(),
         "fetched": date.today().isoformat(),
-        "source_url": RATINGS_XLS,
+        "source_url": url,
         "note": ("Rows in ascending coverage; a firm gets the last row whose min_coverage its coverage "
                  "exceeds. large = market cap above about $5B. Spreads are over the 10-year Treasury, so "
                  "pre-tax cost of debt = Treasury rate + spread."),
-        "large": clean(top[0]),
-        "small": clean(below[0]),
-        "financial": clean(top[1]),
+        **{k: clean(k) for k in ("large", "small", "financial", "utilities") if k in tables},
     }
 
 
 # ---- country-risk.json ---------------------------------------------------------------------------
 
-def country_risk(tmp):
+def country_risk(tmp, archive_year=None, cutoff=None):
     """Damodaran posts the January update at ctryprem.xlsx and the July one at ctrypremJulyYY.xlsx; keep the newer."""
+    if archive_year:
+        return parse_country_risk(ARCHIVE["ctryprem"].format(yy=str(archive_year - 1)[2:]), tmp)
     year = date.today().year
     found = []
     for url in [CTRYPREM, CTRYPREM_JULY.format(yy=str(year)[2:]), CTRYPREM_JULY.format(yy=str(year - 1)[2:])]:
@@ -230,6 +274,8 @@ def country_risk(tmp):
             print("refresh-market-data: skipped {} ({})".format(url, exc))
         except Exception as exc:
             print("refresh-market-data: could not fetch {} ({})".format(url, exc))
+    if cutoff:                                                # --as-of: no edition published after the date
+        found = [d for d in found if d["as_of"] <= cutoff.isoformat()]
     if not found:
         fail("no country risk workbook could be read")
     return max(found, key=lambda d: d["as_of"])
@@ -270,9 +316,10 @@ def parse_country_risk(url, tmp):
 
 # ---- industry-betas.json -------------------------------------------------------------------------
 
-def industry_betas(tmp):
+def industry_betas(tmp, archive_year=None):
     import xlrd
-    book = xlrd.open_workbook(fetch(BETAS, os.path.join(tmp, "betas.xls")))
+    url = ARCHIVE["betas"].format(yy=str(archive_year - 1)[2:]) if archive_year else BETAS
+    book = xlrd.open_workbook(fetch(url, os.path.join(tmp, "betas.xls")))
     sheet = book.sheet_by_name("Industry Averages")
     rows = [[c.value for c in sheet.row(r)] for r in range(sheet.nrows)]
     if not (rows and str(rows[0][0]).lower().startswith("date updated") and num(rows[0][1])):
@@ -295,7 +342,7 @@ def industry_betas(tmp):
     return {
         "as_of": as_of.isoformat(),
         "fetched": date.today().isoformat(),
-        "source_url": BETAS,
+        "source_url": url,
         "note": "US companies. Damodaran refreshes in January.",
         "industries": industries,
     }
@@ -327,19 +374,32 @@ def check(today=None):
 def main(argv):
     if "--check" in argv:
         sys.exit(check())
+    as_of, out_dir = None, OUT_DIR
+    if "--as-of" in argv:
+        try:
+            as_of = datetime.strptime(argv[argv.index("--as-of") + 1], "%Y-%m-%d").date()
+            out_dir = argv[argv.index("--out") + 1]
+        except (IndexError, ValueError):
+            sys.exit("usage: refresh-market-data.py --as-of YYYY-MM-DD --out DIR")
+        os.makedirs(out_dir, exist_ok=True)
+    # The current year's January editions are the live files; earlier years come from the archive.
+    archive_year = as_of.year if as_of and as_of.year < date.today().year else None
     with tempfile.TemporaryDirectory() as tmp:
         outputs = {
-            "market-rates.json": market_rates(tmp),
-            "ratings-spreads.json": ratings_spreads(tmp),
-            "country-risk.json": country_risk(tmp),
-            "industry-betas.json": industry_betas(tmp),
+            "market-rates.json": market_rates(tmp, as_of or date.today()),
+            "ratings-spreads.json": ratings_spreads(tmp, archive_year),
+            "country-risk.json": country_risk(tmp, archive_year, as_of),
+            "industry-betas.json": industry_betas(tmp, archive_year),
         }
     for name, payload in outputs.items():           # write only after every source parsed
-        with open(os.path.join(OUT_DIR, name), "w") as fh:
+        if as_of:
+            payload["requested_as_of"] = as_of.isoformat()
+        with open(os.path.join(out_dir, name), "w") as fh:
             json.dump(payload, fh, indent=2)
             fh.write("\n")
-        print("wrote {} (as_of {})".format(name, payload["as_of"]))
-    sys.exit(check())
+        print("wrote {} (as_of {})".format(os.path.join(out_dir, name), payload["as_of"]))
+    if not as_of:
+        sys.exit(check())
 
 
 if __name__ == "__main__":

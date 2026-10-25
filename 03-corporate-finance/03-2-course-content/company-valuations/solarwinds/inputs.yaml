@@ -1,0 +1,283 @@
+# Ledger: SolarWinds Corporation (SWI), FY2024 base year, valued as of 2025-02-05.
+#
+# 2025-02-05 is the last undisturbed trading day before the Turn/River merger was announced on
+# 2025-02-07. Every market input is from that date, so the value can be set against both the $15.18
+# unaffected price and the $18.50 deal price on the rates that held when the deal was struck.
+#
+# Paths in `source` are relative to this folder. Amounts in $ millions; rates as decimals.
+
+meta:
+  company: SolarWinds Corporation
+  slug: solarwinds
+  ticker: SWI
+  type: delisted
+  home_country: United States
+  currency: USD
+  reporting_currency: USD
+  fiscal_year_end: "12-31"
+  base_year: 2024
+  analysis_date: "2025-02-05"
+  price_basis: last-unaffected
+  analyst: weprintmoney
+  omitted:
+    - field: beta.regression_beta
+      reason: "SWI was delisted in April 2025; free price sources (Yahoo, Nasdaq, Stooq) no longer serve its history, and Capital IQ's price module did not load (sources/capital-iq/README.md). The bottom-up beta is the course's preferred estimate anyway."
+    - field: beta.regression_se
+      reason: "No regression; see beta.regression_beta."
+    - field: beta.regression_r2
+      reason: "No regression; see beta.regression_beta."
+    - field: beta.jensens_alpha
+      reason: "No price history; see beta.regression_beta."
+    - field: beta.segments
+      reason: "SolarWinds reports one operating segment (sources/filings/swi-10k-fy2024.md note 16), so there are no segment weights to compute a weighted beta from."
+    - field: beta.total_beta
+      reason: "Total beta needs the correlation with the market from a regression; there is no price history (see beta.regression_beta). Lesson 11 shows an illustration from the industry correlation instead."
+    - field: forecast.analyst_growth
+      reason: "Consensus estimates did not load from Capital IQ (sources/capital-iq/README.md); management's forecast in the merger document is used instead."
+    - field: company.debt_market
+      reason: "The only borrowing is a floating-rate term loan that resets to SOFR plus 2.75%, so its market value is its face value."
+
+modeling_choices:
+  coverage_numerator: ebit
+  firm_size_table: small        # market cap $2.6 billion, under Damodaran's $5 billion line
+  sbc_treatment: expense
+  firm_value_basis: market
+  beta_source: bottom_up
+  kd_source: observed
+  terminal_method: consistent_reinvestment
+
+market:
+  govt_bond_rate: {value: 0.0443, source: "sources/market-data/market-rates-2025-02-05.json fred_latest.treasury_10y (FRED DGS10)", as_of: "2025-02-05", note: "10-year US Treasury close; Damodaran's start-of-month figure was 0.0454"}
+  sovereign_default_spread: {value: 0.0, source: "sources/market-data/country-risk-2025-01-01.json countries.United States (Moody's Aaa, default spread 0)", as_of: "2025-01-01", note: "The US was rated Aaa until Moody's downgrade on 2025-05-16"}
+  risk_free_rate: {value: 0.0443, source: "govt_bond_rate − sovereign_default_spread", as_of: "2025-02-05"}
+  mature_erp: {value: 0.0427, source: "sources/market-data/market-rates-2025-02-05.json damodaran_monthly.implied_erp_over_dollar_riskfree (ERPFeb25.xlsx)", as_of: "2025-02-01", note: "Implied premium on the S&P 500 at 6040.53, measured over the 0.0454 start-of-month Treasury; with a zero US spread it is the same over the Treasury. Paired with the 0.0443 close on the analysis date: the 0.11-point gap is inside the skill's 0.25-point tolerance and moves the cost of equity by under 0.1 point"}
+  ratings_table: {value: sources/market-data/ratings-spreads-2025-01-01.json, source: "Damodaran ratings24.xls (January 2025 edition), via scripts/refresh-market-data.py --as-of", as_of: "2025-01-01"}
+  tax_rate_marginal: {value: 0.25, source: "sources/market-data/country-risk-regions-2025-01-01.md, Country Tax Rates sheet (United States 25%: federal 21% plus state); same figure as <CC>/01-foundations-and-discount-rates/lesson-12/spreadsheet-countrytaxrates24.md", as_of: "2025-01-01"}
+  terminal_growth: {value: 0.025, source: "Judgment: midpoint of Goldman Sachs' 2%–3% perpetuity range and the low end of Jefferies' 2.5%–3.5% (sources/deal-docs/swi-defm14c-2025-merger.md, fairness opinions); below the 0.0443 risk-free rate", as_of: "2025-02-05"}
+
+country:
+  exposures:
+    - {country: United States, weight: 0.6482, erp: 0.0427, measure: revenues, source: "sources/filings/swi-10k-fy2024.md note 16 (United States revenue 516.559 of 796.895); ERP = market.mature_erp", as_of: "2024-12-31"}
+    - {country: International, weight: 0.3518, erp: 0.0611, measure: revenues, source: "sources/filings/swi-10k-fy2024.md note 16 (international revenue 280.336); ERP = mature_erp 0.0427 + EMEA country risk premium 0.0184 (sources/market-data/country-risk-regions-2025-01-01.md: EMEA ERP 0.0617 less the workbook's mature ERP 0.0433)", as_of: "2024-12-31", note: "Judgment: the 10-K gives no regional split. EMEA stands in for all international revenue because most international offices are in Europe; Western Europe alone would be 0.0112 and the global average 0.0143"}
+  weighted_erp: {value: 0.0492, source: "computed from exposures above", as_of: "2025-02-05"}
+
+beta:
+  unlevered_bottom_up: {value: 1.22, source: "sources/market-data/industry-betas-2025-01-05.json industries.Software (System & Application).unlevered_beta_cash_corrected (333 firms)", as_of: "2025-01-05"}
+
+company:
+  shares_basic: {value: 171.6, source: "sources/deal-docs/swi-defm14c-2025-merger.md (171,603,559 shares outstanding on the 2025-02-07 record date, Written Consent section; the same count at the 2025-02-03 Capitalization Date in the merger agreement)", as_of: "2025-02-07", note: "The FY2024 10-K cover reports 171,606,895 on 2025-02-13; the difference is immaterial"}
+  shares_diluted: {value: 174.5, source: "sources/filings/swi-10k-fy2024.md note 11 (weighted-average diluted shares 174,491 thousand)", as_of: "2024-12-31"}
+  share_price: {value: 15.18, source: "sources/deal-docs/swi-defm14c-2025-merger.md, Opinion of Goldman Sachs (closing price on 2025-02-05, the undisturbed price)", as_of: "2025-02-05"}
+  deal_price: {value: 18.50, source: "sources/deal-docs/swi-defm14c-2025-merger.md (Per Share Merger Consideration)", as_of: "2025-02-07"}
+  equity_value: {value: 2604.9, source: "shares_basic 171.603559 × share_price 15.18", as_of: "2025-02-05"}
+  equity_book: {value: 1400.7, source: "sources/filings/swi-10k-fy2024.md balance sheet (total stockholders' equity 1,400,714 thousand)", as_of: "2024-12-31"}
+  debt_face: {value: 1235.7, source: "sources/filings/swi-10k-fy2024.md note 9 (First Lien Term Loan principal 1,235,662 thousand, due 2030-02-05)", as_of: "2024-12-31"}
+  debt_book: {value: 1206.6, source: "sources/filings/swi-10k-fy2024.md note 9 (total debt 1,206,586 thousand after 29.1 of unamortized discount and issuance costs)", as_of: "2024-12-31"}
+  lease_debt: {value: 49.4, source: "sources/filings/swi-10k-fy2024.md note 7 (present value of operating lease liabilities 49,365 thousand)", as_of: "2024-12-31"}
+  off_balance_sheet_debt: {value: 0.0, source: "sources/filings/swi-10k-fy2024.md notes 7 and 15", as_of: "2024-12-31", note: "Checked and ruled out. No leases signed but not yet commenced; no guarantees of joint-venture or special-purpose-vehicle debt. Purchase commitments of 68.4 for cloud hosting (note 15) are minimum service purchases that run through cost of revenue; missing one is a contract claim, not a default that hands lenders control, so they fail the debt test. Including them would add about 5% to debt"}
+  debt_total: {value: 1285.0, source: "debt_face 1235.7 + lease_debt 49.4 + off_balance_sheet_debt 0", as_of: "2024-12-31", note: "Face value, because the floating-rate loan's market value is its face value; the 29.1 discount is an accounting entry, not a reduction in what is owed"}
+  deferred_revenue: {value: 389.3, source: "sources/filings/swi-10k-fy2024.md balance sheet (current 343,357 + non-current 45,941 thousand)", as_of: "2024-12-31", note: "Not debt: owed in service, not cash"}
+  cash: {value: 259.3, source: "sources/filings/swi-10k-fy2024.md balance sheet (cash 251,850 + short-term investments 7,473 thousand)", as_of: "2024-12-31"}
+  options_value: {value: 187.0, source: "sources/filings/swi-10k-fy2024.md note 10 (unvested RSUs 9,960,353 + PSUs 2,253,709 = 12.214 million units; 113,430 vested options at $0.98)", as_of: "2024-12-31", note: "Units valued at the 15.18 unaffected price (they become shares with no exercise price); options at intrinsic value (deep in the money, so time value is negligible)"}
+  revenue: {value: 796.9, source: "sources/filings/swi-10k-fy2024.md income statement (796,895 thousand)", as_of: "2024-12-31"}
+  ebit: {value: 208.4, source: "sources/filings/swi-10k-fy2024.md income statement (operating income 208,419 thousand)", as_of: "2024-12-31", note: "GAAP, with 76.5 of stock-based compensation expensed and 10.3 of restructuring charged"}
+  ebitda_standardized: {value: 282.8, source: "ebit 208.4 + da 74.4", as_of: "2024-12-31"}
+  ebitda_adjusted: {value: 384.7, source: "sources/filings/swi-10k-fy2024.md MD&A non-GAAP reconciliation (Adjusted EBITDA 384,699 thousand, margin 48.3%)", as_of: "2024-12-31", note: "Company's figure; adds back stock-based compensation, restructuring and Cyber Incident costs"}
+  acquisition_amortization: {value: 52.9, source: "sources/filings/swi-10k-fy2024.md income statement (amortization of acquired technologies 7,069 + acquired intangibles 45,846 thousand)", as_of: "2024-12-31"}
+  interest_expense: {value: 112.4, source: "sources/filings/swi-10k-fy2024.md MD&A, Interest Expense, Net (interest expense 112,435 thousand before 8.6 of interest income)", as_of: "2024-12-31"}
+  interest_capitalized: {value: 0.0, source: "sources/filings/swi-10k-fy2024.md note 9 and cash flow statement", as_of: "2024-12-31", note: "None disclosed; the company builds nothing that would carry capitalized interest"}
+  depreciation_life_change: {value: "None. Equipment, servers and computers are depreciated over 3 to 5 years, software over 3 to 5, with no change disclosed.", source: "sources/filings/swi-10k-fy2024.md note 2, Property and Equipment", as_of: "2024-12-31"}
+  net_income: {value: 111.9, source: "sources/filings/swi-10k-fy2024.md income statement (111,903 thousand)", as_of: "2024-12-31"}
+  da: {value: 74.4, source: "sources/filings/swi-10k-fy2024.md cash flow statement (depreciation and amortization 74,352 thousand)", as_of: "2024-12-31"}
+  capex: {value: 20.5, source: "sources/filings/swi-10k-fy2024.md cash flow statement (property and equipment 5,611 + capitalized software 14,401 + intangibles 466 thousand)", as_of: "2024-12-31"}
+  change_wc: {value: 38.8, source: "sources/filings/swi-10k-fy2024.md cash flow statement (sum of changes in operating assets and liabilities, −38,778 thousand, sign flipped)", as_of: "2024-12-31", note: "Mostly a 23.8 drop in income taxes payable and an 8.2 drop in accrued liabilities"}
+  rd_expense: {value: 108.6, source: "sources/filings/swi-10k-fy2024.md income statement (108,599 thousand)", as_of: "2024-12-31"}
+  sbc: {value: 76.5, source: "sources/filings/swi-10k-fy2024.md cash flow statement (76,460 thousand)", as_of: "2024-12-31"}
+  invested_capital: {value: 2348.0, source: "equity_book 1400.7 + debt_book 1206.6 − cash 259.3", as_of: "2024-12-31", note: "Book basis; 2363.2 of it is goodwill from the 2016 buyout"}
+  goodwill: {value: 2363.2, source: "sources/filings/swi-10k-fy2024.md balance sheet (2,363,175 thousand)", as_of: "2024-12-31"}
+  history:
+    - {year: 2022, revenue: 719.4, ebit: -819.6, net_income: -929.4, impairment: 906.4, da: 95.0, capex: 20.8, change_wc: -7.0, dividends: 0.0, buybacks: 11.1, debt_issued: 0.0, debt_repaid: 664.4, cash: 148.9, debt_total: 1319.2, invested_capital: 2422.9, source: "sources/filings/swi-10k-fy2024.md income and cash flow statements (2022 column); balance sheet items from sources/filings/swi-10k-fy2023.md (cash 121.7 + investments 27.1; term loan 1245.0 + leases 74.2; equity 1369.7 + debt book 1202.1 − cash)", as_of: "2022-12-31", note: "EBIT and net income include 906.4 of non-cash goodwill (891.1) and indefinite-lived intangible impairments (cash flow statement). Buybacks are shares withheld to cover employees' taxes on vesting stock. History starts in 2022 because it is the first full year after the July 2021 N-able spin-off and the first year in the FY2024 10-K's three-year statements; the XBRL series in sources/filings/swi-multi-year-financials.md restates FY2019-2021 without N-able but has no balance sheet or cash flow detail"}
+    - {year: 2023, revenue: 758.7, ebit: 150.4, net_income: -9.1, da: 82.2, capex: 18.3, change_wc: -13.9, dividends: 0.0, buybacks: 18.8, debt_issued: 0.0, debt_repaid: 9.3, cash: 289.2, debt_total: 1300.4, invested_capital: 2356.3, source: "sources/filings/swi-10k-fy2024.md income statement, cash flow statement and balance sheet (2023 column; leases 14.9 + 49.8)", as_of: "2023-12-31", note: "Buybacks are shares withheld to cover employees' taxes on vesting stock"}
+    - {year: 2024, revenue: 796.9, ebit: 208.4, net_income: 111.9, da: 74.4, capex: 20.5, change_wc: 38.8, dividends: 168.2, buybacks: 26.5, debt_issued: 10.0, debt_repaid: 10.0, cash: 259.3, debt_total: 1285.0, invested_capital: 2348.0, source: "sources/filings/swi-10k-fy2024.md income statement, cash flow statement and balance sheet (2024 column)", as_of: "2024-12-31", note: "Dividends are the $1.00 special dividend paid 2024-04-15. Buybacks are shares withheld to cover employees' taxes on vesting stock. The 10.0 drawn and repaid was a revolver draw"}
+
+debt:
+  rating_actual: {value: null, source: "sources/filings/swi-10k-fy2024.md (no S&P or Moody's rating disclosed in the 10-K or the merger document); sources/capital-iq/governance-ownership-and-credit.md shows only a statistical score", as_of: "2024-12-31"}
+  kd_pretax_observed: {value: 0.0711, source: "sources/filings/swi-10k-fy2024.md note 9 (effective rate 7.11% on the term loan at year end; SOFR plus 2.75%)", as_of: "2024-12-31", note: "At the analysis date SOFR was 0.0433 (sources/market-data/rates-2025-02-05.md), so the coupon was about 0.0708"}
+  rate_type: {value: floating, source: "sources/filings/swi-10k-fy2024.md note 9 (SOFR plus 2.75%, 0% floor)", as_of: "2024-12-31"}
+  currency: {value: USD, source: "sources/filings/swi-10k-fy2024.md note 9 (U.S. dollar term loan)", as_of: "2024-12-31"}
+  maturity_years: {value: 5.0, source: "sources/filings/swi-10k-fy2024.md note 9 (final maturity 2030-02-05; 0.25% quarterly amortization)", as_of: "2025-02-05"}
+  bankruptcy_cost: {value: 0.25, source: "Judgment within lesson 21's guidance (<CC>/03-financing-mix-and-dividends/lesson-21/slides.md: direct costs 5-10% of firm value; indirect costs higher where customers depend on the firm surviving). Software customers renewing multi-year subscriptions and maintenance would hesitate to renew with a vendor in distress, so indirect costs are material", as_of: "2025-02-05", note: "model-output section 9 also shows the optimum at 0.10 and 0.40"}
+  revolver_undrawn: {value: 130.0, source: "sources/filings/swi-10k-fy2024.md note 9 ($130.0 million revolving facility, undrawn at year end, matures 2029-07-24)", as_of: "2024-12-31"}
+  covenants: {value: "Negative covenants restrict new debt, liens, mergers, dividends and buybacks, and investments. The only financial test springs when the revolver is more than 35% drawn: first-lien net leverage of no more than 7.40 to 1. A change of control is an event of default. Amendments 7 (January 2024) and 8 (July 2024) cut the margin to SOFR + 2.75% and pushed maturity to February 2030.", source: "sources/filings/swi-10k-fy2024.md note 9 and Item 1A (credit agreement events of default)", as_of: "2024-12-31"}
+
+governance:
+  board:
+    - {name: Sudhakar Ramakrishna, role: "President, CEO and Director", independent: false, affiliated_with: management, source: "sources/filings/swi-def14a-2024.md, Board of Directors", as_of: "2024-04-11"}
+    - {name: William Bock, role: Chairman, independent: true, affiliated_with: none, source: "sources/filings/swi-def14a-2024.md", as_of: "2024-04-11"}
+    - {name: Kenneth Y. Hao, role: Director, independent: true, affiliated_with: Silver Lake, source: "sources/filings/swi-def14a-2024.md (Silver Lake designee; independent under NYSE rules)", as_of: "2024-04-11"}
+    - {name: Douglas Smith, role: Director, independent: true, affiliated_with: Silver Lake, source: "sources/filings/swi-def14a-2024.md (Silver Lake designee; former Silver Lake senior advisor)", as_of: "2024-04-11"}
+    - {name: Michael Widmann, role: Director, independent: true, affiliated_with: Silver Lake, source: "sources/filings/swi-def14a-2024.md (Silver Lake designee)", as_of: "2024-04-11"}
+    - {name: Cathleen Benko, role: Director, independent: true, affiliated_with: none, source: "sources/filings/swi-def14a-2024.md", as_of: "2024-04-11"}
+    - {name: Dennis Howard, role: Director, independent: true, affiliated_with: none, source: "sources/filings/swi-def14a-2024.md", as_of: "2024-04-11"}
+    - {name: Catherine R. Kinney, role: Director, independent: true, affiliated_with: none, source: "sources/filings/swi-def14a-2024.md", as_of: "2024-04-11"}
+    - {name: Easwaran Sundaram, role: Director, independent: true, affiliated_with: none, source: "sources/filings/swi-def14a-2024.md", as_of: "2024-04-11"}
+  controlling_holders:
+    - {name: Silver Lake, pct: 0.3656, source: "sources/filings/swi-def14a-2024.md beneficial ownership table (61,473,871 shares, 36.56%)", as_of: "2024-03-28"}
+    - {name: Thoma Bravo, pct: 0.2979, source: "sources/filings/swi-def14a-2024.md beneficial ownership table (50,090,648 shares, 29.79%)", as_of: "2024-03-28"}
+  share_classes: {value: "One class of common stock, one vote per share; 50 million preferred shares authorized, none issued.", source: "sources/filings/swi-10k-fy2024.md note 10", as_of: "2024-12-31"}
+  marginal_investor: {value: "Diversified institutions holding the roughly 34% public float set the traded price. Silver Lake and Thoma Bravo together held about 66% and were not diversified in this position; under the stockholders' agreement each had to consent to any change of control.", source: "sources/filings/swi-def14a-2024.md (ownership table; stockholders' agreement) and sources/deal-docs/swi-defm14c-2025-merger.md (consent rights)", as_of: "2024-03-28"}
+  objectives: {value: "\"We intend to extend our leadership in observability and IT infrastructure management and grow our market share in adjacent areas\", through a \"subscription-first approach\".", source: "sources/filings/swi-10k-fy2024.md Item 1 (growth strategy) and Item 1A", as_of: "2024-12-31"}
+  change_of_control_payouts: {value: "Golden parachutes totaled $38.96 million for three named executives: CEO Ramakrishna $22.99 million (mostly $19.94 million of accelerated equity), CFO Black $8.54 million, CAO Bliss $7.43 million.", source: "sources/deal-docs/swi-defm14c-2025-merger.md, Golden Parachute Compensation", as_of: "2025-03-27"}
+
+forecast:
+  years:
+    - {year: 2025, revenue: 832.0, ebit_margin: 0.3269, fcff: 212.0, source: "sources/deal-docs/swi-defm14c-2025-merger.md Certain Company Financial Forecasts (revenue 832, EBIT 272, unlevered free cash flow 294 less stock-based compensation 82)", as_of: "2025-01-15"}
+    - {year: 2026, revenue: 899.0, ebit_margin: 0.3415, fcff: 258.0, source: "same table (EBIT 307; uFCF 347 less SBC 89)", as_of: "2025-01-15"}
+    - {year: 2027, revenue: 978.0, ebit_margin: 0.3599, fcff: 297.0, source: "same table (EBIT 352; uFCF 393 less SBC 96)", as_of: "2025-01-15"}
+    - {year: 2028, revenue: 1071.0, ebit_margin: 0.3828, fcff: 338.0, source: "same table (EBIT 410; uFCF 443 less SBC 105)", as_of: "2025-01-15"}
+    - {year: 2029, revenue: 1172.0, ebit_margin: 0.3993, fcff: 379.0, source: "same table (EBIT 468; uFCF 494 less SBC 115)", as_of: "2025-01-15"}
+    - {year: 2030, revenue: 1273.0, ebit_margin: 0.4014, fcff: 419.0, source: "same table, Expanded Forecasts (EBIT 511; uFCF 544 less SBC 125); management's extrapolation of the 2025–2029 plan", as_of: "2025-01-17"}
+  growth_period_years: {value: 6, source: "length of the management forecast (2025–2030)", as_of: "2025-01-17"}
+  stable_roic: {value: 0.10, source: "Judgment: about equal to the cost of capital (model-output.md section 1), so growth after 2030 adds no value. SolarWinds' legacy license business was shrinking and its observability products competed with faster-growing rivals, so excess returns in perpetuity are not assumed", as_of: "2025-02-05"}
+  management_growth: {value: 0.0812, source: "sources/deal-docs/swi-defm14c-2025-merger.md (revenue 796.9 in 2024 to 1,273 in 2030, compounded)", as_of: "2025-01-17"}
+
+peers:
+  - {name: Akamai Technologies, ticker: AKAM, fiscal_period: FY2024, enterprise_value: 18194.4, revenue: 3991.2, ebitda: 1181.8, net_income: 504.9, equity_book: 4878.4, market_cap: 15156.4, growth: 0.047, ebit_margin: 0.1336, debt_ratio: 0.2342, payout: 0.0, source: "sources/peer-filings/peer-facts-2025-02-05.md", as_of: "2025-02-05"}
+  - {name: NetApp, ticker: NTAP, fiscal_period: FY2024 (April), enterprise_value: 24553.1, revenue: 6268.0, ebitda: 1412.0, net_income: 986.0, equity_book: 1146.0, market_cap: 25153.1, growth: -0.015, ebit_margin: 0.1937, debt_ratio: 0.0954, payout: null, source: "sources/peer-filings/peer-facts-2025-02-05.md", as_of: "2025-02-05", note: "NetApp pays a dividend; dividends were not tagged in company facts for this year"}
+  - {name: NetScout Systems, ticker: NTCT, fiscal_period: FY2024 (March), enterprise_value: 1529.7, revenue: 829.5, ebitda: -74.8, net_income: -147.7, equity_book: 1892.1, market_cap: 1769.3, growth: -0.093, ebit_margin: -0.1806, debt_ratio: 0.0782, payout: 0.0, source: "sources/peer-filings/peer-facts-2025-02-05.md", as_of: "2025-02-05", note: "Operating loss includes a goodwill impairment; drops out of EV/EBITDA and P/E"}
+  - {name: OneSpan, ticker: OSPN, fiscal_period: FY2024, enterprise_value: 661.2, revenue: 243.2, ebitda: 53.2, net_income: 57.1, equity_book: 212.5, market_cap: 735.1, growth: 0.034, ebit_margin: 0.1842, debt_ratio: 0.0125, payout: 0.0, source: "sources/peer-filings/peer-facts-2025-02-05.md", as_of: "2025-02-05"}
+  - {name: Open Text, ticker: OTEX, fiscal_period: FY2024 (June), enterprise_value: 13486.9, revenue: 5769.6, net_income: 465.1, equity_book: 4198.2, market_cap: 8080.1, growth: 0.286, ebit_margin: 0.1538, debt_ratio: 0.4528, payout: null, source: "sources/peer-filings/peer-facts-2025-02-05.md", as_of: "2025-02-05", note: "D&A not tagged, so no EBITDA; growth reflects the Micro Focus acquisition; pays a dividend not tagged in company facts"}
+  - {name: Progress Software, ticker: PRGS, fiscal_period: FY2024 (November), enterprise_value: 3943.0, revenue: 753.4, ebitda: 224.9, net_income: 68.4, equity_book: 438.8, market_cap: 2499.4, growth: 0.085, ebit_margin: 0.1646, debt_ratio: 0.3846, payout: 0.4605, source: "sources/peer-filings/peer-facts-2025-02-05.md", as_of: "2025-02-05"}
+  - {name: Qualys, ticker: QLYS, fiscal_period: FY2024, enterprise_value: 5156.1, revenue: 607.6, ebitda: 205.7, net_income: 173.7, equity_book: 477.1, market_cap: 5341.1, growth: 0.096, ebit_margin: 0.3081, debt_ratio: 0.0088, payout: 0.0, source: "sources/peer-filings/peer-facts-2025-02-05.md", as_of: "2025-02-05"}
+  - {name: Teradata, ticker: TDC, fiscal_period: FY2024, enterprise_value: 3097.9, revenue: 1750.0, ebitda: 309.0, net_income: 114.0, equity_book: 133.0, market_cap: 3028.9, growth: -0.045, ebit_margin: 0.1194, debt_ratio: 0.139, payout: 0.0, source: "sources/peer-filings/peer-facts-2025-02-05.md", as_of: "2025-02-05"}
+
+facts:
+  - {id: sponsors-pct-2024-proxy, value: 0.6634, source: "sources/filings/swi-def14a-2024.md Corporate Governance, Certain Sponsor Rights", as_of: "2024-03-28", note: "Silver Lake + Thoma Bravo combined"}
+  - {id: sponsors-pct-2018, value: 0.888, source: "sources/filings/swi-10k-fy2018.md Item 1A, Lead Sponsors have a controlling influence", as_of: "2018-12-31"}
+  - {id: officers-directors-pct, value: 0.0195, source: "sources/filings/swi-def14a-2024.md beneficial ownership table (all executive officers and directors, 3,289,911 shares)", as_of: "2024-03-28"}
+  - {id: sponsor-consent-rights, value: "Each of Silver Lake and Thoma Bravo must give prior written consent, while sponsors collectively own at least 30%, to: change in control; asset deals or joint ventures above $300.0M; debt above $300.0M; liquidation or insolvency; changing board size; hiring or firing the CEO. Each nominates 3 directors while holding at least 20%.", source: "sources/filings/swi-def14a-2024.md Stockholders' Agreement, Silver Lake and Thoma Bravo Approvals", as_of: "2024-04-11"}
+  - {id: transaction-committee, value: "Formed 2023-08-29: William Bock, Easwaran Sundaram, Michael Widmann; formed 'for convenience and efficiency, and not due to any actual or perceived conflict of interest'", source: "sources/deal-docs/swi-defm14c-2025-merger.md Background of the Merger", as_of: "2023-08-29"}
+  - {id: market-check-2023, value: "13 parties approached (12 sponsors, 1 strategic); 9 signed nondisclosure agreements 2023-09-06 to 2023-10-06; 3 indications 2023-10-17 (Party A $13.00 revised from about $14.00 on 2023-08-24, Party B $12.00-$13.00, Party C $12.50); all 3 withdrew 2023-11-17 to 2023-11-23, citing 'the relative early stage of the Company's ongoing transition to a subscription-first business model'", source: "sources/deal-docs/swi-defm14c-2025-merger.md Background of the Merger", as_of: "2023-11-29"}
+  - {id: new-debt-2025, value: "First lien term loan 2,225.0 + revolver 200.0 + second lien term loan 525.0 ($M), all USD, entered 2025-04-16 by the buyer's vehicle", source: "sources/deal-docs/swi-8k-2025-04-16-merger-closing.md Item 1.01", as_of: "2025-04-16"}
+  - {id: deal-total-consideration, value: 3206.0, source: "sources/deal-docs/swi-8k-2025-04-16-merger-closing.md Item 5.01 ($3.206 billion)", as_of: "2025-04-16", note: "$ millions"}
+  - {id: float-nonaffiliate-value, value: 661.3, source: "sources/filings/swi-10k-fy2024.md cover page (shares held by non-affiliates at 2024-06-28)", as_of: "2024-06-28", note: "$ millions"}
+  - {id: parachute-equity-total, value: 34.4, source: "sources/deal-docs/swi-defm14c-2025-merger.md Golden Parachute Compensation (19,936,470 + 7,888,974 + 6,604,759)", as_of: "2025-03-27", note: "$ millions; RSUs at $18.50; double-trigger"}
+  - {id: parachute-cash-severance-total, value: 3.2, source: "sources/deal-docs/swi-defm14c-2025-merger.md Golden Parachute Compensation (2,250,000 + 529,972 + 453,200)", as_of: "2025-03-27", note: "$ millions"}
+  - {id: transaction-bonuses-total, value: 1.2, source: "sources/deal-docs/swi-defm14c-2025-merger.md Golden Parachute Compensation (750,000 + 100,000 + 350,000), single-trigger, payable on consummation", as_of: "2025-03-27", note: "$ millions"}
+  - {id: pay-metrics-2023, value: "2023 bonus plan: 50% revenue, 50% adjusted EBITDA (138% payout). 2023 PSUs: 70% Subscription ARR, 30% revenue. Pay-vs-performance company-selected measure: revenue", source: "sources/filings/swi-def14a-2024.md Compensation Discussion and Analysis", as_of: "2024-04-11"}
+  - {id: subscription-arr-2024, value: 311.7, source: "sources/filings/swi-10k-fy2024.md Item 7 Annual Recurring Revenue (311,663 thousand)", as_of: "2024-12-31", note: "$ millions"}
+  - {id: subscription-arr-2023, value: 233.2, source: "sources/filings/swi-10k-fy2024.md Item 7 (233,176 thousand)", as_of: "2023-12-31"}
+  - {id: total-arr-2024, value: 729.0, source: "sources/filings/swi-10k-fy2024.md Item 7 (728,956 thousand; +6.6%)", as_of: "2024-12-31"}
+  - {id: total-arr-2023, value: 684.1, source: "sources/filings/swi-10k-fy2024.md Item 7 (684,118 thousand)", as_of: "2023-12-31"}
+  - {id: revenue-subscription-2023, value: 234.2, source: "sources/filings/swi-10k-fy2024.md income statement (234,236 thousand)", as_of: "2023-12-31"}
+  - {id: sales-marketing-2024, value: 224.9, source: "sources/filings/swi-10k-fy2024.md income statement (224,876 thousand; 28.2% of revenue)", as_of: "2024-12-31"}
+  - {id: sales-marketing-2023, value: 249.3, source: "sources/filings/swi-10k-fy2024.md income statement (249,265 thousand; 32.9%)", as_of: "2023-12-31"}
+  - {id: sm-decrease-detail-2024, value: "S&M down 24.4 (9.8%): 13.8 from moving product management to R&D, 11.4 lower marketing programs", source: "sources/filings/swi-10k-fy2024.md MD&A Sales and Marketing", as_of: "2024-12-31"}
+  - {id: rd-reorg-increase-2024, value: 13.3, source: "sources/filings/swi-10k-fy2024.md MD&A Research and Development (of the 8.4 total increase)", as_of: "2024-12-31", note: "$ millions"}
+  - {id: acquisitions-cash-2024, value: 0.0, source: "sources/filings/swi-10k-fy2024.md cash flow statement (Acquisitions, net of cash acquired: nil in 2024 and 2023; 6.5 in 2022)", as_of: "2024-12-31"}
+  - {id: corporate-actions-2021, value: "N-able spin-off 2021-07-19 (1 N-able share for 2 SWI shares; N-able opening price $13.00); 1-for-2 reverse split 2021-07-30", source: "sources/filings/swi-10k-fy2023.md Item 5; sources/filings/swi-10k-fy2024.md Item 5 (TSR note)", as_of: "2021-07-30"}
+  - {id: listing-dates, value: "NYSE trading began 2018-10-19; Form 25 delisting filed at 2025-04-16 closing", source: "sources/filings/swi-10k-fy2018.md cover; sources/deal-docs/swi-8k-2025-04-16-merger-closing.md Item 3.01", as_of: "2025-04-16"}
+  - {id: sunburst-customers, value: "About 33,000 Orion customers notified 2020-12-13; believed fewer than 18,000 had an affected installation; over 300,000 customers in total", source: "sources/filings/swi-8k-2020-12-14-sunburst-followup.md", as_of: "2020-12-14"}
+  - {id: cyber-net-expense, value: "Net Cyber Incident expense (proceeds): 2024 10.3, 2023 -2.1, 2022 26.2 ($M); 2022 gross 56.4 less insurance 30.2", source: "sources/filings/swi-10k-fy2024.md Note 15", as_of: "2024-12-31"}
+  - {id: class-action-settlement, value: 26.0, source: "sources/filings/swi-10k-fy2024.md Note 15 (paid 2023-03-02; reimbursed entirely by D&O insurance)", as_of: "2023-03-02", note: "$ millions"}
+  - {id: sec-complaint, value: "SEC complaint vs company and CISO filed 2023-10-30; SDNY granted motion to dismiss in large part; one claim remained", source: "sources/filings/swi-10k-fy2024.md Item 1A", as_of: "2025-02-19"}
+  - {id: ceo-change-2020-12-07, value: "Board appointed Ramakrishna CEO on 2020-12-07 (effective 2021-01-04), before the 2020-12-14 SUNBURST disclosure", source: "sources/filings/swi-8k-2020-12-09-sunburst-disclosure.md", as_of: "2020-12-07"}
+  - {id: ev-ntm-ebitda-history, value: "Goldman average EV/NTM EBITDA, SWI vs selected software cos: 2019 15.9x vs 10.9x; 2020 15.7x vs 10.8x; 2021 14.0x vs 12.0x; 2022 9.9x vs 11.0x; 2023 9.0x vs 11.3x; 2024 8.8x vs 12.8x; 2025 YTD 9.4x vs 14.0x; since IPO 12.2x vs 11.5x", source: "sources/deal-docs/swi-defm14c-2025-merger.md Opinion of Goldman Sachs", as_of: "2025-02-05"}
+  - {id: goldman-premia-study, value: "Premia over undisturbed price, software deals: 25th percentile 19%, 75th percentile 50%", source: "sources/deal-docs/swi-defm14c-2025-merger.md Opinion of Goldman Sachs", as_of: "2025-02-05"}
+  - {id: tsr-2023, value: "Value of $100 invested 2019-12-31: SWI 81 (2020), 57 (2021), 38 (2022), 51 (2023); peer group 142, 190, 135, 211", source: "sources/filings/swi-def14a-2024.md Pay versus Performance", as_of: "2023-12-31"}
+  - {id: fx-currencies, value: "Selling-currency exposures: Euro, British Pound Sterling, Australian Dollar; European subsidiaries' functional currency is the Euro", source: "sources/filings/swi-10k-fy2024.md Item 7A", as_of: "2024-12-31"}
+  - {id: default-spreads-2025-01, value: "Moody's rating / default spread: Germany Aaa 0.00%; Australia Aaa 0.00%; United Kingdom Aa3 0.59%", source: "sources/market-data/country-risk-2025-01-01.json", as_of: "2025-01-01"}
+  - {id: country-erp-scalar, value: 1.3475, source: "sources/market-data/country-risk-2025-01-01.json (country_risk_premium / default_spread for every country with a spread)", as_of: "2025-01-01", note: "derived ratio"}
+  - {id: hist-erp-1928-2022, value: 0.0664, source: "<CC>/01-foundations-and-discount-rates/lesson-06/spreadsheet-histretsp.md (stocks minus T-bonds, 1928-2022, arithmetic; standard error 0.0215; geometric 0.0506)", as_of: "2022-12-31", note: "lesson spreadsheet; used only to show the range"}
+  - {id: employees-2024, value: 2107, source: "sources/filings/swi-10k-fy2024.md Item 1 Human Capital (728 in the US, 1,379 outside the US)", as_of: "2024-12-31"}
+  - {id: premium-over-unaffected, value: 0.219, source: "arithmetic: deal_price 18.50 ÷ share_price 15.18 − 1; Goldman's implied premium table shows 22%", as_of: "2025-02-05"}
+  - {id: ebitda-adjusted-gap, value: 101.9, source: "arithmetic: company.ebitda_adjusted 384.7 − company.ebitda_standardized 282.8", as_of: "2024-12-31"}
+  - {id: net-retention-subscription, value: 99, source: "sources/filings/swi-10k-fy2024.md MD&A Revenue, net retention rate (%)", as_of: "2024-12-31", note: "Subscription net retention rate; 97% at 2023-12-31 (swi-10k-fy2024.md MD&A)"}
+  - {id: maintenance-renewal-rate, value: 97, source: "sources/filings/swi-10k-fy2024.md MD&A Revenue, maintenance renewal rate (%)", as_of: "2024-12-31", note: "Perpetual-license maintenance renewals; history 94% (2019), 91% (2020), 93% (2022), 96% (2023), 97% (2024) from swi-10k-fy2020.md, swi-10k-fy2023.md and swi-10k-fy2024.md MD&A"}
+  - {id: recurring-revenue-share, value: 93.5, source: "sources/filings/swi-10k-fy2024.md MD&A Revenue table (745,104 of 796,895 thousand)", as_of: "2024-12-31", note: "percent of revenue"}
+  - {id: customer-count, value: 300000, source: "sources/filings/swi-10k-fy2024.md Item 1 (over 300,000 customers)", as_of: "2024-12-31", note: "lower bound"}
+  - {id: subscription-revenue, value: 304.5, source: "sources/filings/swi-10k-fy2024.md MD&A Revenue table", as_of: "2024-12-31", note: "38.2% of revenue"}
+  - {id: maintenance-revenue, value: 440.6, source: "sources/filings/swi-10k-fy2024.md MD&A Revenue table", as_of: "2024-12-31", note: "55.3% of revenue"}
+  - {id: license-revenue, value: 51.8, source: "sources/filings/swi-10k-fy2024.md MD&A Revenue table", as_of: "2024-12-31", note: "6.5% of revenue"}
+  - {id: subscription-growth-2024, value: 30.0, source: "sources/filings/swi-10k-fy2024.md MD&A Revenue", as_of: "2024-12-31", note: "percent"}
+  - {id: maintenance-decline-2024, value: -4.6, source: "sources/filings/swi-10k-fy2024.md MD&A Revenue", as_of: "2024-12-31", note: "percent"}
+  - {id: cost-of-revenue-2024, value: 83.3, source: "sources/filings/swi-10k-fy2024.md income statement (83,307 thousand)", as_of: "2024-12-31", note: "10.5% of revenue"}
+  - {id: operating-expenses-2024, value: 505.2, source: "sources/filings/swi-10k-fy2024.md income statement (505,169 thousand)", as_of: "2024-12-31", note: "63.4% of revenue"}
+  - {id: operating-expenses-share-2024, value: 63.4, source: "sources/filings/swi-10k-fy2024.md MD&A", as_of: "2024-12-31", note: "percent of revenue"}
+  - {id: industry-software-levered-beta, value: 1.24, source: "sources/market-data/industry-betas-2025-01-05.json Software (System & Application).beta", as_of: "2025-01-05"}
+  - {id: industry-software-de-ratio, value: 0.049, source: "sources/market-data/industry-betas-2025-01-05.json Software (System & Application).de_ratio", as_of: "2025-01-05"}
+  - {id: industry-software-unlevered-raw, value: 1.1960, source: "sources/market-data/industry-betas-2025-01-05.json Software (System & Application).unlevered_beta", as_of: "2025-01-05", note: "before cash correction"}
+  - {id: industry-software-cash-share, value: 0.0174, source: "sources/market-data/industry-betas-2025-01-05.json Software (System & Application).cash_to_firm_value", as_of: "2025-01-05"}
+  - {id: industry-beta-all-market, value: 0.82, source: "sources/market-data/industry-betas-2025-01-05.json Total Market.unlevered_beta_cash_corrected", as_of: "2025-01-05"}
+  - {id: industry-beta-software-internet, value: 1.60, source: "sources/market-data/industry-betas-2025-01-05.json Software (Internet).unlevered_beta_cash_corrected", as_of: "2025-01-05", note: "illustration only, not an input"}
+  - {id: industry-correlation-software-2024, value: 0.3374, source: "<CC>/01-foundations-and-discount-rates/lesson-10/spreadsheet-totalbeta24.md, Software (System & Application) average correlation", as_of: "2024-01-05", note: "illustration only; one year older than the analysis date; 351 firms"}
+  - {id: total-beta-illustration, value: 4.95, source: "arithmetic: model-output §1 levered beta 1.6714 ÷ 0.3374", as_of: "2025-02-05", note: "illustration, not used"}
+  - {id: total-coe-illustration, value: 28.8, source: "arithmetic: 4.43% + 4.95 × 4.92%", as_of: "2025-02-05", note: "percent; illustration, not used"}
+  - {id: beta-debt-uplift-pct, value: 37.0, source: "arithmetic: (1.6714 − 1.22) ÷ 1.22", as_of: "2025-02-05", note: "percent; debt's share of levered beta is 27.0%"}
+  - {id: term-loan-rate-2023, value: 9.11, source: "sources/filings/swi-10k-fy2024.md note 9 debt table (effective rate at 2023-12-31)", as_of: "2023-12-31", note: "percent"}
+  - {id: lease-minimum-payments, value: 53.6, source: "sources/filings/swi-10k-fy2024.md note 7 (53,592 thousand)", as_of: "2024-12-31"}
+  - {id: lease-imputed-interest, value: 4.2, source: "sources/filings/swi-10k-fy2024.md note 7 (4,227 thousand)", as_of: "2024-12-31"}
+  - {id: lease-discount-rate, value: 4.8, source: "sources/filings/swi-10k-fy2024.md note 7, weighted-average discount rate (%)", as_of: "2024-12-31"}
+  - {id: lease-remaining-term, value: 3.6, source: "sources/filings/swi-10k-fy2024.md note 7, weighted-average remaining term (years)", as_of: "2024-12-31"}
+  - {id: ppe-depreciation-2024, value: 8.7, source: "sources/filings/swi-10k-fy2024.md note 6 (8,702 thousand)", as_of: "2024-12-31", note: "property and equipment only"}
+  - {id: equity-weight-market, value: 66.97, source: "model-output.md §1 (100% less debt ratio 33.03%)", as_of: "2025-02-05", note: "percent"}
+  - {id: acquisition-and-other-costs-2022-2024, value: "1.145 (2024); 2.612 (2023); 0.540 (2022)", source: "sources/filings/swi-10k-fy2024.md MD&A non-GAAP reconciliation", as_of: "2024-12-31", note: "$ millions"}
+  - {id: ga-expense-2024, value: 125.8, source: "sources/filings/swi-10k-fy2024.md income statement (125,848 thousand)", as_of: "2024-12-31", note: "Not allocated by product; one segment, note 16"}
+  - {id: gs-perpetuity-growth-range, value: "2%-3%", source: "sources/deal-docs/swi-defm14c-2025-merger.md Opinion of Goldman Sachs, DCF", as_of: "2025-02-07"}
+  - {id: goldman-dcf-discount-rate-range, value: "9%-11%", source: "sources/deal-docs/swi-defm14c-2025-merger.md Opinion of Goldman Sachs", as_of: "2025-02-07"}
+  - {id: jefferies-perpetuity-growth-range, value: "2.5%-3.5%", source: "sources/deal-docs/swi-defm14c-2025-merger.md Opinion of Jefferies", as_of: "2025-02-07"}
+  - {id: jefferies-dcf-discount-rate-range, value: "10.70%-11.70%", source: "sources/deal-docs/swi-defm14c-2025-merger.md Opinion of Jefferies", as_of: "2025-02-07"}
+  - {id: interest-sensitivity-100bp, value: 12.4, source: "sources/filings/swi-10k-fy2024.md Item 7A", as_of: "2024-12-31", note: "$M a year per 1 percentage point; no interest rate swaps (Item 1A)"}
+  - {id: fx-translation-adjustment-2024, value: -39.5, source: "sources/filings/swi-10k-fy2024.md statement of comprehensive income (39,484 thousand; 2023 +19.9; 2022 -49.3)", as_of: "2024-12-31"}
+  - {id: offshore-cash, value: "24.8 ($M), 55.2% in euros", source: "sources/filings/swi-10k-fy2024.md MD&A Liquidity", as_of: "2024-12-31"}
+  - {id: cyber-insurance-limits, value: "cyber 15; D&O 50 ($M)", source: "sources/filings/swi-10k-fy2024.md note 15, Insurance Coverage", as_of: "2024-12-31"}
+  - {id: cyber-costs-2022-2024, value: "gross 56.435/17.714/10.256; insurance proceeds 30.202/19.798/0; net 26.233/-2.084/10.256 (2022/2023/2024, $M)", source: "sources/filings/swi-10k-fy2024.md note 15, Expenses Incurred", as_of: "2024-12-31", note: "$26M class-action settlement paid 2023-03-02, reimbursed by D&O insurance"}
+  - {id: revenue-2019-2021, value: "669.1 / 716.8 / 718.6 ($M)", source: "sources/filings/swi-multi-year-financials.md", as_of: "2021-12-31", note: "Restated series without N-able; the FY2020 10-K itself reports 1,019.2 for 2020 including N-able"}
+  - {id: debt-principal-2017, value: "2358.1 (first lien 1678.1, second lien 680.0); book equity deficit -729.8", source: "sources/filings/swi-10k-fy2018.md Debt note; selected financial data", as_of: "2017-12-31"}
+  - {id: debt-principal-2018, value: 1970.1, source: "sources/filings/swi-10k-fy2018.md Debt note; $315.0 of second lien repaid with IPO proceeds", as_of: "2018-12-31"}
+  - {id: ipo-2018, value: "25.0M shares at $15.00; gross proceeds 375.0 ($M)", source: "sources/filings/swi-10k-fy2018.md Item 5", as_of: "2018-10-18"}
+  - {id: cash-flow-items-2024, value: "cash taxes paid 61.5; cash interest paid 104.5; operating cash flow 188.3 ($M)", source: "sources/filings/swi-10k-fy2024.md cash flow statement", as_of: "2024-12-31"}
+  - {id: sponsor-voting-power-2025-02, value: "Principal Stockholders (Silver Lake and Thoma Bravo funds), 111,564,519 shares, about 65% of the vote, delivered written consent on 2025-02-07 right after signing; no stockholder vote", source: "sources/deal-docs/swi-defm14c-2025-merger.md Written Consent", as_of: "2025-02-07"}
+  - {id: peer-ebit-to-ev, value: "peer range -9.79% to 6.78%, median 4.29%; SolarWinds 5.74% (208.4 / 3,630.6)", source: "arithmetic from peers[] (ebit_margin x revenue / enterprise_value) and model-output §7", as_of: "2025-02-05"}
+  - {id: altman-10yr-default-probabilities, value: "AAA 0.07%, AA 0.51%, A+ 0.60%, A 0.66%, A- 2.50%, BBB 7.54%, BB 16.63%, B+ 25.00%, B 36.80%, B- 45.00%, CCC 59.01%, CC 70.00%, C 85.00%", source: "<CC>/03-financing-mix-and-dividends/lesson-21/slides.md (Altman table)", as_of: "2018-03-01", note: "Ten-year default rates by rating; also coded in model.py for section 9"}
+  - {id: peer-debt-ratio-median, value: 0.1172, source: "arithmetic: median of peers[].debt_ratio (average of 0.0954 and 0.139)", as_of: "2025-02-05"}
+  - {id: fcff-less-aftertax-interest, value: "127.7 (2025), 173.7 (2026), 212.7 (2027)", source: "arithmetic: forecast.years fcff minus interest_expense 112.4 x 0.75 = 84.3", as_of: "2025-01-15", note: "paydown path, lesson 22"}
+  - {id: market-check-2024, value: "more than 20 financial and 14 strategic suitors contacted Feb 2024-Jan 2025; none reached an indication of interest", source: "sources/deal-docs/swi-defm14c-2025-merger.md Background of the Merger", as_of: "2025-01-31"}
+  - {id: interest-rate-history, value: "effective rate 9.11% (2023-12-31), 7.11% (2024-12-31)", source: "sources/filings/swi-10k-fy2024.md note 9 and Item 7A", as_of: "2024-12-31"}
+  - {id: revolver-tranches, value: "$130.0M revolver = $17.5M US dollar + $112.5M multicurrency", source: "sources/filings/swi-10k-fy2024.md note 9", as_of: "2024-12-31"}
+  - {id: div-2020, value: 0, source: "sources/filings/swi-10k-fy2020.md Item 5 (never declared or paid)", as_of: "2021-02-24"}
+  - {id: special-dividend-2024-per-share, value: 1.00, source: "sources/filings/swi-10k-fy2024.md Item 5 and note 2 (record 2024-04-03, paid 2024-04-15)", as_of: "2024-04-15", note: "aggregate 168.2 is in company.history"}
+  - {id: dividends-2021-2024-total, value: 405.4, source: "arithmetic: facts.special-dividend-2021 237.2 + company.history 2024 dividends 168.2", as_of: "2024-12-31"}
+  - {id: nable-dividend-to-swi, value: 238.2, source: "sources/filings/swi-10k-fy2023.md note on the Separation", as_of: "2021-07-19", note: "One-time dividend N-able paid SWI; plus 324.7 to repay intercompany debt"}
+  - {id: ni-2020-2021, value: "132.7 (2020); -51.4 (2021)", source: "sources/filings/swi-multi-year-financials.md", as_of: "2021-12-31", note: "Include N-able; not comparable"}
+  - {id: price-2024-02-14, value: 12.89, source: "sources/filings/swi-10k-fy2023.md Item 5", as_of: "2024-02-14", note: "Closest filed price before the 2024-04-03 record date"}
+  - {id: price-2021-02-24, value: 15.72, source: "sources/filings/swi-10k-fy2020.md Item 5", as_of: "2021-02-24", note: "Pre-spin, pre-reverse-split"}
+  - {id: holders-of-record, value: "33 on 2025-02-13; 39 on 2024-02-12", source: "sources/filings/swi-10k-fy2024.md and swi-10k-fy2023.md Item 5", as_of: "2025-02-13"}
+  - {id: withholding-buyback-2020-2021, value: "12.1 (2020); 14.2 (2021)", source: "sources/filings/swi-10k-fy2020.md and swi-10k-fy2023.md cash flow statements (repurchase of common stock and incentive restricted stock)", as_of: "2021-12-31", note: "shares withheld for employee taxes"}
+  - {id: spin-distribution-2021, value: 505.6, source: "sources/filings/swi-10k-fy2023.md cash flow statement (distribution from spin-off of discontinued operations, net)", as_of: "2021-12-31"}
+  - {id: cash-end-2021, value: 732.1, source: "sources/filings/swi-10k-fy2023.md cash flow statement (end of period)", as_of: "2021-12-31"}
+  - {id: shares-2019-02-15, value: 309.9, source: "sources/filings/swi-10k-fy2018.md cover page (309,942,574 shares)", as_of: "2019-02-15", note: "pre-reverse-split; 155.0 after the 2-for-1"}
+  - {id: sector-software-payout, value: "payout 27.22%; cash return/net income 80.36%; net cash returned/FCFE pre-debt 86.53%; 351 firms", source: "<CC>/04-dividends-and-valuation/lesson-28/spreadsheet-divfcfe24.md, Software (System & Application)", as_of: "2025-01-01"}
+  - {id: payout-regression-2014, value: "payout = 0.649 - 0.296*beta - 0.800*growth + 0.300*debt/capital", source: "<CC>/04-dividends-and-valuation/lesson-28/slides.md", as_of: "2014-01-01", note: "R-squared 19.6% per transcript"}
+  - {id: predicted-payout-swi, value: 0.188, source: "arithmetic: payout-regression-2014 with beta 1.6714, growth 0.0812, debt/capital 0.3303", as_of: "2025-02-05"}
+  - {id: premium-90day-vwap, value: 0.35, source: "sources/deal-docs/swi-defm14c-2025-merger.md (board considerations)", as_of: "2025-02-06", note: "over the 90-day VWAP; 28% over 1M VWAP 14.41, 32% over 3M VWAP 14.06 (Goldman)"}
+  - {id: tax-benefit-2024, value: "-8.1 benefit on pre-tax income 103.8", source: "sources/filings/swi-10k-fy2024.md income statement", as_of: "2024-12-31"}
+  - {id: revenue-2021, value: 718.6, source: "sources/filings/swi-10k-fy2023.md income statement (continuing operations)", as_of: "2021-12-31"}
+  - {id: plan-reinvestment, value: "-163.1 cumulative 2025-2030 (after-tax EBIT at 25% less FCFF); revenue added 476.1", source: "arithmetic from forecast.years", as_of: "2025-01-17"}
+  - {id: peer-median-growth-margin, value: "growth 4.05%; EBIT margin 15.92%", source: "arithmetic: medians of peers[].growth and peers[].ebit_margin (8 peers)", as_of: "2025-02-05"}
+  - {id: payout-ratios-2024, value: "dividends/net income 150%; (dividends+buybacks)/net income 174%; cash returned/FCFE 153%; 2023-24 combined 115%", source: "arithmetic from company.history and model-output §5", as_of: "2024-12-31"}
+  - {id: customers-over-100k-arr, value: "1148 (2024); 979 (2023)", source: "sources/filings/swi-10k-fy2024.md MD&A, customers with Total ARR above $100,000", as_of: "2024-12-31"}
+  - {id: gs-dcf-range, value: "14.30-23.70", source: "sources/deal-docs/swi-defm14c-2025-merger.md Opinion of Goldman Sachs, Illustrative DCF (implied exit 6.5x-9.8x NTM Adjusted EBITDA)", as_of: "2025-02-07", note: "$ per share"}
+  - {id: jefferies-dcf-range, value: "14.70-19.70", source: "sources/deal-docs/swi-defm14c-2025-merger.md Opinion of Jefferies, DCF", as_of: "2025-02-07", note: "$ per share"}
+  - {id: jefferies-public-comps-range, value: "EV/CY2025E adj. EBITDA 9x-12x gives $14.80-$21.60; EV/CY2026E 8x-11x gives $14.10-$21.40", source: "sources/deal-docs/swi-defm14c-2025-merger.md Opinion of Jefferies, Selected Public Companies Analysis", as_of: "2025-02-07", note: "applied to company-adjusted EBITDA"}
+  - {id: unaffected-price-record, value: "52-week high 15.18; 52-week low 10.59; median analyst target 15.00", source: "sources/deal-docs/swi-defm14c-2025-merger.md Opinion of Goldman Sachs, reference prices", as_of: "2025-02-05", note: "the unaffected price was the 52-week high"}
+  - {id: window-shop-end, value: "2025-03-09", source: "sources/deal-docs/swi-defm14c-2025-merger.md Q&A on alternative proposals", as_of: "2025-02-07", note: "$119.2M termination fee"}
+  - {id: adviser-fees-and-conflicts, value: "Goldman Sachs fee about 42 (contingent on closing); Jefferies fee 6.25; Jefferies earned about 39 from Silver Lake and Thoma Bravo and affiliates in the prior two years ($M)", source: "sources/deal-docs/swi-defm14c-2025-merger.md, Opinions of Goldman Sachs and Jefferies, fee paragraphs", as_of: "2025-02-07"}
+  - {id: lesson-side-calculations-35, value: "peer EV/revenue regressed on EBIT margin across 8 peers: R-squared 0.42, implied $18.09; implied price at peer-median P/E $17.33; EV/EBITDA median without Qualys 15.40x, implied $19.40", source: "arithmetic from peers[] and model-output §7", as_of: "2025-02-05"}
+  - {id: deal-ev-multiples, value: "deal enterprise value 4,200.3 (18.50 x 171.6 + 1,285.0 - 259.3 + options at 18.50 approximately); 14.85x standardized EBITDA; 5.27x revenue", source: "arithmetic from ledger", as_of: "2025-02-07"}
+  - {id: special-dividend-2021, value: 237.2, source: "sources/filings/swi-10k-fy2023.md Item 5 (declared 2021-07-30, $1.50 a share, $237.2 million, paid 2021-08-24) and equity statement (237,214 thousand)", as_of: "2021-08-24", note: "$ millions; $1.50 a share, record 2021-08-09, paid after the 1-for-2 reverse split"}
+  - {id: fundamental-growth-2024, value: "-0.64% reported basis (-9.66% x 6.66%); 1.61% excluding acquisition amortization (24.18% x 6.66%)", source: "arithmetic: model-output.md section 8 reinvestment rate times ROIC", as_of: "2024-12-31"}
+  - {id: fundamental-growth-equity-2024, value: "equity reinvestment rate -13.5% ((net capex -53.9 + change in working capital 38.8 - net new debt 0.0) / net income 111.9); growth -1.1% (-13.5% x ROE 7.99%)", source: "arithmetic: company.history 2024 and model-output.md section 8 ROE", as_of: "2024-12-31"}
+  - {id: forecast-2030-detail, value: "2030: EBIT 511; cash taxes 130 (25% of EBIT would be 127.75); D&A 25; capital expenditures 27; change in deferred revenue +46; change in net working capital -3; unlevered free cash flow 544 before stock-based compensation 125", source: "sources/deal-docs/swi-defm14c-2025-merger.md Certain Company Financial Forecasts (summary table)", as_of: "2025-01-17", note: "$ millions; why 2030 FCFF (419) exceeds after-tax EBIT: deferred revenue growth, not depreciation"}
+  - {id: sbc-with-payroll-taxes-2024, value: 78.3, source: "sources/filings/swi-10k-fy2024.md Adjusted EBITDA reconciliation (stock-based compensation expense and related employer-paid payroll taxes, 78,340 thousand)", as_of: "2024-12-31", note: "$ millions; stock-based compensation alone is company.sbc 76.5"}
+  - {id: diluted-shortcut-overstatement, value: "0.86 per share (13.86 diluted-share shortcut - 13.00); 1.09 per share if the 187.0 option and RSU claim were omitted entirely (187.0 / 171.6); 5.67 per share = 18.67 - 13.00 terminal-value gap after discounting and dividing by basic shares", source: "arithmetic: model-output.md section 6 and section 7", as_of: "2025-02-05"}

@@ -1,7 +1,7 @@
 {
-  "as_of": "2026-01-01",
-  "fetched": "2026-10-24",
-  "source_url": "https://pages.stern.nyu.edu/~adamodar/pc/ratings.xls",
+  "as_of": "2025-01-01",
+  "fetched": "2026-10-25",
+  "source_url": "https://pages.stern.nyu.edu/~adamodar/pc/archives/ratings24.xls",
   "note": "Rows in ascending coverage; a firm gets the last row whose min_coverage its coverage exceeds. large = market cap above about $5B. Spreads are over the 10-year Treasury, so pre-tax cost of debt = Treasury rate + spread.",
   "large": [
     {
@@ -12,72 +12,72 @@
     {
       "min_coverage": 0.2,
       "rating": "C2/C",
-      "spread": 0.16
+      "spread": 0.155
     },
     {
       "min_coverage": 0.65,
       "rating": "Ca2/CC",
-      "spread": 0.1261
+      "spread": 0.101
     },
     {
       "min_coverage": 0.8,
       "rating": "Caa/CCC",
-      "spread": 0.0885
+      "spread": 0.0728
     },
     {
       "min_coverage": 1.25,
       "rating": "B3/B-",
-      "spread": 0.0509
+      "spread": 0.0442
     },
     {
       "min_coverage": 1.5,
       "rating": "B2/B",
-      "spread": 0.0321
+      "spread": 0.03
     },
     {
       "min_coverage": 1.75,
       "rating": "B1/B+",
-      "spread": 0.0275
+      "spread": 0.0261
     },
     {
       "min_coverage": 2.0,
       "rating": "Ba2/BB",
-      "spread": 0.0184
+      "spread": 0.0183
     },
     {
       "min_coverage": 2.25,
       "rating": "Ba1/BB+",
-      "spread": 0.0138
+      "spread": 0.0155
     },
     {
       "min_coverage": 2.5,
       "rating": "Baa2/BBB",
-      "spread": 0.0111
+      "spread": 0.012
     },
     {
       "min_coverage": 3.0,
       "rating": "A3/A-",
-      "spread": 0.0089
+      "spread": 0.0095
     },
     {
       "min_coverage": 4.25,
       "rating": "A2/A",
-      "spread": 0.0078
+      "spread": 0.0085
     },
     {
       "min_coverage": 5.5,
       "rating": "A1/A+",
-      "spread": 0.007
+      "spread": 0.0077
     },
     {
       "min_coverage": 6.5,
       "rating": "Aa2/AA",
-      "spread": 0.0055
+      "spread": 0.006
     },
     {
       "min_coverage": 8.5,
       "rating": "Aaa/AAA",
-      "spread": 0.004
+      "spread": 0.0045
     }
   ],
   "small": [
@@ -89,72 +89,72 @@
     {
       "min_coverage": 0.5,
       "rating": "C2/C",
-      "spread": 0.16
+      "spread": 0.155
     },
     {
       "min_coverage": 0.8,
       "rating": "Ca2/CC",
-      "spread": 0.1261
+      "spread": 0.101
     },
     {
       "min_coverage": 1.25,
       "rating": "Caa/CCC",
-      "spread": 0.0885
+      "spread": 0.0728
     },
     {
       "min_coverage": 1.5,
       "rating": "B3/B-",
-      "spread": 0.0509
+      "spread": 0.0442
     },
     {
       "min_coverage": 2.0,
       "rating": "B2/B",
-      "spread": 0.0321
+      "spread": 0.03
     },
     {
       "min_coverage": 2.5,
       "rating": "B1/B+",
-      "spread": 0.0275
+      "spread": 0.0261
     },
     {
       "min_coverage": 3.0,
       "rating": "Ba2/BB",
-      "spread": 0.0184
+      "spread": 0.0183
     },
     {
       "min_coverage": 3.5,
       "rating": "Ba1/BB+",
-      "spread": 0.0138
+      "spread": 0.0155
     },
     {
       "min_coverage": 4.0,
       "rating": "Baa2/BBB",
-      "spread": 0.0111
+      "spread": 0.012
     },
     {
       "min_coverage": 4.5,
       "rating": "A3/A-",
-      "spread": 0.0089
+      "spread": 0.0095
     },
     {
       "min_coverage": 6.0,
       "rating": "A2/A",
-      "spread": 0.0078
+      "spread": 0.0085
     },
     {
       "min_coverage": 7.5,
       "rating": "A1/A+",
-      "spread": 0.007
+      "spread": 0.0077
     },
     {
       "min_coverage": 9.5,
       "rating": "Aa2/AA",
-      "spread": 0.0055
+      "spread": 0.006
     },
     {
       "min_coverage": 12.5,
       "rating": "Aaa/AAA",
-      "spread": 0.004
+      "spread": 0.0045
     }
   ],
   "financial": [
@@ -166,72 +166,150 @@
     {
       "min_coverage": 0.05,
       "rating": "C2/C",
-      "spread": 0.16
+      "spread": 0.155
     },
     {
       "min_coverage": 0.1,
       "rating": "Ca2/CC",
-      "spread": 0.1261
+      "spread": 0.101
     },
     {
       "min_coverage": 0.2,
       "rating": "Caa/CCC",
-      "spread": 0.0885
+      "spread": 0.0728
     },
     {
       "min_coverage": 0.3,
       "rating": "B3/B-",
-      "spread": 0.0509
+      "spread": 0.0442
     },
     {
       "min_coverage": 0.4,
       "rating": "B2/B",
-      "spread": 0.0321
+      "spread": 0.03
     },
     {
       "min_coverage": 0.5,
       "rating": "B1/B+",
-      "spread": 0.0275
+      "spread": 0.0261
     },
     {
       "min_coverage": 0.6,
       "rating": "Ba2/BB",
-      "spread": 0.0184
+      "spread": 0.0183
     },
     {
       "min_coverage": 0.75,
       "rating": "Ba1/BB+",
-      "spread": 0.0138
+      "spread": 0.0155
     },
     {
       "min_coverage": 0.9,
       "rating": "Baa2/BBB",
-      "spread": 0.0111
+      "spread": 0.012
     },
     {
       "min_coverage": 1.2,
       "rating": "A3/A-",
-      "spread": 0.0089
+      "spread": 0.0095
     },
     {
       "min_coverage": 1.5,
       "rating": "A2/A",
-      "spread": 0.0078
+      "spread": 0.0085
     },
     {
       "min_coverage": 2.0,
       "rating": "A1/A+",
-      "spread": 0.007
+      "spread": 0.0077
     },
     {
       "min_coverage": 2.5,
       "rating": "Aa2/AA",
-      "spread": 0.0055
+      "spread": 0.006
     },
     {
       "min_coverage": 3.0,
       "rating": "Aaa/AAA",
-      "spread": 0.004
+      "spread": 0.0045
     }
-  ]
+  ],
+  "utilities": [
+    {
+      "min_coverage": -100000.0,
+      "rating": "D2/D",
+      "spread": 0.19
+    },
+    {
+      "min_coverage": 0.2,
+      "rating": "C2/C",
+      "spread": 0.155
+    },
+    {
+      "min_coverage": 0.5,
+      "rating": "Ca2/CC",
+      "spread": 0.101
+    },
+    {
+      "min_coverage": 0.75,
+      "rating": "Caa/CCC",
+      "spread": 0.0728
+    },
+    {
+      "min_coverage": 1.0,
+      "rating": "B3/B-",
+      "spread": 0.0442
+    },
+    {
+      "min_coverage": 1.2,
+      "rating": "B2/B",
+      "spread": 0.03
+    },
+    {
+      "min_coverage": 1.4,
+      "rating": "B1/B+",
+      "spread": 0.0261
+    },
+    {
+      "min_coverage": 1.6,
+      "rating": "Ba2/BB",
+      "spread": 0.0183
+    },
+    {
+      "min_coverage": 1.8,
+      "rating": "Ba1/BB+",
+      "spread": 0.0155
+    },
+    {
+      "min_coverage": 2.0,
+      "rating": "Baa2/BBB",
+      "spread": 0.012
+    },
+    {
+      "min_coverage": 2.25,
+      "rating": "A3/A-",
+      "spread": 0.0095
+    },
+    {
+      "min_coverage": 3.0,
+      "rating": "A2/A",
+      "spread": 0.0085
+    },
+    {
+      "min_coverage": 3.5,
+      "rating": "A1/A+",
+      "spread": 0.0077
+    },
+    {
+      "min_coverage": 4.0,
+      "rating": "Aa2/AA",
+      "spread": 0.006
+    },
+    {
+      "min_coverage": 4.5,
+      "rating": "Aaa/AAA",
+      "spread": 0.0045
+    }
+  ],
+  "requested_as_of": "2025-02-05"
 }

@@ -36,11 +36,13 @@ Supporting files in this skill folder:
 | `tools/validate-ledger.py` | Checks `inputs.yaml` for missing fields, missing sources, and broken identities. |
 | `tools/model.py` | Cost of capital, optimal debt, value of moving, FCFE vs. cash returned, DCF, multiples. |
 | `tools/check-walkthrough.py` | Confirms every number in `walkthrough.md` traces to the ledger or the model output. |
-| `examples/solarwinds-inputs.yaml` | A test fixture for the tools, not a reference valuation. Its real figures cite the SolarWinds project files in this repo; the rest are marked `source: placeholder`. |
+| `tools/fetch-peer-facts.py` | Peer fundamentals from SEC XBRL company facts plus each peer's closing price on the analysis date, as a source document for `peers`. |
+
+CI runs the validator, the model and the walkthrough check on every company folder's `inputs.yaml`, and fails if a committed `model-output.md` no longer matches its ledger. `company-valuations/solarwinds/` is the reference run.
 
 ## Rules that hold for the whole run
 
-1. **Ledger first.** No number appears in a lesson answer, the report, or the walkthrough unless it is in `inputs.yaml` (an input) or `model-output.md` (a computed result). If a step needs a number that isn't there yet, add it to the ledger with its source, then use it.
+1. **Ledger first.** No number appears in a lesson answer, the report, or the walkthrough unless it is in `inputs.yaml` (an input) or `model-output.md` (a computed result). If a step needs a number that isn't there yet, add it to the ledger with its source, then use it. Numbers that are context rather than model inputs (customers affected, headcount, a past dividend) go in the `facts` list.
 2. **Run the model after every ledger change.** `python3 .claude/skills/value-company/tools/model.py <CC>/company-valuations/<slug>/inputs.yaml > <CC>/company-valuations/<slug>/model-output.md`. Lesson answers quote the model output; they do not recompute by hand.
 3. **Walkthrough sections are written when the step is done, not at the end.** Each phase below says when to append. Follow `walkthrough-template.md` exactly.
 4. **Corrections go to the ledger, then forward.** When a later step finds an earlier number wrong: fix `inputs.yaml`, rerun the model, add a dated line to the corrections log in `README.md`, and add a dated note under the affected lesson answers. Do not silently rewrite earlier answers.
@@ -48,7 +50,7 @@ Supporting files in this skill folder:
 6. **Never read `.mp4` files.** Transcripts are the `.md` with the same stem.
 7. **Sources are documents, not search results.** A fact from a filing is cited to the file in `sources/` and the note or section inside it. A fact from the web is fetched, saved into `sources/`, and cited from there.
 8. **Branch, PR, admin merge.** Direct push to `main` is blocked.
-9. **No placeholders.** A number that can't be sourced is omitted (listed under `meta.omitted`) or marked `estimate: true` with a range and a source that says what the estimate rests on. `source: placeholder` exists only for the skill's test fixture; the validator rejects it anywhere else.
+9. **No placeholders.** A number that can't be sourced is omitted (listed under `meta.omitted`) or marked `estimate: true` with a range and a source that says what the estimate rests on. The validator rejects `source: placeholder`.
 
 ## Scope argument
 
@@ -67,6 +69,7 @@ Ask once: **"Which company?"** Then, from the company's own filings or site, set
 - Name, ticker or none, legal form, home country, reporting currency, fiscal year end.
 - **Type**: `public` (listed, files with a regulator), `delisted` (filings exist up to a date, no live price), `private` (no public filings), `foreign-public` (listed outside the US).
 - **Base year**: the latest full fiscal year with a complete set of statements.
+- **Analysis date**: the date every market input and the share price must come from. For a listed company, today. For a delisted company, the last unaffected trading day before the deal was announced or leaked (the fairness opinion usually names it), so the value can be compared with both the unaffected price and the deal price on the rates that held when the deal was struck. Valuing a past deal with today's rates is the mistake this rule prevents; the validator rejects a share price more than 14 days from the analysis date.
 - **Analysis currency** and the reason (lesson 5).
 - Any event that changes how the numbers should be read (pending sale, recent spin-off, restatement).
 
@@ -84,7 +87,7 @@ Follow `source-plans.md` for the company's type. Produce:
 - `sources/<group>/<file>.md` for each document (filings, peer filings, market data), converted to markdown.
 - `sources/README.md`: a manifest listing every file, what it is, where it came from, and when it was fetched. Also list what could not be obtained and why.
 - Market data snapshot. Never use a number from a lesson spreadsheet or a past valuation for current market data; those carry the year they were built (the lesson 18 ratings table is from 2013).
-  1. Run `python3 scripts/refresh-market-data.py` (needs `pip install xlrd openpyxl`). It pulls Damodaran's current ERP workbook, ratings table, country risk and industry betas, plus the latest FRED closes, into `03-corporate-finance/03-3-supplemental-data/`, then checks every file's age. If a fetch fails, run `python3 scripts/refresh-market-data.py --check`. A stale file stops the run; tell the user which source broke rather than falling back to an older number.
+  1. Run `python3 scripts/refresh-market-data.py` (needs `pip install xlrd openpyxl`). For an analysis date in the past, run `python3 scripts/refresh-market-data.py --as-of <analysis_date> --out <slug>/sources/market-data/` instead: it reads that month's ERP workbook, the FRED closes on or before the date, and the January editions of the other datasets from Damodaran's archive, and never touches the shared snapshot. Rename each file with its `as_of` date, then skip to step 3. It pulls Damodaran's current ERP workbook, ratings table, country risk and industry betas, plus the latest FRED closes, into `03-corporate-finance/03-3-supplemental-data/`, then checks every file's age. If a fetch fails, run `python3 scripts/refresh-market-data.py --check`. A stale file stops the run; tell the user which source broke rather than falling back to an older number.
   2. Copy `ratings-spreads.json` to `sources/market-data/ratings-spreads-<as_of>.json` and point `market.ratings_table` at it. Save the rates you use to `sources/market-data/rates-<analysis_date>.md`, showing both the monthly Damodaran figures and the latest FRED close.
   3. Fill the rate fields from `market-rates.json`:
      - `govt_bond_rate`: the latest 10-year close (`fred_latest.treasury_10y`), dated by its own date.
