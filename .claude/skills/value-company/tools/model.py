@@ -19,7 +19,7 @@ names in market.ratings_table, so every valuation keeps the table it was run wit
 
 Everything printed is computed from the ledger. Nothing here is a judgment call; the judgment
 calls are the modeling_choices block in the ledger, which this script reports but does not make.
-Method follows company-valuations/solarwinds/tools/capital-structure-rerun.py, generalized.
+Generalized from the 2026-10 SolarWinds capital-structure rerun, which this model replaced.
 """
 import json
 import os
@@ -100,6 +100,12 @@ def wacc_at(d, V, numerator, bu, rf, tb, erp, t, table):
     bl = bu * (1 + (1 - teff) * d / (1 - d)) if d < 1 else float("inf")
     ke = rf + bl * erp
     return (1 - d) * ke + d * kd * (1 - teff), (numerator / interest if D else None), rating, kd
+
+
+# Ten-year cumulative default rates by rating, Altman's study of bonds, as tabled in lesson 21's slides.
+# BB+ is not in the study and takes BB's rate; D is certain default.
+ALTMAN_DEFAULT = {"AAA": 0.0007, "AA": 0.0051, "A+": 0.0060, "A": 0.0066, "A-": 0.0250, "BBB": 0.0754, "BB+": 0.1663,
+                  "BB": 0.1663, "B+": 0.25, "B": 0.368, "B-": 0.45, "CCC": 0.5901, "CC": 0.70, "C": 0.85, "D": 1.0}
 
 
 def optimum(V, numerator, bu, rf, tb, erp, t, table):
@@ -196,7 +202,11 @@ def main(path):
         print("| Effective tax benefit on interest | {} | interest exceeds operating income, so only part of it is deductible |".format(pct(teff)))
     print("| After-tax cost of debt | {} | pre-tax × (1 − t) |".format(pct(kd * (1 - teff))))
     print("| **Cost of capital (WACC)** | **{}** | E/V × ke + D/V × kd × (1 − t) |".format(pct(wacc)))
-    Eb, Db = L.num("company.equity_book"), (L.num("company.debt_book") or L.num("company.debt_face"))
+    # Book debt on the same definition as market debt: borrowings plus leases and other debt-like commitments
+    Eb = L.num("company.equity_book")
+    Db = (L.num("company.debt_book") or L.num("company.debt_face"))
+    if Db is not None:
+        Db += L.num("company.lease_debt", 0.0) + L.num("company.off_balance_sheet_debt", 0.0)
     if Eb and Db:
         Vb = Eb + Db
         wacc_book = (Eb / Vb) * ke + (Db / Vb) * kd * (1 - teff)
@@ -286,22 +296,23 @@ def main(path):
     if hist:
         print("## 5. Free cash flow to equity vs. cash returned")
         print()
-        print("FCFE = net income − (capex − D&A) − change in working capital + (debt issued − debt repaid). "
+        print("FCFE = net income + non-cash impairments − (capex − D&A) − change in working capital + (debt issued − debt repaid). "
               "Cash returned = dividends + buybacks.")
         print()
-        print("| Year | Net income | Net capex | Change in WC | Net new debt | FCFE | Cash returned | Returned − FCFE | Cash balance |")
-        print("|---|---|---|---|---|---|---|---|---|")
+        print("| Year | Net income | Impairments added back | Net capex | Change in WC | Net new debt | FCFE | Cash returned | Returned − FCFE | Cash balance |")
+        print("|---|---|---|---|---|---|---|---|---|---|")
         tot_fcfe = tot_ret = 0.0
         for r in hist:
             ni, da_, cx, wc = r.get("net_income", 0.0), r.get("da", 0.0), r.get("capex", 0.0), r.get("change_wc", 0.0)
             nd = r.get("debt_issued", 0.0) - r.get("debt_repaid", 0.0)
-            fcfe = ni - (cx - da_) - wc + nd
+            imp = r.get("impairment", 0.0)
+            fcfe = ni + imp - (cx - da_) - wc + nd
             ret = r.get("dividends", 0.0) + r.get("buybacks", 0.0)
             tot_fcfe += fcfe
             tot_ret += ret
-            print("| {} | {} | {} | {} | {} | {} | {} | {} | {} |".format(
-                r.get("year"), money(ni), money(cx - da_), money(wc), money(nd), money(fcfe), money(ret), money(ret - fcfe), money(r.get("cash", 0.0))))
-        print("| **Total** | | | | | **{}** | **{}** | **{}** | change {} |".format(
+            print("| {} | {} | {} | {} | {} | {} | {} | {} | {} | {} |".format(
+                r.get("year"), money(ni), money(imp), money(cx - da_), money(wc), money(nd), money(fcfe), money(ret), money(ret - fcfe), money(r.get("cash", 0.0))))
+        print("| **Total** | | | | | | **{}** | **{}** | **{}** | change {} |".format(
             money(tot_fcfe), money(tot_ret), money(tot_ret - tot_fcfe), money(hist[-1].get("cash", 0.0) - hist[0].get("cash", 0.0))))
         print()
 
@@ -346,6 +357,10 @@ def main(path):
                   "derived" if derived else "taken", " (revenue × margin × (1 − t) − reinvestment)" if derived else "",
                   pct(wacc), pct(wacc_stable), pct(g)))
         print()
+        print("Convention: each year's cash flow arrives at year end and is discounted whole years from the start of the "
+              "forecast; the bridge uses base-year-end debt, cash and options. With an analysis date early in the first "
+              "forecast year this is the same convention fairness opinions use (value as of the base-year end).")
+        print()
         print("| Year | FCFF | Discount factor | Present value |")
         print("|---|---|---|---|")
         for i, (r, cf) in enumerate(zip(years, fcffs)):
@@ -376,11 +391,41 @@ def main(path):
             print("| **Value per share (course method: ÷ basic shares {:.1f}M)** | **${:.2f}** |".format(sb, (equity - opt) / sb))
         if sd:
             print("| Value per share (shortcut: ÷ diluted shares {:.1f}M, options ignored) | ${:.2f} |".format(sd, equity / sd))
+        if sb and tv_consistent is not None:
+            other = tv_growth if tv is tv_consistent else tv_consistent
+            eq_other = ev - pv_tv + other / (1 + wacc) ** n - D + cash - mi + xh - opt
+            print("| Value per share with the other terminal value ({}) | ${:.2f} |".format(
+                "final-year FCFF grown at g" if tv is tv_consistent else "consistent reinvestment", eq_other / sb))
         price = L.num("company.share_price")
         if price and sb:
             print("| Market or transaction price ({}) | ${:.2f} |".format(L.get("meta.price_basis", "market"), price))
             print("| Course-method value ÷ price | {:.2f}x |".format(((equity - opt) / sb) / price))
+        deal = L.num("company.deal_price")
+        if deal and sb:
+            print("| Deal price | ${:.2f} |".format(deal))
+            print("| Course-method value ÷ deal price | {:.2f}x |".format(((equity - opt) / sb) / deal))
         print()
+        if sb and roic_stable and last.get("revenue") is not None and last.get("ebit_margin") is not None:
+            print("Sensitivity of value per share (course method) to the stable return on capital, which sets terminal "
+                  "reinvestment (g ÷ ROIC). A return equal to the cost of capital means growth adds no value; a higher one "
+                  "assumes lasting competitive advantage.")
+            print()
+            print("| Stable ROIC | Terminal reinvestment rate | Terminal value | Value per share |")
+            print("|---|---|---|---|")
+            ebit_n = float(last["revenue"]) * (1 + g) * float(last["ebit_margin"])
+            for r_s in sorted({roic_stable, round(wacc_stable, 4), 0.12, 0.15, 0.20, 0.30}):
+                tv_s = ebit_n * (1 - t) * (1 - g / r_s) / (wacc_stable - g)
+                eq_s = pv_explicit + tv_s / (1 + wacc) ** n - D + cash - mi + xh - opt
+                print("| {}{} | {} | {} | ${:.2f} |".format(pct(r_s), " (ledger)" if r_s == roic_stable else "", pct(g / r_s), money(tv_s), eq_s / sb))
+            print()
+            # ROIC at which the consistent-reinvestment terminal value equals the FCFF-growth one
+            need = 1 - tv_growth * (wacc_stable - g) / (ebit_n * (1 - t))
+            if 0 < need < 1:
+                print("The final-year-FCFF terminal value implies a stable ROIC of {} (terminal reinvestment {}).".format(pct(g / need), pct(need)))
+            else:
+                print("The final-year-FCFF terminal value implies terminal reinvestment of {}: it needs no reinvestment, or "
+                      "negative reinvestment, to grow at {}.".format(pct(need), pct(g)))
+            print()
         # financing lever of the value of control
         res = results.get(chosen_label, results["EBIT"])
         if res["w_opt"] < wacc:
@@ -395,6 +440,17 @@ def main(path):
                   "(operations, reinvestment, growth period) are judgment calls answered in lesson 34, not computed here.".format(
                       pct(res["w_opt"]), money(ev2), eq2 / sb if sb else float("nan"), (equity - opt) / sb if sb else float("nan")))
             print()
+            if sb:
+                print("Three measures of the gain from moving to the optimal debt ratio. They differ in basis, not in direction:")
+                print()
+                print("| Measure | Gain | Per basic share | Basis |")
+                print("|---|---|---|---|")
+                print("| DCF at the optimal cost of capital (this section) | {} | ${:.2f} | Status quo at {}, which prices today's debt at its observed rate; optimum at {} from the section 3 schedule. Discounts the forecast cash flows |".format(
+                    money(ev2 - ev), (ev2 - ev) / sb, pct(wacc), pct(res["w_opt"])))
+                print("| Annual savings capitalized (section 3) | {} | ${:.2f} | Both ends on the schedule's synthetic rates ({} to {}); savings on firm value {} grown at g in perpetuity |".format(
+                    money(res["gain"]), res["gain"] / sb, pct(res["w_cur"]), pct(res["w_opt"]), money(V)))
+                print("| Adjusted present value (section 9) | see section 9 | | Tax benefits less expected bankruptcy cost, at debt.bankruptcy_cost |")
+                print()
 
     # ---- 7. multiples -------------------------------------------------------------------------------
     peers = L.get("peers") or []
@@ -429,14 +485,120 @@ def main(path):
         if sb:
             m_rev = rows_m[0][2][0]
             m_ebitda = rows_m[1][2][0]
+            opt_m = L.num("company.options_value", 0.0)
+            print("Implied value per share uses the same bridge as the DCF: enterprise value − debt + cash − options and RSUs "
+                  "({}), ÷ basic shares {:.1f}M.".format(money(opt_m), sb))
+            print()
             if m_rev:
-                print("- At the peer-median EV/Revenue of {:.2f}x, implied value per share = (({:.2f} × {}) − debt + cash) ÷ {:.1f}M shares = ${:.2f}.".format(
-                    m_rev, m_rev, money(rev), sb, (m_rev * rev - D + cash) / sb))
+                print("- At the peer-median EV/Revenue of {:.2f}x: (({:.2f} × {}) − {} + {} − {}) ÷ {:.1f}M = ${:.2f}.".format(
+                    m_rev, m_rev, money(rev), money(D), money(cash), money(opt_m), sb, (m_rev * rev - D + cash - opt_m) / sb))
             if m_ebitda and ebitda:
-                print("- At the peer-median EV/EBITDA of {:.2f}x, implied value per share = ${:.2f}.".format(
-                    m_ebitda, (m_ebitda * ebitda - D + cash) / sb))
+                print("- At the peer-median EV/EBITDA of {:.2f}x: ${:.2f}.".format(m_ebitda, (m_ebitda * ebitda - D + cash - opt_m) / sb))
+
         print()
         print("Peer rows marked `estimate: true` in the ledger carry ranges; the medians above use the point values.")
+        print()
+
+    # ---- 8. return on capital -------------------------------------------------------------------------
+    ic = L.num("company.invested_capital")
+    if ic:
+        print("## 8. Return on capital vs. cost of capital (base year)")
+        print()
+        roic = ebit * (1 - t) / ic
+        print("| Measure | Value | How |")
+        print("|---|---|---|")
+        print("| After-tax operating income | {} | company.ebit × (1 − marginal tax rate) |".format(money(ebit * (1 - t))))
+        print("| Invested capital | {} | company.invested_capital |".format(money(ic)))
+        print("| Return on invested capital (ROIC) | {} | after-tax operating income ÷ invested capital |".format(pct(roic)))
+        print("| Cost of capital | {} | section 1 |".format(pct(wacc)))
+        print("| ROIC − cost of capital | {} | arithmetic |".format(pct(roic - wacc)))
+        print("| Economic value added (EVA) | {} | (ROIC − cost of capital) × invested capital |".format(money((roic - wacc) * ic)))
+        gw = L.num("company.goodwill")
+        if gw:
+            print("| Goodwill share of invested capital | {} | company.goodwill ÷ invested capital |".format(pct(gw / ic)))
+        if Eb and ni is not None:
+            print("| Return on equity (ROE) | {} | company.net_income ÷ company.equity_book |".format(pct(ni / Eb)))
+            print("| Cost of equity | {} | section 1 |".format(pct(ke)))
+            print("| ROE − cost of equity | {} | arithmetic |".format(pct(ni / Eb - ke)))
+        print()
+        if hist:
+            print("### By year (company.history)")
+            print()
+            print("Operating income excludes non-cash impairments. Reinvestment = capex − D&A + change in working capital; "
+                  "FCFF = after-tax operating income − reinvestment. Marginal tax rate throughout.")
+            print()
+            print("| Year | Operating income ex impairments | After-tax operating income | Invested capital | ROIC | Reinvestment | Reinvestment rate | FCFF |")
+            print("|---|---|---|---|---|---|---|---|")
+            for r in hist:
+                e = r.get("ebit", 0.0) + r.get("impairment", 0.0)
+                at = e * (1 - t)
+                reinv = r.get("capex", 0.0) - r.get("da", 0.0) + r.get("change_wc", 0.0)
+                icr = r.get("invested_capital")
+                print("| {} | {} | {} | {} | {} | {} | {} | {} |".format(
+                    r.get("year"), money(e), money(at), money(icr) if icr else "n/a", pct(at / icr) if icr else "n/a",
+                    money(reinv), pct(reinv / at) if at > 0 else "n/a", money(at - reinv)))
+            print()
+            amort_h = L.num("company.acquisition_amortization")
+            if amort_h:
+                print("D&A includes {} of amortization of intangibles acquired in past deals (base year). That charge needs no "
+                      "replacement spending, so it makes reinvestment look negative; excluding it, base-year reinvestment is {} "
+                      "and the reinvestment rate {}.".format(
+                          money(amort_h), money(reinv + amort_h), pct((reinv + amort_h) / at) if at > 0 else "n/a"))
+                print()
+
+    # ---- 9. adjusted present value ------------------------------------------------------------------
+    bc = L.num("debt.bankruptcy_cost")
+    if bc is not None:
+        print("## 9. Adjusted present value (lesson 21)")
+        print()
+        rows_apv = results.get(chosen_label, results["EBIT"])["rows"]
+        cur = min(rows_apv, key=lambda r: abs(r[0] - d))
+        p_cur = ALTMAN_DEFAULT.get(cur[3], 1.0)
+        vu = (V - t * D) / (1 - p_cur * bc)
+        print("Value of the firm with no debt = current firm value − present value of tax benefits (t × D) + expected bankruptcy "
+              "cost, solved so that the cost is a share of the unlevered value. Default probabilities are Altman's ten-year "
+              "rates by rating (lesson 21); ratings come from the section 3 schedule ({} numerator). Bankruptcy cost {} of firm "
+              "value (debt.bankruptcy_cost). Tax benefit at each ratio = t × D × min(1, operating income ÷ interest).".format(
+                  chosen_label, pct(bc)))
+        print()
+        print("| Item | Amount |")
+        print("|---|---|")
+        print("| Current firm value | {} |".format(money(V)))
+        print("| − Tax benefit of current debt (t × D) | {} |".format(money(t * D)))
+        print("| + Expected bankruptcy cost at the current rating ({}, default probability {}) | {} |".format(cur[3], pct(p_cur), money(p_cur * bc * vu)))
+        print("| **Unlevered firm value** | **{}** |".format(money(vu)))
+        print()
+        best_apv, table_apv = None, []
+        for (dd, w, cov, r, kd_d) in rows_apv:
+            Dd = dd * V
+            interest_d = Dd * kd_d
+            taxb = t * Dd * min(1.0, chosen_num / interest_d) if interest_d > 0 else 0.0
+            ebc = ALTMAN_DEFAULT.get(r, 1.0) * bc * vu
+            val = vu + taxb - ebc
+            table_apv.append((dd, r, taxb, ebc, val))
+            if best_apv is None or val > best_apv[4]:
+                best_apv = table_apv[-1]
+        print("| Debt ratio | Rating | Default probability | Tax benefit | Expected bankruptcy cost | Levered firm value |")
+        print("|---|---|---|---|---|---|")
+        for (dd, r, taxb, ebc, val) in table_apv:
+            if round(dd * 100) % 10 == 0 or dd == best_apv[0] or abs(dd - round(d, 2)) < 1e-9:
+                flag = " ← APV optimum" if dd == best_apv[0] else (" ← current" if abs(dd - round(d, 2)) < 1e-9 else "")
+                print("| {:.0%}{} | {} | {} | {} | {} | {} |".format(dd, flag, r, pct(ALTMAN_DEFAULT.get(r, 1.0)), money(taxb), money(ebc), money(val)))
+        print()
+        cur_val = [x for x in table_apv if abs(x[0] - round(d, 2)) < 1e-9]
+        if cur_val:
+            sb9 = L.num("company.shares_basic")
+            print("APV optimum {:.0%}, firm value {}, against {} at the current ratio: a gain of {}{}.".format(
+                best_apv[0], money(best_apv[4]), money(cur_val[0][4]), money(best_apv[4] - cur_val[0][4]),
+                " (${:.2f} per basic share; compare the two other measures in section 6)".format((best_apv[4] - cur_val[0][4]) / sb9) if sb9 else ""))
+            print()
+        for alt in (0.10, 0.40):
+            if abs(alt - bc) < 1e-9:
+                continue
+            vu_a = (V - t * D) / (1 - p_cur * alt)
+            vals = [(dd, vu_a + taxb - ALTMAN_DEFAULT.get(r, 1.0) * alt * vu_a) for (dd, r, taxb, _, _) in table_apv]
+            b = max(vals, key=lambda x: x[1])
+            print("- At a bankruptcy cost of {} of firm value, the APV optimum is {:.0%}.".format(pct(alt), b[0]))
         print()
 
 

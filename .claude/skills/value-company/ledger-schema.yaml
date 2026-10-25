@@ -32,7 +32,7 @@ meta:
   accounting_basis:   {type: string, required_for: [foreign-public], description: "US GAAP, IFRS, or local"}
   fiscal_year_end:    {type: string, required_for: [all], description: "e.g. 12-31"}
   base_year:          {type: integer, required_for: [all], description: "Latest full fiscal year used as the base"}
-  analysis_date:      {type: date, required_for: [all]}
+  analysis_date:      {type: date, required_for: [all], description: "The date the valuation is as of. Every market input must be from within its window of this date. For a delisted company, the last unaffected trading day before the deal, so the value can be compared with the deal price on the same rates"}
   price_basis:        {type: string, required_for: [delisted], description: "last-unaffected or deal: which one company.share_price is"}
   analyst:            {type: string, required_for: [all]}
   omitted:            {type: list, required_for: [], description: "Fields left out, each with a one-line reason"}
@@ -72,7 +72,8 @@ beta:
 company:
   shares_basic:        {type: number, required_for: [public, delisted, foreign-public], used_by: [4, 13, 33], description: "Cover-page basic shares outstanding, millions"}
   shares_diluted:      {type: number, required_for: [public, delisted, foreign-public], used_by: [33], description: "From the EPS note"}
-  share_price:         {type: number, required_for: [public, delisted, foreign-public], used_by: [13, 29, 35]}
+  share_price:         {type: number, required_for: [public, delisted, foreign-public], used_by: [13, 29, 35], description: "Closing price on meta.analysis_date; for a delisted company, the last unaffected close before the deal was announced or leaked"}
+  deal_price:          {type: number, required_for: [delisted], used_by: [29, 33, 36], description: "Per-share price paid in the going-private or acquisition deal"}
   equity_value:        {type: number, required_for: [all], used_by: [9, 13, 18, 29, 35], description: "shares_basic × share_price for listed companies; last round or estimate for private"}
   equity_book:         {type: number, required_for: [], used_by: [13, 35], description: "Book value of equity"}
   debt_face:           {type: number, required_for: [all], used_by: [12, 13], description: "Interest-bearing debt at face value"}
@@ -102,7 +103,7 @@ company:
   sbc:                 {type: number, required_for: [], used_by: [14, 18, 30, 34], description: "Stock-based compensation expense"}
   invested_capital:    {type: number, required_for: [all], used_by: [14, 31], description: "Book equity + book debt − cash, or operating assets basis; say which"}
   goodwill:            {type: number, required_for: [], used_by: [14, 31]}
-  history:             {type: list, required_for: [all], used_by: [1, 24, 26, 27, 29, 31], description: "One row per fiscal year, five if available: revenue, ebit, net_income, da, capex, change_wc, dividends, buybacks, debt_issued, debt_repaid, cash, debt_total, invested_capital, share_price_year_end; one source and as_of per row"}
+  history:             {type: list, required_for: [all], used_by: [1, 24, 26, 27, 29, 31], description: "One row per fiscal year, five if available: revenue, ebit, net_income, da, capex, change_wc, dividends, buybacks, debt_issued, debt_repaid, cash, debt_total, invested_capital, share_price_year_end; one source and as_of per row; optional impairment (non-cash impairments inside operating income and net income, from the cash flow statement), added back for FCFE, ROIC and FCFF"}
 
 debt:
   rating_actual:       {type: string, required_for: [all], used_by: [12, 18], description: "Agency rating with the action cited, or null with a note that filings disclose none"}
@@ -111,6 +112,7 @@ debt:
   currency:            {type: string, required_for: [all], used_by: [5, 23]}
   maturity_years:      {type: number, required_for: [], used_by: [23], description: "Weighted average remaining maturity"}
   revolver_undrawn:    {type: number, required_for: [], used_by: [12, 22]}
+  bankruptcy_cost:     {type: rate, required_for: [], used_by: [21], description: "Direct plus indirect cost of bankruptcy as a share of firm value (lesson 21: direct 5-10%, indirect higher where customers or suppliers flee a distressed firm). Turns on the model's adjusted-present-value section"}
   covenants:           {type: string, required_for: [], used_by: [2, 17, 19, 25], description: "One paragraph: maintenance covenants, restricted payments, change of control"}
 
 governance:
@@ -132,3 +134,6 @@ forecast:
 
 peers:
   _row:                {type: list, required_for: [all], used_by: [9, 11, 21, 28, 35], description: "Rows of {name, ticker, fiscal_period, enterprise_value, revenue, ebitda, net_income, equity_book, market_cap, growth, ebit_margin, beta, debt_ratio, payout, source, as_of}"}
+
+facts:
+  _row:                {type: list, required_for: [], used_by: [all], description: "Rows of {id, value, source, as_of, note} for numbers a lesson answer or the walkthrough quotes that no other field holds: counts, dates, percentages and amounts read from filings (customers affected, headcount, premiums paid). id is kebab-case. Keeps rule 1 (ledger first) true for context numbers, not only model inputs"}

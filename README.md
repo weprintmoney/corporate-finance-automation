@@ -92,7 +92,7 @@ Open Claude Code in this repo and type `/evaluate-company`. Claude will read the
 
 Output is saved to `03-corporate-finance/03-2-course-content/company-valuations/<company>-valuation.md`.
 
-**Example:** The SolarWinds (SWI) valuation is in `03-corporate-finance/03-2-course-content/company-valuations/` — both as a markdown report and as a standalone HTML file.
+**Example:** The full SolarWinds (SWI) project, built with `/value-company`, is in `03-corporate-finance/03-2-course-content/company-valuations/solarwinds/`: ledger, model output, all 36 lessons, report and walkthrough. It is valued as of 2025-02-05, the day before its sale was announced.
 
 ---
 
@@ -114,6 +114,7 @@ You can also run the scripts locally:
 ```bash
 pip install xlrd openpyxl && python3 scripts/refresh-market-data.py   # no API key needed
 python3 scripts/refresh-market-data.py --check                         # how old each snapshot is
+python3 scripts/refresh-market-data.py --as-of 2025-02-05 --out /tmp/x  # the same files as of a past date
 FMP_API_KEY=your_key python3 scripts/fetch-company-data.py AAPL
 ```
 

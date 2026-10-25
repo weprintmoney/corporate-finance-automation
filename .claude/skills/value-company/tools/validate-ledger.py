@@ -38,6 +38,7 @@ MAX_AGE_DAYS = {
     "beta.unlevered_bottom_up": 400,
 }
 RATINGS_TABLE_MAX_DAYS = 400
+PRICE_MAX_DAYS = 14
 US_DOWNGRADE = date(2025, 5, 16)     # Moody's moved the US from Aaa to Aa1
 LIST_FIELDS_WITH_SOURCE = ["company.history", "country.exposures", "forecast.years", "peers", "governance.controlling_holders"]
 SCALAR_LISTS = ["company.history", "country.exposures", "beta.segments", "forecast.years", "peers",
@@ -76,17 +77,14 @@ def main(argv):
 
     errors, warnings = [], []
     ctype = get(L, "meta.type")
-    is_fixture = "/examples/" in os.path.abspath(ledger_path).replace(os.sep, "/")
 
     # --- placeholders ----------------------------------------------------------------------------
-    # `source: placeholder` marks a made-up value in the skill's test fixture. It is never allowed
-    # in a real company ledger.
+    # `source: placeholder` marks a made-up value. It is never allowed.
     def walk_sources(x, path):
         if isinstance(x, dict):
             src = x.get("source")
             if isinstance(src, str) and src.strip().lower().startswith("placeholder"):
-                (warnings if is_fixture else errors).append("{} is a placeholder{}".format(
-                    path, "" if is_fixture else " (only allowed in the skill's examples/ fixture)"))
+                errors.append("{} is a placeholder; source it, mark it an estimate with a range, or omit it".format(path))
             for k, v in x.items():
                 walk_sources(v, "{}.{}".format(path, k) if path else k)
         elif isinstance(x, list):
@@ -218,6 +216,19 @@ def main(argv):
                                   rel, tdate, (adate - tdate).days, RATINGS_TABLE_MAX_DAYS))
         except (OSError, ValueError) as exc:
             errors.append("market.ratings_table {} cannot be read ({})".format(rel, exc))
+
+    # --- price and rates from the same date -----------------------------------------------------
+    # A delisted company valued with today's rates against a price from before its deal compares the
+    # deal with a world that did not exist when it was struck. The price must sit beside the rates.
+    price_leaf = get(L, "company.share_price")
+    pdate = parse_date(price_leaf.get("as_of")) if isinstance(price_leaf, dict) else None
+    if adate and pdate and abs((adate - pdate).days) > PRICE_MAX_DAYS:
+        errors.append("company.share_price is from {}, {} days from the analysis date {} (limit {}); value the company "
+                      "as of the price date (for a delisted company, its last unaffected trading day) and fetch market "
+                      "data for that date with scripts/refresh-market-data.py --as-of".format(
+                          pdate, abs((adate - pdate).days), adate, PRICE_MAX_DAYS))
+    if get(L, "meta.type") == "delisted" and get(L, "company.deal_price") is None:
+        errors.append("company.deal_price is missing; a delisted company records both the unaffected price and the deal price")
 
     # --- staleness -------------------------------------------------------------------------------
     if adate:

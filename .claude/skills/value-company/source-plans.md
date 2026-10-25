@@ -43,7 +43,7 @@ Everything in `public`, plus:
 | The going-private document: DEFM14A (proxy vote) or DEFM14C (written consent) or Schedule 13E-3 | deal terms, management forecasts (`forecast.years`), fairness-opinion assumptions, background of the merger | `deal-docs/<ticker>-<form>-<year>-merger.md` |
 | 8-K announcing and 8-K closing the deal | deal price, financing | `deal-docs/<ticker>-8k-<date>-<topic>.md` |
 
-Record both the last unaffected share price and the deal price in the ledger; `meta.price_basis` says which one `company.share_price` is. Regression beta uses the last clean pre-announcement window and the ledger notes the window.
+Record both the last unaffected share price (`company.share_price`) and the deal price (`company.deal_price`). `meta.analysis_date` is the date of the unaffected price, and every market input is fetched for that date with `scripts/refresh-market-data.py --as-of`. Regression beta uses the last clean pre-announcement window and the ledger notes the window; free price sources drop delisted tickers, so expect to omit it.
 
 ### `foreign-public` (listed outside the US)
 
@@ -89,7 +89,9 @@ The lesson spreadsheets teach the method; their numbers are as old as the lesson
 
 ## Peers, all types
 
-Three to six comparable listed companies in the same business, same fiscal period as the base year. For each: latest annual report → `peer-filings/<ticker>-<form>-fy<year>.md`, feeding `peers[]` (enterprise value, revenue, EBITDA, net income, book equity, growth, margin, beta, debt ratio, payout). Say in the manifest why each peer was chosen and which candidates were rejected.
+Three to ten comparable listed companies in the same business and at a similar stage (growth and margins, not only product overlap), same fiscal period as the base year. For a company that was sold, the set a fairness opinion used is a defensible starting point.
+
+Run `python3 .claude/skills/value-company/tools/fetch-peer-facts.py --date <analysis_date> TICKER ... > sources/peer-filings/peer-facts-<analysis_date>.md`. It takes each peer's latest fiscal year ended by the analysis date from SEC XBRL company facts and its closing price on that date, and lists the XBRL tag behind every figure; check any `n/a` or flagged tag by hand against the 10-K. Copy the rows into `peers[]`. Say in the manifest why each peer was chosen and which candidates were rejected.
 
 ## What not to do
 

@@ -58,7 +58,7 @@ Same order every time. Use these exact italic labels.
 1. *What we wanted to know.* The question, in plain words. One or two sentences.
 2. *Why it matters.* What changes in the final answer if this is wrong. One or two sentences.
 3. *What we did.* The logic. If there is a formula, show it, then show it again with this company's numbers in it. If there is a judgment call, say so and name the options.
-4. *The numbers and where they came from.* Each figure with the document named the way a person would name it, then the file. Example: "The 2024 annual report (Form 10-K) filed with the SEC on 2025-02-19, note 9 on debt. File: `sources/sec-filings/swi-10k-fy2024.md`."
+4. *The numbers and where they came from.* Each figure with the document named the way a person would name it, then the file. Example: "The 2024 annual report (Form 10-K) filed with the SEC on 2025-02-19, note 9 on debt. File: `sources/filings/swi-10k-fy2024.md`."
 5. *What we decided, and what we didn't.* The chosen number or conclusion. For judgment calls: the alternatives and why they lost. For arithmetic: say it is arithmetic.
 6. *How sure we are.* Disclosed vs. estimated. What would change the answer.
 
@@ -86,7 +86,7 @@ Same order every time. Use these exact italic labels.
 >
 > *What we did.* The balance sheet says $1,206.6 million. We didn't stop there, for two reasons. First, that figure is after accountants subtracted $29.1 million of fees and discounts from when the loan was taken out; the bank is still owed the full $1,235.7 million. Second, the company has signed office leases it can't walk away from. Professor Damodaran's test: if a payment is fixed, tax-deductible, and missing it could cost you control of the company, it's debt. Leases pass all three. The lease note puts their value at $49.4 million.
 >
-> *The numbers and where they came from.* Loan at face value, $1,235.7 million; lease liabilities, $49.4 million; deferred revenue, $389.3 million. All from SolarWinds' 2024 annual report (Form 10-K), filed with the SEC on 2025-02-19: balance sheet, note 7 (leases), note 9 (debt). File: `sources/sec-filings/swi-10k-fy2024.md`.
+> *The numbers and where they came from.* Loan at face value, $1,235.7 million; lease liabilities, $49.4 million; deferred revenue, $389.3 million. All from SolarWinds' 2024 annual report (Form 10-K), filed with the SEC on 2025-02-19: balance sheet, note 7 (leases), note 9 (debt). File: `sources/filings/swi-10k-fy2024.md`.
 >
 > *What we decided, and what we didn't.* Total debt is $1,285.0 million ($1,235.7M + $49.4M). This is arithmetic once the two inputs are chosen. We did not count the $389.3 million of deferred revenue. That is money customers paid in advance for software. The company owes them service, not cash, and missing it wouldn't trigger a default.
 >
