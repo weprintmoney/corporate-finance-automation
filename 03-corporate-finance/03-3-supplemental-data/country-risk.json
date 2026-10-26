@@ -1,6 +1,6 @@
 {
   "as_of": "2026-07-01",
-  "fetched": "2026-10-24",
+  "fetched": "2026-10-26",
   "source_url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/ctrypremJuly26.xlsx",
   "note": "Rating-based default spreads and premiums. Damodaran updates in January and July.",
   "mature_market_erp": 0.042,

@@ -1,6 +1,6 @@
 {
   "as_of": "2026-01-01",
-  "fetched": "2026-10-24",
+  "fetched": "2026-10-26",
   "source_url": "https://pages.stern.nyu.edu/~adamodar/pc/ratings.xls",
   "note": "Rows in ascending coverage; a firm gets the last row whose min_coverage its coverage exceeds. large = market cap above about $5B. Spreads are over the 10-year Treasury, so pre-tax cost of debt = Treasury rate + spread.",
   "large": [
