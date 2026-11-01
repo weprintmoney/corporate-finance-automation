@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 29: Intrinsic Valuation Foundations"
 status: active
 owner: weprintmoney
 created: 2026-10-25
-last_updated: 2026-10-25
+last_updated: 2026-11-01
 ---
 
 # SolarWinds (SWI) — Lesson 29: Intrinsic Valuation Foundations
@@ -18,8 +18,8 @@ last_updated: 2026-10-25
     - Answer: Value the firm.
         - Debt ratio: debt was $1,319.2M, $1,300.4M and $1,285.0M at the ends of 2022–2024 (`company.history`), against book invested capital of $2,422.9M, $2,356.3M and $2,348.0M. Book debt-to-capital, with leases, was 47.28% in 2024 (§1) and market debt-to-capital was 33.03% (§1) because equity is worth more than its book value. The two measures differ by 14 points.
         - The ratio is about to change sharply. The buyer committed $2,225.0M of first lien term debt and $525.0M of second lien (facts.new-debt-2025), $2,750.0M against the $1,285.0M outstanding. Cost of equity depends on the debt ratio (§3 schedule: 11.63% at 21% debt, 12.65% at 33%), so an equity model would need a debt forecast nobody can make. A firm model discounts cash flow before debt at the cost of capital and subtracts debt at the end.
-        - Four questions (the lecture): cash flows from existing assets; the value of growth; how risky the cash flows are; when the company becomes mature. In inputs: base-year free cash flow to the firm (lesson 30), the growth path (lesson 31), the cost of capital 10.23% (§1) and the terminal assumptions (g 2.5%, stable ROIC 10%; `market.terminal_growth`, `forecast.stable_roic`).
-        - Hardest: the growth and its reinvestment. Management's 2030 free cash flow exceeds after-tax operating income, which assumes no reinvestment. §6 shows the effect: terminal value of $5,552.5M if that cash flow is grown, $3,808.9M with consistent reinvestment.
+        - Four questions (the lecture): cash flows from existing assets; the value of growth; how risky the cash flows are; when the company becomes mature. In inputs: base-year free cash flow to the firm (lesson 30), the growth path (lesson 31), the cost of capital 10.23% for 2025–2030 (§1) and the terminal assumptions (g 2.5%, stable beta 1.0, stable debt ratio 21%, stable cost of capital 8.23%, stable ROIC 8.23%, equal to it; `market.terminal_growth`, `forecast.stable_beta`, `forecast.stable_debt_ratio`, `forecast.stable_roic`; §6).
+        - Hardest: the growth and its reinvestment. Management's 2030 free cash flow exceeds after-tax operating income, which assumes no reinvestment. §6 shows the effect: terminal value of $7,490.2M if that cash flow is grown, $4,769.8M with consistent reinvestment at the 8.23% stable return on capital (30.38% of after-tax operating income reinvested).
 
 ## Cumulative Project — Questions for This Lesson
 
@@ -34,4 +34,4 @@ last_updated: 2026-10-25
 
 ## Notes
 
-This lesson fixes the method: free cash flow to the firm at the cost of capital, then debt, cash and options to get to a share price (model-output.md §6). The change in the debt ratio after the deal is why lesson 34 keeps the status quo cost of capital for the main value and treats the optimal ratio as a separate lever.
+This lesson fixes the method: free cash flow to the firm at the cost of capital, then debt, cash and options to get to a share price (model-output.md §6). The change in the debt ratio after the deal is why lesson 34 keeps the status quo cost of capital for the 2025–2030 value and treats the optimal ratio as a separate lever.

@@ -39,6 +39,7 @@ meta:
 
 modeling_choices:
   coverage_numerator:  {type: enum, values: [ebit, ebit_plus_acquisition_amortization, ebitda], default: ebit, used_by: [12, 18, 19], description: "Numerator for interest coverage in the synthetic rating and the optimal-debt loop; the model also reports the other two"}
+  rd_amortizable_life: {type: integer, required_for: [], default: null, used_by: [14], description: "Years over which R&D is amortized, from Damodaran's industry lookup in the lesson 14 return calculator (software 3, computers 5, pharma 10). With company.rd_history, model.py reports the R&D-adjusted ROIC"}
   firm_size_table:     {type: enum, values: [large, small], default: small, used_by: [12, 18], description: "Damodaran's ratings table; large for market cap above about $5B"}
   sbc_treatment:       {type: enum, values: [expense, addback], default: expense, used_by: [14, 30, 34], description: "Stock-based compensation charged as an expense (course default) or added back"}
   firm_value_basis:    {type: enum, values: [market, deal], default: market, used_by: [18, 19], description: "Debt plus equity at market, or the deal enterprise value for a delisted company"}
@@ -100,6 +101,7 @@ company:
   capex:               {type: number, required_for: [all], used_by: [14, 26, 30, 32]}
   change_wc:           {type: number, required_for: [all], used_by: [14, 26, 30], description: "Increase in non-cash working capital (positive = cash used)"}
   rd_expense:          {type: number, required_for: [], used_by: [1, 14, 31]}
+  rd_history:          {type: list, required_for: [], used_by: [14, 31], description: "Rows of {year, rd}: R&D expense by fiscal year, covering rd_amortizable_life + 1 years ending at the base year; one source and as_of per row. With modeling_choices.rd_amortizable_life, model.py capitalizes R&D (lesson 14) and reports the adjusted ROIC"}
   sbc:                 {type: number, required_for: [], used_by: [14, 18, 30, 34], description: "Stock-based compensation expense"}
   invested_capital:    {type: number, required_for: [all], used_by: [14, 31], description: "Book equity + book debt − cash, or operating assets basis; say which"}
   goodwill:            {type: number, required_for: [], used_by: [14, 31]}
@@ -130,7 +132,11 @@ forecast:
   sales_to_capital:    {type: number, required_for: [], used_by: [31], description: "Incremental revenue per dollar of reinvestment"}
   management_growth:   {type: rate, required_for: [], used_by: [31], description: "Management's stated growth, with where it was stated"}
   analyst_growth:      {type: rate, required_for: [], used_by: [31]}
-  wacc_stable:         {type: rate, required_for: [], used_by: [32, 34], description: "Cost of capital in the terminal period if different from the current one"}
+  wacc_stable:         {type: rate, required_for: [], used_by: [32, 34], description: "Cost of capital in the terminal period if different from the current one; overrides stable_beta and stable_debt_ratio"}
+  stable_beta:         {type: number, required_for: [], used_by: [32, 34], description: "Levered beta in the terminal period (lesson 32: closer to one). With stable_debt_ratio, model.py builds the terminal cost of capital, taking the cost of debt the section 3 schedule assigns at that ratio (its rating there); section 6 also prints a sensitivity to the stable beta"}
+  stable_debt_ratio:   {type: rate, required_for: [], used_by: [32, 34], description: "Debt ratio in the terminal period: the industry average or the firm's optimum (lesson 32)"}
+  stable_cost_of_debt: {type: rate, required_for: [], used_by: [32, 34], description: "Pre-tax cost of debt in the terminal period, if the section 3 schedule's rate at stable_debt_ratio should not be used"}
+  stress_cases:        {type: list, required_for: [], used_by: [31, 32, 34], description: "Rows of {name, revenue_growth, margin}: alternative forecasts model.py values in section 6 with the same terminal method and bridge. margin is plan (follow forecast.years) or a decimal held every year; one source and as_of per row"}
 
 peers:
   _row:                {type: list, required_for: [all], used_by: [9, 11, 21, 28, 35], description: "Rows of {name, ticker, fiscal_period, enterprise_value, revenue, ebitda, net_income, equity_book, market_cap, growth, ebit_margin, beta, debt_ratio, payout, source, as_of}"}

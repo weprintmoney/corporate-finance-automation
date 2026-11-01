@@ -74,15 +74,46 @@ Charts and tables for the final report, in the order of the course's nine projec
 | Bridge | Amount |
 |---|---|
 | Present value of explicit cash flows | $1,321.6M |
-| Present value of terminal value | $2,122.7M |
-| **Enterprise value** | **$3,444.3M** |
+| Present value of terminal value | $2,658.2M |
+| **Enterprise value** | **$3,979.8M** |
 | − Debt | $1,285.0M |
 | + Cash | $259.3M |
-| = Equity value before option claims | $2,418.6M |
+| = Equity value before option claims | $2,954.1M |
 | − Value of options and RSUs | $187.0M |
-| **Value per share (course method: ÷ basic shares 171.6M)** | **$13.00** |
+| **Value per share (course method: ÷ basic shares 171.6M)** | **$16.13** |
 | Market or transaction price (last-unaffected) | $15.18 |
 | Deal price | $18.50 |
+
+**Terminal-period cost of capital**
+
+| Terminal-period cost of capital | Value | How |
+|---|---|---|
+| Stable beta | 1.00 | forecast.stable_beta (lesson 32: betas move toward one) |
+| Stable cost of equity | 9.35% | rf 4.43% + stable beta × ERP 4.92% |
+| Stable debt ratio | 21.00% | forecast.stable_debt_ratio |
+| Pre-tax cost of debt | 5.38% | section 3 schedule at 21.00% debt: A- rating, 4.43% + spread |
+| After-tax cost of debt | 4.04% | pre-tax × (1 − t) |
+| **Stable cost of capital** | **8.23%** | (1 − D/V) × ke + D/V × kd × (1 − t) |
+
+**Value per share by the return on new capital after 2030**
+
+| Stable ROIC | Terminal reinvestment rate | Terminal value | Value per share |
+|---|---|---|---|
+| 8.23% (ledger) | 30.38% | $4,769.8M | $16.13 |
+| 10.00% | 25.00% | $5,138.1M | $17.32 |
+| 12.00% | 20.83% | $5,423.6M | $18.25 |
+| 15.00% | 16.67% | $5,709.0M | $19.18 |
+| 20.00% | 12.50% | $5,994.5M | $20.10 |
+| 30.00% | 8.33% | $6,279.9M | $21.03 |
+
+**Stress cases: revenue at the 2022–2024 growth rate instead of the plan**
+
+| Case | Revenue growth | Margin | 2030 revenue | 2030 FCFF | Enterprise value | Value per share | vs. plan |
+|---|---|---|---|---|---|---|---|
+| Plan (management forecast) | 8.12% | plan | $1,273.0M | $419.0M | $3,979.8M | $16.13 |  |
+| Revenue at the 2022–2024 rate, plan margins | 5.25% | plan | $1,083.3M | $345.3M | $3,451.5M | $13.05 | -3.08 |
+| Revenue at the 2022–2024 rate, margin held at the plan's first year | 5.25% | 32.69% | $1,083.3M | $284.7M | $2,910.7M | $9.89 | -6.23 |
+| Revenue at the 2022–2024 rate, margin held at 2024 on the plan's basis | 5.25% | 29.11% | $1,083.3M | $255.6M | $2,599.4M | $8.08 | -8.04 |
 
 **Relative valuation**
 

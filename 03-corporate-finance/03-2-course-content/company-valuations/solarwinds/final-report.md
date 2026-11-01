@@ -8,7 +8,7 @@ last_updated: 2026-11-01
 
 # SolarWinds Corporation — Corporate Finance Assessment and Valuation
 
-Valuation date: 2025-02-05, the last trading day before Turn/River Capital's $18.50-a-share cash offer was announced. All market inputs are as of that date.
+Valuation date: 2025-02-05, the last undisturbed trading day before the merger with Turn/River Capital was announced on 2025-02-07, and the date from which both fairness opinions priced. All market inputs are as of that date.
 
 ## Executive summary
 
@@ -16,43 +16,42 @@ SolarWinds was a mature, cash-generating software company run for the benefit of
 
 | | |
 |---|---|
-| Value per share, status quo (DCF) | **$13.00** |
-| Value per share at the optimal debt ratio | $13.52 |
+| Value per share on management's plan (DCF) | **$16.13** |
+| Value per share at the optimal debt ratio | $16.35 |
 | Market price, 2025-02-05 | $15.18 |
 | Deal price | $18.50 |
-| Cost of capital | 10.23% |
-| Return on invested capital, FY2024 | 6.66% |
+| Cost of capital: 2025–2030 / after 2030 | 10.23% / 8.23% |
+| Return on invested capital, FY2024 | 6.66%, on a capital base that is almost all buyout goodwill |
 | Debt ratio: actual / optimal | 33% / 21% |
 
-- **What it does well.** It keeps customers: 93.5% of revenue is recurring and net retention was 99% in 2024. Its loan is the right kind of debt for that business: floating-rate dollar debt repaid from subscription cash.
-- **What it does badly.** It earns 6.66% on its capital against a 10.23% cost, because the capital base is the goodwill from the 2016 buyout. It carries more debt than is optimal (33% against 21%). In 2024 it paid out more than it generated, through a $168.2M special dividend, while over-levered.
-- **What it should do differently.** Repay about $468.1M of debt before returning more cash. Hold new growth spending to a return above the cost of capital.
-- **Verdict.** On a consistent-reinvestment DCF, SolarWinds as run was worth $13.00 a share, below both its market price and the deal price. For public shareholders, $18.50 was a good price.
+- **Does well.** It keeps customers: 93.5% of revenue is recurring, subscription net retention was 99% in 2024, and maintenance contracts renewed at 97%. Its loan has the right rate type and maturity for that business.
+- **Does badly.** It earns 6.66% on its capital against a 10.23% cost. It carries more debt than is optimal, 33% against 21%. In 2024 it paid out more cash than it generated, through a $168.2M special dividend, while over-levered.
+- **Should do differently.** Repay about $468.1M of debt before returning more cash. Hold new growth spending to a return above the cost of capital.
+- **Verdict.** The discounted cash flow valuation is the basis for the conclusion. On management's plan it puts SolarWinds at $16.13 a share, 6% above its market price. The $18.50 deal price was 15% above that. Reaching it would take a return on new capital of about 12.7% forever, where this report assumes new capital earns only its cost. The plan carries the value: at the company's own growth rate the shares are worth $13.05, and the market price sat between the two. For public shareholders, $18.50 was a full price that paid for the plan and a premium on top.
 
 ## 1. Stockholder analysis: who has the power?
 
 ![Exhibit 1: ownership](report-exhibits/exhibit-5-ownership.png)
 
-Power lies with two inside shareholders, not with managers or the public float. Silver Lake held 36.56% of the shares and Thoma Bravo 29.79% (2024 proxy statement; the proxy gives the combined stake as 66.34%). Officers and directors as a group held 1.95%.
+Power lies with two inside shareholders, not with managers or the public float. Silver Lake held 36.56% and Thoma Bravo 29.79% at the 2024 proxy, 66.34% together. Officers and directors as a group held 1.95%.
 
-Ownership is only part of their control:
-- **Board seats.** A stockholders' agreement let each sponsor nominate three directors while it held 20% or more. Of nine directors, three were Silver Lake designees. Eight of the nine counted as independent under exchange rules, including all three Silver Lake designees.
-- **Consent rights.** Each sponsor had to consent to any change of control.
-- **The sale.** The sponsors approved the merger by written consent on 2025-02-07, with about 65% of the votes. Public shareholders never voted. The information statement filed in March 2025 replaced a proxy and a vote.
+Their control goes beyond ownership:
+- **Board seats.** Each sponsor could nominate three directors while it held 20% or more, and the two jointly named a seventh. Of nine directors, three were Silver Lake designees; Thoma Bravo's three seats and the joint seat were vacant, so the sponsors held three seats and could have filled seven. Eight of the nine counted as independent under exchange rules, including all three designees.
+- **Consent rights.** Each sponsor had to consent to any change of control, so a hostile takeover was impossible.
+- **The sale.** The sponsors approved the merger by written consent on 2025-02-07, with about 65% of the votes. Public shareholders never voted.
 
 **Conflicts of interest.**
 - **Sponsors against public shareholders.** The sponsors had owned the company since 2016 and wanted an exit. The 2024 special dividend paid them about two-thirds of $168.2M.
-- **Managers.** The CEO's $22.99M change-of-control package was mostly $19.94M of accelerated equity paid on closing, which tied his reward to getting a deal done.
-- **Lenders.** They were protected by structure, not covenants. The loan is first-lien and secured, and its covenant applies only when the revolver is more than 35% drawn.
+- **Managers.** The CEO's $22.99M change-of-control package was mostly $19.94M of accelerated equity paid on closing. That tied his reward to completing a deal.
 
-**The marginal investor** was the diversified institution holding the roughly 34% public float. The sponsors set no traded price, so market beta is the right measure of risk, and the sponsors' lack of diversification belongs in the deal negotiation, not in the discount rate.
+**The marginal investor** was the diversified institution holding the roughly 34% public float. The sponsors did not set the traded price, so market beta is the right measure of risk. Their lack of diversification belongs in a private negotiation, not in the discount rate.
 
 ## 2. Risk and return: how risky is SolarWinds, and what is its hurdle rate?
 
 | Input | Value | Basis |
 |---|---|---|
 | Risk-free rate | 4.43% | 10-year Treasury, 2025-02-05; the US was rated Aaa, so no default spread |
-| Equity risk premium | 4.92% | Damodaran's implied US premium of 4.27%, plus a country premium on the 35.18% of revenue earned outside the US |
+| Equity risk premium | 4.92% | Damodaran's implied US premium of 4.27% on the 64.82% of revenue earned in the US; 6.11%, the European premium, on the 35.18% earned abroad, which adds 0.65 points |
 | Unlevered beta | 1.22 | Software industry, cash-corrected (Damodaran, January 2025) |
 | Levered beta | 1.6714 | Relevered at a debt-to-equity ratio of 0.4933 and a 25% marginal tax rate |
 | Cost of equity | 12.65% | 4.43% + 1.6714 × 4.92% |
@@ -61,23 +60,23 @@ Ownership is only part of their control:
 | Debt ratio, market values | 33.03% | Debt $1,285.0M; equity 171.6M shares × $15.18 = $2,604.9M |
 | **Cost of capital** | **10.23%** | 66.97% × 12.65% + 33.03% × 5.33% |
 
-**Beta.** SolarWinds' stock history could not be used for a regression beta, and a bottom-up beta is better in any case. SolarWinds reports one business segment, so the software industry's unlevered beta applies to the whole firm.
+**Beta.** A regression beta is not available for the delisted ticker, and the bottom-up beta is the better measure in any case. SolarWinds reports one segment, so the software industry beta applies to the whole firm.
 
-**Debt** is the loan at face value, $1,235.7M, plus $49.4M of lease liabilities. Two items were tested and left out:
-- **Deferred revenue** of $389.3M is owed in service, not cash.
-- **Cloud purchase commitments** of $68.4M are payments for a service the company uses.
+**Debt** is the loan at face value, $1,235.7M, plus $49.4M of lease liabilities. Deferred revenue of $389.3M is owed in service, not cash. Cloud purchase commitments of $68.4M are payments for a service the company uses. Both are excluded.
 
-**Cost of debt.** No agency rating is disclosed. Interest coverage of 1.85 times (operating income of $208.4M against interest of $112.4M) earns a synthetic B- rating and an 8.85% cost of debt. The 7.11% the loan actually paid is a market price set by its lenders, so it is used instead.
+**Cost of debt.** No agency rating is disclosed. Interest coverage of 1.85 times (operating income of $208.4M against gross interest expense of $112.4M) implies a synthetic B- rating on Damodaran's table for smaller firms and an 8.85% cost of debt. Interest expense ran above today's rate because the loan's rate fell during 2024 from 9.11% to 7.11%. The 7.11% is a market price set by its lenders, so it is the cost of debt used.
 
-**Cross-check.** The two fairness-opinion banks used discount rates of 9% to 11% (Goldman Sachs) and 10.70% to 11.70% (Jefferies). 10.23% sits inside Goldman's range.
+**Market or book weights.** At book values, debt would be 47.28% of capital and the cost of capital 9.19%. The book version leans on cheap debt because the market values equity at 1.86 times book. Market weights are the right ones.
 
 ## 3. Investments: how good are SolarWinds' existing investments?
 
 ![Exhibit 2: return on capital](report-exhibits/exhibit-2-return-on-capital.png)
 
-Return on invested capital rose from 2.69% in 2022 to 6.66% in 2024, but stayed below the 10.23% cost of capital every year. In 2024 that shortfall cost $84.0M of economic value added. Return on equity was 7.99% against a 12.65% cost of equity.
+Return on invested capital rose from 2.69% in 2022 to 6.66% in 2024, but stayed below the 10.23% cost of capital every year. In 2024 the shortfall cost $84.0M of economic value added. Return on equity was 7.99% against a 12.65% cost of equity.
 
-The accounting return understates the business and overstates the problem. Invested capital of $2,348.0M is entirely goodwill from the 2016 buyout and later acquisitions: goodwill is 100.65% of it. The operating assets themselves earn far more than the capital tied up in them. What fails the test is the price the sponsors paid in 2016, not the software business. For an investor in 2025 the question is whether new investment earns its cost. Management's plan reinvests little: in 2030 capital spending is $27M against $25M of depreciation.
+The capital base explains much of the gap. Goodwill from the 2016 buyout and later acquisitions is 100.65% of invested capital, so the return is measured against the price the sponsors paid, not against the operating assets. A typical SolarWinds project is a small, repeated spend on product development, paid back over years of subscription renewals. The large, lumpy investments were acquisitions funded with debt, and those are what the low return reflects. Future projects are uncertain: bidders in a 2023 sale process doubted the move to subscriptions, citing its "early stage".
+
+**Capitalizing research and development** does not change the headline. SolarWinds expenses its R&D, $108.6M in 2024. Capitalizing the last three years' spend over a three-year life, the life Damodaran uses for software, adds a $206.2M research asset to capital and $10.5M to operating income (R&D less $98.1M of amortization). The adjusted return is 6.53%, because the capital base is still the goodwill. Strip the $2,363.2M of goodwill out and the business runs on $191.0M of capital, almost all of it the research asset, and earns 87% on it (61% on a five-year life). That says the business needs little capital, not what a new dollar earns: SolarWinds' new dollars have gone into acquisitions, and acquisitions are what the 6.66% measures. The 2016 price was too high for what the business earns, and the maintenance revenue of the legacy license base fell 4.6% in 2024 as customers converted. Section 9 uses both facts.
 
 ## 4. Capital structure choices: how is SolarWinds financed?
 
@@ -87,22 +86,22 @@ SolarWinds uses both ends of the debt-equity continuum and nothing in between. F
 2. A first-lien term loan, $1,235.7M at face, senior, secured and floating-rate.
 3. A $130.0M revolving credit facility, undrawn at year-end.
 4. Restricted stock units and options, worth $187.0M at the unaffected price.
-5. Common stock: one class, one vote a share, sold to the public in the 2018 IPO.
+5. Common stock: one class, one vote a share, listed in the 2018 IPO.
 
 There is no convertible debt and no preferred stock.
 
-**The trade-off.** Debt brings an interest tax saving of about $28.1M a year and little else. A mature company with stable cash flow gains some discipline from debt, but these managers already answer to two controlling owners. Against that:
-- **Interest is heavy.** It takes 55.5% of operating cash flow, and coverage is only 1.85 times.
-- **Rate exposure.** Each percentage point on interest rates costs about $12.4M a year, because the loan floats.
+**The trade-off.** Debt saves about $28.1M a year in taxes. Its discipline benefit is small, because managers already answer to two controlling owners. Against that:
+- **Interest is heavy.** Cash interest of $104.5M took 55.5% of the $188.3M of operating cash flow in 2024, and that cash flow is already after interest.
+- **Rates.** Each percentage point on interest rates costs about $12.4M a year on the floating-rate loan.
 - **Flexibility.** The loan had to be refinanced on a sale.
 
-On the qualitative weighing, SolarWinds has too much debt. Section 5 confirms it with numbers.
+On the qualitative weighing, SolarWinds has too much debt.
 
 ## 5. Optimal financing: what is the right mix of debt and equity?
 
 ![Exhibit 3: cost of capital by debt ratio](report-exhibits/exhibit-1-cost-of-capital-by-debt-ratio.png)
 
-The cost of capital is lowest, at 10.03%, with 21% debt and an A- rating. At the actual 33%, it is 10.31% on the same method. Moving to the optimum saves $10.9M a year, worth $144.4M to the firm in perpetuity. SolarWinds carried $468.1M more debt than the optimum.
+The cost of capital is lowest, at 10.03%, with 21% debt and an A- rating. This schedule re-estimates the rating and interest rate at each debt ratio. At the actual 33% that method gives a B rating and 10.31%, slightly above the 10.23% in section 2, which uses the loan's actual 7.11% rate. Moving to the optimum saves $10.9M a year, worth $144.4M as a perpetuity growing at 2.5%. SolarWinds carried $468.1M more debt than the optimum.
 
 | Debt ratio | Levered beta | Cost of equity | Rating | Pre-tax cost of debt | Cost of capital |
 |---|---|---|---|---|---|
@@ -114,121 +113,143 @@ The cost of capital is lowest, at 10.03%, with 21% debt and an A- rating. At the
 | 40% | 1.830 | 13.43% | B- | 8.85% | 10.72% |
 | 50% | 2.135 | 14.93% | C | 19.93% | 16.44% |
 
-**The result holds under other assumptions:**
-- **Coverage.** If coverage is measured on operating income plus acquisition amortization, the optimum is 26%. On EBITDA, it is 28%. Both are still below 33%.
-- **Lower earnings.** If operating income falls 30%, the optimum drops to 14%.
-- **Adjusted present value.** Valuing the tax benefits net of expected bankruptcy costs (a 25% bankruptcy cost and Altman's default rates by rating) gives the same 21% optimum. On that basis, moving there is worth $220.3M.
+The result holds under other assumptions. Measuring coverage on EBITDA gives an optimum of 28%, still below 33%. A 30% fall in operating income lowers the optimum to 14%. The adjusted present value approach reaches the same 21%: today's debt carries a $321.2M tax benefit and $361.6M of expected bankruptcy cost (a 36.8% ten-year default probability at the B rating, at a cost of 25% of firm value); at 21% debt the benefit is $204.2M and the cost $24.6M, and firm value is $220.3M higher.
 
-## 6. Financing changes: should SolarWinds move to the optimum, and with what kind of debt?
+## 6. Financing changes: should SolarWinds move to the optimum, and with what debt?
 
-**How far, and how fast.** SolarWinds should move. An over-levered firm risks distress, and a company with steady subscription cash flow can repay debt gradually rather than issue equity. Repaying the $468.1M excess would take about two years of forecast free cash flow ($212.0M in 2025) with no further special dividends.
+**Whether and how fast.** SolarWinds should move, but gradually:
+- **No takeover pressure.** It cannot be taken over against the sponsors' will.
+- **No near-term bankruptcy threat.** It has $259.3M of cash and an undrawn revolver, its covenant applies only when the revolver is more than 35% drawn, and the loan does not mature until 2030.
+- **Repay from cash flow.** The best path is to repay debt out of free cash flow to equity, with no special dividends until the ratio nears 21%. At 2024's $127.0M, repaying $468.1M takes about 3.7 years (468.1 ÷ 127.0); using part of the cash balance shortens that.
+- **No equity issue or recapitalization.**
 
 **The right type of debt.** Debt should match the assets it funds:
 
 | Characteristic | Right for SolarWinds | Actual |
 |---|---|---|
-| Rate | Floating: the company has pricing power (annual price increases, 97% renewal) | Floating, SOFR + 2.75% |
-| Maturity | Medium term, four to six years | 5.0 years to a single 2030 maturity |
+| Rate | Floating: annual price increases give it pricing power | Floating, SOFR + 2.75% |
+| Maturity | Medium term, four to six years | 5.0 years, one maturity in 2030 |
 | Currency | Dollars and euros in proportion to cash flow; at most 35.18% foreign | All US dollars |
 | Form | Straight debt | Straight debt, no swaps |
 
-The loan's type fits. Its size is the problem. Two small mismatches remain:
-- **Currency.** No debt matches the foreign revenue. A euro tranche could be added at the 2030 refinancing, once net foreign cash flow is measured; the filings do not size it.
-- **Maturity.** The single 2030 maturity could be staggered when the loan is refinanced.
+Rate type, maturity and form fit; the problem is size. Two mismatches remain:
+- **Currency.** No debt is in euros, the currency of most of the foreign revenue. A euro tranche could be added at refinancing, once net foreign cash flow is measured; the filings do not size it.
+- **Maturity.** The single 2030 maturity could be staggered.
 
-## 7. Dividend policy: how does SolarWinds return cash to stockholders?
+## 7. Dividend policy: how does SolarWinds return cash?
 
-SolarWinds pays no regular dividend. It returns cash in two ways:
-- **Special dividends:** $1.50 a share in 2021, from the cash N-able sent before its spin-off, and $1.00 a share in 2024.
-- **Shares withheld for employees' taxes** on vesting stock awards.
+SolarWinds has no regular dividend. In five years it paid two special dividends:
+- **2021:** $237.2M, $1.50 a share, funded by $238.2M of cash N-able paid SolarWinds at its spin-off.
+- **2024:** $168.2M, $1.00 a share.
 
-This is the payout pattern of a controlling owner, not of a policy: two large payments in five years, each when cash had built up. The likeliest reason for the 2024 dividend is the sponsors' preference. With their stakes unchanged from the proxy date, about two-thirds of the $168.2M went to them. That is an inference, not a stated reason.
+Its only other cash return is shares withheld for employees' taxes on vesting stock. In 2024 the dividend was 150.3% of net income. Counting withheld shares, cash returned was 174.0%. The dividend yield was 6.59% at the $15.18 unaffected price.
+
+Against the sector, this is an outlier. Most of the eight peers paid no dividend, and the wider software group paid out 27.22% of earnings. The course's dividend trade-off, the tax cost to investors against the signal a dividend sends and the discipline it imposes on managers, cuts against special dividends here: an irregular payment signals nothing and disciplines no one. Against the patterns the course describes, SolarWinds' payments followed no earnings trend and were not sticky. The likeliest driver of the 2024 dividend is the sponsors' preference; with their stakes unchanged from the proxy, about two-thirds of it went to them. That is an inference, not a stated reason.
 
 ## 8. Dividend assessment: should SolarWinds return more or less cash?
 
 ![Exhibit 4: free cash flow to equity vs cash returned](report-exhibits/exhibit-3-fcfe-vs-cash-returned.png)
 
-Over 2022–2024, free cash flow to equity totaled −$419.8M against $224.6M returned. The negative total comes from 2022, when the company repaid $664.4M of debt. The years that describe the business today are 2023 and 2024:
-- **2023:** free cash flow to equity was $59.4M, and the company returned $18.8M.
-- **2024:** it returned $194.7M against $127.0M of free cash flow to equity, $67.7M more than it generated. The cash balance fell from $289.2M to $259.3M.
+Over 2022–2024, free cash flow to equity totaled −$419.8M against $224.6M returned. The negative total comes from 2022, when the company repaid $664.4M of debt. Years before 2022 include N-able and are not comparable. The years that describe the business today:
+- **2023:** free cash flow to equity of $59.4M; $18.8M returned.
+- **2024:** $194.7M returned against $127.0M of free cash flow to equity (net income $111.9M + depreciation $74.4M − capital spending $20.5M − working-capital build $38.8M, no net borrowing), $67.7M more than it generated. Cash fell only $29.9M, because the cash flow charges $76.5M of non-cash stock compensation; the rest of the dividend was paid by diluting shareholders.
 
-Returning cash was right for a mature company whose projects did not earn their cost of capital. Paying it out as a dividend while debt sat $468.1M above the optimum was not. Given the trust question in section 1 and the over-leverage in section 5, SolarWinds should have returned less to stockholders and used the cash to repay debt.
+**Should investors trust SolarWinds with cash?** No. On all the capital invested in it, SolarWinds earns 6.66% against a 10.23% cost. Its operating business needs little capital, so new cash idles or goes to acquisitions, and acquisitions are what the 6.66% reflects. Returning cash was right. Paying it out as a dividend while debt sat $468.1M above the optimum was not. SolarWinds should have returned less to stockholders and used the cash to repay debt.
 
 ## 9. Valuation: what is SolarWinds worth?
 
 ### Discounted cash flow
 
-Cash flows are management's 2025–2030 forecast from the merger information statement, with stock-based compensation charged as an expense. Free cash flow to the firm rises from $212.0M in 2025 to $419.0M in 2030. Revenue grows 8.12% a year, and the operating margin rises from 32.69% to 40.14%. The cash flows are discounted at 10.23%, with growth of 2.5% a year after 2030.
+**Cash flows** are management's 2025–2030 forecast from the merger information statement, with stock-based compensation charged as an expense:
+- Free cash flow to the firm rises from $212.0M in 2025 to $419.0M in 2030.
+- Revenue grows 8.12% a year, against 5.0% in 2024 and 5.25% a year over 2022–2024. The operating margin, on the plan's definition (adjusted EBITDA less stock compensation and depreciation), rises from about 29% in 2024 to 32.7% in 2025 and 40.1% in 2030. The GAAP margin was 26.2% in 2024, after restructuring, cyber-incident and acquisition costs.
+- The record behind the plan: operating income went from a loss of $819.6M in 2022 (after a $906.4M goodwill impairment) to $150.4M in 2023 and $208.4M in 2024; net income from −$929.4M to −$9.1M to $111.9M; free cash flow to the firm about $146M, $191M and $171M, against the plan's $212M for 2025.
+- On SolarWinds' own fundamentals (return on capital times reinvestment), growth would be about zero. The forecast assumes the margin plan delivers.
+
+**Two discount rates.** The forecast years are discounted at 10.23%. After 2030, growth is 2.5% a year and the terminal value uses a stable-period cost of capital. A mature firm's beta moves toward one and its debt toward its optimum, and at that debt ratio it pays the rate its new rating commands:
+
+| Stable-period input | Value |
+|---|---|
+| Beta | 1.00: the course's rule for a mature firm, and a fit for a business with 93.5% recurring revenue |
+| Cost of equity | 9.35% (4.43% + 1.00 × 4.92%) |
+| Debt ratio | 21%, the optimum |
+| Pre-tax cost of debt | 5.38%, the A- rate at 21% debt from the section 5 schedule, not today's 7.11% |
+| After-tax cost of debt | 4.04% |
+| **Stable cost of capital** | **8.23%** |
+| Return on new capital | 8.23%, equal to the cost of capital, so growth after 2030 adds no value |
+| Reinvestment rate | 30.38% (2.5% ÷ 8.23%) |
+
+The return on new capital is the judgment that matters. SolarWinds earns 6.66% on all its capital and 6.53% with R&D capitalized, both below its cost of capital, and its marginal dollars have gone into acquisitions. The 87% in section 3 shows how little capital the business runs on, not what the next dollar will earn. Nothing in the record earns a lasting excess return, so none is assumed, and the terminal value is then almost exactly next year's after-tax operating income capitalized at the cost of capital; how much is reinvested and how fast it grows no longer matter. The sensitivity table below prices the case that an excess return exists.
 
 | Bridge | Status quo | At the optimal debt ratio |
 |---|---|---|
 | Present value of 2025–2030 cash flows | $1,321.6M | |
-| Present value of terminal value | $2,122.7M | |
-| Enterprise value | $3,444.3M | $3,533.4M |
+| Present value of terminal value | $2,658.2M | |
+| Enterprise value | $3,979.8M | $4,017.7M |
 | − Debt | $1,285.0M | |
-| + Cash | $259.3M | |
+| + Cash, at face value: it earns interest at market rates, so no discount; no cross holdings or minority interests | $259.3M | |
 | − Options and restricted stock units | $187.0M | |
-| **Value per share** (171.6M shares) | **$13.00** | **$13.52** |
+| **Value per share** (171.6M shares) | **$16.13** | **$16.35** |
 
-**The terminal value decides the answer.** There are two ways to value the years after 2030:
-- **Grow the 2030 cash flow at 2.5% forever.** This gives a terminal value of $5,552.5M and $18.67 a share, almost exactly the deal price.
-- **Reinvest consistently with growth.** Take after-tax operating income and subtract the reinvestment needed to grow at 2.5%, assuming a 10% return on new capital. This gives $3,808.9M and $13.00 a share.
+**The terminal-value method matters.** Growing the 2030 cash flow at 2.5% forever gives $24.96 a share. That method assumes SolarWinds grows without reinvesting: in 2030 capital spending barely exceeds depreciation, and customers prepay $46M more than the year before. Matching that cash flow would need reinvestment of −9.33% of operating income forever, so the reinvestment-consistent value is the right one.
 
-The second method is right. The 2030 cash flow is larger than after-tax operating income, because capital spending barely exceeds depreciation and customers prepay $46M more than the year before. Deferred revenue can grow that fast only while the business is growing fast. Growing that cash flow forever would need reinvestment of −9.33% of operating income: the company would have to shrink its capital while it grew.
+**What it takes to reach $18.50.** The deal price requires excess returns forever, or a lower stable beta:
 
-The 10% return on new capital is not what drives the gap. At 15% the value is $14.38, at 20% $15.07, and at 30%, three times the cost of capital, $15.75. No plausible return closes the distance to $18.50.
+| Return on new capital after 2030 | **8.23% (used)** | 10% | 12% | 15% | 20% |
+|---|---|---|---|---|---|
+| Value per share | **$16.13** | $17.32 | $18.25 | $19.18 | $20.10 |
 
-The two fairness-opinion DCFs, $14.30–$23.70 (Goldman Sachs) and $14.70–$19.70 (Jefferies), sit above $13.00 mainly because the banks grew the final-year cash flow at 2% to 3.5%. As this section shows, that method assumes no reinvestment.
+| Stable beta (stable cost of capital) | 0.80 (7.46%) | **1.00 (8.23%)** | 1.46 (10.02%): today's business risk relevered at 21% debt |
+|---|---|---|---|
+| Value per share, no excess returns | $17.74 | **$16.13** | $13.36 |
+| Value per share, 12% return | $21.01 | $18.25 | $14.06 |
+
+At a beta of 1.0 the deal price needs a return of about 12.7% in perpetuity. The stable beta moves the value more than the return does, and 1.0 is the course's rule for a mature firm rather than a SolarWinds-specific estimate, so the second table says what that choice is worth.
+
+**What if the plan is wrong.** The forecast carries more of the value than the terminal assumptions do. Rerunning the valuation with revenue growing at the 2022–2024 rate of 5.25% instead of 8.12%, with the same terminal assumptions:
+
+| Case | 2030 revenue | 2030 free cash flow | Value per share |
+|---|---|---|---|
+| Management's plan: 8.12% growth, margin 32.7% to 40.1% | $1,273.0M | $419.0M | $16.13 |
+| Historical growth, plan margins | $1,083.3M | $345.3M | $13.05 |
+| Historical growth, margin held at 32.7% | $1,083.3M | $284.7M | $9.89 |
+| Historical growth, margin held at 2024's 29.1% on the plan's definition | $1,083.3M | $255.6M | $8.08 |
+
+The margin expansion matters more than the growth. The market price of $15.18 sat between the history-based $13.05 and the plan-based $16.13, nearer the plan. The market had not seen the plan: it was published in the March 2025 information statement, seven weeks after the valuation date.
+
+**Against the banks.** The fairness opinions valued SolarWinds at $14.30–$23.70 (Goldman Sachs) and $14.70–$19.70 (Jefferies). $16.13 sits inside both, in the lower part of each. Their higher midpoints come mainly from growing the final-year cash flow, the method that gives $24.96 here.
 
 ### Relative valuation
 
-| Multiple | SolarWinds | Median of eight peers |
-|---|---|---|
-| Enterprise value / revenue | 4.56x | 3.32x |
-| Enterprise value / EBITDA | 12.84x | 16.39x |
-| Price / earnings | 23.28x | 26.57x |
-| Price / book | 1.86x | 4.58x |
+| Multiple | SolarWinds | Peer median | Implied value per share |
+|---|---|---|---|
+| Enterprise value / EBITDA | 12.84x | 16.39x | $19.95 |
+| Price / earnings | 23.28x | 26.57x | about $16.24 |
+| Enterprise value / revenue | 4.56x | 3.32x | $8.34 |
+| Price / book | 1.86x | 4.58x | not used |
 
-The peers are the eight US-listed companies from Jefferies' fairness-opinion set.
-
-The multiples disagree, and for a reason:
-- **On revenue**, SolarWinds looks expensive, because its margins are higher than the peers'.
-- **On EBITDA**, it looks cheap. That is what slower growth predicts.
-- **Price to book** is set aside: SolarWinds' book equity rests on buyout goodwill, and buybacks have shrunk two peers' book equity.
-
-At the peer medians, the revenue multiple implies $8.34 a share and the EBITDA multiple $19.95. That range brackets both prices. The market was not mispricing SolarWinds relative to its peers at $15.18.
+The peers are the eight US filers in Jefferies' fairness-opinion set: Akamai, NetApp, NetScout, OneSpan, OpenText, Progress, Qualys and Teradata; three foreign filers and the since-acquired Informatica are left out. The EV/EBITDA median rests on the six peers with positive EBITDA, the P/E median on the seven with profits. **EV/EBITDA is the best multiple here.** It is not distorted by SolarWinds' debt or one-time items. Revenue multiples ignore that peer margins range from −18% to 31%. Price to book is set aside because SolarWinds' book equity rests on buyout goodwill and buybacks have shrunk some peers' equity. The peers grew from −9.3% to 9.6%, apart from OpenText's acquisition-driven 28.6%, so the median is not adjusted for growth. EV/EBITDA gives $19.95 and price to earnings about $16.24, so the market's own pricing puts SolarWinds at $16 to $20. That brackets both the market price and the deal.
 
 ### Value with changes, and the deal
 
 ![Exhibit 5: value per share by method](report-exhibits/exhibit-4-value-per-share.png)
 
-**The financing change** in section 6 raises the value to $13.52 a share, $0.52 above the status quo. The operating changes are not priced separately. The margin expansion is already in management's forecast, and a higher bar for growth spending cannot be valued without a revised forecast.
+**Value with changes.** The financing change in section 6 raises value to $16.35 a share, a gain of $0.22 ($37.9M). The gain is small because the stable period already assumes the 21% optimum, so only 2025–2030 benefits. The gain is larger on other bases: $144.4M ($0.84 a share) from capitalized annual savings and $220.3M ($1.28) from adjusted present value. Those measure the change at a constant firm value, before any forecast. The operating changes are not priced separately: the margin expansion is already in management's forecast.
 
-**The likelihood of that change** under the existing owners was low. In 2024 the sponsors chose a special dividend over repaying debt. What happened instead was a sale. The buyer's financing runs the other way: $2,750M of new term loans, more than double the $1,285.0M SolarWinds carried. A private-equity buyer borrows to raise the return on its own equity, not to lower the company's cost of capital.
+**Likelihood of change.** Under the existing owners it was low. In 2024 they chose a special dividend over repaying debt. What happened instead was a sale. The buyer's financing runs the other way: $2,750M of new term loans, more than double the $1,285.0M SolarWinds carried. A private-equity buyer borrows to raise the return on its own equity, not to lower the company's cost of capital.
 
-**The deal.** The $18.50 price is not explained by the control value this analysis can measure ($0.52 a share). It is explained by two things:
-- **Cash flows:** a buyer valuing management's plan with the banks' terminal-value method gets close to $18.50.
-- **Leverage:** the buyer uses far more debt than this analysis would recommend.
+**The deal.** $18.50 was 15% above intrinsic value on management's plan and 22% above the market price. It is consistent with a buyer that believes the plan in full, expects new capital to earn about 12.7% rather than its cost, and uses far more debt to raise the return on its own equity. The market price of $15.18 was 6% below intrinsic value on the plan and well above the history-based value, so investors were already crediting most of a plan they had not seen. The sponsors, who knew the plan best, sold at that price.
 
 ## Conclusion
 
 | Principle | What SolarWinds does | What it should do |
 |---|---|---|
 | Objective and governance | Runs for two controlling owners; the public float had no vote on the sale | Give the minority a real voice on a change of control |
-| Investment | Earns 6.66% against a 10.23% cost of capital, on a capital base of buyout goodwill | Hold new spending to a return above the cost of capital |
-| Financing | 33% debt against a 21% optimum; the right type of debt, but too much of it | Repay about $468.1M from cash flow and stagger the 2030 maturity |
+| Investment | Earns 6.66% against a 10.23% cost of capital on a capital base of buyout goodwill | Hold new spending to a return above the cost of capital |
+| Financing | 33% debt against a 21% optimum; the right type of debt, too much of it | Repay about $468.1M from free cash flow before any special dividend |
 | Dividends | Pays out more than it generates, in special dividends, while over-levered | Repay debt before returning more cash |
-| Valuation | Worth $13.00 a share as run, $13.52 with the financing fixed | $18.50 was a good price for the public shareholders |
-
-**What would change the answer:**
-- **A higher return on new capital.** It raises value slowly: $15.75 even at 30%.
-- **International risk.** If foreign revenue carried only the Western European premium, the cost of capital would fall by about three-tenths of a point.
-- **Lower operating income.** A 30% fall would lower the optimal debt ratio to 14% and make the over-leverage worse.
+| Valuation | Worth $16.13 a share on management's plan, 6% above the market price | $18.50 was a full price for the public shareholders: 15% above intrinsic value, with the plan priced in |
 
 ## Sources
 
-- SolarWinds Corporation, Form 10-K for fiscal years 2018, 2020, 2023 and 2024; 2024 proxy statement (DEF 14A); 2018 IPO prospectus (S-1); Forms 8-K of February 7 and April 16, 2025.
-- SolarWinds Corporation, merger information statement (DEFM14C), March 27, 2025, including the Goldman Sachs and Jefferies fairness opinions and management's 2025–2030 forecast.
-- Aswath Damodaran, datasets as of January–February 2025: implied equity risk premium, country risk premiums, industry betas, and ratings, interest coverage and default spreads.
-- Federal Reserve Bank of St. Louis (FRED): 10-year Treasury yield and SOFR, February 5, 2025.
-- Peer company fiscal-2024 Forms 10-K (SEC structured financial data) and closing prices on February 5, 2025.
+SolarWinds Forms 10-K (FY2018, FY2020, FY2023, FY2024), 2024 proxy statement, 2018 IPO prospectus, Forms 8-K (February and April 2025) and merger information statement (March 2025, including the Goldman Sachs and Jefferies fairness opinions and management's forecast); Damodaran datasets as of January–February 2025; FRED (10-year Treasury, SOFR); peer companies' fiscal-2024 Forms 10-K and February 5, 2025 closing prices.
