@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 31: Estimating Growth in Cash Flows"
 status: active
 owner: weprintmoney
 created: 2026-10-25
-last_updated: 2026-10-25
+last_updated: 2026-11-01
 ---
 
 # SolarWinds (SWI) — Lesson 31: Estimating Growth in Cash Flows
@@ -31,7 +31,7 @@ last_updated: 2026-10-25
         - Management's path: revenue $832.0M in 2025 to $1,273.0M in 2030, EBIT margin 32.7% to 40.1% (`forecast.years`).
         - Peers (`peers`): revenue growth ranges from −9.3% to 28.6% with a median of 4.05%; EBIT margin median 15.92% (facts.peer-median-growth-margin). SolarWinds' 5.0% growth is near the peer median; its 26.2% margin is far above it. The peer rows carry no invested capital, so no peer sales-to-capital.
         - Sales to capital, own history: revenue over book invested capital was 0.30, 0.32 and 0.34 in 2022–2024 (arithmetic from `company.history`), but 100.65% of invested capital is goodwill (§8), so that ratio says nothing about what new growth costs. Incrementally, 2024 added $38.2M of revenue with $37.8M of reinvestment on the alternative basis, a ratio near 1.0; on the reported basis reinvestment was negative and the ratio is undefined. This is an estimate with a wide range, and it is not used in the model.
-        - What drives the forecast here: management's revenue and margin path for 2025–2030 (§6), with the terminal reinvestment forced by growth 2.5% over stable ROIC 8.51%, i.e. 29.38% (§6). R&D at 13.6% of revenue (108.6 ÷ 796.9) is already inside EBIT.
+        - What drives the forecast here: management's revenue and margin path for 2025–2030 (§6), with the terminal reinvestment forced by growth 2.5% over stable ROIC 12%, i.e. 20.83% (§6). R&D at 13.6% of revenue (108.6 ÷ 796.9) is already inside EBIT.
 
 ## Cumulative Project — Questions for This Lesson
 
@@ -45,8 +45,8 @@ last_updated: 2026-10-25
   Operating income: ROIC 6.66% × reinvestment rate −9.66% = −0.64%, or 1.61% on the alternative reinvestment basis (§8; facts.fundamental-growth-2024). Net income: ROE 7.99% (§8) × equity reinvestment rate of −13.5% (net capex −$53.9M plus working capital $38.8M, less net new debt $0.0M, over net income $111.9M) = −1.1% (facts.fundamental-growth-equity-2024). Essentially zero growth.
 
 - **If margins are changing, what are your estimates of revenue growth, margins and reinvestment for the future?**
-  The valuation uses management's path for 2025–2030: revenue growth about 8.12% a year, EBIT margin 32.7% to 40.1% and free cash flow $212.0M to $419.0M (`forecast.years`), then 2.5% growth with 29.38% reinvestment (§6). The plan's explicit years assume no net reinvestment, which is the main judgment in the DCF: it is the difference between terminal values of $7,150.4M and $4,618.8M (§6). Alternative estimate, not run in the model: revenue growth near the 5.25% history instead of 8.12%.
+  The valuation uses management's path for 2025–2030: revenue growth about 8.12% a year, EBIT margin 32.7% to 40.1% and free cash flow $212.0M to $419.0M (`forecast.years`), then 2.5% growth with 20.83% reinvestment (2.5% over a 12% stable return on capital, §6). The plan's explicit years assume no net reinvestment, which is the main judgment in the DCF: it is the difference between terminal values of $7,150.4M and $5,177.6M (§6). The model also runs the plan at the 2022–2024 revenue rate of 5.25% instead of 8.12% (`forecast.stress_cases`; §6 stress cases): with the plan's margins, value per share is $14.17, $3.28 below the plan's $17.45; with the margin held at the plan's first-year 32.69%, $10.81, $6.64 below; with the margin held at 2024's 26.15%, $7.32, $10.13 below. The growth is worth $3.28 a share; the margin expansion is worth more.
 
 ## Notes
 
-The central finding for lessons 32 and 34: the plan's growth is paid for by operating margin, subscription pricing and expensed R&D, not by visible capital, and the fundamentals formula returns about zero. The ledger has no `forecast.sales_to_capital` and no analyst growth. Return and growth figures for 2022 and 2023 are arithmetic on `company.history`; the model's §8 covers the base year only.
+The central finding for lessons 32 and 34: the plan's growth is paid for by operating margin, subscription pricing and expensed R&D, not by visible capital, and the fundamentals formula returns about zero. The §6 stress cases price the plan against the history: at the 5.25% revenue rate the value is $14.17 a share with the plan's margins, and $10.81 or $7.32 with the margin held at 32.69% or 26.15%, against $17.45 on the plan; the $15.18 market price sat between the history-based and the plan-based values. The ledger has no `forecast.sales_to_capital` and no analyst growth. Return and growth figures for 2022 and 2023 are arithmetic on `company.history`; the model's §8 covers the base year only.

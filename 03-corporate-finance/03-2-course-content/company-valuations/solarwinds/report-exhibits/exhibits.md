@@ -74,13 +74,13 @@ Charts and tables for the final report, in the order of the course's nine projec
 | Bridge | Amount |
 |---|---|
 | Present value of explicit cash flows | $1,321.6M |
-| Present value of terminal value | $2,574.0M |
-| **Enterprise value** | **$3,895.6M** |
+| Present value of terminal value | $2,885.4M |
+| **Enterprise value** | **$4,207.0M** |
 | − Debt | $1,285.0M |
 | + Cash | $259.3M |
-| = Equity value before option claims | $2,869.9M |
+| = Equity value before option claims | $3,181.3M |
 | − Value of options and RSUs | $187.0M |
-| **Value per share (course method: ÷ basic shares 171.6M)** | **$15.63** |
+| **Value per share (course method: ÷ basic shares 171.6M)** | **$17.45** |
 | Market or transaction price (last-unaffected) | $15.18 |
 | Deal price | $18.50 |
 

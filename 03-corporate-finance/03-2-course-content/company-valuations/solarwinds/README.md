@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Course Project Overview"
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-10-25
+last_updated: 2026-11-01
 ---
 
 # SolarWinds (SWI) — Course Project Overview
@@ -24,8 +24,10 @@ SolarWinds sells IT monitoring and observability software. Silver Lake and Thoma
 
 All from [model-output.md](model-output.md):
 - **Cost of capital:** 10.23% for the forecast years; 8.51% in the terminal period (beta 1.0, 21% debt).
-- **Discounted cash flow value:** $15.63 a share, on the course method (consistent reinvestment in the terminal value; options subtracted as a claim).
-- **Against the prices:** that is 1.03 times the $15.18 unaffected price and 0.85 times the $18.50 deal price.
+- **Stable return on capital:** 12%, 3.5 points above the 8.51% stable cost of capital. A judgment (`forecast.stable_roic`): capitalizing R&D leaves ROIC at 6.53% because the capital base is the 2016 buyout goodwill, but the return on operating capital excluding goodwill is 87.35% (model §8).
+- **Discounted cash flow value:** $17.45 a share, on the course method (consistent reinvestment in the terminal value; options subtracted as a claim).
+- **Against the prices:** that is 1.15 times the $15.18 unaffected price and 0.94 times the $18.50 deal price.
+- **Stress cases (model §6):** revenue at the 2022–2024 rate of 5.25% instead of the plan's 8.12% gives $14.17 with the plan's margins, $10.81 with the margin held at 32.69% and $7.32 with it held at 26.15%.
 - **Optimal debt ratio:** 21%, against the actual 33%.
 
 [valuation-report.md](valuation-report.md) explains what these mean. [walkthrough.md](walkthrough.md) builds them step by step for a reader with no finance background.
@@ -94,7 +96,8 @@ One line per correction: date, what changed, which files.
 - 2026-10-25 — **Report attributions.** The report attributed the 2030 cash-flow excess to depreciation; it is deferred-revenue growth (`facts.forecast-2030-detail`). It also cited base-year capex as the forecast. Both fixed in report sections 3 and 6.
 - 2026-11-01 — **2023 market check.** Lesson 32 said Party A's indication of about $14.00 was the only one. There were three: Party A $13.00, revised down from about $14.00; Party B $12.00 to $13.00; Party C $12.50 (`facts.market-check-2023`). Touched lesson 32.
 - 2026-11-01 — **Sponsor ownership.** The proxy states 66.34%; 66.35% is the sum of the rounded holdings (36.56% + 29.79%). Lesson 2 cited the 66.34% fact with the 66.35% figure in two places; now matched. Mentions labelled as the sum are unchanged. Touched lesson 2.
-- 2026-11-01 — **Stable-period cost of capital.** The terminal value now uses beta 1.0 and 21% debt (8.51%) per lesson 32, with the stable return on capital set equal to it (was 10% at the current 10.23%). Value per share $15.63, was $13.00; financing lever $0.22, was $0.52. Touched model.py, the ledger, model-output, lessons 15, 19, 22, 24, 29, 31–36, the walkthrough, both reports, the study guide and the exhibits.
+- 2026-11-01 — **Stable-period cost of capital.** The terminal value now uses beta 1.0 and 21% debt (8.51%) per lesson 32, with the stable return on capital set equal to it (was 10% at the current 10.23%). Value per share $15.63 at the time, was $13.00; financing lever $0.22, was $0.52. Touched model.py, the ledger, model-output, lessons 15, 19, 22, 24, 29, 31–36, the walkthrough, both reports, the study guide and the exhibits. Superseded the same day by the next entry.
+- 2026-11-01 — **Stable return on capital.** 12%, was 8.51% (equal to the stable cost of capital). Model §8 now capitalizes R&D over a 3-year life: adjusted ROIC 6.53% against 6.66% unadjusted, because the capital base is the 2016 buyout goodwill; return on operating capital excluding goodwill 87.35% (60.56% on a 5-year life). The 12% is a 3.5-point spread over the 8.51% stable cost of capital (`forecast.stable_roic`). Model §6 adds stress cases at the 2022–2024 revenue growth rate ($14.17, $10.81, $7.32 a share). Value per share $17.45, was $15.63; financing lever $0.24, was $0.22. Touched model.py, the ledger, model-output, lessons 14, 15, 19, 27, 29, 31–36, the walkthrough, both reports, the study guide, this README and the exhibits.
 
 ## Questions skipped or answered with a stand-in
 

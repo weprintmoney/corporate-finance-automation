@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 35: Relative Valuation"
 status: active
 owner: weprintmoney
 created: 2026-10-25
-last_updated: 2026-10-25
+last_updated: 2026-11-01
 ---
 
 # SolarWinds (SWI) — Lesson 35: Relative Valuation
@@ -46,7 +46,7 @@ last_updated: 2026-10-25
   Eight US-listed software and infrastructure companies: Akamai, NetApp, NetScout, OneSpan, Open Text, Progress, Qualys and Teradata (`peers`). They are the companies in Jefferies' fairness-opinion set that file with the SEC; four others were dropped: Check Point, TeamViewer and Trend Micro file outside the US on different accounting, and Informatica has since been acquired and its price history is no longer available (`sources/peer-filings/peer-facts-2025-02-05.md`). They are mature, with growth from −9.3% to 9.6% except Open Text, whose 28.6% is the Micro Focus acquisition. None is a direct observability competitor. Datadog, Dynatrace and PagerDuty were considered and rejected, because their growth would make their multiples a price for growth SolarWinds does not have.
 
 - **Based upon the multiple and comparables, what price would you attach to your company?**
-  $19.95 a share at the peer-median EV / EBITDA of 16.39x (model-output.md §7), after subtracting the $187.0M option and RSU claim as the DCF does. At the peer-median EV / revenue of 3.32x the figure is $8.34. The two disagree by $11.61 because revenue multiples ignore SolarWinds' margin; we weight EV / EBITDA. Cross-checks on my arithmetic: price / earnings at the 26.57x median gives about $16.24 (26.57 × $111.9M ÷ 171.6M = $17.33, less the $1.09 a share option and RSU claim, $187.0M ÷ 171.6M); and removing Qualys, the highest EV / EBITDA at 25.07x, lowers the median to 15.40x and the price to about $18.31 (the earlier $19.40 less the same $1.09). Pricing range, $16 to $20, with $19.95 as the model's point. Relative valuation prices SolarWinds around or above the $18.50 deal, while the DCF (lesson 34) puts it at $15.63. A multiple of EBITDA does not ask how much of that EBITDA must be reinvested to grow; the DCF does. That is the main reason the two methods disagree.
+  $19.95 a share at the peer-median EV / EBITDA of 16.39x (model-output.md §7), after subtracting the $187.0M option and RSU claim as the DCF does. At the peer-median EV / revenue of 3.32x the figure is $8.34. The two disagree by $11.61 because revenue multiples ignore SolarWinds' margin; we weight EV / EBITDA. Cross-checks on my arithmetic: price / earnings at the 26.57x median gives about $16.24 (26.57 × $111.9M ÷ 171.6M = $17.33, less the $1.09 a share option and RSU claim, $187.0M ÷ 171.6M); and removing Qualys, the highest EV / EBITDA at 25.07x, lowers the median to 15.40x and the price to about $18.31 (the earlier $19.40 less the same $1.09). Pricing range, $16 to $20, with $19.95 as the model's point. That range brackets the DCF (lesson 34), which puts the shares at $17.45; the EV / EBITDA point is $2.50 above it (19.95 − 17.45, my arithmetic) and around or above the $18.50 deal. A multiple of EBITDA does not ask how much of that EBITDA must be reinvested to grow; the DCF does, and that reinvestment is the main reason the model's point sits above the DCF.
 
 ## Notes
 

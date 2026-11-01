@@ -16,18 +16,18 @@ SolarWinds was a mature, cash-generating software company run for the benefit of
 
 | | |
 |---|---|
-| Value per share, status quo (DCF) | **$15.63** |
-| Value per share at the optimal debt ratio | $15.85 |
+| Value per share, status quo (DCF) | **$17.45** |
+| Value per share at the optimal debt ratio | $17.68 |
 | Market price, 2025-02-05 | $15.18 |
 | Deal price | $18.50 |
 | Cost of capital: 2025–2030 / after 2030 | 10.23% / 8.51% |
-| Return on invested capital, FY2024 | 6.66% |
+| Return on invested capital, FY2024 | 6.66%; 87% on operating capital excluding goodwill |
 | Debt ratio: actual / optimal | 33% / 21% |
 
 - **Does well.** It keeps customers: 93.5% of revenue is recurring, subscription net retention was 99% in 2024, and maintenance contracts renewed at 97%. Its loan has the right rate type and maturity for that business.
 - **Does badly.** It earns 6.66% on its capital against a 10.23% cost. It carries more debt than is optimal, 33% against 21%. In 2024 it paid out more cash than it generated, through a $168.2M special dividend, while over-levered.
 - **Should do differently.** Repay about $468.1M of debt before returning more cash. Hold new growth spending to a return above the cost of capital.
-- **Verdict.** The discounted cash flow valuation is the basis for the conclusion. It puts SolarWinds at $15.63 a share as run, about its market price. The $18.50 deal price was 18% above that. It would be justified only if SolarWinds earned a return on capital a little above 15% forever, which its record does not support. For public shareholders, $18.50 was a full price.
+- **Verdict.** The discounted cash flow valuation is the basis for the conclusion. It puts SolarWinds at $17.45 a share as run, 15% above its market price. The $18.50 deal price was 6% above that. Reaching it would take a return on new capital of about 16% forever, against the 12% assumed here. Management's plan carries the value: at the company's own growth rate the shares are worth $14.17, and the market price sat between the two. For public shareholders, $18.50 was a fair price that paid for the plan.
 
 ## 1. Stockholder analysis: who has the power?
 
@@ -75,6 +75,8 @@ Their control goes beyond ownership:
 Return on invested capital rose from 2.69% in 2022 to 6.66% in 2024, but stayed below the 10.23% cost of capital every year. In 2024 the shortfall cost $84.0M of economic value added. Return on equity was 7.99% against a 12.65% cost of equity.
 
 The capital base explains much of the gap. Goodwill from the 2016 buyout and later acquisitions is 100.65% of invested capital, so the return is measured against the price the sponsors paid, not against the operating assets. A typical SolarWinds project is a small, repeated spend on product development, paid back over years of subscription renewals. The large, lumpy investments were acquisitions funded with debt, and those are what the low return reflects. Future projects are uncertain: bidders in a 2023 sale process doubted the move to subscriptions, citing its "early stage".
+
+**Capitalizing research and development** does not change the headline. SolarWinds spent $108.6M on R&D in 2024, 13.6% of revenue, and expenses it. Treating the last three years' R&D as an asset with a three-year life, the life Damodaran uses for software, adds a $206.2M research asset to capital and $10.5M to operating income (R&D less $98.1M of amortization). The adjusted return on capital is 6.53%, because the capital base is still the goodwill. Strip the $2,363.2M of goodwill out and the business runs on $191.0M of capital, on which it earns 87% (61% on a five-year life). The 6.66% measures the price the sponsors paid in 2016. The operating business is capital-light, and that matters for the terminal value in section 9.
 
 ## 4. Capital structure choices: how is SolarWinds financed?
 
@@ -152,7 +154,7 @@ Over 2022–2024, free cash flow to equity totaled −$419.8M against $224.6M re
 - **2023:** free cash flow to equity of $59.4M; $18.8M returned.
 - **2024:** $194.7M returned against $127.0M of free cash flow to equity, $67.7M more than it generated. Cash fell from $289.2M to $259.3M.
 
-**Should investors trust SolarWinds with cash?** No. Its projects earn 6.66% against a 10.23% cost of capital, so cash kept in the business earns less than investors require. Returning cash was right. Paying it out as a dividend while debt sat $468.1M above the optimum was not. SolarWinds should have returned less to stockholders and used the cash to repay debt.
+**Should investors trust SolarWinds with cash?** No. On all the capital invested in it, SolarWinds earns 6.66% against a 10.23% cost. Its operating business earns far more on very little capital, which is the point: it has few places to put new cash, so cash kept in the business idles or goes to acquisitions, and acquisitions are what the 6.66% reflects. Returning cash was right. Paying it out as a dividend while debt sat $468.1M above the optimum was not. SolarWinds should have returned less to stockholders and used the cash to repay debt.
 
 ## 9. Valuation: what is SolarWinds worth?
 
@@ -172,32 +174,43 @@ Over 2022–2024, free cash flow to equity totaled −$419.8M against $224.6M re
 | Debt ratio | 21%, the optimum |
 | After-tax cost of debt | 5.33%, held at today's rate |
 | **Stable cost of capital** | **8.51%** |
-| Return on new capital | 8.51%, so growth after 2030 adds no value |
-| Reinvestment rate | 29.38% (2.5% ÷ 8.51%) |
+| Return on new capital | 12%, 3.5 points above the stable cost of capital |
+| Reinvestment rate | 20.83% (2.5% ÷ 12%) |
 
-The return on new capital is set equal to the stable cost of capital because SolarWinds' record gives no sign of a lasting competitive advantage. Its legacy license business was shrinking, its returns are below its cost of capital, and its observability products compete with faster-growing rivals.
+The return on new capital is a judgment. Section 3 showed that the business earns 87% on its operating capital, keeps 99% of its subscription revenue and raises prices every year, so new capital should earn more than it costs. It also showed a shrinking license business and faster-growing rivals, so the excess fades. A 12% return, 3.5 points over the stable cost of capital, sits between those two facts. The course's Disney valuation used a 2.7-point spread. Setting the return equal to the cost of capital, so that growth adds nothing, gives $15.63; the sensitivity table below shows the rest of the range.
 
 | Bridge | Status quo | At the optimal debt ratio |
 |---|---|---|
 | Present value of 2025–2030 cash flows | $1,321.6M | |
-| Present value of terminal value | $2,574.0M | |
-| Enterprise value | $3,895.6M | $3,932.6M |
+| Present value of terminal value | $2,885.4M | |
+| Enterprise value | $4,207.0M | $4,247.4M |
 | − Debt | $1,285.0M | |
 | + Cash (at face value; no cross holdings or minority interests) | $259.3M | |
 | − Options and restricted stock units | $187.0M | |
-| **Value per share** (171.6M shares) | **$15.63** | **$15.85** |
+| **Value per share** (171.6M shares) | **$17.45** | **$17.68** |
 
 **The terminal-value method matters.** Growing the 2030 cash flow at 2.5% forever gives $23.86 a share. That method assumes SolarWinds grows without reinvesting: in 2030 capital spending barely exceeds depreciation, and customers prepay $46M more than the year before. Matching that cash flow would need reinvestment of −9.33% of operating income forever, so the reinvestment-consistent value is the right one.
 
 **What it takes to reach $18.50.** The deal price requires SolarWinds to earn excess returns forever:
 
-| Return on new capital after 2030 | 8.51% | 10% | 12% | 15% | 20% | 30% |
+| Return on new capital after 2030 | 8.51% | 10% | **12% (used)** | 15% | 20% | 30% |
 |---|---|---|---|---|---|---|
-| Value per share | $15.63 | $16.56 | $17.45 | $18.33 | $19.22 | $20.10 |
+| Value per share | $15.63 | $16.56 | **$17.45** | $18.33 | $19.22 | $20.10 |
 
-The deal price needs a return a little above 15% in perpetuity. The 10% column is the assumption the course used for Disney, whose competitive advantages it expected to persist. It gives $16.56.
+The deal price needs a return a little above 15% in perpetuity. The 10% column is the assumption the course used for Disney, whose competitive advantages it expected to persist; it gives $16.56. The defensible range runs from $15.63, no excess returns, to $18.33.
 
-**Against the banks.** The fairness opinions valued SolarWinds at $14.30–$23.70 (Goldman Sachs) and $14.70–$19.70 (Jefferies). $15.63 sits inside both, near their low ends. Their higher midpoints come mainly from growing the final-year cash flow, the method that gives $23.86 here.
+**What if the plan is wrong.** The forecast carries more of the value than the terminal return does. Rerunning the valuation with revenue growing at the 2022–2024 rate of 5.25% instead of 8.12%, with the same terminal assumptions:
+
+| Case | 2030 revenue | 2030 free cash flow | Value per share |
+|---|---|---|---|
+| Management's plan: 8.12% growth, margin 32.7% to 40.1% | $1,273.0M | $419.0M | $17.45 |
+| Historical growth, plan margins | $1,083.3M | $345.3M | $14.17 |
+| Historical growth, margin held at 32.7% | $1,083.3M | $284.7M | $10.81 |
+| Historical growth, margin held at 2024's 26.2% | $1,083.3M | $231.6M | $7.32 |
+
+The margin expansion matters more than the growth. The market price of $15.18 sat between the history-based $14.17 and the plan-based $17.45, which is where a price lands when investors half-believe the plan.
+
+**Against the banks.** The fairness opinions valued SolarWinds at $14.30–$23.70 (Goldman Sachs) and $14.70–$19.70 (Jefferies). $17.45 sits inside both, in the lower half of Goldman's range and near the middle of Jefferies'. Their higher midpoints come mainly from growing the final-year cash flow, the method that gives $23.86 here.
 
 ### Relative valuation
 
@@ -214,11 +227,11 @@ The peers are the eight US-listed companies in Jefferies' fairness-opinion set. 
 
 ![Exhibit 5: value per share by method](report-exhibits/exhibit-4-value-per-share.png)
 
-**Value with changes.** The financing change in section 6 raises value to $15.85 a share, a gain of $0.22. The gain is small because the stable period already assumes the 21% optimum, so only 2025–2030 benefits. The gain is larger on other bases: $144.4M ($0.84 a share) from capitalized annual savings and $220.3M ($1.28) from adjusted present value. Those measure the change at a constant firm value, before any forecast. The operating changes are not priced separately: the margin expansion is already in management's forecast.
+**Value with changes.** The financing change in section 6 raises value to $17.68 a share, a gain of $0.24. The gain is small because the stable period already assumes the 21% optimum, so only 2025–2030 benefits. The gain is larger on other bases: $144.4M ($0.84 a share) from capitalized annual savings and $220.3M ($1.28) from adjusted present value. Those measure the change at a constant firm value, before any forecast. The operating changes are not priced separately: the margin expansion is already in management's forecast.
 
 **Likelihood of change.** Under the existing owners it was low. In 2024 they chose a special dividend over repaying debt. What happened instead was a sale. The buyer's financing runs the other way: $2,750M of new term loans, more than double the $1,285.0M SolarWinds carried. A private-equity buyer borrows to raise the return on its own equity, not to lower the company's cost of capital.
 
-**The deal.** $18.50 was 18% above intrinsic value as run and 22% above the market price. It is consistent with a buyer that believes the margin plan, uses far more debt, and expects returns on capital above the cost of capital, none of which the company's record shows. The market price of $15.18 was close to intrinsic value.
+**The deal.** $18.50 was 6% above intrinsic value as run and 22% above the market price. It is consistent with a buyer that believes the margin plan in full, expects a return on new capital somewhat above the 12% assumed here, and uses far more debt to raise the return on its own equity. The market price of $15.18 was 13% below intrinsic value on the plan, between the history-based and plan-based values. That is what a price looks like when investors discount management's forecast, and the sponsors, who knew the plan best, took the other side.
 
 ## Conclusion
 
@@ -228,7 +241,7 @@ The peers are the eight US-listed companies in Jefferies' fairness-opinion set. 
 | Investment | Earns 6.66% against a 10.23% cost of capital on a capital base of buyout goodwill | Hold new spending to a return above the cost of capital |
 | Financing | 33% debt against a 21% optimum; the right type of debt, too much of it | Repay about $468.1M from free cash flow before any special dividend |
 | Dividends | Pays out more than it generates, in special dividends, while over-levered | Repay debt before returning more cash |
-| Valuation | Worth $15.63 a share as run, about the market price | $18.50 was a full price for the public shareholders |
+| Valuation | Worth $17.45 a share as run, 15% above the market price | $18.50 was a fair price for the public shareholders: 6% above intrinsic value, with the plan priced in |
 
 ## Sources
 
