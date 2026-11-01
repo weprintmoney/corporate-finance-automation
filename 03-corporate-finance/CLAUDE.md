@@ -53,6 +53,7 @@ WACC = (E/V) · rₑ + (D/V) · r_d · (1 − t)
 |------|-------------|
 | [03-1-course-overview/CLAUDE.md](03-1-course-overview/CLAUDE.md) | NYU Stern Certificate in Corporate Finance — course outline, syllabus, FAQ, key dates |
 | [03-2-course-content/CLAUDE.md](03-2-course-content/CLAUDE.md) | All 36 lesson folders — navigation guide and lesson-index.yaml pointer |
+| [03-2-course-content/key-terms.md](03-2-course-content/key-terms.md) | Plain-language glossary of key terms for every lesson (1–36), grouped by module |
 | [03-2-course-content/lesson-index.yaml](03-2-course-content/lesson-index.yaml) | Full lesson map: folder paths, topics, and which file types are present per lesson |
 | [03-4-blogs/README.md](03-4-blogs/README.md) | Damodaran "Musings on Markets" archive fetcher — pulls all posts to `posts/` for local text analysis |
 | [03-4-blogs/posts/](03-4-blogs/posts/) | Full Damodaran blog archive (~680 posts, 2008–present) — new posts added weekly by CI |

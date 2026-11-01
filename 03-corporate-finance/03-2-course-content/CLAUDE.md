@@ -7,6 +7,7 @@ Applied Corporate Finance course content — 36 lessons across 4 modules.
 | File | Description |
 |------|-------------|
 | [lesson-index.yaml](lesson-index.yaml) | Full lesson map: module, folder, topic, available file types |
+| [key-terms.md](key-terms.md) | Plain-language glossary of key terms, by lesson, for all 36 lessons |
 | [README.md](README.md) | Human-readable structure overview, export script docs, `/evaluate-company` skill docs |
 | [brightspace-export.py](brightspace-export.py) | Brightspace export script — downloads lesson content, converts PDFs with marker |
 | [company-valuations/](company-valuations/) | One folder per company from `/value-company` runs (ledger, sources, lesson-by-lesson answers, model output, report, walkthrough), plus the older single-file `/evaluate-company` reports |
