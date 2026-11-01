@@ -47,7 +47,7 @@ The question this report answers is what SolarWinds was worth to a diversified i
 
 **Cross-check against the deal:**
 - Goldman Sachs used 9% to 11% and Jefferies 10.70% to 11.70% (`facts.goldman-dcf-discount-rate-range`, `facts.jefferies-dcf-discount-rate-range`).
-- 10.23% sits inside Goldman's range. Their per-share DCF ranges were $14.30 to $23.70 (Goldman) and $14.70 to $19.70 (Jefferies, with stock-based compensation charged) (`facts.gs-dcf-range`, `facts.jefferies-dcf-range`). Both sit wholly above this report's $13.00. Section 6 explains the gap.
+- 10.23% sits inside Goldman's range. Their per-share DCF ranges were $14.30 to $23.70 (Goldman) and $14.70 to $19.70 (Jefferies, with stock-based compensation charged) (`facts.gs-dcf-range`, `facts.jefferies-dcf-range`). Both contain this report's $15.63, near their low ends. Section 6 explains the remaining gap to their midpoints.
 
 ## 3. Investment returns
 
@@ -88,26 +88,28 @@ The 2024 dividend paid out more than the year generated and ran the cash balance
 
 ## 6. Discounted cash flow
 
-Cash flows are management's 2025–2030 forecast (`forecast.years`) with stock-based compensation charged as an expense: free cash flow to the firm rises from $212.0M to $419.0M. They are discounted at 10.23% (model §6).
+Cash flows are management's 2025–2030 forecast (`forecast.years`) with stock-based compensation charged as an expense: free cash flow to the firm rises from $212.0M to $419.0M. They are discounted at 10.23% (model §6). The terminal value is capitalized at the stable-period cost of capital of 8.51% and discounted back to today at 10.23%.
 
 | Bridge | Status quo | At the optimal mix |
 |---|---|---|
 | Present value of 2025–2030 cash flows | $1,321.6M | |
-| Present value of terminal value | $2,122.7M | |
-| Enterprise value | $3,444.3M | $3,533.4M |
+| Present value of terminal value | $2,574.0M | |
+| Enterprise value | $3,895.6M | $3,932.6M |
 | Less debt, plus cash | debt $1,285.0M, cash $259.3M | |
 | − Options and restricted stock | $187.0M | |
-| **Value per share** | **$13.00** | **$13.52** |
+| **Value per share** | **$15.63** | **$15.85** |
 
 **The terminal value is the whole argument.** The model shows two methods (model §6):
-- **Final-year cash flow grown at 2.5% forever:** $5,552.5M.
-- **Operating income less the reinvestment needed to grow at 2.5%** (lesson 32's consistent-reinvestment method, at a stable return on capital of 10%): $3,808.9M.
+- **Final-year cash flow grown at 2.5% forever:** $7,150.4M.
+- **Operating income less the reinvestment needed to grow at 2.5%** (lesson 32's consistent-reinvestment method, at a stable return on capital of 8.51%): $4,618.8M.
 
-In management's 2030 forecast, free cash flow of $419.0M is larger than after-tax operating income. Capital spending ($27M) barely exceeds depreciation ($25M), and customers prepay $46M more in deferred revenue than the year before (`facts.forecast-2030-detail`). Deferred revenue can grow that fast only while the business grows fast, not forever. Growing that cash flow forever assumes SolarWinds grows without ever reinvesting, which no company can do. The course method costs $1,743.6M of terminal value. That is the difference between $18.67 a share, almost exactly the deal price, and $13.00 (model §6). The choice of a 10% stable return on capital is not what drives the gap. At 30%, three times the cost of capital, value is still $15.75 (model §6 sensitivity). Matching the final-year cash flow would need reinvestment of −9.33% of operating income forever: the company would have to shrink its capital while growing.
+In management's 2030 forecast, free cash flow of $419.0M is larger than after-tax operating income. Capital spending ($27M) barely exceeds depreciation ($25M), and customers prepay $46M more in deferred revenue than the year before (`facts.forecast-2030-detail`). Deferred revenue can grow that fast only while the business grows fast, not forever. Growing that cash flow forever assumes SolarWinds grows without ever reinvesting, which no company can do. The course method costs $2,531.6M of terminal value. That is the difference between $23.86 a share, above the deal price, and $15.63 (model §6). Matching the final-year cash flow would need reinvestment of −9.33% of operating income forever: the company would have to shrink its capital while growing.
 
-Against the prices, $13.00 is 0.86 times the $15.18 market price and 0.70 times the $18.50 deal price (model §6). Other per-share shortcuts:
-- **Diluted shares:** dividing by them instead of subtracting options gives $13.86.
-- **Optimal debt ratio:** moving to it adds $0.52 a share ($13.52) in the DCF. The other two measures give more: annual savings capitalized give $0.84 a share and adjusted present value $1.28 (model §6 reconciliation, §9). They differ in basis. The DCF prices today's debt at its actual 7.11% rate, while the other two price both ends on the synthetic ratings.
+**The stable-period cost of capital.** Lesson 32 says a firm in stable growth looks like the average firm: beta moves toward one, debt moves toward its optimum, and excess returns fade. So the terminal value does not use today's 10.23%, which rests on a beta of 1.6714 and 33% debt. It uses a beta of 1.00 and the 21% optimum from section 4. Cost of equity is 4.43% + 1.00 × 4.92% = 9.35%. The after-tax cost of debt stays at 5.33%, and the stable cost of capital is 79% × 9.35% + 21% × 5.33% = 8.51% (model §6). The stable return on capital is set equal to it, 8.51%, so growth after 2030 adds no value, and that sets terminal reinvestment at 2.5% ÷ 8.51% = 29.38% of operating income. The sensitivity shows what a lasting advantage would be worth: $16.56 at a 10% return on capital, $18.33 at 15%, $19.22 at 20% and $20.10 at 30% (model §6). Even at 30% the value stays below the $23.86 of the no-reinvestment method.
+
+Against the prices, $15.63 is 1.03 times the $15.18 market price and 0.85 times the $18.50 deal price (model §6). Other per-share shortcuts:
+- **Diluted shares:** dividing by them instead of subtracting options gives $16.45.
+- **Optimal debt ratio:** moving to it adds $0.22 a share ($15.85) in the DCF, because the terminal value already assumes the 21% optimum and only the 2025–2030 years gain. The other two measures give more: annual savings capitalized give $0.84 a share and adjusted present value $1.28 (model §6 reconciliation, §9). They differ in basis. The DCF prices today's debt at its actual 7.11% rate, while the other two price both ends on the synthetic ratings.
 
 ## 7. Relative valuation
 
@@ -131,12 +133,12 @@ Read together, the multiples span $8.34 to $19.95 and bracket both prices. They 
 
 ## 8. Final narrative
 
-On the rates of 2025-02-05, SolarWinds as run was worth about $13.00 a share to a diversified investor. That is below the $15.18 it traded at and well below the $18.50 Turn/River paid. Three things close the gap to the deal price, and only one is in this model:
-- **Financing:** moving to the optimal debt ratio is worth $0.52 a share (model §6).
-- **Terminal value:** management's cash flows grown without reinvestment would justify the deal price. The course method says they cannot be.
+On the rates of 2025-02-05, SolarWinds as run was worth about $15.63 a share to a diversified investor. That is close to the $15.18 it traded at (1.03 times) and 85% of the $18.50 Turn/River paid. Three things could close the $2.87 gap to the deal price ($18.50 − $15.63), and only one is in this model:
+- **Financing:** moving to the optimal debt ratio is worth $0.22 a share (model §6).
+- **Terminal value:** the deal price is reached only if SolarWinds earns a stable return on capital of about 16% or more forever ($18.33 at 15%, $19.22 at 20%). That is a lasting competitive advantage, the opposite of the ledger's judgment that growth after 2030 adds no value.
 - **Control:** a private-equity buyer can cut costs and lever up in ways a public company with a diffuse float cannot. The lesson 34 answer sizes the operating levers as judgment calls, not model outputs.
 
-For the public stockholders, the deal was a good price: $18.50 for a stock that traded at $15.18 and was worth less than either on a consistent-reinvestment basis. For Silver Lake and Thoma Bravo, it was an exit at a price inside both advisers' DCF ranges. Our reading, not stated in the deal document, is this: those ranges sit above $13.00 mainly because the advisers grew the final-year cash flow at 2% to 3.5% (`facts.gs-perpetuity-growth-range`, `facts.jefferies-perpetuity-growth-range`). That method assumes no reinvestment.
+For the public stockholders, $18.50 was still a full price: 21.9% above the unaffected $15.18, and above the $15.63 intrinsic value on a consistent-reinvestment basis, but not a windfall over it. For Silver Lake and Thoma Bravo, it was an exit at a price inside both advisers' DCF ranges. Our reading, not stated in the deal document, is this: $15.63 sits inside both ranges near their low ends, and the remaining gap to their midpoints is mainly because the advisers grew the final-year cash flow at 2% to 3.5% (`facts.gs-perpetuity-growth-range`, `facts.jefferies-perpetuity-growth-range`), which gives $23.86 here. That method assumes no reinvestment.
 
 The board's process is the governance weakness. The two sponsors' consent rights meant the 34% public float had no vote. The CEO's $22.99M golden parachute (`governance.change_of_control_payouts`) was mostly $19.94M of accelerated equity that paid on closing. That tied management's reward to getting a deal done rather than to long-run value.
 
@@ -144,7 +146,7 @@ The board's process is the governance weakness. The two sponsors' consent rights
 
 | If | Then |
 |---|---|
-| Stable return on capital were higher than 10% (lasting competitive advantage) | Value rises, but slowly: $14.38 at 15%, $15.07 at 20%, $15.75 at 30% (model §6). No positive return on capital reaches the deal price |
+| Stable return on capital were higher than 8.51% (lasting competitive advantage) | Value rises, but slowly: $16.56 at 10%, $18.33 at 15%, $19.22 at 20%, $20.10 at 30% (model §6). The deal price needs about 16% or more forever |
 | International revenue carried only the Western European premium | The cost of capital falls by roughly three-tenths of a point; value rises |
 | Operating income fell 30% | The optimal debt ratio falls to 14% (model §4), and the over-leverage is worse |
 | The cloud purchase commitments counted as debt | Debt rises by about 5%; value per share falls by the commitments' present value spread over 171.6M shares |

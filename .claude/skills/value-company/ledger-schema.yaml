@@ -130,7 +130,9 @@ forecast:
   sales_to_capital:    {type: number, required_for: [], used_by: [31], description: "Incremental revenue per dollar of reinvestment"}
   management_growth:   {type: rate, required_for: [], used_by: [31], description: "Management's stated growth, with where it was stated"}
   analyst_growth:      {type: rate, required_for: [], used_by: [31]}
-  wacc_stable:         {type: rate, required_for: [], used_by: [32, 34], description: "Cost of capital in the terminal period if different from the current one"}
+  wacc_stable:         {type: rate, required_for: [], used_by: [32, 34], description: "Cost of capital in the terminal period if different from the current one; overrides stable_beta and stable_debt_ratio"}
+  stable_beta:         {type: number, required_for: [], used_by: [32, 34], description: "Levered beta in the terminal period (lesson 32: closer to one). With stable_debt_ratio, model.py builds the terminal cost of capital"}
+  stable_debt_ratio:   {type: rate, required_for: [], used_by: [32, 34], description: "Debt ratio in the terminal period: the industry average or the firm's optimum (lesson 32)"}
 
 peers:
   _row:                {type: list, required_for: [all], used_by: [9, 11, 21, 28, 35], description: "Rows of {name, ticker, fiscal_period, enterprise_value, revenue, ebitda, net_income, equity_book, market_cap, growth, ebit_margin, beta, debt_ratio, payout, source, as_of}"}

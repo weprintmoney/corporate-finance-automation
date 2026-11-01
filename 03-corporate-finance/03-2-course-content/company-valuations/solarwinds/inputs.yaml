@@ -138,7 +138,9 @@ forecast:
     - {year: 2029, revenue: 1172.0, ebit_margin: 0.3993, fcff: 379.0, source: "same table (EBIT 468; uFCF 494 less SBC 115)", as_of: "2025-01-15"}
     - {year: 2030, revenue: 1273.0, ebit_margin: 0.4014, fcff: 419.0, source: "same table, Expanded Forecasts (EBIT 511; uFCF 544 less SBC 125); management's extrapolation of the 2025–2029 plan", as_of: "2025-01-17"}
   growth_period_years: {value: 6, source: "length of the management forecast (2025–2030)", as_of: "2025-01-17"}
-  stable_roic: {value: 0.10, source: "Judgment: about equal to the cost of capital (model-output.md section 1), so growth after 2030 adds no value. SolarWinds' legacy license business was shrinking and its observability products competed with faster-growing rivals, so excess returns in perpetuity are not assumed", as_of: "2025-02-05"}
+  stable_beta: {value: 1.0, source: "Lesson 32 slides, Getting terminal value right 4: stable growth firms have betas closer to one; the course's Disney terminal value resets beta to one", as_of: "2025-02-05"}
+  stable_debt_ratio: {value: 0.21, source: "Lesson 32 slides: stable firms move to debt ratios closer to industry averages or their optimum (Disney moves to its optimum). SolarWinds' optimum from the cost-of-capital approach, model-output.md section 3 (EBIT numerator)", as_of: "2025-02-05"}
+  stable_roic: {value: 0.0851, source: "Judgment: equal to the stable cost of capital (8.51%, model-output.md section 6; lesson 32: excess returns approach zero in stable growth), so growth after 2030 adds no value. Was 0.10 when the terminal period carried the current 10.23% cost of capital. SolarWinds' legacy license business was shrinking and its observability products competed with faster-growing rivals, so excess returns in perpetuity are not assumed", as_of: "2025-02-05"}
   management_growth: {value: 0.0812, source: "sources/deal-docs/swi-defm14c-2025-merger.md (revenue 796.9 in 2024 to 1,273 in 2030, compounded)", as_of: "2025-01-17"}
 
 peers:

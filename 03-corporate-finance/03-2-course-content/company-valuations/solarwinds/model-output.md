@@ -99,7 +99,17 @@ FCFE = net income + non-cash impairments − (capex − D&A) − change in worki
 
 ## 6. Discounted cash flow
 
-Cash flows taken from the ledger's forecast. Discounted at the current cost of capital 10.23%; terminal value at 10.23% with perpetual growth 2.50%.
+Cash flows taken from the ledger's forecast. Discounted at the current cost of capital 10.23%; terminal value at 8.51% with perpetual growth 2.50%.
+
+| Terminal-period cost of capital | Value | How |
+|---|---|---|
+| Stable beta | 1.00 | forecast.stable_beta (lesson 32: betas move toward one) |
+| Stable cost of equity | 9.35% | rf 4.43% + stable beta × ERP 4.92% |
+| Stable debt ratio | 21.00% | forecast.stable_debt_ratio |
+| After-tax cost of debt | 5.33% | current pre-tax 7.11% × (1 − t), held unchanged |
+| **Stable cost of capital** | **8.51%** | (1 − D/V) × ke + D/V × kd × (1 − t) |
+
+The terminal value is capitalized at the stable cost of capital and discounted back to today at the current 10.23%, the rate that applies during the forecast years.
 
 Convention: each year's cash flow arrives at year end and is discounted whole years from the start of the forecast; the bridge uses base-year-end debt, cash and options. With an analysis date early in the first forecast year this is the same convention fairness opinions use (value as of the base-year end).
 
@@ -114,47 +124,47 @@ Convention: each year's cash flow arrives at year end and is discounted whole ye
 
 | Terminal value | Amount | Method |
 |---|---|---|
-| Final-year FCFF grown at g | $5,552.5M | FCFF × (1 + g) ÷ (WACC − g) |
-| Consistent reinvestment | $3,808.9M | after-tax EBIT × (1 − g ÷ stable ROIC 10.00%) ÷ (WACC − g) ← used |
-| Terminal reinvestment rate | 25.00% | g ÷ stable ROIC |
+| Final-year FCFF grown at g | $7,150.4M | FCFF × (1 + g) ÷ (WACC − g) |
+| Consistent reinvestment | $4,618.8M | after-tax EBIT × (1 − g ÷ stable ROIC 8.51%) ÷ (WACC − g) ← used |
+| Terminal reinvestment rate | 29.38% | g ÷ stable ROIC |
 
 | Bridge | Amount |
 |---|---|
 | Present value of explicit cash flows | $1,321.6M |
-| Present value of terminal value | $2,122.7M |
-| **Enterprise value** | **$3,444.3M** |
+| Present value of terminal value | $2,574.0M |
+| **Enterprise value** | **$3,895.6M** |
 | − Debt | $1,285.0M |
 | + Cash | $259.3M |
-| = Equity value before option claims | $2,418.6M |
+| = Equity value before option claims | $2,869.9M |
 | − Value of options and RSUs | $187.0M |
-| **Value per share (course method: ÷ basic shares 171.6M)** | **$13.00** |
-| Value per share (shortcut: ÷ diluted shares 174.5M, options ignored) | $13.86 |
-| Value per share with the other terminal value (final-year FCFF grown at g) | $18.67 |
+| **Value per share (course method: ÷ basic shares 171.6M)** | **$15.63** |
+| Value per share (shortcut: ÷ diluted shares 174.5M, options ignored) | $16.45 |
+| Value per share with the other terminal value (final-year FCFF grown at g) | $23.86 |
 | Market or transaction price (last-unaffected) | $15.18 |
-| Course-method value ÷ price | 0.86x |
+| Course-method value ÷ price | 1.03x |
 | Deal price | $18.50 |
-| Course-method value ÷ deal price | 0.70x |
+| Course-method value ÷ deal price | 0.85x |
 
 Sensitivity of value per share (course method) to the stable return on capital, which sets terminal reinvestment (g ÷ ROIC). A return equal to the cost of capital means growth adds no value; a higher one assumes lasting competitive advantage.
 
 | Stable ROIC | Terminal reinvestment rate | Terminal value | Value per share |
 |---|---|---|---|
-| 10.00% (ledger) | 25.00% | $3,808.9M | $13.00 |
-| 10.23% | 24.44% | $3,837.5M | $13.10 |
-| 12.00% | 20.83% | $4,020.5M | $13.69 |
-| 15.00% | 16.67% | $4,232.1M | $14.38 |
-| 20.00% | 12.50% | $4,443.7M | $15.07 |
-| 30.00% | 8.33% | $4,655.3M | $15.75 |
+| 8.51% (ledger) | 29.38% | $4,618.8M | $15.63 |
+| 10.00% | 25.00% | $4,905.0M | $16.56 |
+| 12.00% | 20.83% | $5,177.6M | $17.45 |
+| 15.00% | 16.67% | $5,450.1M | $18.33 |
+| 20.00% | 12.50% | $5,722.6M | $19.22 |
+| 30.00% | 8.33% | $5,995.1M | $20.10 |
 
 The final-year-FCFF terminal value implies terminal reinvestment of -9.33%: it needs no reinvestment, or negative reinvestment, to grow at 2.50%.
 
-Value of control, financing lever only: at the optimal cost of capital 10.03% the enterprise value is $3,533.4M and value per share (course method) is $13.52, against $13.00 at the status quo. The other levers (operations, reinvestment, growth period) are judgment calls answered in lesson 34, not computed here.
+Value of control, financing lever only: at the optimal cost of capital 10.03% the enterprise value is $3,932.6M and value per share (course method) is $15.85, against $15.63 at the status quo. The other levers (operations, reinvestment, growth period) are judgment calls answered in lesson 34, not computed here.
 
 Three measures of the gain from moving to the optimal debt ratio. They differ in basis, not in direction:
 
 | Measure | Gain | Per basic share | Basis |
 |---|---|---|---|
-| DCF at the optimal cost of capital (this section) | $89.1M | $0.52 | Status quo at 10.23%, which prices today's debt at its observed rate; optimum at 10.03% from the section 3 schedule. Discounts the forecast cash flows |
+| DCF at the optimal cost of capital (this section) | $37.0M | $0.22 | Status quo at 10.23%, which prices today's debt at its observed rate; optimum at 10.03% from the section 3 schedule. Discounts the forecast cash flows |
 | Annual savings capitalized (section 3) | $144.4M | $0.84 | Both ends on the schedule's synthetic rates (10.31% to 10.03%); savings on firm value $3,889.9M grown at g in perpetuity |
 | Adjusted present value (section 9) | see section 9 | | Tax benefits less expected bankruptcy cost, at debt.bankruptcy_cost |
 

@@ -61,16 +61,17 @@ def fact(fid):
     return next(f for f in LEDGER["facts"] if f["id"] == fid)["value"]
 
 
-s1 = tables(section(1))[0]
+s1 = next(tb for tb in tables(section(1)) if "Item" in tb[0])
 wacc = num(find(s1, "Item", "Cost of capital (WACC)")["Value"])
-schedule = tables(section(3))[1]
-s5 = tables(section(5))[0]
+schedule = next(tb for tb in tables(section(3)) if "Debt ratio" in tb[0])
+s5 = next(tb for tb in tables(section(5)) if "FCFE" in tb[0])
 s6 = tables(section(6))
-bridge, sens = s6[2], s6[3]
-dcf_value = num(find(bridge, "Item" if "Item" in bridge[0] else "Bridge", "Value per share (course method")["Amount"])
+by_head = lambda ts, h: next(tb for tb in ts if tb and h in tb[0])
+bridge, sens = by_head(s6, "Bridge"), by_head(s6, "Stable ROIC")
+dcf_value = num(find(bridge, "Bridge", "Value per share (course method")["Amount"])
 unaffected = num(find(bridge, "Bridge", "Market or transaction price")["Amount"])
 deal = num(find(bridge, "Bridge", "Deal price")["Amount"])
-roic_years = tables(section(8))[1]
+roic_years = next(tb for tb in tables(section(8)) if "ROIC" in tb[0] and "Year" in tb[0])
 s7_text = section(7)
 peer_low = num(re.search(r"EV/Revenue of [\d.]+x: .*?= \$([\d.]+)", s7_text).group(1))
 peer_high = num(re.search(r"EV/EBITDA of [\d.]+x: \$([\d.]+)", s7_text).group(1))
@@ -166,7 +167,7 @@ for i, (lab, lo, hi, c) in enumerate(ranges):
         ax.text(lo - 0.25, i, f"${lo:.2f}", ha="right", va="center", fontsize=8.5, color=INK)
     ax.text(hi + 0.25, i, f"${hi:.2f}", ha="left", va="center", fontsize=8.5, color=INK)
 ax.scatter([dcf_value], [0], s=80, color=BLUE, edgecolor=SURFACE, linewidth=2, zorder=5)
-ax.annotate(f"Base case ${dcf_value:.2f}", (dcf_value, 0), xytext=(dcf_value - 0.35, 0), ha="right", va="center", fontsize=8.5, color=INK, fontweight="bold")
+ax.annotate(f"Base case ${dcf_value:.2f}", (dcf_value, 0), xytext=(dcf_value, -0.5), ha="left", va="center", bbox=dict(facecolor=SURFACE, edgecolor="none", pad=1), zorder=6, fontsize=8.5, color=INK, fontweight="bold")
 for v, lab, c, ha in [(unaffected, f"Unaffected price ${unaffected:.2f} ", INK2, "right"), (deal, f" Deal price ${deal:.2f}", ORANGE, "left")]:
     ax.axvline(v, color=c, lw=1.5, ls="--", zorder=4)
     ax.text(v, len(ranges) - 0.35, lab, ha=ha, fontsize=8.5, color=INK, fontweight="bold",
@@ -174,10 +175,10 @@ for v, lab, c, ha in [(unaffected, f"Unaffected price ${unaffected:.2f} ", INK2,
 ax.set_yticks(range(len(ranges)), [r[0] for r in ranges])
 ax.set_xlabel("Value per share ($)")
 ax.set_xlim(min(r[1] for r in ranges) - 2.5, max(r[2] for r in ranges) + 2.5)
-ax.set_ylim(-0.6, len(ranges) - 0.1)
+ax.set_ylim(-0.8, len(ranges) - 0.1)
 ax.grid(axis="y", visible=False)
 finish(fig, ax, f"Our DCF says ${dcf_value:.2f}; the $18.50 deal sits inside both banks' ranges",
-       "Our DCF range: stable return on capital 10%–30%; peers: EV/Revenue to EV/EBITDA; banks: fairness-opinion DCFs",
+       f"Our DCF range: stable return on capital {min(num(r['Stable ROIC']) for r in sens):.2f}%–{max(num(r['Stable ROIC']) for r in sens):.0f}%; peers: EV/Revenue to EV/EBITDA",
        "Calculated from company and peer filings; bank ranges from the fairness opinions in SolarWinds' March 2025 information statement", "exhibit-4-value-per-share.png", left=0.27)
 
 # ---------- Exhibit 5: ownership ----------

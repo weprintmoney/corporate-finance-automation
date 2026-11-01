@@ -342,6 +342,15 @@ def main(path):
             prev_rev = float(r.get("revenue", prev_rev or 0.0))
         n = len(fcffs)
         wacc_stable = L.num("forecast.wacc_stable") or wacc
+        # Lesson 32: a stable-growth firm has a beta closer to one and a debt ratio closer to the industry or its
+        # optimum. When the ledger gives both, the terminal cost of capital is rebuilt from them (cost of debt held
+        # at the current rate, as in the course's Disney example) instead of carrying today's risk forever.
+        b_s, d_s = L.num("forecast.stable_beta"), L.num("forecast.stable_debt_ratio")
+        stable_build = None
+        if L.num("forecast.wacc_stable") is None and b_s is not None and d_s is not None:
+            ke_s = rf + b_s * erp
+            wacc_stable = (1 - d_s) * ke_s + d_s * kd * (1 - t)
+            stable_build = (b_s, ke_s, d_s)
         roic_stable = L.num("forecast.stable_roic")
         method = L.get("modeling_choices.terminal_method", "consistent_reinvestment")
         last = years[-1]
@@ -364,6 +373,19 @@ def main(path):
                   "derived" if derived else "taken", " (revenue × margin × (1 − t) − reinvestment)" if derived else "",
                   pct(wacc), pct(wacc_stable), pct(g)))
         print()
+        if stable_build:
+            b_s, ke_s, d_s = stable_build
+            print("| Terminal-period cost of capital | Value | How |")
+            print("|---|---|---|")
+            print("| Stable beta | {:.2f} | forecast.stable_beta (lesson 32: betas move toward one) |".format(b_s))
+            print("| Stable cost of equity | {} | rf {} + stable beta × ERP {} |".format(pct(ke_s), pct(rf), pct(erp)))
+            print("| Stable debt ratio | {} | forecast.stable_debt_ratio |".format(pct(d_s)))
+            print("| After-tax cost of debt | {} | current pre-tax {} × (1 − t), held unchanged |".format(pct(kd * (1 - t)), pct(kd)))
+            print("| **Stable cost of capital** | **{}** | (1 − D/V) × ke + D/V × kd × (1 − t) |".format(pct(wacc_stable)))
+            print()
+            print("The terminal value is capitalized at the stable cost of capital and discounted back to today at the "
+                  "current {}, the rate that applies during the forecast years.".format(pct(wacc)))
+            print()
         print("Convention: each year's cash flow arrives at year end and is discounted whole years from the start of the "
               "forecast; the bridge uses base-year-end debt, cash and options. With an analysis date early in the first "
               "forecast year this is the same convention fairness opinions use (value as of the base-year end).")
@@ -420,7 +442,7 @@ def main(path):
             print("| Stable ROIC | Terminal reinvestment rate | Terminal value | Value per share |")
             print("|---|---|---|---|")
             ebit_n = float(last["revenue"]) * (1 + g) * float(last["ebit_margin"])
-            for r_s in sorted({roic_stable, round(wacc_stable, 4), 0.12, 0.15, 0.20, 0.30}):
+            for r_s in sorted({roic_stable, round(wacc_stable, 4), 0.10, 0.12, 0.15, 0.20, 0.30}):
                 tv_s = ebit_n * (1 - t) * (1 - g / r_s) / (wacc_stable - g)
                 eq_s = pv_explicit + tv_s / (1 + wacc) ** n - D + cash - mi + xh - opt
                 print("| {}{} | {} | {} | ${:.2f} |".format(pct(r_s), " (ledger)" if r_s == roic_stable else "", pct(g / r_s), money(tv_s), eq_s / sb))
@@ -437,7 +459,9 @@ def main(path):
         res = results.get(chosen_label, results["EBIT"])
         if res["w_opt"] < wacc:
             pv_e2 = sum(cf / (1 + res["w_opt"]) ** (i + 1) for i, cf in enumerate(fcffs))
-            ws2 = res["w_opt"] if L.num("forecast.wacc_stable") is None else wacc_stable
+            # a stable-period rate from the ledger (given, or built from stable beta and debt ratio) already
+            # assumes the mature capital structure, so only the forecast years move to the optimum
+            ws2 = wacc_stable if (L.num("forecast.wacc_stable") is not None or stable_build) else res["w_opt"]
             # same terminal cash flow as above, capitalized at the optimal stable rate
             tv2_amt = tv * (wacc_stable - g) / (ws2 - g)
             ev2 = pv_e2 + tv2_amt / (1 + res["w_opt"]) ** n
