@@ -7,7 +7,9 @@ Usage:  python3 scripts/fetch-company-data.py TICKER
         python3 scripts/fetch-company-data.py SWI
 
 Requires FMP_API_KEY environment variable.
-Free-tier FMP supports annual statements; premium adds quarterly.
+Uses FMP's stable API; the legacy /api/v3 endpoints are closed to keys issued after
+2025-08-31. Free-tier keys cover only a list of large US tickers: others (including
+delisted ones such as SWI) return HTTP 402, and the script prints FMP's message.
 """
 
 import json
@@ -15,21 +17,29 @@ import os
 import sys
 from datetime import date
 from urllib.request import urlopen
-from urllib.error import URLError
+from urllib.error import HTTPError, URLError
 
-FMP_BASE = "https://financialmodelingprep.com/api/v3"
+FMP_BASE = "https://financialmodelingprep.com/stable"
 YEARS = 3
 OUT_DIR = "03-corporate-finance/03-3-supplemental-data/companies"
 
 
-def fmp_get(path: str, api_key: str, extra: str = "") -> list | dict:
-    url = f"{FMP_BASE}{path}?apikey={api_key}&limit={YEARS}{extra}"
+def fmp_get(path: str, ticker: str, api_key: str, extra: str = "") -> list | dict:
+    url = f"{FMP_BASE}{path}?symbol={ticker}&apikey={api_key}&limit={YEARS}{extra}"
     try:
         with urlopen(url, timeout=20) as resp:
-            return json.loads(resp.read().decode())
-    except URLError as e:
-        print(f"  WARNING: request failed for {path}: {e}", file=sys.stderr)
+            data = json.loads(resp.read().decode())
+    except HTTPError as e:
+        body = e.read().decode(errors="ignore").replace(api_key, "***")[:300]
+        print(f"  WARNING: {path} returned HTTP {e.code}: {body}", file=sys.stderr)
         return []
+    except URLError as e:
+        print(f"  WARNING: request failed for {path}: {e.reason}", file=sys.stderr)
+        return []
+    if isinstance(data, dict) and "Error Message" in data:
+        print(f"  WARNING: {path}: {data['Error Message'][:300]}", file=sys.stderr)
+        return []
+    return data
 
 
 def extract_valuation_inputs(income: list, balance: list, cashflow: list) -> dict:
@@ -52,7 +62,7 @@ def extract_valuation_inputs(income: list, balance: list, cashflow: list) -> dic
         "period": i.get("date"),
         "revenue": i.get("revenue"),
         "gross_profit": i.get("grossProfit"),
-        "gross_margin_pct": round((i.get("grossProfitRatio") or 0) * 100, 1),
+        "gross_margin_pct": round(i["grossProfit"] / i["revenue"] * 100, 1) if i.get("revenue") and i.get("grossProfit") is not None else None,
         "ebit": ebit,
         "ebitda": i.get("ebitda"),
         "interest_expense": interest,
@@ -63,7 +73,7 @@ def extract_valuation_inputs(income: list, balance: list, cashflow: list) -> dic
         "total_debt": total_debt,
         "cash": cash,
         "net_debt": total_debt - cash,
-        "shares_outstanding": b.get("commonStock"),
+        "shares_outstanding": i.get("weightedAverageShsDil") or i.get("weightedAverageShsOut"),
         "capex": abs(c.get("capitalExpenditure") or 0),
         "depreciation_amortization": c.get("depreciationAndAmortization"),
         "operating_cash_flow": c.get("operatingCashFlow"),
@@ -84,16 +94,16 @@ def main():
 
     print(f"Fetching data for {ticker} from Financial Modeling Prep...")
 
-    profile_raw = fmp_get(f"/profile/{ticker}", api_key)
-    income = fmp_get(f"/income-statement/{ticker}", api_key, "&period=annual")
-    balance = fmp_get(f"/balance-sheet-statement/{ticker}", api_key, "&period=annual")
-    cashflow = fmp_get(f"/cash-flow-statement/{ticker}", api_key, "&period=annual")
-    key_metrics = fmp_get(f"/key-metrics/{ticker}", api_key, "&period=annual")
+    profile_raw = fmp_get("/profile", ticker, api_key)
+    income = fmp_get("/income-statement", ticker, api_key, "&period=annual")
+    balance = fmp_get("/balance-sheet-statement", ticker, api_key, "&period=annual")
+    cashflow = fmp_get("/cash-flow-statement", ticker, api_key, "&period=annual")
+    key_metrics = fmp_get("/key-metrics", ticker, api_key, "&period=annual")
 
     profile = profile_raw[0] if isinstance(profile_raw, list) and profile_raw else profile_raw
 
     if not income and not profile:
-        print(f"ERROR: No data returned for {ticker}. Check the ticker and your API key.", file=sys.stderr)
+        print(f"ERROR: No data returned for {ticker}. See the warnings above: HTTP 402 means the ticker is outside the key's plan.", file=sys.stderr)
         sys.exit(1)
 
     valuation_inputs = extract_valuation_inputs(income, balance, cashflow)
