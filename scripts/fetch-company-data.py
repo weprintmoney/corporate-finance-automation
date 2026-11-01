@@ -73,11 +73,12 @@ def extract_valuation_inputs(income: list, balance: list, cashflow: list) -> dic
         "total_debt": total_debt,
         "cash": cash,
         "net_debt": total_debt - cash,
-        "shares_outstanding": i.get("weightedAverageShsDil") or i.get("weightedAverageShsOut"),
+        "shares_outstanding": i.get("weightedAverageShsOutDil") or i.get("weightedAverageShsOut"),
         "capex": abs(c.get("capitalExpenditure") or 0),
         "depreciation_amortization": c.get("depreciationAndAmortization"),
         "operating_cash_flow": c.get("operatingCashFlow"),
-        "operating_lease_liability": b.get("operatingLeaseRightOfUseAsset"),
+        # Lease liabilities (current + non-current). FMP's totalDebt already includes them; do not add twice.
+        "operating_lease_liability": b.get("capitalLeaseObligations"),
     }
 
 
