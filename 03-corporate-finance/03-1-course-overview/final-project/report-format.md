@@ -22,6 +22,8 @@ Damodaran posted five prior reports that scored 40/40 or close, and said he is "
 
 Text versions of each are in [example-works/](example-works/) next to the PDFs.
 
+**Not all five come from this course.** Samples 3 (Burberry) and 4 (Skanska) say on their covers that they are February 2015 post-module assignments for the TRIUM Global Executive MBA, taught by Damodaran at NYU Stern. In that program valuation was optional, which is why sample 4 labels it "(optional)". Samples 1, 2 and 5 carry no program name.
+
 ## What they share
 
 - **The course's own questions are the outline.** Samples 4 and 5 use the cumulative-project questions as section headings, almost word for word. The other three cover the same ground in the same order under shorter names:
@@ -34,7 +36,7 @@ Text versions of each are in [example-works/](example-works/) next to the PDFs.
   7. Dividend policy: how does the firm return cash?
   8. Dividend assessment: should it return more or less?
   9. Valuation: what is the firm and its equity worth?
-- **Valuation is the last section and the shortest.** Sample 4 marks it "(optional)". The weight is on the corporate finance judgments before it.
+- **Valuation is the last section, and in this course it is required.** Sample 4 marks it "(optional)" because it came from the TRIUM program (see above). This course's instructions call the project "the final valuation", and 24 of its 70 cumulative-project questions come from the valuation lessons (29–35), including lesson 34's status-quo value against the value with changes made. Give valuation full weight alongside the corporate finance judgments before it.
 - **Each section reaches a judgment.** The reports state what the company does, what it should do, and the gap: for example, "could benefit from raising its leverage" (sample 5), or the shares trading 45% above fair value (sample 1).
 - **The numbers carry the argument.** Each section shows its calculation briefly, usually as a small table or a one-line formula. Sample 4, for instance, writes out the hurdle rate as risk-free rate + beta × risk premium.
 - **Every one runs past the 7–9 page guide:** 9 to 14 pages, median 12. The limit reads as a target for concision, not a hard cutoff, but the two shortest reports (samples 1 and 5) hit 9 pages by keeping each section to a few paragraphs.
