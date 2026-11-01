@@ -1,3 +1,11 @@
+---
+title: "Key Terms by Lesson — Modules 1–4"
+status: active
+owner: weprintmoney
+created: 2026-11-01
+last_updated: 2026-11-01
+---
+
 # Key Terms by Lesson — Modules 1–4
 
 Plain-language definitions of the terms each lesson introduces, for quiz and final-exam review. Terms come from each lesson's `slides.md` (primary) and `lesson-overview.md`, with transcripts used where a slide is image-only. A term is defined in the lesson that introduces it; later lessons re-list it only when they add something new, and say so.
