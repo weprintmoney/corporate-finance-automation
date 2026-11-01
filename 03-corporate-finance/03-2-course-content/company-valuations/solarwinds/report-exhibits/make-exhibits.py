@@ -111,7 +111,7 @@ ax.set_ylim(opt[1] - 0.12, near[-1][1] + 0.06)
 ax.text(39, near[-1][1], f"rises to {far[1]:.2f}% at {far[0]:.0f}% debt", fontsize=8, color=INK2, ha="right", va="center")
 finish(fig, ax, f"Cost of capital is lowest at {opt[0]:.0f}% debt; SolarWinds carries {cur[0]:.0f}%",
        f"Cost of capital at each debt ratio, rating and interest rate recalculated at each step (EBIT-based coverage)",
-       "model-output.md §3 (schedule under the chosen numerator); Damodaran January 2025 ratings table", "exhibit-1-cost-of-capital-by-debt-ratio.png")
+       "Calculated from SolarWinds FY2024 10-K and Damodaran's ratings and default spreads (January 2025)", "exhibit-1-cost-of-capital-by-debt-ratio.png")
 
 # ---------- Exhibit 2: ROIC vs cost of capital ----------
 yrs = [r["Year"] for r in roic_years]
@@ -126,7 +126,7 @@ ax.set_ylabel("Return on invested capital (%)")
 ax.set_ylim(0, wacc * 1.25)
 finish(fig, ax, "Return on capital rose each year but stayed below the cost of capital",
        "After-tax operating income (excluding impairments) ÷ invested capital, against the 2025 cost of capital",
-       "model-output.md §8 (by year) and §1; FY2022–FY2024 10-Ks", "exhibit-2-return-on-capital.png")
+       "Calculated from SolarWinds 10-K filings, FY2022–FY2024; cost of capital as of 2025-02-05", "exhibit-2-return-on-capital.png")
 
 # ---------- Exhibit 3: FCFE vs cash returned ----------
 rows = [r for r in s5 if re.fullmatch(r"\d{4}", r["Year"])]
@@ -149,7 +149,7 @@ ax.set_ylim(min(fcfe) * 1.2, max(max(fcfe), max(ret)) * 1.5)
 ax.legend(loc="lower right", frameon=False, fontsize=8.5)
 finish(fig, ax, f"Over 2022–2024 SolarWinds returned {money(num(tot['Cash returned']), 1)} against FCFE of {money(num(tot['FCFE']), 1)}",
        f"2022 FCFE is negative mainly from {money(-num(rows[0]['Net new debt']), 1)} of debt repaid; 2024 includes the special dividend",
-       "model-output.md §5; FY2022–FY2024 10-K cash flow statements", "exhibit-3-fcfe-vs-cash-returned.png")
+       "Calculated from SolarWinds 10-K cash flow statements, FY2022–FY2024", "exhibit-3-fcfe-vs-cash-returned.png")
 
 # ---------- Exhibit 4: value per share, football field ----------
 sens_vals = [num(r["Value per share"]) for r in sens]
@@ -178,7 +178,7 @@ ax.set_ylim(-0.6, len(ranges) - 0.1)
 ax.grid(axis="y", visible=False)
 finish(fig, ax, f"Our DCF says ${dcf_value:.2f}; the $18.50 deal sits inside both banks' ranges",
        "Our DCF range: stable return on capital 10%–30%; peers: EV/Revenue to EV/EBITDA; banks: fairness-opinion DCFs",
-       "model-output.md §6–7; DEFM14C fairness opinions (ledger facts gs-dcf-range, jefferies-dcf-range)", "exhibit-4-value-per-share.png", left=0.27)
+       "Calculated from company and peer filings; bank ranges from the fairness opinions in SolarWinds' March 2025 information statement", "exhibit-4-value-per-share.png", left=0.27)
 
 # ---------- Exhibit 5: ownership ----------
 pairs = [(h["name"], h["pct"] * 100) for h in holders]
@@ -195,7 +195,7 @@ ax.set_xlabel("Share of common stock (%)")
 ax.grid(axis="y", visible=False)
 finish(fig, ax, f"Two private-equity sponsors held {sum(p for _, p in pairs[:-1]):.2f}% of SolarWinds",
        "Beneficial ownership at the 2024 proxy; \"all other holders\" is the remainder",
-       "2024 proxy statement, beneficial ownership table (ledger governance.controlling_holders); the proxy states the sponsors' total as 66.34%",
+       "SolarWinds 2024 proxy statement, beneficial ownership table; the proxy states the sponsors' combined stake as 66.34%",
        "exhibit-5-ownership.png", left=0.22)
 
 # ---------- exhibits.md: charts plus the core tables ----------
