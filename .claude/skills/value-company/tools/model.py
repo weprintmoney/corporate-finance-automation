@@ -482,6 +482,45 @@ def main(path):
                     money(res["gain"]), res["gain"] / sb, pct(res["w_cur"]), pct(res["w_opt"]), money(V)))
                 print("| Adjusted present value (section 9) | see section 9 | | Tax benefits less expected bankruptcy cost, at debt.bankruptcy_cost |")
                 print()
+        # stress cases on the forecast itself (growth and margin), valued with the same terminal method and bridge
+        cases = L.get("forecast.stress_cases") or []
+        rev0 = L.num("company.revenue")
+        if cases and sb and roic_stable and rev0 and all(r.get("revenue") is not None and r.get("ebit_margin") is not None for r in years):
+            m_rev = [float(r["revenue"]) for r in years]
+            m_mar = [float(r["ebit_margin"]) for r in years]
+            m_reinv = [m_rev[i] * m_mar[i] * (1 - t) - fcffs[i] for i in range(n)]
+            m_drev = [m_rev[0] - rev0] + [m_rev[i] - m_rev[i - 1] for i in range(1, n)]
+            base_vps = (equity - opt) / sb
+            last_yr = years[-1].get("year")
+            print("Stress cases on the forecast (forecast.stress_cases). Revenue grows at the case rate from the base year. The margin "
+                  "follows the plan or is held at a fixed level. Each year's reinvestment is the plan's reinvestment (after-tax operating "
+                  "income − FCFF) scaled by the ratio of the case's revenue increase to the plan's, so prepayment-funded growth scales "
+                  "with growth. Terminal value and bridge as above.")
+            print()
+            print("| Case | Revenue growth | Margin | {} revenue | {} FCFF | Enterprise value | Value per share | vs. plan |".format(last_yr, last_yr))
+            print("|---|---|---|---|---|---|---|---|")
+            print("| Plan (management forecast) | {} | plan | {} | {} | {} | ${:.2f} | |".format(
+                pct((m_rev[-1] / rev0) ** (1.0 / n) - 1), money(m_rev[-1]), money(fcffs[-1]), money(ev), base_vps))
+            for c in cases:
+                gr = float(c["revenue_growth"])
+                mar = c.get("margin", "plan")
+                held = None if mar == "plan" else float(mar)
+                c_rev, c_f, prev = [], [], rev0
+                for i in range(n):
+                    r_i = prev * (1 + gr)
+                    mg = m_mar[i] if held is None else held
+                    scale = (r_i - prev) / m_drev[i] if m_drev[i] else 0.0
+                    c_f.append(r_i * mg * (1 - t) - m_reinv[i] * scale)
+                    c_rev.append(r_i)
+                    prev = r_i
+                pv_e = sum(cf / (1 + wacc) ** (i + 1) for i, cf in enumerate(c_f))
+                mg_last = m_mar[-1] if held is None else held
+                tv_c = c_rev[-1] * (1 + g) * mg_last * (1 - t) * (1 - g / roic_stable) / (wacc_stable - g)
+                ev_c = pv_e + tv_c / (1 + wacc) ** n
+                vps = (ev_c - D + cash - mi + xh - opt) / sb
+                print("| {} | {} | {} | {} | {} | {} | ${:.2f} | {:+.2f} |".format(
+                    c["name"], pct(gr), "plan" if held is None else pct(held), money(c_rev[-1]), money(c_f[-1]), money(ev_c), vps, vps - base_vps))
+            print()
 
     # ---- 7. multiples -------------------------------------------------------------------------------
     peers = L.get("peers") or []
@@ -575,6 +614,75 @@ def main(path):
                       "replacement spending, so it makes reinvestment look negative; excluding it, base-year reinvestment is {} "
                       "and the reinvestment rate {}.".format(
                           money(amort_h), money(reinv + amort_h), pct((reinv + amort_h) / at) if at > 0 else "n/a"))
+                print()
+
+    # ---- 8a. R&D capitalized (lesson 14) --------------------------------------------------------------
+    rd_hist = L.get("company.rd_history") or []
+    life = L.get("modeling_choices.rd_amortizable_life")
+    if ic and rd_hist and life:
+        life = int(life)
+        rd = {int(r["year"]): float(r["rd"]) for r in rd_hist}
+        base = max(rd)
+        gw = L.num("company.goodwill")
+        print("### R&D capitalized (lesson 14)")
+        print()
+        print("Research and development is treated as a capital expense with a {}-year amortizable life "
+              "(modeling_choices.rd_amortizable_life, from Damodaran's industry lookup). The research asset is the unamortized part "
+              "of the last {} years' R&D. This year's R&D is added back to operating income and the asset's amortization subtracted. "
+              "R&D is fully tax-deductible, so the after-tax adjustment is R&D − amortization with no tax factor.".format(life, life))
+        print()
+
+        def rd_adjust(n):
+            if any(base - i not in rd for i in range(n + 1)):
+                return None
+            asset = sum(rd[base - i] * (n - i) / n for i in range(n))
+            amort = sum(rd[base - i] for i in range(1, n + 1)) / n
+            return asset, amort
+
+        got = rd_adjust(life)
+        if got is None:
+            print("company.rd_history must cover {} through {} for a {}-year life.".format(base - life, base, life))
+            print()
+        else:
+            asset, amort = got
+            adj_ebit = ebit + rd[base] - amort
+            adj_nopat = ebit * (1 - t) + (rd[base] - amort)
+            adj_ic = ic + asset
+            print("| Year | R&D | Unamortized share | Unamortized amount |")
+            print("|---|---|---|---|")
+            for i in range(life - 1, -1, -1):
+                print("| {} | {} | {}/{} | {} |".format(base - i, money(rd[base - i]), life - i, life, money(rd[base - i] * (life - i) / life)))
+            print()
+            print("| Item | Value | How |")
+            print("|---|---|---|")
+            print("| Value of the research asset | {} | sum of the unamortized amounts |".format(money(asset)))
+            print("| Amortization this year | {} | R&D of the prior {} years ÷ {} |".format(money(amort), life, life))
+            print("| Adjusted operating income | {} | EBIT {} + R&D {} − amortization |".format(money(adj_ebit), money(ebit), money(rd[base])))
+            print("| Adjusted after-tax operating income | {} | EBIT × (1 − t) + (R&D − amortization) |".format(money(adj_nopat)))
+            print("| Adjusted invested capital | {} | invested capital + research asset |".format(money(adj_ic)))
+            print("| **Adjusted ROIC** | **{}** | adjusted after-tax operating income ÷ adjusted invested capital |".format(pct(adj_nopat / adj_ic)))
+            print("| Unadjusted ROIC | {} | section 8 |".format(pct(ebit * (1 - t) / ic)))
+            print("| Cost of capital | {} | section 1 |".format(pct(wacc)))
+            if gw:
+                op_cap = adj_ic - gw
+                print("| Operating capital: adjusted invested capital − goodwill | {} | the capital the business runs on, before the price paid to buy it |".format(money(op_cap)))
+                print("| Return on operating capital | {} | adjusted after-tax operating income ÷ operating capital |".format(
+                    pct(adj_nopat / op_cap) if op_cap > 0 else "not defined (operating capital ≤ 0)"))
+            print()
+            lives = [n for n in sorted({life, 3, 5, 10}) if rd_adjust(n) is not None]
+            if len(lives) > 1:
+                print("Sensitivity to the amortizable life:")
+                print()
+                print("| Life | Research asset | Amortization | Adjusted ROIC |{} |".format(" Return on operating capital" if gw else ""))
+                print("|---|---|---|---|{}".format("---|" if gw else ""))
+                for n in lives:
+                    a_n, am_n = rd_adjust(n)
+                    np_n = ebit * (1 - t) + (rd[base] - am_n)
+                    row = "| {} years{} | {} | {} | {} |".format(n, " (used)" if n == life else "", money(a_n), money(am_n), pct(np_n / (ic + a_n)))
+                    if gw:
+                        oc = ic + a_n - gw
+                        row += " {} |".format(pct(np_n / oc) if oc > 0 else "not defined")
+                    print(row)
                 print()
 
     # ---- 9. adjusted present value ------------------------------------------------------------------

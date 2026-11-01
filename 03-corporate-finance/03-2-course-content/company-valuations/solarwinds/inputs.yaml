@@ -45,6 +45,7 @@ modeling_choices:
   beta_source: bottom_up
   kd_source: observed
   terminal_method: consistent_reinvestment
+  rd_amortizable_life: 3        # Damodaran's lookup table (lesson 14 return calculator): Computer Software & Svcs = 3 years
 
 market:
   govt_bond_rate: {value: 0.0443, source: "sources/market-data/market-rates-2025-02-05.json fred_latest.treasury_10y (FRED DGS10)", as_of: "2025-02-05", note: "10-year US Treasury close; Damodaran's start-of-month figure was 0.0454"}
@@ -92,6 +93,13 @@ company:
   capex: {value: 20.5, source: "sources/filings/swi-10k-fy2024.md cash flow statement (property and equipment 5,611 + capitalized software 14,401 + intangibles 466 thousand)", as_of: "2024-12-31"}
   change_wc: {value: 38.8, source: "sources/filings/swi-10k-fy2024.md cash flow statement (sum of changes in operating assets and liabilities, −38,778 thousand, sign flipped)", as_of: "2024-12-31", note: "Mostly a 23.8 drop in income taxes payable and an 8.2 drop in accrued liabilities"}
   rd_expense: {value: 108.6, source: "sources/filings/swi-10k-fy2024.md income statement (108,599 thousand)", as_of: "2024-12-31"}
+  rd_history:
+    - {year: 2019, rd: 75.9, source: "sources/filings/swi-multi-year-financials.md R&D Expense (75,882 thousand; SEC XBRL company facts, continuing operations as recast after the July 2021 N-able spin-off)", as_of: "2019-12-31"}
+    - {year: 2020, rd: 85.8, source: "sources/filings/swi-multi-year-financials.md R&D Expense (85,754 thousand; continuing operations)", as_of: "2020-12-31"}
+    - {year: 2021, rd: 101.8, source: "sources/filings/swi-multi-year-financials.md R&D Expense (101,813 thousand; continuing operations)", as_of: "2021-12-31"}
+    - {year: 2022, rd: 92.3, source: "sources/filings/swi-multi-year-financials.md R&D Expense (92,330 thousand); sources/filings/swi-10k-fy2024.md income statement", as_of: "2022-12-31"}
+    - {year: 2023, rd: 100.2, source: "sources/filings/swi-multi-year-financials.md R&D Expense (100,173 thousand); sources/filings/swi-10k-fy2024.md income statement", as_of: "2023-12-31"}
+    - {year: 2024, rd: 108.6, source: "sources/filings/swi-10k-fy2024.md income statement (108,599 thousand)", as_of: "2024-12-31"}
   sbc: {value: 76.5, source: "sources/filings/swi-10k-fy2024.md cash flow statement (76,460 thousand)", as_of: "2024-12-31"}
   invested_capital: {value: 2348.0, source: "equity_book 1400.7 + debt_book 1206.6 − cash 259.3", as_of: "2024-12-31", note: "Book basis; 2363.2 of it is goodwill from the 2016 buyout"}
   goodwill: {value: 2363.2, source: "sources/filings/swi-10k-fy2024.md balance sheet (2,363,175 thousand)", as_of: "2024-12-31"}
@@ -139,6 +147,10 @@ forecast:
     - {year: 2030, revenue: 1273.0, ebit_margin: 0.4014, fcff: 419.0, source: "same table, Expanded Forecasts (EBIT 511; uFCF 544 less SBC 125); management's extrapolation of the 2025–2029 plan", as_of: "2025-01-17"}
   growth_period_years: {value: 6, source: "length of the management forecast (2025–2030)", as_of: "2025-01-17"}
   stable_beta: {value: 1.0, source: "Lesson 32 slides, Getting terminal value right 4: stable growth firms have betas closer to one; the course's Disney terminal value resets beta to one", as_of: "2025-02-05"}
+  stress_cases:
+    - {name: "Revenue at the 2022–2024 rate, plan margins", revenue_growth: 0.0525, margin: plan, source: "Revenue growth 2022–2024 from company.history (719.4 to 796.9, 5.25% a year); margins from forecast.years", as_of: "2024-12-31"}
+    - {name: "Revenue at the 2022–2024 rate, margin held at the plan's first year", revenue_growth: 0.0525, margin: 0.3269, source: "forecast.years 2025 ebit_margin (EBIT 272 on revenue 832) held with no further expansion", as_of: "2025-01-15"}
+    - {name: "Revenue at the 2022–2024 rate, margin held at 2024", revenue_growth: 0.0525, margin: 0.2615, source: "company.ebit ÷ company.revenue (208.4 ÷ 796.9)", as_of: "2024-12-31"}
   stable_debt_ratio: {value: 0.21, source: "Lesson 32 slides: stable firms move to debt ratios closer to industry averages or their optimum (Disney moves to its optimum). SolarWinds' optimum from the cost-of-capital approach, model-output.md section 3 (EBIT numerator)", as_of: "2025-02-05"}
   stable_roic: {value: 0.0851, source: "Judgment: equal to the stable cost of capital (8.51%, model-output.md section 6; lesson 32: excess returns approach zero in stable growth), so growth after 2030 adds no value. Was 0.10 when the terminal period carried the current 10.23% cost of capital. SolarWinds' legacy license business was shrinking and its observability products competed with faster-growing rivals, so excess returns in perpetuity are not assumed", as_of: "2025-02-05"}
   management_growth: {value: 0.0812, source: "sources/deal-docs/swi-defm14c-2025-merger.md (revenue 796.9 in 2024 to 1,273 in 2030, compounded)", as_of: "2025-01-17"}

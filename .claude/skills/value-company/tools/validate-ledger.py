@@ -40,8 +40,8 @@ MAX_AGE_DAYS = {
 RATINGS_TABLE_MAX_DAYS = 400
 PRICE_MAX_DAYS = 14
 US_DOWNGRADE = date(2025, 5, 16)     # Moody's moved the US from Aaa to Aa1
-LIST_FIELDS_WITH_SOURCE = ["company.history", "country.exposures", "forecast.years", "peers", "governance.controlling_holders"]
-SCALAR_LISTS = ["company.history", "country.exposures", "beta.segments", "forecast.years", "peers",
+LIST_FIELDS_WITH_SOURCE = ["company.history", "company.rd_history", "country.exposures", "forecast.years", "forecast.stress_cases", "peers", "governance.controlling_holders"]
+SCALAR_LISTS = ["company.history", "company.rd_history", "country.exposures", "beta.segments", "forecast.years", "forecast.stress_cases", "peers",
                 "governance.board", "governance.controlling_holders", "meta.omitted"]
 
 

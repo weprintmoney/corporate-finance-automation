@@ -168,6 +168,15 @@ Three measures of the gain from moving to the optimal debt ratio. They differ in
 | Annual savings capitalized (section 3) | $144.4M | $0.84 | Both ends on the schedule's synthetic rates (10.31% to 10.03%); savings on firm value $3,889.9M grown at g in perpetuity |
 | Adjusted present value (section 9) | see section 9 | | Tax benefits less expected bankruptcy cost, at debt.bankruptcy_cost |
 
+Stress cases on the forecast (forecast.stress_cases). Revenue grows at the case rate from the base year. The margin follows the plan or is held at a fixed level. Each year's reinvestment is the plan's reinvestment (after-tax operating income − FCFF) scaled by the ratio of the case's revenue increase to the plan's, so prepayment-funded growth scales with growth. Terminal value and bridge as above.
+
+| Case | Revenue growth | Margin | 2030 revenue | 2030 FCFF | Enterprise value | Value per share | vs. plan |
+|---|---|---|---|---|---|---|---|
+| Plan (management forecast) | 8.12% | plan | $1,273.0M | $419.0M | $3,895.6M | $15.63 | |
+| Revenue at the 2022–2024 rate, plan margins | 5.25% | plan | $1,083.3M | $345.3M | $3,379.8M | $12.63 | -3.01 |
+| Revenue at the 2022–2024 rate, margin held at the plan's first year | 5.25% | 32.69% | $1,083.3M | $284.7M | $2,852.3M | $9.56 | -6.08 |
+| Revenue at the 2022–2024 rate, margin held at 2024 | 5.25% | 26.15% | $1,083.3M | $231.6M | $2,295.4M | $6.31 | -9.33 |
+
 ## 7. Relative valuation
 
 Company enterprise value = equity $2,604.9M + debt $1,285.0M − cash $259.3M = $3,630.6M.
@@ -212,6 +221,36 @@ Operating income excludes non-cash impairments. Reinvestment = capex − D&A + c
 | 2024 | $208.4M | $156.3M | $2,348.0M | 6.66% | $-15.1M | -9.66% | $171.4M |
 
 D&A includes $52.9M of amortization of intangibles acquired in past deals (base year). That charge needs no replacement spending, so it makes reinvestment look negative; excluding it, base-year reinvestment is $37.8M and the reinvestment rate 24.18%.
+
+### R&D capitalized (lesson 14)
+
+Research and development is treated as a capital expense with a 3-year amortizable life (modeling_choices.rd_amortizable_life, from Damodaran's industry lookup). The research asset is the unamortized part of the last 3 years' R&D. This year's R&D is added back to operating income and the asset's amortization subtracted. R&D is fully tax-deductible, so the after-tax adjustment is R&D − amortization with no tax factor.
+
+| Year | R&D | Unamortized share | Unamortized amount |
+|---|---|---|---|
+| 2022 | $92.3M | 1/3 | $30.8M |
+| 2023 | $100.2M | 2/3 | $66.8M |
+| 2024 | $108.6M | 3/3 | $108.6M |
+
+| Item | Value | How |
+|---|---|---|
+| Value of the research asset | $206.2M | sum of the unamortized amounts |
+| Amortization this year | $98.1M | R&D of the prior 3 years ÷ 3 |
+| Adjusted operating income | $218.9M | EBIT $208.4M + R&D $108.6M − amortization |
+| Adjusted after-tax operating income | $166.8M | EBIT × (1 − t) + (R&D − amortization) |
+| Adjusted invested capital | $2,554.2M | invested capital + research asset |
+| **Adjusted ROIC** | **6.53%** | adjusted after-tax operating income ÷ adjusted invested capital |
+| Unadjusted ROIC | 6.66% | section 8 |
+| Cost of capital | 10.23% | section 1 |
+| Operating capital: adjusted invested capital − goodwill | $191.0M | the capital the business runs on, before the price paid to buy it |
+| Return on operating capital | 87.35% | adjusted after-tax operating income ÷ operating capital |
+
+Sensitivity to the amortizable life:
+
+| Life | Research asset | Amortization | Adjusted ROIC | Return on operating capital |
+|---|---|---|---|---|
+| 3 years (used) | $206.2M | $98.1M | 6.53% | 87.35% |
+| 5 years | $302.0M | $91.2M | 6.55% | 60.56% |
 
 ## 9. Adjusted present value (lesson 21)
 
