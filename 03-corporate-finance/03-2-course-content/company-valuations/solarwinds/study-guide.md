@@ -11,6 +11,7 @@ last_updated: 2026-11-01
 One document for the whole course, lesson by lesson, applied to the final project: a valuation of SolarWinds on **2025-02-05**, the last trading day before the $18.50-a-share buyout by Turn/River Capital was announced. Each lesson has four parts:
 
 1. **Key terms.** Plain-language definitions, copied from [key-terms.md](../../key-terms.md).
+   - **Key documents.** The filings and data sources that lesson's work drew on: what each is, when it's used and where to find it.
 2. **What the project asked.** The assignment questions for that lesson. Lessons 13–36 quote the "Project Questions" in each `lesson-overview.md` word for word. Lessons 1–12 have no project questions in the course material, so they use the twelve Module 1 cost-of-capital steps the `/value-company` skill defines (`.claude/skills/value-company/seeds/module-1-steps.yaml`).
 3. **Information required and where we got it.** Each input, its SolarWinds value, and the original document. Source files are in [sources/](sources/), and every number is in the ledger, [inputs.yaml](inputs.yaml).
 4. **Steps to complete the assignment.** The sequence, worked through with SolarWinds' numbers.
@@ -39,6 +40,15 @@ This guide restates work done elsewhere in this folder. If a number here ever di
 | **Balance sheet** | The accounting snapshot of what a firm owns (assets: fixed, current, financial investments, intangibles) against how it is funded (liabilities, debt and equity). The course re-cuts it into a "financial view" built around the three principles. |
 | **Intangible assets** | Assets that are not physical, such as patents and trademarks. |
 | **Life cycle** | The idea (Theme 3) that a firm's financial focus changes as it ages, as the business moves through stages of its life. |
+
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Proxy statement (DEF 14A)** | The document sent to shareholders before the annual meeting: who is on the board, how executives are paid, who owns the shares and what shareholders are voting on. | Governance questions: who controls the company, whether the board is independent, how pay is tied to performance. | SEC EDGAR (filing type DEF 14A), usually filed a month or two before the annual meeting. |
+| **Merger information statement (DEFM14C)** | The document sent to shareholders when a merger is approved by written consent of the controlling holders, so no vote is held. It covers the background of the sale, the fairness opinions, management's forecasts and executive payouts. | Any analysis of a buyout: the deal price, how it was negotiated, the forecasts the board relied on. When there is a shareholder vote, the equivalent is a merger proxy (DEFM14A). | SEC EDGAR (filing type DEFM14C or DEFM14A). |
+| **Fairness opinion** | A bank's letter to the board saying the deal price is fair to shareholders, with a summary of the valuation work behind it: comparable companies, discounted cash flow, precedent deals. | Benchmarking your own valuation, peer set and discount rate against the bankers'. | Summarized inside the merger proxy or information statement; the full letter is usually an annex to it. |
 
 ### What the project asked
 
@@ -97,6 +107,16 @@ Full answers: [lesson-01.md](lesson-01.md) · Walkthrough: [Step 1](walkthrough.
 | **Cross and pyramid holdings** | Companies owning stakes in each other, or in layers, so a controlling group runs many firms with little of its own money (the Tata case). It makes control and true ownership hard to see. |
 | **Variable Interest Entity (VIE)** | A shell company structure used to get around limits on foreign ownership of Chinese firms (the Baidu case). It is unclear how much legal power shell-company shareholders have over the operating business. |
 
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Proxy statement (DEF 14A)** | The document sent to shareholders before the annual meeting: who is on the board, how executives are paid, who owns the shares and what shareholders are voting on. | Governance questions: who controls the company, whether the board is independent, how pay is tied to performance. | SEC EDGAR (filing type DEF 14A), usually filed a month or two before the annual meeting. |
+| **Merger information statement (DEFM14C)** | The document sent to shareholders when a merger is approved by written consent of the controlling holders, so no vote is held. It covers the background of the sale, the fairness opinions, management's forecasts and executive payouts. | Any analysis of a buyout: the deal price, how it was negotiated, the forecasts the board relied on. When there is a shareholder vote, the equivalent is a merger proxy (DEFM14A). | SEC EDGAR (filing type DEFM14C or DEFM14A). |
+| **Fairness opinion** | A bank's letter to the board saying the deal price is fair to shareholders, with a summary of the valuation work behind it: comparable companies, discounted cash flow, precedent deals. | Benchmarking your own valuation, peer set and discount rate against the bankers'. | Summarized inside the merger proxy or information statement; the full letter is usually an annex to it. |
+| **Credit agreement** | The contract between the company and its lenders: how much it borrowed, the interest rate, when it must repay and the conditions (covenants) it must meet. | Measuring debt and its cost, and judging how much room the company has before lenders can step in. | Filed as an exhibit to a 10-K, 10-Q or 8-K on SEC EDGAR; key terms are summarized in the 10-K debt note. |
+
 ### What the project asked
 
 Module 1 step 2: **Corporate governance**
@@ -150,6 +170,16 @@ Full answers: [lesson-02.md](lesson-02.md) · Walkthrough: [Step 2](walkthrough.
 | **Institutional Shareholder Services (ISS)** | A firm that gauges corporate governance at companies and flags concerns such as pay and board monitoring. |
 | **Constrained stock price maximization** | Keep stock price as the objective but limit the damage: make managers and employees stockholders, protect lenders from expropriation, give markets honest and prompt information, and minimize social costs. |
 | **Protect lenders from expropriation** | Stop stockholders and managers from transferring wealth away from lenders (for example by taking on much riskier projects after borrowing). |
+
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Proxy statement (DEF 14A)** | The document sent to shareholders before the annual meeting: who is on the board, how executives are paid, who owns the shares and what shareholders are voting on. | Governance questions: who controls the company, whether the board is independent, how pay is tied to performance. | SEC EDGAR (filing type DEF 14A), usually filed a month or two before the annual meeting. |
+| **8-K (current report)** | A short filing a company must make within four business days of a major event: a merger, a new loan, a leadership change, a cyberattack, the close of a deal. | Pinning down when something happened and its terms, between annual reports. | SEC EDGAR (filing type 8-K), and usually as a press release on the investor-relations site. |
+| **Merger information statement (DEFM14C)** | The document sent to shareholders when a merger is approved by written consent of the controlling holders, so no vote is held. It covers the background of the sale, the fairness opinions, management's forecasts and executive payouts. | Any analysis of a buyout: the deal price, how it was negotiated, the forecasts the board relied on. When there is a shareholder vote, the equivalent is a merger proxy (DEFM14A). | SEC EDGAR (filing type DEFM14C or DEFM14A). |
+| **Fairness opinion** | A bank's letter to the board saying the deal price is fair to shareholders, with a summary of the valuation work behind it: comparable companies, discounted cash flow, precedent deals. | Benchmarking your own valuation, peer set and discount rate against the bankers'. | Summarized inside the merger proxy or information statement; the full letter is usually an annex to it. |
 
 ### What the project asked
 
@@ -207,6 +237,16 @@ Full answers: [lesson-03.md](lesson-03.md) · Walkthrough: [Step 3](walkthrough.
 | **Multi-Factor Model** | Like the APM but with betas against specified, named market factors. These explain past returns better than the CAPM but are less reliable at predicting expected returns. |
 | **Limitations of the CAPM** | Unrealistic assumptions, parameters that cannot be estimated precisely (index choice, a firm that changed), and weak empirical fit (size and price/book seem to explain returns better than beta). It persists as the default model anyway. |
 
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Proxy statement (DEF 14A)** | The document sent to shareholders before the annual meeting: who is on the board, how executives are paid, who owns the shares and what shareholders are voting on. | Governance questions: who controls the company, whether the board is independent, how pay is tied to performance. | SEC EDGAR (filing type DEF 14A), usually filed a month or two before the annual meeting. |
+| **Merger information statement (DEFM14C)** | The document sent to shareholders when a merger is approved by written consent of the controlling holders, so no vote is held. It covers the background of the sale, the fairness opinions, management's forecasts and executive payouts. | Any analysis of a buyout: the deal price, how it was negotiated, the forecasts the board relied on. When there is a shareholder vote, the equivalent is a merger proxy (DEFM14A). | SEC EDGAR (filing type DEFM14C or DEFM14A). |
+| **Fairness opinion** | A bank's letter to the board saying the deal price is fair to shareholders, with a summary of the valuation work behind it: comparable companies, discounted cash flow, precedent deals. | Benchmarking your own valuation, peer set and discount rate against the bankers'. | Summarized inside the merger proxy or information statement; the full letter is usually an annex to it. |
+| **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
+
 ### What the project asked
 
 Module 1 step 4: **Share classes and the marginal investor**
@@ -262,6 +302,15 @@ Full answers: [lesson-04.md](lesson-04.md) · Walkthrough: [Step 4](walkthrough.
 | **Riskfree rate when the government has default risk** | Three options: subtract the default spread from the local government rate (India 8.82% - 2.25% = 6.57%), do the analysis in another currency where a riskfree rate is easy (e.g. US dollars), or work in real terms. |
 | **Real riskfree rate** | A riskfree rate with inflation removed, measured by the inflation-indexed treasury rate. Use it only when the analysis is in real terms. |
 | **Expected market risk premium** | The premium expected for investing in risky assets (the market portfolio) over the riskless asset. It is one of the three CAPM inputs, along with the riskfree rate and beta. |
+
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **8-K (current report)** | A short filing a company must make within four business days of a major event: a merger, a new loan, a leadership change, a cyberattack, the close of a deal. | Pinning down when something happened and its terms, between annual reports. | SEC EDGAR (filing type 8-K), and usually as a press release on the investor-relations site. |
+| **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
+| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR, the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
 
 ### What the project asked
 
@@ -320,6 +369,13 @@ Full answers: [lesson-05.md](lesson-05.md) · Walkthrough: [Step 5](walkthrough.
 | **Scaled up default spread** | Because equities are riskier than bonds, scale the default spread by the ratio of equity volatility to bond volatility. Formula: Country risk premium = Country default spread * (Standard deviation of equity / Standard deviation of country bond) |
 | **Historical premiums for other markets** | Data for non-US markets cover much shorter periods, especially in emerging markets, so estimates carry much greater error. Damodaran's point: if you distrust the US history, trust the rest even less. |
 
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
+| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR, the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
+
 ### What the project asked
 
 Module 1 step 6: **Mature-market equity risk premium**
@@ -368,6 +424,14 @@ Full answers: [lesson-06.md](lesson-06.md) · Walkthrough: [Step 6](walkthrough.
 | **ERP by incorporation** | The conventional practice: use the premium of the country where the company is incorporated (a US firm gets the US premium, Vale gets Brazil's). |
 | **ERP by operations** | Damodaran's "more sensible" practice: weight the premiums of the regions where the company operates, by revenue. Disney in 2013: 5.76% from its revenue mix, not the US 5.50%. |
 | **Anatomy of a crisis** | The slides track the implied ERP from September 2008 to January 2009, showing it moving sharply during a crisis, so premiums are not constant. |
+
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
+| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR, the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
 
 ### What the project asked
 
@@ -420,6 +484,16 @@ Full answers: [lesson-07.md](lesson-07.md) · Walkthrough: [Step 7](walkthrough.
 | **Market index** | The proxy for the market portfolio in the regression (e.g. S&P 500). Returns include dividends. |
 | **Cost of equity** | The expected return equity investors need to break even. It is also the project hurdle rate from an equity standpoint. Formula: Cost of equity = Riskfree Rate + Beta * Risk Premium. Disney 2013: 2.75% + 1.25 (5.76%) = 9.95%. |
 
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Proxy statement (DEF 14A)** | The document sent to shareholders before the annual meeting: who is on the board, how executives are paid, who owns the shares and what shareholders are voting on. | Governance questions: who controls the company, whether the board is independent, how pay is tied to performance. | SEC EDGAR (filing type DEF 14A), usually filed a month or two before the annual meeting. |
+| **8-K (current report)** | A short filing a company must make within four business days of a major event: a merger, a new loan, a leadership change, a cyberattack, the close of a deal. | Pinning down when something happened and its terms, between annual reports. | SEC EDGAR (filing type 8-K), and usually as a press release on the investor-relations site. |
+| **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
+| **Capital IQ** | S&P's paid database of company financials, market data, deals, ownership and credit information, standardized across companies. | Cross-checking figures and quickly assembling comparables or deal histories. Cite the filing itself when the filing has the number. | Subscription only (this course provides an NYU academic account through the final-project due date). |
+
 ### What the project asked
 
 Module 1 step 8: **Regression beta**
@@ -470,6 +544,13 @@ Full answers: [lesson-08.md](lesson-08.md) · Walkthrough: [Step 8](walkthrough.
 | **Levered beta** | Also called equity beta. The beta of a firm's equity including the effect of its debt. A regression beta is levered, reflecting the average market D/E during the regression period. |
 | **Unlevered beta** | Also called asset beta. The beta of the business with the effect of debt removed. Formula: bL = bu (1 + (1 - t) D/E), where D/E is market value debt to equity and t the marginal tax rate. Disney: 1.25 / (1 + (1 - 0.361)(0.1944)) = 1.1119. |
 | **Marginal tax rate** | The tax rate on the next dollar of income, used in levering and unlevering betas because interest is tax deductible. |
+
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
 
 ### What the project asked
 
@@ -522,6 +603,13 @@ Full answers: [lesson-09.md](lesson-09.md) · Walkthrough: [Step 9](walkthrough.
 | **Levered beta of divisions** | Allocate the firm's debt to divisions (Disney used identifiable assets), compute D/E per division, and relever each division's beta. |
 | **Divisional cost of equity** | Each business has its own risk, so its own cost of equity. The CFO discussion: a movie-division project promising 9.5% should be judged against the movie business's cost of equity, not Disney's overall one. |
 
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
+
 ### What the project asked
 
 Module 1 step 10: **Bottom-up unlevered beta**
@@ -572,6 +660,16 @@ Full answers: [lesson-10.md](lesson-10.md) · Walkthrough: [Step 10](walkthrough
 | **Book versus market D/E** | Levering needs market D/E, but a private firm has only a book ratio. Bookscape assumes the industry median market D/E of 21.41%. |
 | **Total risk versus market risk** | A beta measures only market risk, because it assumes a diversified owner. Owners of most private firms are not diversified, so market beta understates the risk they bear. |
 | **Total beta** | A beta adjusted for total risk. Formula: Total Beta = Market Beta / Correlation of the sector with the market (the square root of R squared). Bookscape: 0.8558 / 0.5099 = 1.6783, so cost of equity is 2.75% + 1.6783 (5.5%) = 11.98%. |
+
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Proxy statement (DEF 14A)** | The document sent to shareholders before the annual meeting: who is on the board, how executives are paid, who owns the shares and what shareholders are voting on. | Governance questions: who controls the company, whether the board is independent, how pay is tied to performance. | SEC EDGAR (filing type DEF 14A), usually filed a month or two before the annual meeting. |
+| **SEC structured financial data (XBRL)** | The numbers from every 10-K and 10-Q in machine-readable form, tagged line by line (revenue, operating income, debt and so on). | Pulling the same figures for many companies at once, such as a peer group, without reading each filing. | SEC's free company-facts API (data.sec.gov) or the Financial Statement Data Sets on sec.gov. |
+| **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
+| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR, the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
 
 ### What the project asked
 
@@ -625,6 +723,16 @@ Full answers: [lesson-11.md](lesson-11.md) · Walkthrough: [Step 11](walkthrough
 | **Pre-tax cost of debt** | Riskfree rate plus default spread. Formula: Pre-tax cost of debt = Riskfree Rate + Default Spread. Bookscape: 2.75% + 1.30% = 4.05%. |
 | **After-tax cost of debt** | The cost of debt after the tax deduction on interest. Formula: After-tax cost of debt = Pre-tax cost of debt * (1 - tax rate). Bookscape: 4.05% x (1 - 0.40) = 2.43%. |
 | **Differential inflation approach** | (Re-listed; defined in Lesson 11 for cost of equity.) The same conversion applies to the cost of debt: Vale's dollar cost of debt of 4.05% becomes 11.19% in reais. |
+
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Merger information statement (DEFM14C)** | The document sent to shareholders when a merger is approved by written consent of the controlling holders, so no vote is held. It covers the background of the sale, the fairness opinions, management's forecasts and executive payouts. | Any analysis of a buyout: the deal price, how it was negotiated, the forecasts the board relied on. When there is a shareholder vote, the equivalent is a merger proxy (DEFM14A). | SEC EDGAR (filing type DEFM14C or DEFM14A). |
+| **Credit agreement** | The contract between the company and its lenders: how much it borrowed, the interest rate, when it must repay and the conditions (covenants) it must meet. | Measuring debt and its cost, and judging how much room the company has before lenders can step in. | Filed as an exhibit to a 10-K, 10-Q or 8-K on SEC EDGAR; key terms are summarized in the 10-K debt note. |
+| **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
+| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR, the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
 
 ### What the project asked
 
@@ -692,6 +800,16 @@ Full answers: [lesson-12.md](lesson-12.md) · Walkthrough: [Step 12](walkthrough
 | **Total Beta** | Beta that treats all of a business's risk as relevant (used for an undiversified owner, like Bookscape's), versus Market Beta, which counts only risk that diversified investors cannot eliminate. It gives a much higher cost of equity and cost of capital. |
 | **Hurdle rate** | The minimum return an investment must earn to be acceptable. Use the cost of equity if returns are measured to equity investors, and the cost of capital if returns are measured to all capital providers (the firm). |
 
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Merger information statement (DEFM14C)** | The document sent to shareholders when a merger is approved by written consent of the controlling holders, so no vote is held. It covers the background of the sale, the fairness opinions, management's forecasts and executive payouts. | Any analysis of a buyout: the deal price, how it was negotiated, the forecasts the board relied on. When there is a shareholder vote, the equivalent is a merger proxy (DEFM14A). | SEC EDGAR (filing type DEFM14C or DEFM14A). |
+| **Fairness opinion** | A bank's letter to the board saying the deal price is fair to shareholders, with a summary of the valuation work behind it: comparable companies, discounted cash flow, precedent deals. | Benchmarking your own valuation, peer set and discount rate against the bankers'. | Summarized inside the merger proxy or information statement; the full letter is usually an annex to it. |
+| **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
+| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR, the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
+
 ### What the project asked
 
 1. Counting both interest bearing debt and lease commitments, what is the market debt ratio for the firm?
@@ -748,6 +866,14 @@ Full answers: [lesson-13.md](lesson-13.md) · Walkthrough: [Step 13](walkthrough
 | **Return Spread** | The gap between the return a firm earns on its capital and what that capital costs. Positive means value creation. Formula: Return Spread = After-tax ROC - Cost of Capital. |
 | **Economic Value Added (EVA)** | The dollar version of the return spread: the excess return times the capital invested. Damodaran calls it "old wine in a new bottle" for the idea that value comes from excess returns. Formula: EVA = (ROC - Cost of Capital) x (Book Value of Capital Invested). |
 
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Credit agreement** | The contract between the company and its lenders: how much it borrowed, the interest rate, when it must repay and the conditions (covenants) it must meet. | Measuring debt and its cost, and judging how much room the company has before lenders can step in. | Filed as an exhibit to a 10-K, 10-Q or 8-K on SEC EDGAR; key terms are summarized in the 10-K debt note. |
+| **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
+
 ### What the project asked
 
 1. What return on capital did your firm generate last year?
@@ -803,6 +929,16 @@ Full answers: [lesson-14.md](lesson-14.md) · Walkthrough: [Step 14](walkthrough
 | **Salvage value** | For a finite, short-lived project, the expected proceeds from selling off the investment at the end of its life, usually set equal to the book value of fixed assets and working capital. |
 | **Terminal value** | For a very long-lived project, the present value at the end of the forecast period of all cash flows after it. Formula: Terminal value in year n = CF in year n+1 / (Cost of Capital - Growth Rate). |
 
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Proxy statement (DEF 14A)** | The document sent to shareholders before the annual meeting: who is on the board, how executives are paid, who owns the shares and what shareholders are voting on. | Governance questions: who controls the company, whether the board is independent, how pay is tied to performance. | SEC EDGAR (filing type DEF 14A), usually filed a month or two before the annual meeting. |
+| **Merger information statement (DEFM14C)** | The document sent to shareholders when a merger is approved by written consent of the controlling holders, so no vote is held. It covers the background of the sale, the fairness opinions, management's forecasts and executive payouts. | Any analysis of a buyout: the deal price, how it was negotiated, the forecasts the board relied on. When there is a shareholder vote, the equivalent is a merger proxy (DEFM14A). | SEC EDGAR (filing type DEFM14C or DEFM14A). |
+| **Fairness opinion** | A bank's letter to the board saying the deal price is fair to shareholders, with a summary of the valuation work behind it: comparable companies, discounted cash flow, precedent deals. | Benchmarking your own valuation, peer set and discount rate against the bankers'. | Summarized inside the merger proxy or information statement; the full letter is usually an annex to it. |
+| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR, the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
+
 ### What the project asked
 
 1. If you can identify a typical project for your firm, what pattern of cash flows do you foresee for the project?
@@ -853,6 +989,14 @@ Full answers: [lesson-15.md](lesson-15.md) · Walkthrough: [Step 15](walkthrough
 | **opportunity costs** | The side costs of a project from using resources the business already owns, plus lost revenue on other projects. They must be included in the project's return. |
 | **synergies** | Side benefits where a project's cash flows boost other projects, not captured in a standard capital-budgeting analysis. |
 | **options embedded in projects** | The flexibility to delay, expand or abandon a project, which has value that traditional analysis misses. |
+
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
+| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR, the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
 
 ### What the project asked
 
@@ -905,6 +1049,17 @@ Full answers: [lesson-16.md](lesson-16.md) · Walkthrough: [Step 16](walkthrough
 | **debt capacity** | How much more a firm can borrow before costs outweigh benefits. It is used up as a firm borrows. |
 | **Miller-Modigliani Theorem** | In a world with no taxes, default risk or agency costs, capital structure is irrelevant: firm value depends only on project cash flows and the cost of capital does not change with leverage, since the cost of equity rises just enough to offset cheaper debt. |
 
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **S-1 (IPO prospectus)** | The registration statement a company files to sell shares to the public for the first time: its history, finances, risks, owners and what it will do with the money raised. | Understanding how a company was owned and financed before it listed, and what investors were told at the IPO. | SEC EDGAR (filing type S-1, or 424B4 for the final prospectus). |
+| **8-K (current report)** | A short filing a company must make within four business days of a major event: a merger, a new loan, a leadership change, a cyberattack, the close of a deal. | Pinning down when something happened and its terms, between annual reports. | SEC EDGAR (filing type 8-K), and usually as a press release on the investor-relations site. |
+| **Merger information statement (DEFM14C)** | The document sent to shareholders when a merger is approved by written consent of the controlling holders, so no vote is held. It covers the background of the sale, the fairness opinions, management's forecasts and executive payouts. | Any analysis of a buyout: the deal price, how it was negotiated, the forecasts the board relied on. When there is a shareholder vote, the equivalent is a merger proxy (DEFM14A). | SEC EDGAR (filing type DEFM14C or DEFM14A). |
+| **SEC structured financial data (XBRL)** | The numbers from every 10-K and 10-Q in machine-readable form, tagged line by line (revenue, operating income, debt and so on). | Pulling the same figures for many companies at once, such as a peer group, without reading each filing. | SEC's free company-facts API (data.sec.gov) or the Financial Statement Data Sets on sec.gov. |
+| **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
+
 ### What the project asked
 
 1. What are the different kinds or types of financing that this company has used to raise funds? Where do they fall in the continuum between debt and equity?
@@ -954,6 +1109,14 @@ Full answers: [lesson-17.md](lesson-17.md) · Walkthrough: [Step 17](walkthrough
 | **Ratings table** | A lookup table mapping interest coverage ranges to a likely bond rating, default spread and interest rate for a firm of a given size. Pre-tax cost of debt = riskless rate + spread. |
 | **Iteration** | Interest depends on the rating, and the rating on interest, so you recompute the cost of debt at the new rating until it stops changing (the 30% debt test moves from AAA to AA rates). |
 | **Stated versus effective tax rates** | Interest is only tax deductible up to your operating income. When interest exceeds EBIT, the effective rate falls. Formula: Adjusted marginal tax rate = (EBIT x Marginal tax rate) / Interest expense. |
+
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
+| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR, the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
 
 ### What the project asked
 
@@ -1005,6 +1168,13 @@ Full answers: [lesson-18.md](lesson-18.md) · Walkthrough: [Step 18](walkthrough
 | **Downside risk** | What happens to the optimal debt ratio if operating income drops. Two methods: a statistical approach (cut base income by one standard deviation or more) and an economic scenario approach (apply the decline seen in the last recession). |
 | **Ratings constraint** | A management cap on how far the bond rating may fall. It protects against downside risk and so should not be combined with that analysis, and each constraint has a cost. |
 | **Cost of the rating constraint** | Value at the unconstrained optimal minus value at the constrained debt ratio (Disney: $5,696M for AA, $12,125M for AAA). |
+
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Merger information statement (DEFM14C)** | The document sent to shareholders when a merger is approved by written consent of the controlling holders, so no vote is held. It covers the background of the sale, the fairness opinions, management's forecasts and executive payouts. | Any analysis of a buyout: the deal price, how it was negotiated, the forecasts the board relied on. When there is a shareholder vote, the equivalent is a merger proxy (DEFM14A). | SEC EDGAR (filing type DEFM14C or DEFM14A). |
 
 ### What the project asked
 
@@ -1063,6 +1233,16 @@ Full answers: [lesson-19.md](lesson-19.md) · Walkthrough: [Step 19](walkthrough
 | **Operating risk (determinant of optimal debt)** | Firms with more variable operating income have lower optimal debt ratios. It enters the cost of capital in two places: a higher unlevered beta (business risk before debt) and lower bond ratings for a given income. |
 | **Equity vs debt risk premiums** | The only macro determinant of optimal debt ratio. The relative price of equity risk versus debt risk in the market shifts how attractive borrowing is. |
 
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Proxy statement (DEF 14A)** | The document sent to shareholders before the annual meeting: who is on the board, how executives are paid, who owns the shares and what shareholders are voting on. | Governance questions: who controls the company, whether the board is independent, how pay is tied to performance. | SEC EDGAR (filing type DEF 14A), usually filed a month or two before the annual meeting. |
+| **8-K (current report)** | A short filing a company must make within four business days of a major event: a merger, a new loan, a leadership change, a cyberattack, the close of a deal. | Pinning down when something happened and its terms, between annual reports. | SEC EDGAR (filing type 8-K), and usually as a press release on the investor-relations site. |
+| **SEC structured financial data (XBRL)** | The numbers from every 10-K and 10-Q in machine-readable form, tagged line by line (revenue, operating income, debt and so on). | Pulling the same figures for many companies at once, such as a peer group, without reading each filing. | SEC's free company-facts API (data.sec.gov) or the Financial Statement Data Sets on sec.gov. |
+| **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
+
 ### What the project asked
 
 1. If your company is a commodity or cyclical company, how would you adjust your optimal debt ratio to reflect earnings volatility?
@@ -1115,6 +1295,14 @@ Full answers: [lesson-20.md](lesson-20.md) · Walkthrough: [Step 20](walkthrough
 | **Predicted debt ratio (over levered / under levered)** | The regression output for one firm. If actual is above predicted the firm is over levered relative to peers; Tata Motors' predicted 18.54% versus actual 29.28%. |
 | **CVOI (coefficient of variation in operating income)** | A measure of earnings variability: standard deviation of operating income over 10 years divided by its 10-year average. Higher CVOI goes with lower debt ratios in the market-wide regression. |
 
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **SEC structured financial data (XBRL)** | The numbers from every 10-K and 10-Q in machine-readable form, tagged line by line (revenue, operating income, debt and so on). | Pulling the same figures for many companies at once, such as a peer group, without reading each filing. | SEC's free company-facts API (data.sec.gov) or the Financial Statement Data Sets on sec.gov. |
+| **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
+
 ### What the project asked
 
 1. What is the expected tax benefit from borrowing money in the APV approach?
@@ -1164,6 +1352,14 @@ Full answers: [lesson-21.md](lesson-21.md) · Walkthrough: [Step 21](walkthrough
 | **Takeover threat (under levered firms)** | An under levered firm can be a hostile acquisition target because a buyer can borrow against its assets to buy it. A small firm with weak stock performance should move quickly; a large or well-performing firm has time. |
 | **Bankruptcy threat (over levered firms)** | An over levered firm with a very low rating (CCC) must cut debt fast, usually by negotiating with lenders. One with time can fund good projects from retained earnings (equity grows, so the debt ratio falls) or, lacking good projects, use retained earnings to pay down debt. |
 | **Good projects test** | When time is available, the key question is whether the firm has a record of earning more than its cost of capital (positive NPV). If yes, borrow to take those projects, which both lowers the cost of capital and adds value. Disney: 12.61% return on capital versus 7.81% cost of capital. |
+
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Proxy statement (DEF 14A)** | The document sent to shareholders before the annual meeting: who is on the board, how executives are paid, who owns the shares and what shareholders are voting on. | Governance questions: who controls the company, whether the board is independent, how pay is tied to performance. | SEC EDGAR (filing type DEF 14A), usually filed a month or two before the annual meeting. |
+| **Merger information statement (DEFM14C)** | The document sent to shareholders when a merger is approved by written consent of the controlling holders, so no vote is held. It covers the background of the sale, the fairness opinions, management's forecasts and executive payouts. | Any analysis of a buyout: the deal price, how it was negotiated, the forecasts the board relied on. When there is a shareholder vote, the equivalent is a merger proxy (DEFM14A). | SEC EDGAR (filing type DEFM14C or DEFM14A). |
 
 ### What the project asked
 
@@ -1220,6 +1416,12 @@ Full answers: [lesson-22.md](lesson-22.md) · Walkthrough: [Step 22](walkthrough
 | **Not locking in market mistakes** | If a firm is under rated or its securities are under priced, avoid long-term issuance. Issuing under priced equity or convertibles transfers wealth to new stockholders, and issuing long-term debt when under rated locks in rates that are too high. |
 | **Swapping debt** | Exchanging existing debt for a different type (for example fixed rate dollar debt for floating rate foreign currency debt) to fix a mismatch without a new issue. |
 
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+
 ### What the project asked
 
 1. Given its asset/project characteristics, what is the right type of debt for your firm?
@@ -1271,6 +1473,12 @@ Slides here are thin: the main trend charts are images with no text, and there i
 | **Dividend Yield** | The return an investor earns from dividends alone, which becomes part of the expected return on the stock. Formula: Dividend Yield = Dividends per share / Stock price. |
 | **Dividend policy differences across countries and growth classes** | Payout ratios and yields vary by country (G7 comparison) and by growth class of firm. |
 
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+
 ### What the project asked
 
 1. How much (if any) has your company paid out in dividends each year for the last 5 years?
@@ -1318,6 +1526,14 @@ Full answers: [lesson-24.md](lesson-24.md) · Walkthrough: [Step 24](walkthrough
 | **Clientele effect** | Investors sort themselves by tax bracket: high-tax investors prefer non-dividend stocks, low-tax investors (in the study, older and poorer ones) hold high-dividend stocks. |
 | **Signalling story** | Dividends tell the market management expects good cash flows. Increases are usually good news, but higher or new dividends can also signal a lack of good projects, and dividend changes are becoming less informative. |
 | **Wealth appropriation story** | Dividends move wealth from lenders to equity investors, which is good for stockholders and bad for bondholders (excess returns on stocks and bonds around dividend changes). |
+
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Proxy statement (DEF 14A)** | The document sent to shareholders before the annual meeting: who is on the board, how executives are paid, who owns the shares and what shareholders are voting on. | Governance questions: who controls the company, whether the board is independent, how pay is tied to performance. | SEC EDGAR (filing type DEF 14A), usually filed a month or two before the annual meeting. |
+| **Merger information statement (DEFM14C)** | The document sent to shareholders when a merger is approved by written consent of the controlling holders, so no vote is held. It covers the background of the sale, the fairness opinions, management's forecasts and executive payouts. | Any analysis of a buyout: the deal price, how it was negotiated, the forecasts the board relied on. When there is a shareholder vote, the equivalent is a merger proxy (DEFM14A). | SEC EDGAR (filing type DEFM14C or DEFM14A). |
 
 ### What the project asked
 
@@ -1367,6 +1583,13 @@ Full answers: [lesson-25.md](lesson-25.md) · Walkthrough: [Step 25](walkthrough
 | **Cash accumulators** | Firms whose FCFE exceeds dividends plus buybacks, so cash piles up on the balance sheet. |
 | **Over payers** | Firms whose dividends plus buybacks exceed FCFE (including those with negative FCFE that still pay out). |
 | **Consequence of not paying FCFE** | The undistributed FCFE shows up elsewhere, for example as higher cash balances (Microsoft 1996: $2,127 million of FCFE, no payout), which is why the assessment ends by asking where the cash went. |
+
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Proxy statement (DEF 14A)** | The document sent to shareholders before the annual meeting: who is on the board, how executives are paid, who owns the shares and what shareholders are voting on. | Governance questions: who controls the company, whether the board is independent, how pay is tied to performance. | SEC EDGAR (filing type DEF 14A), usually filed a month or two before the annual meeting. |
 
 ### What the project asked
 
@@ -1426,6 +1649,14 @@ Full answers: [lesson-26.md](lesson-26.md) · Walkthrough: [Step 26](walkthrough
 | **Managing changes in dividend policy** | Dividend cuts are read as bad news: stocks fall around the announcement (about -8% when a cut came with an earnings decline) and recover more only when the cut is paired with new investment or growth opportunities (+8.79% the following quarter). The lesson is to explain the reason for the change. |
 | **Growth firms and dividends** | The argument that high-growth firms should start paying dividends to widen their stockholder base (some investors, such as pension funds, cannot hold non-payers). The slides pose it as a question to challenge, not as an endorsement. |
 
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Proxy statement (DEF 14A)** | The document sent to shareholders before the annual meeting: who is on the board, how executives are paid, who owns the shares and what shareholders are voting on. | Governance questions: who controls the company, whether the board is independent, how pay is tied to performance. | SEC EDGAR (filing type DEF 14A), usually filed a month or two before the annual meeting. |
+| **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
+
 ### What the project asked
 
 1. If your firm has returned less cash than it can over time and has a big cash balance, do you trust the firm with your cash?
@@ -1478,6 +1709,16 @@ Full answers: [lesson-27.md](lesson-27.md) · Walkthrough: [Step 27](walkthrough
 | **The problem with changing dividends** | Because of the clientele effect, a firm that needs to cut dividends to fund new investment (the phone company entering media) faces a bad reaction. Managers are tempted to keep paying and defer investment or issue stock instead of making the right change. |
 | **flexible dividends** | Damodaran's "reset" idea: fixed dividends date from a century ago when stocks competed with bonds. Since equity cannot be viewed as a bond with a fixed yield plus price appreciation, payouts should flex with the business, and the move to buybacks may already reflect this. |
 
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Proxy statement (DEF 14A)** | The document sent to shareholders before the annual meeting: who is on the board, how executives are paid, who owns the shares and what shareholders are voting on. | Governance questions: who controls the company, whether the board is independent, how pay is tied to performance. | SEC EDGAR (filing type DEF 14A), usually filed a month or two before the annual meeting. |
+| **Merger information statement (DEFM14C)** | The document sent to shareholders when a merger is approved by written consent of the controlling holders, so no vote is held. It covers the background of the sale, the fairness opinions, management's forecasts and executive payouts. | Any analysis of a buyout: the deal price, how it was negotiated, the forecasts the board relied on. When there is a shareholder vote, the equivalent is a merger proxy (DEFM14A). | SEC EDGAR (filing type DEFM14C or DEFM14A). |
+| **SEC structured financial data (XBRL)** | The numbers from every 10-K and 10-Q in machine-readable form, tagged line by line (revenue, operating income, debt and so on). | Pulling the same figures for many companies at once, such as a peer group, without reading each filing. | SEC's free company-facts API (data.sec.gov) or the Financial Statement Data Sets on sec.gov. |
+| **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
+
 ### What the project asked
 
 1. How does your company dividend and cash return policy measure up against other companies in the sector?
@@ -1526,6 +1767,16 @@ Full answers: [lesson-28.md](lesson-28.md) · Walkthrough: [Step 28](walkthrough
 | **Dividend discount model** | A special case of equity valuation in which the only cash flow counted is dividends; the stock is worth the present value of expected future dividends. |
 | **Firm valuation** | Valuing the whole business: discount cash flows to the firm (after operating expenses and taxes, before debt payments) at the weighted average cost of capital. Formula: Value of Firm = sum of CF to Firm(t) / (1+WACC)^t |
 | **Choosing a cash flow to discount** | The rule for picking the model: discount dividends when free cash flows cannot be estimated (financial firms such as Deutsche Bank); discount FCFE when the debt ratio is stable (Tata Motors); discount FCFF when the debt ratio may change (Vale and Disney). |
+
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Proxy statement (DEF 14A)** | The document sent to shareholders before the annual meeting: who is on the board, how executives are paid, who owns the shares and what shareholders are voting on. | Governance questions: who controls the company, whether the board is independent, how pay is tied to performance. | SEC EDGAR (filing type DEF 14A), usually filed a month or two before the annual meeting. |
+| **8-K (current report)** | A short filing a company must make within four business days of a major event: a merger, a new loan, a leadership change, a cyberattack, the close of a deal. | Pinning down when something happened and its terms, between annual reports. | SEC EDGAR (filing type 8-K), and usually as a press release on the investor-relations site. |
+| **Merger information statement (DEFM14C)** | The document sent to shareholders when a merger is approved by written consent of the controlling holders, so no vote is held. It covers the background of the sale, the fairness opinions, management's forecasts and executive payouts. | Any analysis of a buyout: the deal price, how it was negotiated, the forecasts the board relied on. When there is a shareholder vote, the equivalent is a merger proxy (DEFM14A). | SEC EDGAR (filing type DEFM14C or DEFM14A). |
+| **Fairness opinion** | A bank's letter to the board saying the deal price is fair to shareholders, with a summary of the valuation work behind it: comparable companies, discounted cash flow, precedent deals. | Benchmarking your own valuation, peer set and discount rate against the bankers'. | Summarized inside the merger proxy or information statement; the full letter is usually an annex to it. |
 
 ### What the project asked
 
@@ -1578,6 +1829,15 @@ Full answers: [lesson-29.md](lesson-29.md) · Walkthrough: [Step 29](walkthrough
 | **Currency choice** | A company can be valued in any currency, but cash flows and discount rates must be in the same one, so Tata Motors is valued in nominal rupees with a rupee risk-free rate. |
 | **Costs of equity and capital change over time** | Discount rates should not be held constant for every year; as the firm matures, its beta moves toward 1 and its debt ratio rises, so its cost of capital falls (Disney: 7.81% in years 1-5 to 7.29% by year 10). |
 
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Merger information statement (DEFM14C)** | The document sent to shareholders when a merger is approved by written consent of the controlling holders, so no vote is held. It covers the background of the sale, the fairness opinions, management's forecasts and executive payouts. | Any analysis of a buyout: the deal price, how it was negotiated, the forecasts the board relied on. When there is a shareholder vote, the equivalent is a merger proxy (DEFM14A). | SEC EDGAR (filing type DEFM14C or DEFM14A). |
+| **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
+| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR, the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
+
 ### What the project asked
 
 1. What is the current cost of equity and capital for your firm? How might these numbers change in the future?
@@ -1629,6 +1889,15 @@ Full answers: [lesson-30.md](lesson-30.md) · Walkthrough: [Step 30](walkthrough
 | **Return on Capital** | After-tax operating income divided by capital invested at the start of the year. Formula: EBIT(1-t) / (BV of Equity + BV of Debt - Cash) |
 | **Changing growth and margins** | When a firm is in transition and margins change, the link between reinvestment and growth breaks. Instead: forecast revenue growth, forecast a target margin and a path to it, and estimate reinvestment from revenues. |
 | **Sales to capital ratio** | Dollars of revenue earned per dollar of investment; used to turn a revenue forecast into reinvestment. Formula: Reinvestment = Change in Revenues / Sales-to-Capital ratio (Baidu: 2.64) |
+
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Merger information statement (DEFM14C)** | The document sent to shareholders when a merger is approved by written consent of the controlling holders, so no vote is held. It covers the background of the sale, the fairness opinions, management's forecasts and executive payouts. | Any analysis of a buyout: the deal price, how it was negotiated, the forecasts the board relied on. When there is a shareholder vote, the equivalent is a merger proxy (DEFM14A). | SEC EDGAR (filing type DEFM14C or DEFM14A). |
+| **SEC structured financial data (XBRL)** | The numbers from every 10-K and 10-Q in machine-readable form, tagged line by line (revenue, operating income, debt and so on). | Pulling the same figures for many companies at once, such as a peer group, without reading each filing. | SEC's free company-facts API (data.sec.gov) or the Financial Statement Data Sets on sec.gov. |
+| **Capital IQ** | S&P's paid database of company financials, market data, deals, ownership and credit information, standardized across companies. | Cross-checking figures and quickly assembling comparables or deal histories. Cite the filing itself when the filing has the number. | Subscription only (this course provides an NYU academic account through the final-project due date). |
 
 ### What the project asked
 
@@ -1684,6 +1953,15 @@ Full answers: [lesson-31.md](lesson-31.md) · Walkthrough: [Step 31](walkthrough
 | **Normalized earnings** | An average or typical level of operating income and return on capital over a cycle, used instead of a peak or trough year (Vale's normalized ROC: 17.25%). |
 | **Sleight of hand (capex = depreciation)** | The common shortcut that stable firms only make maintenance capex and need no working capital implies zero reinvestment and therefore zero growth in operating income, contradicting any positive stable growth rate. |
 
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Merger information statement (DEFM14C)** | The document sent to shareholders when a merger is approved by written consent of the controlling holders, so no vote is held. It covers the background of the sale, the fairness opinions, management's forecasts and executive payouts. | Any analysis of a buyout: the deal price, how it was negotiated, the forecasts the board relied on. When there is a shareholder vote, the equivalent is a merger proxy (DEFM14A). | SEC EDGAR (filing type DEFM14C or DEFM14A). |
+| **Fairness opinion** | A bank's letter to the board saying the deal price is fair to shareholders, with a summary of the valuation work behind it: comparable companies, discounted cash flow, precedent deals. | Benchmarking your own valuation, peer set and discount rate against the bankers'. | Summarized inside the merger proxy or information statement; the full letter is usually an annex to it. |
+| **SEC structured financial data (XBRL)** | The numbers from every 10-K and 10-Q in machine-readable form, tagged line by line (revenue, operating income, debt and so on). | Pulling the same figures for many companies at once, such as a peer group, without reading each filing. | SEC's free company-facts API (data.sec.gov) or the Financial Statement Data Sets on sec.gov. |
+
 ### What the project asked
 
 1. When (in what year) will your firm be a mature firm (where you can estimated terminal value)?
@@ -1738,6 +2016,13 @@ Full answers: [lesson-32.md](lesson-32.md) · Walkthrough: [Step 32](walkthrough
 | **Equity options (employee options)** | Options given to managers and employees. Options already outstanding are valued (allowing for dilution, vesting and early exercise) and subtracted from equity value; the result is divided by actual shares outstanding. |
 | **Expected future option and restricted stock issues** | Future grants are treated as an operating expense: forecast their value as a percent of revenues, reduce operating income and cash flows, and discount as usual. |
 
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Merger information statement (DEFM14C)** | The document sent to shareholders when a merger is approved by written consent of the controlling holders, so no vote is held. It covers the background of the sale, the fairness opinions, management's forecasts and executive payouts. | Any analysis of a buyout: the deal price, how it was negotiated, the forecasts the board relied on. When there is a shareholder vote, the equivalent is a merger proxy (DEFM14A). | SEC EDGAR (filing type DEFM14C or DEFM14A). |
+
 ### What the project asked
 
 1. How much cash does your firm have? Would you attach a discount or premium to it?
@@ -1788,6 +2073,16 @@ Full answers: [lesson-33.md](lesson-33.md) · Walkthrough: [Step 33](walkthrough
 | **Expected value of control** | The probability that management changes times the value of control. The market price should embed this. |
 | **Governance and price** | If governance is so weak that management cannot be changed, expected control value goes to zero and the stock converges on the status quo value; in an acquisition or activist battle, the price approaches the optimal value. |
 | **Reinvestment rate = g/ROC (stable)** | Used to set the stable-phase reinvestment in the Disney inputs: 2.5% growth / 10% return on capital = 25%. |
+
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Proxy statement (DEF 14A)** | The document sent to shareholders before the annual meeting: who is on the board, how executives are paid, who owns the shares and what shareholders are voting on. | Governance questions: who controls the company, whether the board is independent, how pay is tied to performance. | SEC EDGAR (filing type DEF 14A), usually filed a month or two before the annual meeting. |
+| **8-K (current report)** | A short filing a company must make within four business days of a major event: a merger, a new loan, a leadership change, a cyberattack, the close of a deal. | Pinning down when something happened and its terms, between annual reports. | SEC EDGAR (filing type 8-K), and usually as a press release on the investor-relations site. |
+| **Merger information statement (DEFM14C)** | The document sent to shareholders when a merger is approved by written consent of the controlling holders, so no vote is held. It covers the background of the sale, the fairness opinions, management's forecasts and executive payouts. | Any analysis of a buyout: the deal price, how it was negotiated, the forecasts the board relied on. When there is a shareholder vote, the equivalent is a merger proxy (DEFM14A). | SEC EDGAR (filing type DEFM14C or DEFM14A). |
+| **Fairness opinion** | A bank's letter to the board saying the deal price is fair to shareholders, with a summary of the valuation work behind it: comparable companies, discounted cash flow, precedent deals. | Benchmarking your own valuation, peer set and discount rate against the bankers'. | Summarized inside the merger proxy or information statement; the full letter is usually an annex to it. |
 
 ### What the project asked
 
@@ -1845,6 +2140,15 @@ Full answers: [lesson-34.md](lesson-34.md) · Walkthrough: [Step 34](walkthrough
 | **PEG ratio** | PE ratio divided by expected growth, used to adjust PE for differences in growth among comparables. |
 | **Price/Book (PBV) regression** | A regression of price-to-book ratio on ROE and the Tier 1 capital ratio across European banks, used to predict a bank's PBV and judge whether it is cheap (Deutsche Bank: predicted 1.003 vs actual 0.67). Formula: PBV = 0.48 + 1.58 ROE + 3.55 Tier 1 capital ratio |
 
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Merger information statement (DEFM14C)** | The document sent to shareholders when a merger is approved by written consent of the controlling holders, so no vote is held. It covers the background of the sale, the fairness opinions, management's forecasts and executive payouts. | Any analysis of a buyout: the deal price, how it was negotiated, the forecasts the board relied on. When there is a shareholder vote, the equivalent is a merger proxy (DEFM14A). | SEC EDGAR (filing type DEFM14C or DEFM14A). |
+| **Fairness opinion** | A bank's letter to the board saying the deal price is fair to shareholders, with a summary of the valuation work behind it: comparable companies, discounted cash flow, precedent deals. | Benchmarking your own valuation, peer set and discount rate against the bankers'. | Summarized inside the merger proxy or information statement; the full letter is usually an annex to it. |
+| **SEC structured financial data (XBRL)** | The numbers from every 10-K and 10-Q in machine-readable form, tagged line by line (revenue, operating income, debt and so on). | Pulling the same figures for many companies at once, such as a peer group, without reading each filing. | SEC's free company-facts API (data.sec.gov) or the Financial Statement Data Sets on sec.gov. |
+
 ### What the project asked
 
 1. What multiples of earnings, book value and revenue does your company trade at?
@@ -1896,6 +2200,16 @@ Full answers: [lesson-35.md](lesson-35.md) · Walkthrough: [Step 35](walkthrough
 | **VIII. The right kind of financing** | Match the type of debt to the assets and cash flows it funds (maturity, currency and so on) to lower default risk and the cost of capital. |
 | **IX. Measuring potential dividends** | Dividend principle: if you cannot find investments that earn the minimum acceptable rate, return the cash to owners. Measure what could be paid (FCFE) and compare it with what is paid. |
 | **X. Valuation: match up cash flows and discount rates** | Value follows from cash flows, growth, risk and the length of the growth period; cash flows to equity are discounted at the cost of equity and cash flows to the firm at the cost of capital. Ties the three principles back to first principles. |
+
+### Key documents
+
+| Document | What it is | When it's used | Where it's normally found |
+|---|---|---|---|
+| **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
+| **Proxy statement (DEF 14A)** | The document sent to shareholders before the annual meeting: who is on the board, how executives are paid, who owns the shares and what shareholders are voting on. | Governance questions: who controls the company, whether the board is independent, how pay is tied to performance. | SEC EDGAR (filing type DEF 14A), usually filed a month or two before the annual meeting. |
+| **8-K (current report)** | A short filing a company must make within four business days of a major event: a merger, a new loan, a leadership change, a cyberattack, the close of a deal. | Pinning down when something happened and its terms, between annual reports. | SEC EDGAR (filing type 8-K), and usually as a press release on the investor-relations site. |
+| **Merger information statement (DEFM14C)** | The document sent to shareholders when a merger is approved by written consent of the controlling holders, so no vote is held. It covers the background of the sale, the fairness opinions, management's forecasts and executive payouts. | Any analysis of a buyout: the deal price, how it was negotiated, the forecasts the board relied on. When there is a shareholder vote, the equivalent is a merger proxy (DEFM14A). | SEC EDGAR (filing type DEFM14C or DEFM14A). |
+| **Fairness opinion** | A bank's letter to the board saying the deal price is fair to shareholders, with a summary of the valuation work behind it: comparable companies, discounted cash flow, precedent deals. | Benchmarking your own valuation, peer set and discount rate against the bankers'. | Summarized inside the merger proxy or information statement; the full letter is usually an annex to it. |
 
 ### What the project asked
 
