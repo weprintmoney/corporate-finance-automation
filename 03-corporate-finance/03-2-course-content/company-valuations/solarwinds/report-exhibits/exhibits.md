@@ -84,6 +84,36 @@ Charts and tables for the final report, in the order of the course's nine projec
 | Market or transaction price (last-unaffected) | $15.18 |
 | Deal price | $18.50 |
 
+**Terminal-period cost of capital**
+
+| Terminal-period cost of capital | Value | How |
+|---|---|---|
+| Stable beta | 1.00 | forecast.stable_beta (lesson 32: betas move toward one) |
+| Stable cost of equity | 9.35% | rf 4.43% + stable beta × ERP 4.92% |
+| Stable debt ratio | 21.00% | forecast.stable_debt_ratio |
+| After-tax cost of debt | 5.33% | current pre-tax 7.11% × (1 − t), held unchanged |
+| **Stable cost of capital** | **8.51%** | (1 − D/V) × ke + D/V × kd × (1 − t) |
+
+**Value per share by the return on new capital after 2030**
+
+| Stable ROIC | Terminal reinvestment rate | Terminal value | Value per share |
+|---|---|---|---|
+| 8.51% | 29.38% | $4,618.8M | $15.63 |
+| 10.00% | 25.00% | $4,905.0M | $16.56 |
+| 12.00% (ledger) | 20.83% | $5,177.6M | $17.45 |
+| 15.00% | 16.67% | $5,450.1M | $18.33 |
+| 20.00% | 12.50% | $5,722.6M | $19.22 |
+| 30.00% | 8.33% | $5,995.1M | $20.10 |
+
+**Stress cases: revenue at the 2022–2024 growth rate instead of the plan**
+
+| Case | Revenue growth | Margin | 2030 revenue | 2030 FCFF | Enterprise value | Value per share | vs. plan |
+|---|---|---|---|---|---|---|---|
+| Plan (management forecast) | 8.12% | plan | $1,273.0M | $419.0M | $4,207.0M | $17.45 |  |
+| Revenue at the 2022–2024 rate, plan margins | 5.25% | plan | $1,083.3M | $345.3M | $3,644.8M | $14.17 | -3.28 |
+| Revenue at the 2022–2024 rate, margin held at the plan's first year | 5.25% | 32.69% | $1,083.3M | $284.7M | $3,068.2M | $10.81 | -6.64 |
+| Revenue at the 2022–2024 rate, margin held at 2024 | 5.25% | 26.15% | $1,083.3M | $231.6M | $2,468.0M | $7.32 | -10.13 |
+
 **Relative valuation**
 
 | Multiple | SolarWinds Corporation | Peer median | Peers used |

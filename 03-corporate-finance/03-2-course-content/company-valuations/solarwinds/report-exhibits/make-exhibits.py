@@ -68,6 +68,7 @@ s5 = next(tb for tb in tables(section(5)) if "FCFE" in tb[0])
 s6 = tables(section(6))
 by_head = lambda ts, h: next(tb for tb in ts if tb and h in tb[0])
 bridge, sens = by_head(s6, "Bridge"), by_head(s6, "Stable ROIC")
+stable_build, stress = by_head(s6, "Terminal-period cost of capital"), by_head(s6, "Case")
 dcf_value = num(find(bridge, "Bridge", "Value per share (course method")["Amount"])
 unaffected = num(find(bridge, "Bridge", "Market or transaction price")["Amount"])
 deal = num(find(bridge, "Bridge", "Deal price")["Amount"])
@@ -255,6 +256,15 @@ Charts and tables for the final report, in the order of the course's nine projec
 **DCF bridge**
 
 {md_table([r for r in bridge if not r["Bridge"].startswith(("Course-method", "Value per share (shortcut", "Value per share with"))], ["Bridge", "Amount"])}
+**Terminal-period cost of capital**
+
+{md_table(stable_build, list(stable_build[0].keys()))}
+**Value per share by the return on new capital after 2030**
+
+{md_table(sens, list(sens[0].keys()))}
+**Stress cases: revenue at the 2022–2024 growth rate instead of the plan**
+
+{md_table(stress, list(stress[0].keys()))}
 **Relative valuation**
 
 {md_table(tables(s7_text)[0], list(tables(s7_text)[0][0].keys()))}"""
