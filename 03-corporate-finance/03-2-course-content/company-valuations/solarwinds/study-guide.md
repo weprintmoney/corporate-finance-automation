@@ -12,13 +12,49 @@ One document for the whole course, lesson by lesson, applied to the final projec
 
 1. **Key terms.** Plain-language definitions, copied from [key-terms.md](../../key-terms.md).
    - **Key documents.** The filings and data sources that lesson's work drew on: what each is, when it's used and where to find it.
-2. **What the project asked.** The assignment questions for that lesson. Lessons 13–36 quote the "Project Questions" in each `lesson-overview.md` word for word. Lessons 1–12 have no project questions in the course material, so they use the twelve Module 1 cost-of-capital steps the `/value-company` skill defines (`.claude/skills/value-company/seeds/module-1-steps.yaml`).
+2. **What the project asked.** The assignment questions for that lesson. Lessons 13–36 quote the "Project Questions" in each `lesson-overview.md` word for word. Lessons 1–12 have no project questions in the course material, so they use the twelve Module 1 cost-of-capital steps the `/value-company` skill defines ([`.claude/skills/value-company/seeds/module-1-steps.yaml`](../../../../.claude/skills/value-company/seeds/module-1-steps.yaml)).
 3. **Information required and where we got it.** Each input, its SolarWinds value, and the original document. Source files are in [sources/](sources/), and every number is in the ledger, [inputs.yaml](inputs.yaml).
 4. **Steps to complete the assignment.** The sequence, worked through with SolarWinds' numbers.
 
 This guide restates work done elsewhere in this folder. If a number here ever disagrees with [model-output.md](model-output.md) or a `lesson-NN.md` file, those files are right. The full answers are in each lesson's `lesson-NN.md`, and the plain-language reasoning is in [walkthrough.md](walkthrough.md).
 
 **Headline results** (model-output.md): cost of capital 10.23%; DCF value $13.00 a share, against the $15.18 unaffected price and the $18.50 deal price; optimal debt ratio 21%, against the actual 33%.
+
+## Documents of origin
+
+The documents this valuation was built from. Each link opens the repo's copy: filings converted from SEC EDGAR to markdown, and market data saved as of the analysis date. The full manifest, with fetch dates, is [sources/README.md](sources/README.md). In each lesson's "Where we got it" column, document names and paths link to these same files.
+
+**SolarWinds filings**
+
+- [FY2024 annual report (10-K), filed 2025-02-19 — the base year](sources/filings/swi-10k-fy2024.md)
+- [FY2023 annual report (10-K), filed 2024-02-16](sources/filings/swi-10k-fy2023.md)
+- [FY2020 annual report (10-K), filed 2021-03-01 — the SUNBURST year](sources/filings/swi-10k-fy2020.md)
+- [FY2018 annual report (10-K), filed 2019-02-25 — first year after the IPO](sources/filings/swi-10k-fy2018.md)
+- [2024 proxy statement (DEF 14A), filed 2024-04-11](sources/filings/swi-def14a-2024.md)
+- [2018 IPO prospectus (S-1)](sources/filings/swi-s1-2018-ipo-prospectus.md)
+- [SUNBURST disclosure (8-K), December 2020](sources/filings/swi-8k-2020-12-09-sunburst-disclosure.md)
+- [SUNBURST follow-up (8-K), 2020-12-14](sources/filings/swi-8k-2020-12-14-sunburst-followup.md)
+- [Multi-year financials, FY2017–2024 (SEC structured data)](sources/filings/swi-multi-year-financials.md)
+
+**The buyout**
+
+- [Merger information statement (DEFM14C), filed 2025-03-27 — includes both fairness opinions and management's forecasts](sources/deal-docs/swi-defm14c-2025-merger.md)
+- [Merger agreement announced (8-K), 2025-02-07](sources/deal-docs/swi-8k-2025-02-07-merger-agreement.md)
+- [Merger closed (8-K), 2025-04-16](sources/deal-docs/swi-8k-2025-04-16-merger-closing.md)
+
+**Market data as of 2025-02-05**
+
+- [Rates used, with the FRED and Damodaran figures side by side (10-year Treasury, SOFR, fed funds, ERP)](sources/market-data/rates-2025-02-05.md)
+- [Damodaran equity risk premium (February 2025) and FRED closes](sources/market-data/market-rates-2025-02-05.json)
+- [Damodaran coverage → rating → spread tables (January 2025)](sources/market-data/ratings-spreads-2025-01-01.json)
+- [Damodaran industry betas (January 2025)](sources/market-data/industry-betas-2025-01-05.json)
+- [Damodaran country risk and tax rates (January 2025)](sources/market-data/country-risk-2025-01-01.json)
+- [Damodaran regional risk premiums (January 2025)](sources/market-data/country-risk-regions-2025-01-01.md)
+
+**Comparable companies and cross-checks**
+
+- [Eight peers' FY2024 fundamentals and 2025-02-05 prices](sources/peer-filings/peer-facts-2025-02-05.md)
+- [Capital IQ pulls (licensed; cross-check only)](sources/capital-iq/)
 
 ---
 
@@ -61,18 +97,18 @@ Module 1 step 1: **Pick a company**
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Company, type, base year, valuation date | SolarWinds Corporation (NYSE: SWI), delisted, FY2024 base year, valued 2025-02-05 | Ledger `meta` (`inputs.yaml`); source list in `sources/README.md` |
-| Revenue, 2024 and 2023 | $796.9M and $758.7M | FY2024 10-K (annual report filed with the SEC) income statement (`sources/filings/swi-10k-fy2024.md`); ledger `company.revenue`, `company.history` |
-| GAAP operating income (EBIT, profit before interest and tax) | $208.4M | FY2024 10-K income statement; ledger `company.ebit` |
-| Revenue by contract type | Maintenance $440.6M, license $51.8M, subscription $304.5M (up from $234.2M) | FY2024 10-K, Note 16 (`sources/filings/swi-10k-fy2024.md`); ledger `facts.maintenance-revenue`, `facts.license-revenue`, `facts.subscription-revenue` |
-| R&D, capital spending, acquisitions, D&A (depreciation and amortization) in 2024 | $108.6M; $20.5M; $0; $74.4M | FY2024 10-K income and cash flow statements; ledger `company.rd_expense`, `company.capex`, `facts.acquisitions-cash-2024`, `company.da` |
-| Special dividends | $168.2M ($1.00 a share, 2024); $237.2M ($1.50 a share, 2021) | FY2024 10-K and FY2023 10-K (`sources/filings/swi-10k-fy2023.md`); ledger `company.history`, `facts.special-dividend-2021` |
-| Free cash flow to equity (FCFE) vs cash returned, 2024 | $127.0M vs $194.7M | Computed in model-output.md section 5 |
-| 2023 sale process | 13 buyers approached, 3 indications, all withdrew by 2023-11-23 | Merger information statement (DEFM14C), Background of the Merger (`sources/deal-docs/swi-defm14c-2025-merger.md`); ledger `facts.market-check-2023` |
-| Management's forecast growth, 2025-2030 | 8.12% a year | DEFM14C management forecasts; ledger `forecast.management_growth` |
-| Stated strategy | "subscription-first approach" | FY2024 10-K Item 1; ledger `governance.objectives` |
-| Unaffected price and deal price | $15.18 and $18.50 | DEFM14C (Goldman Sachs opinion; Per Share Merger Consideration); ledger `company.share_price`, `company.deal_price` |
-| Debt in capital | 33.03% | Computed in model-output.md section 1 |
+| Company, type, base year, valuation date | SolarWinds Corporation (NYSE: SWI), delisted, FY2024 base year, valued 2025-02-05 | Ledger `meta` ([`inputs.yaml`](inputs.yaml)); source list in [`sources/README.md`](sources/README.md) |
+| Revenue, 2024 and 2023 | $796.9M and $758.7M | FY2024 10-K (annual report filed with the SEC) income statement ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `company.revenue`, `company.history` |
+| GAAP operating income (EBIT, profit before interest and tax) | $208.4M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) income statement; [ledger](inputs.yaml) `company.ebit` |
+| Revenue by contract type | Maintenance $440.6M, license $51.8M, subscription $304.5M (up from $234.2M) | FY2024 10-K, Note 16 ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `facts.maintenance-revenue`, `facts.license-revenue`, `facts.subscription-revenue` |
+| R&D, capital spending, acquisitions, D&A (depreciation and amortization) in 2024 | $108.6M; $20.5M; $0; $74.4M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) income and cash flow statements; [ledger](inputs.yaml) `company.rd_expense`, `company.capex`, `facts.acquisitions-cash-2024`, `company.da` |
+| Special dividends | $168.2M ($1.00 a share, 2024); $237.2M ($1.50 a share, 2021) | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) and FY2023 10-K ([`sources/filings/swi-10k-fy2023.md`](sources/filings/swi-10k-fy2023.md)); [ledger](inputs.yaml) `company.history`, `facts.special-dividend-2021` |
+| Free cash flow to equity (FCFE) vs cash returned, 2024 | $127.0M vs $194.7M | Computed in [model-output.md](model-output.md) section 5 |
+| 2023 sale process | 13 buyers approached, 3 indications, all withdrew by 2023-11-23 | Merger information statement (DEFM14C), Background of the Merger ([`sources/deal-docs/swi-defm14c-2025-merger.md`](sources/deal-docs/swi-defm14c-2025-merger.md)); [ledger](inputs.yaml) `facts.market-check-2023` |
+| Management's forecast growth, 2025-2030 | 8.12% a year | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md) management forecasts; [ledger](inputs.yaml) `forecast.management_growth` |
+| Stated strategy | "subscription-first approach" | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) Item 1; [ledger](inputs.yaml) `governance.objectives` |
+| Unaffected price and deal price | $15.18 and $18.50 | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md) (Goldman Sachs opinion; Per Share Merger Consideration); [ledger](inputs.yaml) `company.share_price`, `company.deal_price` |
+| Debt in capital | 33.03% | Computed in [model-output.md](model-output.md) section 1 |
 
 ### Steps to complete the assignment
 
@@ -129,17 +165,17 @@ Module 1 step 2: **Corporate governance**
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Board of directors | 9 directors: Ramakrishna (President and CEO), Bock (Chairman), Hao, Smith, Widmann (Silver Lake designees), Benko, Howard, Kinney, Sundaram; 8 of 9 independent under NYSE rules | 2024 proxy statement (`sources/filings/swi-def14a-2024.md`); ledger `governance.board` |
-| Silver Lake ownership | 61,473,871 shares, 36.56% | 2024 proxy, beneficial ownership table; ledger `governance.controlling_holders` |
-| Thoma Bravo ownership | 50,090,648 shares, 29.79% | 2024 proxy, beneficial ownership table; ledger `governance.controlling_holders` |
-| Two sponsors combined | 66.35% of shares at the proxy date; about 65% of votes (111,564,519 shares) at the 2025-02-07 written consent | Sum of the two holdings (`facts.sponsors-pct-2024-proxy`); DEFM14C Written Consent section (`sources/deal-docs/swi-defm14c-2025-merger.md`; `facts.sponsor-voting-power-2025-02`) |
-| All officers and directors | 1.95% | 2024 proxy; ledger `facts.officers-directors-pct` |
-| Sponsor consent rights | Veto over change of control, new debt above $300.0M, asset deals above $300.0M, choice of CEO | 2024 proxy, Stockholders' Agreement; ledger `facts.sponsor-consent-rights` |
-| Share classes | One class of common stock, one vote a share; 50 million preferred authorized, none issued | FY2024 10-K note 10 (`sources/filings/swi-10k-fy2024.md`); ledger `governance.share_classes` |
-| Lender protection | Term loan face value $1,235.7M; change of control is an event of default; one financial test if revolver over 35% drawn, first-lien net leverage 7.40 to 1 | FY2024 10-K note 9 and Item 1A; ledger `company.debt_face`, `debt.covenants` |
-| Golden parachutes | $38.96M total (Ramakrishna $22.99M, Black $8.54M, Bliss $7.43M); cash severance $3.2M; transaction bonuses $1.2M | DEFM14C Golden Parachute Compensation; ledger `governance.change_of_control_payouts` |
-| Merger process | Transaction Committee of Bock, Sundaram, Widmann; Goldman Sachs and Jefferies fairness opinions; appraisal rights | DEFM14C Background of the Merger; ledger `facts.transaction-committee` |
-| Float | Non-affiliate stock worth $661.3M on 2024-06-28 vs equity value $2,604.9M | FY2024 10-K cover page; ledger `facts.float-nonaffiliate-value`, `company.equity_value` |
+| Board of directors | 9 directors: Ramakrishna (President and CEO), Bock (Chairman), Hao, Smith, Widmann (Silver Lake designees), Benko, Howard, Kinney, Sundaram; 8 of 9 independent under NYSE rules | 2024 proxy statement ([`sources/filings/swi-def14a-2024.md`](sources/filings/swi-def14a-2024.md)); [ledger](inputs.yaml) `governance.board` |
+| Silver Lake ownership | 61,473,871 shares, 36.56% | [2024 proxy](sources/filings/swi-def14a-2024.md), beneficial ownership table; [ledger](inputs.yaml) `governance.controlling_holders` |
+| Thoma Bravo ownership | 50,090,648 shares, 29.79% | [2024 proxy](sources/filings/swi-def14a-2024.md), beneficial ownership table; [ledger](inputs.yaml) `governance.controlling_holders` |
+| Two sponsors combined | 66.35% of shares at the proxy date; about 65% of votes (111,564,519 shares) at the 2025-02-07 written consent | Sum of the two holdings (`facts.sponsors-pct-2024-proxy`); DEFM14C Written Consent section ([`sources/deal-docs/swi-defm14c-2025-merger.md`](sources/deal-docs/swi-defm14c-2025-merger.md); `facts.sponsor-voting-power-2025-02`) |
+| All officers and directors | 1.95% | [2024 proxy](sources/filings/swi-def14a-2024.md); [ledger](inputs.yaml) `facts.officers-directors-pct` |
+| Sponsor consent rights | Veto over change of control, new debt above $300.0M, asset deals above $300.0M, choice of CEO | [2024 proxy](sources/filings/swi-def14a-2024.md), Stockholders' Agreement; [ledger](inputs.yaml) `facts.sponsor-consent-rights` |
+| Share classes | One class of common stock, one vote a share; 50 million preferred authorized, none issued | FY2024 10-K note 10 ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `governance.share_classes` |
+| Lender protection | Term loan face value $1,235.7M; change of control is an event of default; one financial test if revolver over 35% drawn, first-lien net leverage 7.40 to 1 | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) note 9 and Item 1A; [ledger](inputs.yaml) `company.debt_face`, `debt.covenants` |
+| Golden parachutes | $38.96M total (Ramakrishna $22.99M, Black $8.54M, Bliss $7.43M); cash severance $3.2M; transaction bonuses $1.2M | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md) Golden Parachute Compensation; [ledger](inputs.yaml) `governance.change_of_control_payouts` |
+| Merger process | Transaction Committee of Bock, Sundaram, Widmann; Goldman Sachs and Jefferies fairness opinions; appraisal rights | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md) Background of the Merger; [ledger](inputs.yaml) `facts.transaction-committee` |
+| Float | Non-affiliate stock worth $661.3M on 2024-06-28 vs equity value $2,604.9M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) cover page; [ledger](inputs.yaml) `facts.float-nonaffiliate-value`, `company.equity_value` |
 
 ### Steps to complete the assignment
 
@@ -192,17 +228,17 @@ Module 1 step 3: **Stated objectives**
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Stated objective | "extend our leadership in observability and IT infrastructure management and grow our market share in adjacent areas", through a "subscription-first approach" | FY2024 10-K Item 1 (`sources/filings/swi-10k-fy2024.md`); ledger `governance.objectives` |
-| Pay metrics (2023) | Bonus: 50% revenue, 50% adjusted EBITDA; stock units: 70% Subscription ARR, 30% revenue | 2024 proxy, Compensation Discussion and Analysis (`sources/filings/swi-def14a-2024.md`); ledger `facts.pay-metrics-2023` |
-| Subscription ARR (annual recurring revenue) | $233.2M to $311.7M, up 33.7% | FY2024 10-K Item 7; ledger `facts.subscription-arr-2023`, `facts.subscription-arr-2024` |
-| Total ARR | $684.1M to $729.0M, up 6.6% | FY2024 10-K Item 7; ledger `facts.total-arr-2023`, `facts.total-arr-2024` |
-| Net retention on subscriptions | 99% (2024), 97% (2023) | FY2024 10-K Item 7; ledger `facts.net-retention-subscription` |
-| Sales and marketing | $249.3M to $224.9M, down 9.8% ($13.8M reclassification, $11.4M cut programs) | FY2024 10-K operating expenses; ledger `facts.sales-marketing-2024`, `facts.sm-decrease-detail-2024` |
-| Adjusted EBITDA vs standardized EBITDA | $384.7M (48.3% of revenue) vs $282.8M | FY2024 10-K non-GAAP reconciliation; ledger `company.ebitda_adjusted`, `company.ebitda_standardized` |
-| SUNBURST attack | About 33,000 customers notified; fewer than 18,000 believed affected; net cost $26.2M (2022), $2.1M gain (2023), $10.3M (2024); class action settled for $26 million; SEC sued 2023-10-30 | SUNBURST 8-Ks (`sources/filings/swi-8k-2020-12-14-sunburst-followup.md`), FY2024 10-K Note 15; ledger `facts.sunburst-customers`, `facts.cyber-net-expense`, `facts.class-action-settlement`, `facts.sec-complaint` |
-| CEO change decided | 2020-12-07 | 8-K of 2020-12-09 (`sources/filings/swi-8k-2020-12-09-sunburst-disclosure.md`); ledger `facts.ceo-change-2020-12-07` |
-| EV to next-twelve-months EBITDA multiple, SolarWinds vs software peers | 15.9 vs 10.9 (2019); 15.7 vs 10.8 (2020); 8.8 vs 12.8 (2024) | DEFM14C, Goldman Sachs analysis; ledger `facts.ev-ntm-ebitda-history` |
-| Deal premium and Goldman software-deal premia | 21.9% over $15.18; 25th percentile 19%, 75th percentile 50% | DEFM14C; ledger `facts.goldman-premia-study` |
+| Stated objective | "extend our leadership in observability and IT infrastructure management and grow our market share in adjacent areas", through a "subscription-first approach" | FY2024 10-K Item 1 ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `governance.objectives` |
+| Pay metrics (2023) | Bonus: 50% revenue, 50% adjusted EBITDA; stock units: 70% Subscription ARR, 30% revenue | 2024 proxy, Compensation Discussion and Analysis ([`sources/filings/swi-def14a-2024.md`](sources/filings/swi-def14a-2024.md)); [ledger](inputs.yaml) `facts.pay-metrics-2023` |
+| Subscription ARR (annual recurring revenue) | $233.2M to $311.7M, up 33.7% | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) Item 7; [ledger](inputs.yaml) `facts.subscription-arr-2023`, `facts.subscription-arr-2024` |
+| Total ARR | $684.1M to $729.0M, up 6.6% | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) Item 7; [ledger](inputs.yaml) `facts.total-arr-2023`, `facts.total-arr-2024` |
+| Net retention on subscriptions | 99% (2024), 97% (2023) | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) Item 7; [ledger](inputs.yaml) `facts.net-retention-subscription` |
+| Sales and marketing | $249.3M to $224.9M, down 9.8% ($13.8M reclassification, $11.4M cut programs) | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) operating expenses; [ledger](inputs.yaml) `facts.sales-marketing-2024`, `facts.sm-decrease-detail-2024` |
+| Adjusted EBITDA vs standardized EBITDA | $384.7M (48.3% of revenue) vs $282.8M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) non-GAAP reconciliation; [ledger](inputs.yaml) `company.ebitda_adjusted`, `company.ebitda_standardized` |
+| SUNBURST attack | About 33,000 customers notified; fewer than 18,000 believed affected; net cost $26.2M (2022), $2.1M gain (2023), $10.3M (2024); class action settled for $26 million; SEC sued 2023-10-30 | SUNBURST 8-Ks ([`sources/filings/swi-8k-2020-12-14-sunburst-followup.md`](sources/filings/swi-8k-2020-12-14-sunburst-followup.md)), [FY2024 10-K](sources/filings/swi-10k-fy2024.md) Note 15; [ledger](inputs.yaml) `facts.sunburst-customers`, `facts.cyber-net-expense`, `facts.class-action-settlement`, `facts.sec-complaint` |
+| CEO change decided | 2020-12-07 | 8-K of 2020-12-09 ([`sources/filings/swi-8k-2020-12-09-sunburst-disclosure.md`](sources/filings/swi-8k-2020-12-09-sunburst-disclosure.md)); [ledger](inputs.yaml) `facts.ceo-change-2020-12-07` |
+| EV to next-twelve-months EBITDA multiple, SolarWinds vs software peers | 15.9 vs 10.9 (2019); 15.7 vs 10.8 (2020); 8.8 vs 12.8 (2024) | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md), Goldman Sachs analysis; [ledger](inputs.yaml) `facts.ev-ntm-ebitda-history` |
+| Deal premium and Goldman software-deal premia | 21.9% over $15.18; 25th percentile 19%, 75th percentile 50% | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md); [ledger](inputs.yaml) `facts.goldman-premia-study` |
 
 ### Steps to complete the assignment
 
@@ -260,17 +296,17 @@ Module 1 step 4: **Share classes and the marginal investor**
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Share classes | One class of common stock, one vote a share; 50 million preferred authorized, none issued | FY2024 10-K note 10 (`sources/filings/swi-10k-fy2024.md`); ledger `governance.share_classes` |
-| Basic shares outstanding | 171.6M | Merger information statement (DEFM14C), record-date share count (`sources/deal-docs/swi-defm14c-2025-merger.md`); ledger `company.shares_basic` |
-| Largest holders | Silver Lake 36.56%, Thoma Bravo 29.79%; no other 5% holder | 2024 proxy ownership table (`sources/filings/swi-def14a-2024.md`); ledger `governance.controlling_holders` |
-| Public float and marginal investor | About 34%, held by diversified institutions | Proxy ownership table; ledger `governance.marginal_investor` |
-| Stock held by non-affiliates | $661.3M on 2024-06-28 | FY2024 10-K cover page; ledger `facts.float-nonaffiliate-value` |
-| EV to next-twelve-months EBITDA multiple | SolarWinds 14.0 (2021), 9.9 (2022); software peers 12.0 (2021), 11.0 (2022) | DEFM14C, Goldman Sachs analysis; ledger `facts.ev-ntm-ebitda-history` |
-| Goodwill write-down in 2022 | $891.1M | FY2024 10-K 2022 column; ledger `company.history` |
-| Equity value, book equity, goodwill | $2,604.9M; $1,400.7M; $2,363.2M | Ledger `company.equity_value` (171.6M shares x $15.18), `company.equity_book`, `company.goodwill` (FY2024 10-K balance sheet) |
-| Price to book, SolarWinds vs peers | 1.86x vs 4.58x median | model-output.md section 7 |
-| Bottom-up beta, unlevered and relevered | 1.22 and 1.6714 | Damodaran January 2025 industry betas (`sources/market-data/industry-betas-2025-01-05.json`); model-output.md section 1 |
-| Customers | Over 300,000 | FY2024 10-K; ledger `facts.sunburst-customers` / `facts.customer-count` |
+| Share classes | One class of common stock, one vote a share; 50 million preferred authorized, none issued | FY2024 10-K note 10 ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `governance.share_classes` |
+| Basic shares outstanding | 171.6M | Merger information statement (DEFM14C), record-date share count ([`sources/deal-docs/swi-defm14c-2025-merger.md`](sources/deal-docs/swi-defm14c-2025-merger.md)); [ledger](inputs.yaml) `company.shares_basic` |
+| Largest holders | Silver Lake 36.56%, Thoma Bravo 29.79%; no other 5% holder | 2024 proxy ownership table ([`sources/filings/swi-def14a-2024.md`](sources/filings/swi-def14a-2024.md)); [ledger](inputs.yaml) `governance.controlling_holders` |
+| Public float and marginal investor | About 34%, held by diversified institutions | [Proxy](sources/filings/swi-def14a-2024.md) ownership table; [ledger](inputs.yaml) `governance.marginal_investor` |
+| Stock held by non-affiliates | $661.3M on 2024-06-28 | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) cover page; [ledger](inputs.yaml) `facts.float-nonaffiliate-value` |
+| EV to next-twelve-months EBITDA multiple | SolarWinds 14.0 (2021), 9.9 (2022); software peers 12.0 (2021), 11.0 (2022) | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md), Goldman Sachs analysis; [ledger](inputs.yaml) `facts.ev-ntm-ebitda-history` |
+| Goodwill write-down in 2022 | $891.1M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) 2022 column; [ledger](inputs.yaml) `company.history` |
+| Equity value, book equity, goodwill | $2,604.9M; $1,400.7M; $2,363.2M | [Ledger](inputs.yaml) `company.equity_value` (171.6M shares x $15.18), `company.equity_book`, `company.goodwill` ([FY2024 10-K](sources/filings/swi-10k-fy2024.md) balance sheet) |
+| Price to book, SolarWinds vs peers | 1.86x vs 4.58x median | [model-output.md](model-output.md) section 7 |
+| Bottom-up beta, unlevered and relevered | 1.22 and 1.6714 | [Damodaran](sources/market-data/) January 2025 industry betas ([`sources/market-data/industry-betas-2025-01-05.json`](sources/market-data/industry-betas-2025-01-05.json)); [model-output.md](model-output.md) section 1 |
+| Customers | Over 300,000 | [FY2024 10-K](sources/filings/swi-10k-fy2024.md); [ledger](inputs.yaml) `facts.sunburst-customers` / `facts.customer-count` |
 
 ### Steps to complete the assignment
 
@@ -310,7 +346,7 @@ Full answers: [lesson-04.md](lesson-04.md) · Walkthrough: [Step 4](walkthrough.
 | **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
 | **8-K (current report)** | A short filing a company must make within four business days of a major event: a merger, a new loan, a leadership change, a cyberattack, the close of a deal. | Pinning down when something happened and its terms, between annual reports. | SEC EDGAR (filing type 8-K), and usually as a press release on the investor-relations site. |
 | **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
-| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR, the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
+| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR (the Secured Overnight Financing Rate, the overnight benchmark most floating-rate loans, including SolarWinds' term loan, are priced from), the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
 
 ### What the project asked
 
@@ -327,15 +363,15 @@ Module 1 step 5: **Currency and risk-free rate**
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Reporting currency | US dollars; forecast and term loan also in dollars | FY2024 10-K (`sources/filings/swi-10k-fy2024.md`); ledger `meta.reporting_currency`, `forecast.years`, `debt.currency` |
-| Revenue by customer location | United States $516.6M, international $280.3M, of $796.9M | FY2024 10-K Note 16; ledger `country.exposures` |
-| Other currencies sold in | Euro, British pound, Australian dollar | FY2024 10-K Item 7A; ledger `facts.fx-currencies` |
-| 10-year US Treasury yield, 2025-02-05 | 4.43% | FRED series DGS10 (`sources/market-data/market-rates-2025-02-05.json`, `rates-2025-02-05.md`); ledger `market.govt_bond_rate` |
-| Government rating and default spread | Moody's Aaa; 0.00% | Damodaran January 2025 country risk table (`sources/market-data/country-risk-2025-01-01.json`); ledger `market.sovereign_default_spread` |
-| Damodaran start-of-month Treasury rate | 4.54% | Damodaran ERPFeb25.xlsx (`sources/market-data/rates-2025-02-05.md`); ledger `market.mature_erp` note |
-| Foreign governments' ratings and spreads | Germany and Australia Aaa, 0.00%; UK Aa3, 0.59% | Damodaran January 2025 country table; ledger `facts.default-spreads-2025-01` |
-| Buyer's new dollar debt | $2,225.0M first-lien loan, $200.0M revolver, $525.0M second-lien | Closing 8-K (`sources/deal-docs/swi-8k-2025-04-16-merger-closing.md`); ledger `facts.new-debt-2025` |
-| Revolver at year-end | Undrawn | FY2024 10-K note 9; ledger `debt.revolver_undrawn` |
+| Reporting currency | US dollars; forecast and term loan also in dollars | FY2024 10-K ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `meta.reporting_currency`, `forecast.years`, `debt.currency` |
+| Revenue by customer location | United States $516.6M, international $280.3M, of $796.9M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) Note 16; [ledger](inputs.yaml) `country.exposures` |
+| Other currencies sold in | Euro, British pound, Australian dollar | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) Item 7A; [ledger](inputs.yaml) `facts.fx-currencies` |
+| 10-year US Treasury yield, 2025-02-05 | 4.43% | FRED series DGS10 ([`sources/market-data/market-rates-2025-02-05.json`](sources/market-data/market-rates-2025-02-05.json), [`rates-2025-02-05.md`](sources/market-data/rates-2025-02-05.md)); [ledger](inputs.yaml) `market.govt_bond_rate` |
+| Government rating and default spread | Moody's Aaa; 0.00% | [Damodaran](sources/market-data/) January 2025 country risk table ([`sources/market-data/country-risk-2025-01-01.json`](sources/market-data/country-risk-2025-01-01.json)); [ledger](inputs.yaml) `market.sovereign_default_spread` |
+| Damodaran start-of-month Treasury rate | 4.54% | [Damodaran](sources/market-data/) ERPFeb25.xlsx ([`sources/market-data/rates-2025-02-05.md`](sources/market-data/rates-2025-02-05.md)); [ledger](inputs.yaml) `market.mature_erp` note |
+| Foreign governments' ratings and spreads | Germany and Australia Aaa, 0.00%; UK Aa3, 0.59% | [Damodaran](sources/market-data/) January 2025 country table; [ledger](inputs.yaml) `facts.default-spreads-2025-01` |
+| Buyer's new dollar debt | $2,225.0M first-lien loan, $200.0M revolver, $525.0M second-lien | Closing 8-K ([`sources/deal-docs/swi-8k-2025-04-16-merger-closing.md`](sources/deal-docs/swi-8k-2025-04-16-merger-closing.md)); [ledger](inputs.yaml) `facts.new-debt-2025` |
+| Revolver at year-end | Undrawn | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) note 9; [ledger](inputs.yaml) `debt.revolver_undrawn` |
 
 ### Steps to complete the assignment
 
@@ -374,7 +410,7 @@ Full answers: [lesson-05.md](lesson-05.md) · Walkthrough: [Step 5](walkthrough.
 | Document | What it is | When it's used | Where it's normally found |
 |---|---|---|---|
 | **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
-| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR, the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
+| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR (the Secured Overnight Financing Rate, the overnight benchmark most floating-rate loans, including SolarWinds' term loan, are priced from), the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
 
 ### What the project asked
 
@@ -386,14 +422,14 @@ Module 1 step 6: **Mature-market equity risk premium**
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Implied ERP, mature market | 4.27% (S&P 500 at 6040.53), dated 2025-02-01 | Damodaran ERPFeb25.xlsx (`sources/market-data/market-rates-2025-02-05.json`); ledger `market.mature_erp` |
-| Historical ERP, 1928-2022, stocks over Treasury bonds | 6.64% arithmetic (standard error 2.15%); 5.06% geometric | Course spreadsheet (`01-foundations-and-discount-rates/lesson-06/spreadsheet-histretsp.md`); ledger `facts.hist-erp-1928-2022` |
-| Survey ERP | Not available for February 2025 | No file in `sources/` |
-| Risk-free rate | 4.43% | FRED DGS10 on 2025-02-05; ledger `market.risk_free_rate` |
-| Levered beta | 1.6714 | model-output.md section 1 |
-| Country-risk scalar | 1.3475 (equity premium = default spread x 1.3475) | Damodaran January 2025 country workbook (`sources/market-data/country-risk-2025-01-01.json`); ledger `facts.country-erp-scalar` |
-| US default spread | 0.00% | Same workbook; ledger `market.sovereign_default_spread` |
-| Weighted ERP used, and resulting cost of equity | 4.92%; 12.65% | Computed in lesson 7; model-output.md section 1 |
+| Implied ERP, mature market | 4.27% (S&P 500 at 6040.53), dated 2025-02-01 | [Damodaran](sources/market-data/) ERPFeb25.xlsx ([`sources/market-data/market-rates-2025-02-05.json`](sources/market-data/market-rates-2025-02-05.json)); [ledger](inputs.yaml) `market.mature_erp` |
+| Historical ERP, 1928-2022, stocks over Treasury bonds | 6.64% arithmetic (standard error 2.15%); 5.06% geometric | Course spreadsheet ([`01-foundations-and-discount-rates/lesson-06/spreadsheet-histretsp.md`](../../01-foundations-and-discount-rates/lesson-06/spreadsheet-histretsp.md)); [ledger](inputs.yaml) `facts.hist-erp-1928-2022` |
+| Survey ERP | Not available for February 2025 | No file in [`sources/`](sources/) |
+| Risk-free rate | 4.43% | [FRED](sources/market-data/rates-2025-02-05.md) DGS10 on 2025-02-05; [ledger](inputs.yaml) `market.risk_free_rate` |
+| Levered beta | 1.6714 | [model-output.md](model-output.md) section 1 |
+| Country-risk scalar | 1.3475 (equity premium = default spread x 1.3475) | [Damodaran](sources/market-data/) January 2025 country workbook ([`sources/market-data/country-risk-2025-01-01.json`](sources/market-data/country-risk-2025-01-01.json)); [ledger](inputs.yaml) `facts.country-erp-scalar` |
+| US default spread | 0.00% | Same workbook; [ledger](inputs.yaml) `market.sovereign_default_spread` |
+| Weighted ERP used, and resulting cost of equity | 4.92%; 12.65% | Computed in lesson 7; [model-output.md](model-output.md) section 1 |
 
 ### Steps to complete the assignment
 
@@ -431,7 +467,7 @@ Full answers: [lesson-06.md](lesson-06.md) · Walkthrough: [Step 6](walkthrough.
 |---|---|---|---|
 | **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
 | **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
-| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR, the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
+| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR (the Secured Overnight Financing Rate, the overnight benchmark most floating-rate loans, including SolarWinds' term loan, are priced from), the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
 
 ### What the project asked
 
@@ -446,12 +482,12 @@ Module 1 step 7: **Country risk and weighted ERP**
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Revenue by customer shipping address | United States $516.6M (64.82%), international $280.3M (35.18%), total $796.9M; no other country at 10% | FY2024 10-K Note 16 (`sources/filings/swi-10k-fy2024.md`); ledger `country.exposures` |
-| Mature-market ERP (February 2025) | 4.27% | Damodaran ERPFeb25.xlsx (`sources/market-data/market-rates-2025-02-05.json`); ledger `market.mature_erp` |
-| Mature-market ERP (January 2025) and EMEA regional ERP | 4.33% and 6.17%, a 1.84-point difference | Damodaran January 2025 country workbook, Regional Weighted Averages (`sources/market-data/country-risk-2025-01-01.json`) |
-| Alternative regional premiums | Western Europe 1.12 points; global average 1.43 points | Same workbook; ledger `country.exposures` note |
-| Employees | 2,107 total: 1,379 outside the US, 728 inside | FY2024 10-K; ledger `facts.employees-2024` |
-| Risk-free rate and levered beta | 4.43%; 1.6714 | FRED DGS10; model-output.md section 1 |
+| Revenue by customer shipping address | United States $516.6M (64.82%), international $280.3M (35.18%), total $796.9M; no other country at 10% | FY2024 10-K Note 16 ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `country.exposures` |
+| Mature-market ERP (February 2025) | 4.27% | [Damodaran](sources/market-data/) ERPFeb25.xlsx ([`sources/market-data/market-rates-2025-02-05.json`](sources/market-data/market-rates-2025-02-05.json)); [ledger](inputs.yaml) `market.mature_erp` |
+| Mature-market ERP (January 2025) and EMEA regional ERP | 4.33% and 6.17%, a 1.84-point difference | [Damodaran](sources/market-data/) January 2025 country workbook, Regional Weighted Averages ([`sources/market-data/country-risk-2025-01-01.json`](sources/market-data/country-risk-2025-01-01.json)) |
+| Alternative regional premiums | Western Europe 1.12 points; global average 1.43 points | Same workbook; [ledger](inputs.yaml) `country.exposures` note |
+| Employees | 2,107 total: 1,379 outside the US, 728 inside | [FY2024 10-K](sources/filings/swi-10k-fy2024.md); [ledger](inputs.yaml) `facts.employees-2024` |
+| Risk-free rate and levered beta | 4.43%; 1.6714 | [FRED](sources/market-data/rates-2025-02-05.md) DGS10; [model-output.md](model-output.md) section 1 |
 
 ### Steps to complete the assignment
 
@@ -505,14 +541,14 @@ Module 1 step 8: **Regression beta**
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Trading life of the stock | NYSE from 2018-10-19 to delisting at closing on 2025-04-16 | FY2018 10-K cover (`sources/filings/swi-10k-fy2018.md`); closing 8-K (`sources/deal-docs/swi-8k-2025-04-16-merger-closing.md`); ledger `facts.listing-dates` |
-| N-able spin-off and reverse split | 2021-07-19; one-for-two on 2021-07-30 | FY2023 10-K (`sources/filings/swi-10k-fy2023.md`); ledger `facts.corporate-actions-2021` |
-| Special dividends | $1.50 paid 2021-08-24; $1.00 ($168.2M) paid 2024-04-15 | FY2023 and FY2024 10-Ks; ledger `facts.special-dividend-2021`, `company.history` |
-| Deal announcement | 2025-02-07 (price pinned near $18.50 afterward) | Merger 8-K (`sources/deal-docs/swi-8k-2025-02-07-merger-agreement.md`) |
-| Non-affiliate float | $661.3M on 2024-06-28 | FY2024 10-K cover page; ledger `facts.float-nonaffiliate-value` |
-| Price history | Not obtainable (delisted ticker); regression fields listed as omitted | `sources/README.md` "Could not be obtained"; ledger `meta.omitted` |
-| Stock return data in the proxy | Four annual points | 2024 proxy pay-versus-performance table; ledger `facts.tsr-2023` |
-| Substitute beta | Unlevered 1.22, relevered 1.6714 | Damodaran January 2025 industry betas; model-output.md section 1 |
+| Trading life of the stock | NYSE from 2018-10-19 to delisting at closing on 2025-04-16 | FY2018 10-K cover ([`sources/filings/swi-10k-fy2018.md`](sources/filings/swi-10k-fy2018.md)); closing 8-K ([`sources/deal-docs/swi-8k-2025-04-16-merger-closing.md`](sources/deal-docs/swi-8k-2025-04-16-merger-closing.md)); [ledger](inputs.yaml) `facts.listing-dates` |
+| N-able spin-off and reverse split | 2021-07-19; one-for-two on 2021-07-30 | FY2023 10-K ([`sources/filings/swi-10k-fy2023.md`](sources/filings/swi-10k-fy2023.md)); [ledger](inputs.yaml) `facts.corporate-actions-2021` |
+| Special dividends | $1.50 paid 2021-08-24; $1.00 ($168.2M) paid 2024-04-15 | FY2023 and [FY2024 10-K](sources/filings/swi-10k-fy2024.md)s; [ledger](inputs.yaml) `facts.special-dividend-2021`, `company.history` |
+| Deal announcement | 2025-02-07 (price pinned near $18.50 afterward) | Merger 8-K ([`sources/deal-docs/swi-8k-2025-02-07-merger-agreement.md`](sources/deal-docs/swi-8k-2025-02-07-merger-agreement.md)) |
+| Non-affiliate float | $661.3M on 2024-06-28 | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) cover page; [ledger](inputs.yaml) `facts.float-nonaffiliate-value` |
+| Price history | Not obtainable (delisted ticker); regression fields listed as omitted | [`sources/README.md`](sources/README.md) "Could not be obtained"; [ledger](inputs.yaml) `meta.omitted` |
+| Stock return data in the proxy | Four annual points | [2024 proxy](sources/filings/swi-def14a-2024.md) pay-versus-performance table; [ledger](inputs.yaml) `facts.tsr-2023` |
+| Substitute beta | Unlevered 1.22, relevered 1.6714 | [Damodaran](sources/market-data/) January 2025 industry betas; [model-output.md](model-output.md) section 1 |
 
 ### Steps to complete the assignment
 
@@ -564,13 +600,13 @@ Module 1 step 9: **Beta fundamentals**
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Customer behavior | Subscription net retention 99%; maintenance renewal 97%; recurring revenue 93.5% of $796.9M; over 300,000 customers | FY2024 10-K Item 7 (`sources/filings/swi-10k-fy2024.md`); ledger `facts.net-retention-subscription`, `facts.maintenance-renewal-rate`, `facts.recurring-revenue-share`, `facts.customer-count` |
-| Segment disclosure | "We operate as a single reportable segment"; subscription $304.5M, maintenance $440.6M, license $51.8M | FY2024 10-K Note 16 |
-| Cost structure | Cost of revenue $83.3M (10.5% of revenue); operating expenses $505.2M (63.4%); 2,107 employees | FY2024 10-K income statement; ledger `facts.cost-of-revenue-2024`, `facts.operating-expenses-2024`, `facts.employees-2024` |
-| Operating income, 2023 and 2024 | $150.4M and $208.4M; revenue $758.7M and $796.9M | FY2024 10-K; ledger `company.history` |
-| Debt and equity | $1,285.0M and $2,604.9M; D/E 0.4933 | Ledger `company.debt_total`, `company.equity_value`; model-output.md section 1 |
-| Marginal tax rate | 25% | Damodaran January 2025 country tax rates (`sources/market-data/country-risk-regions-2025-01-01.md`); ledger `market.tax_rate_marginal` |
-| Industry unlevered beta | 1.22 (333 US software firms); all-market 0.82; Software (Internet) 1.60 | Damodaran January 2025 betas (`sources/market-data/industry-betas-2025-01-05.json`); ledger `beta.unlevered_bottom_up`, `facts.industry-beta-all-market`, `facts.industry-beta-software-internet` |
+| Customer behavior | Subscription net retention 99%; maintenance renewal 97%; recurring revenue 93.5% of $796.9M; over 300,000 customers | FY2024 10-K Item 7 ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `facts.net-retention-subscription`, `facts.maintenance-renewal-rate`, `facts.recurring-revenue-share`, `facts.customer-count` |
+| Segment disclosure | "We operate as a single reportable segment"; subscription $304.5M, maintenance $440.6M, license $51.8M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) Note 16 |
+| Cost structure | Cost of revenue $83.3M (10.5% of revenue); operating expenses $505.2M (63.4%); 2,107 employees | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) income statement; [ledger](inputs.yaml) `facts.cost-of-revenue-2024`, `facts.operating-expenses-2024`, `facts.employees-2024` |
+| Operating income, 2023 and 2024 | $150.4M and $208.4M; revenue $758.7M and $796.9M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md); [ledger](inputs.yaml) `company.history` |
+| Debt and equity | $1,285.0M and $2,604.9M; D/E 0.4933 | [Ledger](inputs.yaml) `company.debt_total`, `company.equity_value`; [model-output.md](model-output.md) section 1 |
+| Marginal tax rate | 25% | [Damodaran](sources/market-data/) January 2025 country tax rates ([`sources/market-data/country-risk-regions-2025-01-01.md`](sources/market-data/country-risk-regions-2025-01-01.md)); [ledger](inputs.yaml) `market.tax_rate_marginal` |
+| Industry unlevered beta | 1.22 (333 US software firms); all-market 0.82; Software (Internet) 1.60 | [Damodaran](sources/market-data/) January 2025 betas ([`sources/market-data/industry-betas-2025-01-05.json`](sources/market-data/industry-betas-2025-01-05.json)); [ledger](inputs.yaml) `beta.unlevered_bottom_up`, `facts.industry-beta-all-market`, `facts.industry-beta-software-internet` |
 
 ### Steps to complete the assignment
 
@@ -621,15 +657,15 @@ Module 1 step 10: **Bottom-up unlevered beta**
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Segment structure | Single reportable segment | FY2024 10-K Note 16 (`sources/filings/swi-10k-fy2024.md`) |
-| Revenue by contract type | Subscription $304.5M (38.2%), maintenance $440.6M (55.3%), license $51.8M (6.5%) | FY2024 10-K Note 16; ledger `facts.subscription-revenue`, `facts.maintenance-revenue`, `facts.license-revenue` |
-| Comparable group | Damodaran US Software (System and Application): 333 firms | Damodaran January 2025 industry betas (`sources/market-data/industry-betas-2025-01-05.json`) |
-| Group levered beta, debt-to-equity, unlevered beta | 1.24; 4.9%; 1.1960 | Same file; ledger `facts.industry-software-levered-beta`, `facts.industry-software-de-ratio`, `facts.industry-software-unlevered-raw` |
-| Cash as share of firm value | 1.74% | Same file; ledger `facts.industry-software-cash-share` |
-| Cash-corrected unlevered beta | 1.22 | Same file; ledger `beta.unlevered_bottom_up` |
-| Growth by product | Subscription revenue +30.0%; maintenance -4.6% | FY2024 10-K; ledger `facts.subscription-growth-2024`, `facts.maintenance-decline-2024` |
-| Higher-beta illustration | Software (Internet) 1.60 | Same file; ledger `facts.industry-beta-software-internet` |
-| Company-wide hurdle rates | Cost of equity 12.65%; cost of capital 10.23% | model-output.md section 1 |
+| Segment structure | Single reportable segment | FY2024 10-K Note 16 ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)) |
+| Revenue by contract type | Subscription $304.5M (38.2%), maintenance $440.6M (55.3%), license $51.8M (6.5%) | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) Note 16; [ledger](inputs.yaml) `facts.subscription-revenue`, `facts.maintenance-revenue`, `facts.license-revenue` |
+| Comparable group | Damodaran US Software (System and Application): 333 firms | [Damodaran](sources/market-data/) January 2025 industry betas ([`sources/market-data/industry-betas-2025-01-05.json`](sources/market-data/industry-betas-2025-01-05.json)) |
+| Group levered beta, debt-to-equity, unlevered beta | 1.24; 4.9%; 1.1960 | Same file; [ledger](inputs.yaml) `facts.industry-software-levered-beta`, `facts.industry-software-de-ratio`, `facts.industry-software-unlevered-raw` |
+| Cash as share of firm value | 1.74% | Same file; [ledger](inputs.yaml) `facts.industry-software-cash-share` |
+| Cash-corrected unlevered beta | 1.22 | Same file; [ledger](inputs.yaml) `beta.unlevered_bottom_up` |
+| Growth by product | Subscription revenue +30.0%; maintenance -4.6% | [FY2024 10-K](sources/filings/swi-10k-fy2024.md); [ledger](inputs.yaml) `facts.subscription-growth-2024`, `facts.maintenance-decline-2024` |
+| Higher-beta illustration | Software (Internet) 1.60 | Same file; [ledger](inputs.yaml) `facts.industry-beta-software-internet` |
+| Company-wide hurdle rates | Cost of equity 12.65%; cost of capital 10.23% | [model-output.md](model-output.md) section 1 |
 
 ### Steps to complete the assignment
 
@@ -669,7 +705,7 @@ Full answers: [lesson-10.md](lesson-10.md) · Walkthrough: [Step 10](walkthrough
 | **Proxy statement (DEF 14A)** | The document sent to shareholders before the annual meeting: who is on the board, how executives are paid, who owns the shares and what shareholders are voting on. | Governance questions: who controls the company, whether the board is independent, how pay is tied to performance. | SEC EDGAR (filing type DEF 14A), usually filed a month or two before the annual meeting. |
 | **SEC structured financial data (XBRL)** | The numbers from every 10-K and 10-Q in machine-readable form, tagged line by line (revenue, operating income, debt and so on). | Pulling the same figures for many companies at once, such as a peer group, without reading each filing. | SEC's free company-facts API (data.sec.gov) or the Financial Statement Data Sets on sec.gov. |
 | **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
-| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR, the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
+| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR (the Secured Overnight Financing Rate, the overnight benchmark most floating-rate loans, including SolarWinds' term loan, are priced from), the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
 
 ### What the project asked
 
@@ -682,15 +718,15 @@ Module 1 step 11: **Levered beta and total beta**
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| US comparable sample size | 333 firms | Damodaran January 2025 industry betas (`sources/market-data/industry-betas-2025-01-05.json`) |
-| Revenue geography | US 64.82%, international 35.18% | FY2024 10-K Note 16 (`sources/filings/swi-10k-fy2024.md`); ledger `country.exposures` |
-| Ownership | Silver Lake 36.56%, Thoma Bravo 29.79%, together 66.35%; float about 34% held by diversified institutions | 2024 proxy (`sources/filings/swi-def14a-2024.md`); ledger `governance.controlling_holders`, `governance.marginal_investor` |
-| Unlevered beta, debt-to-equity, tax rate | 1.22; 0.4933; 25% | Ledger `beta.unlevered_bottom_up`; model-output.md section 1 |
-| Levered beta | 1.6714 | model-output.md section 1 |
-| Industry correlation with the market | 0.3374 (Damodaran January 2024 industry average) | Course spreadsheet (`01-foundations-and-discount-rates/lesson-10/spreadsheet-totalbeta24.md`); ledger `facts.industry-correlation-software-2024` |
-| Risk-free rate and weighted ERP | 4.43%; 4.92% | FRED DGS10; ledger `country.weighted_erp` |
-| Cost of equity actually used | 12.65% | model-output.md section 1 |
-| Excluded non-US peers | Check Point, TeamViewer, Trend Micro (non-US accounting standards) | Peer facts (`sources/peer-filings/peer-facts-2025-02-05.md`) |
+| US comparable sample size | 333 firms | [Damodaran](sources/market-data/) January 2025 industry betas ([`sources/market-data/industry-betas-2025-01-05.json`](sources/market-data/industry-betas-2025-01-05.json)) |
+| Revenue geography | US 64.82%, international 35.18% | FY2024 10-K Note 16 ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `country.exposures` |
+| Ownership | Silver Lake 36.56%, Thoma Bravo 29.79%, together 66.35%; float about 34% held by diversified institutions | 2024 proxy ([`sources/filings/swi-def14a-2024.md`](sources/filings/swi-def14a-2024.md)); [ledger](inputs.yaml) `governance.controlling_holders`, `governance.marginal_investor` |
+| Unlevered beta, debt-to-equity, tax rate | 1.22; 0.4933; 25% | [Ledger](inputs.yaml) `beta.unlevered_bottom_up`; [model-output.md](model-output.md) section 1 |
+| Levered beta | 1.6714 | [model-output.md](model-output.md) section 1 |
+| Industry correlation with the market | 0.3374 (Damodaran January 2024 industry average) | Course spreadsheet ([`01-foundations-and-discount-rates/lesson-10/spreadsheet-totalbeta24.md`](../../01-foundations-and-discount-rates/lesson-10/spreadsheet-totalbeta24.md)); [ledger](inputs.yaml) `facts.industry-correlation-software-2024` |
+| Risk-free rate and weighted ERP | 4.43%; 4.92% | [FRED](sources/market-data/rates-2025-02-05.md) DGS10; [ledger](inputs.yaml) `country.weighted_erp` |
+| Cost of equity actually used | 12.65% | [model-output.md](model-output.md) section 1 |
+| Excluded non-US peers | Check Point, TeamViewer, Trend Micro (non-US accounting standards) | Peer facts ([`sources/peer-filings/peer-facts-2025-02-05.md`](sources/peer-filings/peer-facts-2025-02-05.md)) |
 
 ### Steps to complete the assignment
 
@@ -732,7 +768,7 @@ Full answers: [lesson-11.md](lesson-11.md) · Walkthrough: [Step 11](walkthrough
 | **Merger information statement (DEFM14C)** | The document sent to shareholders when a merger is approved by written consent of the controlling holders, so no vote is held. It covers the background of the sale, the fairness opinions, management's forecasts and executive payouts. | Any analysis of a buyout: the deal price, how it was negotiated, the forecasts the board relied on. When there is a shareholder vote, the equivalent is a merger proxy (DEFM14A). | SEC EDGAR (filing type DEFM14C or DEFM14A). |
 | **Credit agreement** | The contract between the company and its lenders: how much it borrowed, the interest rate, when it must repay and the conditions (covenants) it must meet. | Measuring debt and its cost, and judging how much room the company has before lenders can step in. | Filed as an exhibit to a 10-K, 10-Q or 8-K on SEC EDGAR; key terms are summarized in the 10-K debt note. |
 | **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
-| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR, the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
+| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR (the Secured Overnight Financing Rate, the overnight benchmark most floating-rate loans, including SolarWinds' term loan, are priced from), the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
 
 ### What the project asked
 
@@ -752,17 +788,17 @@ Module 1 step 12: **Cost of debt**
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Term loan face value | $1,235.7M (SOFR + 2.75%, due 2030-02-05) | FY2024 10-K note 9 (`sources/filings/swi-10k-fy2024.md`); ledger `company.debt_face` |
-| Term loan book value | $1,206.6M (after $29.1M of unamortized discount and fees) | FY2024 10-K note 9; ledger `company.debt_book` |
-| Lease liabilities | $49.4M | FY2024 10-K note 7; ledger `company.lease_debt` |
-| Other items tested | Deferred revenue $389.3M; cloud purchase commitments $68.4M; revolver $130.0M undrawn; no guarantees | FY2024 10-K balance sheet and notes 7, 9, 15; ledger `company.deferred_revenue`, `company.off_balance_sheet_debt` |
-| Agency rating | None disclosed | FY2024 10-K and DEFM14C (`sources/deal-docs/swi-defm14c-2025-merger.md`); ledger `debt.rating_actual` |
-| EBIT and interest expense | $208.4M; $112.4M | FY2024 10-K income statement and MD&A; ledger `company.ebit`, `company.interest_expense` |
-| Other earnings measures | EBIT + acquisition amortization $261.3M (amortization $52.9M); standardized EBITDA $282.8M | FY2024 10-K; model-output.md section 2 |
-| Ratings table | Damodaran January 2025, small firms (market value under $5 billion) | `sources/market-data/ratings-spreads-2025-01-01.json`; ledger `market.ratings_table` |
-| Observed loan rate | 7.11% effective rate at year-end 2024 (9.11% at year-end 2023) | FY2024 10-K note 9; ledger `debt.kd_pretax_observed`, `facts.term-loan-rate-2023` |
-| Risk-free rate and marginal tax rate | 4.43%; 25% | FRED DGS10; Damodaran January 2025 tax table; ledger `market.tax_rate_marginal` |
-| Capitalized interest; depreciation lives | $0.0M; unchanged, 3 to 5 years | FY2024 10-K note 9 and note 2; ledger `company.interest_capitalized`, `company.depreciation_life_change` |
+| Term loan face value | $1,235.7M (SOFR + 2.75%, due 2030-02-05) | FY2024 10-K note 9 ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `company.debt_face` |
+| Term loan book value | $1,206.6M (after $29.1M of unamortized discount and fees) | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) note 9; [ledger](inputs.yaml) `company.debt_book` |
+| Lease liabilities | $49.4M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) note 7; [ledger](inputs.yaml) `company.lease_debt` |
+| Other items tested | Deferred revenue $389.3M; cloud purchase commitments $68.4M; revolver $130.0M undrawn; no guarantees | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) balance sheet and notes 7, 9, 15; [ledger](inputs.yaml) `company.deferred_revenue`, `company.off_balance_sheet_debt` |
+| Agency rating | None disclosed | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) and DEFM14C ([`sources/deal-docs/swi-defm14c-2025-merger.md`](sources/deal-docs/swi-defm14c-2025-merger.md)); [ledger](inputs.yaml) `debt.rating_actual` |
+| EBIT and interest expense | $208.4M; $112.4M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) income statement and MD&A; [ledger](inputs.yaml) `company.ebit`, `company.interest_expense` |
+| Other earnings measures | EBIT + acquisition amortization $261.3M (amortization $52.9M); standardized EBITDA $282.8M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md); [model-output.md](model-output.md) section 2 |
+| Ratings table | Damodaran January 2025, small firms (market value under $5 billion) | [`sources/market-data/ratings-spreads-2025-01-01.json`](sources/market-data/ratings-spreads-2025-01-01.json); [ledger](inputs.yaml) `market.ratings_table` |
+| Observed loan rate | 7.11% effective rate at year-end 2024 (9.11% at year-end 2023) | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) note 9; [ledger](inputs.yaml) `debt.kd_pretax_observed`, `facts.term-loan-rate-2023` |
+| Risk-free rate and marginal tax rate | 4.43%; 25% | [FRED](sources/market-data/rates-2025-02-05.md) DGS10; [Damodaran](sources/market-data/) January 2025 tax table; [ledger](inputs.yaml) `market.tax_rate_marginal` |
+| Capitalized interest; depreciation lives | $0.0M; unchanged, 3 to 5 years | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) note 9 and note 2; [ledger](inputs.yaml) `company.interest_capitalized`, `company.depreciation_life_change` |
 
 ### Steps to complete the assignment
 
@@ -808,7 +844,7 @@ Full answers: [lesson-12.md](lesson-12.md) · Walkthrough: [Step 12](walkthrough
 | **Merger information statement (DEFM14C)** | The document sent to shareholders when a merger is approved by written consent of the controlling holders, so no vote is held. It covers the background of the sale, the fairness opinions, management's forecasts and executive payouts. | Any analysis of a buyout: the deal price, how it was negotiated, the forecasts the board relied on. When there is a shareholder vote, the equivalent is a merger proxy (DEFM14A). | SEC EDGAR (filing type DEFM14C or DEFM14A). |
 | **Fairness opinion** | A bank's letter to the board saying the deal price is fair to shareholders, with a summary of the valuation work behind it: comparable companies, discounted cash flow, precedent deals. | Benchmarking your own valuation, peer set and discount rate against the bankers'. | Summarized inside the merger proxy or information statement; the full letter is usually an annex to it. |
 | **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
-| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR, the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
+| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR (the Secured Overnight Financing Rate, the overnight benchmark most floating-rate loans, including SolarWinds' term loan, are priced from), the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
 
 ### What the project asked
 
@@ -823,17 +859,17 @@ Full answers: [lesson-12.md](lesson-12.md) · Walkthrough: [Step 12](walkthrough
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Term loan at face value | $1,235.7M | FY2024 10-K note 9 (`sources/filings/swi-10k-fy2024.md`); ledger `company.debt_face` |
-| Operating lease debt | $49.4M | FY2024 10-K note 7; ledger `company.lease_debt` |
-| Shares outstanding | 171.6M | Merger information statement (DEFM14C), Written Consent section (`sources/deal-docs/swi-defm14c-2025-merger.md`); ledger `company.shares_basic` |
-| Unaffected share price (2025-02-05 close) | $15.18 | DEFM14C, Opinion of Goldman Sachs; ledger `company.share_price` |
-| Book equity | $1,400.7M | FY2024 10-K balance sheet; ledger `company.equity_book` |
-| Book debt | $1,206.6M | FY2024 10-K note 9; ledger `company.debt_book` |
-| Risk-free rate | 4.43% | 10-year US Treasury close on 2025-02-05, FRED (`sources/market-data/rates-2025-02-05.md`); ledger `market.risk_free_rate` |
-| Levered beta and equity risk premium | 1.6714 and 4.92% | Beta from lesson 9, premium from lessons 6–7; Damodaran Jan-2025 data (`sources/market-data/`); model-output.md §1 |
-| Pre-tax cost of debt and tax rate | 7.11% and 25% | FY2024 10-K note 9 (`debt.kd_pretax_observed`); Damodaran country tax rates (`market.tax_rate_marginal`) |
-| Stock options and restricted stock units (RSUs) | $187.0M | FY2024 10-K note 10; ledger `company.options_value` |
-| Segments | One reportable segment | FY2024 10-K note 16 |
+| Term loan at face value | $1,235.7M | FY2024 10-K note 9 ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `company.debt_face` |
+| Operating lease debt | $49.4M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) note 7; [ledger](inputs.yaml) `company.lease_debt` |
+| Shares outstanding | 171.6M | Merger information statement (DEFM14C), Written Consent section ([`sources/deal-docs/swi-defm14c-2025-merger.md`](sources/deal-docs/swi-defm14c-2025-merger.md)); [ledger](inputs.yaml) `company.shares_basic` |
+| Unaffected share price (2025-02-05 close) | $15.18 | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md), Opinion of Goldman Sachs; [ledger](inputs.yaml) `company.share_price` |
+| Book equity | $1,400.7M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) balance sheet; [ledger](inputs.yaml) `company.equity_book` |
+| Book debt | $1,206.6M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) note 9; [ledger](inputs.yaml) `company.debt_book` |
+| Risk-free rate | 4.43% | 10-year US Treasury close on 2025-02-05, FRED ([`sources/market-data/rates-2025-02-05.md`](sources/market-data/rates-2025-02-05.md)); [ledger](inputs.yaml) `market.risk_free_rate` |
+| Levered beta and equity risk premium | 1.6714 and 4.92% | Beta from lesson 9, premium from lessons 6–7; Damodaran Jan-2025 data ([`sources/market-data/`](sources/market-data/)); [model-output.md](model-output.md) §1 |
+| Pre-tax cost of debt and tax rate | 7.11% and 25% | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) note 9 (`debt.kd_pretax_observed`); [Damodaran](sources/market-data/) country tax rates (`market.tax_rate_marginal`) |
+| Stock options and restricted stock units (RSUs) | $187.0M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) note 10; [ledger](inputs.yaml) `company.options_value` |
+| Segments | One reportable segment | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) note 16 |
 
 ### Steps to complete the assignment
 
@@ -886,16 +922,16 @@ Full answers: [lesson-13.md](lesson-13.md) · Walkthrough: [Step 13](walkthrough
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Operating income (EBIT, earnings before interest and tax) | $208.4M | FY2024 10-K income statement (`sources/filings/swi-10k-fy2024.md`); ledger `company.ebit` |
-| Marginal tax rate | 25% | Damodaran country tax rates (`sources/market-data/country-risk-regions-2025-01-01.md`); ledger `market.tax_rate_marginal` |
-| Depreciation and amortization (D&A) | $74.4M, of which $52.9M is acquisition amortization | FY2024 10-K cash flow statement; ledger `company.da`, `company.acquisition_amortization` |
-| Capital spending | $20.5M | FY2024 10-K cash flow statement; ledger `company.capex` |
-| Increase in working capital | $38.8M | FY2024 10-K cash flow statement; ledger `company.change_wc` |
-| Invested capital | $2,348.0M | Computed: book equity + book debt - cash (FY2024 10-K balance sheet); ledger `company.invested_capital` |
-| Goodwill | $2,363.2M | FY2024 10-K balance sheet; ledger `company.goodwill` |
-| Net income and book equity | $111.9M and $1,400.7M | FY2024 10-K income statement and balance sheet |
-| Cost of capital and cost of equity | 10.23% and 12.65% | Computed in lesson 13 (model-output.md §1) |
-| Three-year history (2022 to 2024) | Invested capital $2,422.9M, $2,356.3M, $2,348.0M | FY2024 10-K statements; ledger `company.history` |
+| Operating income (EBIT, earnings before interest and tax) | $208.4M | FY2024 10-K income statement ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `company.ebit` |
+| Marginal tax rate | 25% | [Damodaran](sources/market-data/) country tax rates ([`sources/market-data/country-risk-regions-2025-01-01.md`](sources/market-data/country-risk-regions-2025-01-01.md)); [ledger](inputs.yaml) `market.tax_rate_marginal` |
+| Depreciation and amortization (D&A) | $74.4M, of which $52.9M is acquisition amortization | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) cash flow statement; [ledger](inputs.yaml) `company.da`, `company.acquisition_amortization` |
+| Capital spending | $20.5M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) cash flow statement; [ledger](inputs.yaml) `company.capex` |
+| Increase in working capital | $38.8M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) cash flow statement; [ledger](inputs.yaml) `company.change_wc` |
+| Invested capital | $2,348.0M | Computed: book equity + book debt - cash ([FY2024 10-K](sources/filings/swi-10k-fy2024.md) balance sheet); [ledger](inputs.yaml) `company.invested_capital` |
+| Goodwill | $2,363.2M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) balance sheet; [ledger](inputs.yaml) `company.goodwill` |
+| Net income and book equity | $111.9M and $1,400.7M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) income statement and balance sheet |
+| Cost of capital and cost of equity | 10.23% and 12.65% | Computed in lesson 13 ([model-output.md](model-output.md) §1) |
+| Three-year history (2022 to 2024) | Invested capital $2,422.9M, $2,356.3M, $2,348.0M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) statements; [ledger](inputs.yaml) `company.history` |
 
 ### Steps to complete the assignment
 
@@ -937,7 +973,7 @@ Full answers: [lesson-14.md](lesson-14.md) · Walkthrough: [Step 14](walkthrough
 | **Proxy statement (DEF 14A)** | The document sent to shareholders before the annual meeting: who is on the board, how executives are paid, who owns the shares and what shareholders are voting on. | Governance questions: who controls the company, whether the board is independent, how pay is tied to performance. | SEC EDGAR (filing type DEF 14A), usually filed a month or two before the annual meeting. |
 | **Merger information statement (DEFM14C)** | The document sent to shareholders when a merger is approved by written consent of the controlling holders, so no vote is held. It covers the background of the sale, the fairness opinions, management's forecasts and executive payouts. | Any analysis of a buyout: the deal price, how it was negotiated, the forecasts the board relied on. When there is a shareholder vote, the equivalent is a merger proxy (DEFM14A). | SEC EDGAR (filing type DEFM14C or DEFM14A). |
 | **Fairness opinion** | A bank's letter to the board saying the deal price is fair to shareholders, with a summary of the valuation work behind it: comparable companies, discounted cash flow, precedent deals. | Benchmarking your own valuation, peer set and discount rate against the bankers'. | Summarized inside the merger proxy or information statement; the full letter is usually an annex to it. |
-| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR, the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
+| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR (the Secured Overnight Financing Rate, the overnight benchmark most floating-rate loans, including SolarWinds' term loan, are priced from), the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
 
 ### What the project asked
 
@@ -947,16 +983,16 @@ Full answers: [lesson-14.md](lesson-14.md) · Walkthrough: [Step 14](walkthrough
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Goodwill (sunk cost) | $2,363.2M | FY2024 10-K balance sheet (`sources/filings/swi-10k-fy2024.md`); ledger `company.goodwill` |
-| 2022 goodwill write-off already taken | $891.1M | FY2024 10-K; ledger `company.history` (2022 note) |
-| Deferred revenue | $389.3M | FY2024 10-K balance sheet; ledger `company.deferred_revenue` |
-| R&D expense, capital spending, revenue | $108.6M, $20.5M, $796.9M | FY2024 10-K income and cash flow statements; ledger `company.rd_expense`, `company.capex`, `company.revenue` |
-| General and administrative expense, segments | $125.8M; one segment | FY2024 10-K income statement and note 16 |
-| Risk-free rate | 4.43% | FRED, 10-year Treasury close 2025-02-05; ledger `market.risk_free_rate` |
-| Banks' terminal growth ranges | Goldman Sachs 2% to 3%; Jefferies 2.5% to 3.5% | DEFM14C, fairness opinions (`sources/deal-docs/swi-defm14c-2025-merger.md`) |
-| Management revenue forecast | $796.9M (2024) to $1,273.0M (2030), 8.12% a year | DEFM14C management forecasts; ledger `forecast.management_growth` |
-| 2030 free cash flow and operating income | $419.0M and $511.0M | DEFM14C management forecasts; ledger `forecast.years` |
-| Terminal values under two methods | $5,552.5M and $3,808.9M | Computed, model-output.md §6 |
+| Goodwill (sunk cost) | $2,363.2M | FY2024 10-K balance sheet ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `company.goodwill` |
+| 2022 goodwill write-off already taken | $891.1M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md); [ledger](inputs.yaml) `company.history` (2022 note) |
+| Deferred revenue | $389.3M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) balance sheet; [ledger](inputs.yaml) `company.deferred_revenue` |
+| R&D expense, capital spending, revenue | $108.6M, $20.5M, $796.9M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) income and cash flow statements; [ledger](inputs.yaml) `company.rd_expense`, `company.capex`, `company.revenue` |
+| General and administrative expense, segments | $125.8M; one segment | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) income statement and note 16 |
+| Risk-free rate | 4.43% | [FRED](sources/market-data/rates-2025-02-05.md), 10-year Treasury close 2025-02-05; [ledger](inputs.yaml) `market.risk_free_rate` |
+| Banks' terminal growth ranges | Goldman Sachs 2% to 3%; Jefferies 2.5% to 3.5% | DEFM14C, fairness opinions ([`sources/deal-docs/swi-defm14c-2025-merger.md`](sources/deal-docs/swi-defm14c-2025-merger.md)) |
+| Management revenue forecast | $796.9M (2024) to $1,273.0M (2030), 8.12% a year | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md) management forecasts; [ledger](inputs.yaml) `forecast.management_growth` |
+| 2030 free cash flow and operating income | $419.0M and $511.0M | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md) management forecasts; [ledger](inputs.yaml) `forecast.years` |
+| Terminal values under two methods | $5,552.5M and $3,808.9M | Computed, [model-output.md](model-output.md) §6 |
 
 ### Steps to complete the assignment
 
@@ -996,7 +1032,7 @@ Full answers: [lesson-15.md](lesson-15.md) · Walkthrough: [Step 15](walkthrough
 |---|---|---|---|
 | **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
 | **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
-| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR, the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
+| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR (the Secured Overnight Financing Rate, the overnight benchmark most floating-rate loans, including SolarWinds' term loan, are priced from), the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
 
 ### What the project asked
 
@@ -1007,16 +1043,16 @@ Full answers: [lesson-15.md](lesson-15.md) · Walkthrough: [Step 15](walkthrough
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Reporting currency | US dollars | FY2024 10-K (`sources/filings/swi-10k-fy2024.md`); ledger `meta.currency` |
-| Revenue by geography | International 35.18% ($280.336M of $796.895M), US 64.82% | FY2024 10-K note 16; ledger `country.exposures` |
-| Currencies sold in, hedging policy | Euros, pounds, Australian dollars; no interest rate swaps; limited currency hedging | FY2024 10-K Item 7A and Item 1A |
-| Risk-free rate | 4.43% | FRED, 10-year Treasury close 2025-02-05; ledger `market.risk_free_rate` |
-| Equity risk premium by region | US 4.27%, international 6.11% (4.27% + 1.84% Europe, Middle East and Africa), blend 4.92% | Damodaran Jan-2025 country risk data (`sources/market-data/`); ledger `country.weighted_erp` |
-| Unlevered beta | 1.22 | Damodaran Jan-2025 industry betas, Software (System & Application) (`sources/market-data/industry-betas-2025-01-05.json`); ledger `beta.unlevered_bottom_up` |
-| Interest-rate sensitivity | About $12.4M a year per 1 point; interest expense $112.4M | FY2024 10-K Item 7A and MD&A |
-| Cyber and D&O insurance limits | $15M cyber, $50M directors-and-officers (D&O) | FY2024 10-K Note 15 |
-| Net cyber-incident costs | $26.2M (2022), $2.1M recovery (2023), $10.3M (2024) | FY2024 10-K MD&A non-GAAP reconciliation |
-| Maintenance renewal rate | 94% (2019), 91% (2020), 93% (2022), 96% (2023), 97% (2024) | 10-K filings (`sources/filings/`) |
+| Reporting currency | US dollars | FY2024 10-K ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `meta.currency` |
+| Revenue by geography | International 35.18% ($280.336M of $796.895M), US 64.82% | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) note 16; [ledger](inputs.yaml) `country.exposures` |
+| Currencies sold in, hedging policy | Euros, pounds, Australian dollars; no interest rate swaps; limited currency hedging | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) Item 7A and Item 1A |
+| Risk-free rate | 4.43% | [FRED](sources/market-data/rates-2025-02-05.md), 10-year Treasury close 2025-02-05; [ledger](inputs.yaml) `market.risk_free_rate` |
+| Equity risk premium by region | US 4.27%, international 6.11% (4.27% + 1.84% Europe, Middle East and Africa), blend 4.92% | Damodaran Jan-2025 country risk data ([`sources/market-data/`](sources/market-data/)); [ledger](inputs.yaml) `country.weighted_erp` |
+| Unlevered beta | 1.22 | [Damodaran](sources/market-data/) Jan-2025 industry betas, Software (System & Application) ([`sources/market-data/industry-betas-2025-01-05.json`](sources/market-data/industry-betas-2025-01-05.json)); [ledger](inputs.yaml) `beta.unlevered_bottom_up` |
+| Interest-rate sensitivity | About $12.4M a year per 1 point; interest expense $112.4M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) Item 7A and MD&A |
+| Cyber and D&O insurance limits | $15M cyber, $50M directors-and-officers (D&O) | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) Note 15 |
+| Net cyber-incident costs | $26.2M (2022), $2.1M recovery (2023), $10.3M (2024) | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) MD&A non-GAAP reconciliation |
+| Maintenance renewal rate | 94% (2019), 91% (2020), 93% (2022), 96% (2023), 97% (2024) | [10-K](sources/filings/swi-10k-fy2024.md) filings ([`sources/filings/`](sources/filings/)) |
 
 ### Steps to complete the assignment
 
@@ -1069,15 +1105,15 @@ Full answers: [lesson-16.md](lesson-16.md) · Walkthrough: [Step 16](walkthrough
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Funding instruments | Leases $49.4M; term loan $1,235.7M face; revolver $130.0M undrawn; deferred revenue $389.3M; options and RSUs $187.0M | FY2024 10-K notes 7, 9, 10 and balance sheet (`sources/filings/swi-10k-fy2024.md`); ledger `company.*`, `debt.revolver_undrawn` |
-| Debt history | $2,358.1M (2017, incl. $680.0M second lien); $1,970.1M (2018); $1,319.2M (2022); $1,300.4M (2023); $1,285.0M (2024) | FY2018 10-K (`sources/filings/swi-10k-fy2018.md`); FY2024 10-K; ledger `company.history` |
-| IPO | $375.0M raised at $15.00 a share, October 2018 | FY2018 10-K / IPO prospectus (`sources/filings/swi-s1-2018-ipo-prospectus.md`) |
-| Interest expense and tax rate | $112.4M and 25% | FY2024 10-K MD&A; Damodaran country tax rates |
-| Cash taxes, cash interest, operating cash flow | $61.5M, $104.5M, $188.3M | FY2024 10-K cash flow statement |
-| Covenant and revolver | 7.40 to 1 first-lien net leverage test, active only if more than 35% of the revolver is drawn | FY2024 10-K note 9; ledger `debt.covenants` |
-| Debt ratios now and for peers | 33.03% market, 47.28% book; eight peers 0.88% to 45.28%, median 11.7% | Computed in lesson 13 (model-output.md §1); peer filings (`sources/peer-filings/peer-facts-2025-02-05.md`); ledger `peers` |
-| Interest coverage | 1.85x, synthetic B- | Computed, model-output.md §2 |
-| Turn/River closing debt | $2.225 billion first lien, $200.0M revolver, $525.0M second lien | DEFM14C and closing 8-K (`sources/deal-docs/`) |
+| Funding instruments | Leases $49.4M; term loan $1,235.7M face; revolver $130.0M undrawn; deferred revenue $389.3M; options and RSUs $187.0M | FY2024 10-K notes 7, 9, 10 and balance sheet ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `company.*`, `debt.revolver_undrawn` |
+| Debt history | $2,358.1M (2017, incl. $680.0M second lien); $1,970.1M (2018); $1,319.2M (2022); $1,300.4M (2023); $1,285.0M (2024) | FY2018 10-K ([`sources/filings/swi-10k-fy2018.md`](sources/filings/swi-10k-fy2018.md)); [FY2024 10-K](sources/filings/swi-10k-fy2024.md); [ledger](inputs.yaml) `company.history` |
+| IPO | $375.0M raised at $15.00 a share, October 2018 | [FY2018 10-K](sources/filings/swi-10k-fy2018.md) / IPO prospectus ([`sources/filings/swi-s1-2018-ipo-prospectus.md`](sources/filings/swi-s1-2018-ipo-prospectus.md)) |
+| Interest expense and tax rate | $112.4M and 25% | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) MD&A; [Damodaran](sources/market-data/) country tax rates |
+| Cash taxes, cash interest, operating cash flow | $61.5M, $104.5M, $188.3M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) cash flow statement |
+| Covenant and revolver | 7.40 to 1 first-lien net leverage test, active only if more than 35% of the revolver is drawn | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) note 9; [ledger](inputs.yaml) `debt.covenants` |
+| Debt ratios now and for peers | 33.03% market, 47.28% book; eight peers 0.88% to 45.28%, median 11.7% | Computed in lesson 13 ([model-output.md](model-output.md) §1); peer filings ([`sources/peer-filings/peer-facts-2025-02-05.md`](sources/peer-filings/peer-facts-2025-02-05.md)); [ledger](inputs.yaml) `peers` |
+| Interest coverage | 1.85x, synthetic B- | Computed, [model-output.md](model-output.md) §2 |
+| Turn/River closing debt | $2.225 billion first lien, $200.0M revolver, $525.0M second lien | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md) and closing 8-K ([`sources/deal-docs/`](sources/deal-docs/)) |
 
 ### Steps to complete the assignment
 
@@ -1116,7 +1152,7 @@ Full answers: [lesson-17.md](lesson-17.md) · Walkthrough: [Step 17](walkthrough
 |---|---|---|---|
 | **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
 | **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
-| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR, the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
+| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR (the Secured Overnight Financing Rate, the overnight benchmark most floating-rate loans, including SolarWinds' term loan, are priced from), the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
 
 ### What the project asked
 
@@ -1127,15 +1163,15 @@ Full answers: [lesson-17.md](lesson-17.md) · Walkthrough: [Step 17](walkthrough
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Debt and equity (market) | $1,285.0M and $2,604.9M | Computed in lesson 13 (model-output.md §1); ledger `company.debt_total`, `company.equity_value` |
-| Operating income (EBIT) | $208.4M | FY2024 10-K income statement (`sources/filings/swi-10k-fy2024.md`); ledger `company.ebit` |
-| Interest expense | $112.4M | FY2024 10-K MD&A; ledger `company.interest_expense` |
-| Unlevered beta | 1.22 | Damodaran Jan-2025 industry betas (`sources/market-data/industry-betas-2025-01-05.json`); ledger `beta.unlevered_bottom_up` |
-| Risk-free rate and equity risk premium | 4.43% and 4.92% | FRED 2025-02-05 (`market.risk_free_rate`); Damodaran Jan-2025 country data (`country.weighted_erp`) |
-| Tax rate | 25% | Damodaran country tax rates; ledger `market.tax_rate_marginal` |
-| Ratings and spreads table (small firms) | Interest coverage to rating to interest rate | Damodaran Jan-2025 ratings table (`sources/market-data/ratings-spreads-2025-01-01.json`); ledger `modeling_choices.firm_size_table` (market value of $2.6B is under his $5B line) |
-| Alternative coverage numerators | Standardized EBITDA $282.8M; acquisition amortization $52.9M; adjusted EBITDA $384.7M | FY2024 10-K MD&A non-GAAP reconciliation; ledger `company.ebitda_standardized`, `company.acquisition_amortization` |
-| Cost-of-capital schedule | 0% to 70% debt | Computed, model-output.md §3 |
+| Debt and equity (market) | $1,285.0M and $2,604.9M | Computed in lesson 13 ([model-output.md](model-output.md) §1); [ledger](inputs.yaml) `company.debt_total`, `company.equity_value` |
+| Operating income (EBIT) | $208.4M | FY2024 10-K income statement ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `company.ebit` |
+| Interest expense | $112.4M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) MD&A; [ledger](inputs.yaml) `company.interest_expense` |
+| Unlevered beta | 1.22 | [Damodaran](sources/market-data/) Jan-2025 industry betas ([`sources/market-data/industry-betas-2025-01-05.json`](sources/market-data/industry-betas-2025-01-05.json)); [ledger](inputs.yaml) `beta.unlevered_bottom_up` |
+| Risk-free rate and equity risk premium | 4.43% and 4.92% | [FRED](sources/market-data/rates-2025-02-05.md) 2025-02-05 (`market.risk_free_rate`); [Damodaran](sources/market-data/) Jan-2025 country data (`country.weighted_erp`) |
+| Tax rate | 25% | [Damodaran](sources/market-data/) country tax rates; [ledger](inputs.yaml) `market.tax_rate_marginal` |
+| Ratings and spreads table (small firms) | Interest coverage to rating to interest rate | [Damodaran](sources/market-data/) Jan-2025 ratings table ([`sources/market-data/ratings-spreads-2025-01-01.json`](sources/market-data/ratings-spreads-2025-01-01.json)); [ledger](inputs.yaml) `modeling_choices.firm_size_table` (market value of $2.6B is under his $5B line) |
+| Alternative coverage numerators | Standardized EBITDA $282.8M; acquisition amortization $52.9M; adjusted EBITDA $384.7M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) MD&A non-GAAP reconciliation; [ledger](inputs.yaml) `company.ebitda_standardized`, `company.acquisition_amortization` |
+| Cost-of-capital schedule | 0% to 70% debt | Computed, [model-output.md](model-output.md) §3 |
 
 ### Steps to complete the assignment
 
@@ -1185,16 +1221,16 @@ Full answers: [lesson-18.md](lesson-18.md) · Walkthrough: [Step 18](walkthrough
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Cost of capital at current and optimal debt | 10.31% and 10.03% | Computed in lesson 18, model-output.md §3 |
-| Firm value | $3,889.9M | Computed in lesson 13, model-output.md §1 |
-| Terminal growth | 2.5% | Judgment from the banks' ranges in DEFM14C (`sources/deal-docs/swi-defm14c-2025-merger.md`); ledger `market.terminal_growth` |
-| Basic shares | 171.6M | DEFM14C, Written Consent section; ledger `company.shares_basic` |
-| DCF values at status quo and at optimal cost of capital | Enterprise value $3,444.3M and $3,533.4M; $13.00 and $13.52 a share | Computed, model-output.md §6 |
-| Adjusted present value (APV) gain | $220.3M | Computed, model-output.md §9 |
-| Stress test of EBIT | Optimum 21%, 19% (EBIT $187.6M), 16% ($166.7M), 14% ($145.9M) | Computed, model-output.md §4 |
-| Covenant and revolver | 7.40 to 1 first-lien net leverage test; $130.0M revolver undrawn | FY2024 10-K note 9 (`sources/filings/swi-10k-fy2024.md`); ledger `debt.covenants`, `debt.revolver_undrawn` |
-| Cash, first-lien debt, standardized EBITDA | $259.3M, $1,235.7M, $282.8M | FY2024 10-K balance sheet, note 9 and MD&A; ledger `company.cash`, `company.debt_face`, `company.ebitda_standardized` |
-| EBIT history | $150.4M (2023), $208.4M (2024) | FY2024 10-K income statement; ledger `company.history` |
+| Cost of capital at current and optimal debt | 10.31% and 10.03% | Computed in lesson 18, [model-output.md](model-output.md) §3 |
+| Firm value | $3,889.9M | Computed in lesson 13, [model-output.md](model-output.md) §1 |
+| Terminal growth | 2.5% | Judgment from the banks' ranges in DEFM14C ([`sources/deal-docs/swi-defm14c-2025-merger.md`](sources/deal-docs/swi-defm14c-2025-merger.md)); [ledger](inputs.yaml) `market.terminal_growth` |
+| Basic shares | 171.6M | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md), Written Consent section; [ledger](inputs.yaml) `company.shares_basic` |
+| DCF values at status quo and at optimal cost of capital | Enterprise value $3,444.3M and $3,533.4M; $13.00 and $13.52 a share | Computed, [model-output.md](model-output.md) §6 |
+| Adjusted present value (APV) gain | $220.3M | Computed, [model-output.md](model-output.md) §9 |
+| Stress test of EBIT | Optimum 21%, 19% (EBIT $187.6M), 16% ($166.7M), 14% ($145.9M) | Computed, [model-output.md](model-output.md) §4 |
+| Covenant and revolver | 7.40 to 1 first-lien net leverage test; $130.0M revolver undrawn | FY2024 10-K note 9 ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `debt.covenants`, `debt.revolver_undrawn` |
+| Cash, first-lien debt, standardized EBITDA | $259.3M, $1,235.7M, $282.8M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) balance sheet, note 9 and MD&A; [ledger](inputs.yaml) `company.cash`, `company.debt_face`, `company.ebitda_standardized` |
+| EBIT history | $150.4M (2023), $208.4M (2024) | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) income statement; [ledger](inputs.yaml) `company.history` |
 
 ### Steps to complete the assignment
 
@@ -1253,16 +1289,16 @@ Full answers: [lesson-19.md](lesson-19.md) · Walkthrough: [Step 19](walkthrough
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Customers hit by the December 2020 SUNBURST attack (hackers inserted malicious code into the Orion software) | About 33,000 told; fewer than 18,000 with the bad software; over 300,000 customers overall | 8-K of 2020-12-14 (`sources/filings/swi-8k-2020-12-14-sunburst-followup.md`) |
-| Maintenance renewal rate | 94% (2019), 91% (2020), 93% (2022), 96% (2023), 97% (2024) | 10-Ks FY2020, FY2023, FY2024 (`sources/filings/`); ledger `facts.maintenance-renewal-rate` |
-| Revenue history | $669.1M (2019), $716.8M (2020), $718.6M (2021), $719.4M (2022), $758.7M (2023), $796.9M (2024) | 10-Ks (`sources/filings/`); ledger `company.history` |
-| Operating income (EBIT, earnings before interest and tax) | $208.4M (2024); $150.4M (2023); loss of $819.6M (2022, includes an $891.1M goodwill write-down) | FY2024 and FY2023 10-Ks; ledger `company.ebit`, `company.history` |
-| Enterprise value (EV: share value plus debt minus cash) | $3,630.6M | model-output.md §7 |
-| Eight peers' EBIT as a share of EV and debt ratios | Median EBIT/EV 4.29%; debt 0.88% to 45.28% of value; peer median debt ratio 11.7% | Peer filings and 2025-02-05 prices (`sources/peer-filings/peer-facts-2025-02-05.md`); ledger `peers` |
-| Unlevered beta (business risk) and marginal tax rate | 1.22; 25% | Damodaran Jan-2025 industry betas and tax table (`sources/market-data/`); ledger `beta.unlevered_bottom_up`, `market.tax_rate_marginal` |
-| Cost of debt and equity at 33% and 21% debt | 7.43% and 12.65% at 33%; 5.38% and 11.63% at 21% | model-output.md §1, §3 |
-| Owners | Silver Lake 36.56%, Thoma Bravo 29.79% | 2024 proxy (`sources/filings/swi-def14a-2024.md`); ledger `governance.controlling_holders` |
-| Financing at the 2025 sale | $2.225 billion first-lien loan, $200.0M revolver, $525.0M second-lien loan | Merger documents (`sources/deal-docs/`); ledger `facts.new-debt-2025` |
+| Customers hit by the December 2020 SUNBURST attack (hackers inserted malicious code into the Orion software) | About 33,000 told; fewer than 18,000 with the bad software; over 300,000 customers overall | 8-K of 2020-12-14 ([`sources/filings/swi-8k-2020-12-14-sunburst-followup.md`](sources/filings/swi-8k-2020-12-14-sunburst-followup.md)) |
+| Maintenance renewal rate | 94% (2019), 91% (2020), 93% (2022), 96% (2023), 97% (2024) | 10-Ks FY2020, FY2023, FY2024 ([`sources/filings/`](sources/filings/)); [ledger](inputs.yaml) `facts.maintenance-renewal-rate` |
+| Revenue history | $669.1M (2019), $716.8M (2020), $718.6M (2021), $719.4M (2022), $758.7M (2023), $796.9M (2024) | 10-Ks ([`sources/filings/`](sources/filings/)); [ledger](inputs.yaml) `company.history` |
+| Operating income (EBIT, earnings before interest and tax) | $208.4M (2024); $150.4M (2023); loss of $819.6M (2022, includes an $891.1M goodwill write-down) | FY2024 and [FY2023 10-K](sources/filings/swi-10k-fy2023.md)s; [ledger](inputs.yaml) `company.ebit`, `company.history` |
+| Enterprise value (EV: share value plus debt minus cash) | $3,630.6M | [model-output.md](model-output.md) §7 |
+| Eight peers' EBIT as a share of EV and debt ratios | Median EBIT/EV 4.29%; debt 0.88% to 45.28% of value; peer median debt ratio 11.7% | Peer filings and 2025-02-05 prices ([`sources/peer-filings/peer-facts-2025-02-05.md`](sources/peer-filings/peer-facts-2025-02-05.md)); [ledger](inputs.yaml) `peers` |
+| Unlevered beta (business risk) and marginal tax rate | 1.22; 25% | Damodaran Jan-2025 industry betas and tax table ([`sources/market-data/`](sources/market-data/)); [ledger](inputs.yaml) `beta.unlevered_bottom_up`, `market.tax_rate_marginal` |
+| Cost of debt and equity at 33% and 21% debt | 7.43% and 12.65% at 33%; 5.38% and 11.63% at 21% | [model-output.md](model-output.md) §1, §3 |
+| Owners | Silver Lake 36.56%, Thoma Bravo 29.79% | 2024 proxy ([`sources/filings/swi-def14a-2024.md`](sources/filings/swi-def14a-2024.md)); [ledger](inputs.yaml) `governance.controlling_holders` |
+| Financing at the 2025 sale | $2.225 billion first-lien loan, $200.0M revolver, $525.0M second-lien loan | Merger documents ([`sources/deal-docs/`](sources/deal-docs/)); [ledger](inputs.yaml) `facts.new-debt-2025` |
 
 ### Steps to complete the assignment
 
@@ -1314,15 +1350,15 @@ Full answers: [lesson-20.md](lesson-20.md) · Walkthrough: [Step 20](walkthrough
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Debt | $1,285.0M | FY2024 10-K, note 9 (`sources/filings/swi-10k-fy2024.md`); ledger `company.debt_total` |
-| Equity (market value) | $2,604.9M | Share price of $15.18 on 2025-02-05 times shares; ledger `company.equity_value` |
-| Marginal tax rate | 25% | Damodaran Jan-2025 marginal tax rates by country (`sources/market-data/`); ledger `market.tax_rate_marginal` |
-| Rating at each debt ratio | e.g. A- at 21%, B at 33% | Computed in lesson 18; model-output.md §3 |
-| Ten-year default probability by rating | e.g. 2.50% (A-), 36.80% (B) | Altman table on the lesson 21 slides; ledger `facts.altman-10yr-default-probabilities` |
-| Bankruptcy cost (judgment) | 25% of firm value (tested at 10% and 40%) | Midpoint of the lecture's 10% to 40% range; ledger `debt.bankruptcy_cost` |
-| Goodwill and invested capital | $2,363.2M and $2,348.0M | FY2024 10-K balance sheet; ledger `company.goodwill`, `company.invested_capital` |
-| Customer retention evidence | Maintenance renewal 97%, subscription net retention 99% (FY2024) | FY2024 10-K; ledger `facts.maintenance-renewal-rate`, `facts.net-retention-subscription` |
-| Peer debt ratios and industry debt-to-equity | Peers 0.88% to 45.28%, median 11.72%; software industry debt-to-equity 4.9% | `sources/peer-filings/peer-facts-2025-02-05.md`; `sources/market-data/industry-betas-2025-01-05.json` (Damodaran Jan-2025, 333 firms) |
+| Debt | $1,285.0M | FY2024 10-K, note 9 ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `company.debt_total` |
+| Equity (market value) | $2,604.9M | Share price of $15.18 on 2025-02-05 times shares; [ledger](inputs.yaml) `company.equity_value` |
+| Marginal tax rate | 25% | Damodaran Jan-2025 marginal tax rates by country ([`sources/market-data/`](sources/market-data/)); [ledger](inputs.yaml) `market.tax_rate_marginal` |
+| Rating at each debt ratio | e.g. A- at 21%, B at 33% | Computed in lesson 18; [model-output.md](model-output.md) §3 |
+| Ten-year default probability by rating | e.g. 2.50% (A-), 36.80% (B) | Altman table on the lesson 21 slides; [ledger](inputs.yaml) `facts.altman-10yr-default-probabilities` |
+| Bankruptcy cost (judgment) | 25% of firm value (tested at 10% and 40%) | Midpoint of the lecture's 10% to 40% range; [ledger](inputs.yaml) `debt.bankruptcy_cost` |
+| Goodwill and invested capital | $2,363.2M and $2,348.0M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) balance sheet; [ledger](inputs.yaml) `company.goodwill`, `company.invested_capital` |
+| Customer retention evidence | Maintenance renewal 97%, subscription net retention 99% (FY2024) | [FY2024 10-K](sources/filings/swi-10k-fy2024.md); [ledger](inputs.yaml) `facts.maintenance-renewal-rate`, `facts.net-retention-subscription` |
+| Peer debt ratios and industry debt-to-equity | Peers 0.88% to 45.28%, median 11.72%; software industry debt-to-equity 4.9% | [`sources/peer-filings/peer-facts-2025-02-05.md`](sources/peer-filings/peer-facts-2025-02-05.md); [`sources/market-data/industry-betas-2025-01-05.json`](sources/market-data/industry-betas-2025-01-05.json) ([Damodaran](sources/market-data/) Jan-2025, 333 firms) |
 
 ### Steps to complete the assignment
 
@@ -1372,16 +1408,16 @@ Full answers: [lesson-21.md](lesson-21.md) · Walkthrough: [Step 21](walkthrough
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Actual and optimal debt ratio | 33.03% actual; 21% optimum; debt $468.1M above optimum | model-output.md §1, §3 |
-| Interest coverage and synthetic rating | 1.85x, B- | model-output.md §2 |
-| Cash and undrawn revolver | $259.3M cash; $130.0M undrawn revolver | FY2024 10-K (`sources/filings/swi-10k-fy2024.md`); ledger `company.cash`, `debt.revolver_undrawn` |
-| Covenant and maturity | Only financial test springs when revolver is more than 35% drawn; loan due 2030-02-05 | FY2024 10-K note 9; ledger `debt.covenants` |
-| Owners and consent rights | Silver Lake 36.56%, Thoma Bravo 29.79%; both must consent to a change of control | 2024 proxy, stockholders' agreement (`sources/filings/swi-def14a-2024.md`); ledger `governance.controlling_holders` |
-| Return on invested capital and cost of capital | 6.66% against 10.23% | model-output.md §8, §1 |
-| Management's free cash flow to the firm | $212.0M (2025), $258.0M (2026) | Merger information statement, DEFM14C (`sources/deal-docs/swi-defm14c-2025-merger.md`); ledger `forecast.years` |
-| Interest expense | $112.4M | FY2024 10-K; ledger `company.interest_expense` |
-| Sale-process history | 13 parties approached in 2023, three offers of $12.00 to $13.00 withdrawn; unaffected price $15.18 against deal $18.50 (21.9% premium) | DEFM14C "Background of the Merger" (`sources/deal-docs/swi-defm14c-2025-merger.md`) |
-| 2024 special dividend and share withholding | $168.2M and $26.5M | FY2024 10-K; ledger `company.history` |
+| Actual and optimal debt ratio | 33.03% actual; 21% optimum; debt $468.1M above optimum | [model-output.md](model-output.md) §1, §3 |
+| Interest coverage and synthetic rating | 1.85x, B- | [model-output.md](model-output.md) §2 |
+| Cash and undrawn revolver | $259.3M cash; $130.0M undrawn revolver | FY2024 10-K ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `company.cash`, `debt.revolver_undrawn` |
+| Covenant and maturity | Only financial test springs when revolver is more than 35% drawn; loan due 2030-02-05 | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) note 9; [ledger](inputs.yaml) `debt.covenants` |
+| Owners and consent rights | Silver Lake 36.56%, Thoma Bravo 29.79%; both must consent to a change of control | 2024 proxy, stockholders' agreement ([`sources/filings/swi-def14a-2024.md`](sources/filings/swi-def14a-2024.md)); [ledger](inputs.yaml) `governance.controlling_holders` |
+| Return on invested capital and cost of capital | 6.66% against 10.23% | [model-output.md](model-output.md) §8, §1 |
+| Management's free cash flow to the firm | $212.0M (2025), $258.0M (2026) | Merger information statement, DEFM14C ([`sources/deal-docs/swi-defm14c-2025-merger.md`](sources/deal-docs/swi-defm14c-2025-merger.md)); [ledger](inputs.yaml) `forecast.years` |
+| Interest expense | $112.4M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md); [ledger](inputs.yaml) `company.interest_expense` |
+| Sale-process history | 13 parties approached in 2023, three offers of $12.00 to $13.00 withdrawn; unaffected price $15.18 against deal $18.50 (21.9% premium) | DEFM14C "Background of the Merger" ([`sources/deal-docs/swi-defm14c-2025-merger.md`](sources/deal-docs/swi-defm14c-2025-merger.md)) |
+| 2024 special dividend and share withholding | $168.2M and $26.5M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md); [ledger](inputs.yaml) `company.history` |
 
 ### Steps to complete the assignment
 
@@ -1432,16 +1468,16 @@ Full answers: [lesson-22.md](lesson-22.md) · Walkthrough: [Step 22](walkthrough
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Term loan face value, rate type, currency | $1,235.7M; floating at SOFR (a benchmark short-term rate) plus 2.75%; US dollars | FY2024 10-K, note 9 (`sources/filings/swi-10k-fy2024.md`); ledger `company.debt_face`, `debt.rate_type`, `debt.currency` |
-| Maturity and effective rate | 5.0 years (due 2030-02-05); 7.11% | FY2024 10-K note 9; ledger `debt.maturity_years`, `debt.kd_pretax_observed` |
-| Revolver | $130.0M undrawn, of which $112.5M multicurrency | FY2024 10-K note 9; ledger `debt.revolver_undrawn`, `facts.revolver-tranches` |
-| Leases | $49.4M | FY2024 10-K; ledger `company.lease_debt` |
-| Contract length and pricing power | Mostly annual contracts; annual price increases; 97% maintenance renewal, 99% net retention | FY2024 10-K Item 1A and MD&A; ledger `facts.maintenance-renewal-rate`, `facts.net-retention-subscription` |
-| Revenue by geography | 64.82% US, 35.18% international | FY2024 10-K; ledger `country.exposures` |
-| Employees outside the US | 1,379 of 2,107 | FY2024 10-K; ledger `facts.employees-2024` |
-| Interest-rate sensitivity | About $12.4M a year per 100 basis points; no swaps | FY2024 10-K Item 7A and Item 1A; ledger `facts.interest-sensitivity-100bp` |
-| Capital spending, depreciation and amortization, R&D | $20.5M, $74.4M, $108.6M | FY2024 10-K; ledger `company.capex`, `company.da`, `company.rd_expense` |
-| Foreign currency translation effect | Loss of $39.5M (2024), gain of $19.9M (2023) | FY2024 10-K; ledger `facts.fx-translation-adjustment-2024` |
+| Term loan face value, rate type, currency | $1,235.7M; floating at SOFR (a benchmark short-term rate) plus 2.75%; US dollars | FY2024 10-K, note 9 ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `company.debt_face`, `debt.rate_type`, `debt.currency` |
+| Maturity and effective rate | 5.0 years (due 2030-02-05); 7.11% | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) note 9; [ledger](inputs.yaml) `debt.maturity_years`, `debt.kd_pretax_observed` |
+| Revolver | $130.0M undrawn, of which $112.5M multicurrency | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) note 9; [ledger](inputs.yaml) `debt.revolver_undrawn`, `facts.revolver-tranches` |
+| Leases | $49.4M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md); [ledger](inputs.yaml) `company.lease_debt` |
+| Contract length and pricing power | Mostly annual contracts; annual price increases; 97% maintenance renewal, 99% net retention | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) Item 1A and MD&A; [ledger](inputs.yaml) `facts.maintenance-renewal-rate`, `facts.net-retention-subscription` |
+| Revenue by geography | 64.82% US, 35.18% international | [FY2024 10-K](sources/filings/swi-10k-fy2024.md); [ledger](inputs.yaml) `country.exposures` |
+| Employees outside the US | 1,379 of 2,107 | [FY2024 10-K](sources/filings/swi-10k-fy2024.md); [ledger](inputs.yaml) `facts.employees-2024` |
+| Interest-rate sensitivity | About $12.4M a year per 100 basis points; no swaps | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) Item 7A and Item 1A; [ledger](inputs.yaml) `facts.interest-sensitivity-100bp` |
+| Capital spending, depreciation and amortization, R&D | $20.5M, $74.4M, $108.6M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md); [ledger](inputs.yaml) `company.capex`, `company.da`, `company.rd_expense` |
+| Foreign currency translation effect | Loss of $39.5M (2024), gain of $19.9M (2023) | [FY2024 10-K](sources/filings/swi-10k-fy2024.md); [ledger](inputs.yaml) `facts.fx-translation-adjustment-2024` |
 
 ### Steps to complete the assignment
 
@@ -1488,15 +1524,15 @@ Slides here are thin: the main trend charts are images with no text, and there i
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| 2020 dividend | None ("never declared or paid any cash dividends") | FY2020 10-K (`sources/filings/swi-10k-fy2020.md`); ledger `facts.div-2020` |
-| 2021 special dividend | $237.2M, $1.50 a share, paid 2021-08-24 | FY2023 10-K (`sources/filings/swi-10k-fy2023.md`); ledger `facts.special-dividend-2021` |
-| 2022 and 2023 dividends | None | Ledger `company.history` |
-| 2024 special dividend | $168.2M, $1.00 a share, paid 2024-04-15 | FY2024 10-K (`sources/filings/swi-10k-fy2024.md`); ledger `company.history`, `facts.special-dividend-2024-per-share` |
-| Buybacks (shares withheld for employee taxes on vesting stock) | $11.1M (2022), $18.8M (2023), $26.5M (2024) | Ledger `company.history` |
-| Net income | $132.7M (2020), $-51.4M (2021), $-929.4M (2022), $-9.1M (2023), $111.9M (2024) | 10-Ks; ledger `facts.ni-2020-2021`, `company.history` |
-| Share price on 2024-02-14 | $12.89 | FY2024 10-K; ledger `facts.price-2024-02-14` |
-| Unaffected share price on 2025-02-05 | $15.18 | Ledger market data (`sources/market-data/`) |
-| Cash returned in 2024 | $194.7M | model-output.md §5 |
+| 2020 dividend | None ("never declared or paid any cash dividends") | FY2020 10-K ([`sources/filings/swi-10k-fy2020.md`](sources/filings/swi-10k-fy2020.md)); [ledger](inputs.yaml) `facts.div-2020` |
+| 2021 special dividend | $237.2M, $1.50 a share, paid 2021-08-24 | FY2023 10-K ([`sources/filings/swi-10k-fy2023.md`](sources/filings/swi-10k-fy2023.md)); [ledger](inputs.yaml) `facts.special-dividend-2021` |
+| 2022 and 2023 dividends | None | [Ledger](inputs.yaml) `company.history` |
+| 2024 special dividend | $168.2M, $1.00 a share, paid 2024-04-15 | FY2024 10-K ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `company.history`, `facts.special-dividend-2024-per-share` |
+| Buybacks (shares withheld for employee taxes on vesting stock) | $11.1M (2022), $18.8M (2023), $26.5M (2024) | [Ledger](inputs.yaml) `company.history` |
+| Net income | $132.7M (2020), $-51.4M (2021), $-929.4M (2022), $-9.1M (2023), $111.9M (2024) | [10-Ks](sources/filings/); [ledger](inputs.yaml) `facts.ni-2020-2021`, `company.history` |
+| Share price on 2024-02-14 | $12.89 | [FY2024 10-K](sources/filings/swi-10k-fy2024.md); [ledger](inputs.yaml) `facts.price-2024-02-14` |
+| Unaffected share price on 2025-02-05 | $15.18 | [Ledger](inputs.yaml) market data ([`sources/market-data/`](sources/market-data/)) |
+| Cash returned in 2024 | $194.7M | [model-output.md](model-output.md) §5 |
 
 ### Steps to complete the assignment
 
@@ -1544,15 +1580,15 @@ Full answers: [lesson-24.md](lesson-24.md) · Walkthrough: [Step 24](walkthrough
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Ownership | Silver Lake 36.56%, Thoma Bravo 29.79% (about 66%); public float about 34% | 2024 proxy (`sources/filings/swi-def14a-2024.md`); ledger `governance.controlling_holders`, `governance.marginal_investor` |
-| Holders of record | 33 (2025-02-13), 39 a year earlier | FY2024 10-K Item 5 (`sources/filings/swi-10k-fy2024.md`); ledger `facts.holders-of-record` |
-| Dividend policy and loan limits | Board discretion; loan limits dividends "subject to certain exceptions"; financial test only above 35% revolver draw | FY2023 and FY2024 10-K Item 5 and note 9; ledger `debt.covenants`, `debt.revolver_undrawn` |
-| 2024 special dividend and withholding | $168.2M; $26.5M | FY2024 10-K; ledger `company.history` |
-| Debt above the optimum | $468.1M | model-output.md §3 |
-| Return on invested capital and cost of capital | 6.66% against 10.23% | model-output.md §8, §1 (lesson 22) |
-| Free cash flow to equity (FCFE) and cash returned, 2024 | $127.0M; $194.7M | model-output.md §5 |
-| Pre-tax cost of debt | 7.11% | FY2024 10-K note 9; ledger `debt.kd_pretax_observed` |
-| Reason three bidders withdrew in 2023 | "the relative early stage of the Company's ongoing transition to a subscription-first business model" | DEFM14C "Background of the Merger" (`sources/deal-docs/swi-defm14c-2025-merger.md`) |
+| Ownership | Silver Lake 36.56%, Thoma Bravo 29.79% (about 66%); public float about 34% | 2024 proxy ([`sources/filings/swi-def14a-2024.md`](sources/filings/swi-def14a-2024.md)); [ledger](inputs.yaml) `governance.controlling_holders`, `governance.marginal_investor` |
+| Holders of record | 33 (2025-02-13), 39 a year earlier | FY2024 10-K Item 5 ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `facts.holders-of-record` |
+| Dividend policy and loan limits | Board discretion; loan limits dividends "subject to certain exceptions"; financial test only above 35% revolver draw | FY2023 and [FY2024 10-K](sources/filings/swi-10k-fy2024.md) Item 5 and note 9; [ledger](inputs.yaml) `debt.covenants`, `debt.revolver_undrawn` |
+| 2024 special dividend and withholding | $168.2M; $26.5M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md); [ledger](inputs.yaml) `company.history` |
+| Debt above the optimum | $468.1M | [model-output.md](model-output.md) §3 |
+| Return on invested capital and cost of capital | 6.66% against 10.23% | [model-output.md](model-output.md) §8, §1 (lesson 22) |
+| Free cash flow to equity (FCFE) and cash returned, 2024 | $127.0M; $194.7M | [model-output.md](model-output.md) §5 |
+| Pre-tax cost of debt | 7.11% | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) note 9; [ledger](inputs.yaml) `debt.kd_pretax_observed` |
+| Reason three bidders withdrew in 2023 | "the relative early stage of the Company's ongoing transition to a subscription-first business model" | DEFM14C "Background of the Merger" ([`sources/deal-docs/swi-defm14c-2025-merger.md`](sources/deal-docs/swi-defm14c-2025-merger.md)) |
 
 ### Steps to complete the assignment
 
@@ -1601,16 +1637,16 @@ Full answers: [lesson-25.md](lesson-25.md) · Walkthrough: [Step 25](walkthrough
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Net income | $-929.4M (2022), $-9.1M (2023), $111.9M (2024) | 10-Ks FY2023, FY2024 (`sources/filings/`); ledger `company.history` |
-| Non-cash impairments added back (2022) | $906.4M (goodwill $891.1M plus intangibles) | FY2023 10-K; ledger `company.history` 2022 impairment |
-| Net capital spending (capex minus D&A) | $-74.2M (2022), $-63.9M (2023), $-53.9M (2024) | model-output.md §5 |
-| Change in working capital | $-7.0M, $-13.9M, $38.8M | model-output.md §5 |
-| Net new debt | $-664.4M (2022), $-9.3M (2023), $0.0M (2024) | 10-Ks; ledger `company.history` |
-| Dividends and buybacks | $11.1M (2022), $18.8M (2023), $194.7M (2024: $168.2M dividend plus $26.5M buybacks) | 10-Ks; ledger `company.history` |
-| Year-end cash | $148.9M (2022), $289.2M (2023), $259.3M (2024) | 10-Ks; ledger `company.history` |
-| Debt at year end | $1,319.2M (2022), $1,285.0M (2024) | 10-Ks; ledger `company.history` |
-| Owners and board | Silver Lake 36.56%, Thoma Bravo 29.79% (66.35% together) | 2024 proxy (`sources/filings/swi-def14a-2024.md`); ledger `governance.controlling_holders`, `governance.board` |
-| 2020 and 2021 flows | 2021 special dividend $237.2M; $14.2M and $12.1M of withholding repurchases | FY2023 and FY2020 10-Ks; ledger `facts.special-dividend-2021`, `facts.withholding-buyback-2020-2021` |
+| Net income | $-929.4M (2022), $-9.1M (2023), $111.9M (2024) | 10-Ks FY2023, FY2024 ([`sources/filings/`](sources/filings/)); [ledger](inputs.yaml) `company.history` |
+| Non-cash impairments added back (2022) | $906.4M (goodwill $891.1M plus intangibles) | [FY2023 10-K](sources/filings/swi-10k-fy2023.md); [ledger](inputs.yaml) `company.history` 2022 impairment |
+| Net capital spending (capex minus D&A) | $-74.2M (2022), $-63.9M (2023), $-53.9M (2024) | [model-output.md](model-output.md) §5 |
+| Change in working capital | $-7.0M, $-13.9M, $38.8M | [model-output.md](model-output.md) §5 |
+| Net new debt | $-664.4M (2022), $-9.3M (2023), $0.0M (2024) | [10-Ks](sources/filings/); [ledger](inputs.yaml) `company.history` |
+| Dividends and buybacks | $11.1M (2022), $18.8M (2023), $194.7M (2024: $168.2M dividend plus $26.5M buybacks) | [10-Ks](sources/filings/); [ledger](inputs.yaml) `company.history` |
+| Year-end cash | $148.9M (2022), $289.2M (2023), $259.3M (2024) | [10-Ks](sources/filings/); [ledger](inputs.yaml) `company.history` |
+| Debt at year end | $1,319.2M (2022), $1,285.0M (2024) | [10-Ks](sources/filings/); [ledger](inputs.yaml) `company.history` |
+| Owners and board | Silver Lake 36.56%, Thoma Bravo 29.79% (66.35% together) | 2024 proxy ([`sources/filings/swi-def14a-2024.md`](sources/filings/swi-def14a-2024.md)); [ledger](inputs.yaml) `governance.controlling_holders`, `governance.board` |
+| 2020 and 2021 flows | 2021 special dividend $237.2M; $14.2M and $12.1M of withholding repurchases | FY2023 and [FY2020 10-K](sources/filings/swi-10k-fy2020.md)s; [ledger](inputs.yaml) `facts.special-dividend-2021`, `facts.withholding-buyback-2020-2021` |
 
 ### Steps to complete the assignment
 
@@ -1666,16 +1702,16 @@ Full answers: [lesson-26.md](lesson-26.md) · Walkthrough: [Step 26](walkthrough
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Operating income (EBIT, earnings before interest and tax) | $208.4M | FY2024 10-K income statement (`sources/filings/swi-10k-fy2024.md`); ledger `company.ebit` |
-| Marginal tax rate | 25% | Damodaran January 2025 country tax table (`sources/market-data/country-risk-regions-2025-01-01.md`); ledger `market.tax_rate_marginal` |
-| Invested capital (book equity + debt - cash) | $2,348.0M | FY2024 10-K balance sheet; ledger `company.invested_capital` |
-| Cost of capital / cost of equity | 10.23% / 12.65% | Computed in earlier lessons; model-output.md §1 |
-| Operating income history, 2022-2024 (2022 with $906.4M non-cash impairments added back) | $86.8M, $150.4M, $208.4M | FY2024 10-K (2022-2024 columns) and FY2023 10-K; ledger `company.history` |
-| Total return on $100 invested end of 2019 (SolarWinds vs peer index) | $81, $57, $38, $51 vs $142, $190, $135, $211 (2020-2023) | 2024 proxy, Pay versus Performance table (`sources/filings/swi-def14a-2024.md`); ledger fact `tsr-2023` |
-| Free cash flow to equity (FCFE) and cash returned, 2023-2024 | FCFE $59.4M and $127.0M; returned $18.8M and $194.7M | Computed from the 10-K cash flow statements; model-output.md §5 |
-| 2024 dividend and net new debt | $168.2M dividend; net new debt $0.0M ($10.0M drawn, $10.0M repaid) | FY2024 10-K cash flow statement; ledger `company.history` |
-| 2021 special dividend and N-able cash | $237.2M dividend; $505.6M from N-able at the spin-off | FY2023 10-K cash flow statement and Item 5; ledger facts `special-dividend-2021`, `spin-distribution-2021` |
-| Controlling holders | Silver Lake 36.56%, Thoma Bravo 29.79% | 2024 proxy, beneficial ownership table; ledger `governance.controlling_holders` |
+| Operating income (EBIT, earnings before interest and tax) | $208.4M | FY2024 10-K income statement ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `company.ebit` |
+| Marginal tax rate | 25% | [Damodaran](sources/market-data/) January 2025 country tax table ([`sources/market-data/country-risk-regions-2025-01-01.md`](sources/market-data/country-risk-regions-2025-01-01.md)); [ledger](inputs.yaml) `market.tax_rate_marginal` |
+| Invested capital (book equity + debt - cash) | $2,348.0M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) balance sheet; [ledger](inputs.yaml) `company.invested_capital` |
+| Cost of capital / cost of equity | 10.23% / 12.65% | Computed in earlier lessons; [model-output.md](model-output.md) §1 |
+| Operating income history, 2022-2024 (2022 with $906.4M non-cash impairments added back) | $86.8M, $150.4M, $208.4M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) (2022-2024 columns) and [FY2023 10-K](sources/filings/swi-10k-fy2023.md); [ledger](inputs.yaml) `company.history` |
+| Total return on $100 invested end of 2019 (SolarWinds vs peer index) | $81, $57, $38, $51 vs $142, $190, $135, $211 (2020-2023) | 2024 proxy, Pay versus Performance table ([`sources/filings/swi-def14a-2024.md`](sources/filings/swi-def14a-2024.md)); [ledger](inputs.yaml) fact `tsr-2023` |
+| Free cash flow to equity (FCFE) and cash returned, 2023-2024 | FCFE $59.4M and $127.0M; returned $18.8M and $194.7M | Computed from the [10-K](sources/filings/swi-10k-fy2024.md) cash flow statements; [model-output.md](model-output.md) §5 |
+| 2024 dividend and net new debt | $168.2M dividend; net new debt $0.0M ($10.0M drawn, $10.0M repaid) | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) cash flow statement; [ledger](inputs.yaml) `company.history` |
+| 2021 special dividend and N-able cash | $237.2M dividend; $505.6M from N-able at the spin-off | [FY2023 10-K](sources/filings/swi-10k-fy2023.md) cash flow statement and Item 5; [ledger](inputs.yaml) facts `special-dividend-2021`, `spin-distribution-2021` |
+| Controlling holders | Silver Lake 36.56%, Thoma Bravo 29.79% | [2024 proxy](sources/filings/swi-def14a-2024.md), beneficial ownership table; [ledger](inputs.yaml) `governance.controlling_holders` |
 
 ### Steps to complete the assignment
 
@@ -1728,14 +1764,14 @@ Full answers: [lesson-27.md](lesson-27.md) · Walkthrough: [Step 27](walkthrough
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Peer payout ratios (dividends / net income) | Five of eight peers 0.0 (Akamai, NetScout, OneSpan, Qualys, Teradata); Progress 46.05%; NetApp and Open Text blank | Peers' FY2024 filings (`sources/peer-filings/peer-facts-2025-02-05.md`); ledger `peers[].payout` |
-| Software sector payout, 351 firms | 27.22% dividends; 80.36% with buybacks | Damodaran January 2025 dividend table (`04-dividends-and-valuation/lesson-28/spreadsheet-divfcfe24.md`); ledger fact `sector-software-payout` |
-| SolarWinds 2024 dividends, buybacks, net income | $168.2M; $26.5M; $111.9M | FY2024 10-K cash flow and income statements; ledger `company.history` |
-| Cash returned and FCFE, 2024 | $194.7M and $127.0M | Computed in lesson 26; model-output.md §5 |
-| Payout regression (R-squared 19.6%) | payout = 0.649 - 0.296 x beta - 0.800 x growth + 0.300 x debt-to-capital | Lesson 28 slides, January 2014 US companies (`04-dividends-and-valuation/lesson-28/slides.md`); ledger fact `payout-regression-2014` |
-| Levered beta and debt-to-capital | 1.6714; 33.03% | Computed in earlier lessons; model-output.md §1 |
-| Expected growth | 8.12% | Management forecast, merger information statement (DEFM14C) (`sources/deal-docs/swi-defm14c-2025-merger.md`); ledger `forecast.management_growth` |
-| Ownership of the two sponsors | 66.35% combined | 2024 proxy; ledger `governance.controlling_holders` |
+| Peer payout ratios (dividends / net income) | Five of eight peers 0.0 (Akamai, NetScout, OneSpan, Qualys, Teradata); Progress 46.05%; NetApp and Open Text blank | Peers' FY2024 filings ([`sources/peer-filings/peer-facts-2025-02-05.md`](sources/peer-filings/peer-facts-2025-02-05.md)); [ledger](inputs.yaml) `peers[].payout` |
+| Software sector payout, 351 firms | 27.22% dividends; 80.36% with buybacks | [Damodaran](sources/market-data/) January 2025 dividend table ([`04-dividends-and-valuation/lesson-28/spreadsheet-divfcfe24.md`](../../04-dividends-and-valuation/lesson-28/spreadsheet-divfcfe24.md)); [ledger](inputs.yaml) fact `sector-software-payout` |
+| SolarWinds 2024 dividends, buybacks, net income | $168.2M; $26.5M; $111.9M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) cash flow and income statements; [ledger](inputs.yaml) `company.history` |
+| Cash returned and FCFE, 2024 | $194.7M and $127.0M | Computed in lesson 26; [model-output.md](model-output.md) §5 |
+| Payout regression (R-squared 19.6%) | payout = 0.649 - 0.296 x beta - 0.800 x growth + 0.300 x debt-to-capital | Lesson 28 slides, January 2014 US companies ([`04-dividends-and-valuation/lesson-28/slides.md`](../../04-dividends-and-valuation/lesson-28/slides.md)); [ledger](inputs.yaml) fact `payout-regression-2014` |
+| Levered beta and debt-to-capital | 1.6714; 33.03% | Computed in earlier lessons; [model-output.md](model-output.md) §1 |
+| Expected growth | 8.12% | Management forecast, merger information statement (DEFM14C) ([`sources/deal-docs/swi-defm14c-2025-merger.md`](sources/deal-docs/swi-defm14c-2025-merger.md)); [ledger](inputs.yaml) `forecast.management_growth` |
+| Ownership of the two sponsors | 66.35% combined | [2024 proxy](sources/filings/swi-def14a-2024.md); [ledger](inputs.yaml) `governance.controlling_holders` |
 
 ### Steps to complete the assignment
 
@@ -1788,15 +1824,15 @@ Full answers: [lesson-28.md](lesson-28.md) · Walkthrough: [Step 28](walkthrough
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Shares outstanding (record date) | 171.6M | Merger information statement (DEFM14C), Written Consent section (`sources/deal-docs/swi-defm14c-2025-merger.md`); ledger `company.shares_basic` |
-| Unaffected share price, 2025-02-05 | $15.18 | DEFM14C, Goldman Sachs fairness opinion; ledger `company.share_price` |
-| Deal price | $18.50 | DEFM14C, Per Share Merger Consideration; ledger `company.deal_price` |
-| Net income, 2024 | $111.9M | FY2024 10-K income statement (`sources/filings/swi-10k-fy2024.md`) |
-| Debt now, and as a share of capital | $1,285.0M; 33.03% at market, 47.28% at book | FY2024 10-K note 9 and note 7 (term loan face value plus leases); model-output.md §1 |
-| New debt the buyer committed | $2,225.0M first lien + $525.0M second lien = $2,750.0M | Merger closing 8-K, Item 1.01 (`sources/deal-docs/swi-8k-2025-04-16-merger-closing.md`); ledger fact `new-debt-2025` |
-| Revenue, EBIT, net income, 2022-2024 | Revenue $719.4M, $758.7M, $796.9M; net income $-929.4M, $-9.1M, $111.9M | FY2024 and FY2023 10-Ks; ledger `company.history` |
-| FCFE and FCFF history | FCFE $-606.2M, $59.4M, $127.0M; FCFF $146.3M, $190.6M, $171.4M | Computed; model-output.md §5 and §8 |
-| Total return and share-count history | $100 became $51 (2023) vs peers $211; 309.9M shares (Feb 2019), 155.0M after the reverse split | 2024 proxy Pay versus Performance; FY2023 10-K Item 5; ledger facts `tsr-2023`, `shares-2019-02-15`, `corporate-actions-2021` |
+| Shares outstanding (record date) | 171.6M | Merger information statement (DEFM14C), Written Consent section ([`sources/deal-docs/swi-defm14c-2025-merger.md`](sources/deal-docs/swi-defm14c-2025-merger.md)); [ledger](inputs.yaml) `company.shares_basic` |
+| Unaffected share price, 2025-02-05 | $15.18 | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md), Goldman Sachs fairness opinion; [ledger](inputs.yaml) `company.share_price` |
+| Deal price | $18.50 | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md), Per Share Merger Consideration; [ledger](inputs.yaml) `company.deal_price` |
+| Net income, 2024 | $111.9M | FY2024 10-K income statement ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)) |
+| Debt now, and as a share of capital | $1,285.0M; 33.03% at market, 47.28% at book | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) note 9 and note 7 (term loan face value plus leases); [model-output.md](model-output.md) §1 |
+| New debt the buyer committed | $2,225.0M first lien + $525.0M second lien = $2,750.0M | Merger closing 8-K, Item 1.01 ([`sources/deal-docs/swi-8k-2025-04-16-merger-closing.md`](sources/deal-docs/swi-8k-2025-04-16-merger-closing.md)); [ledger](inputs.yaml) fact `new-debt-2025` |
+| Revenue, EBIT, net income, 2022-2024 | Revenue $719.4M, $758.7M, $796.9M; net income $-929.4M, $-9.1M, $111.9M | FY2024 and [FY2023 10-K](sources/filings/swi-10k-fy2023.md)s; [ledger](inputs.yaml) `company.history` |
+| FCFE and FCFF history | FCFE $-606.2M, $59.4M, $127.0M; FCFF $146.3M, $190.6M, $171.4M | Computed; [model-output.md](model-output.md) §5 and §8 |
+| Total return and share-count history | $100 became $51 (2023) vs peers $211; 309.9M shares (Feb 2019), 155.0M after the reverse split | [2024 proxy](sources/filings/swi-def14a-2024.md) Pay versus Performance; [FY2023 10-K](sources/filings/swi-10k-fy2023.md) Item 5; [ledger](inputs.yaml) facts `tsr-2023`, `shares-2019-02-15`, `corporate-actions-2021` |
 
 ### Steps to complete the assignment
 
@@ -1836,7 +1872,7 @@ Full answers: [lesson-29.md](lesson-29.md) · Walkthrough: [Step 29](walkthrough
 | **10-K (annual report)** | The company's official yearly report to the SEC: audited financial statements, notes that explain them, risks, business description and management's discussion of results. | The main source for any valuation: earnings, debt, leases, taxes, share counts and segment data. Filed within 60–90 days of year-end. | SEC EDGAR (sec.gov/edgar, search by company name or ticker), or the company's investor-relations website. |
 | **Merger information statement (DEFM14C)** | The document sent to shareholders when a merger is approved by written consent of the controlling holders, so no vote is held. It covers the background of the sale, the fairness opinions, management's forecasts and executive payouts. | Any analysis of a buyout: the deal price, how it was negotiated, the forecasts the board relied on. When there is a shareholder vote, the equivalent is a merger proxy (DEFM14A). | SEC EDGAR (filing type DEFM14C or DEFM14A). |
 | **Damodaran datasets** | Free spreadsheets Professor Damodaran updates each January (some monthly): equity risk premiums, industry betas, country risk premiums, tax rates, and the table that turns interest coverage into a credit rating and borrowing spread. | The market-wide inputs to a cost of capital that a single company's filings can't give you. | pages.stern.nyu.edu/~adamodar, under Data; older editions are in the archive section. |
-| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR, the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
+| **FRED (Federal Reserve economic data)** | The St. Louis Fed's free database of interest rates and economic series: Treasury yields, SOFR (the Secured Overnight Financing Rate, the overnight benchmark most floating-rate loans, including SolarWinds' term loan, are priced from), the fed funds rate, inflation. | The risk-free rate (10-year Treasury yield) on a specific date, and benchmark rates for floating-rate loans. | fred.stlouisfed.org (for example, series DGS10 for the 10-year Treasury yield). |
 
 ### What the project asked
 
@@ -1847,16 +1883,16 @@ Full answers: [lesson-29.md](lesson-29.md) · Walkthrough: [Step 29](walkthrough
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Operating income (EBIT) | $208.4M | FY2024 10-K income statement (`sources/filings/swi-10k-fy2024.md`); ledger `company.ebit` |
-| Tax rate used | 25% marginal (reported rate unusable: $8.1M tax benefit on $103.8M pre-tax income) | Damodaran January 2025 country tax table; FY2024 10-K; ledger `market.tax_rate_marginal`, fact `tax-benefit-2024` |
-| Capital spending | $20.5M | FY2024 10-K cash flow statement; ledger `company.capex` |
-| Depreciation and amortization (D&A) | $74.4M, of which $52.9M is acquired technology and intangibles | FY2024 10-K cash flow and income statements; ledger `company.da`, `company.acquisition_amortization` |
-| Change in working capital | $38.8M investment | FY2024 10-K cash flow statement; ledger `company.change_wc` |
-| Stock-based compensation | $76.5M (treated as an expense) | FY2024 10-K cash flow statement; ledger `company.sbc` |
-| Cost of equity and cost of capital | 12.65% and 10.23% | Computed in earlier lessons; model-output.md §1 |
-| Risk-free rate, equity risk premium, levered beta | 4.43%, 4.92%, 1.6714 | FRED 10-year Treasury 2025-02-05; Damodaran January 2025 data weighted by revenue by region (10-K note 16); model-output.md §1 |
-| Optimal-debt cost of capital schedule | 10.03% at 21% debt; 10.72% at 40%; 16.44% at 50% | Model-output.md §3 |
-| Management's 2025 free cash flow | $212.0M | DEFM14C, Certain Company Financial Forecasts; ledger `forecast.years` |
+| Operating income (EBIT) | $208.4M | FY2024 10-K income statement ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `company.ebit` |
+| Tax rate used | 25% marginal (reported rate unusable: $8.1M tax benefit on $103.8M pre-tax income) | [Damodaran](sources/market-data/) January 2025 country tax table; [FY2024 10-K](sources/filings/swi-10k-fy2024.md); [ledger](inputs.yaml) `market.tax_rate_marginal`, fact `tax-benefit-2024` |
+| Capital spending | $20.5M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) cash flow statement; [ledger](inputs.yaml) `company.capex` |
+| Depreciation and amortization (D&A) | $74.4M, of which $52.9M is acquired technology and intangibles | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) cash flow and income statements; [ledger](inputs.yaml) `company.da`, `company.acquisition_amortization` |
+| Change in working capital | $38.8M investment | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) cash flow statement; [ledger](inputs.yaml) `company.change_wc` |
+| Stock-based compensation | $76.5M (treated as an expense) | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) cash flow statement; [ledger](inputs.yaml) `company.sbc` |
+| Cost of equity and cost of capital | 12.65% and 10.23% | Computed in earlier lessons; [model-output.md](model-output.md) §1 |
+| Risk-free rate, equity risk premium, levered beta | 4.43%, 4.92%, 1.6714 | [FRED](sources/market-data/rates-2025-02-05.md) 10-year Treasury 2025-02-05; [Damodaran](sources/market-data/) January 2025 data weighted by revenue by region ([10-K](sources/filings/swi-10k-fy2024.md) note 16); [model-output.md](model-output.md) §1 |
+| Optimal-debt cost of capital schedule | 10.03% at 21% debt; 10.72% at 40%; 16.44% at 50% | [Model-output.md](model-output.md) §3 |
+| Management's 2025 free cash flow | $212.0M | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md), Certain Company Financial Forecasts; [ledger](inputs.yaml) `forecast.years` |
 
 ### Steps to complete the assignment
 
@@ -1910,16 +1946,16 @@ Full answers: [lesson-30.md](lesson-30.md) · Walkthrough: [Step 30](walkthrough
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| ROIC and reinvestment rate, 2024 | 6.66% and -9.66% (24.18% on the alternative basis) | Computed in lessons 27 and 30; model-output.md §8 |
-| Revenue, 2022-2024 | $719.4M, $758.7M, $796.9M | FY2024 10-K; ledger `company.history` |
-| EBIT history (2022 ex impairments) | $86.8M, $150.4M, $208.4M | FY2024 and FY2023 10-Ks; model-output.md §8 |
-| Net income, 2022-2024 | $-929.4M, $-9.1M, $111.9M | FY2024 10-K; ledger `company.history` |
-| Return on equity | 7.99% | Model-output.md §8 |
-| Management forecast | Revenue $832.0M (2025) to $1,273.0M (2030); EBIT margin 32.69% to 40.14%; 8.12% a year | DEFM14C, Certain Company Financial Forecasts (`sources/deal-docs/swi-defm14c-2025-merger.md`); ledger `forecast.years`, `forecast.management_growth` |
-| Analyst growth | Not available | Capital IQ estimates grid did not load; listed under `meta.omitted` in `inputs.yaml` |
-| Peer revenue growth and EBIT margin | Growth median 4.05% (range -9.3% to 28.6%); margin median 15.92% | Peers' FY2024 filings (`sources/peer-filings/peer-facts-2025-02-05.md`); ledger `peers`, fact `peer-median-growth-margin` |
-| Research and development expense | $108.6M | FY2024 10-K income statement; ledger `company.rd_expense` |
-| Invested capital, 2022-2024 | $2,422.9M, $2,356.3M, $2,348.0M | FY2024 and FY2023 10-K balance sheets; ledger `company.history` |
+| ROIC and reinvestment rate, 2024 | 6.66% and -9.66% (24.18% on the alternative basis) | Computed in lessons 27 and 30; [model-output.md](model-output.md) §8 |
+| Revenue, 2022-2024 | $719.4M, $758.7M, $796.9M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md); [ledger](inputs.yaml) `company.history` |
+| EBIT history (2022 ex impairments) | $86.8M, $150.4M, $208.4M | FY2024 and [FY2023 10-K](sources/filings/swi-10k-fy2023.md)s; [model-output.md](model-output.md) §8 |
+| Net income, 2022-2024 | $-929.4M, $-9.1M, $111.9M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md); [ledger](inputs.yaml) `company.history` |
+| Return on equity | 7.99% | [Model-output.md](model-output.md) §8 |
+| Management forecast | Revenue $832.0M (2025) to $1,273.0M (2030); EBIT margin 32.69% to 40.14%; 8.12% a year | DEFM14C, Certain Company Financial Forecasts ([`sources/deal-docs/swi-defm14c-2025-merger.md`](sources/deal-docs/swi-defm14c-2025-merger.md)); [ledger](inputs.yaml) `forecast.years`, `forecast.management_growth` |
+| Analyst growth | Not available | [Capital IQ](sources/capital-iq/) estimates grid did not load; listed under `meta.omitted` in [`inputs.yaml`](inputs.yaml) |
+| Peer revenue growth and EBIT margin | Growth median 4.05% (range -9.3% to 28.6%); margin median 15.92% | Peers' FY2024 filings ([`sources/peer-filings/peer-facts-2025-02-05.md`](sources/peer-filings/peer-facts-2025-02-05.md)); [ledger](inputs.yaml) `peers`, fact `peer-median-growth-margin` |
+| Research and development expense | $108.6M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) income statement; [ledger](inputs.yaml) `company.rd_expense` |
+| Invested capital, 2022-2024 | $2,422.9M, $2,356.3M, $2,348.0M | FY2024 and [FY2023 10-K](sources/filings/swi-10k-fy2023.md) balance sheets; [ledger](inputs.yaml) `company.history` |
 
 ### Steps to complete the assignment
 
@@ -1972,16 +2008,16 @@ Full answers: [lesson-31.md](lesson-31.md) · Walkthrough: [Step 31](walkthrough
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Net retention rate (subscription) and large customers | 99% (2024), 97% (2023); customers over $100,000 of annual recurring revenue (ARR) 1,148 vs 979; total ARR $729.0M, up 6.6% | FY2024 10-K MD&A (`sources/filings/swi-10k-fy2024.md`); ledger facts `net-retention-subscription`, `customers-over-100k-arr`, `total-arr-2024` |
-| EBIT margin vs peers | 26.2% vs peer median 15.9% | FY2024 10-K; peers' filings (`sources/peer-filings/peer-facts-2025-02-05.md`); ledger `peers[].ebit_margin` |
-| 2023 market check | 13 parties approached; three indications withdrew; Party A about $14.00 revised to $13.00 | DEFM14C, Background of the Merger; ledger fact `market-check-2023` |
-| Management forecast 2025-2030, including 2030 FCFF | 2030 revenue $1,273.0M, EBIT margin 40.14%, FCFF $419.0M | DEFM14C, Certain Company Financial Forecasts; ledger `forecast.years` |
-| 2030 detail | EBIT $511M, D&A $25M, capex $27M, deferred revenue change +$46M | DEFM14C forecast summary table; ledger fact `forecast-2030-detail` |
-| Terminal growth and stable ROIC | 2.5%; 10% | Judgment: Goldman Sachs 2%-3% and Jefferies 2.5%-3.5% perpetuity ranges in the DEFM14C; ledger `market.terminal_growth`, `forecast.stable_roic` |
-| Cost of capital | 10.23% | Model-output.md §1 |
-| Terminal value under two methods | $3,808.9M (consistent reinvestment) vs $5,552.5M (grow final-year FCFF) | Model-output.md §6 |
-| 2030 discount factor and shares | 0.5573; 171.6M | Model-output.md §6; ledger `company.shares_basic` |
-| Goodwill | $2,363.2M | FY2024 10-K balance sheet; ledger `company.goodwill` |
+| Net retention rate (subscription) and large customers | 99% (2024), 97% (2023); customers over $100,000 of annual recurring revenue (ARR) 1,148 vs 979; total ARR $729.0M, up 6.6% | FY2024 10-K MD&A ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) facts `net-retention-subscription`, `customers-over-100k-arr`, `total-arr-2024` |
+| EBIT margin vs peers | 26.2% vs peer median 15.9% | [FY2024 10-K](sources/filings/swi-10k-fy2024.md); peers' filings ([`sources/peer-filings/peer-facts-2025-02-05.md`](sources/peer-filings/peer-facts-2025-02-05.md)); [ledger](inputs.yaml) `peers[].ebit_margin` |
+| 2023 market check | 13 parties approached; three indications withdrew; Party A about $14.00 revised to $13.00 | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md), Background of the Merger; [ledger](inputs.yaml) fact `market-check-2023` |
+| Management forecast 2025-2030, including 2030 FCFF | 2030 revenue $1,273.0M, EBIT margin 40.14%, FCFF $419.0M | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md), Certain Company Financial Forecasts; [ledger](inputs.yaml) `forecast.years` |
+| 2030 detail | EBIT $511M, D&A $25M, capex $27M, deferred revenue change +$46M | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md) forecast summary table; [ledger](inputs.yaml) fact `forecast-2030-detail` |
+| Terminal growth and stable ROIC | 2.5%; 10% | Judgment: Goldman Sachs 2%-3% and Jefferies 2.5%-3.5% perpetuity ranges in the [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md); [ledger](inputs.yaml) `market.terminal_growth`, `forecast.stable_roic` |
+| Cost of capital | 10.23% | [Model-output.md](model-output.md) §1 |
+| Terminal value under two methods | $3,808.9M (consistent reinvestment) vs $5,552.5M (grow final-year FCFF) | [Model-output.md](model-output.md) §6 |
+| 2030 discount factor and shares | 0.5573; 171.6M | [Model-output.md](model-output.md) §6; [ledger](inputs.yaml) `company.shares_basic` |
+| Goodwill | $2,363.2M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) balance sheet; [ledger](inputs.yaml) `company.goodwill` |
 
 ### Steps to complete the assignment
 
@@ -2034,16 +2070,16 @@ Full answers: [lesson-32.md](lesson-32.md) · Walkthrough: [Step 32](walkthrough
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Cash and short-term investments | $259.3M ($251.9M cash + $7.5M short-term investments) | FY2024 10-K balance sheet (`sources/filings/swi-10k-fy2024.md`); ledger `company.cash` |
-| Revolver (undrawn) | $130.0M | FY2024 10-K note 9; ledger `debt.revolver_undrawn` |
-| Debt | $1,285.0M (term loan face value plus leases) | FY2024 10-K notes 9 and 7; ledger `company.debt_total` |
-| Enterprise value from the DCF | $3,444.3M | Model-output.md §6 |
-| Unvested restricted stock units (RSUs) and performance stock units (PSUs) | 9,960,353 RSUs + 2,253,709 PSUs = 12.214M units; 113,430 vested options at $0.98 | FY2024 10-K note 10; ledger `company.options_value` |
-| Options and RSU claim | $187.0M | Computed from note 10 at the $15.18 price; ledger `company.options_value` |
-| Basic and diluted shares | 171.6M and 174.5M | DEFM14C Written Consent (record date); FY2024 10-K note 11; ledger `company.shares_basic`, `company.shares_diluted` |
-| Stock-based compensation | $76.5M | FY2024 10-K cash flow statement; ledger `company.sbc` |
-| Minority and cross holdings | None; no noncontrolling interest | FY2024 10-K balance sheet and equity statement |
-| Equity value (market) | $2,604.9M | Computed in lesson 29; ledger `company.equity_value` |
+| Cash and short-term investments | $259.3M ($251.9M cash + $7.5M short-term investments) | FY2024 10-K balance sheet ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `company.cash` |
+| Revolver (undrawn) | $130.0M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) note 9; [ledger](inputs.yaml) `debt.revolver_undrawn` |
+| Debt | $1,285.0M (term loan face value plus leases) | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) notes 9 and 7; [ledger](inputs.yaml) `company.debt_total` |
+| Enterprise value from the DCF | $3,444.3M | [Model-output.md](model-output.md) §6 |
+| Unvested restricted stock units (RSUs) and performance stock units (PSUs) | 9,960,353 RSUs + 2,253,709 PSUs = 12.214M units; 113,430 vested options at $0.98 | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) note 10; [ledger](inputs.yaml) `company.options_value` |
+| Options and RSU claim | $187.0M | Computed from note 10 at the $15.18 price; [ledger](inputs.yaml) `company.options_value` |
+| Basic and diluted shares | 171.6M and 174.5M | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md) Written Consent (record date); [FY2024 10-K](sources/filings/swi-10k-fy2024.md) note 11; [ledger](inputs.yaml) `company.shares_basic`, `company.shares_diluted` |
+| Stock-based compensation | $76.5M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) cash flow statement; [ledger](inputs.yaml) `company.sbc` |
+| Minority and cross holdings | None; no noncontrolling interest | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) balance sheet and equity statement |
+| Equity value (market) | $2,604.9M | Computed in lesson 29; [ledger](inputs.yaml) `company.equity_value` |
 
 ### Steps to complete the assignment
 
@@ -2095,16 +2131,16 @@ Full answers: [lesson-33.md](lesson-33.md) · Walkthrough: [Step 33](walkthrough
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Management forecast 2025-2030 | Revenue $832.0M to $1,273.0M; EBIT margin 32.69% to 40.14%; FCFF $212.0M to $419.0M | DEFM14C, Certain Company Financial Forecasts (`sources/deal-docs/swi-defm14c-2025-merger.md`); ledger `forecast.years` |
-| Cost of capital, levered beta | 10.23%; 1.6714 | Model-output.md §1 |
-| Terminal growth and stable ROIC | 2.5%; 10% | Judgment, see lesson 32; ledger `market.terminal_growth`, `forecast.stable_roic` |
-| DCF results | Present value of cash flows $1,321.6M; present value of terminal value $2,122.7M; enterprise value $3,444.3M | Model-output.md §6 |
-| Debt, cash, options claim, basic shares | $1,285.0M; $259.3M; $187.0M; 171.6M | FY2024 10-K notes 9, 7, 10; DEFM14C; ledger `company.*` |
-| Unaffected and deal prices | $15.18; $18.50 | DEFM14C, Goldman Sachs opinion and Per Share Merger Consideration |
-| Banks' DCF ranges and discount rates | Goldman Sachs $14.30-$23.70 (9%-11%); Jefferies $14.70-$19.70 (10.70%-11.70%) | DEFM14C, Goldman Sachs and Jefferies opinions; ledger facts `gs-dcf-range`, `jefferies-dcf-range` |
-| Optimal debt ratio and its value | 21% (vs 33.03%); cost of capital 10.03%; enterprise value $3,533.4M; $13.52 a share | Model-output.md §3 and §6 |
-| Owners and board | Silver Lake 36.56%, Thoma Bravo 29.79%; three of nine directors are Silver Lake designees | 2024 proxy; ledger `governance.controlling_holders`, `governance.board` |
-| Buyer's financing | $2,225M first lien, $525M second lien, $200M revolver | Merger closing 8-K Item 1.01 (`sources/deal-docs/swi-8k-2025-04-16-merger-closing.md`); ledger fact `new-debt-2025` |
+| Management forecast 2025-2030 | Revenue $832.0M to $1,273.0M; EBIT margin 32.69% to 40.14%; FCFF $212.0M to $419.0M | DEFM14C, Certain Company Financial Forecasts ([`sources/deal-docs/swi-defm14c-2025-merger.md`](sources/deal-docs/swi-defm14c-2025-merger.md)); [ledger](inputs.yaml) `forecast.years` |
+| Cost of capital, levered beta | 10.23%; 1.6714 | [Model-output.md](model-output.md) §1 |
+| Terminal growth and stable ROIC | 2.5%; 10% | Judgment, see lesson 32; [ledger](inputs.yaml) `market.terminal_growth`, `forecast.stable_roic` |
+| DCF results | Present value of cash flows $1,321.6M; present value of terminal value $2,122.7M; enterprise value $3,444.3M | [Model-output.md](model-output.md) §6 |
+| Debt, cash, options claim, basic shares | $1,285.0M; $259.3M; $187.0M; 171.6M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) notes 9, 7, 10; [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md); [ledger](inputs.yaml) `company.*` |
+| Unaffected and deal prices | $15.18; $18.50 | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md), Goldman Sachs opinion and Per Share Merger Consideration |
+| Banks' DCF ranges and discount rates | Goldman Sachs $14.30-$23.70 (9%-11%); Jefferies $14.70-$19.70 (10.70%-11.70%) | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md), Goldman Sachs and Jefferies opinions; [ledger](inputs.yaml) facts `gs-dcf-range`, `jefferies-dcf-range` |
+| Optimal debt ratio and its value | 21% (vs 33.03%); cost of capital 10.03%; enterprise value $3,533.4M; $13.52 a share | [Model-output.md](model-output.md) §3 and §6 |
+| Owners and board | Silver Lake 36.56%, Thoma Bravo 29.79%; three of nine directors are Silver Lake designees | [2024 proxy](sources/filings/swi-def14a-2024.md); [ledger](inputs.yaml) `governance.controlling_holders`, `governance.board` |
+| Buyer's financing | $2,225M first lien, $525M second lien, $200M revolver | Merger closing 8-K Item 1.01 ([`sources/deal-docs/swi-8k-2025-04-16-merger-closing.md`](sources/deal-docs/swi-8k-2025-04-16-merger-closing.md)); [ledger](inputs.yaml) fact `new-debt-2025` |
 
 ### Steps to complete the assignment
 
@@ -2160,15 +2196,15 @@ Full answers: [lesson-34.md](lesson-34.md) · Walkthrough: [Step 34](walkthrough
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Equity value, debt, cash | $2,604.9M; $1,285.0M; $259.3M | DEFM14C (price, shares); FY2024 10-K balance sheet and notes; ledger `company.*` |
-| Enterprise value | $3,630.6M | Computed; model-output.md §7 |
-| Revenue, standardized EBITDA, net income, book equity | $796.9M; $282.8M; $111.9M; $1,400.7M | FY2024 10-K (`sources/filings/swi-10k-fy2024.md`); ledger `company.*` |
-| Peer set (8 companies) | Akamai, NetApp, NetScout, OneSpan, Open Text, Progress, Qualys, Teradata | Peers' FY2024 filings via SEC XBRL, priced 2025-02-05 (`sources/peer-filings/peer-facts-2025-02-05.md`); the set is from Jefferies' fairness opinion in the DEFM14C |
-| Peer median multiples | EV/revenue 3.32x; EV/EBITDA 16.39x; P/E 26.57x; P/B 4.58x | Model-output.md §7 |
-| Peer growth, EBIT margin, debt ratio | Growth median 4.1%; margin median 15.92%; debt ratio median 11.7% | Same peer file; ledger `peers[]` |
-| Options and RSU claim and basic shares | $187.0M; 171.6M | FY2024 10-K note 10; DEFM14C; ledger `company.options_value`, `company.shares_basic` |
-| Goodwill | $2,363.2M | FY2024 10-K balance sheet; ledger `company.goodwill` |
-| Company-adjusted EBITDA (not used) | $384.7M | FY2024 10-K MD&A non-GAAP reconciliation; ledger `company.ebitda_adjusted` |
+| Equity value, debt, cash | $2,604.9M; $1,285.0M; $259.3M | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md) (price, shares); [FY2024 10-K](sources/filings/swi-10k-fy2024.md) balance sheet and notes; [ledger](inputs.yaml) `company.*` |
+| Enterprise value | $3,630.6M | Computed; [model-output.md](model-output.md) §7 |
+| Revenue, standardized EBITDA, net income, book equity | $796.9M; $282.8M; $111.9M; $1,400.7M | FY2024 10-K ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `company.*` |
+| Peer set (8 companies) | Akamai, NetApp, NetScout, OneSpan, Open Text, Progress, Qualys, Teradata | Peers' FY2024 filings via SEC XBRL, priced 2025-02-05 ([`sources/peer-filings/peer-facts-2025-02-05.md`](sources/peer-filings/peer-facts-2025-02-05.md)); the set is from Jefferies' fairness opinion in the [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md) |
+| Peer median multiples | EV/revenue 3.32x; EV/EBITDA 16.39x; P/E 26.57x; P/B 4.58x | [Model-output.md](model-output.md) §7 |
+| Peer growth, EBIT margin, debt ratio | Growth median 4.1%; margin median 15.92%; debt ratio median 11.7% | Same peer file; [ledger](inputs.yaml) `peers[]` |
+| Options and RSU claim and basic shares | $187.0M; 171.6M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) note 10; [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md); [ledger](inputs.yaml) `company.options_value`, `company.shares_basic` |
+| Goodwill | $2,363.2M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) balance sheet; [ledger](inputs.yaml) `company.goodwill` |
+| Company-adjusted EBITDA (not used) | $384.7M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) MD&A non-GAAP reconciliation; [ledger](inputs.yaml) `company.ebitda_adjusted` |
 
 ### Steps to complete the assignment
 
@@ -2219,15 +2255,15 @@ Full answers: [lesson-35.md](lesson-35.md) · Walkthrough: [Step 35](walkthrough
 
 | Information | SolarWinds value | Where we got it |
 |---|---|---|
-| Ownership and board | Silver Lake 36.56%, Thoma Bravo 29.79% (66.35%); 3 Silver Lake designees on the board | 2024 proxy (`sources/filings/swi-def14a-2024.md`); ledger `governance.*` |
-| Sponsors' vote and consent | 111,564,519 shares, about 65% of votes, written consent 2025-02-07; no vote held | DEFM14C, Written Consent (`sources/deal-docs/swi-defm14c-2025-merger.md`); ledger fact `sponsor-voting-power-2025-02` |
-| Adviser fees and conflicts | Goldman Sachs fee about $42M (contingent on closing); Jefferies $6.25M and about $39M from the sellers' firms | DEFM14C, fairness opinion fee paragraphs; ledger fact `adviser-fees-and-conflicts` |
-| Change-of-control payouts | $38.96M for three executives; CEO $22.99M | DEFM14C, Golden Parachute Compensation; ledger `governance.change_of_control_payouts` |
-| 2023 market check | 13 parties approached; highest indication Party A $13.00, revised from about $14.00 | DEFM14C, Background of the Merger; ledger fact `market-check-2023` |
-| Returns, financing, payout | ROIC 6.66% (2.69% in 2022 ex impairments) vs cost of capital 10.23%; debt 33.03% vs optimum 21%; returned $194.7M vs FCFE $127.0M | Computed in lessons 27 to 34; model-output.md §1, §3, §5, §8 |
-| Revenue, margin, retention, goodwill | $796.9M; 26.2%; 97%-99%; $2,363.2M | FY2024 10-K (`sources/filings/swi-10k-fy2024.md`); ledger `company.*` |
-| DCF and multiples results | $13.00; $18.67 with the other terminal value; $19.95 at 16.39x EBITDA; $8.34 at 3.32x revenue | Model-output.md §6 and §7 |
-| Banks' DCF ranges, new debt, price record | Goldman Sachs $14.30-$23.70; Jefferies $14.70-$19.70; $2,750M term debt; $15.18 was the 52-week high | DEFM14C opinions; merger closing 8-K; ledger facts `gs-dcf-range`, `jefferies-dcf-range`, `new-debt-2025`, `unaffected-price-record` |
+| Ownership and board | Silver Lake 36.56%, Thoma Bravo 29.79% (66.35%); 3 Silver Lake designees on the board | 2024 proxy ([`sources/filings/swi-def14a-2024.md`](sources/filings/swi-def14a-2024.md)); [ledger](inputs.yaml) `governance.*` |
+| Sponsors' vote and consent | 111,564,519 shares, about 65% of votes, written consent 2025-02-07; no vote held | DEFM14C, Written Consent ([`sources/deal-docs/swi-defm14c-2025-merger.md`](sources/deal-docs/swi-defm14c-2025-merger.md)); [ledger](inputs.yaml) fact `sponsor-voting-power-2025-02` |
+| Adviser fees and conflicts | Goldman Sachs fee about $42M (contingent on closing); Jefferies $6.25M and about $39M from the sellers' firms | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md), fairness opinion fee paragraphs; [ledger](inputs.yaml) fact `adviser-fees-and-conflicts` |
+| Change-of-control payouts | $38.96M for three executives; CEO $22.99M | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md), Golden Parachute Compensation; [ledger](inputs.yaml) `governance.change_of_control_payouts` |
+| 2023 market check | 13 parties approached; highest indication Party A $13.00, revised from about $14.00 | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md), Background of the Merger; [ledger](inputs.yaml) fact `market-check-2023` |
+| Returns, financing, payout | ROIC 6.66% (2.69% in 2022 ex impairments) vs cost of capital 10.23%; debt 33.03% vs optimum 21%; returned $194.7M vs FCFE $127.0M | Computed in lessons 27 to 34; [model-output.md](model-output.md) §1, §3, §5, §8 |
+| Revenue, margin, retention, goodwill | $796.9M; 26.2%; 97%-99%; $2,363.2M | FY2024 10-K ([`sources/filings/swi-10k-fy2024.md`](sources/filings/swi-10k-fy2024.md)); [ledger](inputs.yaml) `company.*` |
+| DCF and multiples results | $13.00; $18.67 with the other terminal value; $19.95 at 16.39x EBITDA; $8.34 at 3.32x revenue | [Model-output.md](model-output.md) §6 and §7 |
+| Banks' DCF ranges, new debt, price record | Goldman Sachs $14.30-$23.70; Jefferies $14.70-$19.70; $2,750M term debt; $15.18 was the 52-week high | [DEFM14C](sources/deal-docs/swi-defm14c-2025-merger.md) opinions; merger closing 8-K; [ledger](inputs.yaml) facts `gs-dcf-range`, `jefferies-dcf-range`, `new-debt-2025`, `unaffected-price-record` |
 
 ### Steps to complete the assignment
 
