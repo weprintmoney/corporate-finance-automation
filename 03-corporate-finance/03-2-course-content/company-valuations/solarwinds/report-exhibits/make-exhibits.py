@@ -195,7 +195,7 @@ ax.set_yticks(ys, [n for n, _ in pairs])
 ax.set_xlim(0, 50)
 ax.set_xlabel("Share of common stock (%)")
 ax.grid(axis="y", visible=False)
-finish(fig, ax, f"Two private-equity sponsors held {sum(p for _, p in pairs[:-1]):.2f}% of SolarWinds",
+finish(fig, ax, "Two private-equity sponsors held two-thirds of SolarWinds",
        "Beneficial ownership at the 2024 proxy; \"all other holders\" is the remainder",
        "SolarWinds 2024 proxy statement, beneficial ownership table; the proxy states the sponsors' combined stake as 66.34%",
        "exhibit-5-ownership.png", left=0.22)
