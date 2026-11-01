@@ -343,14 +343,24 @@ def main(path):
         n = len(fcffs)
         wacc_stable = L.num("forecast.wacc_stable") or wacc
         # Lesson 32: a stable-growth firm has a beta closer to one and a debt ratio closer to the industry or its
-        # optimum. When the ledger gives both, the terminal cost of capital is rebuilt from them (cost of debt held
-        # at the current rate, as in the course's Disney example) instead of carrying today's risk forever.
+        # optimum. When the ledger gives both, the terminal cost of capital is rebuilt from them instead of carrying
+        # today's risk forever. The cost of debt is the one the section 3 schedule assigns at the stable debt ratio
+        # (its rating and spread at that ratio), unless the ledger gives forecast.stable_cost_of_debt; if the ratio
+        # is not on the schedule, today's rate is held.
         b_s, d_s = L.num("forecast.stable_beta"), L.num("forecast.stable_debt_ratio")
         stable_build = None
         if L.num("forecast.wacc_stable") is None and b_s is not None and d_s is not None:
             ke_s = rf + b_s * erp
-            wacc_stable = (1 - d_s) * ke_s + d_s * kd * (1 - t)
-            stable_build = (b_s, ke_s, d_s)
+            kd_s, kd_s_how = kd, "current pre-tax {} held unchanged".format(pct(kd))
+            if L.num("forecast.stable_cost_of_debt") is not None:
+                kd_s, kd_s_how = L.num("forecast.stable_cost_of_debt"), "forecast.stable_cost_of_debt"
+            else:
+                hit = next(((r_d, kd_d) for (dd, w_d, cov_d, r_d, kd_d) in results.get(chosen_label, results["EBIT"])["rows"]
+                            if abs(dd - d_s) < 1e-9), None)
+                if hit:
+                    kd_s, kd_s_how = hit[1], "section 3 schedule at {} debt: {} rating, {} + spread".format(pct(d_s), hit[0], pct(tb))
+            wacc_stable = (1 - d_s) * ke_s + d_s * kd_s * (1 - t)
+            stable_build = (b_s, ke_s, d_s, kd_s, kd_s_how)
         roic_stable = L.num("forecast.stable_roic")
         method = L.get("modeling_choices.terminal_method", "consistent_reinvestment")
         last = years[-1]
@@ -374,13 +384,14 @@ def main(path):
                   pct(wacc), pct(wacc_stable), pct(g)))
         print()
         if stable_build:
-            b_s, ke_s, d_s = stable_build
+            b_s, ke_s, d_s, kd_s, kd_s_how = stable_build
             print("| Terminal-period cost of capital | Value | How |")
             print("|---|---|---|")
             print("| Stable beta | {:.2f} | forecast.stable_beta (lesson 32: betas move toward one) |".format(b_s))
             print("| Stable cost of equity | {} | rf {} + stable beta × ERP {} |".format(pct(ke_s), pct(rf), pct(erp)))
             print("| Stable debt ratio | {} | forecast.stable_debt_ratio |".format(pct(d_s)))
-            print("| After-tax cost of debt | {} | current pre-tax {} × (1 − t), held unchanged |".format(pct(kd * (1 - t)), pct(kd)))
+            print("| Pre-tax cost of debt | {} | {} |".format(pct(kd_s), kd_s_how))
+            print("| After-tax cost of debt | {} | pre-tax × (1 − t) |".format(pct(kd_s * (1 - t))))
             print("| **Stable cost of capital** | **{}** | (1 − D/V) × ke + D/V × kd × (1 − t) |".format(pct(wacc_stable)))
             print()
             print("The terminal value is capitalized at the stable cost of capital and discounted back to today at the "
@@ -455,6 +466,26 @@ def main(path):
                 print("The final-year-FCFF terminal value implies terminal reinvestment of {}: it needs no reinvestment, or "
                       "negative reinvestment, to grow at {}.".format(pct(need), pct(g)))
             print()
+            if stable_build:
+                # the stable beta is a judgment (lesson 32: between about 0.8 and 1.2); show what it moves
+                b_s, ke_s, d_s, kd_s, kd_s_how = stable_build
+                bl_s = bu * (1 + (1 - t) * d_s / (1 - d_s))
+                print("Sensitivity to the stable beta, which sets the stable cost of capital. Each row rebuilds the cost of "
+                      "capital at the stable debt ratio {} with the same cost of debt {}; the first value column keeps the "
+                      "return on new capital equal to that row's cost of capital (no excess returns), the others hold it at "
+                      "the stated return.".format(pct(d_s), pct(kd_s)))
+                print()
+                print("| Stable beta | Stable cost of equity | Stable cost of capital | Value per share, return = cost of capital | at 10% | at 12% | at 15% |")
+                print("|---|---|---|---|---|---|---|")
+                for b_i, how_b in sorted({(0.8, ""), (b_s, " (ledger)"), (round(bl_s, 2), " (today's unlevered beta {:.2f} relevered at {})".format(bu, pct(d_s)))}):
+                    ke_i = rf + b_i * erp
+                    w_i = (1 - d_s) * ke_i + d_s * kd_s * (1 - t)
+                    vals = []
+                    for r_i in [w_i, 0.10, 0.12, 0.15]:
+                        tv_i = ebit_n * (1 - t) * (1 - g / r_i) / (w_i - g) if w_i > g else float("nan")
+                        vals.append((pv_explicit + tv_i / (1 + wacc) ** n - D + cash - mi + xh - opt) / sb)
+                    print("| {:.2f}{} | {} | {} | ${:.2f} | ${:.2f} | ${:.2f} | ${:.2f} |".format(b_i, how_b, pct(ke_i), pct(w_i), *vals))
+                print()
         # financing lever of the value of control
         res = results.get(chosen_label, results["EBIT"])
         if res["w_opt"] < wacc:

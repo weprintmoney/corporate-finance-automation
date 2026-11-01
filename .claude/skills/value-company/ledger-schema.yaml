@@ -133,8 +133,9 @@ forecast:
   management_growth:   {type: rate, required_for: [], used_by: [31], description: "Management's stated growth, with where it was stated"}
   analyst_growth:      {type: rate, required_for: [], used_by: [31]}
   wacc_stable:         {type: rate, required_for: [], used_by: [32, 34], description: "Cost of capital in the terminal period if different from the current one; overrides stable_beta and stable_debt_ratio"}
-  stable_beta:         {type: number, required_for: [], used_by: [32, 34], description: "Levered beta in the terminal period (lesson 32: closer to one). With stable_debt_ratio, model.py builds the terminal cost of capital"}
+  stable_beta:         {type: number, required_for: [], used_by: [32, 34], description: "Levered beta in the terminal period (lesson 32: closer to one). With stable_debt_ratio, model.py builds the terminal cost of capital, taking the cost of debt the section 3 schedule assigns at that ratio (its rating there); section 6 also prints a sensitivity to the stable beta"}
   stable_debt_ratio:   {type: rate, required_for: [], used_by: [32, 34], description: "Debt ratio in the terminal period: the industry average or the firm's optimum (lesson 32)"}
+  stable_cost_of_debt: {type: rate, required_for: [], used_by: [32, 34], description: "Pre-tax cost of debt in the terminal period, if the section 3 schedule's rate at stable_debt_ratio should not be used"}
   stress_cases:        {type: list, required_for: [], used_by: [31, 32, 34], description: "Rows of {name, revenue_growth, margin}: alternative forecasts model.py values in section 6 with the same terminal method and bridge. margin is plan (follow forecast.years) or a decimal held every year; one source and as_of per row"}
 
 peers:
