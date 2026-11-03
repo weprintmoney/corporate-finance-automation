@@ -10,9 +10,9 @@ last_updated: 2026-11-03
 
 > Synced from the Google Doc working draft on 2026-11-03. Lines starting with ❓ are questions for the professor, marking where the project departs from the course guidance. The earlier version with the analysis of the Turn/River deal is in [drafts/](drafts/).
 
-❓ I am basing this analysis of SolarWinds on public data from **February 5, 2025**. This was the last normal day of stock trading before Turn/River Capital announced they were buying the company on February 7. SolarWinds has since been delisted, obscuring the data required for an accurate current valuation. Is this allowed?
-
 ## Executive summary
+
+I am basing this analysis of SolarWinds on public data from **February 5, 2025**. This was the last normal day of stock trading before Turn/River Capital announced they were buying the company on February 7. SolarWinds has since been delisted, obscuring the data required for an accurate current valuation.
 
 SolarWinds was a mature, cash-generating software company run for the benefit of two private-equity owners. Silver Lake and Thoma Bravo (the sponsors) held two-thirds of the shares, chose the directors that mattered and approved the deal without a public vote.
 
