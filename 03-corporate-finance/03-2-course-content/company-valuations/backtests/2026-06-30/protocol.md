@@ -96,3 +96,15 @@ Added at Charlcye's direction before any scored read landed and before any outco
 
 - **Does the read still hold?** For each signal, the read's "What it does" column states a level or direction: returns below or above the cost of capital, debt moving toward or away from the optimum, cash returned above or below free cash flow to equity, and so on. A fresh-context agent checks each one against the company's first two 10-Qs filed after 2026-06-30, and records Held, Broke or Can't tell, citing the filing. This runs only after every read and control answer is committed. Reported per company and in total; the control answers have no signal statements, so this measure has no control comparison.
 - **Value against price.** The read's value per share and the 2026-06-30 close are recorded with the close on the scoring date, and whether the price moved toward the value or away from it. Reported only; four months is too short for price to be expected to converge.
+
+### 3. Runs complete; incidents during the runs (2026-11-03)
+
+All seven reads and all seven control answers are committed (last read 2026-11-03 17:53 CT). No outcome has been compiled or looked at. Three incidents during the runs, recorded so the scorer can weigh them:
+
+- **Shared market data refreshed to current values.** The Eaton runner called `scripts/refresh-market-data.py --help`; the script doesn't handle `--help`, so it ran a full refresh into the shared `03-3-supplemental-data/` snapshots (as of 2026-11-01) at about 17:33 CT. The files were restored from git within minutes. Every run used its own `--as-of 2026-06-30` market files, and the blind validator rejects any ledger value dated after the cutoff.
+- **The Home Depot runner saw a November 2026 rate.** Checking `git status`, it saw the refreshed snapshot's diff, showing a 10-year Treasury of about 4.91%. It reports that no number in its read uses it. Its rates are from 2026-06-30.
+- **The Comcast runner saw that WBD is gone from SEC's current ticker list.** `fetch-peer-facts.py` resolves tickers through SEC's current list and failed on WBD, which suggests Warner Bros. Discovery stopped trading before 2026-11-03. Comcast's read mentions WBD once, in the rival reading of a low-confidence goal, for a fact public before the cutoff (its late-2025 bid). No scored item depends on it.
+
+Tool problems the runners worked around (the exhibit filename pattern in `fetch-filings.py`, a crash on a single n/a return-on-capital year in `make-exhibits.py`, peer-data crashes and zero-filled fields, no bank path in `model.py`) are logged in each company's `README.md`. They are being fixed after the runs so every company ran on the same tools.
+
+Outcomes may now be compiled.
