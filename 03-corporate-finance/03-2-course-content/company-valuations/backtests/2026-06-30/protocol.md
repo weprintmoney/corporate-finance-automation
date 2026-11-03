@@ -89,3 +89,10 @@ No outcome had been seen; the scorer has not yet compiled events. A pilot run on
 - **Known and not fixed** (same for every run): in `model.py`, the base-year return on capital excludes the impairment add-back that the by-year table includes; peer multiples don't strip cross-holdings from enterprise value; the beta sensitivity can print a duplicate row. None of these changes a signal's direction.
 
 **The pilot read is not scored.** It is kept in [pilot-ko/](pilot-ko/) as a record, and KO is re-run from scratch under the fixed rules, like the other six. Scoring rules and the pass bar are unchanged.
+
+### 2. Score every company, not only the ones with events (2026-11-03)
+
+Added at Charlcye's direction before any scored read landed and before any outcome was compiled. The skill is meant to value any company, and a read that correctly finds nothing hidden should count. The event scoring above stays as it is, pass bar included. Two measures are added and reported beside it, for all seven companies:
+
+- **Does the read still hold?** For each signal, the read's "What it does" column states a level or direction: returns below or above the cost of capital, debt moving toward or away from the optimum, cash returned above or below free cash flow to equity, and so on. A fresh-context agent checks each one against the company's first two 10-Qs filed after 2026-06-30, and records Held, Broke or Can't tell, citing the filing. This runs only after every read and control answer is committed. Reported per company and in total; the control answers have no signal statements, so this measure has no control comparison.
+- **Value against price.** The read's value per share and the 2026-06-30 close are recorded with the close on the scoring date, and whether the price moved toward the value or away from it. Reported only; four months is too short for price to be expected to converge.
