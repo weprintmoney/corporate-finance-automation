@@ -77,4 +77,15 @@ Open predictions are rescored at 2027-06-30 under the same rules.
 
 ## Amendments
 
-(none)
+### 1. After the KO pilot, before any scored run (2026-11-03)
+
+No outcome had been seen; the scorer has not yet compiled events. A pilot run on KO, following the skill as written, found problems that would have affected every run:
+
+- **Post-cutoff material inside the repo.** All meetups (and so `meetup-guidance.md`) are from September–November 2026, and some Damodaran blog posts after 2026-06-30 discuss market events and at least one of the seven companies. The pilot read the meetup guidance. Fix: blind runs now read nothing in the repo dated after the analysis date (SKILL.md rule 13), so they get no meetup guidance. This is now a third known leak, closed for the scored runs.
+- **Peer prices.** `fetch-peer-facts.py` returned split-adjusted closes, which corrupted market values and could reveal a later split. It now returns the close that actually traded, and never prints the splits.
+- **Debt read as zero.** Untagged borrowings printed as 0; they now print as n/a.
+- **No earnings releases.** `fetch-filings.py` now fetches the four latest earnings 8-Ks with their exhibits, so the reads see the company's own guidance as of the cutoff.
+- **Instructions.** Several unclear steps in SKILL.md were fixed (README structure, market-data steps), and three rules were added: the "Outside knowledge" section in the read, alternatives as model runs, and the equity risk premium by country.
+- **Known and not fixed** (same for every run): in `model.py`, the base-year return on capital excludes the impairment add-back that the by-year table includes; peer multiples don't strip cross-holdings from enterprise value; the beta sensitivity can print a duplicate row. None of these changes a signal's direction.
+
+**The pilot read is not scored.** It is kept in [pilot-ko/](pilot-ko/) as a record, and KO is re-run from scratch under the fixed rules, like the other six. Scoring rules and the pass bar are unchanged.

@@ -30,8 +30,8 @@ DEFAULT_SCHEMA = os.path.join(HERE, "..", "ledger-schema.yaml")
 
 LEAF_SECTIONS = ["market", "beta", "company", "debt", "forecast"]
 
-# How old an input may be at the analysis date. Rates move tens of basis points a month (the 10-year
-# rose 54bp in September 2026), so they must be read close to the analysis date. Damodaran publishes the
+# How old an input may be at the analysis date. Rates move tens of basis points a month, so they must
+# be read close to the analysis date. Damodaran publishes the
 # implied ERP monthly and the ratings table and industry betas each January.
 MAX_AGE_DAYS = {
     "market.govt_bond_rate": 14,

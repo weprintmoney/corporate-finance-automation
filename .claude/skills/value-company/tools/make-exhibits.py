@@ -94,6 +94,8 @@ def lv(x):
 
 
 def money(v, d=0):
+    if abs(v) >= 10000:
+        return ("−" if v < 0 else "") + f"${abs(v) / 1000:,.1f}B"
     return ("−" if v < 0 else "") + f"${abs(v):,.{d}f}M"
 
 
@@ -104,7 +106,7 @@ class Ctx:
         self.L = yaml.safe_load((folder / "inputs.yaml").read_text())
         meta = self.L.get("meta", {})
         self.name = lv(meta.get("company")) or folder.name
-        self.short = self.name.replace(" Corporation", "").replace(" Inc.", "").replace(", Inc.", "").replace(" Inc", "")
+        self.short = re.sub(r"^The ", "", self.name).replace(" Corporation", "").replace(" Inc.", "").replace(", Inc.", "").replace(" Inc", "")
         self.poss = self.short + ("'" if self.short.endswith("s") else "'s")
         self.date = str(lv(meta.get("analysis_date")))
         self.base_year = lv(meta.get("base_year"))
@@ -115,7 +117,8 @@ class Ctx:
 
 
 def finish(fig, title, subtitle, source, path, left=0.1):
-    fig.text(0.01, 0.97, title, fontsize=12.5, fontweight="bold", color=INK, va="top")
+    size = 12.5 if len(title) <= 62 else max(9.5, 12.5 * 62 / len(title))  # long titles shrink to fit the width
+    fig.text(0.01, 0.97, title, fontsize=size, fontweight="bold", color=INK, va="top")
     fig.text(0.01, 0.905, subtitle, fontsize=9.5, color=INK2, va="top")
     fig.text(0.01, 0.015, "Source: " + source, fontsize=7.5, color=MUTED, va="bottom")
     fig.subplots_adjust(top=0.78, bottom=0.2, left=left, right=0.97)
@@ -136,16 +139,21 @@ def cost_of_capital(c, path):
     far = [(x, y) for x, y, _ in pts if x > cap]
     fig, ax = plt.subplots(figsize=(7, 3.9))
     ax.plot([p[0] for p in near], [p[1] for p in near], color=BLUE, lw=2, marker="o", ms=5, zorder=3)
-    marks = [(opt, BLUE, f"Optimum: {opt[0]:.0f}% debt, {opt[1]:.2f}%", (opt[0], opt[1] - 0.075), "center")]
+    span = max(y for _, y in near) - opt[1]
+    below = opt[1] - 0.25 * max(span, 0.3)
+    marks = [(opt, BLUE, f"Optimum: {opt[0]:.0f}% debt, {opt[1]:.2f}%", (opt[0], below), "center")]
     if cur != opt:
-        marks.append((cur, ORANGE, f"Actual: {cur[0]:.0f}% debt, {cur[1]:.2f}%", (cur[0] - 1, cur[1] + 0.06), "right"))
+        # place the actual label on the far side of the optimum so the two never collide
+        left = cur[0] < opt[0]
+        marks.append((cur, ORANGE, f"Actual: {cur[0]:.0f}% debt, {cur[1]:.2f}%",
+                      (cur[0] + (-1 if left else 1), cur[1] + 0.12 * max(span, 0.3)), "right" if left else "left"))
     for (x, y), col, lab, xy, ha in marks:
         ax.scatter([x], [y], s=90, color=col, edgecolor=SURFACE, linewidth=2, zorder=4)
         ax.annotate(lab, (x, y), xytext=xy, fontsize=9, color=INK, fontweight="bold", ha=ha)
     ax.set_xlabel("Debt as a share of firm value (%)")
     ax.set_ylabel("Cost of capital (%)")
     ax.set_xlim(-1, cap + 2)
-    ax.set_ylim(opt[1] - 0.12, max(y for _, y in near) + 0.06)
+    ax.set_ylim(below - 0.1 * max(span, 0.3), max(y for _, y in near) + 0.25 * max(span, 0.3))
     if far:
         ax.text(near[-1][0] - 1.5, near[-1][1], f"rises to {far[0][1]:.2f}% at {far[0][0]:.0f}% debt", fontsize=8, color=INK2, ha="right", va="center")
     if cur == opt:
@@ -305,8 +313,8 @@ def ownership(c, path):
     ax.set_xlabel("Share of common stock (%)")
     ax.grid(axis="y", visible=False)
     held = sum(p for _, p in pairs[:-1])
-    title = f"{len(pairs) - 1} holder{'s' if len(pairs) > 2 else ''} controlled {held:.2f}% of {c.short}"
-    finish(fig, title, "Beneficial ownership of the largest controlling holders; the rest is everyone else",
+    title = f"The {len(pairs) - 1} largest holder{'s' if len(pairs) > 2 else ''} held {held:.2f}% of {c.short}"
+    finish(fig, title, "Beneficial ownership of the holders the ledger lists; whether they control the company is a judgment for the read",
            f"{c.poss} latest proxy statement, beneficial ownership table", path, left=0.25)
     return title
 

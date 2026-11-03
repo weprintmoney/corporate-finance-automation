@@ -64,6 +64,12 @@ lock-up expiry, a sponsor's fund life, a proxy vote, a guidance revision, a cove
 
 <Every ⚠️ block from the run, collected here as well as where it applies.>
 
+## Outside knowledge
+
+<Anything the read uses that isn't in `sources/`: events remembered from training, general knowledge of the
+industry. One line each, with the date it relates to. For a blind run, say for each that it was public
+on or before the analysis date, or leave it out of the read.>
+
 ## Sources
 
 <Primary documents only, by name and date.>
@@ -100,7 +106,7 @@ Every judgment call where a reasonable analyst could choose differently gets thi
 ```markdown
 > ⚠️ **Discretionary Decision: <the choice, in a few words>**
 > **Chose:** <what was used>. **Why:** <one or two sentences of reasoning, no mechanics>.
-> **Alternative:** <the next-best choice> → <what it changes, as a number from model-output.md>.
+> **Alternative:** <the next-best choice> → <what it changes, as a number from model-output.md or alternatives/<choice>-output.md>.
 > **Confidence:** high / medium / low, and what would raise it.
 ```
 

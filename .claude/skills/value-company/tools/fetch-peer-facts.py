@@ -30,7 +30,7 @@ from datetime import date, datetime, timedelta
 SEC_UA = os.environ.get("SEC_UA", "corporate-finance-automation research@example.com")
 TICKERS_URL = "https://www.sec.gov/files/company_tickers.json"
 FACTS_URL = "https://data.sec.gov/api/xbrl/companyfacts/CIK{cik:010d}.json"
-CHART_URL = "https://query1.finance.yahoo.com/v8/finance/chart/{t}?period1={a}&period2={b}&interval=1d"
+CHART_URL = "https://query1.finance.yahoo.com/v8/finance/chart/{t}?period1={a}&period2={b}&interval=1d&events=split"
 
 # First tag present for the fiscal year wins; a list of tags is summed.
 TAGS = {
@@ -43,14 +43,17 @@ TAGS = {
     "equity_book": ["StockholdersEquity"],
     "borrowings": ["LongTermDebt", ["LongTermDebtNoncurrent", "LongTermDebtCurrent"],
                    ["ConvertibleLongTermNotesPayable", "ConvertibleNotesPayableCurrent"], "ConvertibleLongTermNotesPayable",
-                   "ConvertibleNotesPayable", ["ConvertibleDebtNoncurrent", "ConvertibleDebtCurrent"], "LongTermDebtNoncurrent"],
+                   "ConvertibleNotesPayable", ["ConvertibleDebtNoncurrent", "ConvertibleDebtCurrent"],
+                   ["LongTermDebtAndCapitalLeaseObligations", "LongTermDebtAndCapitalLeaseObligationsCurrent"],
+                   "LongTermDebtAndCapitalLeaseObligations", "LongTermDebtNoncurrent"],
     "lease_debt": ["OperatingLeaseLiability", ["OperatingLeaseLiabilityNoncurrent", "OperatingLeaseLiabilityCurrent"]],
     "cash": ["CashAndCashEquivalentsAtCarryingValue"],
     "short_term_investments": ["ShortTermInvestments", "MarketableSecuritiesCurrent", "AvailableForSaleSecuritiesDebtSecuritiesCurrent"],
 }
 FLOW = {"revenue", "operating_income", "da", "net_income", "dividends"}
 # Absent means zero only for these; anything else missing prints n/a so it gets checked by hand.
-ZERO_IF_ABSENT = {"dividends", "borrowings", "short_term_investments"}
+# Borrowings are not here: an untagged debt line once printed as zero debt for a company with $40B of it.
+ZERO_IF_ABSENT = {"dividends", "short_term_investments"}
 
 
 def get(url, ua=SEC_UA):
@@ -118,11 +121,21 @@ def shares_before(facts, cutoff):
 
 
 def close_on(ticker, day):
+    """The close actually traded on `day` (or the last trading day before it).
+
+    Yahoo restates every close for later stock splits, which corrupts market value and would reveal a
+    split that happened after the analysis date. So the request runs to today, the splits after `day`
+    are multiplied back in, and only the restored close is returned; the splits themselves are never
+    printed, so a blind run doesn't see them."""
     a = int(datetime.combine(day - timedelta(days=7), datetime.min.time()).timestamp())
-    b = int(datetime.combine(day + timedelta(days=1), datetime.min.time()).timestamp())
+    b = int(datetime.combine(date.today() + timedelta(days=1), datetime.min.time()).timestamp())
     res = get(CHART_URL.format(t=ticker, a=a, b=b), ua="Mozilla/5.0")["chart"]["result"][0]
     pairs = [(date.fromtimestamp(t), c) for t, c in zip(res["timestamp"], res["indicators"]["quote"][0]["close"]) if c]
-    return [p for p in pairs if p[0] <= day][-1]
+    cday, px = [p for p in pairs if p[0] <= day][-1]
+    for sp in (res.get("events") or {}).get("splits", {}).values():
+        if date.fromtimestamp(sp["date"]) > day and sp.get("denominator"):
+            px *= sp["numerator"] / sp["denominator"]
+    return cday, px
 
 
 def main(argv):
@@ -153,10 +166,10 @@ def main(argv):
         v = {k: (g[0] if g[0] is not None or k not in ZERO_IF_ABSENT else 0) for k, g in got.items()}
         sh, sh_note = shares_before(facts, day)
         cday, px = close_on(t, day)
-        debt = v["borrowings"] + (v["lease_debt"] or 0)
+        debt = v["borrowings"] + (v["lease_debt"] or 0) if v["borrowings"] is not None else None
         cash = (v["cash"] or 0) + v["short_term_investments"]
         mcap = sh * px if sh else None
-        ev = mcap + debt - cash if mcap else None
+        ev = mcap + debt - cash if mcap and debt is not None else None
         ebitda = v["operating_income"] + v["da"] if None not in (v["operating_income"], v["da"]) else None
         growth = "{:.1%}".format(v["revenue"] / prior - 1) if prior and v["revenue"] else "n/a"
         print("| {} | {} | {} | {} | {} | {} | {} | {} | {} | {} | {} | {} | {} | {} | {} | {:.2f} | {} | {} | {} | {} | {} |".format(

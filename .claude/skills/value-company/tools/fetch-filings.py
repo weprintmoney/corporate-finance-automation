@@ -11,6 +11,8 @@ Downloads, all with a filing date on or before the cutoff:
   - the latest DEF 14A (proxy)
   - 8-Ks from the year before the cutoff that report a material event (items 1.01, 1.02, 2.01, 2.03,
     2.05, 2.06, 3.03, 5.01, 5.02, 5.03, 8.01), newest first, at most --max-8k
+  - the four latest earnings 8-Ks (item 2.02), which carry guidance
+  For every 8-K, its EX-99 exhibits (press releases, earnings releases) are appended to the text.
 Writes sources/filings/index.md: every filing in the three years before the cutoff by form and
 month, including insider (Form 4) counts and 8-K items, so the read can see patterns in what the
 company files without reading each one.
@@ -147,6 +149,8 @@ def main(argv):
     eights = [f for f in fl if f["form"] == "8-K" and f["date"] >= year_ago
               and MATERIAL_8K & {i.strip() for i in f["items"].split(",")}]
     pick += eights[:a.max_8k]
+    earnings = [f for f in fl if f["form"] == "8-K" and "2.02" in f["items"] and f not in eights[:a.max_8k]]
+    pick += earnings[:4]
 
     out_dir = os.path.join(a.company_dir, "sources", "filings")
     os.makedirs(out_dir, exist_ok=True)
@@ -165,6 +169,14 @@ def main(argv):
         url = f"https://www.sec.gov/Archives/edgar/data/{cik}/{f['accn'].replace('-', '')}/{f['doc']}"
         try:
             body = to_text(get(url), f["doc"])
+            if f["form"] == "8-K":
+                folder = f"https://www.sec.gov/Archives/edgar/data/{cik}/{f['accn'].replace('-', '')}/"
+                for item in get(folder + "index.json", as_json=True)["directory"]["item"]:
+                    n = item["name"]
+                    # exhibit names vary ("ex99-1.htm", "...ex-9.htm"); keep any exhibit document
+                    if (re.search(r"ex[-_]?\d", n, re.I) and n.lower().endswith((".htm", ".html"))
+                            and "index" not in n.lower() and n != f["doc"]):
+                        body += f"\n\n---\n\n## Exhibit {n}\n\n" + to_text(get(folder + n), n)
         except Exception as e:  # noqa: BLE001 - report and continue; a missing exhibit shouldn't stop the run
             print(f"FAILED {f['form']} {f['date']}: {e}", file=sys.stderr)
             continue
