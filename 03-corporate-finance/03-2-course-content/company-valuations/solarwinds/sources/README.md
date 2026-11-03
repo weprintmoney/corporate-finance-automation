@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Source Manifest"
 status: active
 owner: weprintmoney
 created: 2026-09-07
-last_updated: 2026-10-25
+last_updated: 2026-11-03
 ---
 
 # SolarWinds (SWI) — Compiled Sources
@@ -44,6 +44,7 @@ Written by `python3 scripts/refresh-market-data.py --as-of 2025-02-05 --out <dir
 | `ratings-spreads-2025-01-01.json` | Damodaran's coverage-to-rating-to-spread tables, January 2025 edition (`ratings24.xls`) | `market.ratings_table` |
 | `industry-betas-2025-01-05.json` | Damodaran US industry betas, January 2025 (`betas24.xls`) | `beta.unlevered_bottom_up` |
 | `country-risk-2025-01-01.json` | Damodaran country risk, January 2025 (`ctryprem24.xlsx`). The regional EMEA premium and the US 25% marginal tax rate come from the same workbook's Regional Weighted Averages and Country Tax Rates sheets (URL in the file's `source_url`) | `market.sovereign_default_spread`, `country.exposures`, `market.tax_rate_marginal` |
+| `dividend-regression-2025-01.md` | Damodaran's January 2025 US dividend payout regression (`divreg25.htm`), transcribed on 2026-11-03 from the page's two result images | `facts.payout-regression-2025` |
 
 ## `peer-filings/`
 
