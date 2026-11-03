@@ -11,6 +11,7 @@ on:
       - '03-corporate-finance/03-2-course-content/company-valuations/*/sources/market-data/**'
       - '03-corporate-finance/03-2-course-content/**/lesson-overview.md'
       - '03-corporate-finance/03-2-course-content/lesson-index.yaml'
+      - '03-corporate-finance/03-7-meetups/**'
 
 jobs:
   check:
@@ -22,7 +23,7 @@ jobs:
         with:
           python-version: '3.12'
 
-      - run: pip install pyyaml
+      - run: pip install pyyaml matplotlib
 
       - name: Market-data refresher compiles
         run: python3 -m py_compile scripts/refresh-market-data.py .claude/skills/value-company/tools/fetch-peer-facts.py
@@ -50,3 +51,17 @@ jobs:
           SW=03-corporate-finance/03-2-course-content/company-valuations/solarwinds
           awk '/^## A worked sample/{f=1} f' .claude/skills/value-company/walkthrough-template.md | sed 's/^> \{0,1\}//' > /tmp/sample.md
           python3 .claude/skills/value-company/tools/check-walkthrough.py /tmp/sample.md $SW/inputs.yaml $SW/model-output.md
+
+      - name: Charts build from the SolarWinds model output
+        run: python3 .claude/skills/value-company/tools/make-exhibits.py 03-corporate-finance/03-2-course-content/company-valuations/solarwinds --all --out /tmp/exhibits
+
+      - name: Meetup guidance covers every meetup transcript
+        run: |
+          set -e
+          G=.claude/skills/value-company/meetup-guidance.md
+          covered=$(grep -m1 '^Meetups covered:' "$G")
+          for f in 03-corporate-finance/03-7-meetups/meetup-*.md; do
+            n=$(basename "$f" | sed -E 's/^meetup-([0-9]+)-.*/\1/')
+            echo "$covered" | grep -qE "(: |, )$n \(" || { echo "::error::$f is not in $G; update the guidance from it"; exit 1; }
+          done
+          echo "$covered"

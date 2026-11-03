@@ -36,6 +36,8 @@ meta:
   price_basis:        {type: string, required_for: [delisted], description: "last-unaffected or deal: which one company.share_price is"}
   analyst:            {type: string, required_for: [all]}
   omitted:            {type: list, required_for: [], description: "Fields left out, each with a one-line reason"}
+  mode:               {type: enum, values: [quick, full], required_for: [], default: quick, description: "quick answers the signal questions (seeds/signals.yaml) and writes read.md; full answers the whole question bank and also writes final-report.md"}
+  blind:              {type: boolean, required_for: [], default: false, description: "Backtest guard: nothing in the ledger may be dated or published after analysis_date; sources/published.yaml lists each source file's publication date. Set type to what the company was on that date (public, not delisted)"}
 
 modeling_choices:
   coverage_numerator:  {type: enum, values: [ebit, ebit_plus_acquisition_amortization, ebitda], default: ebit, used_by: [12, 18, 19], description: "Numerator for interest coverage in the synthetic rating and the optimal-debt loop; the model also reports the other two"}

@@ -3,7 +3,7 @@ title: "Review checklist — adversarial pass before a valuation is final"
 status: active
 owner: weprintmoney
 created: 2026-10-24
-last_updated: 2026-10-24
+last_updated: 2026-11-03
 ---
 
 # Review checklist
@@ -49,4 +49,14 @@ The first eleven items are errors that were actually made in the SolarWinds proj
 22. **Walkthrough trace.** `tools/check-walkthrough.py` passes.
 23. **Skipped questions.** Every question-bank entry that applies to the company type has an answer, and every skipped one is listed with a reason.
 24. **Readability.** A reader with no finance background can follow the walkthrough. Findings from the reader pass are closed.
-25. **Report cites.** Every number in `valuation-report.md` traces to a ledger field or a model-output line.
+25. **Report cites.** Every number in `read.md` and `final-report.md` traces to a ledger field or a model-output line.
+
+## The read
+
+26. **Two signals or no claim.** Every unstated goal in `read.md` cites at least two independent signals, each with its number. Two measures of the same thing count as one.
+27. **Rival reading and falsifier.** Every goal names the best innocent explanation and an observable fact, ideally dated, that would disprove it.
+28. **Stated side sourced.** Every "what it says" cell in the signal table quotes or cites a passage in `sources/statements/`, not a paraphrase from memory.
+29. **Discretionary decisions.** Every choice on the list in `read-template.md` has a ⚠️ block with the alternative's effect as a number from `model-output.md`. A choice that moves value per share by more than 5% and has no block is a finding.
+30. **Charts agree with the text.** Each chart title in `exhibits/` states the same finding the read or report draws from it.
+31. **Blind runs.** `validate-ledger.py` passes with `meta.blind: true`, and no sentence in `read.md` uses knowledge from after the analysis date (the deal, the outcome, a later filing).
+32. **Full mode: the brief.** `final-report.md` covers every point in `professor-checklist.md` (including the sector debt-ratio comparison), runs 7–9 pages, and keeps deal analysis out.

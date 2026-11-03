@@ -61,7 +61,7 @@ Each folder has its own `CLAUDE.md` with subject-specific context, key formulas,
 | Kebab-case naming rule | `.claude/rules/kebab-case-naming.md` | File and folder naming convention (enforced by hook) |
 | Doc frontmatter schema | `.claude/rules/doc-frontmatter-schema.md` | Frontmatter schema for non-CLAUDE.md docs |
 | Update doc index rule | `.claude/rules/update-doc-index.md` | Keep parent CLAUDE.md indexes in sync when files are added |
-| `/value-company` skill | `.claude/skills/value-company/SKILL.md` | Full-course company valuation: sources → cited ledger → answers to every course question → model → report → plain-language walkthrough |
+| `/value-company` skill | `.claude/skills/value-company/SKILL.md` | Reads any company's situation and unstated goals from its corporate finance choices: sources → cited ledger → course questions (quick: 38 signal questions; full: all 150) → model → charts → `read.md`; full mode adds the nine-question final report. `--as-of --blind` for backtests |
 | `/evaluate-company` command | `.claude/commands/evaluate-company.md` | Module 1 scope of `/value-company` (the original twelve cost-of-capital steps) |
 
 ## Conventions

@@ -1,0 +1,81 @@
+# The eight signals a /value-company read is built from.
+#
+# Each signal compares what a company says (stated) with what it does (revealed). Quick mode answers
+# only the questions listed under `questions`; full mode answers the whole bank and still writes the
+# read from these signals. build-question-bank.py copies each signal id onto the entries it lists, so
+# question-bank.yaml shows `signals: [...]` on every quick-mode question, and fails if an id is unknown.
+#
+# Fields:
+#   asks       the question the signal answers about the company, in plain words
+#   stated     where the company says what it intends
+#   revealed   what it actually did, and where the number comes from (model-output.md sections)
+#   questions  question-bank ids answered in quick mode
+#   exhibit    the chart in tools/make-exhibits.py that carries the signal, if any
+
+- id: control
+  name: Who controls the company, and what they want
+  asks: Whose interests does the company actually serve, and are they about to change?
+  stated: Proxy statement (governance, compensation discussion), 10-K risk factors on controlling holders, charter and bylaws.
+  revealed: >-
+    The ownership table (insiders, sponsors, founders, institutions), board seats and consent rights, dual-class
+    voting, how executive pay is triggered (change-of-control packages, accelerated vesting), recent 8-Ks and
+    13D/13G filings, insider sales, any "strategic alternatives" language.
+  questions: [m1-step-02, m1-step-03, m1-step-04, l34-q4]
+  exhibit: ownership
+
+- id: lifecycle
+  name: Where the company sits in its life cycle, and whether it acts its age
+  asks: Is management running the company for the stage it is in, or for a stage it wishes it were in?
+  stated: The 10-K business section and MD&A strategy language, investor-day targets.
+  revealed: Revenue, margin and reinvestment history (model-output.md section 8 by year), cash use, acquisitions.
+  questions: [m1-step-01, l31-q1, l36-q1]
+
+- id: hurdle
+  name: How risky the business is, and its hurdle rate
+  asks: What does a dollar invested here have to earn to be worth investing?
+  stated: Any hurdle rate or return target management discloses; the company's own risk factors.
+  revealed: Bottom-up beta, country exposure, cost of debt, cost of capital (model-output.md sections 1-2).
+  questions: [m1-step-07, m1-step-10, m1-step-12, l13-q1, l13-q5]
+
+- id: returns
+  name: What its investments earn against that hurdle
+  asks: Has the company created or destroyed value with the capital it has raised and kept?
+  stated: Return targets, "disciplined capital allocation" claims, acquisition rationales.
+  revealed: Return on capital and on equity by year against their costs, with and without goodwill and capitalized R&D (model-output.md section 8).
+  questions: [l14-q1, l14-q2, l14-q3, l14-q5, l22-q3]
+  exhibit: returns
+
+- id: leverage
+  name: How much it borrows against its optimum and its sector
+  asks: Is the debt load a financing decision, or a leftover from an owner's past decision?
+  stated: Leverage targets ("net debt below 3x EBITDA"), credit-rating goals, refinancing plans.
+  revealed: >-
+    Actual debt ratio against the cost-of-capital optimum, the APV optimum, the stress case, and the sector and
+    peer debt ratios (model-output.md sections 3, 4, 9; peers in the ledger).
+  questions: [l18-q1, l18-q2, l21-q3, l22-q1, l22-q2, l22-q4]
+  exhibit: cost-of-capital
+
+- id: debt-design
+  name: Whether the debt fits the assets it funds
+  asks: Was the debt designed for the business, or for the deal that put it there?
+  stated: The debt note's description of purpose; hedging policy.
+  revealed: Rate type, maturity, currency and form of the actual debt against the cash flows of a typical project.
+  questions: [l23-q1, l23-q2, l23-q3]
+
+- id: payout
+  name: How much cash it returns against what it could
+  asks: Who gets the cash the business throws off, and is the company paying out what it earns or more?
+  stated: Dividend policy statements, buyback authorizations, "returning capital to shareholders" language.
+  revealed: Dividends and buybacks against free cash flow to equity by year, where the difference went (cash or debt), the sector's payout (model-output.md section 5; peers).
+  questions: [l26-q1, l26-q2, l26-q3, l27-q1, l27-q2, l28-q1]
+  exhibit: payout
+
+- id: value-vs-price
+  name: What it is worth against what the market pays
+  asks: What does the market price assume about the future, and does the company's own plan support it?
+  stated: Management's forecast or guidance, analyst consensus.
+  revealed: >-
+    DCF value at the status quo and with changes, sensitivity to the stable return and beta, stress cases on the
+    plan, peer multiples (model-output.md sections 6-7).
+  questions: [l31-q2, l31-q3, l32-q3, l34-q1, l34-q3, l35-q4]
+  exhibit: value
