@@ -47,6 +47,7 @@ Supporting files in this skill folder:
 | `tools/model.py` | Cost of capital, optimal debt, value of moving, FCFE vs. cash returned, DCF, multiples. |
 | `tools/check-walkthrough.py` | Confirms every number in `walkthrough.md` traces to the ledger or the model output. |
 | `tools/make-exhibits.py` | Charts from `model-output.md` and the ledger: cost of capital by debt ratio and return on capital (core), payout, value per share and ownership (`--all`). |
+| `tools/fetch-filings.py` | The company's SEC filings up to a cutoff date (10-Ks, 10-Qs after the latest 10-K, proxy, material 8-Ks), converted to text, plus a filing index and `sources/published.yaml`. Blind runs fetch with it. |
 | `tools/fetch-peer-facts.py` | Peer fundamentals from SEC XBRL company facts plus each peer's closing price on the analysis date, as a source document for `peers`. |
 
 CI runs the validator, the model and the walkthrough check on every company folder's `inputs.yaml`, and fails if a committed `model-output.md` no longer matches its ledger. `company-valuations/solarwinds/` is the reference run.
@@ -120,7 +121,7 @@ Follow `source-plans.md` for the company's type. Produce:
 
 For each signal in `seeds/signals.yaml`, also collect the **stated** side: what the company says about it (strategy and capital-allocation language in the 10-K, leverage and payout targets, the proxy's compensation discussion, guidance). Save the passages to `sources/statements/` and cite them; the read compares them with the numbers.
 
-For a blind run, write `sources/published.yaml`: one row per source file, `{file: sources/..., published: YYYY-MM-DD}`, using the filing or publication date, not the period end. Any file published after the analysis date stays out of `sources/`.
+For a blind run, fetch filings with `python3 .claude/skills/value-company/tools/fetch-filings.py <TICKER> <slug> --cutoff <analysis_date>`, which writes `sources/published.yaml` for you; add a row for any other source you save. Otherwise write `sources/published.yaml`: one row per source file, `{file: sources/..., published: YYYY-MM-DD}`, using the filing or publication date, not the period end. Any file published after the analysis date stays out of `sources/`.
 
 Append to `walkthrough.md`: a short section called "Where the numbers come from" that names each group of documents in plain words.
 

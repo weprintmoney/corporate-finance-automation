@@ -63,22 +63,26 @@ def as_date(s):
     return datetime.strptime(s, "%Y-%m-%d").date()
 
 
-def fiscal_year_end(facts, cutoff):
-    """End date of the latest full fiscal year reported in a 10-K that ended on or before cutoff."""
+def fiscal_year_end(facts, cutoff, filed_by=None):
+    """End date of the latest full fiscal year that ended on or before cutoff, in a 10-K filed by filed_by."""
+    filed_by = filed_by or cutoff
     ends = []
     for tag in TAGS["revenue"]:
         for u in facts.get("us-gaap", {}).get(tag, {}).get("units", {}).get("USD", []):
             if u.get("form") == "10-K" and "start" in u and 350 <= (as_date(u["end"]) - as_date(u["start"])).days <= 380:
-                if as_date(u["end"]) <= cutoff:
+                if as_date(u["end"]) <= cutoff and as_date(u["filed"]) <= filed_by:
                     ends.append(as_date(u["end"]))
     return max(ends) if ends else None
 
 
-def value_at(facts, tag, fy_end, flow):
-    """The fiscal-year value (flow) or year-end balance (stock), from the earliest 10-K reporting it."""
+def value_at(facts, tag, fy_end, flow, filed_by=None):
+    """The fiscal-year value (flow) or year-end balance (stock), from the earliest 10-K reporting it,
+    ignoring filings after filed_by (the analysis date), so a backtest never sees a later filing."""
     rows = []
     for u in facts.get("us-gaap", {}).get(tag, {}).get("units", {}).get("USD", []):
         if u.get("form") != "10-K" or as_date(u["end"]) != fy_end:
+            continue
+        if filed_by and as_date(u["filed"]) > filed_by:
             continue
         if flow and ("start" not in u or not 350 <= (fy_end - as_date(u["start"])).days <= 380):
             continue
@@ -86,10 +90,10 @@ def value_at(facts, tag, fy_end, flow):
     return sorted(rows)[0] if rows else None
 
 
-def pick(facts, spec, fy_end, flow):
+def pick(facts, spec, fy_end, flow, filed_by=None):
     for cand in spec:
         tags = cand if isinstance(cand, list) else [cand]
-        parts = [value_at(facts, t, fy_end, flow) for t in tags]
+        parts = [value_at(facts, t, fy_end, flow, filed_by) for t in tags]
         if all(parts):
             return sum(p[1] for p in parts), "+".join(tags), parts[0][2]
     return None, None, None
@@ -138,14 +142,14 @@ def main(argv):
         doc = get(FACTS_URL.format(cik=ciks[t]))
         facts = doc["facts"]
         fy_end = fiscal_year_end(facts, day)
-        got = {k: pick(facts, spec, fy_end, k in FLOW) for k, spec in TAGS.items()}
+        got = {k: pick(facts, spec, fy_end, k in FLOW, day) for k, spec in TAGS.items()}
         # Some filers tag only depreciation as DepreciationDepletionAndAmortization; add acquired-intangible
         # amortization when it is larger than the tagged D&A, and say so.
-        amort = value_at(facts, "AmortizationOfIntangibleAssets", fy_end, True)
+        amort = value_at(facts, "AmortizationOfIntangibleAssets", fy_end, True, day)
         if amort and got["da"][0] is not None and "AmortizationOfIntangibleAssets" not in got["da"][1] and amort[1] > got["da"][0]:
             got["da"] = (got["da"][0] + amort[1], got["da"][1] + "+AmortizationOfIntangibleAssets (tagged D&A was smaller than intangible amortization alone)", got["da"][2])
-        prior_end = fiscal_year_end(facts, fy_end - timedelta(days=300))
-        prior = pick(facts, TAGS["revenue"], prior_end, True)[0] if prior_end else None
+        prior_end = fiscal_year_end(facts, fy_end - timedelta(days=300), day)
+        prior = pick(facts, TAGS["revenue"], prior_end, True, day)[0] if prior_end else None
         v = {k: (g[0] if g[0] is not None or k not in ZERO_IF_ABSENT else 0) for k, g in got.items()}
         sh, sh_note = shares_before(facts, day)
         cday, px = close_on(t, day)
