@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Course Project Overview"
 status: active
 owner: weprintmoney
 created: 2026-09-20
-last_updated: 2026-11-01
+last_updated: 2026-11-03
 ---
 
 # SolarWinds (SWI) — Course Project Overview
@@ -100,6 +100,7 @@ One line per correction: date, what changed, which files.
 - 2026-11-01 — **Stable-period cost of capital.** The terminal value now uses beta 1.0 and 21% debt (8.51%) per lesson 32, with the stable return on capital set equal to it (was 10% at the current 10.23%). Value per share $15.63 at the time, was $13.00; financing lever $0.22, was $0.52. Touched model.py, the ledger, model-output, lessons 15, 19, 22, 24, 29, 31–36, the walkthrough, both reports, the study guide and the exhibits. Superseded the same day by the next entry.
 - 2026-11-01 — **Stable return on capital.** 12%, was 8.51% (equal to the stable cost of capital). Model §8 now capitalizes R&D over a 3-year life: adjusted ROIC 6.53% against 6.66% unadjusted, because the capital base is the 2016 buyout goodwill; return on operating capital excluding goodwill 87.35% (60.56% on a 5-year life). The 12% is a 3.5-point spread over the 8.51% stable cost of capital (`forecast.stable_roic`). Model §6 adds stress cases at the 2022–2024 revenue growth rate ($14.17, $10.81, $7.32 a share at the time). Value per share $17.45 at the time, was $15.63; financing lever $0.24, was $0.22. Touched model.py, the ledger, model-output, lessons 14, 15, 19, 27, 29, 31–36, the walkthrough, both reports, the study guide, this README and the exhibits. Superseded the same day by the next entry.
 - 2026-11-01 — **Stable return on capital and stable cost of debt.** Return on new capital now equal to the stable cost of capital, 8.23%; was 12% earlier today. A fresh-context review found the 12% asserted rather than earned: the 87.35% return on operating capital is after-tax operating income over about three years of R&D and shows the business is capital-light, not what a new dollar earns; the marginal dollars have been acquisitions, on which the company earns 6.66%. The stable period now takes the cost of debt the §3 schedule assigns at 21% (A-, 5.38%) instead of holding today's 7.11%, which contradicted the schedule; stable cost of capital 8.23%, was 8.51%. Model §6 adds a stable-beta sensitivity (0.80 → $17.74; 1.46 → $13.36). The third stress case now holds the 2024 margin on the plan's own definition, 29.11% (was the 26.15% GAAP margin). Value per share $16.13, was $17.45; financing lever $0.22, was $0.24; stress cases $13.05 / $9.89 / $8.08. Touched model.py, the ledger schema, the ledger, model-output, lessons 14, 15, 19, 27, 29, 31–36, the walkthrough, both reports, the study guide, this README and the exhibits.
+- 2026-11-03 — **Payout regression.** Lesson 28's benchmark now uses Damodaran's January 2025 US payout regression (payout = 0.990 − 0.478 × beta − 0.115 × ROE, 1,532 firms, R-squared 2.6%), the edition in force on the analysis date, instead of the lesson slides' 2014 regression. Predicted payout 18.2%, was 18.8%; the 2014 version is kept as a cross-check. Conclusion unchanged. Value per share unchanged. Touched the ledger, lesson 28, the walkthrough, the study guide, this README and the source manifest (new `sources/market-data/dividend-regression-2025-01.md`).
 
 ## Questions skipped or answered with a stand-in
 

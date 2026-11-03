@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Study Guide by Lesson"
 status: active
 owner: weprintmoney
 created: 2026-11-01
-last_updated: 2026-11-01
+last_updated: 2026-11-03
 ---
 
 # SolarWinds (SWI) — Study Guide by Lesson
@@ -1772,9 +1772,8 @@ Full answers: [lesson-27.md](lesson-27.md) · Walkthrough: [Step 27](walkthrough
 | Software sector payout, 351 firms | 27.22% dividends; 80.36% with buybacks | [Damodaran](sources/market-data/) January 2025 dividend table ([`04-dividends-and-valuation/lesson-28/spreadsheet-divfcfe24.md`](../../04-dividends-and-valuation/lesson-28/spreadsheet-divfcfe24.md)); [ledger](inputs.yaml) fact `sector-software-payout` |
 | SolarWinds 2024 dividends, buybacks, net income | $168.2M; $26.5M; $111.9M | [FY2024 10-K](sources/filings/swi-10k-fy2024.md) cash flow and income statements; [ledger](inputs.yaml) `company.history` |
 | Cash returned and FCFE, 2024 | $194.7M and $127.0M | Computed in lesson 26; [model-output.md](model-output.md) §5 |
-| Payout regression (R-squared 19.6%) | payout = 0.649 - 0.296 x beta - 0.800 x growth + 0.300 x debt-to-capital | Lesson 28 slides, January 2014 US companies ([`04-dividends-and-valuation/lesson-28/slides.md`](../../04-dividends-and-valuation/lesson-28/slides.md)); [ledger](inputs.yaml) fact `payout-regression-2014` |
-| Levered beta and debt-to-capital | 1.6714; 33.03% | Computed in earlier lessons; [model-output.md](model-output.md) §1 |
-| Expected growth | 8.12% | Management forecast, merger information statement (DEFM14C) ([`sources/deal-docs/swi-defm14c-2025-merger.md`](sources/deal-docs/swi-defm14c-2025-merger.md)); [ledger](inputs.yaml) `forecast.management_growth` |
+| Payout regression (R-squared 2.6%) | payout = 0.990 - 0.478 x beta - 0.115 x return on equity | Damodaran's January 2025 US dividend regression, 1,532 firms ([`sources/market-data/dividend-regression-2025-01.md`](sources/market-data/dividend-regression-2025-01.md)); [ledger](inputs.yaml) fact `payout-regression-2025`. The lesson 28 slides' 2014 version is kept as a cross-check (fact `payout-regression-2014`) |
+| Levered beta and return on equity | 1.6714; 7.99% | Computed in earlier lessons; [model-output.md](model-output.md) §1 and §8 |
 | Ownership of the two sponsors | 66.35% combined | [2024 proxy](sources/filings/swi-def14a-2024.md); [ledger](inputs.yaml) `governance.controlling_holders` |
 
 ### Steps to complete the assignment
@@ -1782,12 +1781,12 @@ Full answers: [lesson-27.md](lesson-27.md) · Walkthrough: [Step 27](walkthrough
 1. List peer payouts. Five of the eight pay no dividend, Progress pays 46.05%, and NetApp and Open Text pay dividends that the SEC data did not tag, so they are left blank. The peer norm is no dividend.
 2. Add the wider benchmark: Damodaran's 351 software firms paid out 27.22% of net income as dividends and 80.36% counting buybacks.
 3. Compute SolarWinds' 2024 payout: dividends of $168.2M on net income of $111.9M is 150%. With the $26.5M of buybacks it is 174%. Cash returned over FCFE is 153% ($194.7M / $127.0M). In 2022 and 2023 it paid no dividend.
-4. Run the regression: 0.649 - 0.296 x 1.6714 - 0.800 x 8.12% + 0.300 x 33.03% = 18.8%. Judgment: growth uses management's 8.12% because analyst growth could not be obtained. The coefficients are ten years old, so treat 18.8% as a rough marker, not a target.
-5. Compare actual with predicted: the 2024 payout was eight times the predicted 18.8%.
+4. Run the regression: 0.990 - 0.478 x 1.6714 - 0.115 x 7.99% = 18.2%. Judgment: beta is the bottom-up levered beta, because the delisted ticker has no regression beta, and the regression's definitions allow either. The January 2025 edition is used because it was in force on the analysis date. Its R-squared is only 2.6%, so treat 18.2% as a rough marker, not a target. The lesson slides' 2014 regression gives 18.8%, so the answer does not depend on the edition.
+5. Compare actual with predicted: the 2024 payout was eight times the predicted 18.2%.
 6. Decide whether SolarWinds is copying its sector. It is not: 2024 was a special dividend by two controlling holders (66.35%), not a payout policy. In the two years without one, it looked like its peers.
 7. Answer the project questions. Against the sector: an outlier in 2024 (150% against a peer median of 0.0 among those with a recorded payout, and 27.22% for the software group; 174% against 80.36% counting buybacks). Too much or too little? In 2024, too much, and 53% above its own FCFE; over 2023-2024 it returned 115% of FCFE ($213.5M against $186.4M), not far above capacity. Given returns below the cost of capital (6.66% against 10.23%), returning cash is the right direction, but it was lumpy.
 
-**Result for SolarWinds:** The 2024 payout was 150% of net income (174% with buybacks) against a regression-predicted 18.8% and a sector average of 27.22%, so SolarWinds diverged in 2024 because of one special dividend, not policy.
+**Result for SolarWinds:** The 2024 payout was 150% of net income (174% with buybacks) against a regression-predicted 18.2% and a sector average of 27.22%, so SolarWinds diverged in 2024 because of one special dividend, not policy.
 Full answers: [lesson-28.md](lesson-28.md) · Walkthrough: [Step 28](walkthrough.md#step-28-does-solarwinds-pay-out-like-its-competitors)
 
 ## Lesson 29 — First Steps
