@@ -1,0 +1,175 @@
+# Corteva, Inc. (CTVA) — /value-company ledger. Quick mode, blind backtest as of 2026-06-30.
+# Every leaf is {value, source, as_of}. Amounts in USD millions; rates as decimals; shares in millions.
+
+meta:
+  company: Corteva, Inc.
+  slug: corteva
+  ticker: CTVA
+  type: public
+  home_country: United States
+  currency: USD
+  reporting_currency: USD
+  fiscal_year_end: "12-31"
+  base_year: 2025
+  analysis_date: 2026-06-30
+  analyst: weprintmoney
+  mode: quick
+  blind: true
+  omitted:
+    - field: beta.regression_beta
+      reason: "No price series obtainable under the blind rules (tools give one close per date); bottom-up beta used"
+    - field: company.debt_market
+      reason: "Fair value of long-term borrowings ($2,448M at 2026-03-31, 10-Q Note 11) is within 1% of carrying value; book used"
+    - field: company.off_balance_sheet_debt
+      reason: "Checked: no leases signed but not commenced disclosed; customer-financing guarantees and $183M lease residual value guarantees are contingent, not fixed commitments (10-K Note 13 and Note 15)"
+    - field: debt.kd_pretax_observed
+      reason: "Coupon-weighted rate on term debt is about 4.8% but is a historical coupon, not today's yield; synthetic rating used (modeling_choices.kd_source)"
+
+modeling_choices:
+  coverage_numerator: ebit
+  rd_amortizable_life: null
+  firm_size_table: large
+  sbc_treatment: expense
+  firm_value_basis: market
+  beta_source: bottom_up
+  kd_source: synthetic
+  terminal_method: consistent_reinvestment
+
+market:
+  govt_bond_rate: {value: 0.0444, source: "sources/market-data/market-rates-2026-06-01.json fred_latest.treasury_10y (FRED DGS10 close 2026-06-30)", as_of: 2026-06-30}
+  sovereign_default_spread: {value: 0.0026, source: "sources/market-data/market-rates-2026-06-01.json damodaran_monthly.us_sovereign_default_spread (Aa1)", as_of: 2026-06-01}
+  risk_free_rate: {value: 0.0418, source: "govt_bond_rate − sovereign_default_spread; sources/market-data/market-rates-2026-06-01.json", as_of: 2026-06-30}
+  mature_erp: {value: 0.045705, source: "sources/market-data/market-rates-2026-06-01.json damodaran_monthly.implied_erp_over_dollar_riskfree (ERPJune26)", as_of: 2026-06-01}
+  ratings_table: {value: ../sources/market-data/ratings-spreads-2026-01-01.json, source: "sources/market-data/ratings-spreads-2026-01-01.json (Damodaran ratings.xls January 2026 edition)", as_of: 2026-01-01}
+  tax_rate_marginal: {value: 0.25, source: "Lesson 12 spreadsheet-countrytaxrates24.md United States 25% (21% federal plus state); 10-K filed 2026-02-12 Note 7 statutory 21% federal", as_of: 2025-12-31}
+  tax_rate_effective: {value: 0.2867, source: "sources/filings/ctva-10-k-2026-02-12.md income statement: provision 484 ÷ pre-tax income from continuing operations 1688", as_of: 2025-12-31}
+  terminal_growth: {value: 0.03, source: "Analyst choice: below the 4.18% risk-free rate; nominal growth of global crop input demand", as_of: 2026-06-30}
+
+country:
+  exposures:
+    - {country: United States, weight: 0.4752, erp: 0.045705, measure: revenues, source: "sources/filings/ctva-10-k-2026-02-12.md Note 21 net sales 8269 of 17401; ERP = mature_erp + 0 (rule 15)", as_of: 2025-12-31}
+    - {country: Canada, weight: 0.04339, erp: 0.045705, measure: revenues, source: "sources/filings/ctva-10-k-2026-02-12.md Note 21 net sales 755; sources/market-data/country-risk-2026-01-01.json Canada CRP 0", as_of: 2025-12-31}
+    - {country: EMEA (France CRP as proxy), weight: 0.17873, erp: 0.053465, measure: revenues, estimate: true, range: [0.045705, 0.0923], source: "sources/filings/ctva-10-k-2026-02-12.md Note 21 EMEA 3110; CRP proxy France 0.776% from sources/market-data/country-risk-2026-01-01.json (range: Germany 0 to Turkey 4.66%)", as_of: 2025-12-31}
+    - {country: Brazil, weight: 0.16666, erp: 0.078115, measure: revenues, source: "sources/filings/ctva-10-k-2026-02-12.md Note 21 footnote Brazil 2900; sources/market-data/country-risk-2026-01-01.json Brazil CRP 3.24%", as_of: 2025-12-31}
+    - {country: Other Latin America (Argentina/Mexico average), weight: 0.05908, erp: 0.106569, measure: revenues, estimate: true, range: [0.070355, 0.142782], source: "sources/filings/ctva-10-k-2026-02-12.md Note 21 Latin America 3928 less Brazil 2900; CRP average of Argentina 9.71% and Mexico 2.46% from sources/market-data/country-risk-2026-01-01.json", as_of: 2025-12-31}
+    - {country: Asia Pacific (India/China average), weight: 0.07695, erp: 0.064497, measure: revenues, estimate: true, range: [0.045705, 0.074159], source: "sources/filings/ctva-10-k-2026-02-12.md Note 21 Asia Pacific 1339; CRP average of India 2.85% and China 0.91% from sources/market-data/country-risk-2026-01-01.json", as_of: 2025-12-31}
+  weighted_erp: {value: 0.057536, source: "Sum of weight × erp over country.exposures", as_of: 2026-06-01}
+
+beta:
+  unlevered_bottom_up: {value: 0.8366, source: "Revenue-weighted beta.segments from sources/market-data/industry-betas-2026-01-05.json (cash-corrected)", as_of: 2026-01-05}
+  segments:
+    - {name: Seed, weight: 0.5688, industry: Farming/Agriculture, unlevered_beta: 0.8458}
+    - {name: Crop Protection, weight: 0.4312, industry: Chemical (Specialty), unlevered_beta: 0.8245}
+
+company:
+  shares_basic: {value: 668.8, source: "sources/filings/ctva-10-q-2026-05-06.md cover page, shares outstanding 2026-04-29 (also sources/peer-filings/peer-facts-2026-06-30.md)", as_of: 2026-04-29}
+  shares_diluted: {value: 681.4, source: "sources/filings/ctva-10-k-2026-02-12.md Note 8 weighted-average diluted shares 2025", as_of: 2025-12-31}
+  share_price: {value: 84.69, source: "sources/peer-filings/peer-facts-2026-06-30.md CTVA close 2026-06-30", as_of: 2026-06-30}
+  equity_value: {value: 56640.7, source: "shares_basic × share_price", as_of: 2026-06-30}
+  equity_book: {value: 24362, source: "sources/filings/ctva-10-q-2026-05-06.md balance sheet, total Corteva stockholders' equity 2026-03-31", as_of: 2026-03-31}
+  debt_face: {value: 3371, source: "sources/filings/ctva-10-q-2026-05-06.md Note 11: commercial paper 667 + other loans 216 + notes 2200 + foreign currency loans 191 + medium-term notes 97", as_of: 2026-03-31}
+  debt_book: {value: 3356, source: "sources/filings/ctva-10-q-2026-05-06.md balance sheet: short-term borrowings 1674 + long-term debt 1682", as_of: 2026-03-31}
+  lease_debt: {value: 415, source: "sources/filings/ctva-10-k-2026-02-12.md Note 13 present value of operating lease liabilities (latest disclosed; 10-Q gives none)", as_of: 2025-12-31}
+  debt_total: {value: 3771, source: "debt_book 3356 + lease_debt 415", as_of: 2026-03-31, note: "Latest balance sheet before the analysis date; seasonal peak-ish. Year-end 2025 equivalent is 2995 (alternatives/debt-year-end.yaml)"}
+  deferred_revenue: {value: 2773, source: "sources/filings/ctva-10-q-2026-05-06.md balance sheet 2026-03-31; customer prepayments, not debt", as_of: 2026-03-31}
+  cash: {value: 1966, source: "sources/filings/ctva-10-q-2026-05-06.md balance sheet: cash 1964 + marketable securities 2", as_of: 2026-03-31}
+  minority_interests: {value: 243, source: "sources/filings/ctva-10-q-2026-05-06.md balance sheet noncontrolling interests (EIDP preferred stock) 2026-03-31", as_of: 2026-03-31}
+  options_value: {value: 350.6, source: "sources/filings/ctva-10-k-2026-02-12.md Note 18: 1.881M options at $49.74 valued at intrinsic value on the 2026-06-30 close, plus 3.363M unvested RSUs/PSUs at the close", as_of: 2026-06-30}
+  revenue: {value: 17401, source: "sources/filings/ctva-10-k-2026-02-12.md consolidated statement of operations 2025", as_of: 2025-12-31}
+  ebit: {value: 2438, source: "sources/filings/ctva-10-k-2026-02-12.md statement of operations 2025: net sales 17401 − COGS 9172 − R&D 1474 − SG&A 3492 − amortization 644 − restructuring 146 − separation costs 35 (other income/expense excluded)", as_of: 2025-12-31}
+  ebitda_standardized: {value: 3641, source: "ebit 2438 + D&A 1203 (sources/filings/ctva-10-k-2026-02-12.md cash flow statement)", as_of: 2025-12-31}
+  ebitda_adjusted: {value: 3848, source: "sources/filings/ctva-def14a-2026-03-19.md 2025 Operating EBITDA (company non-GAAP)", as_of: 2025-12-31}
+  acquisition_amortization: {value: 644, source: "sources/filings/ctva-10-k-2026-02-12.md statement of operations, amortization of intangibles", as_of: 2025-12-31}
+  interest_expense: {value: 180, source: "sources/filings/ctva-10-k-2026-02-12.md statement of operations 2025", as_of: 2025-12-31}
+  net_income: {value: 1094, source: "sources/filings/ctva-10-k-2026-02-12.md net income attributable to Corteva 2025", as_of: 2025-12-31}
+  da: {value: 1203, source: "sources/filings/ctva-10-k-2026-02-12.md cash flow statement 2025", as_of: 2025-12-31}
+  capex: {value: 591, source: "sources/filings/ctva-10-k-2026-02-12.md cash flow statement 2025", as_of: 2025-12-31}
+  change_wc: {value: -541, source: "sources/filings/ctva-10-k-2026-02-12.md cash flow statement 2025: receivables −261, inventories −35, payables +231, deferred revenue +270, other +336 (negative = cash released)", as_of: 2025-12-31}
+  rd_expense: {value: 1474, source: "sources/filings/ctva-10-k-2026-02-12.md statement of operations 2025", as_of: 2025-12-31}
+  invested_capital: {value: 22609, source: "Book equity 24144 + borrowings 2580 + leases 415 − cash and marketable securities 4530, sources/filings/ctva-10-k-2026-02-12.md balance sheet 2025-12-31", as_of: 2025-12-31}
+  goodwill: {value: 10465, source: "sources/filings/ctva-10-k-2026-02-12.md balance sheet 2025-12-31", as_of: 2025-12-31}
+  history:
+    - {year: 2022, revenue: 17455, ebit: 1565, net_income: 1147, da: 1223, capex: 605, change_wc: 1565, dividends: 418, buybacks: 1000, debt_issued: 1358, debt_repaid: 1153, cash: 3618, source: "sources/filings/ctva-10-k-2025-02-14.md Corteva statements of operations and cash flows 2022; cash is cash plus restricted cash at end of period (balance sheet not in the two 10-Ks fetched); debt and invested capital not available", as_of: 2022-12-31}
+    - {year: 2023, revenue: 17226, ebit: 1774, net_income: 735, da: 1211, capex: 595, change_wc: 786, dividends: 439, buybacks: 756, debt_issued: 3429, debt_repaid: 2315, cash: 2742, debt_total: 2975, invested_capital: 25270, source: "sources/filings/ctva-10-k-2025-02-14.md Corteva statements 2023; 2023 included $1456M of acquisitions (Stoller, Symborg) not in capex", as_of: 2023-12-31}
+    - {year: 2024, revenue: 16908, ebit: 1808, net_income: 907, da: 1227, capex: 597, change_wc: 92, dividends: 458, buybacks: 1009, debt_issued: 3125, debt_repaid: 2885, cash: 3169, debt_total: 3179, invested_capital: 23799, source: "sources/filings/ctva-10-k-2026-02-12.md statements 2024", as_of: 2024-12-31}
+    - {year: 2025, revenue: 17401, ebit: 2438, net_income: 1094, da: 1203, capex: 591, change_wc: -541, dividends: 475, buybacks: 1071, debt_issued: 1730, debt_repaid: 1871, cash: 4530, debt_total: 2995, invested_capital: 22609, source: "sources/filings/ctva-10-k-2026-02-12.md statements 2025", as_of: 2025-12-31}
+
+debt:
+  rating_actual: {value: null, source: "sources/filings/ctva-10-k-2026-02-12.md and sources/filings/ctva-10-q-2026-05-06.md refer to 'investment grade credit ratings' but disclose no agency rating", as_of: 2026-05-06}
+  rate_type: {value: mixed, source: "sources/filings/ctva-10-q-2026-05-06.md Note 11: fixed-rate senior notes 2200 and MTNs 97; floating commercial paper 667 and variable-rate foreign currency loans", as_of: 2026-03-31}
+  currency: {value: "USD (with small local-currency loans)", source: "sources/filings/ctva-10-q-2026-05-06.md Note 11", as_of: 2026-03-31}
+  maturity_years: {value: 4.3, source: "Face-weighted remaining life of term debt at 2026-03-31 (May 2026 600 at 0.1y; Jul 2030 500 at 4.3y; May 2032 500 at 6.1y; May 2033 600 at 7.1y; MTNs 97 at ~10y; FX loans 191 at ~1y), sources/filings/ctva-10-q-2026-05-06.md Note 11; commercial paper excluded", as_of: 2026-03-31}
+  revolver_undrawn: {value: 6000, source: "sources/filings/ctva-10-q-2026-05-06.md Note 11: revolvers 2850 + 1900 + 364-day 1250, undrawn", as_of: 2026-03-31}
+  bankruptcy_cost: {value: 0.15, source: "Lesson 21: direct 5-10% plus indirect; farmer prepayments (deferred revenue 3579 at 2025 year-end) and dealer financing make indirect costs material", as_of: 2026-06-30}
+  covenants: {value: "Revolving and 364-day facilities: total indebtedness to total capitalization not above 0.60; customary covenants; no restricted-payment limits disclosed", source: "sources/filings/ctva-10-q-2026-05-06.md Note 11", as_of: 2026-03-31}
+
+governance:
+  board:
+    - {name: Gregory R. Page, role: Independent Chair, independent: true, affiliated_with: "retired Cargill chair/CEO; New Corteva chair"}
+    - {name: Charles V. Magro, role: CEO and director, independent: false, affiliated_with: "management; future Vylor CEO"}
+    - {name: Klaus A. Engel, role: Director, independent: true, affiliated_with: "retired Evonik CEO"}
+    - {name: David C. Everitt, role: Director, independent: true, affiliated_with: "retired Deere"}
+    - {name: Janet P. Giesselman, role: Director, independent: true, affiliated_with: "retired Dow"}
+    - {name: Jean-Marc Gilson, role: Director, independent: true, affiliated_with: "Westlake CEO"}
+    - {name: Karen H. Grimes, role: Director, independent: true, affiliated_with: "retired Wellington; future Vylor chair"}
+    - {name: Marcos M. Lutz, role: Director, independent: true, affiliated_with: "Ultrapar chair; future Vylor director"}
+    - {name: Nayaki R. Nayyar, role: Director, independent: true, affiliated_with: "Siteimprove CEO"}
+    - {name: Christopher J. Policinski, role: Director, independent: true, affiliated_with: "retired Land O'Lakes CEO"}
+    - {name: Kerry J. Preete, role: Director, independent: true, affiliated_with: "future Vylor director"}
+    - {name: Patrick J. Ward, role: Director, independent: true, affiliated_with: "retired Cummins CFO"}
+  controlling_holders:
+    - {name: The Vanguard Group, pct: 0.120, source: "sources/filings/ctva-def14a-2026-03-19.md beneficial ownership table (13G/A as of 2023-12-31)", as_of: 2026-03-02}
+    - {name: "BlackRock, Inc.", pct: 0.080, source: "sources/filings/ctva-def14a-2026-03-19.md beneficial ownership table (13G/A as of 2023-12-31)", as_of: 2026-03-02}
+    - {name: State Street Corporation, pct: 0.053, source: "sources/filings/ctva-def14a-2026-03-19.md beneficial ownership table (13G as of 2025-09-30)", as_of: 2026-03-02}
+    - {name: Directors and executive officers as a group, pct: 0.0015, source: "sources/filings/ctva-def14a-2026-03-19.md: 1,027,751 shares incl. rights to acquire, under 1%", as_of: 2026-03-02}
+  share_classes: {value: "One class of common stock, one vote per share; EIDP preferred stock ($4.50 and $3.50 series) held by third parties at the subsidiary, non-voting at Corteva", source: "sources/filings/ctva-10-k-2026-02-12.md Note 16", as_of: 2025-12-31}
+  marginal_investor: {value: "Diversified institutions; the three largest index managers hold 25.3% and insiders under 1%", source: "sources/filings/ctva-def14a-2026-03-19.md beneficial ownership table", as_of: 2026-03-02}
+  objectives: {value: "'accelerate value for shareholders' through separation (8-K 2025-10-01); New Corteva 'operational efficiency at its core' and 'asset-light' (8-K 2026-06-29); both companies to hold investment-grade ratings (10-Q 2026-05-06); pay on Operating EBITDA, margin, free cash flow, RONA and Operating EPS (DEF 14A)", source: "sources/statements/stated-side-2026-06-29.md S1, S4, S5, S12", as_of: 2026-06-29}
+  change_of_control_payouts: {value: "Double-trigger Change in Control and Executive Severance Plan; no single-trigger agreements; Kissam participates as CEO; King's role elimination is a qualifying termination", source: "sources/filings/ctva-def14a-2026-03-19.md; sources/filings/ctva-8-k-2026-04-14-items-502-701-901.md", as_of: 2026-04-14}
+
+forecast:
+  years:
+    - {year: 2026, revenue: 17923, ebit_margin: 0.145, source: "Revenue +3%; operating income +7% in line with the 2026 guidance midpoint for Operating EBITDA (sources/filings/ctva-8-k-2026-05-05-items-202-901.md Ex. 99.1)", as_of: 2026-05-05}
+    - {year: 2027, revenue: 18461, ebit_margin: 0.150, source: "Analyst estimate: revenue +3%, margin +50bp (Seed price/mix and royalty neutrality from 2026 per sources/filings/ctva-8-k-2026-02-03-items-202-901.md)", as_of: 2026-06-30}
+    - {year: 2028, revenue: 19015, ebit_margin: 0.155, source: "Analyst estimate: revenue +3%, margin +50bp", as_of: 2026-06-30}
+    - {year: 2029, revenue: 19585, ebit_margin: 0.158, source: "Analyst estimate: revenue +3%", as_of: 2026-06-30}
+    - {year: 2030, revenue: 20173, ebit_margin: 0.160, source: "Analyst estimate: revenue +3%", as_of: 2026-06-30}
+  growth_period_years: {value: 5, source: "Analyst choice: mature company; five years to stable", as_of: 2026-06-30}
+  sales_to_capital: {value: 1.5, source: "Analyst estimate: marginal revenue per dollar of reinvestment; average book ratio is 0.77 (17401 ÷ 22609) but most invested capital is 2017 merger goodwill and intangibles that new growth does not need", as_of: 2025-12-31}
+  stable_roic: {value: 0.10, source: "Analyst choice: modestly above the cost of capital; base-year ROIC is in model-output.md section 8", as_of: 2026-06-30}
+  stable_beta: {value: 1.0, source: "Lesson 32: betas move toward one", as_of: 2026-06-30}
+  stable_debt_ratio: {value: 0.20, source: "Analyst choice between the Chemical (Specialty) industry D/V of about 23% and Farming/Agriculture 34% (sources/market-data/industry-betas-2026-01-05.json de_ratio) and the firm's current 6%", as_of: 2026-01-05}
+  management_growth: {value: 0.07, source: "sources/filings/ctva-8-k-2026-05-05-items-202-901.md Ex. 99.1: 2026 Operating EBITDA and Operating EPS growth of 7% at the midpoint", as_of: 2026-05-05}
+  stress_cases:
+    - {name: History (flat revenue 2022-2025), revenue_growth: 0.0, margin: 0.14, source: "sources/filings/ctva-10-k-2026-02-12.md: revenue 17455 (2022) to 17401 (2025); 2025 EBIT margin 14.0%", as_of: 2025-12-31}
+    - {name: Crop protection price war (margin back to 2023-2024), revenue_growth: 0.02, margin: 0.106, source: "sources/filings/ctva-10-k-2026-02-12.md: 2023-2024 EBIT 1774 and 1808 on revenue 17226 and 16908 (10.3%-10.7%)", as_of: 2025-12-31}
+
+peers:
+  - {name: FMC Corporation, ticker: FMC, fiscal_period: FY2025, enterprise_value: 4332.8, revenue: 3467.4, ebitda: -1454.7, net_income: -2238.9, equity_book: 2071.5, market_cap: 1438.0, growth: -0.183, source: "sources/peer-filings/peer-facts-2026-06-30.md", as_of: 2026-06-30}
+  - {name: American Vanguard, ticker: AVD, fiscal_period: FY2025, enterprise_value: 271.5, revenue: 515.1, ebitda: -10.9, net_income: -49.9, market_cap: 80.1, growth: -0.059, source: "sources/peer-filings/peer-facts-2026-06-30.md", as_of: 2026-06-30}
+  - {name: Mosaic, ticker: MOS, fiscal_period: FY2025, enterprise_value: 10978.2, revenue: 12052.4, ebitda: 1871.4, net_income: 540.7, equity_book: 12084.9, market_cap: 6735.2, growth: 0.084, source: "sources/peer-filings/peer-facts-2026-06-30.md", as_of: 2026-06-30}
+  - {name: CF Industries, ticker: CF, fiscal_period: FY2025, enterprise_value: 20267.9, revenue: 7084.0, ebitda: 3198.0, equity_book: 4838.0, market_cap: 16631.9, growth: 0.193, source: "sources/peer-filings/peer-facts-2026-06-30.md (net income not tagged)", as_of: 2026-06-30}
+  - {name: Scotts Miracle-Gro, ticker: SMG, fiscal_period: FY2025 (Sep), enterprise_value: 6305.2, revenue: 3413.1, ebitda: 433.6, net_income: 145.2, market_cap: 3962.8, growth: -0.039, source: "sources/peer-filings/peer-facts-2026-06-30.md", as_of: 2026-06-30}
+
+facts:
+  - {id: separation-announced, value: 2025-10-01, source: "sources/filings/ctva-8-k-2025-10-01-items-202-901.md Ex. 99.1", as_of: 2025-10-01, note: "Tax-free spin of the Seed business; completion expected 2H 2026"}
+  - {id: spin-target-date, value: 2026-10-01, source: "sources/filings/ctva-8-k-2026-04-14-items-502-701-901.md Ex. 10.1 section 2a", as_of: 2026-04-10, note: "currently anticipated, but not guaranteed"}
+  - {id: investor-day, value: 2026-09-15, source: "sources/filings/ctva-8-k-2026-05-05-items-202-901.md Ex. 99.1", as_of: 2026-05-05}
+  - {id: pension-contribution, value: 1500, source: "sources/filings/ctva-10-q-2026-05-06.md Liquidity", as_of: 2026-05-06, note: "Discretionary, on or before 2026-07-31, pre-tax"}
+  - {id: separation-costs, value: 350, source: "sources/filings/ctva-8-k-2026-05-05-items-202-901.md Ex. 99.1", as_of: 2026-05-05}
+  - {id: dis-synergies, value: 100, source: "sources/filings/ctva-8-k-2026-05-05-items-202-901.md Ex. 99.1", as_of: 2026-05-05}
+  - {id: buyback-remaining, value: 2180, source: "sources/filings/ctva-10-q-2026-05-06.md Part II Item 2", as_of: 2026-03-31}
+  - {id: buyback-h1-2026-plan, value: 500, source: "sources/filings/ctva-10-q-2026-05-06.md", as_of: 2026-05-06}
+  - {id: q1-2026-buyback, value: 250, source: "sources/filings/ctva-10-q-2026-05-06.md Note on share buyback", as_of: 2026-03-31}
+  - {id: seed-sales-2025, value: 9898, source: "sources/filings/ctva-10-k-2026-02-12.md Note 22", as_of: 2025-12-31}
+  - {id: cp-sales-2025, value: 7503, source: "sources/filings/ctva-10-k-2026-02-12.md Note 22", as_of: 2025-12-31}
+  - {id: seed-op-ebitda-2023-2025, value: "2117, 2219, 2636", source: "sources/filings/ctva-10-k-2026-02-12.md Note 22", as_of: 2025-12-31}
+  - {id: cp-op-ebitda-2023-2025, value: "1374, 1272, 1350", source: "sources/filings/ctva-10-k-2026-02-12.md Note 22", as_of: 2025-12-31}
+  - {id: cp-price-q1-2026, value: -0.02, source: "sources/filings/ctva-8-k-2026-05-05-items-202-901.md Ex. 99.1", as_of: 2026-03-31}
+  - {id: seed-price-mix-q1-2026, value: 0.03, source: "sources/filings/ctva-8-k-2026-05-05-items-202-901.md Ex. 99.1", as_of: 2026-03-31}
+  - {id: bayer-resolution-charge, value: 610, source: "sources/filings/ctva-10-k-2026-02-12.md Note 22 significant items", as_of: 2025-12-31}
+  - {id: pension-opeb-liability, value: 2434, source: "sources/filings/ctva-10-k-2026-02-12.md balance sheet", as_of: 2025-12-31}
+  - {id: note-maturity-may-2026, value: 600, source: "sources/filings/ctva-10-q-2026-05-06.md Note 11, 4.50% notes due May 2026", as_of: 2026-03-31}
+  - {id: fmc-market-cap, value: 1438.0, source: "sources/peer-filings/peer-facts-2026-06-30.md", as_of: 2026-06-30, note: "FMC FY2025 revenue −18.3%, operating loss −1628"}
+  - {id: op-ebitda-2025, value: 3848, source: "sources/filings/ctva-def14a-2026-03-19.md PRP table", as_of: 2025-12-31}
+  - {id: free-cash-flow-2025, value: 2866, source: "sources/filings/ctva-def14a-2026-03-19.md PRP table (operating cash flow 3457 − capex 591)", as_of: 2025-12-31}

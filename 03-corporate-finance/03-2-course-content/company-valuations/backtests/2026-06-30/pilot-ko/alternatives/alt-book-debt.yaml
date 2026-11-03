@@ -1,0 +1,651 @@
+meta:
+  company: The Coca-Cola Company
+  slug: coca-cola
+  ticker: KO
+  type: public
+  home_country: United States
+  currency: USD
+  reporting_currency: USD
+  fiscal_year_end: 12-31
+  base_year: 2025
+  analysis_date: '2026-06-30'
+  analyst: weprintmoney
+  mode: quick
+  blind: true
+  omitted:
+  - field: beta.regression_beta
+    reason: no price-history source permitted in the blind run; bottom-up beta used
+  - field: company.rd_history
+    reason: Coca-Cola does not report R&D separately
+  - field: company.history 2021-2022
+    reason: fetch-filings.py fetched two 10-Ks; 2022 balance sheet (debt, cash, invested capital) is not in them, so history runs 2023-2025
+  - field: company.acquisition_amortization
+    reason: amortization of acquired intangibles is not separately disclosed and is small (most intangibles are indefinite-lived trademarks)
+  - field: forecast.analyst_growth
+    reason: no analyst consensus source permitted in the blind run
+modeling_choices:
+  coverage_numerator: ebit
+  rd_amortizable_life: null
+  firm_size_table: large
+  sbc_treatment: expense
+  firm_value_basis: market
+  beta_source: bottom_up
+  kd_source: actual_rating
+  terminal_method: consistent_reinvestment
+market:
+  govt_bond_rate:
+    value: 0.0444
+    source: sources/market-data/market-rates-2026-06-01.json fred_latest.treasury_10y
+    as_of: '2026-06-30'
+  sovereign_default_spread:
+    value: 0.0026
+    source: sources/market-data/market-rates-2026-06-01.json damodaran_monthly.us_sovereign_default_spread (Aa1)
+    as_of: '2026-06-01'
+  risk_free_rate:
+    value: 0.0418
+    source: sources/market-data/market-rates-2026-06-01.json govt_bond_rate − sovereign_default_spread
+    as_of: '2026-06-30'
+  mature_erp:
+    value: 0.045705
+    source: sources/market-data/market-rates-2026-06-01.json damodaran_monthly.implied_erp_over_dollar_riskfree
+    as_of: '2026-06-01'
+  ratings_table:
+    value: ../sources/market-data/ratings-spreads-2026-01-01.json
+    source: sources/market-data/ratings-spreads-2026-01-01.json
+    as_of: '2026-01-01'
+  tax_rate_marginal:
+    value: 0.25
+    source: sources/market-data/us-marginal-tax-rate.md (lesson 12 country tax table, US 2023E)
+    as_of: '2024-01-01'
+  tax_rate_effective:
+    value: 0.179
+    source: 'sources/filings/ko-10-k-2026-02-20.md income statement: income taxes 2,861 ÷ income before taxes 15,998'
+    as_of: '2025-12-31'
+  terminal_growth:
+    value: 0.035
+    source: sources/market-data/market-rates-2026-06-01.json capped below the risk-free rate; judgment
+    as_of: '2026-06-30'
+    note: nominal dollar growth below the 4.18% risk-free rate
+country:
+  exposures:
+  - country: North America
+    weight: 0.4013
+    erp: 0.04571
+    measure: revenues
+    source: sources/filings/ko-10-k-2026-02-20.md Note 20 segment revenues; country premiums from sources/market-data/country-risk-2026-01-01.json
+    as_of: '2025-12-31'
+    note: United States; the implied premium over the dollar risk-free rate already prices the US, so no country premium is added
+  - country: EMEA
+    weight: 0.2359
+    erp: 0.0746
+    measure: revenues
+    source: sources/filings/ko-10-k-2026-02-20.md Note 20 segment revenues; country premiums from sources/market-data/country-risk-2026-01-01.json
+    as_of: '2025-12-31'
+    note: 60% Western Europe (Germany, UK, France, Spain, Italy equally) + 40% emerging EMEA (Turkey, Poland, South Africa, Nigeria, Egypt equally)
+  - country: Latin America
+    weight: 0.1298
+    erp: 0.07894
+    measure: revenues
+    source: sources/filings/ko-10-k-2026-02-20.md Note 20 segment revenues; country premiums from sources/market-data/country-risk-2026-01-01.json
+    as_of: '2025-12-31'
+    note: Mexico 40%, Brazil 30%, Argentina, Colombia and Chile 10% each
+  - country: Asia Pacific
+    weight: 0.1155
+    erp: 0.06516
+    measure: revenues
+    source: sources/filings/ko-10-k-2026-02-20.md Note 20 segment revenues; country premiums from sources/market-data/country-risk-2026-01-01.json
+    as_of: '2025-12-31'
+    note: China, Japan, India, Philippines, Indonesia, Thailand, Australia, Vietnam equally
+  - country: Bottling Investments
+    weight: 0.1175
+    erp: 0.07941
+    measure: revenues
+    source: sources/filings/ko-10-k-2026-02-20.md Note 20 segment revenues; country premiums from sources/market-data/country-risk-2026-01-01.json
+    as_of: '2025-12-31'
+    note: India 50%, South Africa 50% (the consolidated bottlers' main territories)
+  weighted_erp:
+    value: 0.06304
+    source: sources/filings/ko-10-k-2026-02-20.md Note 20 and sources/market-data/country-risk-2026-01-01.json; sum of weight × erp
+    as_of: '2026-06-30'
+beta:
+  unlevered_bottom_up:
+    value: 0.5755
+    source: sources/market-data/industry-betas-2026-01-05.json Beverage (Soft), unlevered and cash-corrected, 27 firms
+    as_of: '2026-01-05'
+company:
+  shares_basic:
+    value: 4302.5
+    source: sources/filings/ko-10-q-2026-04-30.md cover page, shares outstanding as of April 28, 2026
+    as_of: '2026-04-28'
+  shares_diluted:
+    value: 4313.0
+    source: sources/filings/ko-10-k-2026-02-20.md income statement, average diluted shares 2025
+    as_of: '2025-12-31'
+  share_price:
+    value: 81.27
+    source: sources/peer-filings/peer-facts-2026-06-30.md KO close
+    as_of: '2026-06-30'
+  equity_value:
+    value: 349662.7
+    source: shares_basic × share_price
+    as_of: '2026-06-30'
+  equity_book:
+    value: 32169.0
+    source: sources/filings/ko-10-k-2026-02-20.md balance sheet, equity attributable to shareowners
+    as_of: '2025-12-31'
+  debt_face:
+    value: 46110.0
+    source: 'sources/filings/ko-10-k-2026-02-20.md Note 11: long-term debt 43,941 before the (618) fair-value hedge adjustment, so 44,559, + loans and notes payable 1,551'
+    as_of: '2025-12-31'
+    note: 'approximate face: unamortized discounts and issuance costs are not disclosed separately'
+  debt_book:
+    value: 45492.0
+    source: 'sources/filings/ko-10-k-2026-02-20.md balance sheet: loans and notes payable 1,551 + current maturities 1,822 + long-term debt 42,119'
+    as_of: '2025-12-31'
+    note: excludes 1,248 of debt classified in liabilities held for sale (African bottling, being sold to CCHBC)
+  debt_market:
+    value: 40936.0
+    source: 'sources/filings/ko-10-k-2026-02-20.md Note 11: fair value of long-term debt 39,385 + commercial paper and short-term loans 1,551 at face'
+    as_of: '2025-12-31'
+  lease_debt:
+    value: 1722.0
+    source: sources/filings/ko-10-k-2026-02-20.md Note 10, total operating lease liabilities
+    as_of: '2025-12-31'
+  off_balance_sheet_debt:
+    value: 0.0
+    source: 'sources/filings/ko-10-k-2026-02-20.md Notes 10-12: no leases signed but not commenced, guarantees or take-or-pay commitments are disclosed as debt-like; bottler debt is not guaranteed (MD&A
+      line 1391)'
+    as_of: '2025-12-31'
+  debt_total:
+    value: 47214.0
+    source: debt_market + lease_debt + off_balance_sheet_debt
+    as_of: '2025-12-31'
+  cash:
+    value: 15806.0
+    source: 'sources/filings/ko-10-k-2026-02-20.md balance sheet: cash, cash equivalents and short-term investments 13,872 + marketable securities 1,934'
+    as_of: '2025-12-31'
+  minority_interests:
+    value: 2106.0
+    source: sources/filings/ko-10-k-2026-02-20.md balance sheet, equity attributable to noncontrolling interests (book)
+    as_of: '2025-12-31'
+  cross_holdings:
+    value: 40522.0
+    source: 'sources/filings/ko-10-k-2026-02-20.md Note 6: fair value of listed equity-method stakes 34,286 + carrying value of unlisted ones (20,235 − 13,999)'
+    as_of: '2025-12-31'
+    note: 'listed stakes at 2025-12-31 prices: Monster, CCEP, Coca-Cola FEMSA, CCHBC, CCBJH, CCI, Andina'
+  options_value:
+    value: 689.3
+    source: 'sources/filings/ko-10-k-2026-02-20.md Note 13: 27 million options outstanding, weighted-average exercise price $55.74; valued at intrinsic value at the 2026-06-30 price'
+    as_of: '2026-06-30'
+    note: intrinsic value only; understates the claim; PSUs and RSUs not added
+  revenue:
+    value: 47941.0
+    source: sources/filings/ko-10-k-2026-02-20.md income statement
+    as_of: '2025-12-31'
+  ebit:
+    value: 13762.0
+    source: sources/filings/ko-10-k-2026-02-20.md income statement, operating income as reported (after 1,261 of other operating charges)
+    as_of: '2025-12-31'
+  ebitda_standardized:
+    value: 14812.0
+    source: sources/filings/ko-10-k-2026-02-20.md operating income 13,762 + D&A 1,050
+    as_of: '2025-12-31'
+  interest_expense:
+    value: 1654.0
+    source: sources/filings/ko-10-k-2026-02-20.md income statement
+    as_of: '2025-12-31'
+  net_income:
+    value: 13107.0
+    source: sources/filings/ko-10-k-2026-02-20.md income statement, attributable to shareowners
+    as_of: '2025-12-31'
+  da:
+    value: 1050.0
+    source: sources/filings/ko-10-k-2026-02-20.md cash flow statement
+    as_of: '2025-12-31'
+  capex:
+    value: 2112.0
+    source: sources/filings/ko-10-k-2026-02-20.md cash flow statement, purchases of PP&E
+    as_of: '2025-12-31'
+  change_wc:
+    value: 1701.0
+    source: sources/filings/ko-10-k-2026-02-20.md cash flow statement; same construction as company.history 2025
+    as_of: '2025-12-31'
+  sbc:
+    value: 279.0
+    source: sources/filings/ko-10-k-2026-02-20.md cash flow statement
+    as_of: '2025-12-31'
+  invested_capital:
+    value: 45448.0
+    source: 'sources/filings/ko-10-k-2026-02-20.md balance sheet: total equity 34,275 + debt_book 45,492 + leases 1,722 − cash 15,806 − equity method investments 20,235'
+    as_of: '2025-12-31'
+    note: 'operating basis: equity-method stakes are taken out because their income is not in operating income'
+  goodwill:
+    value: 15491.0
+    source: sources/filings/ko-10-k-2026-02-20.md balance sheet
+    as_of: '2025-12-31'
+  history:
+  - year: 2023
+    revenue: 45754
+    ebit: 11311
+    net_income: 10714
+    da: 1128
+    impairment: 1741
+    capex: 1914
+    change_wc: 1984
+    dividends: 7952
+    buybacks: 2289
+    debt_issued: 6891
+    debt_repaid: 5034
+    cash: 13663
+    debt_total: 43426
+    invested_capital: 37572
+    source: sources/filings/ko-10-k-2025-02-20.md income statement, balance sheet, cash flow statement, Note 10 leases
+    as_of: '2023-12-31'
+    note: impairment = non-cash other operating charges added back in the cash flow statement; capex = purchases of PP&E + acquisitions; change_wc = working capital AND all other non-cash items, set so
+      that net income + impairment + D&A − change_wc = cash from operations; cash = cash, short-term investments and marketable securities; debt_total = book borrowings + operating leases; invested_capital
+      = total equity incl. noncontrolling + debt_total − cash − equity method investments
+  - year: 2024
+    revenue: 47061
+    ebit: 9992
+    net_income: 10631
+    da: 1075
+    impairment: 4000
+    capex: 2379
+    change_wc: 8901
+    dividends: 8359
+    buybacks: 1795
+    debt_issued: 12061
+    debt_repaid: 9533
+    cash: 14571
+    debt_total: 45735
+    invested_capital: 39449
+    source: sources/filings/ko-10-k-2026-02-20.md income statement, balance sheet, cash flow statement, Notes 10 and 21
+    as_of: '2024-12-31'
+    note: impairment = non-cash other operating charges added back in the cash flow statement; capex = purchases of PP&E + acquisitions; change_wc = working capital AND all other non-cash items, set so
+      that net income + impairment + D&A − change_wc = cash from operations; cash = cash, short-term investments and marketable securities; debt_total = book borrowings + operating leases; invested_capital
+      = total equity incl. noncontrolling + debt_total − cash − equity method investments; cash from operations includes the $6.0 billion IRS Tax Litigation Deposit (Note 21), so change_wc carries it
+  - year: 2025
+    revenue: 47941
+    ebit: 13762
+    net_income: 13107
+    da: 1050
+    impairment: 1052
+    capex: 8673
+    change_wc: 1701
+    dividends: 8779
+    buybacks: 746
+    debt_issued: 4980
+    debt_repaid: 4967
+    cash: 15806
+    debt_total: 47214
+    invested_capital: 45448
+    source: sources/filings/ko-10-k-2026-02-20.md income statement, balance sheet, cash flow statement, Notes 10 and 21; fairlife payment per MD&A line 1338
+    as_of: '2025-12-31'
+    note: impairment = non-cash other operating charges added back in the cash flow statement; capex = purchases of PP&E + acquisitions; change_wc = working capital AND all other non-cash items, set so
+      that net income + impairment + D&A − change_wc = cash from operations; cash = cash, short-term investments and marketable securities; debt_total = book borrowings + operating leases; invested_capital
+      = total equity incl. noncontrolling + debt_total − cash − equity method investments; the $6.1 billion fairlife milestone payment (classified in operating cash flow) is moved to capex as acquisition
+      consideration, so cash from operations used here is 7,408 + 6,100
+debt:
+  rating_actual:
+    value: A1/A+
+    source: 'sources/filings/ko-10-k-2026-02-20.md MD&A line 1391: A+ (S&P), A1 (Moody''s)'
+    as_of: '2025-12-31'
+  kd_pretax_observed:
+    value: 0.033
+    source: sources/filings/ko-10-k-2026-02-20.md Note 11, weighted-average effective rate on long-term debt after swaps
+    as_of: '2025-12-31'
+    note: coupon-era rate; not used for the cost of capital
+  rate_type:
+    value: mixed
+    source: 'sources/filings/ko-10-k-2026-02-20.md Note 11: fixed-rate notes, swapped in part; commercial paper floating'
+    as_of: '2025-12-31'
+  currency:
+    value: USD and EUR
+    source: 'sources/filings/ko-10-k-2026-02-20.md Note 11: euro notes 15,470 of 43,941 long-term debt (35%); Swiss franc 726'
+    as_of: '2025-12-31'
+  maturity_years:
+    value: 11.0
+    source: 'sources/filings/ko-10-k-2026-02-20.md Note 11 maturity table: 15,928 due 2026-2030, about 28,000 later, notes out to 2093'
+    as_of: '2025-12-31'
+    note: estimate; the filing gives maturities only for five years
+    estimate: true
+    range:
+    - 9
+    - 14
+  revolver_undrawn:
+    value: 6150.0
+    source: sources/filings/ko-10-k-2026-02-20.md Note 11 corporate backup lines of credit
+    as_of: '2025-12-31'
+  bankruptcy_cost:
+    value: 0.15
+    source: lesson 21 range (direct 5-10%, indirect higher); judgment
+    as_of: '2026-06-30'
+  covenants:
+    value: No maintenance covenants disclosed; the notes include various restrictions, none significant (Note 11 footnote 5); no change-of-control put disclosed
+    source: sources/filings/ko-10-k-2026-02-20.md Note 11
+    as_of: '2025-12-31'
+governance:
+  board:
+  - name: David B. Weinberg
+    role: Lead Independent Director
+    independent: true
+    affiliated_with: Judd Enterprises
+  - name: Herb Allen
+    role: Director
+    independent: true
+    affiliated_with: Allen & Company
+  - name: James Quincey
+    role: Chairman; CEO until 2026-03-31, then Executive Chairman
+    independent: false
+    affiliated_with: Coca-Cola management
+  - name: Henrique Braun
+    role: Nominee; CEO from 2026-03-31
+    independent: false
+    affiliated_with: Coca-Cola management
+  - name: Caroline J. Tsay
+    role: Director
+    independent: true
+    affiliated_with: technology advisor
+  - name: Bela Bajaria
+    role: Director
+    independent: true
+    affiliated_with: Netflix
+  - name: Amity Millhiser
+    role: Director
+    independent: true
+    affiliated_with: former PwC
+  - name: Ana Botín
+    role: Director
+    independent: true
+    affiliated_with: Banco Santander
+  - name: Max Levchin
+    role: Director
+    independent: true
+    affiliated_with: Affirm
+  - name: Carolyn Everson
+    role: Director
+    independent: true
+    affiliated_with: Permira
+  - name: Thomas S. Gayner
+    role: Director
+    independent: true
+    affiliated_with: Markel Group
+  - name: Christopher C. Davis
+    role: Director
+    independent: true
+    affiliated_with: Davis Selected Advisers
+  controlling_holders:
+  - name: Berkshire Hathaway
+    pct: 0.0929
+    source: sources/filings/ko-def14a-2026-03-16.md principal shareowners, line 1885
+    as_of: '2025-12-31'
+  - name: The Vanguard Group
+    pct: 0.0861
+    source: sources/filings/ko-def14a-2026-03-16.md principal shareowners, line 1886 (13G/A as of 2023-12-29)
+    as_of: '2023-12-29'
+  - name: BlackRock
+    pct: 0.0728
+    source: sources/filings/ko-def14a-2026-03-16.md principal shareowners, line 1887 (13G/A as of 2023-12-31)
+    as_of: '2023-12-31'
+  - name: Directors and executive officers as a group
+    pct: 0.009
+    source: sources/filings/ko-def14a-2026-03-16.md beneficial ownership table, 38,886,151 shares
+    as_of: '2026-03-02'
+  share_classes:
+    value: One class of common stock, one vote per share
+    source: sources/filings/ko-10-q-2026-04-30.md cover page
+    as_of: '2026-04-28'
+  marginal_investor:
+    value: Diversified institutions (Vanguard, BlackRock and other index and active funds); Berkshire Hathaway holds 9.29% as a long-term holder with no board seat
+    source: sources/filings/ko-def14a-2026-03-16.md principal shareowners and director list
+    as_of: '2026-03-16'
+  objectives:
+    value: 'Long-term growth plan of 4%-6% organic revenue and 6%-8% comparable currency neutral operating income (proxy line 2195); capital allocation priorities: invest in the business, grow the dividend,
+      acquisitions, repurchase shares with excess cash (10-K line 1324)'
+    source: sources/statements/ko-stated-positions.md
+    as_of: '2026-06-25'
+  change_of_control_payouts:
+    value: Double-trigger change-in-control provisions in equity plans; no special change-in-control severance for executive officers
+    source: sources/filings/ko-def14a-2026-03-16.md lines 2107 and 2643
+    as_of: '2026-03-16'
+forecast:
+  years:
+  - year: 2026
+    revenue: 50338.1
+    ebit_margin: 0.3193
+    source: 'sources/filings/ko-def14a-2026-03-16.md line 2195 long-term growth plan (5% organic revenue, 7% operating income: the midpoints)'
+    as_of: '2026-03-16'
+    note: base margin = 2025 operating income before other operating charges ÷ revenue; margin grows by (1.07 ÷ 1.05) a year
+  - year: 2027
+    revenue: 52855.0
+    ebit_margin: 0.3254
+    source: 'sources/filings/ko-def14a-2026-03-16.md line 2195 long-term growth plan (5% organic revenue, 7% operating income: the midpoints)'
+    as_of: '2026-03-16'
+    note: base margin = 2025 operating income before other operating charges ÷ revenue; margin grows by (1.07 ÷ 1.05) a year
+  - year: 2028
+    revenue: 55497.8
+    ebit_margin: 0.3316
+    source: 'sources/filings/ko-def14a-2026-03-16.md line 2195 long-term growth plan (5% organic revenue, 7% operating income: the midpoints)'
+    as_of: '2026-03-16'
+    note: base margin = 2025 operating income before other operating charges ÷ revenue; margin grows by (1.07 ÷ 1.05) a year
+  - year: 2029
+    revenue: 58272.7
+    ebit_margin: 0.3379
+    source: 'sources/filings/ko-def14a-2026-03-16.md line 2195 long-term growth plan (5% organic revenue, 7% operating income: the midpoints)'
+    as_of: '2026-03-16'
+    note: base margin = 2025 operating income before other operating charges ÷ revenue; margin grows by (1.07 ÷ 1.05) a year
+  - year: 2030
+    revenue: 61186.3
+    ebit_margin: 0.3444
+    source: 'sources/filings/ko-def14a-2026-03-16.md line 2195 long-term growth plan (5% organic revenue, 7% operating income: the midpoints)'
+    as_of: '2026-03-16'
+    note: base margin = 2025 operating income before other operating charges ÷ revenue; margin grows by (1.07 ÷ 1.05) a year
+  growth_period_years:
+    value: 5
+    source: 'judgment: a mature company; five years of plan then stable growth'
+    as_of: '2026-06-30'
+  stable_roic:
+    value: 0.15
+    source: 'judgment: brand moat keeps returns above the cost of capital but below today''s level'
+    as_of: '2026-06-30'
+  sales_to_capital:
+    value: 1.5
+    source: sources/filings/ko-10-k-2026-02-20.md judgment between revenue ÷ invested capital (47,941 ÷ invested_capital, about 1.05) and the asset-light concentrate model
+    as_of: '2025-12-31'
+  management_growth:
+    value: 0.05
+    source: sources/filings/ko-def14a-2026-03-16.md line 2195, midpoint of the 4%-6% organic revenue plan
+    as_of: '2026-03-16'
+  stable_beta:
+    value: 0.8
+    source: 'lesson 32: betas drift toward one; judgment'
+    as_of: '2026-06-30'
+  stable_debt_ratio:
+    value: 0.2
+    source: judgment, set after the section 3 optimum; see read.md
+    as_of: '2026-06-30'
+  stress_cases:
+  - name: 'History: 2023-2025 reported revenue growth, margin held'
+    revenue_growth: 0.0236
+    margin: 0.3134
+    source: sources/filings/ko-10-k-2026-02-20.md income statement
+    as_of: '2025-12-31'
+  - name: Plan revenue, margin held at 2025 level
+    revenue_growth: 0.05
+    margin: 0.3134
+    source: sources/filings/ko-def14a-2026-03-16.md line 2195
+    as_of: '2026-03-16'
+  - name: 'Tax loss: plan less a 4-point margin hit (Tax Court method on foreign licensee income)'
+    revenue_growth: 0.05
+    margin: 0.2734
+    source: sources/filings/ko-10-k-2026-02-20.md line 1326, $14 billion potential liability 2010-2025
+    as_of: '2025-12-31'
+peers:
+- name: PepsiCo
+  ticker: PEP
+  fiscal_period: FY2025
+  enterprise_value: 225727.4
+  revenue: 93925.0
+  ebitda: 14949.0
+  net_income: 8240.0
+  equity_book: 20406.0
+  market_cap: 185060.4
+  growth: 0.023
+  ebit_margin: 0.1224
+  debt_ratio: 0.2134
+  payout: 0.9269
+  beta: null
+  source: sources/peer-filings/peer-facts-2026-06-30.md
+  as_of: '2026-06-30'
+- name: Keurig Dr Pepper
+  ticker: KDP
+  fiscal_period: FY2025
+  enterprise_value: 58327.1
+  revenue: 16603.0
+  ebitda: 4168.0
+  net_income: 2079.0
+  equity_book: 25516.0
+  market_cap: 44531.1
+  growth: 0.082
+  ebit_margin: 0.2153
+  debt_ratio: 0.2497
+  payout: 0.6013
+  beta: null
+  source: sources/peer-filings/peer-facts-2026-06-30.md
+  as_of: '2026-06-30'
+- name: Monster Beverage
+  ticker: MNST
+  fiscal_period: FY2025
+  enterprise_value: null
+  revenue: 8294.3
+  ebitda: 2533.8
+  net_income: null
+  equity_book: 8254.1
+  market_cap: null
+  growth: 0.107
+  ebit_margin: 0.2917
+  debt_ratio: 0.0
+  payout: 0.0
+  beta: null
+  source: sources/peer-filings/peer-facts-2026-06-30.md
+  as_of: '2026-06-30'
+  note: 'market cap and EV left out: the tool''s Yahoo close is split-adjusted (2025-12-31 close $38.33 vs about $76 implied by KO''s 10-K Note 6 fair value of its stake), so close × pre-split share count
+    is wrong; net income untagged in XBRL'
+- name: Celsius Holdings
+  ticker: CELH
+  fiscal_period: FY2025
+  enterprise_value: 7781.4
+  revenue: 2515.3
+  ebitda: 170.5
+  net_income: 108.0
+  equity_book: 1181.5
+  market_cap: 7485.1
+  growth: 0.855
+  ebit_margin: 0.0561
+  debt_ratio: 0.085
+  payout: 0.0
+  beta: null
+  source: sources/peer-filings/peer-facts-2026-06-30.md
+  as_of: '2026-06-30'
+  note: 2025 revenue growth includes an acquisition; kept for multiples, flagged
+- name: Coca-Cola Consolidated
+  ticker: COKE
+  fiscal_period: FY2025
+  enterprise_value: null
+  revenue: 7228.1
+  ebitda: 1145.7
+  net_income: 570.6
+  equity_book: -739.7
+  market_cap: null
+  growth: 0.048
+  ebit_margin: 0.1315
+  debt_ratio: null
+  payout: 0.1519
+  beta: null
+  source: sources/peer-filings/peer-facts-2026-06-30.md
+  as_of: '2026-06-30'
+  note: dual-class; share count untagged in XBRL, so no market cap; KO sold its stake to COKE in November 2025
+facts:
+- id: irs-potential-liability-2010-2025
+  value: 14000
+  source: sources/filings/ko-10-k-2026-02-20.md line 1326
+  as_of: '2025-12-31'
+  note: $ millions; remaining incremental tax and interest if the Tax Court method is upheld
+- id: irs-tax-litigation-deposit
+  value: 6000
+  source: sources/filings/ko-10-k-2026-02-20.md line 1326
+  as_of: '2024-09-10'
+  note: $ millions paid for 2007-2009; refundable if KO wins; appeal briefed at the Eleventh Circuit by 2025-08-27
+- id: irs-tax-reserve
+  value: 520
+  source: sources/filings/ko-10-q-2026-04-30.md line 667
+  as_of: '2026-04-03'
+  note: $ millions reserved
+- id: fairlife-final-milestone
+  value: 6173
+  source: sources/filings/ko-10-k-2026-02-20.md line 1214
+  as_of: '2025-03-31'
+  note: $ millions paid March 2025
+- id: bodyarmor-impairments-2024-2025
+  value: 1720
+  source: sources/filings/ko-10-k-2026-02-20.md lines 1214 and 1220
+  as_of: '2025-12-31'
+  note: $760M 2024 + $960M 2025
+- id: divestiture-proceeds-2023-2025
+  value: 7482
+  source: sources/filings/ko-10-k-2026-02-20.md and sources/filings/ko-10-k-2025-02-20.md cash flow statements
+  as_of: '2025-12-31'
+  note: '$ millions: 430 + 3,485 + 3,567'
+- id: coke-consolidated-stake-sale
+  value: 2392
+  source: sources/filings/ko-10-k-2026-02-20.md Note 2
+  as_of: '2025-11-30'
+  note: $ millions proceeds, gain 1,952
+- id: africa-bottling-held-for-sale-assets
+  value: 5342
+  source: sources/filings/ko-10-k-2026-02-20.md Note 2
+  as_of: '2025-12-31'
+  note: $ millions; sale to CCHBC expected by end of 2026; CCHBC option on remaining 25% within six years
+- id: equity-method-fair-value-over-carrying
+  value: 20287
+  source: sources/filings/ko-10-k-2026-02-20.md Note 6
+  as_of: '2025-12-31'
+  note: $ millions
+- id: buyback-shares-remaining
+  value: 62.07
+  source: sources/filings/ko-10-q-2026-04-30.md Part II Item 2
+  as_of: '2026-04-03'
+  note: millions of shares under the 2019 Plan
+- id: dividend-per-share-2026
+  value: 2.12
+  source: sources/filings/ko-10-k-2026-02-20.md line 1427
+  as_of: '2026-02-28'
+  note: $; 64th consecutive increase
+- id: capex-guidance-2026
+  value: 2200
+  source: sources/filings/ko-10-k-2026-02-20.md line 1324
+  as_of: '2026-02-20'
+  note: $ millions
+- id: q1-2026-revenue-growth
+  value: 0.1207
+  source: sources/filings/ko-10-q-2026-04-30.md income statement 12,472 vs 11,129
+  as_of: '2026-04-03'
+  note: six extra days in Q1 2026
+- id: q1-2026-operating-income-growth
+  value: 0.1913
+  source: sources/filings/ko-10-q-2026-04-30.md income statement 4,359 vs 3,659
+  as_of: '2026-04-03'
+- id: us-share-of-unit-case-volume
+  value: 0.16
+  source: sources/filings/ko-10-k-2026-02-20.md line 238
+  as_of: '2025-12-31'
+- id: noncontrolling-interest-sale-proceeds
+  value: 1338
+  source: sources/filings/ko-10-k-2026-02-20.md line 1429
+  as_of: '2025-12-31'
+  note: $ millions
+- id: long-term-debt-maturing-2027
+  value: 4817
+  source: sources/filings/ko-10-k-2026-02-20.md Note 11 maturity table
+  as_of: '2025-12-31'
+  note: '$ millions; 2026: 1,822'

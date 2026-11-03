@@ -1,0 +1,74 @@
+- file: sources/filings/kbr-10-k-2026-02-26.md
+  published: '2026-02-26'
+  form: 10-K
+  url: https://www.sec.gov/Archives/edgar/data/1357615/000135761526000051/kbr-20260102.htm
+- file: sources/filings/kbr-10-k-2025-02-25.md
+  published: '2025-02-25'
+  form: 10-K
+  url: https://www.sec.gov/Archives/edgar/data/1357615/000135761525000018/kbr-20250103.htm
+- file: sources/filings/kbr-10-q-2026-05-05.md
+  published: '2026-05-05'
+  form: 10-Q
+  url: https://www.sec.gov/Archives/edgar/data/1357615/000135761526000141/kbr-20260403.htm
+- file: sources/filings/kbr-def14a-2026-03-30.md
+  published: '2026-03-30'
+  form: DEF 14A
+  url: https://www.sec.gov/Archives/edgar/data/1357615/000110465926036847/tmb-20260514xdef14a.htm
+- file: sources/filings/kbr-8-k-2025-09-24-items-502-701-901.md
+  published: '2025-09-24'
+  form: 8-K
+  url: https://www.sec.gov/Archives/edgar/data/1357615/000135761525000053/kbr-20250924.htm
+- file: sources/filings/kbr-8-k-2025-08-07-items-502-901.md
+  published: '2025-08-07'
+  form: 8-K
+  url: https://www.sec.gov/Archives/edgar/data/1357615/000135761525000048/kbr-20250805.htm
+- file: sources/filings/kbr-8-k-2025-07-09-items-502-901.md
+  published: '2025-07-09'
+  form: 8-K
+  url: https://www.sec.gov/Archives/edgar/data/1357615/000135761525000038/kbr-20250708.htm
+- file: sources/filings/kbr-8-k-2026-05-05-items-202-901.md
+  published: '2026-05-05'
+  form: 8-K
+  url: https://www.sec.gov/Archives/edgar/data/1357615/000135761526000138/kbr-20260505.htm
+- file: sources/filings/kbr-8-k-2026-02-26-items-202-901.md
+  published: '2026-02-26'
+  form: 8-K
+  url: https://www.sec.gov/Archives/edgar/data/1357615/000135761526000049/kbr-20260226.htm
+- file: sources/filings/kbr-8-k-2025-10-30-items-202-901.md
+  published: '2025-10-30'
+  form: 8-K
+  url: https://www.sec.gov/Archives/edgar/data/1357615/000135761525000063/kbr-20251030.htm
+- file: sources/filings/kbr-8-k-2025-07-31-items-202-901.md
+  published: '2025-07-31'
+  form: 8-K
+  url: https://www.sec.gov/Archives/edgar/data/1357615/000135761525000043/kbr-20250731.htm
+- file: sources/filings/index.md
+  published: '2026-06-30'
+  form: index
+- file: sources/market-data/market-rates-2026-06-01.json
+  published: '2026-06-30'
+  form: market-data (Damodaran ERPJune26 published 2026-06-01; FRED closes 2026-06-30)
+- file: sources/market-data/ratings-spreads-2026-01-01.json
+  published: '2026-01-01'
+  form: market-data
+- file: sources/market-data/country-risk-2026-01-01.json
+  published: '2026-01-01'
+  form: market-data
+- file: sources/market-data/industry-betas-2026-01-05.json
+  published: '2026-01-05'
+  form: market-data
+- file: sources/market-data/rates-2026-06-30.md
+  published: '2026-06-30'
+  form: derived from market-rates-2026-06-01.json
+- file: sources/market-data/country-exposure-2026-06-30.md
+  published: '2026-06-30'
+  form: derived from country-risk-2026-01-01.json and the 10-K filed 2026-02-26
+- file: sources/market-data/bottom-up-beta-2026-06-30.md
+  published: '2026-06-30'
+  form: derived from industry-betas-2026-01-05.json and the 8-K filed 2026-02-26
+- file: sources/peer-filings/peer-facts-2026-06-30.md
+  published: '2026-06-30'
+  form: SEC XBRL company facts (10-Ks filed on or before 2026-06-30) and closes on 2026-06-30
+- file: sources/statements/kbr-stated-positions.md
+  published: '2026-05-05'
+  form: quotes from filings dated 2025-09-24 to 2026-05-05

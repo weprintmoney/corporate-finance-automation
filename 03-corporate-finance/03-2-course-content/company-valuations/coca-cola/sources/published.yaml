@@ -1,0 +1,76 @@
+- file: sources/filings/ko-10-k-2026-02-20.md
+  published: '2026-02-20'
+  form: 10-K
+  url: https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/ko-20251231.htm
+- file: sources/filings/ko-10-k-2025-02-20.md
+  published: '2025-02-20'
+  form: 10-K
+  url: https://www.sec.gov/Archives/edgar/data/21344/000002134425000011/ko-20241231.htm
+- file: sources/filings/ko-10-q-2026-04-30.md
+  published: '2026-04-30'
+  form: 10-Q
+  url: https://www.sec.gov/Archives/edgar/data/21344/000162828026028802/ko-20260403.htm
+- file: sources/filings/ko-def14a-2026-03-16.md
+  published: '2026-03-16'
+  form: DEF 14A
+  url: https://www.sec.gov/Archives/edgar/data/21344/000110465926028215/ko-20260429xdef14a.htm
+- file: sources/filings/ko-8-k-2026-06-25-items-502-901.md
+  published: '2026-06-25'
+  form: 8-K
+  url: https://www.sec.gov/Archives/edgar/data/21344/000155278126000366/e26287_ko-8k.htm
+- file: sources/filings/ko-8-k-2026-02-20-items-502-901.md
+  published: '2026-02-20'
+  form: 8-K
+  url: https://www.sec.gov/Archives/edgar/data/21344/000162828026010052/ko-20260219.htm
+- file: sources/filings/ko-8-k-2026-01-14-items-502-901.md
+  published: '2026-01-14'
+  form: 8-K
+  url: https://www.sec.gov/Archives/edgar/data/21344/000155278126000017/e26024_ko-8k.htm
+- file: sources/filings/ko-8-k-2025-12-10-items-502-901.md
+  published: '2025-12-10'
+  form: 8-K
+  url: https://www.sec.gov/Archives/edgar/data/21344/000155278125000454/e25454_ko-8k.htm
+- file: sources/filings/ko-8-k-2025-10-16-items-502-901.md
+  published: '2025-10-16'
+  form: 8-K
+  url: https://www.sec.gov/Archives/edgar/data/21344/000162828025045223/ko-20251016.htm
+- file: sources/filings/ko-8-k-2026-04-28-items-202-901.md
+  published: '2026-04-28'
+  form: 8-K
+  url: https://www.sec.gov/Archives/edgar/data/21344/000162828026027723/ko-20260428.htm
+- file: sources/filings/ko-8-k-2026-02-10-items-202-901.md
+  published: '2026-02-10'
+  form: 8-K
+  url: https://www.sec.gov/Archives/edgar/data/21344/000162828026006642/ko-20260210.htm
+- file: sources/filings/ko-8-k-2025-10-21-items-202-901.md
+  published: '2025-10-21'
+  form: 8-K
+  url: https://www.sec.gov/Archives/edgar/data/21344/000162828025045577/ko-20251021.htm
+- file: sources/filings/ko-8-k-2025-07-22-items-202-901.md
+  published: '2025-07-22'
+  form: 8-K
+  url: https://www.sec.gov/Archives/edgar/data/21344/000002134425000054/ko-20250722.htm
+- file: sources/filings/index.md
+  published: '2026-06-30'
+  form: index
+- file: sources/market-data/market-rates-2026-06-01.json
+  published: '2026-06-30'
+  form: market data (Damodaran June 2026 ERP workbook; FRED closes through 2026-06-30)
+- file: sources/market-data/ratings-spreads-2026-01-01.json
+  published: '2026-01-01'
+  form: market data (Damodaran ratings table, January 2026)
+- file: sources/market-data/country-risk-2026-01-01.json
+  published: '2026-01-01'
+  form: market data (Damodaran country risk, January 2026)
+- file: sources/market-data/industry-betas-2026-01-05.json
+  published: '2026-01-05'
+  form: market data (Damodaran industry betas, January 2026)
+- file: sources/market-data/rates-2026-06-30.md
+  published: '2026-06-30'
+  form: summary of the rates above
+- file: sources/peer-filings/peer-facts-2026-06-30.md
+  published: '2026-06-30'
+  form: SEC XBRL company facts (10-Ks filed before 2026-06-30) and closing prices on 2026-06-30
+- file: sources/statements/stated-by-signal.md
+  published: '2026-06-25'
+  form: verbatim excerpts of the filings above (latest excerpted filing 2026-06-25)

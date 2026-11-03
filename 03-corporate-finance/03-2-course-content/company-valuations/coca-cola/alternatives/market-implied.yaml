@@ -1,0 +1,178 @@
+# Ledger for The Coca-Cola Company (KO), quick mode, blind backtest as of 2026-06-30.
+# Every input leaf is {value, source, as_of}. Amounts in USD millions; rates as decimals; shares in millions.
+# K25 = sources/filings/ko-10-k-2026-02-20.md (FY2025 10-K, filed 2026-02-20)
+# K24 = sources/filings/ko-10-k-2025-02-20.md (FY2024 10-K, filed 2025-02-20)
+# Q1  = sources/filings/ko-10-q-2026-04-30.md (Q1 2026 10-Q, filed 2026-04-30)
+
+meta:
+  company: The Coca-Cola Company
+  slug: coca-cola
+  ticker: KO
+  type: public
+  home_country: United States
+  currency: USD
+  reporting_currency: USD
+  fiscal_year_end: "12-31"
+  base_year: 2025
+  analysis_date: 2026-06-30
+  analyst: weprintmoney
+  mode: quick
+  blind: true
+  omitted:
+    - "beta.regression_beta: no price-history source is allowed in the blind run; the bottom-up beta is used"
+    - "beta.regression_se / regression_r2 / jensens_alpha: same reason"
+    - "forecast.analyst_growth: no analyst consensus source is allowed in the blind run"
+    - "company.history[2022] debt_total and invested_capital: the 2022 balance sheet is not in either fetched 10-K"
+    - "company.rd_history: Coca-Cola does not report R&D as a separate line"
+
+modeling_choices:
+  coverage_numerator: ebit
+  rd_amortizable_life: null
+  firm_size_table: large
+  sbc_treatment: expense
+  firm_value_basis: market
+  beta_source: bottom_up
+  kd_source: actual_rating
+  terminal_method: consistent_reinvestment
+
+market:
+  govt_bond_rate: {value: 0.0444, source: "sources/market-data/market-rates-2026-06-01.json fred_latest.treasury_10y (DGS10 close 2026-06-30)", as_of: 2026-06-30}
+  sovereign_default_spread: {value: 0.0026, source: "sources/market-data/market-rates-2026-06-01.json damodaran_monthly.us_sovereign_default_spread (Aa1)", as_of: 2026-06-01}
+  risk_free_rate: {value: 0.0418, source: "govt_bond_rate − sovereign_default_spread; sources/market-data/rates-2026-06-30.md", as_of: 2026-06-30}
+  mature_erp: {value: 0.045705, source: "sources/market-data/market-rates-2026-06-01.json damodaran_monthly.implied_erp_over_dollar_riskfree", as_of: 2026-06-01}
+  ratings_table: {value: ../sources/market-data/ratings-spreads-2026-01-01.json, source: "Damodaran ratings.xls January 2026 via scripts/refresh-market-data.py --as-of 2026-06-30", as_of: 2026-01-01}
+  tax_rate_marginal: {value: 0.1788, source: "03-2-course-content/01-foundations-and-discount-rates/lesson-12/spreadsheet-countrytaxrates24.md, United States row (federal 21% plus state); statutory rate unchanged through 2026-06-30", as_of: 2025-12-31}
+  tax_rate_effective: {value: 0.1788, source: "K25 consolidated statement of income: income taxes 2861 ÷ income before income taxes 15998", as_of: 2025-12-31}
+  terminal_growth: {value: 0.0418, source: "Analyst choice below the 4.18% risk-free rate; long-run nominal growth for a global consumer staple (see read.md Discretionary decisions)", as_of: 2026-06-30}
+
+country:
+  exposures:
+    - {country: "North America (incl. Corporate)", weight: 0.4114, erp: 0.04571, measure: revenues, source: "K25 segment note, third-party revenues 19579 + Corporate 144 of 47941; ERP = mature_erp + 0 (US CRP is zero, SKILL.md rule 15)", as_of: 2025-12-31}
+    - {country: "EMEA", weight: 0.2260, erp: 0.08153, measure: revenues, source: "K25 segment note, third-party revenues 10833; CRP 3.582% = equal-weight average of Germany, UK, France, Spain, Italy, Turkey, Egypt, Nigeria, South Africa in sources/market-data/country-risk-2026-01-01.json", as_of: 2026-01-01}
+    - {country: "Latin America", weight: 0.1321, erp: 0.08442, measure: revenues, source: "K25 segment note, third-party revenues 6331; CRP 3.871% = equal-weight Mexico, Brazil, Argentina, Colombia, Chile in sources/market-data/country-risk-2026-01-01.json", as_of: 2026-01-01}
+    - {country: "Asia Pacific", weight: 0.1111, erp: 0.06443, measure: revenues, source: "K25 segment note, third-party revenues 5328; CRP 1.872% = equal-weight Japan, China, India, Philippines, Australia, Vietnam, Thailand in sources/market-data/country-risk-2026-01-01.json", as_of: 2026-01-01}
+    - {country: "Bottling Investments (India and Africa)", weight: 0.1194, erp: 0.07941, measure: revenues, source: "K25 segment note, third-party revenues 5726; CRP 3.37% = equal-weight India and South Africa in sources/market-data/country-risk-2026-01-01.json", as_of: 2026-01-01}
+  weighted_erp: {value: 0.045705, source: "Sum of weight × erp over country.exposures", as_of: 2026-06-01}
+
+beta:
+  unlevered_bottom_up: {value: 0.5755, source: "sources/market-data/industry-betas-2026-01-05.json, Beverage (Soft), unlevered_beta_cash_corrected (27 firms)", as_of: 2026-01-05}
+
+company:
+  shares_basic: {value: 4302.5, source: "Q1 cover page: 4,302,482,418 shares outstanding as of April 28, 2026", as_of: 2026-04-28}
+  shares_diluted: {value: 4313, source: "K25 consolidated statement of income, average shares outstanding — diluted 2025", as_of: 2025-12-31}
+  share_price: {value: 81.27, source: "sources/peer-filings/peer-facts-2026-06-30.md, KO close 2026-06-30", as_of: 2026-06-30}
+  equity_value: {value: 349662.7, source: "shares_basic × share_price; matches sources/peer-filings/peer-facts-2026-06-30.md market cap", as_of: 2026-06-30}
+  equity_book: {value: 32169, source: "K25 consolidated balance sheet, equity attributable to shareowners of The Coca-Cola Company", as_of: 2025-12-31}
+  debt_face: {value: 46110, source: "K25 Note 11: loans and notes payable 1551 + long-term debt 43941 + fair value hedge adjustments 618 reversed", as_of: 2025-12-31}
+  debt_book: {value: 45492, source: "K25 consolidated balance sheet: loans and notes payable 1551 + current maturities 1822 + long-term debt 42119", as_of: 2025-12-31}
+  debt_market: {value: 40936, source: "K25 Note 11 footnote 4: fair value of long-term debt incl. current portion 39385 + commercial paper and loans 1551 at face", as_of: 2025-12-31}
+  lease_debt: {value: 1722, source: "K25 Note 10 (leases): total operating lease liabilities", as_of: 2025-12-31}
+  off_balance_sheet_debt: {value: 786, source: "K25 Note 12: guarantees of indebtedness owed by third parties (786, of which 61 VIEs)", as_of: 2025-12-31}
+  debt_total: {value: 43444, source: "debt_market 40936 + lease_debt 1722 + off_balance_sheet_debt 786. Excludes the Africa bottler's 1435 of debt classified as held for sale (K25 Note 2), which leaves with the CCBA sale", as_of: 2025-12-31}
+  cash: {value: 15806, source: "K25 balance sheet: cash and equivalents 10270 + short-term investments 3602 + marketable securities 1934 (excludes 178 held for sale)", as_of: 2025-12-31}
+  minority_interests: {value: 2106, source: "K25 balance sheet, equity attributable to noncontrolling interests (book)", as_of: 2025-12-31}
+  cross_holdings: {value: 40522, source: "K25 Note 6: publicly traded equity method investees at quoted fair value 34286 (Monster 15659, CCEP 7163, Coca-Cola FEMSA 5543, CCHBC 4051, others 1870) + other equity method investments at carrying value 6236 (20235 − 13999)", as_of: 2025-12-31}
+  options_value: {value: 689, source: "K25 Note 13 stock options: 27 million outstanding, weighted exercise price $55.74; intrinsic value at the 2026-06-30 close (27 × (81.27 − 55.74)); a floor, time value ignored", as_of: 2026-06-30}
+  revenue: {value: 47941, source: "K25 consolidated statement of income", as_of: 2025-12-31}
+  ebit: {value: 13762, source: "K25 consolidated statement of income, operating income (SBC expensed; excludes equity income 2031)", as_of: 2025-12-31}
+  ebitda_standardized: {value: 14812, source: "ebit 13762 + D&A 1050 (K25 cash flow statement)", as_of: 2025-12-31}
+  interest_expense: {value: 1654, source: "K25 consolidated statement of income", as_of: 2025-12-31}
+  net_income: {value: 13107, source: "K25 consolidated statement of income, attributable to shareowners", as_of: 2025-12-31}
+  da: {value: 1050, source: "K25 cash flow statement", as_of: 2025-12-31}
+  capex: {value: 2112, source: "K25 cash flow statement, purchases of property, plant and equipment", as_of: 2025-12-31}
+  change_wc: {value: 7208, source: "K25 cash flow statement, net change in operating assets and liabilities (includes the 6.1B fairlife contingent consideration payment)", as_of: 2025-12-31}
+  sbc: {value: 279, source: "K25 cash flow statement, stock-based compensation expense", as_of: 2025-12-31}
+  invested_capital: {value: 43342, source: "Book equity 32169 + book debt incl. leases 47214 − cash 15806 − equity method investments 20235 (K25 balance sheet); equity investees removed because their income sits below operating income", as_of: 2025-12-31}
+  goodwill: {value: 15491, source: "K25 consolidated balance sheet", as_of: 2025-12-31}
+  history:
+    - {year: 2022, revenue: 43004, ebit: 10909, net_income: 9542, da: 1260, capex: 1484, change_wc: 605, impairment: 1086, dividends: 7616, buybacks: 1418, debt_issued: 3972, debt_repaid: 4930, cash: 9519, source: "K24 statements of income and cash flows (2022 column); cash is cash and equivalents only (2022 balance sheet not fetched)", as_of: 2022-12-31}
+    - {year: 2023, revenue: 45754, ebit: 11311, net_income: 10714, da: 1128, capex: 1852, change_wc: 846, impairment: 1741, dividends: 7952, buybacks: 2289, debt_issued: 6891, debt_repaid: 5034, cash: 13663, debt_total: 43426, invested_capital: 36033, source: "K24 statements; cash = 9366 + 2997 + 1300; debt = 4557 + 1960 + 35547 + leases 1362 (book); IC = equity 25941 + debt − cash − equity method investments 19671", as_of: 2023-12-31}
+    - {year: 2024, revenue: 47061, ebit: 9992, net_income: 10631, da: 1075, capex: 2064, change_wc: 6234, impairment: 4000, dividends: 8359, buybacks: 1795, debt_issued: 12061, debt_repaid: 9533, cash: 14571, debt_total: 45735, invested_capital: 37933, source: "K25 statements (2024 column); change_wc includes the 6.0B IRS tax litigation deposit; impairment = non-cash other operating charges incl. 3109 fairlife remeasurement and 760 BodyArmor; cash = 10828 + 2020 + 1723; debt = 1499 + 43023 + leases 1213 (K24 Note 10); IC = 24856 + debt − cash − 18087", as_of: 2024-12-31}
+    - {year: 2025, revenue: 47941, ebit: 13762, net_income: 13107, da: 1050, capex: 2112, change_wc: 7208, impairment: 1052, dividends: 8779, buybacks: 746, debt_issued: 4980, debt_repaid: 4967, cash: 15806, debt_total: 47214, invested_capital: 43342, source: "K25 statements; change_wc includes the 6.1B fairlife contingent consideration payment; impairment = non-cash other operating charges incl. 960 BodyArmor; debt book incl. leases", as_of: 2025-12-31}
+
+debt:
+  rating_actual: {value: "A1/A+", source: "K25 Item 7A / liquidity: long-term debt rated A+ by S&P and A1 by Moody's as of December 31, 2025", as_of: 2025-12-31}
+  kd_pretax_observed: {value: 0.033, source: "K25 Note 11: weighted-average effective rate on long-term debt after swaps (embedded coupons, not today's marginal rate)", as_of: 2025-12-31}
+  rate_type: {value: mixed, source: "K25 Note 11 and Item 7A: fixed-rate notes, part swapped to floating; 1 pp rise adds about 120 of interest (about 12B effectively floating incl. commercial paper)", as_of: 2025-12-31}
+  currency: {value: "USD 63%, EUR 35%, CHF and other 2%", source: "K25 Note 11: USD notes and debentures 27712, euro notes 15470, Swiss franc 726, other 651 of 44559 face", as_of: 2025-12-31}
+  maturity_years: {value: 8.5, estimate: true, range: [7, 11], source: "K25 contractual obligations table: 1822 due 2026, 7702 in 2027-28, 6547 in 2029-30, 28374 after 2030 (notes run to 2093-2098); midpoints with 12 years assumed for the after-2030 bucket", as_of: 2025-12-31}
+  bankruptcy_cost: {value: 0.10, source: "Analyst choice from lesson 21 (direct 5-10%, indirect higher where customers or suppliers flee); low indirect cost for a brand owner whose bottlers carry the operations, so the top of the direct range", as_of: 2026-06-30}
+  revolver_undrawn: {value: 6150, source: "K25 Note 11: corporate backup lines of credit, undrawn", as_of: 2025-12-31}
+  covenants: {value: "No financial maintenance covenants disclosed; notes and debentures 'include various restrictions, none of which was significant' (K25 Note 11). Commercial paper backed by 6.15B undrawn lines expiring through 2030.", source: "K25 Note 11", as_of: 2025-12-31}
+
+governance:
+  board:
+    - {name: David B. Weinberg, role: Lead Independent Director, independent: true, affiliated_with: "Judd Enterprises; 9.2M shares"}
+    - {name: James Quincey, role: Executive Chairman (CEO until 2026-03-31), independent: false, affiliated_with: management}
+    - {name: Henrique Braun, role: CEO from 2026-03-31, independent: false, affiliated_with: management}
+    - {name: Herb Allen, role: Director, independent: true, affiliated_with: "Allen & Company; 19.3M shares beneficially"}
+    - {name: Christopher C. Davis, role: Director, independent: true, affiliated_with: Davis Selected Advisers}
+    - {name: Thomas S. Gayner, role: Director, independent: true, affiliated_with: Markel Group}
+    - {name: Ana Botín, role: Director, independent: true, affiliated_with: Banco Santander}
+    - {name: Max Levchin, role: Director (from 2025-10-16), independent: true, affiliated_with: none}
+    - {name: Bela Bajaria, role: Director, independent: true, affiliated_with: Netflix}
+    - {name: Carolyn Everson, role: Director, independent: true, affiliated_with: none}
+    - {name: Maria Elena Lagomasino, role: Director, independent: true, affiliated_with: none}
+    - {name: Amity Millhiser, role: Director, independent: true, affiliated_with: none}
+    - {name: Caroline J. Tsay, role: Director, independent: true, affiliated_with: none}
+  controlling_holders:
+    - {name: Berkshire Hathaway Inc., pct: 0.0929, source: "sources/filings/ko-def14a-2026-03-16.md, principal shareowners (400,000,000 shares)", as_of: 2025-12-31}
+    - {name: The Vanguard Group, pct: 0.0861, source: "sources/filings/ko-def14a-2026-03-16.md, principal shareowners (13G/A as of 2023-12-29)", as_of: 2023-12-29}
+    - {name: "BlackRock, Inc.", pct: 0.0728, source: "sources/filings/ko-def14a-2026-03-16.md, principal shareowners (13G/A as of 2023-12-31)", as_of: 2023-12-31}
+    - {name: "Directors and executive officers as a group (22)", pct: 0.009, source: "sources/filings/ko-def14a-2026-03-16.md, 38,886,151 shares incl. options", as_of: 2026-03-02}
+  share_classes: {value: "One class: common stock, $0.25 par, one vote per share", source: "K25 cover page and balance sheet", as_of: 2025-12-31}
+  marginal_investor: {value: "Diversified institutions (Vanguard, BlackRock and other index and active funds); Berkshire at 9.3% is a passive long-term holder that has not traded the 400M-share stake", source: "sources/filings/ko-def14a-2026-03-16.md principal shareowners", as_of: 2026-03-16}
+  objectives: {value: "Long-term growth algorithm of 4-6% organic revenue and 6-8% comparable currency-neutral EPS growth, used to set incentive targets; capital allocation priorities: invest in the business, grow the dividend, consumer-centric acquisitions, repurchase shares with excess cash", source: "sources/statements/stated-by-signal.md (2026 proxy CD&A; Q1 2026 10-Q)", as_of: 2026-04-30}
+  change_of_control_payouts: {value: "No single-trigger arrangements disclosed; severance under the Coca-Cola Severance Pay Plan (two years of base salary in the June 2026 North America separation)", source: "sources/filings/ko-8-k-2026-06-25-items-502-901.md Exhibit 10.1", as_of: 2026-06-25}
+
+forecast:
+  growth_period_years: {value: 10, source: "Analyst choice: five years at the management algorithm, five fading to terminal growth", as_of: 2026-06-30}
+  management_growth: {value: 0.045, source: "sources/filings/ko-8-k-2026-04-28-items-202-901.md outlook: organic revenue growth 4% to 5% for 2026 (midpoint)", as_of: 2026-04-28}
+  sales_to_capital: {value: 2.0, source: "K25 history: 2023-2025 revenue grew 2187 while net capex plus normal working capital ran about 900 a year; asset-light concentrate model after refranchising", as_of: 2025-12-31}
+  stable_roic: {value: 0.25, source: "Analyst choice: below today's ~24% after-tax ROIC (model-output section 8) but well above the cost of capital, for a brand franchise", as_of: 2026-06-30}
+  stable_beta: {value: 0.8, source: "Analyst choice (lesson 32: betas move toward one; a staple stays below one)", as_of: 2026-06-30}
+  stable_debt_ratio: {value: 0.20, source: "Beverage (Soft) industry D/E 0.206 (D/V about 17%) in sources/market-data/industry-betas-2026-01-05.json, rounded toward the peer median of about 21-25% (sources/peer-filings/peer-facts-2026-06-30.md)", as_of: 2026-01-05}
+  years:
+    - {year: 2026, revenue: 48900, ebit_margin: 0.31, source: "sources/filings/ko-8-k-2026-04-28-items-202-901.md outlook: organic +4-5%, currency +1-2%, acquisitions and divestitures about −4% (CCBA sale) → about +2% reported; margin from 2025 operating margin 28.7% plus 2.6 pts of one-off charges", as_of: 2026-04-28}
+    - {year: 2027, revenue: 49400, ebit_margin: 0.32, source: "Analyst: organic +5% less the rest of the CCBA deconsolidation (about −4%); margin rises as low-margin bottling leaves", as_of: 2026-06-30}
+    - {year: 2028, revenue: 51870, ebit_margin: 0.32, source: "Analyst: +5%, midpoint of the 4-6% long-term algorithm (2026 proxy CD&A)", as_of: 2026-06-30}
+    - {year: 2029, revenue: 54460, ebit_margin: 0.32, source: "Analyst: +5%", as_of: 2026-06-30}
+    - {year: 2030, revenue: 57190, ebit_margin: 0.32, source: "Analyst: +5%", as_of: 2026-06-30}
+    - {year: 2031, revenue: 59820, ebit_margin: 0.32, source: "Analyst: +4.6% (fade)", as_of: 2026-06-30}
+    - {year: 2032, revenue: 62330, ebit_margin: 0.32, source: "Analyst: +4.2% (fade)", as_of: 2026-06-30}
+    - {year: 2033, revenue: 64700, ebit_margin: 0.32, source: "Analyst: +3.8% (fade)", as_of: 2026-06-30}
+    - {year: 2034, revenue: 66900, ebit_margin: 0.32, source: "Analyst: +3.4% (fade)", as_of: 2026-06-30}
+    - {year: 2035, revenue: 68910, ebit_margin: 0.32, source: "Analyst: +3.0% (terminal growth)", as_of: 2026-06-30}
+  stress_cases:
+    - {name: "Low growth (3% a year)", revenue_growth: 0.03, margin: plan, source: "Analyst stress: organic growth at the bottom of 2016-2025 experience, no pricing power", as_of: 2026-06-30}
+    - {name: "Margin squeeze (4% growth, 28% margin)", revenue_growth: 0.04, margin: 0.28, source: "Analyst stress: 2025 reported margin held (one-off charges recur, as in 2023-2025)", as_of: 2026-06-30}
+
+peers:
+  - {name: PepsiCo, ticker: PEP, fiscal_period: FY2025, enterprise_value: 225727.4, revenue: 93925, ebitda: 14949, net_income: 8240, equity_book: 20406, market_cap: 185060.4, growth: 0.023, ebit_margin: 0.1224, debt_ratio: 0.2134, payout: 0.927, source: "sources/peer-filings/peer-facts-2026-06-30.md (debt ratio = (50197 debt incl. leases) ÷ (debt + market cap); payout = dividends ÷ net income)", as_of: 2026-06-30}
+  - {name: Keurig Dr Pepper, ticker: KDP, fiscal_period: FY2025, enterprise_value: 58327.1, revenue: 16603, ebitda: 4168, net_income: 2079, equity_book: 25516, market_cap: 44531.1, growth: 0.082, ebit_margin: 0.2153, debt_ratio: 0.2497, payout: 0.601, source: "sources/peer-filings/peer-facts-2026-06-30.md", as_of: 2026-06-30}
+  - {name: Monster Beverage, ticker: MNST, fiscal_period: FY2025, revenue: 8294.3, ebitda: 2533.8, equity_book: 8254.1, market_cap: 94006.1, growth: 0.107, ebit_margin: 0.2917, payout: 0.0, source: "sources/peer-filings/peer-facts-2026-06-30.md (net income, borrowings and leases n/a in XBRL; EV and debt ratio left out)", as_of: 2026-06-30}
+  - {name: Celsius Holdings, ticker: CELH, fiscal_period: FY2025, enterprise_value: 7781.4, revenue: 2515.3, ebitda: 170.5, net_income: 108.0, equity_book: 1181.5, market_cap: 7485.1, growth: 0.855, ebit_margin: 0.0561, debt_ratio: 0.0850, payout: 0.0, source: "sources/peer-filings/peer-facts-2026-06-30.md", as_of: 2026-06-30}
+
+facts:
+  - {id: dividend-per-share-2025, value: 2.04, source: "K25 statement of shareowners' equity", as_of: 2025-12-31, note: "USD per share; 1.94 in 2024, 1.84 in 2023"}
+  - {id: dividend-quarterly-2026, value: 0.53, source: "Q1 Liquidity: regular quarterly dividend of $0.53 payable July 1, 2026 (0.51 in 2025)", as_of: 2026-04-30, note: "annualized 2.12, +3.9%"}
+  - {id: dividend-consecutive-increases, value: 63, source: "sources/filings/ko-8-k-2026-02-10-items-202-901.md: increased its dividend in each of the last 63 years", as_of: 2026-02-10, note: "years through 2025; the 2026 raise makes 64"}
+  - {id: buyback-shares-remaining-2019-plan, value: 62.07, source: "Q1 Item 2: 62,066,840 shares may yet be purchased under the 2019 Plan (150M authorized)", as_of: 2026-04-03, note: "millions of shares; about 5,044 at 81.27"}
+  - {id: buyback-2026-intent, value: "offset dilution only", source: "Q1 capital allocation priorities", as_of: 2026-04-30, note: "During 2026, we expect to repurchase shares to offset dilution"}
+  - {id: fcf-guidance-2026, value: 12200, source: "sources/filings/ko-8-k-2026-04-28-items-202-901.md outlook: CFO about 14400 less capex about 2200", as_of: 2026-04-28, note: "USD millions"}
+  - {id: comparable-eps-growth-guidance-2026, value: "8% to 9% vs. $3.00", source: "sources/filings/ko-8-k-2026-04-28-items-202-901.md outlook (raised from 7-8% in February)", as_of: 2026-04-28, note: "comparable currency-neutral EPS ex A&D 6-7%"}
+  - {id: irs-tax-litigation-payment, value: 6000, source: "K25 Note 12: total liability 6.0B for 2007-2009 paid after IRS invoices of September 3, 2024; appeal pending", as_of: 2025-12-31, note: "USD millions; refundable in whole or part if the company wins on appeal"}
+  - {id: fairlife-contingent-payment, value: 6173, source: "K25 MD&A other operating charges: liability of 6173 paid in March 2025", as_of: 2025-12-31, note: "USD millions"}
+  - {id: bodyarmor-impairments, value: 1720, source: "K25 segment note footnote 3: 960 in 2025 and 760 in 2024", as_of: 2025-12-31, note: "USD millions, trademark acquired 2021"}
+  - {id: coke-consolidated-sale-proceeds, value: 2392, source: "K25 Note 2: sale of the Coke Consolidated stake, November 2025, gain 1952", as_of: 2025-12-31, note: "USD millions"}
+  - {id: ccep-partial-sale-proceeds, value: 741, source: "K25 Note 2: March 2025, gain 331", as_of: 2025-12-31, note: "USD millions"}
+  - {id: divestiture-proceeds-2024-2025, value: 7052, source: "K25 cash flow statement: proceeds from disposals of businesses and equity method investments 3485 (2024) + 3567 (2025)", as_of: 2025-12-31, note: "USD millions"}
+  - {id: ccba-sale, value: "Sale of a portion of Coca-Cola Beverages Africa to CCHBC, expected to close by end of 2026; CCHBC option on the remaining 25% within six years", source: "K25 Note 2", as_of: 2025-12-31, note: "Q1 2026 guidance assumes closing in 2H 2026"}
+  - {id: equity-income-2025, value: 2031, source: "K25 income statement; dividends received from equity method investees 993", as_of: 2025-12-31, note: "USD millions"}
+  - {id: lt-debt-maturities-2026-2027, value: "1822 in 2026, 4817 in 2027", source: "K25 Note 11 maturity table", as_of: 2025-12-31, note: "USD millions"}
+  - {id: q1-2026-total-borrowings, value: 43890, source: "Q1 balance sheet: loans and notes payable 332 + current maturities 4493 + long-term debt 39065", as_of: 2026-04-03, note: "USD millions, book; down from 45492 at year end"}
+  - {id: ceo-succession, value: "Henrique Braun CEO from 2026-03-31; James Quincey Executive Chairman", source: "sources/filings/ko-8-k-2025-12-10-items-502-901.md", as_of: 2025-12-10, note: ""}
+  - {id: north-america-head-departure, value: "Jennifer Mann leaves North America role 2026-07-31; CFO John Murphy interim head of North America from 2026-08-01", source: "sources/filings/ko-8-k-2026-06-25-items-502-901.md", as_of: 2026-06-25, note: "Murphy kept strategy, corporate development, treasury after the January 2026 reshuffle"}
+  - {id: psu-eps-cagr-target, value: 0.08, source: "sources/filings/ko-def14a-2026-03-16.md PSU table: EPS CAGR threshold 6%, target 8%, max 10%; revenue CAGR 3/5/7%; plus cumulative FCF and relative TSR modifier", as_of: 2026-03-16, note: "no return-on-capital measure in pay"}
+  - {id: berkshire-shares, value: 400, source: "sources/filings/ko-def14a-2026-03-16.md", as_of: 2025-12-31, note: "millions of shares, 9.29%"}
+  - {id: q1-2026-buyback-avg-price, value: 74.04, source: "Q1 Liquidity: 4.9M shares under the plan for 361", as_of: 2026-04-03, note: "USD per share"}

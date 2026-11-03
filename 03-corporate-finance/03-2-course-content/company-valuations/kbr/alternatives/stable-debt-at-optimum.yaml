@@ -1,0 +1,664 @@
+# Alternative to inputs.yaml: stable-debt-at-optimum (one choice changed; see scripts/run-alternatives.py)
+meta:
+  company: KBR, Inc.
+  slug: kbr
+  ticker: KBR
+  type: public
+  home_country: United States
+  currency: USD
+  reporting_currency: USD
+  fiscal_year_end: Friday closest to 12-31 (FY2025 ended 2026-01-02)
+  base_year: 2025
+  analysis_date: 2026-06-30
+  analyst: weprintmoney
+  mode: quick
+  blind: true
+  omitted:
+  - field: debt.rating_actual
+    reason: No agency rating is named in the 10-K, 10-Q, proxy or 8-Ks fetched; recorded as null
+  - field: company.options_value
+    reason: Equity awards are RSUs and performance units (restricted stock expense $16M in FY2025); no option-value disclosure fetched; immaterial at about 1% of shares
+  - field: company.off_balance_sheet_debt
+    reason: Receivables sold to MUFG ($2,094M sold in FY2025) have no year-end outstanding balance in the 10-K; joint-venture performance guarantees cannot be estimated per Note 11. Neither is added
+  - field: beta.regression_beta
+    reason: No price series fetched under the blind source rules; bottom-up beta used
+modeling_choices:
+  coverage_numerator: ebit
+  rd_amortizable_life: null
+  firm_size_table: small
+  sbc_treatment: expense
+  firm_value_basis: market
+  beta_source: bottom_up
+  kd_source: observed
+  terminal_method: consistent_reinvestment
+market:
+  govt_bond_rate:
+    value: 0.0444
+    source: sources/market-data/market-rates-2026-06-01.json fred_latest.treasury_10y (FRED DGS10 close); sources/market-data/rates-2026-06-30.md
+    as_of: 2026-06-30
+  sovereign_default_spread:
+    value: 0.0026
+    source: sources/market-data/market-rates-2026-06-01.json damodaran_monthly.us_sovereign_default_spread (Aa1)
+    as_of: 2026-06-01
+  risk_free_rate:
+    value: 0.0418
+    source: govt_bond_rate − sovereign_default_spread; sources/market-data/rates-2026-06-30.md
+    as_of: 2026-06-30
+  mature_erp:
+    value: 0.0457
+    source: sources/market-data/market-rates-2026-06-01.json damodaran_monthly.implied_erp_over_dollar_riskfree (0.045705)
+    as_of: 2026-06-01
+  ratings_table:
+    value: ../sources/market-data/ratings-spreads-2026-01-01.json
+    source: Damodaran ratings.xls January 2026 via scripts/refresh-market-data.py --as-of 2026-06-30
+    as_of: 2026-01-01
+  tax_rate_marginal:
+    value: 0.25
+    source: US federal 21% plus state; lesson 12 spreadsheet-countrytaxrates24.md United States 25%; statutory rate unchanged through 2026
+    as_of: 2026-06-30
+  tax_rate_effective:
+    value: 0.254
+    source: 'sources/filings/kbr-10-k-2026-02-26.md Consolidated Statements of Operations: provision 156 / pre-tax income 614'
+    as_of: 2026-01-02
+  terminal_growth:
+    value: 0.03
+    source: 'Judgment: below the 4.18% risk-free rate; nominal growth of a mature services business (see read.md discretionary decisions)'
+    as_of: 2026-06-30
+country:
+  exposures:
+  - country: United States
+    weight: 0.5451
+    erp: 0.0457
+    measure: revenues
+    source: sources/market-data/country-exposure-2026-06-30.md
+    as_of: 2026-06-30
+  - country: Europe (mostly United Kingdom)
+    weight: 0.2034
+    erp: 0.0535
+    measure: revenues
+    source: sources/market-data/country-exposure-2026-06-30.md
+    as_of: 2026-06-30
+  - country: Middle East
+    weight: 0.1015
+    erp: 0.078
+    measure: revenues
+    source: sources/market-data/country-exposure-2026-06-30.md
+    as_of: 2026-06-30
+  - country: Australia
+    weight: 0.0704
+    erp: 0.0457
+    measure: revenues
+    source: sources/market-data/country-exposure-2026-06-30.md
+    as_of: 2026-06-30
+  - country: Africa
+    weight: 0.0325
+    erp: 0.1218
+    measure: revenues
+    source: sources/market-data/country-exposure-2026-06-30.md
+    as_of: 2026-06-30
+  - country: Asia
+    weight: 0.0182
+    erp: 0.0602
+    measure: revenues
+    source: sources/market-data/country-exposure-2026-06-30.md
+    as_of: 2026-06-30
+  - country: Other countries
+    weight: 0.0289
+    erp: 0.0627
+    measure: revenues
+    source: sources/market-data/country-exposure-2026-06-30.md
+    as_of: 2026-06-30
+  weighted_erp:
+    value: 0.0538
+    source: sources/market-data/country-exposure-2026-06-30.md
+    as_of: 2026-06-30
+beta:
+  unlevered_bottom_up:
+    value: 0.9932
+    source: sources/market-data/bottom-up-beta-2026-06-30.md (industry-betas-2026-01-05.json)
+    as_of: 2026-01-05
+  segments:
+  - name: Mission Technology Solutions
+    weight: 0.5381
+    industry: Aerospace/Defense
+    unlevered_beta: 0.8694
+  - name: Sustainable Technology Solutions
+    weight: 0.4619
+    industry: Engineering/Construction
+    unlevered_beta: 1.1374
+company:
+  shares_basic:
+    value: 126.79
+    source: 'sources/filings/kbr-10-q-2026-05-05.md cover: 126,789,957 shares as of 2026-04-22'
+    as_of: 2026-04-22
+  shares_diluted:
+    value: 127
+    source: 'sources/filings/kbr-8-k-2026-05-05-items-202-901.md Ex. 99.1: diluted weighted average shares Q1 FY2026'
+    as_of: 2026-04-03
+  share_price:
+    value: 34.53
+    source: sources/peer-filings/peer-facts-2026-06-30.md KBR close 2026-06-30
+    as_of: 2026-06-30
+  equity_value:
+    value: 4378.06
+    source: shares_basic × share_price
+    as_of: 2026-06-30
+  equity_book:
+    value: 1503
+    source: 'sources/filings/kbr-10-k-2026-02-26.md Consolidated Balance Sheets: total KBR shareholders'' equity'
+    as_of: 2026-01-02
+  debt_face:
+    value: 2617
+    source: 'sources/filings/kbr-10-k-2026-02-26.md Note 11: Term Loan A 989 + Term Loan B 983 + Senior Notes 250 + Revolver 395'
+    as_of: 2026-01-02
+  debt_book:
+    value: 2596
+    source: 'sources/filings/kbr-10-k-2026-02-26.md Note 11: total debt net of 21 issuance costs'
+    as_of: 2026-01-02
+  lease_debt:
+    value: 301
+    source: 'sources/filings/kbr-10-k-2026-02-26.md Note 15: present value of operating lease payments 292 + finance leases 9'
+    as_of: 2026-01-02
+  debt_total:
+    value: 2918
+    source: debt_face 2617 + lease_debt 301
+    as_of: 2026-01-02
+  cash:
+    value: 500
+    source: sources/filings/kbr-10-k-2026-02-26.md Consolidated Balance Sheets (includes $52M joint-venture and Aspire cash, Note 5)
+    as_of: 2026-01-02
+  minority_interests:
+    value: 9
+    source: 'sources/filings/kbr-10-k-2026-02-26.md Consolidated Balance Sheets: noncontrolling interests (book)'
+    as_of: 2026-01-02
+  revenue:
+    value: 7786
+    source: sources/filings/kbr-10-k-2026-02-26.md Consolidated Statements of Operations
+    as_of: 2026-01-02
+  ebit:
+    value: 778
+    source: 'sources/filings/kbr-10-k-2026-02-26.md Consolidated Statements of Operations: operating income (includes $210M equity in earnings of unconsolidated affiliates)'
+    as_of: 2026-01-02
+  ebitda_standardized:
+    value: 947
+    source: ebit 778 + D&A 169 (10-K cash flow statement)
+    as_of: 2026-01-02
+  ebitda_adjusted:
+    value: 968
+    source: 'sources/filings/kbr-8-k-2026-02-26-items-202-901.md Ex. 99.1: company Adjusted EBITDA'
+    as_of: 2026-01-02
+  acquisition_amortization:
+    value: 64
+    source: sources/filings/kbr-10-k-2026-02-26.md intangibles amortization expense
+    as_of: 2026-01-02
+  interest_expense:
+    value: 158
+    source: sources/filings/kbr-10-k-2026-02-26.md Consolidated Statements of Operations
+    as_of: 2026-01-02
+  net_income:
+    value: 415
+    source: 'sources/filings/kbr-10-k-2026-02-26.md: net income attributable to KBR (continuing 451, discontinued HomeSafe −36 net of NCI)'
+    as_of: 2026-01-02
+  da:
+    value: 169
+    source: sources/filings/kbr-10-k-2026-02-26.md Consolidated Statements of Cash Flows
+    as_of: 2026-01-02
+  capex:
+    value: 42
+    source: sources/filings/kbr-10-k-2026-02-26.md Consolidated Statements of Cash Flows
+    as_of: 2026-01-02
+  change_wc:
+    value: 93
+    source: 'sources/filings/kbr-10-k-2026-02-26.md cash flow statement: receivables −2, contract assets −3, payables −70, contract liabilities −16, accrued wages −2 (cash used 93)'
+    as_of: 2026-01-02
+  sbc:
+    value: 21
+    source: 'sources/filings/kbr-10-k-2026-02-26.md Consolidated Statements of Shareholders'' Equity: share-based compensation'
+    as_of: 2026-01-02
+  invested_capital:
+    value: 3900
+    source: book equity 1503 + book debt 2596 + leases 301 − cash 500
+    as_of: 2026-01-02
+  goodwill:
+    value: 2677
+    source: sources/filings/kbr-10-k-2026-02-26.md Consolidated Balance Sheets
+    as_of: 2026-01-02
+  history:
+  - year: 2022
+    revenue: 6564
+    ebit: 343
+    net_income: 190
+    da: 137
+    capex: 71
+    change_wc: -40
+    dividends: 66
+    buybacks: 203
+    debt_issued: 58
+    debt_repaid: 174
+    cash: 389
+    source: sources/filings/kbr-10-k-2025-02-25.md statements of operations and cash flows (as originally reported, including HomeSafe; no 2022 balance sheet debt in the fetched filings)
+    as_of: 2022-12-31
+  - year: 2023
+    revenue: 6956
+    ebit: 449
+    net_income: 229
+    da: 141
+    capex: 62
+    change_wc: -50
+    dividends: 72
+    buybacks: 355
+    debt_issued: 785
+    debt_repaid: 707
+    cash: 283
+    debt_total: 2008
+    invested_capital: 3108
+    source: sources/filings/kbr-10-k-2026-02-26.md (continuing operations, recast) and kbr-10-k-2025-02-25.md balance sheet. net_income = reported −265 + 494 non-cash convertible-note charges; debt_repaid
+      = 17 + revolver 340 + convertible face 350 (settlement 843 less note-hedge proceeds 493 is the equity premium); buybacks = 138 + warrant settlement 217; debt_total = borrowings 1832 + noncurrent operating
+      leases 176
+    as_of: 2023-12-29
+  - year: 2024
+    revenue: 7710
+    ebit: 659
+    net_income: 375
+    da: 156
+    capex: 52
+    change_wc: -23
+    dividends: 79
+    buybacks: 251
+    debt_issued: 967
+    debt_repaid: 222
+    cash: 342
+    debt_total: 2871
+    invested_capital: 3982
+    source: sources/filings/kbr-10-k-2026-02-26.md (continuing operations, recast); buybacks = 218 + warrant settlement 33; debt_total = borrowings 2569 + leases 302 (kbr-10-k-2025-02-25.md Note 15)
+    as_of: 2025-01-03
+  - year: 2025
+    revenue: 7786
+    ebit: 778
+    net_income: 415
+    da: 169
+    capex: 42
+    change_wc: 93
+    dividends: 84
+    buybacks: 329
+    debt_issued: 555
+    debt_repaid: 541
+    cash: 500
+    debt_total: 2897
+    invested_capital: 3900
+    source: sources/filings/kbr-10-k-2026-02-26.md statements and Notes 11, 15
+    as_of: 2026-01-02
+debt:
+  rating_actual:
+    value: null
+    source: No agency rating named in the fetched 10-Ks, 10-Q, DEF 14A or 8-Ks (sources/filings/index.md lists them)
+    as_of: 2026-06-30
+  kd_pretax_observed:
+    value: 0.0607
+    source: interest expense 158 / average face debt (2617 + 2594)/2, sources/filings/kbr-10-k-2026-02-26.md Note 11; includes swap income of $21M
+    as_of: 2026-01-02
+  rate_type:
+    value: mixed
+    source: 'sources/filings/kbr-10-k-2026-02-26.md Note 11 and Item 7A: $2,367M floating (term loans, revolver, SOFR/SONIA based); $250M 4.75% notes fixed; about $1.56B swapped to fixed, of which $955M
+      expires January 2027'
+    as_of: 2026-01-02
+  currency:
+    value: USD with a GBP Term Loan A-3 tranche
+    source: sources/filings/kbr-10-k-2026-02-26.md Note 11
+    as_of: 2026-01-02
+  maturity_years:
+    value: 3.3
+    source: 'Face-weighted years from 2026-06-30 to maturity, sources/filings/kbr-10-k-2026-02-26.md Note 11: TLA 989 to Feb 2029 (2.6y; the A-2 tranche due Aug 2027 is not split out), TLB 983 to Jan 2031
+      (4.6y), notes 250 to Sep 2028 (2.25y), revolver 395 to Feb 2029 (2.6y)'
+    as_of: 2026-06-30
+  bankruptcy_cost:
+    value: 0.15
+    source: 'Lesson 21: direct 5-10% plus indirect costs; judgment for a contractor whose government and LNG clients would re-bid work away from a distressed firm'
+    as_of: 2026-06-30
+  revolver_undrawn:
+    value: 605
+    source: 'sources/filings/kbr-8-k-2026-02-26-items-202-901.md Ex. 99.1: $605M borrowing capacity'
+    as_of: 2026-01-02
+  covenants:
+    value: Maximum consolidated net leverage 4.00x; minimum interest coverage 3.00x; limits on liens, debt, asset sales and share repurchases; notes carry a 101% change-of-control put. Net leverage 2.2x
+      at FY2025 end, 2.3x at 2026-04-03
+    source: sources/filings/kbr-10-k-2026-02-26.md Note 11; kbr-8-k-2026-05-05-items-202-901.md
+    as_of: 2026-04-03
+governance:
+  board:
+  - name: Stuart J. B. Bradie
+    role: Chair, President and CEO
+    independent: false
+    affiliated_with: management
+  - name: Wendy M. Masiello
+    role: Lead Independent Director
+    independent: true
+    affiliated_with: none
+  - name: Joseph Dominguez
+    role: Director
+    independent: true
+    affiliated_with: none
+  - name: Lynn A. Dugle
+    role: Director
+    independent: true
+    affiliated_with: none
+  - name: Nchacha E. Etta
+    role: Director
+    independent: true
+    affiliated_with: none
+  - name: John A. Manzoni
+    role: Director
+    independent: true
+    affiliated_with: none
+  - name: Jack B. Moore
+    role: Director, Compensation Committee chair
+    independent: true
+    affiliated_with: none
+  - name: Ann D. Pickard
+    role: Director
+    independent: true
+    affiliated_with: none
+  - name: Carlos A. Sabater
+    role: Director
+    independent: true
+    affiliated_with: none
+  - name: Huibert H. Vigeveno
+    role: Director
+    independent: true
+    affiliated_with: none
+  - name: Lewis F. Von Thaer
+    role: Director
+    independent: true
+    affiliated_with: none
+  controlling_holders:
+  - name: FMR LLC
+    pct: 0.15
+    source: sources/filings/kbr-def14a-2026-03-30.md security ownership table (13G/A filed 2025-08-06)
+    as_of: 2025-08-06
+  - name: The Vanguard Group
+    pct: 0.0985
+    source: sources/filings/kbr-def14a-2026-03-30.md (13G/A filed 2024-02-13)
+    as_of: 2024-02-13
+  - name: BlackRock, Inc.
+    pct: 0.0928
+    source: sources/filings/kbr-def14a-2026-03-30.md (13G/A filed 2024-01-24)
+    as_of: 2024-01-24
+  - name: All directors and executive officers (21)
+    pct: 0.0115
+    source: sources/filings/kbr-def14a-2026-03-30.md
+    as_of: 2026-03-02
+  share_classes:
+    value: One class of common stock, one vote per share; 50M preferred authorized, none issued
+    source: sources/filings/kbr-10-k-2026-02-26.md Consolidated Balance Sheets
+    as_of: 2026-01-02
+  marginal_investor:
+    value: 'Diversified institutions: FMR 15.0%, Vanguard 9.85%, BlackRock 9.28%; insiders 1.15%'
+    source: sources/filings/kbr-def14a-2026-03-30.md
+    as_of: 2026-03-30
+  objectives:
+    value: Spin off MTS to 'unlock the next phase of value creation' as two pure-play companies; pay on adjusted EPS, adjusted operating cash flow, book-to-bill and relative TSR; 2026 KPIs on 'delivering
+      a successful transaction'
+    source: sources/statements/kbr-stated-positions.md (S1, S5, S8)
+    as_of: 2026-03-30
+  change_of_control_payouts:
+    value: Double-trigger severance and change-in-control agreements for senior executives
+    source: sources/filings/kbr-def14a-2026-03-30.md
+    as_of: 2026-03-30
+forecast:
+  growth_period_years:
+    value: 5
+    source: 'Judgment: five years to a mature state; management gives FY2026 only'
+    as_of: 2026-06-30
+  management_growth:
+    value: 0.04
+    source: 'sources/filings/kbr-8-k-2026-05-05-items-202-901.md Ex. 99.1: FY2026 revenue $7.90B–$8.36B, +4% at the midpoint (reaffirmed)'
+    as_of: 2026-05-05
+  sales_to_capital:
+    value: 2.0
+    source: Base-year revenue 7786 / invested capital 3900 (capital-light services; growth since 2023 came mostly from the $738M LinQuest purchase)
+    as_of: 2026-01-02
+  stable_roic:
+    value: 0.12
+    source: 'Judgment: below the base-year after-tax ROIC (model-output section 8) and above the cost of capital; peers'' margins 6–12%'
+    as_of: 2026-06-30
+  stable_beta:
+    value: 1.0
+    source: 'Lesson 32: betas move toward one'
+    as_of: 2026-06-30
+  stable_debt_ratio:
+    value: 0.42
+    source: 'Alternative: section 3 optimum (EBIT)'
+    as_of: '2026-06-30'
+  years:
+  - year: 2026
+    revenue: 8130
+    ebit_margin: 0.098
+    source: 'Guidance midpoint revenue (sources/statements/kbr-stated-positions.md S21); margin: FY2025 10.0% less Q1 FY2026 decline to 9.4% (S22), judgment'
+    as_of: 2026-05-05
+  - year: 2027
+    revenue: 8455
+    ebit_margin: 0.1
+    source: 'Judgment: guidance growth of 4% carried forward; FY2025 margin'
+    as_of: 2026-06-30
+  - year: 2028
+    revenue: 8793
+    ebit_margin: 0.1
+    source: 'Judgment: 4% growth, FY2025 margin'
+    as_of: 2026-06-30
+  - year: 2029
+    revenue: 9145
+    ebit_margin: 0.1
+    source: 'Judgment: 4% growth, FY2025 margin'
+    as_of: 2026-06-30
+  - year: 2030
+    revenue: 9511
+    ebit_margin: 0.1
+    source: 'Judgment: 4% growth, FY2025 margin'
+    as_of: 2026-06-30
+  stress_cases:
+  - name: Flat revenue, margin 8.5% (LNG equity earnings fade)
+    revenue_growth: 0.0
+    margin: 0.085
+    source: FY2025 equity earnings of $210M were up $103M on one LNG project (10-K MD&A); removing half of that lifts nothing and cuts margin about 1.3 points
+    as_of: 2026-06-30
+  - name: Guidance growth, Q1 FY2026 margin 9.4%
+    revenue_growth: 0.04
+    margin: 0.094
+    source: sources/statements/kbr-stated-positions.md S21, S22
+    as_of: 2026-05-05
+  - name: 2% growth, plan margin
+    revenue_growth: 0.02
+    margin: plan
+    source: 'Judgment: FY2025 growth was 1%'
+    as_of: 2026-06-30
+peers:
+- name: Leidos Holdings
+  ticker: LDOS
+  fiscal_period: FY ended 2026-01-02
+  enterprise_value: 17186.1
+  revenue: 17107.0
+  ebitda: 2399.0
+  net_income: 1448.0
+  equity_book: 4916.0
+  market_cap: 12952.1
+  growth: 0.032
+  ebit_margin: 0.1233
+  debt_ratio: 0.292
+  payout: null
+  source: sources/peer-filings/peer-facts-2026-06-30.md
+  as_of: 2026-06-30
+- name: Science Applications International
+  ticker: SAIC
+  fiscal_period: FY ended 2026-01-30
+  enterprise_value: 7191.8
+  revenue: 7262.0
+  ebitda: 670.0
+  net_income: null
+  equity_book: 1500.0
+  market_cap: 4667.8
+  growth: -0.029
+  ebit_margin: 0.0717
+  debt_ratio: 0.367
+  payout: null
+  source: sources/peer-filings/peer-facts-2026-06-30.md
+  as_of: 2026-06-30
+- name: CACI International
+  ticker: CACI
+  fiscal_period: FY ended 2025-06-30
+  enterprise_value: 13462.9
+  revenue: 8627.8
+  ebitda: 959.3
+  net_income: 499.8
+  equity_book: null
+  market_cap: 10234.0
+  growth: 0.126
+  ebit_margin: 0.0886
+  debt_ratio: 0.2458
+  payout: 0.0
+  source: sources/peer-filings/peer-facts-2026-06-30.md
+  as_of: 2026-06-30
+- name: Booz Allen Hamilton
+  ticker: BAH
+  fiscal_period: FY ended 2026-03-31
+  enterprise_value: 10659.0
+  revenue: 11217.0
+  ebitda: 1196.0
+  net_income: 851.0
+  equity_book: 1105.0
+  market_cap: 7265.0
+  growth: -0.064
+  ebit_margin: 0.0921
+  debt_ratio: 0.362
+  payout: 0.3243
+  source: sources/peer-filings/peer-facts-2026-06-30.md
+  as_of: 2026-06-30
+- name: Parsons
+  ticker: PSN
+  fiscal_period: FY ended 2025-12-31
+  enterprise_value: 6515.4
+  revenue: 6364.2
+  ebitda: 534.6
+  net_income: 241.1
+  equity_book: 2642.0
+  market_cap: 5604.6
+  growth: -0.057
+  ebit_margin: 0.0657
+  debt_ratio: 0.1973
+  payout: 0.0
+  source: sources/peer-filings/peer-facts-2026-06-30.md
+  as_of: 2026-06-30
+- name: Jacobs Solutions
+  ticker: J
+  fiscal_period: FY ended 2025-09-26
+  enterprise_value: 16352.6
+  revenue: 12029.8
+  ebitda: 1101.2
+  net_income: 289.3
+  equity_book: 3640.8
+  market_cap: 14878.2
+  growth: 0.046
+  ebit_margin: 0.0718
+  debt_ratio: 0.1541
+  payout: 0.5289
+  source: sources/peer-filings/peer-facts-2026-06-30.md
+  as_of: 2026-06-30
+- name: AECOM
+  ticker: ACM
+  fiscal_period: FY ended 2025-09-30
+  enterprise_value: 10743.0
+  revenue: 16139.6
+  ebitda: 1202.4
+  net_income: 561.8
+  equity_book: 2492.6
+  market_cap: 8970.9
+  growth: 0.002
+  ebit_margin: 0.0636
+  debt_ratio: 0.2724
+  payout: 0.2378
+  source: sources/peer-filings/peer-facts-2026-06-30.md
+  as_of: 2026-06-30
+facts:
+- id: spin-target-date
+  value: '2027-01-04'
+  source: sources/filings/kbr-10-q-2026-05-05.md Note 18
+  as_of: 2026-05-05
+- id: spin-announced
+  value: '2025-09-24'
+  source: sources/filings/kbr-8-k-2025-09-24-items-502-701-901.md
+  as_of: 2025-09-24
+- id: buyback-authorization-remaining
+  value: 427
+  source: sources/filings/kbr-10-k-2026-02-26.md Note 17
+  as_of: 2026-01-02
+- id: buybacks-q1-2026
+  value: 4
+  source: sources/filings/kbr-8-k-2026-05-05-items-202-901.md Ex. 99.1 (withhold-to-cover only)
+  as_of: 2026-04-03
+- id: buybacks-q1-2025
+  value: 156
+  source: sources/filings/kbr-8-k-2026-05-05-items-202-901.md Ex. 99.1
+  as_of: 2025-04-04
+- id: dividend-quarterly-2026
+  value: 0.165
+  source: sources/filings/kbr-8-k-2026-02-26-items-202-901.md Ex. 99.1 (unchanged from 2025)
+  as_of: 2026-02-19
+- id: dividend-per-share-history
+  value: 0.48 (2022), 0.54 (2023), 0.60 (2024), 0.66 (2025)
+  source: sources/filings/kbr-10-k-2026-02-26.md and kbr-10-k-2025-02-25.md statements of operations
+  as_of: 2026-01-02
+- id: net-debt-q1-2026
+  value: 2222
+  source: sources/filings/kbr-8-k-2026-05-05-items-202-901.md Ex. 99.1
+  as_of: 2026-04-03
+- id: net-leverage-q1-2026
+  value: 2.3
+  source: sources/filings/kbr-8-k-2026-05-05-items-202-901.md Ex. 99.1
+  as_of: 2026-04-03
+- id: equity-earnings-affiliates
+  value: 210 (FY2025) vs 107 (FY2024)
+  source: 'sources/filings/kbr-10-k-2026-02-26.md MD&A: increase ''primarily attributed to equity in earnings from services on an LNG project'''
+  as_of: 2026-01-02
+- id: segment-adj-ebitda-fy2025
+  value: MTS 579, STS 497, Corporate −108
+  source: sources/filings/kbr-8-k-2026-02-26-items-202-901.md Ex. 99.1
+  as_of: 2026-01-02
+- id: segment-adj-ebitda-margin-fy2025
+  value: MTS 10.4%, STS 22.5%
+  source: sources/filings/kbr-8-k-2026-02-26-items-202-901.md Ex. 99.1
+  as_of: 2026-01-02
+- id: segment-revenue-fy2025
+  value: MTS 5,581, STS 2,205
+  source: sources/filings/kbr-10-k-2026-02-26.md Note 2
+  as_of: 2026-01-02
+- id: us-government-revenue-share
+  value: 0.57
+  source: sources/filings/kbr-10-k-2026-02-26.md Item 1A
+  as_of: 2026-01-02
+- id: swaps-expiring-jan-2027
+  value: 955
+  source: 'sources/filings/kbr-10-k-2026-02-26.md Item 7A: $400M at 0.89%, $350M at 3.43%, $205M at 3.61%, through January 2027'
+  as_of: 2026-01-02
+- id: linquest-acquisition
+  value: 738
+  source: sources/filings/kbr-10-k-2026-02-26.md Note 4 and cash flow statement (net of cash, 2024-08-30)
+  as_of: 2025-01-03
+- id: bris-investment-q1-2026
+  value: 115
+  source: sources/filings/kbr-10-q-2026-05-05.md MD&A investing activities
+  as_of: 2026-04-03
+- id: sti-negative-discretion-2025
+  value: Adjusted EPS payout cut from 68.9% to 13.1% for HomeSafe losses
+  source: sources/filings/kbr-def14a-2026-03-30.md
+  as_of: 2026-03-30
+- id: acquisitions-by-year
+  value: 2022 73, 2023 0, 2024 738 (LinQuest), 2025 14 (Infrastar)
+  source: 'sources/filings/kbr-10-k-2026-02-26.md and kbr-10-k-2025-02-25.md cash flow statements: acquisitions of businesses net of cash'
+  as_of: 2026-01-02
+- id: buyback-average-price-fy2025
+  value: 49.45
+  source: 'sources/filings/kbr-10-k-2026-02-26.md Note 17: 6,529,142 shares repurchased under the program at $49.45'
+  as_of: 2026-01-02
+- id: q1-2026-revenue-change
+  value: -0.05
+  source: sources/filings/kbr-8-k-2026-05-05-items-202-901.md Ex. 99.1
+  as_of: 2026-04-03

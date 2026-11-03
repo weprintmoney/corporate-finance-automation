@@ -69,8 +69,6 @@ Every estimated number is a `{value, source, as_of, estimate: true, range: [low,
 
 ## Market data, all types
 
-| Item | Origin | Check first |
-|---|---|---|
 All of these come from `python3 scripts/refresh-market-data.py`, which writes them to `03-corporate-finance/03-3-supplemental-data/` with an `as_of` date. A weekly CI job runs the same script; run it again at the start of every valuation anyway.
 
 | Item | Ledger fields | File and key |

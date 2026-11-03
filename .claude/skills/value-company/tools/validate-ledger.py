@@ -30,8 +30,8 @@ DEFAULT_SCHEMA = os.path.join(HERE, "..", "ledger-schema.yaml")
 
 LEAF_SECTIONS = ["market", "beta", "company", "debt", "forecast"]
 
-# How old an input may be at the analysis date. Rates move tens of basis points a month (the 10-year
-# rose 54bp in September 2026), so they must be read close to the analysis date. Damodaran publishes the
+# How old an input may be at the analysis date. Rates move tens of basis points a month, so they must
+# be read close to the analysis date. Damodaran publishes the
 # implied ERP monthly and the ratings table and industry betas each January.
 MAX_AGE_DAYS = {
     "market.govt_bond_rate": 14,
@@ -161,7 +161,7 @@ def main(argv):
             errors.append("company.equity_value {:.1f} differs from shares_basic × share_price {:.1f} by more than 1%".format(E, sb * price))
     D, Dl = num("company.debt_total"), num("company.lease_debt")
     Dobs = num("company.off_balance_sheet_debt") or 0.0
-    if D is not None and Dl is not None:
+    if D and Dl is not None:
         bases = [num("company.debt_face"), num("company.debt_book"), num("company.debt_market")]
         candidates = [x + Dl + Dobs for x in bases if x is not None]
         if candidates and all(abs(c - D) / D > 0.005 for c in candidates):
@@ -257,6 +257,8 @@ def main(argv):
             errors.append("meta.blind is set but meta.analysis_date is missing")
         else:
             folder = os.path.dirname(os.path.abspath(ledger_path))
+            if os.path.basename(folder) == "alternatives":        # alternative ledgers share the company's sources
+                folder = os.path.dirname(folder)
             pub_path = os.path.join(folder, "sources", "published.yaml")
             published = {}
             if os.path.exists(pub_path):

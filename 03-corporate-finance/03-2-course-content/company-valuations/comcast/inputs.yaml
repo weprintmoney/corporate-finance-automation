@@ -1,0 +1,370 @@
+# Comcast Corporation (CMCSA) — /value-company ledger, quick mode, blind, as of 2026-06-30.
+# Every leaf is {value, source, as_of}. Amounts in USD millions; rates as decimals; shares in millions.
+# Base year 2025 is shown pro forma for the Versant spin-off (completed 2026-01-02); the pro forma
+# figures are marked estimate: true with ranges and say what they rest on.
+
+meta:
+  company: Comcast Corporation
+  slug: comcast
+  ticker: CMCSA
+  type: public
+  home_country: United States
+  currency: USD
+  reporting_currency: USD
+  fiscal_year_end: "12-31"
+  base_year: 2025
+  analysis_date: 2026-06-30
+  analyst: weprintmoney
+  mode: quick
+  blind: true
+  omitted:
+    - field: beta.regression_beta
+      reason: "No price-history source is allowed in the blind run beyond the analysis-date close; the bottom-up beta is used"
+    - field: company.options_value
+      reason: "Options and RSU valuation not compiled in quick mode; dilution is small (20M dilutive shares on 3,597M basic, Q1 2026 10-Q EPS note)"
+    - field: forecast.management_growth
+      reason: "Comcast gives no revenue or earnings guidance in the 10-K, 10-Q or the four earnings releases fetched"
+    - field: forecast.analyst_growth
+      reason: "No analyst consensus source is allowed in the blind run"
+
+modeling_choices:
+  coverage_numerator: ebit
+  rd_amortizable_life: null
+  firm_size_table: large
+  sbc_treatment: expense
+  firm_value_basis: market
+  beta_source: bottom_up
+  kd_source: synthetic
+  terminal_method: consistent_reinvestment
+
+market:
+  govt_bond_rate:
+    value: 0.0444
+    source: "sources/market-data/market-rates-2026-06-01.json fred_latest.treasury_10y (FRED DGS10 close 2026-06-30)"
+    as_of: 2026-06-30
+  sovereign_default_spread:
+    value: 0.0026
+    source: "sources/market-data/market-rates-2026-06-01.json damodaran_monthly.us_sovereign_default_spread (US Aa1)"
+    as_of: 2026-06-01
+  risk_free_rate:
+    value: 0.0418
+    source: "govt_bond_rate − sovereign_default_spread"
+    as_of: 2026-06-30
+  mature_erp:
+    value: 0.04570523513441775
+    source: "sources/market-data/market-rates-2026-06-01.json damodaran_monthly.implied_erp_over_dollar_riskfree (ERPJune26)"
+    as_of: 2026-06-01
+  ratings_table:
+    value: sources/market-data/ratings-spreads-2026-01-01.json
+    source: "sources/market-data/ratings-spreads-2026-01-01.json (Damodaran ratings.xls, January 2026 edition)"
+    as_of: 2026-01-01
+  tax_rate_marginal:
+    value: 0.25
+    source: "Lesson 12 spreadsheet-countrytaxrates24.md, United States 2022–2023E row (21% federal plus state); statute unchanged through 2026-06-30"
+    as_of: 2026-06-30
+  tax_rate_effective:
+    value: 0.237
+    source: "sources/filings/cmcsa-10-k-2026-02-03.md income statement: tax 6,106 ÷ pre-tax income 25,766"
+    as_of: 2025-12-31
+  terminal_growth:
+    value: 0.025
+    source: "Analyst choice below the 4.18% risk-free rate: a mature US connectivity and media business growing near inflation (see ⚠️ in read.md)"
+    as_of: 2026-06-30
+
+country:
+  exposures:
+    - {country: United States, weight: 0.82, erp: 0.045705, measure: revenues, estimate: true, range: [0.78, 0.85], source: "sources/filings/cmcsa-10-k-2026-02-03.md Note 3: international connectivity 4,963 + international networks 4,977 + Germany in other revenue 3,090 + Sky video inside video revenue; Comcast does not publish revenue by country. ERP = mature_erp + CRP 0 (rule 15)", as_of: 2025-12-31}
+    - {country: United Kingdom, weight: 0.09, erp: 0.053465, measure: revenues, estimate: true, range: [0.07, 0.11], source: "sources/filings/cmcsa-10-k-2026-02-03.md Item 1 (Sky broadband, wireless, video and Sky Sports in the UK); ERP = mature_erp + CRP from sources/market-data/country-risk-2026-01-01.json", as_of: 2025-12-31}
+    - {country: Italy, weight: 0.04, erp: 0.070355, measure: revenues, estimate: true, range: [0.03, 0.05], source: "sources/filings/cmcsa-10-k-2026-02-03.md Item 1 (Sky Italia); ERP = mature_erp + CRP from sources/market-data/country-risk-2026-01-01.json", as_of: 2025-12-31}
+    - {country: Germany, weight: 0.02, erp: 0.045705, measure: revenues, estimate: true, range: [0.01, 0.03], source: "sources/filings/cmcsa-10-k-2026-02-03.md Note 2(b) (Sky Germany in Corporate and Other); CRP 0 from sources/market-data/country-risk-2026-01-01.json", as_of: 2025-12-31}
+    - {country: China, weight: 0.015, erp: 0.054835, measure: revenues, estimate: true, range: [0.005, 0.025], source: "sources/filings/cmcsa-10-k-2026-02-03.md Note 8 (Universal Beijing Resort, consolidated VIE); CRP from sources/market-data/country-risk-2026-01-01.json", as_of: 2025-12-31}
+    - {country: Japan, weight: 0.015, erp: 0.054835, measure: revenues, estimate: true, range: [0.005, 0.025], source: "sources/filings/cmcsa-10-k-2026-02-03.md Item 2 (Osaka theme park land lease) and studios licensing; CRP from sources/market-data/country-risk-2026-01-01.json", as_of: 2025-12-31}
+  weighted_erp:
+    value: 0.0476633
+    source: "Sum of weight × erp over country.exposures"
+    as_of: 2026-06-30
+
+beta:
+  unlevered_bottom_up:
+    value: 0.49558
+    source: "Revenue-weighted segments from sources/market-data/industry-betas-2026-01-05.json (cash-corrected): Cable TV 0.3629, Entertainment 0.7628, Recreation 0.7365"
+    as_of: 2026-01-05
+  segments:
+    - {name: "Connectivity (Residential + Business)", weight: 0.6630, industry: Cable TV, unlevered_beta: 0.36288}
+    - {name: "Media ex-Versant (NBC, Telemundo, Peacock, Sky networks)", weight: 0.1639, industry: Entertainment, unlevered_beta: 0.76285}
+    - {name: Studios, weight: 0.0924, industry: Entertainment, unlevered_beta: 0.76285}
+    - {name: Theme Parks, weight: 0.0807, industry: Recreation, unlevered_beta: 0.73650}
+
+company:
+  shares_basic:
+    value: 3572.228557
+    source: "sources/filings/cmcsa-10-q-2026-04-23.md cover: 3,562,784,182 Class A + 9,444,375 Class B as of 2026-04-15"
+    as_of: 2026-04-15
+  shares_diluted:
+    value: 3617
+    source: "sources/filings/cmcsa-10-q-2026-04-23.md EPS note, Q1 2026 weighted-average diluted"
+    as_of: 2026-03-31
+  share_price:
+    value: 24.55
+    source: "sources/peer-filings/peer-facts-2026-06-30.md, CMCSA close 2026-06-30"
+    as_of: 2026-06-30
+  equity_value:
+    value: 87698.2
+    source: "shares_basic × share_price"
+    as_of: 2026-06-30
+  equity_book:
+    value: 88274
+    source: "sources/filings/cmcsa-10-q-2026-04-23.md balance sheet, Comcast shareholders' equity"
+    as_of: 2026-03-31
+  debt_face:
+    value: 100500
+    estimate: true
+    range: [99500, 101500]
+    source: "sources/filings/cmcsa-10-k-2026-02-03.md Note 6 face 104.8B at 2025-12-31 (term loans 3.2 + notes 25.4 + 18.7 + 55.4 + finance leases 2.1) less the 4.3B fall in carrying value to 2026-03-31 in sources/filings/cmcsa-10-q-2026-04-23.md (Versant notes 1.0B removed; 3.15% 2026 and 5.35% 2027 notes redeemed)"
+    as_of: 2026-03-31
+  debt_book:
+    value: 94612
+    source: "sources/filings/cmcsa-10-q-2026-04-23.md balance sheet: current 5,394 + noncurrent 89,218"
+    as_of: 2026-03-31
+  debt_market:
+    value: 84600
+    source: "sources/filings/cmcsa-10-q-2026-04-23.md Note (fair value): estimated fair value of debt 84.6B, mostly Level 1 quoted prices"
+    as_of: 2026-03-31
+  lease_debt:
+    value: 6097
+    source: "sources/filings/cmcsa-10-k-2026-02-03.md Note 15 operating lease liability (PV at 4.2%, 18-year term); not updated in the 10-Q"
+    as_of: 2025-12-31
+  off_balance_sheet_debt:
+    value: 0
+    source: "sources/filings/cmcsa-10-k-2026-02-03.md Note 6 and Note 15: no guarantees of unconsolidated debt (Beijing resort debt is consolidated); 313M undrawn letters of credit; the theme-park revenue-interest put (carrying 1.1B inside other liabilities, 1.9B at the contract formula, Note 15) is left out; see the debt ⚠️ in read.md"
+    as_of: 2025-12-31
+  debt_total:
+    value: 90697
+    source: "debt_market 84,600 + lease_debt 6,097"
+    as_of: 2026-03-31
+  deferred_revenue:
+    value: 4006
+    source: "sources/filings/cmcsa-10-q-2026-04-23.md balance sheet (not debt)"
+    as_of: 2026-03-31
+  cash:
+    value: 9468
+    source: "sources/filings/cmcsa-10-q-2026-04-23.md balance sheet"
+    as_of: 2026-03-31
+  minority_interests:
+    value: 266
+    source: "sources/filings/cmcsa-10-q-2026-04-23.md balance sheet: noncontrolling interests 61 + redeemable 205 (book)"
+    as_of: 2026-03-31
+  cross_holdings:
+    value: 7450
+    source: "sources/filings/cmcsa-10-q-2026-04-23.md balance sheet investments at book (Atairos, equity-method and other)"
+    as_of: 2026-03-31
+  revenue:
+    value: 116631
+    estimate: true
+    range: [115900, 117300]
+    source: "sources/filings/cmcsa-10-k-2026-02-03.md revenue 123,707 less Versant ≈ 4 × Q1 2025 Versant revenue 1,769 from sources/filings/cmcsa-10-q-2026-04-23.md Note 2"
+    as_of: 2025-12-31
+  ebit:
+    value: 18155
+    estimate: true
+    range: [17500, 18800]
+    source: "sources/filings/cmcsa-10-k-2026-02-03.md operating income 20,672, less Versant EBIT ≈ 3,000 (4 × Q1 2025 Versant Adjusted EBITDA 834 in sources/filings/cmcsa-10-q-2026-04-23.md Note 2, less its D&A), plus 483 one-time Versant separation costs (Note 2(g))"
+    as_of: 2025-12-31
+  ebitda_standardized:
+    value: 34365
+    estimate: true
+    range: [33700, 35000]
+    source: "ebit 18,155 + da 16,210"
+    as_of: 2025-12-31
+  ebitda_adjusted:
+    value: 37384
+    source: "sources/filings/cmcsa-8-k-2026-01-29-items-202-901.md: company's Adjusted EBITDA, including Versant"
+    as_of: 2025-12-31
+  acquisition_amortization:
+    value: 3263
+    source: "sources/filings/cmcsa-8-k-2026-01-29-items-202-901.md Adjusted EPS reconciliation note 1, before tax"
+    as_of: 2025-12-31
+  interest_expense:
+    value: 4409
+    source: "sources/filings/cmcsa-10-k-2026-02-03.md income statement (Q1 2026 run-rate 1,094 × 4 = 4,376 in the 10-Q)"
+    as_of: 2025-12-31
+  interest_capitalized:
+    value: 0
+    source: "sources/filings/cmcsa-10-k-2026-02-03.md MD&A (line 1119): interest expense rose in 2025 partly because capitalized interest fell when Epic Universe opened; the amount capitalized is not disclosed, so 0 is used. Small: Q1 2026 interest run-rate 4,376 against 4,409"
+    as_of: 2025-12-31
+  net_income:
+    value: 10820
+    estimate: true
+    range: [10300, 11300]
+    source: "sources/filings/cmcsa-8-k-2026-01-29-items-202-901.md: net income 19,998 less Hulu gain 7,057 net of tax and tax benefits 331, plus transaction costs 425 and impairment 155; less Versant ≈ 2,370 after tax (EBIT 3,000 × 0.79)"
+    as_of: 2025-12-31
+  da:
+    value: 16210
+    source: "sources/filings/cmcsa-10-k-2026-02-03.md cash flow statement (includes a small Versant share)"
+    as_of: 2025-12-31
+  capex:
+    value: 14419
+    source: "sources/filings/cmcsa-10-k-2026-02-03.md cash flow: capital expenditures 11,750 + intangibles 2,658 + Beijing construction 11"
+    as_of: 2025-12-31
+  change_wc:
+    value: -2177
+    source: "sources/filings/cmcsa-10-k-2026-02-03.md cash flow: receivables (135), film costs 338, payables (20), other 1,994; negative = cash released"
+    as_of: 2025-12-31
+  sbc:
+    value: 1288
+    source: "sources/filings/cmcsa-10-k-2026-02-03.md cash flow statement"
+    as_of: 2025-12-31
+  invested_capital:
+    value: 173418
+    source: "sources/filings/cmcsa-10-q-2026-04-23.md: book equity 88,274 + book debt 94,612 − cash 9,468 (first balance sheet after the Versant spin)"
+    as_of: 2026-03-31
+  goodwill:
+    value: 53374
+    source: "sources/filings/cmcsa-10-q-2026-04-23.md balance sheet"
+    as_of: 2026-03-31
+  history:
+    - {year: 2022, revenue: 121427, ebit: 14041, impairment: 8583, net_income: 5370, da: 13821, capex: 14097, change_wc: 2904, dividends: 4741, buybacks: 13328, debt_issued: 3405, debt_repaid: 2307, cash: 4782, debt_total: 95713, invested_capital: 171875, estimate: true, range: [170900, 172900], source: "sources/filings/cmcsa-10-k-2025-01-31.md statements (2022 column); invested capital is an estimate (range applies to it): equity 80,944 from the equity statement (51 + 39,412 + 51,609 − 7,517 − 2,611) + debt ≈ 95,713 (2023 debt 97,090 less 2023 net borrowing 1,377; no 2022 balance sheet in the fetched filings) − cash 4,782; capex incl. intangibles 3,141 and Beijing 330; debt issued incl. short-term 660; cash = cash and restricted cash", as_of: 2022-12-31}
+    - {year: 2023, revenue: 121572, ebit: 23314, net_income: 15388, da: 14336, capex: 15677, change_wc: -1008, dividends: 4766, buybacks: 11291, debt_issued: 6052, debt_repaid: 4675, cash: 6215, debt_total: 97090, invested_capital: 173578, source: "sources/filings/cmcsa-10-k-2025-01-31.md statements (2023 column); debt repaid excludes the 5,175 collateralized Hulu obligation, repaid from the 8,610 Hulu advance (asset sale, outside FCFE)", as_of: 2023-12-31}
+    - {year: 2024, revenue: 123731, ebit: 23297, net_income: 16192, da: 14802, capex: 15246, change_wc: 4943, dividends: 4814, buybacks: 9103, debt_issued: 6268, debt_repaid: 3573, cash: 7322, debt_total: 99093, invested_capital: 177331, source: "sources/filings/cmcsa-10-k-2026-02-03.md statements (2024 column); net income includes a 1,920 tax benefit from an internal reorganization (cash benefit ~2.0B per sources/filings/cmcsa-8-k-2026-01-29-items-202-901.md)", as_of: 2024-12-31}
+    - {year: 2025, revenue: 123707, ebit: 20672, net_income: 12941, da: 16210, capex: 14419, change_wc: -2177, dividends: 4894, buybacks: 7155, debt_issued: 3494, debt_repaid: 5740, cash: 9481, debt_total: 98937, invested_capital: 186359, source: "sources/filings/cmcsa-10-k-2026-02-03.md statements, as reported with Versant; net income 19,998 less the 7,057 after-tax Hulu gain (non-cash in 2025, sources/filings/cmcsa-8-k-2026-01-29-items-202-901.md note 3)", as_of: 2025-12-31}
+
+debt:
+  rating_actual:
+    value: null
+    source: "None of the fetched filings states an agency rating; the revolver margin is 'determined based on Comcast's credit rating' (10-K Note 6). See Outside knowledge in read.md"
+    as_of: 2026-06-30
+  kd_pretax_observed:
+    value: 0.040
+    source: "sources/filings/cmcsa-10-k-2026-02-03.md Note 6(a): weighted-average effective rate on book debt 4.0% (coupons set when issued, not today's rate)"
+    as_of: 2025-12-31
+  rate_type:
+    value: fixed
+    source: "sources/filings/cmcsa-10-k-2026-02-03.md Note 6: 'substantially all of our debt obligations were fixed-rate debt'; 2.5B fixed-to-variable swaps"
+    as_of: 2025-12-31
+  currency:
+    value: "USD, with about 16% in GBP 3.3B, EUR 8.0B and RMB 22.3B"
+    source: "sources/filings/cmcsa-10-k-2026-02-03.md Note 6(b); 7.3B of the foreign debt is designated a net investment hedge"
+    as_of: 2025-12-31
+  maturity_years:
+    value: 13.9
+    estimate: true
+    range: [11, 17]
+    source: "sources/filings/cmcsa-10-k-2026-02-03.md Note 6 buckets: 28.6B ≤5 years (mid 2.5), 18.7B 5–10 (mid 7.5), 55.4B >10 (assumed 22)"
+    as_of: 2025-12-31
+  revolver_undrawn:
+    value: 11800
+    source: "sources/filings/cmcsa-10-q-2026-04-23.md Liquidity: available under the revolver net of CP and letters of credit"
+    as_of: 2026-03-31
+  bankruptcy_cost:
+    value: 0.15
+    source: "Lesson 21 range (direct 5–10%, indirect higher); analyst choice for a firm whose customers are subscribers and advertisers (see ⚠️ in read.md)"
+    as_of: 2026-06-30
+  covenants:
+    value: "One maintenance covenant: revolver debt-to-EBITDA, tested quarterly, met at 2026-03-31. Senior notes unsecured with cross-guarantees among Comcast, NBCUniversal and Comcast Cable. No restricted-payment covenant disclosed."
+    source: "sources/filings/cmcsa-10-q-2026-04-23.md Liquidity (lines 1358, 1448)"
+    as_of: 2026-03-31
+
+governance:
+  board:
+    - {name: Brian L. Roberts, role: "Chairman and Co-CEO", independent: false, affiliated_with: "Class B holder (33 1/3% vote)"}
+    - {name: Michael J. Cavanagh, role: "Co-CEO and director", independent: false, affiliated_with: management}
+    - {name: Edward D. Breen, role: Lead Independent Director, independent: true, affiliated_with: none}
+    - {name: Kenneth J. Bacon, role: director, independent: true, affiliated_with: none}
+    - {name: "Thomas J. Baltimore, Jr.", role: director, independent: true, affiliated_with: none}
+    - {name: Madeline S. Bell, role: director, independent: true, affiliated_with: none}
+    - {name: Louise F. Brady, role: director, independent: true, affiliated_with: none}
+    - {name: Jeffrey A. Honickman, role: director, independent: true, affiliated_with: none}
+    - {name: Wonya Y. Lucas, role: director, independent: true, affiliated_with: none}
+    - {name: Asuka Nakahara, role: director, independent: true, affiliated_with: none}
+    - {name: Gordon Smith, role: "director (from 2026-02-04)", independent: true, affiliated_with: none}
+  controlling_holders:
+    - {name: "Brian L. Roberts (Class B via LLC)", pct: 0.3333, note: "share of votes, non-dilutable; plus 30.9M Class A; under 1% of economic interest", source: "sources/filings/cmcsa-def14a-2026-04-24.md security ownership", as_of: 2026-01-23}
+    - {name: The Vanguard Group, pct: 0.100, note: "of Class A", source: "sources/filings/cmcsa-def14a-2026-04-24.md 5% holders", as_of: 2025-05-30}
+    - {name: "BlackRock, Inc.", pct: 0.074, note: "of Class A", source: "sources/filings/cmcsa-def14a-2026-04-24.md 5% holders", as_of: 2023-12-31}
+    - {name: State Street Corporation, pct: 0.051, note: "of Class A", source: "sources/filings/cmcsa-def14a-2026-04-24.md 5% holders", as_of: 2025-12-31}
+  share_classes:
+    value: "Class A (one vote per share, about 3,563M shares) and Class B (9.44M shares, held by Brian Roberts' LLC, a non-dilutable 33 1/3% of the vote plus separate approval rights over mergers, sale of substantially all assets and share issuances needing a vote). NBCUniversal will carry the same dual-class structure after its planned spin."
+    source: "sources/filings/cmcsa-10-k-2026-02-03.md Item 1A (line 886); sources/filings/cmcsa-8-k-2026-06-29-items-801-901.md"
+    as_of: 2026-06-29
+  marginal_investor:
+    value: "Diversified institutions (index funds alone hold 22.5% of Class A); Roberts holds the vote and a veto over a sale, so the price is set by diversified holders who cannot force a change of control"
+    source: "sources/filings/cmcsa-def14a-2026-04-24.md ownership tables"
+    as_of: 2026-01-23
+  objectives:
+    value: "No value or return target stated. Pay is tied to Adjusted EBITDA (35%), Free Cash Flow (25%) and Revenue (10%) in the bonus; three-year ROIC and relative Adjusted EPS growth with a relative-TSR modifier in the PSUs. Public language: 'position the company for long-term, sustainable growth'; 'strong investment grade balance sheet for each business'."
+    source: "sources/filings/cmcsa-def14a-2026-04-24.md (lines 896–953); sources/filings/cmcsa-8-k-2026-01-29-items-202-901.md (line 102); sources/filings/cmcsa-8-k-2026-06-29-items-801-901.md"
+    as_of: 2026-06-29
+  change_of_control_payouts:
+    value: "Generally no automatic single- or double-trigger acceleration, except that Mr. Roberts' employment agreement has a double-trigger change-in-control provision"
+    source: "sources/filings/cmcsa-def14a-2026-04-24.md (lines 880 and 1215)"
+    as_of: 2026-04-24
+
+forecast:
+  years:
+    - {year: 2026, revenue: 117797, ebit_margin: 0.1557, source: "History: revenue grew 0.6% a year 2022–2025 (the two 10-Ks in the filings folder); 1% growth on the pro forma base, base-year margin held", as_of: 2026-06-30}
+    - {year: 2027, revenue: 118975, ebit_margin: 0.1557, source: "As 2026", as_of: 2026-06-30}
+    - {year: 2028, revenue: 120165, ebit_margin: 0.1557, source: "As 2026", as_of: 2026-06-30}
+    - {year: 2029, revenue: 121367, ebit_margin: 0.1557, source: "As 2026", as_of: 2026-06-30}
+    - {year: 2030, revenue: 122580, ebit_margin: 0.1557, source: "As 2026", as_of: 2026-06-30}
+  growth_period_years:
+    value: 5
+    source: "Analyst choice: mature firm, short high-growth period is moot"
+    as_of: 2026-06-30
+  sales_to_capital:
+    value: 0.67
+    source: "Pro forma revenue 116,631 ÷ invested capital 173,418"
+    as_of: 2026-03-31
+  stable_roic:
+    value: 0.075
+    source: "Analyst choice near the base-year ROIC in model-output.md section 8; above the stable cost of capital because the cable franchise keeps some excess return"
+    as_of: 2026-06-30
+  stable_beta:
+    value: 0.90
+    source: "Lesson 32: move toward one; today's levered beta is about 0.88 (model-output.md section 1)"
+    as_of: 2026-06-30
+  stable_debt_ratio:
+    value: 0.40
+    source: "Between the current market debt ratio and the peer median in sources/peer-filings/peer-facts-2026-06-30.md"
+    as_of: 2026-06-30
+  stress_cases:
+    - {name: "Broadband erosion", revenue_growth: -0.01, margin: 0.14, source: "Q1 2026 domestic broadband revenue down 5.1% and Connectivity Adjusted EBITDA down 4.3% (sources/filings/cmcsa-8-k-2026-04-23-items-202-901.md)", as_of: 2026-04-23}
+    - {name: "Flat revenue, plan margin", revenue_growth: 0.0, margin: plan, source: "Revenue 2023–2025 roughly flat (10-K)", as_of: 2026-06-30}
+    - {name: "Market-implied decline", revenue_growth: -0.03, margin: 0.11, source: "Solved by trial so value per share lands near the 2026-06-30 close of $24.55; not a forecast", as_of: 2026-06-30}
+    - {name: "Parks and wireless lift", revenue_growth: 0.025, margin: plan, source: "Theme Parks revenue +14% in 2025 and domestic wireless +16% (10-K Note 3)", as_of: 2026-06-30}
+
+peers:
+  - {name: Charter Communications, ticker: CHTR, fiscal_period: FY2025, enterprise_value: 113566.7, revenue: null, ebitda: 21619, net_income: 4987, equity_book: 16054, market_cap: 17845.7, beta: null, debt_ratio: 0.843, payout: 0.0, note: "XBRL revenue tag returned 889 (wrong tag); revenue left out", source: "sources/peer-filings/peer-facts-2026-06-30.md", as_of: 2026-06-30}
+  - {name: "AT&T", ticker: T, fiscal_period: FY2025, enterprise_value: 282838.6, revenue: 125648, ebitda: 45048, net_income: 21953, equity_book: null, market_cap: 143830.6, beta: null, debt_ratio: 0.522, payout: 0.373, source: "sources/peer-filings/peer-facts-2026-06-30.md", as_of: 2026-06-30}
+  - {name: Verizon, ticker: VZ, fiscal_period: FY2025, enterprise_value: 338947.2, revenue: 138191, ebitda: 47608, net_income: 17174, equity_book: null, market_cap: 176793.2, beta: null, debt_ratio: 0.506, payout: 0.669, source: "sources/peer-filings/peer-facts-2026-06-30.md", as_of: 2026-06-30}
+  - {name: T-Mobile US, ticker: TMUS, fiscal_period: FY2025, enterprise_value: 292387.2, revenue: 88309, ebitda: 31787, net_income: 10992, equity_book: 59203, market_cap: 181518.2, beta: null, debt_ratio: 0.391, payout: 0.375, source: "sources/peer-filings/peer-facts-2026-06-30.md", as_of: 2026-06-30}
+  - {name: Walt Disney, ticker: DIS, fiscal_period: FY2025 (Sep), enterprise_value: 206705.2, revenue: 94425, ebitda: 22877, net_income: 12404, equity_book: 109869, market_cap: 167139.2, beta: null, debt_ratio: 0.213, payout: 0.145, source: "sources/peer-filings/peer-facts-2026-06-30.md", as_of: 2026-06-30}
+  - {name: Fox Corporation, ticker: FOXA, fiscal_period: FY2025 (Jun), enterprise_value: 30154.6, revenue: 16300, ebitda: null, net_income: null, equity_book: 11962, market_cap: 22689.6, beta: null, debt_ratio: 0.248, payout: null, note: "operating income and net income not tagged", source: "sources/peer-filings/peer-facts-2026-06-30.md", as_of: 2026-06-30}
+
+facts:
+  - {id: versant-q1-2025-revenue, value: 1769, source: "sources/filings/cmcsa-10-q-2026-04-23.md Note 2", as_of: 2025-03-31, note: "Versant revenue in Q1 2025, the only Versant figure Comcast's filings disclose"}
+  - {id: versant-q1-2025-adj-ebitda, value: 834, source: "sources/filings/cmcsa-10-q-2026-04-23.md Note 2", as_of: 2025-03-31}
+  - {id: versant-cash-distribution, value: 2250, source: "sources/filings/cmcsa-10-k-2026-02-03.md Note 16", as_of: 2026-01-02, note: "Versant borrowed 3.0B and paid Comcast 2.25B before the spin; Comcast used it to redeem notes"}
+  - {id: hulu-gain-after-tax, value: 7057, source: "sources/filings/cmcsa-8-k-2026-01-29-items-202-901.md note 3", as_of: 2025-12-31}
+  - {id: free-cash-flow-2025, value: 19235, source: "sources/filings/cmcsa-8-k-2026-01-29-items-202-901.md", as_of: 2025-12-31, note: "company definition: operating cash flow less capex and intangibles"}
+  - {id: capital-returned-2025, value: 11700, source: "sources/filings/cmcsa-8-k-2026-01-29-items-202-901.md", as_of: 2025-12-31}
+  - {id: buyback-remaining-2026-03-31, value: 7607, source: "sources/filings/cmcsa-10-q-2026-04-23.md Item 2", as_of: 2026-03-31}
+  - {id: q1-2026-buybacks, value: 1260, source: "sources/filings/cmcsa-10-q-2026-04-23.md Item 2", as_of: 2026-03-31, note: "42.1M shares at an average $29.91"}
+  - {id: dividend-annual-per-share, value: 1.32, source: "sources/filings/cmcsa-10-k-2026-02-03.md Liquidity", as_of: 2026-01-31, note: "held flat in January 2026 after a raise every January to 2025"}
+  - {id: tender-accepted-principal-2026-06, value: 4105, source: "sources/filings/cmcsa-8-k-2026-06-03-items-801-901.md", as_of: 2026-06-03, note: "2027–2029 notes bought back; 2030 notes tendered but not accepted; settled 2026-06-05; not reflected in the 2026-03-31 debt and cash used in the ledger"}
+  - {id: debt-fair-value-2026-03-31, value: 84600, source: "sources/filings/cmcsa-10-q-2026-04-23.md", as_of: 2026-03-31}
+  - {id: q1-2026-broadband-net-losses-thousands, value: 65, source: "sources/filings/cmcsa-8-k-2026-04-23-items-202-901.md", as_of: 2026-03-31}
+  - {id: q1-2026-wireless-line-adds-thousands, value: 435, source: "sources/filings/cmcsa-8-k-2026-04-23-items-202-901.md", as_of: 2026-03-31}
+  - {id: q1-2026-connectivity-adj-ebitda-change, value: -0.043, source: "sources/filings/cmcsa-8-k-2026-04-23-items-202-901.md", as_of: 2026-03-31}
+  - {id: nbcu-retained-stake-max, value: 0.199, source: "sources/filings/cmcsa-8-k-2026-06-29-items-801-901.md", as_of: 2026-06-29}
+  - {id: roberts-class-b-vote, value: 0.3333, source: "sources/filings/cmcsa-def14a-2026-04-24.md", as_of: 2026-01-23}
+  - {id: psu-relative-tsr-percentile, value: 14, source: "sources/filings/cmcsa-def14a-2026-04-24.md (line 1130)", as_of: 2025-12-31, note: "TSR ranked 14th percentile of the S&P 100 over the PSU period that vested; payout cut by 25%"}
+  - {id: theme-parks-adj-ebitda-2025, value: 3080, source: "sources/filings/cmcsa-10-k-2026-02-03.md Note 2", as_of: 2025-12-31}
+  - {id: peer-median-debt-ratio, value: 0.449, source: "sources/peer-filings/peer-facts-2026-06-30.md; median of the six peer debt_ratio values in peers (CHTR 0.843, T 0.522, VZ 0.506, TMUS 0.391, FOXA 0.248, DIS 0.213)", as_of: 2026-06-30}
+  - {id: peer-median-dividend-payout, value: 0.373, source: "sources/peer-filings/peer-facts-2026-06-30.md; median of peer payout values (CHTR 0, DIS 0.145, T 0.373, TMUS 0.375, VZ 0.669)", as_of: 2026-06-30}
+  - {id: comcast-dividend-payout-2025, value: 0.378, source: "dividends 4,894 ÷ 2025 net income ex-Hulu 12,941 (company.history)", as_of: 2025-12-31}
+  - {id: comcast-total-payout-2025, value: 0.931, source: "(dividends 4,894 + buybacks 7,155) ÷ 12,941 (company.history)", as_of: 2025-12-31}
+  - {id: revenue-growth-2022-2025-annual, value: 0.0062, source: "(123,707 ÷ 121,427)^(1/3) − 1 (company.history)", as_of: 2025-12-31}
+  - {id: ebit-ex-impairment-growth-2022-2025-annual, value: -0.0295, source: "(20,672 ÷ 22,624)^(1/3) − 1 (company.history, 2022 impairment added back)", as_of: 2025-12-31}
+  - {id: avg-reinvestment-rate-2022-2025, value: 0.073, source: "sum of reinvestment 4,932 ÷ sum of after-tax operating income 67,431, model-output.md section 8 by year", as_of: 2025-12-31}
+  - {id: fundamental-growth-estimate, value: 0.007, source: "avg reinvestment rate 7.3% × average ROIC about 9.5% (model-output.md section 8 by year)", as_of: 2025-12-31}
+  - {id: connectivity-adj-ebitda-2025, value: 32378, source: "sources/filings/cmcsa-10-k-2026-02-03.md Note 2: Residential 26,653 + Business 5,725", as_of: 2025-12-31}

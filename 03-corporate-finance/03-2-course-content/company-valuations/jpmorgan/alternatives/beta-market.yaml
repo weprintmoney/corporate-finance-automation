@@ -1,0 +1,332 @@
+# Alternative: beta.unlevered_bottom_up = 1.0 (one field changed from ../inputs.yaml; ratings_table path made relative to this folder)
+# JPMorgan Chase & Co. — /value-company ledger, quick mode, blind, as of 2026-06-30.
+# A bank. Following the course (lesson 11 slides: "We do not unlever or relever betas, because estimating
+# debt and equity for banks is an exercise in futility"; lesson 26: FCFE for a bank = net income − increase
+# in regulatory capital), the firm is valued as its equity. Deposits and borrowings are raw material, not
+# financing, so company.debt_total is set to 0 and model.py's cost of capital equals the cost of equity.
+# Sections 2, 3 and 4 of model-output.md (synthetic rating, optimal debt ratio, stress test) do not apply
+# and are not used; meta.omitted says why. Bank-specific numbers (regulatory capital, bank FCFE,
+# price-to-book against ROE) are computed by bank-equity.py into bank-equity-output.md from this ledger.
+
+meta:
+  company: JPMorgan Chase & Co.
+  slug: jpmorgan
+  ticker: JPM
+  type: public
+  home_country: United States
+  currency: USD
+  reporting_currency: USD
+  fiscal_year_end: "12-31"
+  base_year: 2025
+  analysis_date: 2026-06-30
+  analyst: weprintmoney
+  mode: quick
+  blind: true
+  omitted:
+    - field: company.debt_face
+      reason: "Bank: deposits and borrowings are raw material, not financing (lesson 11, lesson 26). Long-term debt is recorded in facts (long-term-debt-2026q1) for the debt-design signal only."
+    - field: company.lease_debt
+      reason: "Bank: leases are operating costs of the branch network; with debt_total set to 0 they are not a financing claim. Not needed for the cost of equity."
+    - field: company.cash
+      reason: "Bank: cash and deposits with banks are operating inventory backing deposits, not excess cash to add back. Model defaults it to 0."
+    - field: company.da
+      reason: "Bank: reinvestment is regulatory capital, not capex net of depreciation (lesson 26 slides)."
+    - field: company.capex
+      reason: "Bank: as for company.da."
+    - field: company.change_wc
+      reason: "Bank: working capital is not definable when deposits and loans are the operating balance sheet."
+    - field: company.history
+      reason: "model.py's section 5 FCFE (capex, D&A, working capital, net debt) does not apply to a bank. The bank FCFE (net income − increase in required CET1 capital) is computed by bank-equity.py from facts rows instead."
+    - field: forecast.years
+      reason: "The firm DCF does not apply to a bank; value against price is read from price-to-book against ROE − cost of equity (bank-equity-output.md)."
+    - field: forecast.growth_period_years
+      reason: "As for forecast.years."
+    - field: forecast.stable_roic
+      reason: "As for forecast.years; the stable ROE used for the justified price-to-book is a discretionary choice in read.md, computed by bank-equity.py."
+    - field: model-output.md sections 2-4 (synthetic rating, optimal debt ratio, stress test)
+      reason: "Not applicable as built. model.py requires company.ebit and company.interest_expense and always prints these sections; for a bank they price deposits as if they were financing debt. They are printed but never used."
+    - field: exhibits
+      reason: "make-exhibits.py's cost-of-capital chart draws section 3 (not applicable) and the returns chart needs company.history (omitted). No chart is drawn."
+
+modeling_choices:
+  coverage_numerator: ebit
+  rd_amortizable_life: null
+  firm_size_table: large
+  sbc_treatment: expense
+  firm_value_basis: market
+  beta_source: bottom_up
+  kd_source: actual_rating
+  terminal_method: consistent_reinvestment
+
+market:
+  govt_bond_rate:
+    value: 0.0444
+    source: "sources/market-data/market-rates-2026-06-01.json fred_latest.treasury_10y (FRED DGS10 close 2026-06-30)"
+    as_of: 2026-06-30
+  sovereign_default_spread:
+    value: 0.0026
+    source: "sources/market-data/market-rates-2026-06-01.json damodaran_monthly.us_sovereign_default_spread (Aa1)"
+    as_of: 2026-06-01
+  risk_free_rate:
+    value: 0.0418
+    source: "govt_bond_rate − sovereign_default_spread; sources/market-data/market-rates-2026-06-01.json"
+    as_of: 2026-06-30
+    note: "Damodaran's June 2026 dollar risk-free rate is also 4.18%; the 10-year close on 2026-06-30 equals his month-start 4.44%"
+  mature_erp:
+    value: 0.04570523513441775
+    source: "sources/market-data/market-rates-2026-06-01.json damodaran_monthly.implied_erp_over_dollar_riskfree (ERPJune26)"
+    as_of: 2026-06-01
+  ratings_table:
+    value: ../sources/market-data/ratings-spreads-2026-01-01.json
+    source: "sources/market-data/ratings-spreads-2026-01-01.json (January 2026 edition)"
+    as_of: 2026-01-01
+  tax_rate_marginal:
+    value: 0.25
+    source: "03-corporate-finance/03-2-course-content/01-foundations-and-discount-rates/lesson-12/spreadsheet-countrytaxrates24.md United States row, latest column (21% federal plus state)"
+    as_of: 2024-12-31
+    note: "Only affects section 8's after-tax pre-tax-income line; debt is 0 so no tax shield"
+  tax_rate_effective:
+    value: 0.214
+    source: "sources/filings/jpm-10-k-2026-02-13.md line 2528 (effective tax rate 2025)"
+    as_of: 2025-12-31
+  terminal_growth:
+    value: 0.03
+    source: "Analyst choice below the 4.18% risk-free rate; used only in the justified price-to-book (bank-equity-output.md). See the ⚠️ block in read.md"
+    as_of: 2026-06-30
+
+country:
+  exposures:
+    - {country: United States (North America), weight: 0.7656, erp: 0.04571, measure: revenues, source: "sources/filings/jpm-10-k-2026-02-13.md Note 31 International operations (2025 revenue 139,689 of 182,447); CRP 0 per SKILL rule 15", as_of: 2025-12-31}
+    - {country: "Europe/Middle East/Africa (UK as proxy)", weight: 0.1342, erp: 0.05347, measure: revenues, source: "sources/filings/jpm-10-k-2026-02-13.md Note 31 (24,478); CRP United Kingdom 0.776% from sources/market-data/country-risk-2026-01-01.json", as_of: 2025-12-31}
+    - {country: "Asia-Pacific (Japan and China as proxy)", weight: 0.0771, erp: 0.05483, measure: revenues, source: "sources/filings/jpm-10-k-2026-02-13.md Note 31 (14,065); CRP Japan and China (both A1) 0.913% from sources/market-data/country-risk-2026-01-01.json", as_of: 2025-12-31}
+    - {country: "Latin America/Caribbean (Brazil as proxy)", weight: 0.0231, erp: 0.07811, measure: revenues, source: "sources/filings/jpm-10-k-2026-02-13.md Note 31 (4,215); CRP Brazil 3.241% from sources/market-data/country-risk-2026-01-01.json", as_of: 2025-12-31}
+  weighted_erp:
+    value: 0.0482
+    source: "Sum of weight × erp over country.exposures; mature_erp 4.571% + country risk premium (SKILL rule 15)"
+    as_of: 2026-06-30
+
+beta:
+  unlevered_bottom_up:
+    value: 1.0
+    source: "Revenue-weighted LEVERED industry betas from sources/market-data/industry-betas-2026-01-05.json (Brokerage & Investment Banking 1.1715; Investments & Asset Management 0.6600; Bank (Money Center) 0.7610), weights from beta.segments"
+    as_of: 2026-01-05
+    note: "Field name says unlevered, but for a bank the course uses levered betas with no unlevering or relevering (lesson 11 slides, Deutsche Bank). debt_total is 0, so model.py's levered beta equals this number"
+  segments:
+    - {name: "Markets and investment banking fees (CIB)", weight: 0.2453, industry: Brokerage & Investment Banking, unlevered_beta: 1.1715}
+    - {name: Asset & Wealth Management, weight: 0.1297, industry: Investments & Asset Management, unlevered_beta: 0.6600}
+    - {name: "Consumer banking, payments, lending, securities services and Corporate", weight: 0.6250, industry: Bank (Money Center), unlevered_beta: 0.7610}
+
+company:
+  shares_basic:
+    value: 2679.511
+    source: "sources/filings/jpm-10-q-2026-05-01.md line 59 cover page (2,679,511,418 shares at 2026-03-31)"
+    as_of: 2026-03-31
+  shares_diluted:
+    value: 2720.2
+    source: "sources/filings/jpm-10-q-2026-05-01.md line 6355 (weighted-average diluted, 1Q26)"
+    as_of: 2026-03-31
+  share_price:
+    value: 327.33
+    source: "sources/peer-filings/bank-peer-facts-2026-06-30.md JPM row (close traded on 2026-06-30)"
+    as_of: 2026-06-30
+  equity_value:
+    value: 877084.3
+    source: "shares_basic × share_price"
+    as_of: 2026-06-30
+  equity_book:
+    value: 342393
+    source: "sources/filings/jpm-10-k-2026-02-13.md line 2120 (common stockholders' equity, 2025-12-31)"
+    as_of: 2025-12-31
+    note: "Common only; total stockholders' equity 362,438 includes 20,045 of preferred. 2026-03-31 common equity 343,993 is in facts"
+  debt_total:
+    value: 0
+    source: "Analyst treatment per lesson 11 and lesson 26 slides: a bank's debt is raw material, not financing; see meta.omitted company.debt_face"
+    as_of: 2025-12-31
+  revenue:
+    value: 182447
+    source: "sources/filings/jpm-10-k-2026-02-13.md line 2082 (total net revenue, reported)"
+    as_of: 2025-12-31
+  ebit:
+    value: 72595
+    source: "sources/filings/jpm-10-k-2026-02-13.md line 2086 (income before income tax expense)"
+    as_of: 2025-12-31
+    note: "Stand-in only so model.py runs: for a bank interest is a cost of goods, so pre-tax income is the closest analogue of operating income"
+  interest_expense:
+    value: 97898
+    source: "sources/filings/jpm-10-k-2026-02-13.md line 8833 (total interest expense, mostly on deposits)"
+    as_of: 2025-12-31
+    note: "Required by model.py; feeds only sections 2-4, which do not apply"
+  net_income:
+    value: 55681
+    source: "sources/filings/jpm-10-k-2026-02-13.md line 6687 (net income applicable to common stockholders)"
+    as_of: 2025-12-31
+    note: "Total net income 57,048 (line 2088) less preferred dividends and allocations"
+  invested_capital:
+    value: 342393
+    source: "sources/filings/jpm-10-k-2026-02-13.md line 2120 (common stockholders' equity)"
+    as_of: 2025-12-31
+    note: "For a bank the invested capital is the equity; section 8's ROE line is the one the read uses"
+  goodwill:
+    value: 54082
+    source: "sources/filings/jpm-10-k-2026-02-13.md line 4137"
+    as_of: 2025-12-31
+
+debt:
+  rating_actual:
+    value: "A"
+    note: "S&P parent senior long-term A; Moody's A1, Fitch AA-; all stable. Used only to label the (unused) cost of debt"
+    source: "sources/filings/jpm-10-q-2026-05-01.md lines 2273-2275; Moody's revised the parent outlook to stable from positive on 2025-11-03 (sources/filings/jpm-10-k-2026-02-13.md line 4773)"
+    as_of: 2026-03-31
+  rate_type:
+    value: mixed
+    source: "sources/filings/jpm-8-k-2026-04-23-items-801-901.md and jpm-8-k-2026-01-22-items-801-901.md (floating and fixed-to-floating notes); sources/filings/jpm-10-k-2026-02-13.md line 6746 (long-term debt, 134,559 at fair value)"
+    as_of: 2026-06-02
+  currency:
+    value: USD
+    source: "sources/filings/jpm-8-k-2026-06-02-items-801-901.md (2026 benchmark issues all USD)"
+    as_of: 2026-06-02
+    note: "The 10-K debt note also lists non-USD issues; not split out in quick mode"
+
+governance:
+  board:
+    - {name: James Dimon, role: Chairman and CEO, independent: false, affiliated_with: JPMorgan Chase}
+    - {name: Stephen B. Burke, role: Lead Independent Director; CMDC chair, independent: true, affiliated_with: none}
+    - {name: Linda B. Bammann, role: Risk Committee chair, independent: true, affiliated_with: "former JPMorgan risk executive (retired 2005)"}
+    - {name: Michele G. Buck, role: Director, independent: true, affiliated_with: none}
+    - {name: Alicia Boler Davis, role: Director, independent: true, affiliated_with: none}
+    - {name: Alex Gorsky, role: Director, independent: true, affiliated_with: none}
+    - {name: Mellody Hobson, role: Public Responsibility chair, independent: true, affiliated_with: none}
+    - {name: Phebe N. Novakovic, role: Director, independent: true, affiliated_with: none}
+    - {name: Virginia M. Rometty, role: Governance Committee chair, independent: true, affiliated_with: none}
+    - {name: Brad D. Smith, role: Director, independent: true, affiliated_with: none}
+    - {name: Mark A. Weinberger, role: Audit Committee chair, independent: true, affiliated_with: none}
+  controlling_holders:
+    - {name: The Vanguard Group, pct: 0.0986, source: "sources/filings/jpm-def14a-2026-04-06.md 5% holders table", as_of: 2025-12-31}
+    - {name: "BlackRock, Inc.", pct: 0.0715, source: "sources/filings/jpm-def14a-2026-04-06.md 5% holders table", as_of: 2025-12-31}
+    - {name: James Dimon, pct: 0.0023, source: "sources/filings/jpm-def14a-2026-04-06.md security ownership table (6,266,647 shares owned; 2,679.5M outstanding)", as_of: 2026-02-28}
+  share_classes:
+    value: "One class of voting common stock (NYSE: JPM). Preferred series are non-cumulative and non-voting except as required by law."
+    source: "sources/filings/jpm-10-q-2026-05-01.md cover page (registered securities)"
+    as_of: 2026-03-31
+  marginal_investor:
+    value: "Diversified institutions; the two largest holders are index managers (Vanguard 9.86%, BlackRock 7.15%) and all directors and officers together hold under 1%"
+    source: "sources/filings/jpm-def14a-2026-04-06.md security ownership tables"
+    as_of: 2026-02-28
+  objectives:
+    value: "\"fortress balance sheet\" philosophy focused on risk-adjusted returns, strong capital and robust liquidity; capital objectives include investing through cycles, retaining flexibility for future investment opportunities, and meeting capital distribution objectives"
+    source: "sources/filings/jpm-10-k-2026-02-13.md lines 3913 and 3935; sources/statements/jpm-stated-positions.md S-5, S-8"
+    as_of: 2025-12-31
+  change_of_control_payouts:
+    value: "No change-of-control agreements surfaced in quick mode; the June 2026 retention awards ($30M each to Petno and Rohrbaugh, $20M each to Erdoes and Piepszak) cliff-vest after three years subject to a 12% average ROTCE over 2026-2028 and do not vest on retirement"
+    source: "sources/filings/jpm-8-k-2026-06-25-items-502.md item 5.02"
+    as_of: 2026-06-24
+
+peers:
+  - {name: Bank of America, ticker: BAC, fiscal_period: FY2025, net_income: 30509, equity_book: 303243, market_cap: 404364, payout: 0.967, source: "sources/peer-filings/bank-peer-facts-2026-06-30.md BAC row; payout = (8,083 + 21,433) / 30,509; equity is total incl. preferred", as_of: 2026-06-30}
+  - {name: Citigroup, ticker: C, fiscal_period: FY2025, net_income: 14306, equity_book: 192241, market_cap: 244835, payout: 1.302, source: "sources/peer-filings/bank-peer-facts-2026-06-30.md C row; equity = 212,291 − preferred 20,050; payout = (5,372 + 13,250) / 14,306", as_of: 2026-06-30}
+  - {name: Wells Fargo, ticker: WFC, fiscal_period: FY2025, net_income: 21338, equity_book: 164509, market_cap: 252894, payout: 1.075, source: "sources/peer-filings/bank-peer-facts-2026-06-30.md WFC row; equity = 181,117 − preferred 16,608; payout = (5,434 + 17,516) / 21,338", as_of: 2026-06-30}
+  - {name: Goldman Sachs, ticker: GS, fiscal_period: FY2025, net_income: 17176, equity_book: 109819, market_cap: 298362, payout: 1.027, source: "sources/peer-filings/bank-peer-facts-2026-06-30.md GS row; equity = 124,972 − preferred 15,153; payout = (5,277 + 12,360) / 17,176", as_of: 2026-06-30}
+  - {name: Morgan Stanley, ticker: MS, fiscal_period: FY2025, net_income: 16861, equity_book: 111632, market_cap: 329716, source: "sources/peer-filings/bank-peer-facts-2026-06-30.md MS row; buybacks not tagged so payout omitted; equity is total incl. preferred", as_of: 2026-06-30}
+  - {name: PNC Financial, ticker: PNC, fiscal_period: FY2025, net_income: 6997, equity_book: 60585, market_cap: 98873, payout: 0.568, source: "sources/peer-filings/bank-peer-facts-2026-06-30.md PNC row; payout = (2,635 + 1,338) / 6,997; equity is total incl. preferred", as_of: 2026-06-30}
+  - {name: U.S. Bancorp, ticker: USB, fiscal_period: FY2025, net_income: 7570, equity_book: 65193, market_cap: 93759, payout: 0.483, source: "sources/peer-filings/bank-peer-facts-2026-06-30.md USB row; payout = (3,168 + 489) / 7,570; equity is total incl. preferred", as_of: 2026-06-30}
+
+facts:
+  # Regulatory capital (Standardized and Advanced), millions and ratios
+  - {id: cet1-capital-2026q1, value: 291152, source: "sources/filings/jpm-10-q-2026-05-01.md line 1689", as_of: 2026-03-31}
+  - {id: rwa-standardized-2026q1, value: 2039324, source: "sources/filings/jpm-10-q-2026-05-01.md line 1692", as_of: 2026-03-31}
+  - {id: rwa-advanced-2026q1, value: 2061341, source: "sources/filings/jpm-10-q-2026-05-01.md line 1692", as_of: 2026-03-31, note: "Advanced ratios were the binding ones (line 198)"}
+  - {id: cet1-ratio-standardized-2026q1, value: 0.143, source: "sources/filings/jpm-10-q-2026-05-01.md line 1693", as_of: 2026-03-31}
+  - {id: cet1-ratio-advanced-2026q1, value: 0.141, source: "sources/filings/jpm-10-q-2026-05-01.md line 1693", as_of: 2026-03-31}
+  - {id: cet1-requirement-current, value: 0.115, source: "sources/filings/jpm-10-q-2026-05-01.md line 1693; sources/filings/jpm-8-k-2026-06-24-items-801-901.md (unchanged through 2027-09-30)", as_of: 2026-06-24, note: "4.5% minimum + 4.5% GSIB surcharge (Method 2) + 2.5% SCB (Standardized) or 2.5% conservation buffer (Advanced)"}
+  - {id: gsib-surcharge-2028-current-rules, value: 0.055, source: "sources/filings/jpm-10-q-2026-05-01.md line 1660", as_of: 2026-03-31, note: "Effective 2028-01-01 under rules in effect; 5.2% if the GSIB re-proposal is adopted"}
+  - {id: required-cet1-change-under-reproposals, value: 0.04, source: "sources/filings/jpm-10-q-2026-05-01.md line 1662", as_of: 2026-03-31, note: "Increase in required CET1 dollars versus the 2028 requirement under current rules"}
+  - {id: tier1-ratio-standardized-2026q1, value: 0.152, source: "sources/filings/jpm-10-q-2026-05-01.md line 1694", as_of: 2026-03-31}
+  - {id: tier1-requirement, value: 0.13, source: "sources/filings/jpm-10-q-2026-05-01.md line 1694", as_of: 2026-03-31}
+  - {id: total-capital-ratio-standardized-2026q1, value: 0.172, source: "sources/filings/jpm-10-q-2026-05-01.md line 1695", as_of: 2026-03-31}
+  - {id: total-capital-requirement, value: 0.15, source: "sources/filings/jpm-10-q-2026-05-01.md line 1695", as_of: 2026-03-31}
+  - {id: tier1-leverage-ratio-2026q1, value: 0.066, source: "sources/filings/jpm-10-q-2026-05-01.md line 1706", as_of: 2026-03-31}
+  - {id: tier1-leverage-requirement, value: 0.04, source: "sources/filings/jpm-10-q-2026-05-01.md line 1706", as_of: 2026-03-31}
+  - {id: slr-2026q1, value: 0.056, source: "sources/filings/jpm-10-q-2026-05-01.md line 1708", as_of: 2026-03-31}
+  - {id: slr-requirement, value: 0.043, source: "sources/filings/jpm-10-q-2026-05-01.md line 1708 (eSLR final rule, early adopted 2026-01-01)", as_of: 2026-03-31}
+  - {id: cet1-ratio-standardized-2025, value: 0.146, source: "sources/filings/jpm-10-k-2026-02-13.md line 4096", as_of: 2025-12-31}
+  - {id: cet1-ratio-standardized-2024, value: 0.157, source: "sources/filings/jpm-10-k-2026-02-13.md line 4096", as_of: 2024-12-31}
+  - {id: cet1-ratio-standardized-2023, value: 0.150, source: "sources/filings/jpm-10-k-2025-02-14.md line 4176", as_of: 2023-12-31}
+  - {id: cet1-capital-2025, value: 288469, source: "sources/filings/jpm-10-k-2026-02-13.md line 4092", as_of: 2025-12-31}
+  - {id: cet1-capital-2024, value: 275513, source: "sources/filings/jpm-10-k-2026-02-13.md line 4092", as_of: 2024-12-31}
+  - {id: rwa-standardized-2025, value: 1981692, source: "sources/filings/jpm-10-k-2026-02-13.md line 4095", as_of: 2025-12-31, note: "Included about $110B for the Apple Card forward purchase commitment, cut to about $30B by 2026-03-31 (10-Q line 1699)"}
+  - {id: rwa-standardized-2024, value: 1757460, source: "sources/filings/jpm-10-k-2026-02-13.md line 4095", as_of: 2024-12-31}
+  - {id: rwa-standardized-2023, value: 1671995, source: "sources/filings/jpm-10-k-2025-02-14.md line 4175", as_of: 2023-12-31}
+  - {id: corporate-equity-allocation-2026, value: 98.4, source: "sources/filings/jpm-10-k-2026-02-13.md line 4271 ($ billions, January 1, 2026)", as_of: 2026-01-01}
+  - {id: corporate-equity-allocation-2025, value: 120.9, source: "sources/filings/jpm-10-k-2026-02-13.md line 4271 ($ billions)", as_of: 2025-12-31}
+  - {id: cib-equity-allocation-2026, value: 166.5, source: "sources/filings/jpm-10-k-2026-02-13.md line 4269 ($ billions; 149.5 at 2025-12-31)", as_of: 2026-01-01}
+  - {id: ccb-equity-allocation-2026, value: 61.5, source: "sources/filings/jpm-10-k-2026-02-13.md line 4268 ($ billions; 56.0 at 2025-12-31)", as_of: 2026-01-01}
+  # Earnings, equity and distributions by year (common)
+  - {id: ni-common-2023, value: 47760, source: "sources/filings/jpm-10-k-2026-02-13.md line 6687", as_of: 2023-12-31}
+  - {id: ni-common-2024, value: 56868, source: "sources/filings/jpm-10-k-2026-02-13.md line 6687", as_of: 2024-12-31}
+  - {id: ni-common-2025, value: 55681, source: "sources/filings/jpm-10-k-2026-02-13.md line 6687", as_of: 2025-12-31}
+  - {id: ni-common-2026q1, value: 16218, source: "sources/filings/jpm-8-k-2026-04-14-items-202-901.md line 547 (net income applicable to common equity, CET1 rollforward)", as_of: 2026-03-31}
+  - {id: common-dividends-2023, value: 12055, source: "sources/filings/jpm-10-k-2026-02-13.md line 6798 (declared)", as_of: 2023-12-31}
+  - {id: common-dividends-2024, value: 13786, source: "sources/filings/jpm-10-k-2026-02-13.md line 6798 (declared)", as_of: 2024-12-31}
+  - {id: common-dividends-2025, value: 16060, source: "sources/filings/jpm-10-k-2026-02-13.md line 6798 (declared)", as_of: 2025-12-31}
+  - {id: common-dividends-2026q1, value: 4067, source: "sources/filings/jpm-8-k-2026-04-14-items-202-901.md line 548", as_of: 2026-03-31}
+  - {id: buybacks-2023, value: 9898, source: "sources/filings/jpm-10-k-2026-02-13.md line 4299", as_of: 2023-12-31}
+  - {id: buybacks-2024, value: 18841, source: "sources/filings/jpm-10-k-2026-02-13.md line 4299", as_of: 2024-12-31}
+  - {id: buybacks-2025, value: 31640, source: "sources/filings/jpm-10-k-2026-02-13.md line 4299", as_of: 2025-12-31}
+  - {id: buybacks-2026q1, value: 8328, source: "sources/filings/jpm-8-k-2026-04-14-items-202-901.md line 627", as_of: 2026-03-31}
+  - {id: buybacks-1q25, value: 7563, source: "sources/filings/jpm-8-k-2026-04-14-items-202-901.md line 627", as_of: 2025-03-31}
+  - {id: buybacks-2q25, value: 7500, source: "sources/filings/jpm-8-k-2026-04-14-items-202-901.md line 627", as_of: 2025-06-30}
+  - {id: buybacks-3q25, value: 8315, source: "sources/filings/jpm-8-k-2026-04-14-items-202-901.md line 627", as_of: 2025-09-30}
+  - {id: buybacks-4q25, value: 8262, source: "sources/filings/jpm-8-k-2026-04-14-items-202-901.md line 627", as_of: 2025-12-31}
+  - {id: buyback-avg-price-2026q1, value: 302.75, source: "sources/filings/jpm-8-k-2026-04-14-items-202-901.md line 626 ($ per share)", as_of: 2026-03-31}
+  - {id: common-equity-2023, value: 300474, source: "sources/filings/jpm-10-k-2026-02-13.md line 2120", as_of: 2023-12-31}
+  - {id: common-equity-2024, value: 324708, source: "sources/filings/jpm-10-k-2026-02-13.md line 2120", as_of: 2024-12-31}
+  - {id: common-equity-2026q1, value: 343993, source: "sources/filings/jpm-10-q-2026-05-01.md line 182", as_of: 2026-03-31}
+  - {id: roe-reported-2023, value: 0.17, source: "sources/filings/jpm-10-k-2026-02-13.md line 2101", as_of: 2023-12-31}
+  - {id: roe-reported-2024, value: 0.18, source: "sources/filings/jpm-10-k-2026-02-13.md line 2101", as_of: 2024-12-31}
+  - {id: roe-reported-2025, value: 0.17, source: "sources/filings/jpm-10-k-2026-02-13.md line 2101", as_of: 2025-12-31}
+  - {id: roe-reported-2026q1, value: 0.19, source: "sources/filings/jpm-8-k-2026-04-14-items-202-901.md line 164 (annualized)", as_of: 2026-03-31}
+  - {id: rotce-2025, value: 0.20, source: "sources/filings/jpm-10-k-2026-02-13.md line 2229", as_of: 2025-12-31}
+  - {id: rotce-2026q1, value: 0.23, source: "sources/filings/jpm-8-k-2026-04-14-items-202-901.md line 165", as_of: 2026-03-31}
+  - {id: bvps-2026q1, value: 128.38, source: "sources/filings/jpm-8-k-2026-04-14-items-202-901.md line 160", as_of: 2026-03-31}
+  - {id: tbvps-2026q1, value: 108.87, source: "sources/filings/jpm-8-k-2026-04-14-items-202-901.md line 161", as_of: 2026-03-31}
+  - {id: roe-ccb-2026q1, value: 0.32, source: "sources/filings/jpm-10-q-2026-05-01.md business segment highlights", as_of: 2026-03-31}
+  - {id: roe-cib-2026q1, value: 0.21, source: "sources/filings/jpm-10-q-2026-05-01.md business segment highlights", as_of: 2026-03-31}
+  - {id: roe-awm-2026q1, value: 0.44, source: "sources/filings/jpm-10-q-2026-05-01.md business segment highlights", as_of: 2026-03-31}
+  # Growth
+  - {id: revenue-2023, value: 158104, source: "sources/filings/jpm-10-k-2026-02-13.md line 2082", as_of: 2023-12-31}
+  - {id: revenue-2024, value: 177556, source: "sources/filings/jpm-10-k-2026-02-13.md line 2082", as_of: 2024-12-31}
+  - {id: revenue-2022, value: 128695, source: "sources/filings/jpm-10-k-2025-02-14.md line 2126", as_of: 2022-12-31}
+  - {id: net-income-2022, value: 37676, source: "sources/filings/jpm-10-k-2025-02-14.md line 2132", as_of: 2022-12-31}
+  - {id: net-income-total-2023, value: 49552, source: "sources/filings/jpm-10-k-2026-02-13.md line 2088", as_of: 2023-12-31}
+  - {id: net-income-total-2024, value: 58471, source: "sources/filings/jpm-10-k-2026-02-13.md line 2088", as_of: 2024-12-31}
+  - {id: net-income-total-2025, value: 57048, source: "sources/filings/jpm-10-k-2026-02-13.md line 2088", as_of: 2025-12-31}
+  - {id: revenue-2026q1, value: 49836, source: "sources/filings/jpm-8-k-2026-04-14-items-202-901.md line 141 (up 10% on 1Q25)", as_of: 2026-03-31}
+  - {id: net-income-2026q1, value: 16494, source: "sources/filings/jpm-8-k-2026-04-14-items-202-901.md line 145", as_of: 2026-03-31}
+  - {id: nii-2026-guidance, value: 103000, source: "sources/filings/jpm-10-q-2026-05-01.md line 367", as_of: 2026-04-14}
+  - {id: nii-2025, value: 95443, source: "sources/filings/jpm-10-k-2026-02-13.md line 2191", as_of: 2025-12-31}
+  - {id: adjusted-expense-2026-guidance, value: 105000, source: "sources/filings/jpm-10-q-2026-05-01.md line 369", as_of: 2026-04-14}
+  - {id: noninterest-expense-2025, value: 95640, source: "sources/filings/jpm-10-k-2026-02-13.md line 2083", as_of: 2025-12-31}
+  # Debt design
+  - {id: long-term-debt-2026q1, value: 448764, source: "sources/filings/jpm-10-q-2026-05-01.md line 181", as_of: 2026-03-31}
+  - {id: long-term-debt-2025q1, value: 407224, source: "sources/filings/jpm-10-q-2026-05-01.md line 181", as_of: 2025-03-31}
+  - {id: long-term-debt-2025, value: 435206, source: "sources/filings/jpm-10-k-2026-02-13.md line 2119", as_of: 2025-12-31}
+  - {id: long-term-debt-2024, value: 401418, source: "sources/filings/jpm-10-k-2026-02-13.md line 2119", as_of: 2024-12-31}
+  - {id: deposits-2025, value: 2559320, source: "sources/filings/jpm-10-k-2026-02-13.md line 2118", as_of: 2025-12-31}
+  - {id: interest-on-long-term-debt-2025, value: 17894, source: "sources/filings/jpm-10-k-2026-02-13.md line 8831", as_of: 2025-12-31}
+  - {id: interest-on-deposits-2025, value: 45112, source: "sources/filings/jpm-10-k-2026-02-13.md line 8827", as_of: 2025-12-31}
+  - {id: hqla-2026q1, value: 941000, source: "sources/filings/jpm-10-q-2026-05-01.md line 317 (approximately)", as_of: 2026-03-31}
+  # Payout policy events and control
+  - {id: dividend-quarterly-current, value: 1.50, source: "sources/filings/jpm-8-k-2026-06-24-items-801-901.md", as_of: 2026-06-24}
+  - {id: dividend-quarterly-3q26-intended, value: 1.65, source: "sources/filings/jpm-8-k-2026-06-24-items-801-901.md", as_of: 2026-06-24}
+  - {id: buyback-authorization-2026, value: 50000, source: "sources/filings/jpm-8-k-2026-06-24-items-801-901.md (effective 2026-07-01)", as_of: 2026-06-24}
+  - {id: buyback-authorization-2025, value: 50000, source: "sources/filings/jpm-8-k-2025-07-01-items-801-901.md (effective 2025-07-01)", as_of: 2025-07-01}
+  - {id: scb-current, value: 0.025, source: "sources/filings/jpm-8-k-2026-06-24-items-801-901.md (unchanged through 2027-09-30)", as_of: 2026-06-24}
+  - {id: scb-prior, value: 0.033, source: "sources/filings/jpm-8-k-2025-07-01-items-801-901.md (before 2025-10-01)", as_of: 2025-07-01}
+  - {id: retention-awards-total, value: 100, source: "sources/filings/jpm-8-k-2026-06-25-items-502.md ($ millions: 30 + 30 + 20 + 20)", as_of: 2026-06-24}
+  - {id: retention-award-rotce-hurdle, value: 0.12, source: "sources/filings/jpm-8-k-2026-06-25-items-502.md (three-year average 2026-2028)", as_of: 2026-06-24}
+  - {id: ceo-pay-2025, value: 43, source: "sources/filings/jpm-8-k-2026-01-22-items-502.md ($ millions)", as_of: 2026-01-22}
+  - {id: ceo-age, value: 70, source: "sources/filings/jpm-def14a-2026-04-06.md nominee table", as_of: 2026-04-06}
+  - {id: shareholders-engaged-pct, value: 0.37, source: "sources/filings/jpm-def14a-2026-04-06.md line 298", as_of: 2026-04-06}
+  - {id: segment-revenue-markets-ib-2025, value: 45517, source: "sources/filings/jpm-10-k-2026-02-13.md lines 3349 (Total Markets 35,782) and 3118 (CIB investment banking fees 9,735)", as_of: 2025-12-31}
+  - {id: segment-revenue-awm-2025, value: 24073, source: "sources/filings/jpm-10-k-2026-02-13.md line 2878", as_of: 2025-12-31}
+  - {id: segment-revenue-managed-total-2025, value: 185581, source: "sources/filings/jpm-10-k-2026-02-13.md line 2887", as_of: 2025-12-31}

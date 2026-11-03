@@ -35,7 +35,10 @@ def load_table(ledger_path, L):
     rel = L.get("market.ratings_table")
     if not rel:
         sys.exit("model.py: ledger is missing market.ratings_table (path to a ratings-spreads.json snapshot)")
-    path = os.path.join(os.path.dirname(os.path.abspath(ledger_path)), str(rel))
+    here = os.path.dirname(os.path.abspath(ledger_path))
+    path = os.path.join(here, str(rel))
+    if not os.path.exists(path):                       # an alternatives/ ledger names the company folder's file
+        path = os.path.join(os.path.dirname(here), str(rel))
     with open(path) as fh:
         data = json.load(fh)
     size = L.get("modeling_choices.firm_size_table", "small")
