@@ -1,3 +1,11 @@
+---
+title: "SolarWinds Form 8-K, 2022-10-14 — Thoma Bravo directors resign"
+status: active
+owner: weprintmoney
+created: 2026-11-03
+last_updated: 2026-11-03
+---
+
 0001739942False00017399422022-10-142022-10-14
 UNITED STATES
 SECURITIES AND EXCHANGE COMMISSION
