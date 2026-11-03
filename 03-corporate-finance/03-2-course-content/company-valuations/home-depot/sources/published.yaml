@@ -1,0 +1,72 @@
+- file: sources/filings/hd-10-k-2026-03-18.md
+  published: '2026-03-18'
+  form: 10-K
+  url: https://www.sec.gov/Archives/edgar/data/354950/000162828026019436/hd-20260201.htm
+- file: sources/filings/hd-10-k-2025-03-21.md
+  published: '2025-03-21'
+  form: 10-K
+  url: https://www.sec.gov/Archives/edgar/data/354950/000035495025000085/hd-20250202.htm
+- file: sources/filings/hd-10-q-2026-05-27.md
+  published: '2026-05-27'
+  form: 10-Q
+  url: https://www.sec.gov/Archives/edgar/data/354950/000162828026038247/hd-20260503.htm
+- file: sources/filings/hd-def14a-2026-04-07.md
+  published: '2026-04-07'
+  form: DEF 14A
+  url: https://www.sec.gov/Archives/edgar/data/354950/000035495026000090/hd-20260406.htm
+- file: sources/filings/hd-8-k-2026-05-26-items-503-507-901.md
+  published: '2026-05-26'
+  form: 8-K
+  url: https://www.sec.gov/Archives/edgar/data/354950/000035495026000105/hd-20260521.htm
+- file: sources/filings/hd-8-k-2025-11-24-items-503-801-901.md
+  published: '2025-11-24'
+  form: 8-K
+  url: https://www.sec.gov/Archives/edgar/data/354950/000035495025000247/hd-20251120.htm
+- file: sources/filings/hd-8-k-2025-09-15-items-801-901.md
+  published: '2025-09-15'
+  form: 8-K
+  url: https://www.sec.gov/Archives/edgar/data/354950/000110465925090021/tm2525940d1_8k.htm
+- file: sources/filings/hd-8-k-2025-09-10-items-801-901.md
+  published: '2025-09-10'
+  form: 8-K
+  url: https://www.sec.gov/Archives/edgar/data/354950/000110465925089060/tm2525628d1_8k.htm
+- file: sources/filings/hd-8-k-2026-05-19-items-202-901.md
+  published: '2026-05-19'
+  form: 8-K
+  url: https://www.sec.gov/Archives/edgar/data/354950/000035495026000101/hd-20260519.htm
+- file: sources/filings/hd-8-k-2026-02-24-items-202-901.md
+  published: '2026-02-24'
+  form: 8-K
+  url: https://www.sec.gov/Archives/edgar/data/354950/000035495026000026/hd-20260224.htm
+- file: sources/filings/hd-8-k-2025-11-18-items-202-901.md
+  published: '2025-11-18'
+  form: 8-K
+  url: https://www.sec.gov/Archives/edgar/data/354950/000035495025000238/hd-20251118.htm
+- file: sources/filings/hd-8-k-2025-08-19-items-202-901.md
+  published: '2025-08-19'
+  form: 8-K
+  url: https://www.sec.gov/Archives/edgar/data/354950/000035495025000195/hd-20250819.htm
+- file: sources/filings/index.md
+  published: '2026-06-30'
+  form: index
+- file: sources/market-data/market-rates-2026-06-30.json
+  published: '2026-06-30'
+  form: market data
+- file: sources/market-data/ratings-spreads-2026-01-01.json
+  published: '2026-01-01'
+  form: market data
+- file: sources/market-data/country-risk-2026-01-01.json
+  published: '2026-01-01'
+  form: market data
+- file: sources/market-data/industry-betas-2026-01-05.json
+  published: '2026-01-05'
+  form: market data
+- file: sources/market-data/rates-2026-06-30.md
+  published: '2026-06-30'
+  form: market data summary
+- file: sources/peer-filings/peer-facts-2026-06-30.md
+  published: '2026-06-30'
+  form: peer XBRL facts and closes
+- file: sources/statements/hd-stated-positions.md
+  published: '2026-05-27'
+  form: excerpts from filings listed above

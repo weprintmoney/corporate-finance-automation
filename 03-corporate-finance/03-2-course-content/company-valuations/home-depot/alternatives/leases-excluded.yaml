@@ -1,0 +1,658 @@
+# Alternative to inputs.yaml: operating leases not counted as debt
+# Every other field is identical to inputs.yaml. ratings_table path adjusted for this folder.
+meta:
+  company: The Home Depot, Inc.
+  slug: home-depot
+  ticker: HD
+  type: public
+  home_country: United States
+  currency: USD
+  reporting_currency: USD
+  fiscal_year_end: Sunday nearest 01-31 (fiscal 2025 ended 2026-02-01)
+  base_year: 2025
+  analysis_date: 2026-06-30
+  analyst: weprintmoney
+  mode: quick
+  blind: true
+  omitted:
+  - field: beta.regression_beta
+    reason: No price history source is allowed in the blind run; bottom-up beta is used.
+  - field: debt.rating_actual
+    reason: The filings fetched disclose no agency rating; a remembered rating is outside knowledge and is used only in an alternative.
+modeling_choices:
+  coverage_numerator: ebit
+  rd_amortizable_life: null
+  firm_size_table: large
+  sbc_treatment: expense
+  firm_value_basis: market
+  beta_source: bottom_up
+  kd_source: synthetic
+  terminal_method: consistent_reinvestment
+market:
+  govt_bond_rate:
+    value: 0.0444
+    source: sources/market-data/market-rates-2026-06-30.json fred_latest.treasury_10y
+    as_of: 2026-06-30
+  sovereign_default_spread:
+    value: 0.0026
+    source: sources/market-data/market-rates-2026-06-30.json damodaran_monthly.us_sovereign_default_spread (Aa1)
+    as_of: 2026-06-01
+  risk_free_rate:
+    value: 0.0418
+    source: govt_bond_rate − sovereign_default_spread; sources/market-data/rates-2026-06-30.md
+    as_of: 2026-06-30
+  mature_erp:
+    value: 0.045705
+    source: sources/market-data/market-rates-2026-06-30.json damodaran_monthly.implied_erp_over_dollar_riskfree
+    as_of: 2026-06-01
+  ratings_table:
+    value: ../sources/market-data/ratings-spreads-2026-01-01.json
+    source: sources/market-data/ratings-spreads-2026-01-01.json (Damodaran January 2026 table)
+    as_of: 2026-01-01
+  tax_rate_marginal:
+    value: 0.25
+    source: 'Course lesson 12 spreadsheet-countrytaxrates24.md: United States 25% (21% federal plus state)'
+    as_of: 2024-12-31
+  tax_rate_effective:
+    value: 0.239
+    source: 'sources/filings/hd-10-k-2026-03-18.md income statement: provision 4446 ÷ pre-tax earnings 18602'
+    as_of: 2026-02-01
+  terminal_growth:
+    value: 0.035
+    source: Analyst choice below the 4.18% risk-free rate (lesson 32); nominal US growth in a mature, housing-linked business
+    as_of: 2026-06-30
+country:
+  exposures:
+  - country: United States
+    weight: 0.924
+    erp: 0.045705
+    measure: revenues
+    source: 'sources/filings/hd-10-k-2026-03-18.md Note 2: net sales in the U.S. 152170 of 164683; ERP = mature_erp + CRP 0 (rule 15)'
+    as_of: 2026-02-01
+  - country: Canada
+    weight: 0.0427
+    erp: 0.045705
+    measure: revenues
+    source: 'sources/filings/hd-10-k-2026-03-18.md Note 2: net sales outside the U.S. 12513 split by store count (Canada 182 of 324 stores, Item 2); CRP 0 per sources/market-data/country-risk-2026-01-01.json'
+    as_of: 2026-02-01
+  - country: Mexico
+    weight: 0.0333
+    erp: 0.070355
+    measure: revenues
+    source: sources/filings/hd-10-k-2026-03-18.md Note 2 and Item 2 (Mexico 142 of 324 stores); CRP 0.024650 per sources/market-data/country-risk-2026-01-01.json
+    as_of: 2026-02-01
+  weighted_erp:
+    value: 0.046526
+    source: Sum of weight × erp over country.exposures
+    as_of: 2026-06-30
+beta:
+  unlevered_bottom_up:
+    value: 1.2778
+    source: sources/market-data/industry-betas-2026-01-05.json cash-corrected unlevered betas, weighted by beta.segments
+    as_of: 2026-01-05
+  segments:
+  - name: Primary segment (stores and online, U.S./Canada/Mexico)
+    weight: 0.9228
+    industry: Retail (Building Supply)
+    unlevered_beta: 1.3177
+  - name: Other (SRS incl. GMS specialty distribution)
+    weight: 0.0772
+    industry: Retail (Distributors)
+    unlevered_beta: 0.8016
+company:
+  shares_basic:
+    value: 997.116682
+    source: 'sources/filings/hd-10-q-2026-05-27.md cover page: 997,116,682 shares as of 2026-05-19'
+    as_of: 2026-05-19
+  shares_diluted:
+    value: 996.0
+    source: 'sources/filings/hd-8-k-2026-05-19-items-202-901.md Exhibit 99.1: diluted weighted average shares Q1 fiscal 2026'
+    as_of: 2026-05-03
+  share_price:
+    value: 352.68
+    source: sources/peer-filings/peer-facts-2026-06-30.md HD close
+    as_of: 2026-06-30
+  equity_value:
+    value: 351663.1
+    source: shares_basic × share_price; sources/peer-filings/peer-facts-2026-06-30.md
+    as_of: 2026-06-30
+  equity_book:
+    value: 13874
+    source: 'sources/filings/hd-10-q-2026-05-27.md balance sheet: total stockholders'' equity'
+    as_of: 2026-05-03
+  debt_face:
+    value: 54566
+    source: sources/filings/hd-10-k-2026-03-18.md Note 5 senior notes principal 48800 less 1300 repaid April 2026 (sources/filings/hd-10-q-2026-05-27.md Note 5) + commercial paper 3503 + finance leases
+      2932 + other 631 (10-Q balance sheet)
+    as_of: 2026-05-03
+  debt_book:
+    value: 53509
+    source: 'sources/filings/hd-10-q-2026-05-27.md balance sheet: short-term debt 3503 + current installments 5178 + long-term debt 44828 (includes finance leases 2932)'
+    as_of: 2026-05-03
+  debt_market:
+    value: 49576
+    source: 'sources/filings/hd-10-q-2026-05-27.md fair value note: senior notes fair value (Level 1) 42510 + commercial paper 3503 + finance leases 2932 + other long-term debt 631 at carrying value'
+    as_of: 2026-05-03
+    note: 'Senior notes carrying 46443 vs fair 42510: fixed coupons below today''s rates'
+  lease_debt:
+    value: 0
+    source: 'sources/filings/hd-10-q-2026-05-27.md balance sheet: operating lease liabilities current 1484 + long-term 8164'
+    as_of: 2026-05-03
+  off_balance_sheet_debt:
+    value: 0
+    source: 'sources/filings/hd-10-k-2026-03-18.md Note 3: about 675 of undiscounted payments on leases signed not commenced, under 1% of debt; no guarantees of JV debt disclosed. Left at 0'
+    as_of: 2026-02-01
+  debt_total:
+    value: 49576
+    source: debt_market only, operating leases excluded
+    as_of: '2026-05-03'
+  deferred_revenue:
+    value: 2682
+    source: sources/filings/hd-10-q-2026-05-27.md balance sheet; not debt
+    as_of: 2026-05-03
+  cash:
+    value: 1601
+    source: sources/filings/hd-10-q-2026-05-27.md balance sheet
+    as_of: 2026-05-03
+  options_value:
+    value: 223
+    source: 'sources/filings/hd-10-k-2026-03-18.md Note 9: 2.156M options outstanding at weighted exercise 249.25; intrinsic value at 352.68 = 223. Restricted stock is already in basic shares'
+    as_of: 2026-06-30
+  revenue:
+    value: 164683
+    source: sources/filings/hd-10-k-2026-03-18.md income statement fiscal 2025
+    as_of: 2026-02-01
+  ebit:
+    value: 20890
+    source: sources/filings/hd-10-k-2026-03-18.md income statement operating income fiscal 2025
+    as_of: 2026-02-01
+  ebitda_standardized:
+    value: 25011
+    source: 'EBIT 20890 + D&A 4121 (sources/filings/hd-10-k-2026-03-18.md cash flow statement: depreciation 3514 + intangible amortization 607)'
+    as_of: 2026-02-01
+  acquisition_amortization:
+    value: 607
+    source: 'sources/filings/hd-10-k-2026-03-18.md cash flow statement: intangible asset amortization'
+    as_of: 2026-02-01
+  interest_expense:
+    value: 2412
+    source: sources/filings/hd-10-k-2026-03-18.md income statement
+    as_of: 2026-02-01
+  net_income:
+    value: 14156
+    source: sources/filings/hd-10-k-2026-03-18.md income statement
+    as_of: 2026-02-01
+  da:
+    value: 4121
+    source: 'sources/filings/hd-10-k-2026-03-18.md cash flow statement: 3514 + 607'
+    as_of: 2026-02-01
+  capex:
+    value: 9089
+    source: 'sources/filings/hd-10-k-2026-03-18.md cash flow statement: capital expenditures 3679 + businesses acquired 5410 (GMS)'
+    as_of: 2026-02-01
+    note: Includes acquisitions (course method); capex alone is 3679
+  change_wc:
+    value: 3084
+    source: 'sources/filings/hd-10-k-2026-03-18.md cash flow statement: sum of working-capital lines (receivables 107, inventories −1498, other 124, payables −1058, deferred revenue −61, taxes payable −698)'
+    as_of: 2026-02-01
+  sbc:
+    value: 522
+    source: sources/filings/hd-10-k-2026-03-18.md cash flow statement
+    as_of: 2026-02-01
+  invested_capital:
+    value: 76774
+    source: 'sources/filings/hd-10-k-2026-03-18.md balance sheet at 2026-02-01: equity 12813 + short-term debt 4464 + long-term debt incl. current 51308 + operating leases 9578 − cash 1389'
+    as_of: 2026-02-01
+  goodwill:
+    value: 22344
+    source: sources/filings/hd-10-k-2026-03-18.md balance sheet
+    as_of: 2026-02-01
+  history:
+  - year: 2022
+    revenue: 157403
+    ebit: 24039
+    net_income: 17105
+    da: 2975
+    capex: 3119
+    change_wc: 6240
+    dividends: 7789
+    buybacks: 6696
+    debt_issued: 6942
+    debt_repaid: 3526
+    cash: 2757
+    source: sources/filings/hd-10-k-2025-03-21.md income and cash flow statements fiscal 2022 (repaid includes 1035 net short-term repayment)
+    as_of: 2023-01-29
+  - year: 2023
+    revenue: 152669
+    ebit: 21689
+    net_income: 15143
+    da: 3247
+    capex: 4740
+    change_wc: -2333
+    dividends: 8383
+    buybacks: 7951
+    debt_issued: 1995
+    debt_repaid: 1271
+    cash: 3760
+    debt_total: 52243
+    invested_capital: 49527
+    source: sources/filings/hd-10-k-2025-03-21.md statements fiscal 2023; capex 3226 + acquisitions 1514; debt incl. operating leases 8132
+    as_of: 2024-01-28
+  - year: 2024
+    revenue: 159514
+    ebit: 21526
+    net_income: 14806
+    da: 3761
+    capex: 21129
+    change_wc: -679
+    dividends: 8929
+    buybacks: 649
+    debt_issued: 10326
+    debt_repaid: 1536
+    cash: 1659
+    debt_total: 62290
+    invested_capital: 67271
+    source: sources/filings/hd-10-k-2026-03-18.md statements fiscal 2024 (53 weeks); capex 3485 + SRS and other acquisitions 17644; issued includes 316 net commercial paper
+    as_of: 2025-02-02
+  - year: 2025
+    revenue: 164683
+    ebit: 20890
+    net_income: 14156
+    da: 4121
+    capex: 9089
+    change_wc: 3084
+    dividends: 9152
+    buybacks: 0
+    debt_issued: 6309
+    debt_repaid: 5040
+    cash: 1389
+    debt_total: 65350
+    invested_capital: 76774
+    source: sources/filings/hd-10-k-2026-03-18.md statements fiscal 2025; capex 3679 + GMS 5410; issued = commercial paper 4148 + notes 2161
+    as_of: 2026-02-01
+debt:
+  rating_actual:
+    value: null
+    source: No agency rating is disclosed in the fetched filings (10-K, 10-Q, proxy, 8-Ks)
+    as_of: 2026-06-30
+  rate_type:
+    value: mixed
+    source: 'sources/filings/hd-10-k-2026-03-18.md Item 7A: after swaps, floating-rate principal 5.4B, about 11% of senior notes; commercial paper 3.5B floating'
+    as_of: 2026-02-01
+  currency:
+    value: USD
+    source: 'sources/filings/hd-10-k-2026-03-18.md Note 5: all senior notes USD'
+    as_of: 2026-02-01
+  maturity_years:
+    value: 12.5
+    source: Principal-weighted remaining maturity of the 41 senior-note tranches outstanding after June 2026 (46000 principal) in sources/filings/hd-10-k-2026-03-18.md Note 5, measured from 2026-06-30 (computed
+      by script; tranches due by June 2026 excluded)
+    as_of: 2026-06-30
+  revolver_undrawn:
+    value: 11000
+    source: 'sources/filings/hd-10-q-2026-05-27.md Note 5: 11.0B back-up facilities, none drawn; 7.5B of it expires by July 2026 unless renewed'
+    as_of: 2026-05-03
+  bankruptcy_cost:
+    value: 0.15
+    source: 'Lesson 21 range: direct 5-10% plus moderate indirect cost for a retailer whose suppliers and Pro customers extend trade credit'
+    as_of: 2026-06-30
+  covenants:
+    value: Senior-note indentures do not limit additional debt or require financial ratios; 101% change-of-control put on the notes; back-up credit facilities carry covenants HD says will not affect liquidity
+      (sources/filings/hd-10-k-2026-03-18.md Note 5)
+    source: sources/filings/hd-10-k-2026-03-18.md Note 5
+    as_of: 2026-02-01
+governance:
+  board:
+  - name: Edward P. Decker
+    role: Chair, President and CEO
+    independent: false
+    affiliated_with: management
+  - name: Gregory D. Brenneman
+    role: Lead Director
+    independent: true
+    affiliated_with: CCMP Capital (own firm)
+  - name: Gerard J. Arpey
+    role: director
+    independent: true
+    affiliated_with: none
+  - name: Ari Bousbib
+    role: director
+    independent: true
+    affiliated_with: none
+  - name: Jeffery H. Boyd
+    role: director
+    independent: true
+    affiliated_with: none
+  - name: J. Frank Brown
+    role: director, audit committee financial expert
+    independent: true
+    affiliated_with: none
+  - name: Wayne M. Hewett
+    role: director
+    independent: true
+    affiliated_with: none
+  - name: Manuel Kadre
+    role: director
+    independent: true
+    affiliated_with: none
+  - name: Stephanie C. Linnartz
+    role: director
+    independent: true
+    affiliated_with: none
+  - name: Paula A. Santilli
+    role: director
+    independent: true
+    affiliated_with: none
+  - name: Caryn Seidman-Becker
+    role: director
+    independent: true
+    affiliated_with: none
+  - name: Asha Sharma
+    role: director
+    independent: true
+    affiliated_with: none
+  controlling_holders:
+  - name: The Vanguard Group
+    pct: 0.1
+    source: sources/filings/hd-def14a-2026-04-07.md beneficial ownership (13G/A 2025-12-03)
+    as_of: 2025-12-31
+  - name: BlackRock, Inc.
+    pct: 0.071
+    source: sources/filings/hd-def14a-2026-04-07.md beneficial ownership (13G/A 2024-01-26)
+    as_of: 2025-12-31
+  - name: Directors and executive officers as a group
+    pct: 0.0008
+    source: sources/filings/hd-def14a-2026-04-07.md beneficial ownership
+    as_of: 2026-03-06
+  share_classes:
+    value: One class of common stock, one vote per share; holders of 15% may call a special meeting; no poison pill
+    source: sources/filings/hd-def14a-2026-04-07.md governance highlights
+    as_of: 2026-04-07
+  marginal_investor:
+    value: Diversified institutions; index funds (Vanguard 10.0%, BlackRock 7.1%) are the largest holders and insiders own 0.08%
+    source: sources/filings/hd-def14a-2026-04-07.md beneficial ownership
+    as_of: 2026-04-07
+  objectives:
+    value: '''We seek to deliver on our objective to create shareholder value through our disciplined approach to capital allocation'' — reinvest to grow faster than the market, then dividend, then buybacks'
+    source: sources/filings/hd-10-k-2026-03-18.md Item 1; sources/statements/hd-stated-positions.md
+    as_of: 2026-02-01
+  change_of_control_payouts:
+    value: No change-in-control agreements for NEOs; 101% put on senior notes
+    source: sources/filings/hd-def14a-2026-04-07.md compensation highlights; sources/filings/hd-10-k-2026-03-18.md Note 5
+    as_of: 2026-04-07
+forecast:
+  growth_period_years:
+    value: 5
+    source: 'Analyst: five years covers guidance plus a housing cycle; HD is mature'
+    as_of: 2026-06-30
+  sales_to_capital:
+    value: 2.0
+    source: Base-year revenue 164683 ÷ invested capital 76774 = 2.14 (ledger); rounded down because acquisitions (SRS, GMS) added capital faster than sales
+    as_of: 2026-02-01
+  management_growth:
+    value: 0.035
+    source: 'sources/filings/hd-8-k-2026-05-19-items-202-901.md Exhibit 99.1: fiscal 2026 total sales growth 2.5% to 4.5%, midpoint'
+    as_of: 2026-05-19
+  stable_roic:
+    value: 0.15
+    source: 'Analyst choice: below the 20.4% base-year ROIC (model-output.md section 8) as the excess return fades, above the cost of capital for a scale leader'
+    as_of: 2026-06-30
+  stable_beta:
+    value: 1.0
+    source: 'Lesson 32: mature firms move toward a beta of one'
+    as_of: 2026-06-30
+  stable_debt_ratio:
+    value: 0.2
+    source: Retail (Building Supply) industry D/E 0.233 (sources/market-data/industry-betas-2026-01-05.json) is D/V 18.9%, rounded to the schedule's 20%
+    as_of: 2026-01-05
+  years:
+  - year: 2026
+    revenue: 170447
+    ebit_margin: 0.125
+    source: 'sources/filings/hd-8-k-2026-05-19-items-202-901.md guidance midpoints: sales +3.5%, operating margin 12.4-12.6%'
+    as_of: 2026-05-19
+  - year: 2027
+    revenue: 177265
+    ebit_margin: 0.127
+    source: 'Analyst: 4% growth (guidance top end, partial housing turn), margin recovering toward fiscal 2024''s 13.5%'
+    as_of: 2026-06-30
+  - year: 2028
+    revenue: 184355
+    ebit_margin: 0.128
+    source: 'Analyst: 4% growth'
+    as_of: 2026-06-30
+  - year: 2029
+    revenue: 191730
+    ebit_margin: 0.128
+    source: 'Analyst: 4% growth'
+    as_of: 2026-06-30
+  - year: 2030
+    revenue: 198440
+    ebit_margin: 0.128
+    source: 'Analyst: 3.5% growth, converging to terminal 3.5%'
+    as_of: 2026-06-30
+  stress_cases:
+  - name: Housing stays frozen
+    revenue_growth: 0.015
+    margin: 0.12
+    source: Fiscal 2022-2025 revenue CAGR 1.5% (company.history) with fiscal 2025's acquisitions included; margin at fiscal 2025 adjusted for the GMS mix
+    as_of: 2026-06-30
+  - name: Housing recovery
+    revenue_growth: 0.06
+    margin: plan
+    source: 'Analyst upside: turnover recovery plus SRS growth'
+    as_of: 2026-06-30
+  - name: Margin squeeze
+    revenue_growth: 0.035
+    margin: 0.115
+    source: Guidance growth, margin 100bp below plan (tariffs, distribution mix)
+    as_of: 2026-06-30
+peers:
+- name: Lowe's Companies
+  ticker: LOW
+  fiscal_period: FY ended 2026-01-30
+  enterprise_value: 166853.3
+  revenue: 86286.0
+  ebitda: 12347.0
+  net_income: 6654.0
+  equity_book: -9917.0
+  market_cap: 123630.3
+  growth: 0.031
+  ebit_margin: 0.1177
+  debt_ratio: 0.265
+  payout: 0.396
+  source: sources/peer-filings/peer-facts-2026-06-30.md
+  as_of: 2026-06-30
+- name: Floor & Decor
+  ticker: FND
+  fiscal_period: FY ended 2025-12-25
+  enterprise_value: 8407.9
+  revenue: 4684.1
+  ebitda: 511.2
+  net_income: 208.6
+  equity_book: 2408.8
+  market_cap: 6416.5
+  growth: 0.051
+  ebit_margin: 0.0577
+  debt_ratio: 0.237
+  payout: 0.0
+  source: sources/peer-filings/peer-facts-2026-06-30.md (cash not tagged)
+  as_of: 2026-06-30
+- name: Tractor Supply
+  ticker: TSCO
+  fiscal_period: FY ended 2025-12-27
+  enterprise_value: 20675.5
+  revenue: 15524.0
+  ebitda: 1961.4
+  net_income: 1096.1
+  equity_book: 2581.3
+  market_cap: 16577.9
+  growth: 0.043
+  ebit_margin: 0.0945
+  debt_ratio: 0.206
+  payout: 0.445
+  source: sources/peer-filings/peer-facts-2026-06-30.md
+  as_of: 2026-06-30
+- name: Builders FirstSource
+  ticker: BLDR
+  fiscal_period: FY ended 2025-12-31
+  enterprise_value: 14543.0
+  revenue: 15190.6
+  ebitda: 1377.7
+  net_income: 435.2
+  equity_book: 4352.3
+  market_cap: 9624.5
+  growth: -0.074
+  ebit_margin: 0.0518
+  debt_ratio: 0.346
+  payout: 0.0
+  source: sources/peer-filings/peer-facts-2026-06-30.md
+  as_of: 2026-06-30
+- name: Pool Corporation
+  ticker: POOL
+  fiscal_period: FY ended 2025-12-31
+  enterprise_value: 9353.6
+  revenue: 5289.4
+  ebitda: 630.9
+  net_income: 406.4
+  equity_book: 1185.2
+  market_cap: 7831.6
+  growth: -0.004
+  ebit_margin: 0.1097
+  debt_ratio: 0.163
+  payout: 0.455
+  source: sources/peer-filings/peer-facts-2026-06-30.md
+  as_of: 2026-06-30
+facts:
+- id: roic-company-fy2025
+  value: 0.257
+  source: 'sources/filings/hd-10-k-2026-03-18.md ROIC table (company definition: NOPAT ÷ average long-term debt + equity)'
+  as_of: 2026-02-01
+- id: roic-company-fy2024
+  value: 0.313
+  source: sources/filings/hd-10-k-2026-03-18.md ROIC table
+  as_of: 2025-02-02
+- id: roic-company-fy2023
+  value: 0.367
+  source: sources/filings/hd-10-k-2026-03-18.md ROIC table
+  as_of: 2024-01-28
+- id: roic-company-ttm-q1-2026
+  value: 0.254
+  source: sources/filings/hd-10-q-2026-05-27.md MD&A
+  as_of: 2026-05-03
+- id: buyback-authorization-remaining
+  value: 11700
+  source: 'sources/filings/hd-10-q-2026-05-27.md Note: share repurchases'
+  as_of: 2026-05-03
+- id: buyback-authorization-share-of-market-cap
+  value: 0.033
+  source: 11700 ÷ equity_value 351663 (ledger)
+  as_of: 2026-06-30
+- id: dividend-quarterly-2026
+  value: 2.33
+  source: sources/filings/hd-8-k-2026-02-24-items-202-901.md Exhibit 99.1 (+1.3%)
+  as_of: 2026-02-24
+- id: dividend-quarterly-2025
+  value: 2.3
+  source: sources/filings/hd-10-k-2026-03-18.md Item 1 (+2.2% from 2.25)
+  as_of: 2025-02-25
+- id: dividend-annual-cash-fy2025
+  value: 9152
+  source: sources/filings/hd-10-k-2026-03-18.md cash flow statement
+  as_of: 2026-02-01
+- id: gms-purchase-cash
+  value: 5500
+  source: 'sources/filings/hd-10-k-2026-03-18.md MD&A: about 5.5B incl. repayment of GMS debt, $110 per share tender'
+  as_of: 2025-09-04
+- id: srs-gms-net-sales-fy2025
+  value: 12717
+  source: sources/filings/hd-10-k-2026-03-18.md Note 2 Other net sales
+  as_of: 2026-02-01
+- id: srs-gms-operating-income-fy2025
+  value: 316
+  source: sources/filings/hd-10-k-2026-03-18.md Note 2 Other operating income
+  as_of: 2026-02-01
+- id: primary-operating-income-fy2025
+  value: 20574
+  source: sources/filings/hd-10-k-2026-03-18.md Note 2
+  as_of: 2026-02-01
+- id: comparable-sales-fy2025
+  value: 0.003
+  source: sources/filings/hd-8-k-2026-02-24-items-202-901.md Exhibit 99.1
+  as_of: 2026-02-01
+- id: comparable-sales-q1-fy2026
+  value: 0.006
+  source: sources/filings/hd-8-k-2026-05-19-items-202-901.md Exhibit 99.1
+  as_of: 2026-05-03
+- id: comparable-transactions-q1-fy2026
+  value: -0.013
+  source: sources/filings/hd-8-k-2026-05-19-items-202-901.md Exhibit 99.1
+  as_of: 2026-05-03
+- id: guidance-sales-growth-low-fy2026
+  value: 0.025
+  source: sources/filings/hd-8-k-2026-05-19-items-202-901.md Exhibit 99.1
+  as_of: 2026-05-19
+- id: guidance-sales-growth-high-fy2026
+  value: 0.045
+  source: sources/filings/hd-8-k-2026-05-19-items-202-901.md Exhibit 99.1
+  as_of: 2026-05-19
+- id: guidance-eps-growth-high-fy2026
+  value: 0.04
+  source: 'sources/filings/hd-8-k-2026-05-19-items-202-901.md Exhibit 99.1: flat to 4% from 14.23'
+  as_of: 2026-05-19
+- id: guidance-net-interest-fy2026
+  value: 2300
+  source: sources/filings/hd-8-k-2026-05-19-items-202-901.md Exhibit 99.1
+  as_of: 2026-05-19
+- id: commercial-paper-outstanding
+  value: 3503
+  source: sources/filings/hd-10-q-2026-05-27.md balance sheet
+  as_of: 2026-05-03
+- id: commercial-paper-program
+  value: 11000
+  source: sources/filings/hd-10-q-2026-05-27.md Note 5
+  as_of: 2026-05-03
+- id: notes-due-fy2026-remaining
+  value: 3250
+  source: 'sources/filings/hd-10-k-2026-03-18.md Note 5: 5.15% June 2026 1500, 2.125% Sept 2026 1000, 4.95% Sept 2026 750'
+  as_of: 2026-02-01
+- id: notes-due-fy2027
+  value: 3625
+  source: sources/filings/hd-10-k-2026-03-18.md Note 5 maturities
+  as_of: 2026-02-01
+- id: backup-facilities-expiring-july-2026
+  value: 4500
+  source: 'sources/filings/hd-10-q-2026-05-27.md Note 5: 364-day 3.5B and 1.0B facilities expire July 2026'
+  as_of: 2026-05-03
+- id: senior-notes-fair-value-discount
+  value: 3933
+  source: 'sources/filings/hd-10-q-2026-05-27.md fair value: carrying 46443 − fair 42510'
+  as_of: 2026-05-03
+- id: independent-chair-vote-for
+  value: 186.3
+  source: sources/filings/hd-8-k-2026-05-26-items-503-507-901.md Proposal 9 (millions of votes; 529.4 against)
+  as_of: 2026-05-21
+- id: decker-against-votes
+  value: 37.7
+  source: sources/filings/hd-8-k-2026-05-26-items-503-507-901.md Proposal 1 (millions of votes against Decker)
+  as_of: 2026-05-21
+- id: neo-departures-without-cause-2025
+  value: 2
+  source: 'sources/filings/hd-def14a-2026-04-07.md: Padilla and Siddiqui terminated without cause in fiscal 2025'
+  as_of: 2026-04-07
+- id: mip-sales-weight-fy2025
+  value: 0.5
+  source: sources/filings/hd-def14a-2026-04-07.md MIP measures (40% in fiscal 2024)
+  as_of: 2026-04-07
+- id: psu-roic-weight
+  value: 0.5
+  source: 'sources/filings/hd-def14a-2026-04-07.md performance shares: half ROIC, half operating profit'
+  as_of: 2026-04-07
+- id: stores-total-fy2025
+  value: 2359
+  source: sources/filings/hd-10-k-2026-03-18.md MD&A
+  as_of: 2026-02-01
+- id: stores-guided-new-fy2026
+  value: 15
+  source: sources/filings/hd-8-k-2026-05-19-items-202-901.md Exhibit 99.1
+  as_of: 2026-05-19
