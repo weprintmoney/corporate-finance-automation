@@ -1,0 +1,918 @@
+# Alternative to inputs.yaml: growth 12% a year through 2028 fading to 5% by 2035 (closer to order momentum). One choice changed; everything else identical.
+meta:
+  company: Eaton Corporation plc
+  slug: eaton
+  ticker: ETN
+  type: public
+  home_country: Ireland
+  currency: USD
+  reporting_currency: USD
+  fiscal_year_end: 12-31
+  base_year: 2025
+  analysis_date: '2026-06-30'
+  analyst: weprintmoney
+  mode: quick
+  blind: true
+  omitted:
+  - field: beta.regression_beta
+    reason: No price series is available to a blind run from the permitted tools; the bottom-up beta is the course default anyway
+  - field: company.rd_history
+    reason: R&D is 2.9% of revenue and expensed; not capitalized in quick mode (see ⚠️ block)
+  - field: debt.bankruptcy_cost
+    reason: APV section not turned on; an A-rated firm 12% levered is far from distress
+modeling_choices:
+  coverage_numerator: ebit
+  rd_amortizable_life: null
+  firm_size_table: large
+  sbc_treatment: expense
+  firm_value_basis: market
+  beta_source: bottom_up
+  kd_source: actual_rating
+  terminal_method: consistent_reinvestment
+market:
+  govt_bond_rate:
+    value: 0.0444
+    source: sources/market-data/market-rates-2026-06-01.json fred_latest.treasury_10y
+    as_of: '2026-06-30'
+  sovereign_default_spread:
+    value: 0.0026
+    source: sources/market-data/market-rates-2026-06-01.json damodaran_monthly.us_sovereign_default_spread (Aa1)
+    as_of: '2026-06-01'
+  risk_free_rate:
+    value: 0.0418
+    source: govt_bond_rate − sovereign_default_spread; see sources/market-data/rates-2026-06-30.md
+    as_of: '2026-06-30'
+  mature_erp:
+    value: 0.045705
+    source: sources/market-data/market-rates-2026-06-01.json damodaran_monthly.implied_erp_over_dollar_riskfree
+    as_of: '2026-06-01'
+  ratings_table:
+    value: ../sources/market-data/ratings-spreads-2026-01-01.json
+    source: Damodaran ratings table snapshot written by refresh-market-data.py --as-of 2026-06-30
+    as_of: '2026-01-01'
+  tax_rate_marginal:
+    value: 0.25
+    source: 'sources/filings/etn-10-k-2026-02-26.md income tax note: reconciliation from the Ireland national statutory rate of 25%'
+    as_of: '2025-12-31'
+    note: Also close to the US federal-plus-state rate where the debt is issued; see ⚠️ block
+  tax_rate_effective:
+    value: 0.171
+    source: 'sources/filings/etn-10-k-2026-02-26.md statement of income: tax 841 / pre-tax income 4932'
+    as_of: '2025-12-31'
+  terminal_growth:
+    value: 0.035
+    source: Analyst choice below the 4.18% risk-free rate (lesson 32); see ⚠️ block
+    as_of: '2026-06-30'
+country:
+  exposures:
+  - country: United States
+    weight: 0.6238
+    erp: 0.045705
+    measure: revenues
+    source: sources/filings/etn-10-k-2026-02-26.md geographic region information (2025 net sales by destination); CRP from sources/market-data/country-risk-2026-01-01.json
+    as_of: '2025-12-31'
+  - country: Canada
+    weight: 0.0395
+    erp: 0.045705
+    measure: revenues
+    source: sources/filings/etn-10-k-2026-02-26.md geographic region information (2025 net sales by destination); CRP from sources/market-data/country-risk-2026-01-01.json
+    as_of: '2025-12-31'
+  - country: Latin America
+    weight: 0.0532
+    erp: 0.074205
+    measure: revenues
+    source: sources/filings/etn-10-k-2026-02-26.md geographic region information (2025 net sales by destination); CRP from sources/market-data/country-risk-2026-01-01.json (simple average of the region's
+      largest markets; see note)
+    as_of: '2025-12-31'
+  - country: Europe
+    weight: 0.185
+    erp: 0.056805
+    measure: revenues
+    source: sources/filings/etn-10-k-2026-02-26.md geographic region information (2025 net sales by destination); CRP from sources/market-data/country-risk-2026-01-01.json (simple average of the region's
+      largest markets; see note)
+    as_of: '2025-12-31'
+  - country: Asia Pacific
+    weight: 0.0985
+    erp: 0.056305
+    measure: revenues
+    source: sources/filings/etn-10-k-2026-02-26.md geographic region information (2025 net sales by destination); CRP from sources/market-data/country-risk-2026-01-01.json (simple average of the region's
+      largest markets; see note)
+    as_of: '2025-12-31'
+  weighted_erp:
+    value: 0.050319
+    source: 'Sum of weight × erp over country.exposures (rule 15: mature ERP plus each region''s CRP)'
+    as_of: '2026-06-30'
+beta:
+  unlevered_bottom_up:
+    value: 1.1332
+    source: sources/market-data/industry-betas-2026-01-05.json unlevered_beta_cash_corrected, weighted by 2025 segment sales in sources/filings/etn-10-k-2026-02-26.md business segment information
+    as_of: '2026-01-05'
+  segments:
+  - name: Electrical (Americas + Global)
+    weight: 0.7319
+    industry: Electrical Equipment
+    unlevered_beta: 1.1898
+    source: sources/market-data/industry-betas-2026-01-05.json; weights from sources/filings/etn-10-k-2026-02-26.md segment sales
+    as_of: '2026-01-05'
+  - name: Aerospace
+    weight: 0.1548
+    industry: Aerospace/Defense
+    unlevered_beta: 0.8694
+    source: sources/market-data/industry-betas-2026-01-05.json; weights from sources/filings/etn-10-k-2026-02-26.md segment sales
+    as_of: '2026-01-05'
+  - name: Mobility (Vehicle + eMobility)
+    weight: 0.1133
+    industry: Auto Parts
+    unlevered_beta: 1.1283
+    source: sources/market-data/industry-betas-2026-01-05.json; weights from sources/filings/etn-10-k-2026-02-26.md segment sales
+    as_of: '2026-01-05'
+company:
+  shares_basic:
+    value: 388.3
+    source: 'sources/filings/etn-10-q-2026-05-05.md cover page: 388.3 million ordinary shares outstanding as of March 31, 2026'
+    as_of: '2026-03-31'
+  shares_diluted:
+    value: 389.2
+    source: 'sources/filings/etn-10-q-2026-05-05.md EPS note: weighted-average diluted shares, Q1 2026'
+    as_of: '2026-03-31'
+  share_price:
+    value: 426.12
+    source: 'sources/peer-filings/peer-facts-2026-06-30.md row ETN: close on 2026-06-30'
+    as_of: '2026-06-30'
+  equity_value:
+    value: 165462.4
+    source: shares_basic × share_price
+    as_of: '2026-06-30'
+  equity_book:
+    value: 19721
+    source: 'sources/filings/etn-10-q-2026-05-05.md balance sheet: total Eaton shareholders'' equity'
+    as_of: '2026-03-31'
+  debt_book:
+    value: 21129
+    source: 'sources/filings/etn-10-q-2026-05-05.md balance sheet: short-term debt 2510 + current portion 84 + long-term debt 18535'
+    as_of: '2026-03-31'
+    note: Includes $2,497M commercial paper and the $9.9B of notes issued in March 2026 for Boyd Thermal
+  debt_face:
+    value: 21240
+    source: 'Carrying value 21129 (sources/filings/etn-10-q-2026-05-05.md balance sheet) plus unamortized issuance costs and discount: 60 at 2025-12-31 (sources/filings/etn-10-k-2026-02-26.md debt note)
+      plus 63 paid on the March 2026 notes (sources/filings/etn-10-q-2026-05-05.md cash flow statement), less the 31 fair-value hedge adjustment'
+    as_of: '2026-03-31'
+    estimate: true
+    range:
+    - 21150
+    - 21350
+  debt_market:
+    value: 20575
+    source: 'sources/filings/etn-10-q-2026-05-05.md fair value note: long-term debt fair value 18065; short-term debt at face 2510'
+    as_of: '2026-03-31'
+  lease_debt:
+    value: 789
+    source: 'sources/filings/etn-10-k-2026-02-26.md lease note: total operating lease liabilities'
+    as_of: '2025-12-31'
+    note: Latest full lease note; Q1 10-Q shows only the noncurrent 704. Finance leases (25) are already inside debt_book
+  off_balance_sheet_debt:
+    value: 0
+    source: 'sources/filings/etn-10-k-2026-02-26.md liquidity section: letters of credit 350 are guarantees of performance, not borrowings; no JV debt guarantees disclosed'
+    as_of: '2025-12-31'
+  debt_total:
+    value: 21918
+    source: debt_book + lease_debt + off_balance_sheet_debt
+    as_of: '2026-03-31'
+  deferred_revenue:
+    value: 1088
+    source: 'sources/filings/etn-10-q-2026-05-05.md revenue note: deferred revenue in other current liabilities'
+    as_of: '2026-03-31'
+    note: Not debt
+  cash:
+    value: 751
+    source: 'sources/filings/etn-10-q-2026-05-05.md balance sheet: cash 565 + short-term investments 186'
+    as_of: '2026-03-31'
+  minority_interests:
+    value: 44
+    source: 'sources/filings/etn-10-q-2026-05-05.md balance sheet: noncontrolling interests'
+    as_of: '2026-03-31'
+  options_value:
+    value: 654
+    source: 'sources/filings/etn-10-k-2026-02-26.md equity note: 1.3M options at $152.22 valued at intrinsic value at $426.12 (356) plus 0.7M RSUs and PSUs at $426.12 (298)'
+    as_of: '2026-06-30'
+    note: Intrinsic value understates option value slightly; options are 0.4% of market cap
+  revenue:
+    value: 27448
+    source: sources/filings/etn-10-k-2026-02-26.md statement of income
+    as_of: '2025-12-31'
+  ebit:
+    value: 5173
+    source: 'sources/filings/etn-10-k-2026-02-26.md statement of income: income before taxes 4932 + interest expense-net 241'
+    as_of: '2025-12-31'
+    note: Base year; excludes Boyd Thermal and Ultra PCS, closed in Q1 2026 (see ⚠️ block on base-year mismatch)
+  ebitda_standardized:
+    value: 6179
+    source: ebit + D&A 1006 from the cash flow statement
+    as_of: '2025-12-31'
+  acquisition_amortization:
+    value: 486
+    source: 'sources/filings/etn-10-k-2026-02-26.md business segment information: intangible asset amortization expense'
+    as_of: '2025-12-31'
+  interest_expense:
+    value: 873
+    source: 'Run-rate gross interest after the March 2026 financing: 2025 interest paid 351 (sources/filings/etn-10-k-2026-02-26.md debt note) + coupons on the $8.5B U.S. notes 376 and €1.2B euro notes
+      52 (sources/filings/etn-8-k-2026-03-10-items-102-203-901.md) + commercial paper 2497 at SOFR 3.68% plus 0.15% = 96 (sources/filings/etn-10-q-2026-05-05.md note 8; sources/market-data/market-rates-2026-06-01.json)'
+    as_of: '2026-03-31'
+    estimate: true
+    range:
+    - 800
+    - 950
+  net_income:
+    value: 4087
+    source: 'sources/filings/etn-10-k-2026-02-26.md statement of income: attributable to Eaton ordinary shareholders'
+    as_of: '2025-12-31'
+  da:
+    value: 1006
+    source: sources/filings/etn-10-k-2026-02-26.md cash flow statement
+    as_of: '2025-12-31'
+  capex:
+    value: 919
+    source: sources/filings/etn-10-k-2026-02-26.md cash flow statement
+    as_of: '2025-12-31'
+  change_wc:
+    value: 718
+    source: 'sources/filings/etn-10-k-2026-02-26.md cash flow statement: sum of changes in working capital lines (−718), sign flipped'
+    as_of: '2025-12-31'
+  rd_expense:
+    value: 797
+    source: sources/filings/etn-10-k-2026-02-26.md statement of income
+    as_of: '2025-12-31'
+  sbc:
+    value: 126
+    source: 'sources/filings/etn-10-k-2026-02-26.md equity note: pre-tax expense RSUs 84 + PSUs 22 + options 20'
+    as_of: '2025-12-31'
+  invested_capital:
+    value: 29306
+    source: 'sources/filings/etn-10-k-2026-02-26.md balance sheet: equity 19425 + debt 9895 + operating leases 789 − cash and short-term investments 803 (book basis, year-end 2025)'
+    as_of: '2025-12-31'
+    note: Before the $11.1B of Q1 2026 acquisitions; pro forma about 40,400
+  goodwill:
+    value: 15769
+    source: sources/filings/etn-10-k-2026-02-26.md balance sheet
+    as_of: '2025-12-31'
+  history:
+  - year: 2022
+    revenue: 20752
+    ebit: 3055
+    net_income: 2462
+    da: 954
+    capex: 598
+    change_wc: 688
+    dividends: 1299
+    buybacks: 286
+    debt_issued: 2312
+    debt_repaid: 2012
+    cash: 554
+    debt_total: 9449
+    invested_capital: 25933
+    source: 'sources/filings/etn-10-k-2025-02-27.md consolidated statements of income and cash flows (2022 column); estimates: cash = 294 cash + 260 short-term investments (2023''s 2121 less 2023 net purchases
+      of 1861); debt = 2023 borrowings 9269 less 2023 net new debt 488, plus 2023 leases 668 held flat; equity 17038 from sources/filings/etn-10-k-2026-02-26.md statement of shareholders'' equity (balance
+      at January 1 2023); range applies to cash, debt and invested capital move by up to ±300'
+    as_of: '2022-12-31'
+    estimate: true
+    range:
+    - 494
+    - 614
+  - year: 2023
+    revenue: 23196
+    ebit: 3978
+    net_income: 3218
+    da: 926
+    capex: 757
+    change_wc: 149
+    dividends: 1379
+    buybacks: 0
+    debt_issued: 818
+    debt_repaid: 330
+    cash: 2609
+    debt_total: 9937
+    invested_capital: 26364
+    source: sources/filings/etn-10-k-2026-02-26.md statements of income and cash flows (2023 column); sources/filings/etn-10-k-2025-02-27.md balance sheet and lease note (2023)
+    as_of: '2023-12-31'
+  - year: 2024
+    revenue: 24878
+    ebit: 4696
+    net_income: 3794
+    da: 921
+    capex: 808
+    change_wc: 219
+    dividends: 1500
+    buybacks: 2492
+    debt_issued: 1084
+    debt_repaid: 1023
+    cash: 2080
+    debt_total: 9984
+    invested_capital: 26392
+    source: sources/filings/etn-10-k-2026-02-26.md statements of income, cash flows and balance sheet (2024 column); lease note
+    as_of: '2024-12-31'
+  - year: 2025
+    revenue: 27448
+    ebit: 5173
+    net_income: 4087
+    da: 1006
+    capex: 919
+    change_wc: 718
+    dividends: 1626
+    buybacks: 1862
+    debt_issued: 1059
+    debt_repaid: 717
+    cash: 803
+    debt_total: 10684
+    invested_capital: 29306
+    share_price_year_end: 318.51
+    source: sources/filings/etn-10-k-2026-02-26.md statements of income, cash flows and balance sheet (2025 column); lease note; year-end price from the stock option note
+    as_of: '2025-12-31'
+debt:
+  rating_actual:
+    value: A3/A-
+    source: 'sources/filings/etn-10-k-2026-02-26.md liquidity section: S&P A-/A-2 stable; Moody''s A3/P-2 stable'
+    as_of: '2026-02-26'
+    note: No rating action appears in filings through 2026-06-30
+  kd_pretax_observed:
+    value: 0.0413
+    source: interest_expense 873 / debt_book 21129
+    as_of: '2026-03-31'
+    note: Blends 0.1%-0.6% euro coupons with 3.85%-5.45% 2026 notes; new 10-year money cost 4.80% (2036 notes)
+  rate_type:
+    value: mixed
+    source: 'sources/filings/etn-10-q-2026-05-05.md note 8: fixed-rate notes plus $2,497M floating commercial paper (12% of borrowings)'
+    as_of: '2026-03-31'
+  currency:
+    value: USD and EUR
+    source: 'sources/filings/etn-10-k-2026-02-26.md debt note and sources/filings/etn-8-k-2026-03-10-items-102-203-901.md: about 22% of notes are euro-denominated, partly designated as net-investment hedges'
+    as_of: '2026-03-31'
+  maturity_years:
+    value: 7.5
+    source: 'Face-weighted remaining maturity of the notes in sources/filings/etn-10-k-2026-02-26.md debt note and sources/filings/etn-8-k-2026-03-10-items-102-203-901.md; cross-check: $617M value change
+      per 100bp on $9.6B fair value in sources/filings/etn-10-k-2026-02-26.md Item 7A is a duration of about 6.4 years'
+    as_of: '2026-03-31'
+    estimate: true
+    range:
+    - 6.5
+    - 8.5
+  revolver_undrawn:
+    value: 4000
+    source: 'sources/filings/etn-10-q-2026-05-05.md note 8: $4,000M revolver, undrawn, matures 2030-09-27'
+    as_of: '2026-03-31'
+  covenants:
+    value: 'Most restrictive: secured debt no more than 10% of adjusted consolidated net worth; no maintenance leverage test on the notes; change-of-control put on the 2026 notes only if a rating event
+      follows'
+    source: sources/filings/etn-10-k-2026-02-26.md liquidity section; sources/filings/etn-8-k-2026-03-10-items-102-203-901.md indenture definitions
+    as_of: '2026-03-31'
+governance:
+  board:
+  - name: Gregory R. Page
+    role: Non-executive Chairman (retired CEO, Cargill)
+    independent: true
+    affiliated_with: none
+  - name: Paulo Ruiz
+    role: CEO
+    independent: false
+    affiliated_with: management
+  - name: Gerald Johnson
+    role: Director (retired GM EVP)
+    independent: true
+    affiliated_with: none
+  - name: Silvio Napoli
+    role: Director (retired CEO, Schindler)
+    independent: true
+    affiliated_with: none
+  - name: Sandra Pianalto
+    role: Director
+    independent: true
+    affiliated_with: none
+  - name: Robert V. Pragada
+    role: Director (CEO, Jacobs)
+    independent: true
+    affiliated_with: none
+  - name: Lori J. Ryerkerk
+    role: Director
+    independent: true
+    affiliated_with: none
+  - name: Andre Schulten
+    role: Director (CFO, Procter & Gamble)
+    independent: true
+    affiliated_with: none
+  - name: Karenann Terrell
+    role: Director
+    independent: true
+    affiliated_with: none
+  - name: Dorothy C. Thompson
+    role: Director
+    independent: true
+    affiliated_with: none
+  - name: Darryl L. Wilson
+    role: Director
+    independent: true
+    affiliated_with: none
+  controlling_holders:
+  - name: The Vanguard Group
+    pct: 0.0943
+    source: sources/filings/etn-def14a-2026-03-13.md security ownership table (13G/A as of 2023-12-29)
+    as_of: '2026-02-23'
+  - name: BlackRock Inc.
+    pct: 0.0704
+    source: sources/filings/etn-def14a-2026-03-13.md security ownership table (13G/A as of 2023-12-31)
+    as_of: '2026-02-23'
+  - name: All directors and executive officers as a group
+    pct: 0.001
+    source: sources/filings/etn-def14a-2026-03-13.md director and officer ownership table
+    as_of: '2026-02-01'
+  share_classes:
+    value: One class of ordinary shares, one vote each; Irish plc
+    source: sources/filings/etn-def14a-2026-03-13.md and sources/filings/etn-10-k-2026-02-26.md cover page
+    as_of: '2026-03-13'
+  marginal_investor:
+    value: Diversified institutions (index funds and active managers); no holder above 10% and insiders hold 0.10%
+    source: sources/filings/etn-def14a-2026-03-13.md ownership tables
+    as_of: '2026-03-13'
+  objectives:
+    value: 'Stated: capitalize on electrification, digitalization and data-center megatrends; deploy capital to businesses with above-market growth and strong returns; Lead, Invest and Execute for Growth
+      toward 2030 targets. Pay rewards Adjusted EPS/EBITA, Adjusted OCF, organic growth and relative TSR; no return-on-capital metric'
+    source: sources/statements/etn-stated-positions.md sections S1, S2, S4
+    as_of: '2026-06-11'
+  change_of_control_payouts:
+    value: 'Standard executive change-of-control agreement: 3x base salary plus target bonus on a qualifying termination (double trigger)'
+    source: sources/filings/etn-8-k-2026-03-02-items-502-901.md Item 5.02
+    as_of: '2026-03-02'
+forecast:
+  years:
+  - year: 2026
+    revenue: 32114.2
+    ebit_margin: 0.187
+    reinvestment: 1317.5
+    fcff: 3606.9
+    source: 2026 from sources/filings/etn-8-k-2026-05-05-items-202-901.md guidance (organic 9-11%, acquisitions and FX per Q1 mix; GAAP EPS $10.88-$11.33); 2027-2035 analyst fade, see read.md forecast block;
+      effective tax 0.180; reinvestment = organic revenue growth / sales-to-capital 2.5
+    as_of: '2026-06-30'
+  - year: 2027
+    revenue: 35967.9
+    ebit_margin: 0.192
+    reinvestment: 1541.5
+    fcff: 4086.8
+    source: analyst fade from 2026 guidance toward stable growth; effective tax 0.185 rising to the 25% marginal rate; reinvestment = organic revenue growth / sales-to-capital 2.5
+    as_of: '2026-06-30'
+  - year: 2028
+    revenue: 40284.0
+    ebit_margin: 0.197
+    reinvestment: 1726.5
+    fcff: 4662.0
+    source: analyst fade from 2026 guidance toward stable growth; effective tax 0.195 rising to the 25% marginal rate; reinvestment = organic revenue growth / sales-to-capital 2.5
+    as_of: '2026-06-30'
+  - year: 2029
+    revenue: 44715.2
+    ebit_margin: 0.202
+    reinvestment: 1772.5
+    fcff: 5408.3
+    source: analyst fade from 2026 guidance toward stable growth; effective tax 0.205 rising to the 25% marginal rate; reinvestment = organic revenue growth / sales-to-capital 2.5
+    as_of: '2026-06-30'
+  - year: 2030
+    revenue: 49186.8
+    ebit_margin: 0.205
+    reinvestment: 1788.6
+    fcff: 6126.8
+    source: analyst fade from 2026 guidance toward stable growth; effective tax 0.215 rising to the 25% marginal rate; reinvestment = organic revenue growth / sales-to-capital 2.5
+    as_of: '2026-06-30'
+  - year: 2031
+    revenue: 53613.6
+    ebit_margin: 0.205
+    reinvestment: 1770.7
+    fcff: 6747.1
+    source: analyst fade from 2026 guidance toward stable growth; effective tax 0.225 rising to the 25% marginal rate; reinvestment = organic revenue growth / sales-to-capital 2.5
+    as_of: '2026-06-30'
+  - year: 2032
+    revenue: 57902.7
+    ebit_margin: 0.205
+    reinvestment: 1715.6
+    fcff: 7365.0
+    source: analyst fade from 2026 guidance toward stable growth; effective tax 0.235 rising to the 25% marginal rate; reinvestment = organic revenue growth / sales-to-capital 2.5
+    as_of: '2026-06-30'
+  - year: 2033
+    revenue: 61955.8
+    ebit_margin: 0.205
+    reinvestment: 1621.3
+    fcff: 8031.4
+    source: analyst fade from 2026 guidance toward stable growth; effective tax 0.240 rising to the 25% marginal rate; reinvestment = organic revenue growth / sales-to-capital 2.5
+    as_of: '2026-06-30'
+  - year: 2034
+    revenue: 65673.2
+    ebit_margin: 0.205
+    reinvestment: 1486.9
+    fcff: 8677.6
+    source: analyst fade from 2026 guidance toward stable growth; effective tax 0.245 rising to the 25% marginal rate; reinvestment = organic revenue growth / sales-to-capital 2.5
+    as_of: '2026-06-30'
+  - year: 2035
+    revenue: 68956.9
+    ebit_margin: 0.205
+    reinvestment: 1313.5
+    fcff: 9288.7
+    source: analyst fade from 2026 guidance toward stable growth; effective tax 0.250 rising to the 25% marginal rate; reinvestment = organic revenue growth / sales-to-capital 2.5
+    as_of: '2026-06-30'
+  growth_period_years:
+    value: 10
+    source: 'Analyst choice: ten years for growth to fade from the 2026 guidance to stable'
+    as_of: '2026-06-30'
+  stable_roic:
+    value: 0.11
+    source: 'Analyst choice: above the stable cost of capital, below the 13.2% base-year ROIC that excludes the Q1 2026 acquisitions; see ⚠️ block'
+    as_of: '2026-06-30'
+  sales_to_capital:
+    value: 2.5
+    source: 'Analyst choice informed by 2023-2025 history in sources/filings/etn-10-k-2026-02-26.md: revenue up 6696 on about 2257 of reinvestment including 1540 of acquisitions (about 3.0); set lower for
+      capacity build-out'
+    as_of: '2026-06-30'
+  management_growth:
+    value: 0.1
+    source: 'sources/filings/etn-8-k-2026-05-05-items-202-901.md guidance: 2026 organic growth 9-11%'
+    as_of: '2026-05-05'
+  stable_beta:
+    value: 1.0
+    source: 'Lesson 32: stable betas move toward one'
+    as_of: '2026-06-30'
+  stable_debt_ratio:
+    value: 0.11
+    source: sources/market-data/industry-betas-2026-01-05.json Electrical Equipment D/E 0.12 → D/V about 11%
+    as_of: '2026-01-05'
+  stress_cases:
+  - name: Data-center capex pause
+    revenue_growth: 0.04
+    margin: 0.17
+    source: 'Analyst stress case: growth at nominal GDP and margins back near the 2023 level (3978/23196 = 17.1%)'
+    as_of: '2026-06-30'
+  - name: Plan margins with slower growth
+    revenue_growth: 0.06
+    margin: plan
+    source: 'Analyst stress case: half the plan''s early growth'
+    as_of: '2026-06-30'
+  - name: AI build-out lasts
+    revenue_growth: 0.11
+    margin: plan
+    source: 'Analyst stress case: 2026 organic guidance midpoint plus FX held for ten years'
+    as_of: '2026-06-30'
+peers:
+- name: Hubbell
+  ticker: HUBB
+  fiscal_period: FY2025
+  revenue: 5844.6
+  market_cap: 27646.8
+  growth: 0.038
+  source: sources/peer-filings/peer-facts-2026-06-30.md row HUBB; dividends not tagged so payout omitted; borrowings are noncurrent only
+  as_of: '2026-06-30'
+  enterprise_value: 29347.1
+  ebitda: 1414.9
+  net_income: 887.1
+  equity_book: 3847.9
+  ebit_margin: 0.207
+  debt_ratio: 0.074
+- name: Vertiv
+  ticker: VRT
+  fiscal_period: FY2025
+  revenue: 10229.9
+  market_cap: 128607.3
+  growth: 0.277
+  source: sources/peer-filings/peer-facts-2026-06-30.md row VRT
+  as_of: '2026-06-30'
+  enterprise_value: 130106.4
+  ebitda: 2138.3
+  net_income: 1332.8
+  payout: 0.05
+  equity_book: 3941.3
+  ebit_margin: 0.179
+  debt_ratio: 0.024
+- name: Emerson
+  ticker: EMR
+  fiscal_period: FY2025 (Sep)
+  revenue: 18016.0
+  market_cap: 80178.3
+  growth: 0.03
+  source: sources/peer-filings/peer-facts-2026-06-30.md row EMR; cash untagged (tool printed 0) so EV omitted
+  as_of: '2026-06-30'
+  net_income: 2293.0
+  payout: 0.52
+  equity_book: 20282.0
+  debt_ratio: 0.107
+- name: Rockwell Automation
+  ticker: ROK
+  fiscal_period: FY2025 (Sep)
+  revenue: 8342.0
+  market_cap: 55089.5
+  growth: 0.009
+  source: sources/peer-filings/peer-facts-2026-06-30.md row ROK
+  as_of: '2026-06-30'
+  enterprise_value: 57660.5
+  ebitda: 2028.0
+  net_income: 869.0
+  payout: 0.68
+  equity_book: 3654.0
+  ebit_margin: 0.204
+  debt_ratio: 0.052
+- name: Parker-Hannifin
+  ticker: PH
+  fiscal_period: FY2025 (Jun)
+  revenue: 19850.0
+  market_cap: 123327.6
+  growth: -0.004
+  source: sources/peer-filings/peer-facts-2026-06-30.md row PH; net income untagged
+  as_of: '2026-06-30'
+  enterprise_value: 130562.6
+  ebitda: 5254.0
+  equity_book: 13682.0
+  ebit_margin: 0.219
+  debt_ratio: 0.059
+- name: AMETEK
+  ticker: AME
+  fiscal_period: FY2025
+  revenue: 7401.1
+  market_cap: 55453.4
+  growth: 0.066
+  source: sources/peer-filings/peer-facts-2026-06-30.md row AME
+  as_of: '2026-06-30'
+  enterprise_value: 57566.9
+  ebitda: 2333.1
+  net_income: 1480.1
+  payout: 0.193
+  equity_book: 10628.8
+  ebit_margin: 0.258
+  debt_ratio: 0.044
+- name: nVent Electric
+  ticker: NVT
+  fiscal_period: FY2025
+  revenue: 3893.1
+  market_cap: 27429.4
+  growth: 0.295
+  source: sources/peer-filings/peer-facts-2026-06-30.md row NVT; cash untagged (tool printed 0) so EV omitted
+  as_of: '2026-06-30'
+  ebitda: 824.6
+  net_income: 710.2
+  payout: 0.184
+  ebit_margin: 0.158
+  debt_ratio: 0.058
+- name: GE Vernova
+  ticker: GEV
+  fiscal_period: FY2025
+  revenue: 38068.0
+  market_cap: 315708.4
+  growth: 0.09
+  source: sources/peer-filings/peer-facts-2026-06-30.md row GEV; borrowings and cash untagged so EV and debt ratio omitted
+  as_of: '2026-06-30'
+  ebitda: 2241.0
+  net_income: 4884.0
+  payout: 0.056
+  equity_book: 11178.0
+  ebit_margin: 0.036
+facts:
+- id: boyd-thermal-price
+  value: 9550
+  source: sources/filings/etn-10-q-2026-05-05.md note 2
+  as_of: '2026-03-12'
+  note: Paid net of cash acquired; closed 2026-03-12
+- id: boyd-stub-segment-profit
+  value: 24
+  source: sources/filings/etn-10-q-2026-05-05.md note 2
+  as_of: '2026-03-31'
+  note: Segment operating profit on sales of 92, 2026-03-12 to 2026-03-31
+- id: boyd-intangibles
+  value: 5587
+  source: sources/filings/etn-10-q-2026-05-05.md note 2
+  as_of: '2026-03-31'
+  note: Other intangible assets recognized
+- id: ultra-pcs-price
+  value: 1530
+  source: sources/filings/etn-10-q-2026-05-05.md note 2
+  as_of: '2026-01-23'
+- id: ultra-pcs-stub-segment-profit
+  value: 13
+  source: sources/filings/etn-10-q-2026-05-05.md note 2
+  as_of: '2026-03-31'
+  note: On sales of 48, 2026-01-23 to 2026-03-31
+- id: fibrebond-price
+  value: 1430
+  source: sources/filings/etn-10-k-2026-02-26.md liquidity section
+  as_of: '2025-04-01'
+- id: q1-2026-acquisition-cash
+  value: 11079
+  source: sources/filings/etn-10-q-2026-05-05.md cash flow statement
+  as_of: '2026-03-31'
+- id: notes-issued-2026-03
+  value: 9890
+  source: 'sources/filings/etn-10-q-2026-05-05.md note 8: $8,500M U.S. notes plus €1,200M ($1,390M) euro notes'
+  as_of: '2026-03-10'
+- id: commercial-paper-2026-03-31
+  value: 2497
+  source: sources/filings/etn-10-q-2026-05-05.md note 8
+  as_of: '2026-03-31'
+- id: buyback-authorization-remaining
+  value: 7597
+  source: sources/filings/etn-10-k-2026-02-26.md equity note
+  as_of: '2025-12-31'
+  note: 2025 Program, $9.0B over three years from 2025-02-27; no repurchases in Q1 2026
+- id: quarterly-dividend-2026
+  value: 1.1
+  source: sources/filings/etn-10-k-2026-02-26.md equity note
+  as_of: '2026-02-26'
+  note: Up 6% from Q4 2025
+- id: dividends-per-share-2025
+  value: 4.16
+  source: sources/filings/etn-10-k-2026-02-26.md statement of income
+  as_of: '2025-12-31'
+- id: mobility-valuation
+  value: 5100
+  source: sources/filings/etn-8-k-2026-06-11-items-701-801-901.md Exhibit 99.1
+  as_of: '2026-06-11'
+  note: 8.3x 2026E pro forma adjusted EBITDA; Eaton gets about $1.1B cash and its holders own at least 50.1% of the combined Dana
+- id: mobility-cash-distribution
+  value: 1100
+  source: sources/filings/etn-8-k-2026-06-11-items-701-801-901.md Exhibit 99.1
+  as_of: '2026-06-11'
+- id: mobility-sales-2025
+  value: 3109
+  source: 'sources/filings/etn-10-k-2026-02-26.md business segment information: Vehicle 2505 + eMobility 604'
+  as_of: '2025-12-31'
+- id: mobility-segment-profit-2025
+  value: 405
+  source: 'sources/filings/etn-10-k-2026-02-26.md business segment information: Vehicle 419 + eMobility (14)'
+  as_of: '2025-12-31'
+- id: electrical-americas-segment-profit-2025
+  value: 3972
+  source: sources/filings/etn-10-k-2026-02-26.md business segment information
+  as_of: '2025-12-31'
+- id: electrical-americas-orders-growth-q1-2026
+  value: 0.42
+  source: 'sources/filings/etn-8-k-2026-05-05-items-202-901.md Exhibit 99: twelve-month rolling average orders'
+  as_of: '2026-03-31'
+- id: electrical-backlog-growth-q1-2026
+  value: 0.48
+  source: sources/filings/etn-8-k-2026-05-05-items-202-901.md Exhibit 99
+  as_of: '2026-03-31'
+- id: gaap-eps-guidance-2026-feb-mid
+  value: 11.82
+  source: 'sources/filings/etn-8-k-2026-02-03-items-202-901.md Exhibit 99: $11.57-$12.07'
+  as_of: '2026-02-03'
+- id: gaap-eps-guidance-2026-may-mid
+  value: 11.105
+  source: 'sources/filings/etn-8-k-2026-05-05-items-202-901.md Exhibit 99: $10.88-$11.33'
+  as_of: '2026-05-05'
+- id: adjusted-eps-guidance-2026-may-mid
+  value: 13.275
+  source: 'sources/filings/etn-8-k-2026-05-05-items-202-901.md Exhibit 99: $13.05-$13.50'
+  as_of: '2026-05-05'
+- id: segment-margin-guidance-2026-may-mid
+  value: 0.243
+  source: 'sources/filings/etn-8-k-2026-05-05-items-202-901.md Exhibit 99: 24.1-24.5%'
+  as_of: '2026-05-05'
+- id: segment-margin-2025
+  value: 0.245
+  source: sources/filings/etn-8-k-2026-02-03-items-202-901.md Exhibit 99
+  as_of: '2025-12-31'
+- id: ceo-start
+  value: '2025-06-01'
+  source: sources/filings/etn-def14a-2026-03-13.md leadership structure
+  as_of: '2026-03-13'
+  note: Paulo Ruiz succeeded Craig Arnold
+- id: cfo-start
+  value: '2026-03-02'
+  source: sources/filings/etn-8-k-2026-03-02-items-502-901.md
+  as_of: '2026-03-02'
+  note: David B. Foster succeeded Olivier Leonetti
+- id: debt-maturity-2026
+  value: 1136
+  source: sources/filings/etn-10-k-2026-02-26.md debt note maturities
+  as_of: '2025-12-31'
+  note: Mostly the 0.128% euro notes; repaid in Q1 2026 (payments on borrowings 1069)
+- id: debt-maturity-2027
+  value: 706
+  source: sources/filings/etn-10-k-2026-02-26.md debt note maturities
+  as_of: '2025-12-31'
+  note: 3.10% senior notes due 2027 (700)
+- id: boyd-annualized-segment-profit-yield
+  value: 0.048
+  source: sources/filings/etn-10-q-2026-05-05.md note 2
+  as_of: '2026-03-31'
+  note: 24 × 365/19 days = 461 pre-tax segment profit (before acquired-intangible amortization) ÷ 9550 price; a 19-day stub, so weak evidence
+- id: ultra-annualized-segment-profit-yield
+  value: 0.046
+  source: sources/filings/etn-10-q-2026-05-05.md note 2
+  as_of: '2026-03-31'
+  note: 13 × 365/67 days = 71 ÷ 1530 price; a 67-day stub
+- id: pro-forma-invested-capital
+  value: 40385
+  source: company.invested_capital 29306 + Q1 2026 acquisition cash 11079 (sources/filings/etn-10-q-2026-05-05.md cash flow statement)
+  as_of: '2026-03-31'
+  note: Base-year after-tax EBIT 3880 on this capital is 9.6%, below the 9.69% cost of capital, before any Boyd or Ultra profit
+- id: acquisitions-2025-2026-total
+  value: 12671
+  source: Fibrebond 1430 + Resilient 86 + Ultra PCS 1530 + Boyd Thermal 9550 + SPAN stake 75 (sources/filings/etn-10-k-2026-02-26.md liquidity; sources/filings/etn-10-q-2026-05-05.md liquidity)
+  as_of: '2026-03-31'
+  note: Twelve months of deals (2025-04 to 2026-03) equal to 7.7% of market cap at the 2026-06-30 price and 3.6 times the 3488 returned to holders in 2025
+- id: revenue-cagr-2022-2025
+  value: 0.098
+  source: 'company.history: (27448 / 20752)^(1/3) − 1'
+  as_of: '2025-12-31'
+- id: ebit-cagr-2022-2025
+  value: 0.192
+  source: 'company.history: (5173 / 3055)^(1/3) − 1'
+  as_of: '2025-12-31'
+- id: net-income-cagr-2022-2025
+  value: 0.184
+  source: 'company.history: (4087 / 2462)^(1/3) − 1'
+  as_of: '2025-12-31'
+- id: fundamental-growth-organic-2025
+  value: 0.0215
+  source: 'model-output.md section 8: 2025 reinvestment rate 16.26% × ROIC 13.24%'
+  as_of: '2025-12-31'
+- id: fundamental-growth-with-acquisitions-2025
+  value: 0.072
+  source: (reinvestment 631 + acquisitions 1490 from sources/filings/etn-10-k-2026-02-26.md cash flow statement) ÷ after-tax EBIT 3880 = 54.7% × ROIC 13.24%
+  as_of: '2025-12-31'
+- id: dividend-payout-ratio-2025
+  value: 0.398
+  source: 'sources/filings/etn-10-k-2026-02-26.md: dividends paid 1626 ÷ net income 4087'
+  as_of: '2025-12-31'
+- id: dividend-run-rate-2026
+  value: 1709
+  source: quarterly dividend 1.10 × 4 × 388.3M shares (sources/filings/etn-10-k-2026-02-26.md equity note; sources/filings/etn-10-q-2026-05-05.md cover)
+  as_of: '2026-03-31'
+- id: debt-to-ebitda-2026-03-31
+  value: 3.55
+  source: company.debt_total 21918 ÷ company.ebitda_standardized 6179 (2025 EBITDA, before acquired businesses)
+  as_of: '2026-03-31'
+- id: debt-to-ebitda-2025-12-31
+  value: 1.73
+  source: 2025 year-end debt 10684 (company.history) ÷ 2025 EBITDA 6179
+  as_of: '2025-12-31'
+- id: peer-median-debt-ratio
+  value: 0.058
+  source: median of peers[].debt_ratio (7 peers)
+  as_of: '2026-06-30'
+- id: peer-median-payout
+  value: 0.189
+  source: median of peers[].payout (6 peers; dividends only)
+  as_of: '2026-06-30'
+- id: peer-median-ebit-margin
+  value: 0.204
+  source: median of peers[].ebit_margin (7 peers)
+  as_of: '2026-06-30'
+- id: peer-median-revenue-growth
+  value: 0.052
+  source: median of peers[].growth (8 peers)
+  as_of: '2026-06-30'
+- id: mobility-value-per-eaton-share
+  value: 13.13
+  source: mobility-valuation 5100 ÷ company.shares_basic 388.3
+  as_of: '2026-06-11'
+- id: dividends-per-share-2022-2024
+  value: 3.24, 3.44, 3.76
+  source: 'sources/filings/etn-10-k-2025-02-27.md and sources/filings/etn-10-k-2026-02-26.md statements of income: cash dividends declared per share'
+  as_of: '2024-12-31'
+  note: '2025 4.16; Q1 2026 rate 1.10 a quarter: raised every February'
+- id: pro-forma-roic-with-stub-profits
+  value: 0.106
+  source: (after-tax EBIT 3880 + (Boyd 461 + Ultra 71 annualized stub segment profit) × 0.75) ÷ pro-forma invested capital 40385
+  as_of: '2026-03-31'
+  note: Stub profits are before acquired-intangible amortization; 19- and 67-day stubs
+- id: boyd-price-to-annualized-profit
+  value: 20.7
+  source: boyd-thermal-price 9550 ÷ annualized stub segment profit 461
+  as_of: '2026-03-31'
+- id: eaton-ev-to-after-tax-ebit-yield
+  value: 0.021
+  source: after-tax EBIT 3880 ÷ enterprise value 186629 (model-output.md section 7)
+  as_of: '2026-06-30'
+  note: Earnings yield of buying back Eaton at the 2026-06-30 price
+- id: mobility-expected-close
+  value: Q1 2027
+  source: 'sources/filings/etn-8-k-2026-06-11-items-701-801-901.md Exhibit 99.1: expected to close in the first quarter of 2027, subject to Dana shareholder approval and regulatory clearances'
+  as_of: '2026-06-11'
+- id: guidance-2026-feb
+  value: organic 7-9%; adjusted EPS $13.00-$13.50
+  source: sources/filings/etn-8-k-2026-02-03-items-202-901.md Exhibit 99
+  as_of: '2026-02-03'
+- id: guidance-2026-may
+  value: organic 9-11%; adjusted EPS $13.05-$13.50
+  source: sources/filings/etn-8-k-2026-05-05-items-202-901.md Exhibit 99
+  as_of: '2026-05-05'
+- id: notes-2026-maturities
+  value: 2028, 2029, 2031, 2033, 2034, 2036, 2038, 2056
+  source: sources/filings/etn-8-k-2026-03-10-items-102-203-901.md Item 2.03
+  as_of: '2026-03-10'
+- id: dividend-declaration-2026
+  value: '2026-02-26'
+  source: 'sources/filings/etn-10-k-2026-02-26.md equity note: declared February 26, 2026'
+  as_of: '2026-02-26'
+- id: dividend-per-share-growth-2023-2026
+  value: 6.2%, 9.3%, 10.6%, 5.8%
+  source: facts.dividends-per-share-2022-2024, dividends-per-share-2025 4.16, quarterly-dividend-2026 1.10 × 4 = 4.40
+  as_of: '2026-02-26'
+- id: debt-ratio-2025-12-31
+  value: 0.0607
+  source: alternatives/debt-at-2025-year-end-output.md section 1 (debt 10684 ÷ (10684 + equity at the 2026-06-30 price))
+  as_of: '2026-06-30'
+- id: form-425-filings-2026-06
+  value: 5
+  source: sources/filings/index.md
+  as_of: '2026-06-30'

@@ -1,0 +1,32 @@
+{
+  "as_of": "2026-06-01",
+  "fetched": "2026-11-03",
+  "source_url": "https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPJune26.xlsx",
+  "note": "damodaran_monthly values are as of the start of the month and pair with each other: dollar_riskfree_rate with implied_erp_over_dollar_riskfree, or treasury_10y with implied_erp_over_treasury; never mix. Pre-tax cost of debt = treasury_10y + the company's default spread, because rating spreads are measured over Treasuries. fred_latest is the most recent daily close, for checking how far rates moved since.",
+  "damodaran_monthly": {
+    "treasury_10y": 0.0444,
+    "us_sovereign_default_spread": 0.0026,
+    "dollar_riskfree_rate": 0.041800000000000004,
+    "implied_erp_over_dollar_riskfree": 0.04570523513441775,
+    "implied_erp_over_treasury": 0.04310523513441775,
+    "sp500_level": 7580.06
+  },
+  "fred_latest": {
+    "treasury_10y": {
+      "value": 0.0444,
+      "date": "2026-06-30",
+      "source_url": "https://fred.stlouisfed.org/series/DGS10"
+    },
+    "sofr": {
+      "value": 0.0368,
+      "date": "2026-06-30",
+      "source_url": "https://fred.stlouisfed.org/series/SOFR"
+    },
+    "fed_funds_effective": {
+      "value": 0.0363,
+      "date": "2026-06-30",
+      "source_url": "https://fred.stlouisfed.org/series/DFF"
+    }
+  },
+  "requested_as_of": "2026-06-30"
+}
