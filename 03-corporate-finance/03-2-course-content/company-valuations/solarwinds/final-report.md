@@ -51,11 +51,11 @@ The marginal investor was the diversified institution holding the roughly 34% pu
 | Equity risk premium | 4.92% | The course dataset's implied US premium of 4.27% on the 64.82% of revenue earned in the US; 6.11%, the European premium, on the 35.18% earned abroad, which adds 0.65 points |
 | Unlevered beta | 1.22 | Software industry, cash-corrected (course dataset, January 2025) |
 | Levered beta | 1.6714 | Relevered at a debt-to-equity ratio of 0.4933 and a 25% marginal tax rate |
-| Cost of equity | 12.65% | 4.43% + 1.6714 × 4.92% |
+| Cost of equity | 12.65% | Risk-free + beta × ERP: 4.43% + 1.6714 × 4.92% |
 | Pre-tax cost of debt | 7.11% | The term loan's effective rate, SOFR + 2.75% (FY2024 10-K) |
-| After-tax cost of debt | 5.33% | 7.11% × (1 − 25%) |
+| After-tax cost of debt | 5.33% | Pre-tax rate × (1 − marginal tax rate): 7.11% × (1 − 25%) |
 | Debt ratio, market values | 33.03% | Debt $1,285M; equity 171.6M shares × $15.18 = $2,604.9M |
-| Cost of capital | 10.23% | 66.97% × 12.65% + 33.03% × 5.33% |
+| Cost of capital | 10.23% | E/V × cost of equity + D/V × after-tax cost of debt: 66.97% × 12.65% + 33.03% × 5.33% |
 
 **Beta.** A regression beta is not available for the delisted ticker, and the bottom-up beta is the better measure in any case. SolarWinds reports one segment, so the software industry beta applies to the whole firm.
 
@@ -185,13 +185,13 @@ Two costs of capital. The plan years (2025–2030) are discounted at 10.23%. Aft
 | Stable-period input | Value |
 | :---- | :---- |
 | Beta | 1.00: the course's rule for a mature firm, and a fit for a business with 93.5% recurring revenue |
-| Cost of equity | 9.35% (4.43% + 1.00 × 4.92%) |
+| Cost of equity | 9.35% (risk-free + stable beta × ERP: 4.43% + 1.00 × 4.92%) |
 | Debt ratio | 21%, the optimum |
 | Pre-tax cost of debt | 5.38%, the A- rate at 21% debt from the section 5 schedule, not today's 7.11% |
 | After-tax cost of debt | 4.04% |
 | Stable cost of capital | 8.23% |
 | Return on new capital | 8.23%, equal to the cost of capital, so growth after 2030 adds no value |
-| Reinvestment rate | 30.38% (2.5% ÷ 8.23%) |
+| Reinvestment rate | 30.38% (growth ÷ return on new capital: 2.5% ÷ 8.23%) |
 
 ❓ I set the growth period at six years because that’s how long management’s plan runs, not from a competitive-advantage analysis; I then checked it against retention and peer growth. Is it fine to let the forecast’s length set the period if the moat evidence supports it?
 
