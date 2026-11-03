@@ -10,9 +10,9 @@ last_updated: 2026-11-03
 
 > Synced from the Google Doc working draft on 2026-11-03. Lines starting with ❓ are questions for the professor, marking where the project departs from the course guidance. The earlier version with the analysis of the Turn/River deal is in [drafts/](drafts/).
 
-❓ I am basing this analysis of SolarWinds on public data from **February 5, 2025**. This was the last normal day of stock trading before Turn/River Capital announced they were buying the company on February 7. SolarWinds has since been delisted, obscuring the data required for an accurate current valuation. Is this allowed?
-
 ## Executive summary
+
+I am basing this analysis of SolarWinds on public data from **February 5, 2025**. This was the last normal day of stock trading before Turn/River Capital announced they were buying the company on February 7. SolarWinds has since been delisted, obscuring the data required for an accurate current valuation.
 
 SolarWinds was a mature, cash-generating software company run for the benefit of two private-equity owners. Silver Lake and Thoma Bravo (the sponsors) held two-thirds of the shares, chose the directors that mattered and approved the deal without a public vote.
 
@@ -48,20 +48,20 @@ The marginal investor was the diversified institution holding the roughly 34% pu
 | Input | Value | Basis |
 | :---- | ----: | :---- |
 | Risk-free rate | 4.43% | 10-year Treasury, 2025-02-05; the US was rated Aaa, so no default spread |
-| Equity risk premium | 4.92% | The course dataset's implied US premium of 4.27% on the 64.82% of revenue earned in the US; 6.11%, the European premium, on the 35.18% earned abroad, which adds 0.65 points |
+| Equity risk premium | 4.92% | The course dataset's implied US premium of 4.27% on the 64.82% of revenue earned in the US; 6.11%, the European premium, on the 35.18% earned abroad, which adds 0.65 points. Europe stands in for all foreign revenue because the 10-K gives no regional split and most foreign offices are in Europe; the Western Europe premium alone would lower the cost of equity by about 0.42 points |
 | Unlevered beta | 1.22 | Software industry, cash-corrected (course dataset, January 2025) |
 | Levered beta | 1.6714 | Relevered at a debt-to-equity ratio of 0.4933 and a 25% marginal tax rate |
-| Cost of equity | 12.65% | 4.43% + 1.6714 × 4.92% |
+| Cost of equity | 12.65% | Risk-free + beta × ERP: 4.43% + 1.6714 × 4.92% |
 | Pre-tax cost of debt | 7.11% | The term loan's effective rate, SOFR + 2.75% (FY2024 10-K) |
-| After-tax cost of debt | 5.33% | 7.11% × (1 − 25%) |
+| After-tax cost of debt | 5.33% | Pre-tax rate × (1 − marginal tax rate): 7.11% × (1 − 25%) |
 | Debt ratio, market values | 33.03% | Debt $1,285M; equity 171.6M shares × $15.18 = $2,604.9M |
-| Cost of capital | 10.23% | 66.97% × 12.65% + 33.03% × 5.33% |
+| Cost of capital | 10.23% | E/V × cost of equity + D/V × after-tax cost of debt: 66.97% × 12.65% + 33.03% × 5.33% |
 
-**Beta.** A regression beta is not available for the delisted ticker, and the bottom-up beta is the better measure in any case. SolarWinds reports one segment, so the software industry beta applies to the whole firm.
+**Beta.** We use a bottom-up beta rather than a regression beta, for three reasons. A regression would describe a company that no longer exists: any five-year window before February 2025 includes the SUNBURST attack (December 2020), the N-able spin-off (July 2021) and two special dividends, so past returns mix different businesses and capital structures. One company's regression beta is also noisy, while the average of the 333 US software companies in the course dataset is roughly 18 times more precise, the square root of the sample size. And the bottom-up beta measures the business as it is today: SolarWinds reports one segment, so the software industry beta of 1.22 applies to the whole firm, relevered at today's debt. Confidence: fairly high. Software is a large, well-populated industry; the open judgment is whether SolarWinds is riskier than the average software firm, and each 0.10 on the unlevered beta moves the cost of equity by about 0.67 points.
 
 **Debt** is the loan at face value, $1,235.7M, plus $49.4M of lease liabilities. Deferred revenue of $389.3M is owed in service, not cash. Cloud purchase commitments of $68.4M are payments for a service the company uses. Both are excluded.
 
-**Cost of debt.** No agency rating is disclosed. Interest coverage of 1.85 times (operating income of $208.4M against gross interest expense of $112.4M) implies a synthetic B- rating on the course's table for smaller firms and an 8.85% cost of debt. Interest expense ran above today's rate because the loan's rate fell during 2024 from 9.11% to 7.11%. The 7.11% is a rate set by its lenders, so it is the cost of debt used.
+**Cost of debt.** No agency rating is disclosed. Interest coverage of 1.85 times (operating income of $208.4M against gross interest expense of $112.4M) implies a synthetic B- rating on the course's table for smaller firms and an 8.85% cost of debt. Interest expense ran above today's rate because the loan's rate fell during 2024 from 9.11% to 7.11%. The 7.11% is a rate set by its lenders, so it is the cost of debt used. The tax rate is the 25% US marginal rate (21% federal plus state), not the effective rate, because interest saves tax at the margin; the 2024 effective rate was negative, an $8.1M tax benefit.
 
 ❓ SolarWinds has no agency rating, but its only debt is a floating-rate term loan with an observed rate of 7.11%. A synthetic rating from interest coverage gives B- and 8.85%. I used the observed rate. Is that right, or should a synthetic rating take priority?
 
@@ -89,7 +89,7 @@ SolarWinds uses both ends of the debt-equity continuum and nothing in between. F
 
 3. A $130.0M revolving credit facility, undrawn at year-end.
 
-4. Options and restricted stock units, worth $187.0M at the market price.
+4. Options and restricted stock units, worth $187.0M at the market price. The units carry no exercise price, so they are valued at the share price and subtracted from equity value; value per share then divides by basic shares, so dilution is not counted twice.
 
 5. Common stock: one class, one vote a share, listed in the 2018 IPO.
 
@@ -117,7 +117,7 @@ The cost of capital is lowest, at 10.03%, with 21% debt and an A- rating. This s
 | 40% | 1.830 | 13.43% | B- | 8.85% | 10.72% |
 | 50% | 2.135 | 14.93% | C | 19.93% | 16.44% |
 
-The result holds under other assumptions. Measuring coverage on EBITDA gives an optimum of 28%, still below 33%. A 30% fall in operating income lowers the optimum to 14%. The adjusted present value approach reaches the same 21%: today's debt carries a $321.2M tax benefit and $361.6M of expected bankruptcy cost (a 36.8% ten-year default probability at the B rating, at a cost of 25% of firm value); at 21% debt the benefit is $204.2M and the cost $24.6M, and firm value is $220.3M higher.
+The result holds under other assumptions. Measuring coverage on EBITDA gives an optimum of 28%, still below 33%. A 30% fall in operating income lowers the optimum to 14%. The adjusted present value approach reaches the same 21%: today's debt carries a $321.2M tax benefit and $361.6M of expected bankruptcy cost (a 36.8% ten-year default probability at the B rating, at a cost of 25% of firm value); at 21% debt the benefit is $204.2M and the cost $24.6M, and firm value is $220.3M higher. The 25% bankruptcy cost is a judgment: direct costs run 5–10% of firm value, and indirect costs are higher for a software vendor whose customers would hesitate to renew multi-year contracts with a company in distress. At 40% the optimum is still 21%; at 10% it would be 40%.
 
 ## 6. Financing changes: should SolarWinds move to the optimum, and with what debt?
 
@@ -166,7 +166,7 @@ Should shareholders trust SolarWinds with cash? No. On all the capital invested 
 
 ### Discounted cash flow
 
-Cash flows are management's 2025–2030 forecast from the merger information statement, with stock-based compensation charged as an expense:
+We value the whole firm, not just the equity, because the debt ratio is not stable: 33% today against a 21% optimum, and an equity valuation would need a forecast of every debt issue and repayment. Cash flows are management's 2025–2030 forecast from the merger information statement, with stock-based compensation charged as an expense:
 
 * Free cash flow to the firm rises from $212.0M in 2025 to $419.0M in 2030.
 
@@ -180,18 +180,18 @@ Cash flows are management's 2025–2030 forecast from the merger information sta
 
 ❓ Management’s forecast has free cash flow above after-tax operating income every year, so reinvestment is negative. I fixed that in the terminal value by setting reinvestment to growth ÷ return on capital, but left the forecast years as management wrote them. Should I also force positive reinvestment in the forecast years?
 
-Two costs of capital. The plan years (2025–2030) are discounted at 10.23%. After 2030, growth is 2.5% a year and the terminal value uses a stable-period cost of capital. A mature firm's beta moves toward one and its debt toward its optimum, and at that debt ratio it pays the rate its new rating commands:
+Two costs of capital. The plan years (2025–2030) are discounted at 10.23%. After 2030, growth is 2.5% a year, below the 4.43% risk-free rate that caps growth forever; since new capital is assumed to earn only its cost, the exact rate barely moves the value. The terminal value uses a stable-period cost of capital. A mature firm's beta moves toward one and its debt toward its optimum, and at that debt ratio it pays the rate its new rating commands:
 
 | Stable-period input | Value |
 | :---- | :---- |
 | Beta | 1.00: the course's rule for a mature firm, and a fit for a business with 93.5% recurring revenue |
-| Cost of equity | 9.35% (4.43% + 1.00 × 4.92%) |
+| Cost of equity | 9.35% (risk-free + stable beta × ERP: 4.43% + 1.00 × 4.92%) |
 | Debt ratio | 21%, the optimum |
 | Pre-tax cost of debt | 5.38%, the A- rate at 21% debt from the section 5 schedule, not today's 7.11% |
 | After-tax cost of debt | 4.04% |
 | Stable cost of capital | 8.23% |
 | Return on new capital | 8.23%, equal to the cost of capital, so growth after 2030 adds no value |
-| Reinvestment rate | 30.38% (2.5% ÷ 8.23%) |
+| Reinvestment rate | 30.38% (growth ÷ return on new capital: 2.5% ÷ 8.23%) |
 
 ❓ I set the growth period at six years because that’s how long management’s plan runs, not from a competitive-advantage analysis; I then checked it against retention and peer growth. Is it fine to let the forecast’s length set the period if the moat evidence supports it?
 
