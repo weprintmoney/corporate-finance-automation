@@ -10,6 +10,7 @@ Fixed reference material from the NYU Stern Certificate in Corporate Finance (Pr
 | [syllabus.md](syllabus.md) | Full syllabus — instructor, primers, learning outcomes, grading, policies, resources |
 | [frequently-asked-questions.md](frequently-asked-questions.md) | Course-site FAQ — meetups, quizzes, CapIQ, certificates, support |
 | [final-project/instructions.md](final-project/instructions.md) | Final project instructions, word for word from Brightspace: about 7–9 pages, one submission, due 2026-12-11 11:59 PM ET |
+| [final-project/professor-checklist.md](final-project/professor-checklist.md) | Professor's letter with a section-by-section to-do list for the project, word for word; stresses logic over mechanics and the 7–9 page limit |
 | [final-project/report-format.md](final-project/report-format.md) | The five example reports side by side: page counts, shared structure, differences |
 | [final-project/example-works/](final-project/example-works/) | Five top-scoring prior reports (PDF + extracted text): Reckitt Benckiser, L'Oréal, Burberry, Skanska, Nestlé |
 | _(transcripts in lesson folders)_ | Session transcripts live in `03-2-course-content/0N-topic-name/lesson-NN/` (see `lesson-index.yaml` for the exact folder per lesson) |
