@@ -1,3 +1,11 @@
+---
+title: "peer facts 2026 06 30"
+status: active
+owner: weprintmoney
+created: 2026-11-03
+last_updated: 2026-11-03
+---
+
 | Ticker | Company | Fiscal year end | 10-K accession | Revenue | Operating income | D&A | EBITDA | Net income | Dividends | Book equity | Borrowings | Lease debt | Cash + ST investments | Shares (M) | Close | Close date | Market cap | Enterprise value | Prior-year revenue | Revenue growth |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CTVA | Corteva, Inc. | 2025-12-31 | 0001755672-26-000004 | 17,401.0 | n/a | 1,203.0 | n/a | 1,094.0 | 475.0 | 24,144.0 | 1,686.0 | 415.0 | 4,530.0 | 668.8 | 84.69 | 2026-06-30 | 56,642.4 | 54,213.4 | 16,908.0 | 2.9% |

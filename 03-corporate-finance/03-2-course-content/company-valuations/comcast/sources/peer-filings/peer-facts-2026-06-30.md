@@ -1,3 +1,11 @@
+---
+title: "peer facts 2026 06 30"
+status: active
+owner: weprintmoney
+created: 2026-11-03
+last_updated: 2026-11-03
+---
+
 | Ticker | Company | Fiscal year end | 10-K accession | Revenue | Operating income | D&A | EBITDA | Net income | Dividends | Book equity | Borrowings | Lease debt | Cash + ST investments | Shares (M) | Close | Close date | Market cap | Enterprise value | Prior-year revenue | Revenue growth |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | CMCSA | COMCAST CORPORATION | 2025-12-31 | 0001628280-26-004994 | 123,707.0 | 20,672.0 | 16,210.0 | 36,882.0 | 19,998.0 | 4,894.0 | 96,903.0 | 92,979.0 | 6,097.0 | 9,495.0 | 3,597.0 | 24.55 | 2026-06-30 | 88,306.3 | 177,887.3 | 123,731.0 | -0.0% |

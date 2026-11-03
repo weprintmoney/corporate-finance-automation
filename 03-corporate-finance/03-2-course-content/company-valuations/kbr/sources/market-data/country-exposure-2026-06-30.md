@@ -1,3 +1,11 @@
+---
+title: "country exposure 2026 06 30"
+status: active
+owner: weprintmoney
+created: 2026-11-03
+last_updated: 2026-11-03
+---
+
 # KBR country exposure and weighted ERP, as of 2026-06-30
 
 Weights: FY2025 revenue by geographic destination (10-K filed 2026-02-26, Note 3; total $7,786M).

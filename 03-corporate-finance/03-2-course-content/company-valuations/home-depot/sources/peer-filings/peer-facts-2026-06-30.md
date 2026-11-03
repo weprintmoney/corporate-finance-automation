@@ -1,3 +1,11 @@
+---
+title: "peer facts 2026 06 30"
+status: active
+owner: weprintmoney
+created: 2026-11-03
+last_updated: 2026-11-03
+---
+
 | Ticker | Company | Fiscal year end | 10-K accession | Revenue | Operating income | D&A | EBITDA | Net income | Dividends | Book equity | Borrowings | Lease debt | Cash + ST investments | Shares (M) | Close | Close date | Market cap | Enterprise value | Prior-year revenue | Revenue growth |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | HD | The Home Depot, Inc. | 2026-02-01 | 0001628280-26-019436 | 164,683.0 | 20,890.0 | 3,514.0 | 24,404.0 | 14,156.0 | 9,152.0 | 12,813.0 | 49,397.0 | 9,578.0 | 1,389.0 | 997.1 | 352.68 | 2026-06-30 | 351,663.1 | 409,249.1 | 159,514.0 | 3.2% |

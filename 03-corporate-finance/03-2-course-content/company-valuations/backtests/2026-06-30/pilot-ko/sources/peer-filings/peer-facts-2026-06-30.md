@@ -1,3 +1,11 @@
+---
+title: "peer facts 2026 06 30"
+status: active
+owner: weprintmoney
+created: 2026-11-03
+last_updated: 2026-11-03
+---
+
 | Ticker | Company | Fiscal year end | 10-K accession | Revenue | Operating income | D&A | EBITDA | Net income | Dividends | Book equity | Borrowings | Lease debt | Cash + ST investments | Shares (M) | Close | Close date | Market cap | Enterprise value | Prior-year revenue | Revenue growth |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | KO | COCA COLA CO | 2025-12-31 | 0001628280-26-010047 | 47,941.0 | 13,762.0 | 1,050.0 | 14,812.0 | 13,107.0 | 8,779.0 | 32,169.0 | 0.0 | 1,722.0 | 10,270.0 | 4,302.5 | 81.27 | 2026-06-30 | 349,662.7 | 341,114.7 | 47,061.0 | 1.9% |

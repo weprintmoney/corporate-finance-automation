@@ -1,3 +1,11 @@
+---
+title: "peer facts 2026 06 30"
+status: active
+owner: weprintmoney
+created: 2026-11-03
+last_updated: 2026-11-03
+---
+
 | Ticker | Company | Fiscal year end | 10-K accession | Revenue | Operating income | D&A | EBITDA | Net income | Dividends | Book equity | Borrowings | Lease debt | Cash + ST investments | Shares (M) | Close | Close date | Market cap | Enterprise value | Prior-year revenue | Revenue growth |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | JPM | JPMORGAN CHASE & CO | 2025-12-31 | 0001628280-26-008131 | 182,447.0 | n/a | 8,821.0 | n/a | 57,048.0 | 16,625.0 | 362,438.0 | n/a | 9,337.0 | 0.0 | 2,679.5 | 327.33 | 2026-06-30 | 877,084.4 | n/a | 177,556.0 | 2.8% |

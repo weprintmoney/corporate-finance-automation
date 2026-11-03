@@ -183,7 +183,9 @@ def main(argv):
         except Exception as e:  # noqa: BLE001 - report and continue; a missing exhibit shouldn't stop the run
             print(f"FAILED {f['form']} {f['date']}: {e}", file=sys.stderr)
             continue
-        header = (f"<!-- {name} (CIK {cik}) {f['form']} filed {f['date']}"
+        front = (f'---\ntitle: "{name} {f["form"]} filed {f["date"]}"\nstatus: active\nowner: weprintmoney\n'
+                 f"created: {date.today()}\nlast_updated: {date.today()}\n---\n\n")
+        header = front + (f"<!-- {name} (CIK {cik}) {f['form']} filed {f['date']}"
                   f"{', period ' + f['period'] if f['period'] else ''}{', items ' + f['items'] if f['items'] else ''}. "
                   f"Source: {url} -->\n\n")
         with open(os.path.join(a.company_dir, rel), "w") as fh:
@@ -197,7 +199,9 @@ def main(argv):
     by_month = defaultdict(Counter)
     for f in fl:
         by_month[f["date"].strftime("%Y-%m")][f["form"]] += 1
-    lines = [f"# {name} — SEC filings {since} to {cutoff}", "",
+    lines = ["---", f'title: "{name} SEC filings {since} to {cutoff}"', "status: active", "owner: weprintmoney",
+             f"created: {date.today()}", f"last_updated: {date.today()}", "---", "",
+             f"# {name} — SEC filings {since} to {cutoff}", "",
              f"Every filing EDGAR lists for CIK {cik} in the three years to the cutoff. Nothing after {cutoff} is listed.", "",
              "## By month", "", "| Month | Filings by form |", "|---|---|"]
     for m in sorted(by_month, reverse=True):

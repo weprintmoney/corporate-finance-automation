@@ -1,3 +1,11 @@
+---
+title: "index"
+status: active
+owner: weprintmoney
+created: 2026-11-03
+last_updated: 2026-11-03
+---
+
 # Eaton Corp plc — SEC filings 2023-06-28 to 2026-06-30
 
 Every filing EDGAR lists for CIK 1551182 in the three years to the cutoff. Nothing after 2026-06-30 is listed.

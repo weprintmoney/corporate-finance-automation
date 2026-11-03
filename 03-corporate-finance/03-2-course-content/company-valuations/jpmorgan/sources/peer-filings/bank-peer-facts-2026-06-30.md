@@ -1,3 +1,11 @@
+---
+title: "bank peer facts 2026 06 30"
+status: active
+owner: weprintmoney
+created: 2026-11-03
+last_updated: 2026-11-03
+---
+
 # Bank peer facts as of 2026-06-30
 
 Generated 2026-11-03 by a scratch wrapper around tools/fetch-peer-facts.py (its own functions: SEC XBRL company facts filtered to 10-Ks filed on or before 2026-06-30, share counts filed on or before 2026-06-30, the close actually traded on 2026-06-30). The stock tool crashes on banks (no revenue tag) and picked WFC's 2019 year, so this wrapper uses bank tags: net income, dividends, buybacks, stockholders' equity. P/B here is market cap over total stockholders' equity, preferred included; JPM's own ratios in the read come from its filings. Values in $ millions.

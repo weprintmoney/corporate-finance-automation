@@ -1,3 +1,11 @@
+---
+title: "peer facts 2026 06 30"
+status: active
+owner: weprintmoney
+created: 2026-11-03
+last_updated: 2026-11-03
+---
+
 | Ticker | Company | Fiscal year end | 10-K accession | Revenue | Operating income | D&A | EBITDA | Net income | Dividends | Book equity | Borrowings | Lease debt | Cash + ST investments | Shares (M) | Close | Close date | Market cap | Enterprise value | Prior-year revenue | Revenue growth |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | ETN | EATON CORPORATION plc | 2025-12-31 | 0001551182-26-000007 | 27,448.0 | n/a | 1,006.0 | n/a | 4,087.0 | 1,626.0 | 19,425.0 | 9,894.0 | 789.0 | 803.0 | 388.3 | 426.12 | 2026-06-30 | 165,462.4 | 175,342.4 | 24,878.0 | 10.3% |

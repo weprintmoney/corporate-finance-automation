@@ -1,3 +1,11 @@
+---
+title: "peer facts 2026 06 30"
+status: active
+owner: weprintmoney
+created: 2026-11-03
+last_updated: 2026-11-03
+---
+
 | Ticker | Company | Fiscal year end | 10-K accession | Revenue | Operating income | D&A | EBITDA | Net income | Dividends | Book equity | Borrowings | Lease debt | Cash + ST investments | Shares (M) | Close | Close date | Market cap | Enterprise value | Prior-year revenue | Revenue growth |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | KBR | KBR, Inc. | 2026-01-02 | 0001357615-26-000051 | 7,786.0 | 778.0 | 169.0 | 947.0 | 415.0 | 84.0 | 1,503.0 | 2,596.0 | 292.0 | 500.0 | 126.8 | 34.53 | 2026-06-30 | 4,378.1 | 6,766.1 | 7,742.0 | 0.6% |

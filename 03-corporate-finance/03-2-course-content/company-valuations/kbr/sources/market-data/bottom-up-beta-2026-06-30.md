@@ -1,3 +1,11 @@
+---
+title: "bottom up beta 2026 06 30"
+status: active
+owner: weprintmoney
+created: 2026-11-03
+last_updated: 2026-11-03
+---
+
 # KBR bottom-up unlevered beta, as of 2026-06-30
 
 Industry betas: industry-betas-2026-01-05.json (Damodaran betas.xls, January 2026), unlevered and cash-corrected.
