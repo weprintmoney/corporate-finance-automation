@@ -21,6 +21,7 @@ Every document the ledger (`../inputs.yaml`) cites. Filings were fetched from SE
 | `swi-def14a-2024.md` | 2024 proxy, the last before the deal: board, pay, beneficial ownership, stockholders' agreement | 2024-04-11 |
 | `swi-s1-2018-ipo-prospectus.md` | IPO prospectus: pre-IPO capital structure and use of proceeds | 2018-09-21 |
 | `swi-8k-2020-12-09-sunburst-disclosure.md`, `swi-8k-2020-12-14-sunburst-followup.md` | SUNBURST disclosures | 2020-12 |
+| `swi-8k-2022-10-14-director-resignations.md` | Thoma Bravo's three directors resign after a Justice Department letter alleging a Clayton Act Section 8 (interlocking directorates) violation; fetched from EDGAR 2026-11-03 | 2022-10-19 |
 | `swi-multi-year-financials.md` | Revenue, EBIT, net income, R&D and capex for FY2017–2024 from the SEC XBRL company-facts API | fetched 2026-09-07 |
 
 **Not fetched:** the FY2019, FY2021 and FY2022 10-Ks. Years before 2022 include N-able, which was spun off in July 2021, so they are not comparable. FY2022 flows come from the FY2024 10-K's three-year statements, and the 2022 balance sheet from the FY2023 10-K. Accessions for the missing 10-Ks: FY2019 0001739942-20-000011, FY2021 0001739942-22-000020, FY2022 0001739942-23-000019, at `https://www.sec.gov/Archives/edgar/data/1739942/<accession-no-dashes>/`.
