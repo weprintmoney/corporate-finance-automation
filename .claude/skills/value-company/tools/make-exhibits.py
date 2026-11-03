@@ -106,7 +106,10 @@ class Ctx:
         self.L = yaml.safe_load((folder / "inputs.yaml").read_text())
         meta = self.L.get("meta", {})
         self.name = lv(meta.get("company")) or folder.name
-        self.short = re.sub(r"^The ", "", self.name).replace(" Corporation", "").replace(" Inc.", "").replace(", Inc.", "").replace(" Inc", "")
+        short = re.sub(r"^The ", "", self.name)
+        for _ in range(2):                             # "Eaton Corporation plc" carries two suffixes
+            short = re.sub(r",?\s+(Inc\.?|Incorporated|Corporation|Corp\.?|plc|PLC|Co\.|Company|& Co\.)$", "", short).strip()
+        self.short = short
         self.poss = self.short + ("'" if self.short.endswith("s") else "'s")
         self.date = str(lv(meta.get("analysis_date")))
         self.base_year = lv(meta.get("base_year"))
@@ -156,8 +159,8 @@ def cost_of_capital(c, path):
     ax.set_ylim(below - 0.1 * max(span, 0.3), max(y for _, y in near) + 0.25 * max(span, 0.3))
     if far:
         ax.text(near[-1][0] - 1.5, near[-1][1], f"rises to {far[0][1]:.2f}% at {far[0][0]:.0f}% debt", fontsize=8, color=INK2, ha="right", va="center")
-    if cur == opt:
-        title = f"{c.short} carries about its optimal debt ratio, {opt[0]:.0f}%"
+    if abs(cur[0] - opt[0]) <= 3:
+        title = f"{c.short} carries {cur[0]:.0f}% debt, about its {opt[0]:.0f}% optimum"
     elif cur[0] > opt[0]:
         title = f"Cost of capital is lowest at {opt[0]:.0f}% debt; {c.short} carries {cur[0]:.0f}%"
     else:
@@ -176,6 +179,9 @@ def returns(c, path):
     if not by_year:
         raise Missing("section 8 has no by-year ROIC table (company.history)")
     wacc = c.wacc()
+    by_year = [r for r in by_year if re.search(r"\d", r["ROIC"])]   # a year without invested capital is left out
+    if not by_year:
+        raise Missing("no year has a return on capital")
     yrs = [r["Year"] for r in by_year]
     roic = [num(r["ROIC"]) for r in by_year]
     fig, ax = plt.subplots(figsize=(7, 3.6))

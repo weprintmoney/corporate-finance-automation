@@ -8,7 +8,7 @@ last_updated: 2026-11-03
 
 # Read template
 
-`read.md` is the main output of every `/value-company` run. It answers two questions about the company on the analysis date: **what situation is it in**, and **what are the people who control it actually trying to do**, whether or not they say so. The course's tools are how it gets there: every corporate finance choice (how much to borrow, what to invest in, how much cash to hand back) is a decision someone made, and decisions reveal goals better than statements do.
+`read.md` is the main output of every `/value-company` run, for any company, whether or not anything is about to happen to it. It answers three questions about the company on the analysis date: **what is it worth against its price**, **what situation is it in**, and **what are the people who control it actually trying to do**, whether or not they say so. "Nothing hidden: it does what it says" is a complete and useful answer to the third. The course's tools are how it gets there: every corporate finance choice (how much to borrow, what to invest in, how much cash to hand back) is a decision someone made, and decisions reveal goals better than statements do.
 
 Length: two to three pages. A reader should get the read from the first page alone.
 
@@ -28,10 +28,27 @@ last_updated: YYYY-MM-DD
 <One sentence on what the company is and who controls it. Then the analysis date, and if the run is
 blind, a line saying nothing published after that date was used.>
 
+## Valuation at a glance
+
+| | Value |
+|---|---|
+| Value per share (status quo) / market price | $X / $Y (Z×) |
+| Value with changes (at the optimal debt ratio, or the read's main change) | $X |
+| Cost of capital | X% |
+| Return on capital / return on equity, base year | X% / X% |
+| Debt ratio: actual / optimal / sector | X% / X% / X% |
+| Cash returned / free cash flow to equity, last three years | $X / $X |
+| Peer-multiple range per share | $X–$Y |
+
+<Two sentences: what the price assumes that the value doesn't, or the reverse. Every company gets this,
+and it comes first. For a bank, use return on equity against the cost of equity, price to book against
+the justified multiple, and regulatory capital against its requirement in place of the debt rows.>
+
 ## The read
 
-<Three to five sentences: the situation and the inferred goal, in plain words. This is the paragraph
-someone forwards.>
+<Three to five sentences: the situation and, if the signals support one, the inferred goal, in plain
+words. If no signal shows a gap, say so: the company does what it says, and the read is its valuation and
+what would change it. This is the paragraph someone forwards.>
 
 ## Signals
 
@@ -48,7 +65,8 @@ model-output.md, and the reasoning. Signals with no gap get no paragraph; the ta
 
 ## Unstated goals
 
-<Each one in this shape:>
+<Only where the signals show gaps. "None found: the signals show no gap between what it says and what
+it does" is a valid section. Otherwise, each one in this shape:>
 
 **<The goal, as one sentence about what the controllers want.>** Confidence: high / medium / low.
 - Evidence: <two or more signals that point here, each with its number>
@@ -57,8 +75,10 @@ model-output.md, and the reasoning. Signals with no gap get no paragraph; the ta
 
 ## What to watch
 
-<Three to five dated or observable events that would confirm or overturn the read: a debt maturity, a
-lock-up expiry, a sponsor's fund life, a proxy vote, a guidance revision, a covenant test.>
+<Three to five dated or observable things that would confirm or overturn the read. Not only events:
+the next quarters' numbers count, such as return on capital staying above or below the cost of capital,
+cash returned against free cash flow, debt moving toward or away from the optimum. Events count too: a
+debt maturity, a proxy vote, a guidance revision, a covenant test.>
 
 ## Discretionary decisions
 
@@ -90,6 +110,9 @@ Starting hypotheses, never conclusions. Each needs the two-signal rule and a riv
 
 | Pattern in the signals | Hypothesis to test | Rival reading to rule out |
 |---|---|---|
+| Return on capital above the cost of capital + payout close to FCFE + debt near the optimum + statements match actions | Nothing hidden: a mature company doing what it says; the read is its valuation | A quiet change the filings don't show yet (check the latest quarter) |
+| Return on capital above the cost of capital + debt well below the optimum + rating or dividend language prominent | Management values safety and the rating over the tax benefit of debt | A disclosed plan for the borrowing capacity (an acquisition, a pension contribution) |
+| Separation or spin-off announced + debt being paid down + buybacks paused | Each piece is being set up for an investment-grade start, not for its optimum | The pause is temporary and the plan says when buybacks resume |
 | Financial-sponsor control + debt above the optimum + payout above FCFE + change-of-control pay | The owners are harvesting and preparing an exit | A one-time recapitalization after an asset sale |
 | Founder or family control + debt far below the optimum + cash piling up + low payout | Control and independence come before returns to outside shareholders | Saving for a known, disclosed investment |
 | Return on capital below the cost of capital + steady acquisitions + growth targets in pay | Management is building size, not value | Acquisitions are recent and returns lag by design |

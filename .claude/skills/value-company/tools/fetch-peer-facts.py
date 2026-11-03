@@ -24,6 +24,7 @@ import json
 import os
 import sys
 import time
+import urllib.error
 import urllib.request
 from datetime import date, datetime, timedelta
 
@@ -56,7 +57,17 @@ FLOW = {"revenue", "operating_income", "da", "net_income", "dividends"}
 ZERO_IF_ABSENT = {"dividends", "short_term_investments"}
 
 
-def get(url, ua=SEC_UA):
+def get(url, ua=SEC_UA, tries=3):
+    for i in range(tries):                                      # Yahoo returns transient 502s
+        try:
+            return _get(url, ua)
+        except urllib.error.HTTPError as e:
+            if e.code < 500 or i == tries - 1:
+                raise
+            time.sleep(2 * (i + 1))
+
+
+def _get(url, ua):
     req = urllib.request.Request(url, headers={"User-Agent": ua})
     with urllib.request.urlopen(req, timeout=60) as resp:
         return json.loads(resp.read())
@@ -143,8 +154,14 @@ def main(argv):
         day = as_date(argv[argv.index("--date") + 1])
     except (ValueError, IndexError):
         sys.exit(__doc__)
-    tickers = [a for a in argv if a.isupper() and not a.startswith("--")]
-    ciks = {v["ticker"]: v["cik_str"] for v in get(TICKERS_URL).values()}
+    # TICKER or TICKER:CIK. Blind runs pass the CIK: SEC's ticker list is today's, so looking a ticker up
+    # there reveals whether it still trades.
+    args = [a for a in argv if not a.startswith("--") and a.split(":")[0].isupper()]
+    given = {a.split(":")[0]: int(a.split(":")[1]) for a in args if ":" in a}
+    tickers = [a.split(":")[0] for a in args]
+    ciks = dict(given)
+    if len(given) < len(tickers):
+        ciks.update({v["ticker"]: v["cik_str"] for v in get(TICKERS_URL).values() if v["ticker"] not in given})
     m = lambda x: "{:,.1f}".format(x / 1e6) if x is not None else "n/a"
     print("| Ticker | Company | Fiscal year end | 10-K accession | Revenue | Operating income | D&A | EBITDA | Net income | "
           "Dividends | Book equity | Borrowings | Lease debt | Cash + ST investments | Shares (M) | Close | Close date | "
@@ -152,9 +169,29 @@ def main(argv):
     print("|" + "---|" * 21)
     notes = []
     for t in tickers:
+        try:
+            row, note = peer_row(t, ciks, day, m)
+            print(row)
+            notes.append(note)
+        except Exception as e:  # noqa: BLE001 - one peer's gap must not stop the others
+            print("| {} | skipped: {} |".format(t, str(e)[:120] or type(e).__name__) + " |" * 19)
+            notes.append("- {}: skipped ({}); check this peer by hand".format(t, e))
+        time.sleep(0.2)                                             # SEC fair-access limit is 10 requests/second
+    print()
+    print("XBRL tags used:")
+    print()
+    print("\n".join(notes))
+
+
+def peer_row(t, ciks, day, m):
+    if t not in ciks:
+        raise ValueError("no CIK; pass {}:<CIK>".format(t))
+    if True:
         doc = get(FACTS_URL.format(cik=ciks[t]))
         facts = doc["facts"]
         fy_end = fiscal_year_end(facts, day)
+        if fy_end is None:
+            raise ValueError("no 10-K fiscal year filed by {} (a 20-F/40-F filer, or no revenue tag)".format(day))
         got = {k: pick(facts, spec, fy_end, k in FLOW, day) for k, spec in TAGS.items()}
         # Some filers tag only depreciation as DepreciationDepletionAndAmortization; add acquired-intangible
         # amortization when it is larger than the tagged D&A, and say so.
@@ -167,21 +204,17 @@ def main(argv):
         sh, sh_note = shares_before(facts, day)
         cday, px = close_on(t, day)
         debt = v["borrowings"] + (v["lease_debt"] or 0) if v["borrowings"] is not None else None
-        cash = (v["cash"] or 0) + v["short_term_investments"]
+        cash = v["cash"] + v["short_term_investments"] if v["cash"] is not None else None
         mcap = sh * px if sh else None
-        ev = mcap + debt - cash if mcap and debt is not None else None
+        ev = mcap + debt - cash if mcap and debt is not None and cash is not None else None
         ebitda = v["operating_income"] + v["da"] if None not in (v["operating_income"], v["da"]) else None
         growth = "{:.1%}".format(v["revenue"] / prior - 1) if prior and v["revenue"] else "n/a"
-        print("| {} | {} | {} | {} | {} | {} | {} | {} | {} | {} | {} | {} | {} | {} | {} | {:.2f} | {} | {} | {} | {} | {} |".format(
+        row = ("| {} | {} | {} | {} | {} | {} | {} | {} | {} | {} | {} | {} | {} | {} | {} | {:.2f} | {} | {} | {} | {} | {} |".format(
             t, doc.get("entityName"), fy_end, got["revenue"][2], m(v["revenue"]), m(v["operating_income"]), m(v["da"]), m(ebitda),
             m(v["net_income"]), m(v["dividends"]), m(v["equity_book"]), m(v["borrowings"]), m(v["lease_debt"]),
             m(cash), "{:,.1f}".format(sh / 1e6) if sh else "n/a", px, cday, m(mcap), m(ev), m(prior), growth))
-        notes.append("- {}: shares = {}; ".format(t, sh_note) + "; ".join("{} = {}".format(k, g[1] or "not tagged") for k, g in got.items()))
-        time.sleep(0.2)                                             # SEC fair-access limit is 10 requests/second
-    print()
-    print("XBRL tags used:")
-    print()
-    print("\n".join(notes))
+        note = "- {}: shares = {}; ".format(t, sh_note) + "; ".join("{} = {}".format(k, g[1] or "not tagged") for k, g in got.items())
+        return row, note
 
 
 if __name__ == "__main__":

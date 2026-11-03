@@ -372,6 +372,14 @@ def check(today=None):
 
 
 def main(argv):
+    # Any unknown flag (including --help) stops here: a stray run otherwise refreshes the shared snapshot
+    # with today's data, which a backtest must never see.
+    known = {"--check", "--as-of", "--out"}
+    flags = [a for a in argv if a.startswith("-")]
+    if any(f not in known for f in flags):
+        sys.exit(__doc__ if __doc__ else "usage: refresh-market-data.py [--check | --as-of YYYY-MM-DD --out DIR]")
+    if "--as-of" in argv and "--out" not in argv:
+        sys.exit("--as-of needs --out DIR; it never writes to the shared snapshot")
     if "--check" in argv:
         sys.exit(check())
     as_of, out_dir = None, OUT_DIR

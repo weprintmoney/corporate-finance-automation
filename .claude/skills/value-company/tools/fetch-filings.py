@@ -36,7 +36,8 @@ from html.parser import HTMLParser
 import yaml
 
 SEC_UA = os.environ.get("SEC_UA", "corporate-finance-automation research@example.com")
-MATERIAL_8K = {"1.01", "1.02", "2.01", "2.03", "2.05", "2.06", "3.03", "5.01", "5.02", "5.03", "8.01"}
+MATERIAL_8K = {"1.01", "1.02", "2.01", "2.03", "2.05", "2.06", "3.03", "5.01", "5.02", "5.03", "7.01", "8.01"}
+EIGHT_K = {"8-K", "8-K/A"}
 ANNUAL = {"10-K", "20-F", "40-F"}
 
 
@@ -146,10 +147,10 @@ def main(argv):
         pick += [f for f in fl if f["form"] == "10-Q" and f["date"] > annual[0]["date"]]
     pick += [f for f in fl if f["form"] == "DEF 14A"][:1]
     year_ago = cutoff - timedelta(days=366)
-    eights = [f for f in fl if f["form"] == "8-K" and f["date"] >= year_ago
+    eights = [f for f in fl if f["form"] in EIGHT_K and f["date"] >= year_ago
               and MATERIAL_8K & {i.strip() for i in f["items"].split(",")}]
     pick += eights[:a.max_8k]
-    earnings = [f for f in fl if f["form"] == "8-K" and "2.02" in f["items"] and f not in eights[:a.max_8k]]
+    earnings = [f for f in fl if f["form"] in EIGHT_K and "2.02" in f["items"] and f not in eights[:a.max_8k]]
     pick += earnings[:4]
 
     out_dir = os.path.join(a.company_dir, "sources", "filings")
@@ -162,20 +163,22 @@ def main(argv):
     form_slug = lambda f: f["form"].lower().replace(" ", "").replace("/", "-")
     for f in pick:
         fname = f"{t}-{form_slug(f)}-{f['date'].isoformat()}"
-        if f["form"] == "8-K":
+        if f["form"] in EIGHT_K:
             fname += "-items-" + f["items"].replace(".", "").replace(",", "-")
         fname += ".md"
         rel = f"sources/filings/{fname}"
         url = f"https://www.sec.gov/Archives/edgar/data/{cik}/{f['accn'].replace('-', '')}/{f['doc']}"
         try:
             body = to_text(get(url), f["doc"])
-            if f["form"] == "8-K":
+            if f["form"] in EIGHT_K:
                 folder = f"https://www.sec.gov/Archives/edgar/data/{cik}/{f['accn'].replace('-', '')}/"
                 for item in get(folder + "index.json", as_json=True)["directory"]["item"]:
                     n = item["name"]
-                    # exhibit names vary ("ex99-1.htm", "...ex-9.htm"); keep any exhibit document
-                    if (re.search(r"ex[-_]?\d", n, re.I) and n.lower().endswith((".htm", ".html"))
-                            and "index" not in n.lower() and n != f["doc"]):
+                    # Exhibit names follow no pattern ("ex99-1.htm", "hd_exhibit991x….htm",
+                    # "a1q_2026xearningsxnewsxr.htm"), so keep every HTML document in the filing except
+                    # the 8-K itself, EDGAR's index pages and its rendered XBRL pages (R1.htm …).
+                    if (n.lower().endswith((".htm", ".html")) and n != f["doc"] and "index" not in n.lower()
+                            and not re.fullmatch(r"R\d+\.htm", n)):
                         body += f"\n\n---\n\n## Exhibit {n}\n\n" + to_text(get(folder + n), n)
         except Exception as e:  # noqa: BLE001 - report and continue; a missing exhibit shouldn't stop the run
             print(f"FAILED {f['form']} {f['date']}: {e}", file=sys.stderr)
@@ -200,7 +203,7 @@ def main(argv):
     for m in sorted(by_month, reverse=True):
         lines.append(f"| {m} | " + ", ".join(f"{k} ×{v}" for k, v in by_month[m].most_common()) + " |")
     lines += ["", "## 8-Ks", "", "| Filed | Items |", "|---|---|"]
-    lines += [f"| {f['date']} | {f['items']} |" for f in fl if f["form"] == "8-K"]
+    lines += [f"| {f['date']} | {f['items']} |" for f in fl if f["form"] in EIGHT_K]
     index_rel = "sources/filings/index.md"
     with open(os.path.join(a.company_dir, index_rel), "w") as fh:
         fh.write("\n".join(lines) + "\n")
