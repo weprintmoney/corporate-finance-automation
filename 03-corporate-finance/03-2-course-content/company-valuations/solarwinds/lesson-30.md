@@ -35,3 +35,5 @@ last_updated: 2026-11-03
 ## Notes
 
 The base-year FCFF of $171.4M is the starting point the plan's $212.0M for 2025 grows from. The negative reinvestment rate carries into lesson 31, where it is the reason fundamental growth comes out near zero. The model prints FCFE history (§5) but not FCFF history; the FCFF rows here are arithmetic on `company.history` and are listed as facts to add.
+
+- 2026-11-03 — The final report's DCF (section 9) now runs in the professor's spreadsheet, fcffsimpleginzu.xlsx (February 2026 edition): the 10.67% is entered directly for years 1–5 and the sheet fades it to a mature-company 8.66% (risk-free plus the 4.23% mature-market premium) by year 10, where the model holds 10.67% through 2030. Value per share $15.32 ($16.08 at the optimum; stress $12.65 / $7.77; `professor-spreadsheet/results.md`). The model's $15.66 is the repo's cross-check.

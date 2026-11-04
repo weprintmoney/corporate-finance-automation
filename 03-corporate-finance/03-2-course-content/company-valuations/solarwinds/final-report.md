@@ -18,12 +18,12 @@ A 2025 date is a requirement, not a preference. After February 7 the stock trade
 
 SolarWinds was a mature, cash-generating public software company run for the benefit of two private-equity owners. Silver Lake and Thoma Bravo (the sponsors) held two-thirds of the shares, chose the directors that mattered and approved the company's sale without a public vote.
 
-| Value per share on management's plan (DCF) | $15.66 |
+| Value per share on management's plan (DCF) | $15.32 |
 | :---- | :---- |
-| Value per share at the optimal debt ratio | $16.35 |
+| Value per share at the optimal debt ratio | $16.08 |
 | Market price on February 5, 2025 | $15.18 |
 | Deal price | $18.50 |
-| Cost of capital: 2025–2030 / after 2030 | 10.67% / 8.23% |
+| Cost of capital: years 1–5 / after year 10 | 10.67% / 8.66% |
 | Return on invested capital, FY2024 | 6.66%, on a capital base that is almost all buyout goodwill |
 | Debt ratio: actual / optimal | 33% / 21% |
 
@@ -164,48 +164,29 @@ Over 2022–2024, free cash flow to equity totaled −$419.8M against $224.6M re
 
 ### Discounted cash flow
 
-We value the whole firm, not just the equity, because the debt ratio is not stable: 33% today against a 21% optimum, and an equity valuation would need a forecast of every debt issue and repayment. Cash flows are management's 2025–2030 forecast from the merger information statement, with stock-based compensation charged as an expense:
+We value the whole firm, not just the equity, because the debt ratio is not stable: 33% today against a 21% optimum, and an equity valuation would need a forecast of every debt issue and repayment. The valuation runs in the course's spreadsheet (fcffsimpleginzu), with its default assumptions kept wherever we had no better information. The inputs are management's 2025–2030 forecast from the merger information statement, with stock-based compensation charged as an expense:
 
-- Free cash flow to the firm rises from $212.0M in 2025 to $419.0M in 2030.
-- Revenue grows 8.12% a year, against 5.25% a year over 2022–2024. The operating margin, on the plan's definition, rises from about 29% in 2024 to 40.1% in 2030.
+- Free cash flow to the firm rises from $156.0M in 2025 to $322.2M in 2030 and $430.7M in 2034, after reinvesting at the spreadsheet's default sales-to-capital ratio for software, 1.54. The plan's own cash flows are higher because customer prepayments fund its growth; the default is the conservative side.
+- Revenue grows 8.12% a year to 2030 (4.4% in 2025, then 8.9%), against 5.25% a year over 2022–2024, and fades to the 4.43% risk-free rate by year 10. The operating margin, on the plan's definition, rises from 32.7% in 2025 to 40.1% in 2030 and stays there.
 - On SolarWinds' own fundamentals (return on invested capital times reinvestment), growth would be about zero. The plan assumes its margin expansion delivers.
 
-**Two costs of capital.** The plan years (2025–2030) are discounted at 10.67%. After 2030, growth is 2.5% a year, below the 4.43% risk-free rate that caps growth forever. The terminal value uses a stable-period cost of capital. A mature firm's beta moves toward one and its debt toward its optimum, and at that debt ratio it pays the rate its new rating commands:
-
-| Stable-period input | Value |
-| :---- | :---- |
-| Beta | 1.00: the course's rule for a mature firm, and a fit for a business with 93.5% recurring revenue |
-| Cost of equity | 9.35% (risk-free + stable beta × ERP: 4.43% + 1.00 × 4.92%) |
-| Debt ratio | 21%, the optimum |
-| Pre-tax cost of debt | 5.38%, the A- rate at 21% debt from the section 5 schedule, not the 8.85% B- rate used for 2025–2030 |
-| After-tax cost of debt | 4.04% |
-| Stable cost of capital | 8.23% |
-| Return on new capital | 8.23%, equal to the cost of capital, so growth after 2030 adds no value |
-| Reinvestment rate | 30.38% (growth ÷ return on new capital: 2.5% ÷ 8.23%) |
-
-**The return on new capital.** After 2030, the question is what SolarWinds will earn on each new dollar it invests. Its record says no more than that dollar costs. It earns 6.66% on its capital (6.53% with R&D capitalized), below its cost of capital, and its new dollars have mostly gone into acquisitions. The 87% in section 3 shows the business needs little capital to run. It doesn't show what a new dollar would earn. So we assume new capital earns exactly its 8.23% cost. Under that assumption, growth adds no value, because reinvesting only to earn your cost of capital creates nothing. The terminal value is then simply next year's after-tax operating income divided by the cost of capital.
+**Cost of capital and terminal value.** The 10.67% from section 2 is entered directly, because the spreadsheet's built-in betas and risk premiums are 2026 data and the valuation date is February 2025. The spreadsheet then applies its defaults: the cost of capital fades to a mature-company 8.66% (risk-free plus the 4.23% mature-market premium) over years 6–10; growth after year 10 equals the 4.43% risk-free rate; and the return on new capital equals the cost of capital, so growth after year 10 adds no value. Taxes are 25% throughout: the reported −7.8% effective rate came from a one-off valuation-allowance release, and cash taxes were $61.5M on $103.8M of pre-tax income. Restricted stock units (12.2M) are counted as shares, as the spreadsheet suggests; the 0.1M options are valued separately.
 
 | Bridge | Status quo | At the optimal debt ratio |
 | :---- | ----: | ----: |
-| Present value of 2025–2030 cash flows | $1,303.2M |  |
-| Present value of terminal value | $2,596.7M |  |
-| Enterprise value | $3,899.8M | $4,017.7M |
+| Present value of cash flows, years 1–10 (2025–2034) | $1,642.7M |  |
+| Present value of terminal value | $2,200.5M |  |
+| Enterprise value | $3,843.2M | $3,982.3M |
 | − Debt | $1,285.0M |  |
 | + Cash, at face value: it earns interest at market rates, so no discount; no cross holdings or minority interests | $259.3M |  |
-| − Options and restricted stock units | $187.0M |  |
-| Value per share (171.6M shares) | $15.66 | $16.35 |
+| − Options (restricted units are counted as shares) | $1.6M |  |
+| Value per share (183.8M shares, including 12.2M restricted units) | $15.32 | $16.08 |
 
-**The terminal-value method.** The simplest method takes the 2030 cash flow and grows it at 2.5% a year forever. That gives $24.29 a share, but it overstates the value. In 2030, SolarWinds spends almost nothing beyond replacing worn-out equipment, and customers prepay $46M more than the year before. Both push cash flow above operating income, so the company looks like it is growing without reinvesting anything. That can't last forever. Growing 2.5% a year when new capital earns its 8.23% cost means reinvesting about 30% of operating income each year. We use that reinvestment instead, which gives $15.66 a share.
+**Why this terminal value.** The spreadsheet's terminal cash flow reinvests 51% of after-tax operating income (growth ÷ return on capital, 4.43% ÷ 8.66%), so the company pays for the growth it is credited with. Capitalizing the year-10 cash flow without that reinvestment would assume growth for free and overstate the value.
 
-**Sensitivity.** The value depends most on two terminal judgments. A higher return on new capital would add value:
+**Sensitivity.** The terminal value is 57% of the total, and the two defaults behind it pull in opposite directions. Growth in perpetuity at 2.5% instead of the risk-free rate takes the value to $14.52. Reinvesting almost nothing, as the plan itself assumes, takes it to $16.94. We keep the defaults: the first is the spreadsheet's rule that growth cannot outrun the economy forever, and the second is the sign of a plan that expects growth without paying for it.
 
-| Return on new capital after 2030 | 8.23% (used) | 10% | 12% | 15% | 20% |
-| :---- | ----: | ----: | ----: | ----: | ----: |
-| Value per share | $15.66 | $16.83 | $17.73 | $18.64 | $19.54 |
-
-The stable beta matters as much. At 0.80 the value is $17.24; at 1.46, today's business risk relevered at 21% debt, it is $12.96.
-
-**What if the plan is wrong.** The plan carries more of the value than the terminal assumptions do. With revenue growing at the 2022–2024 rate of 5.25% instead of 8.12%, the value falls to $12.65 a share, and to $7.79 if margins also stay at 2024's 29.1%. The margin expansion matters more than the growth. The market price of $15.18 sat between the history-based $12.65 and the plan-based $15.66, nearer the plan, though the market had not seen the plan: it was published in March 2025, seven weeks after the valuation date.
+**What if the plan is wrong.** The plan carries more of the value than the terminal assumptions do. With revenue growing at the 2022–2024 rate of 5.25% instead of 8.12%, the value falls to $12.65 a share, and to $7.77 if margins also stay at 2024's 29.1%. The margin expansion matters more than the growth. The market price of $15.18 sat between the history-based $12.65 and the plan-based $15.32, nearer the plan, though the market had not seen the plan: it was published in March 2025, seven weeks after the valuation date.
 
 ### Relative valuation
 
@@ -216,17 +197,17 @@ The stable beta matters as much. At 0.80 the value is $17.24; at 1.46, today's b
 | Enterprise value / revenue | 4.56x | 3.32x | $8.34 |
 | Price / book | 1.86x | 4.58x | not used |
 
-The peers are the eight US filers in Jefferies' fairness-opinion set. EV/EBITDA is the best multiple here: it is not distorted by SolarWinds' debt or one-time items, while revenue multiples ignore that peer margins range from −18% to 31%, and book equity rests on buyout goodwill. EV/EBITDA gives $19.95 and price to earnings about $16.24, a range that takes in the $15.66 DCF value and sits just above the $15.18 market price.
+The peers are the eight US filers in Jefferies' fairness-opinion set. EV/EBITDA is the best multiple here: it is not distorted by SolarWinds' debt or one-time items, while revenue multiples ignore that peer margins range from −18% to 31%, and book equity rests on buyout goodwill. EV/EBITDA gives $19.95 and price to earnings about $16.24, a range above both the $15.32 DCF value and the $15.18 market price.
 
 ### Value with changes
 
-The financing change in section 6 raises value to $16.35 a share, a gain of $0.69 ($117.9M). The gain is modest because the stable period already assumes the 21% optimum, so only 2025–2030 benefits. The operating changes are not priced separately: the margin expansion is already in management's plan.
+The financing change in section 6 raises value to $16.08 a share, a gain of $0.76 ($139.1M). The gain is modest because the spreadsheet already moves the cost of capital to a mature-company level after year 5, so only the first five years benefit. The operating changes are not priced separately: the margin expansion is already in management's plan.
 
 **Likelihood of change.** Under the sponsors it was low. In 2024 they chose a special dividend over repaying debt. Control did change in 2025, when the sponsors sold the company for $18.50 a share, but the buyer added $2,750M of new term loans, more than double the $1,285.0M SolarWinds carried, so the move to the optimal debt ratio did not happen.
 
 ## Conclusion
 
-SolarWinds is a steady business with a poor financial structure. Customers stay, and the business needs little capital to run. But it earns less than its cost of capital on the price paid for it, carries about $468M more debt than it should, and in 2024 paid out more cash than it generated. The fix is simple: use free cash flow to repay debt until it is about 21% of capital, pause special dividends until then, and only fund projects that earn more than they cost. On management's plan, the shares are worth $15.66, a little above the $15.18 market price.
+SolarWinds is a steady business with a poor financial structure. Customers stay, and the business needs little capital to run. But it earns less than its cost of capital on the price paid for it, carries about $468M more debt than it should, and in 2024 paid out more cash than it generated. The fix is simple: use free cash flow to repay debt until it is about 21% of capital, pause special dividends until then, and only fund projects that earn more than they cost. On management's plan, the shares are worth $15.32, in line with the $15.18 market price.
 
 | Principle | What SolarWinds does | What it should do |
 | :---- | :---- | :---- |
@@ -234,8 +215,8 @@ SolarWinds is a steady business with a poor financial structure. Customers stay,
 | Investment | Earns 6.66% against a 10.67% cost of capital on a capital base of buyout goodwill | Hold new spending to a return above the cost of capital |
 | Financing | 33% debt against a 21% optimum; the right type of debt, too much of it | Repay about $468.1M from free cash flow to equity before any special dividend |
 | Dividends | Pays out more than it generates, in special dividends, while over-levered | Repay debt before returning more cash |
-| Valuation | Worth $15.66 a share on management's plan, 3% above the market price | Worth $16.35 with debt at the optimum; most of the value rests on the plan's margin expansion |
+| Valuation | Worth $15.32 a share on management's plan, 1% above the market price | Worth $16.08 with debt at the optimum; most of the value rests on the plan's margin expansion |
 
 ## Sources
 
-SolarWinds Forms 10-K (FY2018, FY2020, FY2023, FY2024), 2024 proxy statement, 2018 IPO prospectus, Forms 8-K (October 2022, February and April 2025) and merger information statement (March 2025, including the Goldman Sachs and Jefferies fairness opinions and management's plan); Damodaran datasets as of January–February 2025; FRED (10-year Treasury, SOFR); peer companies' fiscal-2024 Forms 10-K and February 5, 2025 closing prices; US Department of Justice press release on interlocking directorates (October 19, 2022).
+SolarWinds Forms 10-K (FY2018, FY2020, FY2023, FY2024), 2024 proxy statement, 2018 IPO prospectus, Forms 8-K (October 2022, February and April 2025) and merger information statement (March 2025, including the Goldman Sachs and Jefferies fairness opinions and management's plan); Damodaran datasets as of January–February 2025; FRED (10-year Treasury, SOFR); peer companies' fiscal-2024 Forms 10-K and February 5, 2025 closing prices; US Department of Justice press release on interlocking directorates (October 19, 2022); Damodaran, fcffsimpleginzu.xlsx (February 2026 edition, pages.stern.nyu.edu/~adamodar/pc/).

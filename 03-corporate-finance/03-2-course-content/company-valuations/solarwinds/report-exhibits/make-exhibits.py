@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Build the final-report charts and tables for SolarWinds from the model output and the ledger.
 
-Every number is read from ../model-output.md or ../inputs.yaml; none is typed in here.
+Every number is read from ../model-output.md or ../inputs.yaml; none is typed in here. One exception:
+if ../professor-spreadsheet/exhibit-values.yaml exists, the DCF bars in exhibit 4 come from it (the
+final report's DCF runs in the professor's fcffsimpleginzu.xlsx since 2026-11-03) and the model's
+DCF is the cross-check. Delete that file to draw the model's DCF range instead.
 Re-run after the model changes:  python3 make-exhibits.py   (needs matplotlib and pyyaml)
 Writes exhibit-1..5 PNGs and exhibits.md into this folder.
 """
@@ -17,6 +20,8 @@ HERE = pathlib.Path(__file__).resolve().parent
 SWI = HERE.parent
 MODEL = (SWI / "model-output.md").read_text()
 LEDGER = yaml.safe_load((SWI / "inputs.yaml").read_text())
+SHEET_FILE = SWI / "professor-spreadsheet" / "exhibit-values.yaml"
+SHEET = yaml.safe_load(SHEET_FILE.read_text()) if SHEET_FILE.exists() else None
 
 # Palette: categorical slots 1-2 from the dataviz reference palette (validated light-mode pair), plus text/muted tokens.
 BLUE, ORANGE = "#2a78d6", "#eb6834"
@@ -155,16 +160,27 @@ finish(fig, ax, f"Over 2022–2024 SolarWinds returned {money(num(tot['Cash retu
 
 # ---------- Exhibit 4: value per share, football field ----------
 sens_vals = [num(r["Value per share"]) for r in sens]
-ranges = [
-    ("Our DCF", min(sens_vals), max(sens_vals), BLUE),
+others = [
     ("Peer multiples", peer_low, peer_high, MUTED),
     ("Jefferies DCF", jf_low, jf_high, MUTED),
     ("Goldman Sachs DCF", gs_low, gs_high, MUTED),
 ]
+if SHEET:
+    v = SHEET["value_per_share"]
+    dcf_value = float(v["status_quo"])
+    ranges = [("Our DCF: plan", dcf_value, float(v["optimal_debt_ratio"]), BLUE),
+              ("Our DCF: stress cases", float(v["stress_2024_margin"]), float(v["stress_plan_margins"]), BLUE)] + others
+    dcf_subtitle = (f"Our DCF: ${dcf_value:.2f} status quo, ${v['optimal_debt_ratio']:.2f} at the optimal debt ratio; "
+                    f"stress ${v['stress_2024_margin']:.2f}–${v['stress_plan_margins']:.2f}; peers: EV/Revenue to EV/EBITDA")
+    dcf_source = f"Company and peer filings in {SHEET['source']}; bank ranges from the fairness opinions (information statement)"
+else:
+    ranges = [("Our DCF", min(sens_vals), max(sens_vals), BLUE)] + others
+    dcf_subtitle = f"Our DCF range: stable return on capital {min(num(r['Stable ROIC']) for r in sens):.2f}%–{max(num(r['Stable ROIC']) for r in sens):.0f}%; peers: EV/Revenue to EV/EBITDA"
+    dcf_source = "Calculated from company and peer filings; bank ranges from the fairness opinions in SolarWinds' March 2025 information statement"
 fig, ax = plt.subplots(figsize=(7, 3.9))
 for i, (lab, lo, hi, c) in enumerate(ranges):
     ax.barh(i, hi - lo, left=lo, height=0.5, color=c, alpha=1 if c == BLUE else 0.55, zorder=3)
-    if c != BLUE:
+    if lo != dcf_value:
         ax.text(lo - 0.25, i, f"${lo:.2f}", ha="right", va="center", fontsize=8.5, color=INK)
     ax.text(hi + 0.25, i, f"${hi:.2f}", ha="left", va="center", fontsize=8.5, color=INK)
 ax.scatter([dcf_value], [0], s=80, color=BLUE, edgecolor=SURFACE, linewidth=2, zorder=5)
@@ -179,8 +195,7 @@ ax.set_xlim(min(r[1] for r in ranges) - 2.5, max(r[2] for r in ranges) + 2.5)
 ax.set_ylim(-0.8, len(ranges) - 0.1)
 ax.grid(axis="y", visible=False)
 finish(fig, ax, f"Our DCF says ${dcf_value:.2f}; the $18.50 deal sits inside both banks' ranges",
-       f"Our DCF range: stable return on capital {min(num(r['Stable ROIC']) for r in sens):.2f}%–{max(num(r['Stable ROIC']) for r in sens):.0f}%; peers: EV/Revenue to EV/EBITDA",
-       "Calculated from company and peer filings; bank ranges from the fairness opinions in SolarWinds' March 2025 information statement", "exhibit-4-value-per-share.png", left=0.27)
+       dcf_subtitle, dcf_source, "exhibit-4-value-per-share.png", left=0.27)
 
 # ---------- Exhibit 5: ownership ----------
 pairs = [(h["name"], h["pct"] * 100) for h in holders]
@@ -210,17 +225,21 @@ coc_items = ["Risk-free rate", "Unlevered beta", "Levered beta", "Equity risk pr
              "Pre-tax cost of debt", "Marginal tax rate", "After-tax cost of debt", "Debt ratio (D/V)", "Cost of capital (WACC)"]
 coc = [find(s1, "Item", i) for i in coc_items]
 sched = [r for r in schedule if num(r["Debt ratio"]) <= 50]
+sheet_note = ("" if not SHEET else
+              "\n**The DCF bars in exhibit 4 are the professor's spreadsheet's values** (fcffsimpleginzu.xlsx, February 2026 edition; "
+              "[professor-spreadsheet/results.md](../professor-spreadsheet/results.md), via [exhibit-values.yaml](../professor-spreadsheet/exhibit-values.yaml)), "
+              "which is the final report's DCF since 2026-11-03. The DCF tables below are the repo model's, kept as the cross-check.\n")
 md = f"""---
 title: "SolarWinds (SWI) — Final Report Exhibits"
 status: active
 owner: weprintmoney
 created: 2026-11-01
-last_updated: 2026-11-01
+last_updated: 2026-11-03
 ---
 
 # SolarWinds (SWI) — Final Report Exhibits
 
-Charts and tables for the final report, in the order of the course's nine project questions, as the example reports use them ([../../../../03-1-course-overview/final-project/report-format.md](../../../../03-1-course-overview/final-project/report-format.md)). All are generated by [make-exhibits.py](make-exhibits.py) from [model-output.md](../model-output.md) and the [ledger](../inputs.yaml); re-run it after any model change. The example reports lean on tables, so each chart below is one the grader would otherwise have to work out from a table.
+Charts and tables for the final report, in the order of the course's nine project questions, as the example reports use them ([../../../../03-1-course-overview/final-project/report-format.md](../../../../03-1-course-overview/final-project/report-format.md)). All are generated by [make-exhibits.py](make-exhibits.py) from [model-output.md](../model-output.md) and the [ledger](../inputs.yaml), plus [professor-spreadsheet/exhibit-values.yaml](../professor-spreadsheet/exhibit-values.yaml) for the DCF bars in exhibit 4 when it exists; re-run it after any model change. The example reports lean on tables, so each chart below is one the grader would otherwise have to work out from a table.
 
 ## Question 1 — Who holds the power
 
@@ -252,7 +271,7 @@ Charts and tables for the final report, in the order of the course's nine projec
 ## Question 9 — Valuation
 
 ![Exhibit 4: value per share](exhibit-4-value-per-share.png)
-
+{sheet_note}
 **DCF bridge**
 
 {md_table([r for r in bridge if not r["Bridge"].startswith(("Course-method", "Value per share (shortcut", "Value per share with"))], ["Bridge", "Amount"])}

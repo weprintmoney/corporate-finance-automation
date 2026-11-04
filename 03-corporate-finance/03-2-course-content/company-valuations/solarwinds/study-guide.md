@@ -20,6 +20,8 @@ This guide restates work done elsewhere in this folder. If a number here ever di
 
 **Headline results** (model-output.md): cost of capital 10.67%; DCF value $15.66 a share (1.03x the $15.18 unaffected price, 0.85x the $18.50 deal price), with the stable return on capital after 2030 equal to the 8.23% stable cost of capital, falling to $12.65 to $7.79 if revenue grows at the historical 5.25% instead of the plan's 8.12%; optimal debt ratio 21%, against the actual 33%.
 
+> 2026-11-03: the final report's DCF (section 9 of [final-report.md](final-report.md)) now runs in the professor's spreadsheet, fcffsimpleginzu.xlsx (February 2026 edition): $15.32 a share at the status quo, $16.08 at the optimal debt ratio, $12.65 and $7.77 in the stress cases ([professor-spreadsheet/results.md](professor-spreadsheet/results.md)). The model-output.md figures quoted in this guide ($15.66, $16.35, $12.65 / $9.57 / $7.79, and the stable-beta and stable-ROIC sensitivities) are the repo's cross-check.
+
 ## Documents of origin
 
 The documents this valuation was built from. Each link opens the repo's copy: filings converted from SEC EDGAR to markdown, and market data saved as of the analysis date. The full manifest, with fetch dates, is [sources/README.md](sources/README.md). In each lesson's "Where we got it" column, document names and paths link to these same files.
@@ -2170,6 +2172,7 @@ Full answers: [lesson-33.md](lesson-33.md) · Walkthrough: [Step 33](walkthrough
 9. Answer the project questions. Status-quo value: $15.66 a share, enterprise value $3,899.8M. What I would change: financing first (repay about $468.1M), then dividends (do not pay out more than FCFE while debt is above optimum; 2024 returned $194.7M against $127.0M), then raise the bar for growth spending. Value with changes: $16.35. Value of control: $0.69 a share. Likelihood: low for the financing change under the existing owners.
 
 **Result for SolarWinds:** The status-quo DCF is $15.66 a share (1.03x the $15.18 unaffected price and 0.85x the $18.50 deal price); moving to the optimal 21% debt adds $0.69, giving $16.35, while cutting the plan's growth to the historical 5.25% takes away $3.01 to $7.87.
+*2026-11-03: in the final report this answer comes from the professor's spreadsheet: $15.32 status quo, $16.08 with the financing change (lever $0.76), stress $12.65 / $7.77 ([professor-spreadsheet/results.md](professor-spreadsheet/results.md)); the figures above are the model's cross-check.*
 Full answers: [lesson-34.md](lesson-34.md) · Walkthrough: [Step 34](walkthrough.md#step-34-what-is-solarwinds-worth-as-it-is-run-today-and-what-would-a-better-owner-add)
 
 ## Lesson 35 — Relative Valuation
@@ -2292,4 +2295,5 @@ Full answers: [lesson-35.md](lesson-35.md) · Walkthrough: [Step 35](walkthrough
 8. State the verdict: for a public holder $18.50 was a full price. It is 18% above our $15.66 intrinsic value on management's plan and 22% above the unaffected price: it paid for the plan in full and a premium on top, which a public holder could not have earned alone. It is also above every price in the unaffected record ($15.18 was the 52-week high), above the highest 2023 indication ($13.00) and inside both banks' ranges. Reaching it needs a stable return on capital of about 14.4% forever, or a stable beta nearer 0.8, and the plan itself is the bet: at historical growth the shares are worth $12.65 with the plan's margins, $9.57 and $7.79 with margins held. What remains open is whether another buyer would have paid more.
 
 **Result for SolarWinds:** The course-method DCF is $15.66 a share, 1.03x the $15.18 unaffected price and 0.85x the $18.50 deal price; the deal price needs a stable return on capital of about 14.4% forever, or a stable beta nearer 0.8, against the 8.23% stable cost of capital we set the return equal to, so $18.50 was a full price for a public holder: 18% above intrinsic value on the plan and 22% above the market, paying for the plan in full and a premium on top.
+*2026-11-03: in the final report the DCF is the professor's spreadsheet's $15.32 (1.01x the market price, 0.83x the deal price; [professor-spreadsheet/results.md](professor-spreadsheet/results.md)); the verdict is the same, and the figures above are the model's cross-check.*
 Full answers: [lesson-36.md](lesson-36.md) · Walkthrough: [Step 36](walkthrough.md#step-36-was-1850-a-good-price-and-what-is-the-story-of-solarwinds)

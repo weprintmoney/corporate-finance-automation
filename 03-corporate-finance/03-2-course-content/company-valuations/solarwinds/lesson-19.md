@@ -48,3 +48,5 @@ Figures are quoted from model-output.md §3, §4 and §6.
 ## Notes
 
 Moving to the optimum is worth between $0.69 and $1.28 a share depending on the measure (§6, §9). The recommendation, about 15%, is a cushion that leaves the unconstrained 21% as the ceiling. Lesson 20 asks whether the 2023 shock should be larger once a lower rating hurts customer relationships. The terminal-value choice in lesson 32, not the debt ratio, drives the valuation.
+
+- 2026-11-03 — In the final report the DCF measure of this gain now comes from the professor's spreadsheet, fcffsimpleginzu.xlsx (February 2026 edition): $16.08 at the optimal cost of capital of 10.03% against $15.32 at the status quo, a lever of $0.76 a share ($139.1M) (`professor-spreadsheet/results.md`). The model's $16.35 / $15.66 / $0.69 above are the repo's cross-check.
