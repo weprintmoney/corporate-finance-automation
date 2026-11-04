@@ -35,3 +35,5 @@ last_updated: 2026-11-03
 ## Notes
 
 This lesson fixes the method: free cash flow to the firm at the cost of capital, then debt, cash and options to get to a share price (model-output.md §6). The change in the debt ratio after the deal is why lesson 34 keeps the status quo cost of capital for the 2025–2030 value and treats the optimal ratio as a separate lever.
+
+- 2026-11-03 — The final report's DCF (section 9) now runs in the professor's spreadsheet, fcffsimpleginzu.xlsx (February 2026 edition), by the same firm-value method: $15.32 a share at the status quo, $16.08 at the optimal debt ratio, $12.65 and $7.77 in the stress cases (`professor-spreadsheet/results.md`). The model's $15.66 (model-output.md §6) is the repo's cross-check.

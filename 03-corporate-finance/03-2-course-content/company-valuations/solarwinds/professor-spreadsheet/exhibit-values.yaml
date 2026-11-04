@@ -1,0 +1,9 @@
+# Per-share values from the professor's fcffsimpleginzu.xlsx (Feb 2026 edition), run 2026-11-03.
+# Read by ../report-exhibits/make-exhibits.py for the DCF bars in exhibit 4. Source of each number: results.md.
+# Delete this file to fall back to the repo model's DCF (model-output.md §6).
+source: "Damodaran fcffsimpleginzu.xlsx (Feb 2026)"
+value_per_share:
+  status_quo: 15.32      # Valuation output B33
+  optimal_debt_ratio: 16.08   # cost of capital 10.03%
+  stress_plan_margins: 12.65  # revenue growth 5.25%, plan margins
+  stress_2024_margin: 7.77    # revenue growth 5.25%, margin held at 29.11%

@@ -51,3 +51,5 @@ last_updated: 2026-11-03
 ## Notes
 
 Lesson 35 is the market's answer, to be set against the DCF's. SolarWinds trades at a discount on cash-earnings multiples and a premium on revenue; the peer-median EV / EBITDA implies $19.95, above the $18.50 deal and above the $15.18 unaffected price. Lesson 36 combines this with the DCF. Limits: six to eight peers, none a direct competitor, medians pulled up by Qualys, and a standardized EBITDA that burdens stock compensation. Jefferies applied 9x to 12x to company-adjusted EBITDA, a different base (`facts.jefferies-public-comps-range`); on our $282.8M the same multiples would not be comparable.
+
+- 2026-11-03 — The final report's DCF (section 9) now runs in the professor's spreadsheet, fcffsimpleginzu.xlsx (February 2026 edition): $15.32 a share (`professor-spreadsheet/results.md`), so the EV / EBITDA point of $19.95 sits $4.63 above it and the P/E cross-check of about $16.24 sits above both the DCF and the $15.18 market price. The $15.66 above is the repo model's cross-check.

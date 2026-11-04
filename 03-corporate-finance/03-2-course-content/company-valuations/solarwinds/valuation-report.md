@@ -88,6 +88,8 @@ The 2024 dividend paid out more than the year generated and ran the cash balance
 
 ## 6. Discounted cash flow
 
+> 2026-11-03: the final report's DCF ([final-report.md](final-report.md) section 9) now runs in the professor's spreadsheet, fcffsimpleginzu.xlsx: $15.32 a share at the status quo, $16.08 at the optimal debt ratio, $12.65 and $7.77 in the stress cases ([professor-spreadsheet/results.md](professor-spreadsheet/results.md)). This section is the repo model's DCF (model §6), kept as the cross-check; its $15.66 differs from the sheet mainly in the terminal defaults (8.23% stable cost of capital and 2.5% growth here, against the sheet's 8.66% and 4.43%) and in reinvestment (the plan's, against the sheet's sales-to-capital default).
+
 Cash flows are management's 2025–2030 forecast (`forecast.years`) with stock-based compensation charged as an expense: free cash flow to the firm rises from $212.0M to $419.0M. They are discounted at 10.67% (model §6). The terminal value is capitalized at the stable-period cost of capital of 8.23% and discounted back to today at 10.67%.
 
 The forecast is the main judgment, so model §6 also reruns it with revenue growing at the 2022–2024 rate of 5.25% instead of the plan's 8.12% (`forecast.stress_cases`), with the same terminal method:
@@ -147,6 +149,8 @@ The multiples disagree, and for a reason:
 Read together, the multiples span $8.34 to $19.95 and bracket both prices. They do not overturn the DCF. The market was not mispricing SolarWinds against its peers at $15.18.
 
 ## 8. Final narrative
+
+> 2026-11-03: the figures below are the repo model's; the final report's answer, from the professor's spreadsheet, is $15.32 a share (1.01 times the market price, 0.83 times the deal price), with the same conclusion ([professor-spreadsheet/results.md](professor-spreadsheet/results.md)).
 
 On the rates of 2025-02-05, SolarWinds as run was worth about $15.66 a share to a diversified investor, on management's plan. That is 3% above the $15.18 it traded at (1.03 times) and 85% of the $18.50 Turn/River paid. The market price was 3% below intrinsic value on the plan (my arithmetic from the 1.03 times); it sat between the history-based $12.65 and the plan-based $15.66 (model §6), nearer the plan, and it did so without having seen the plan, which was published in the information statement on 2025-03-27. Three things could close the $2.84 gap to the deal price ($18.50 − $15.66), and only one is in this model:
 - **Financing:** moving to the optimal debt ratio is worth $0.69 a share (model §6).
