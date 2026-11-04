@@ -179,10 +179,13 @@ def main(path):
     rating_actual = L.get("debt.rating_actual")
     if kd_source == "observed" and kd_observed is not None:
         kd, kd_label = kd_observed, "observed rate on the company's own debt"
+        kd_basis = "at its observed rate"
     elif kd_source == "actual_rating" and rating_actual and spread_for_rating(rating_actual, table) is not None:
         kd, kd_label = tb + spread_for_rating(rating_actual, table), "government bond rate plus the spread for the {} agency rating".format(rating_actual)
+        kd_basis = "at the {} agency rating's spread".format(rating_actual)
     else:
         kd, kd_label = tb + syn_spread, "government bond rate plus the synthetic-rating spread ({})".format(syn_rating)
+        kd_basis = "at the synthetic {} rating's spread on the base year's interest expense".format(syn_rating)
     teff = t if interest <= ebit else t * max(ebit, 0) / interest
     wacc = (1 - d) * ke + d * kd * (1 - teff)
 
@@ -507,8 +510,8 @@ def main(path):
                 print()
                 print("| Measure | Gain | Per basic share | Basis |")
                 print("|---|---|---|---|")
-                print("| DCF at the optimal cost of capital (this section) | {} | ${:.2f} | Status quo at {}, which prices today's debt at its observed rate; optimum at {} from the section 3 schedule. Discounts the forecast cash flows |".format(
-                    money(ev2 - ev), (ev2 - ev) / sb, pct(wacc), pct(res["w_opt"])))
+                print("| DCF at the optimal cost of capital (this section) | {} | ${:.2f} | Status quo at {}, which prices today's debt {}; optimum at {} from the section 3 schedule. Discounts the forecast cash flows |".format(
+                    money(ev2 - ev), (ev2 - ev) / sb, pct(wacc), kd_basis, pct(res["w_opt"])))
                 print("| Annual savings capitalized (section 3) | {} | ${:.2f} | Both ends on the schedule's synthetic rates ({} to {}); savings on firm value {} grown at g in perpetuity |".format(
                     money(res["gain"]), res["gain"] / sb, pct(res["w_cur"]), pct(res["w_opt"]), money(V)))
                 print("| Adjusted present value (section 9) | see section 9 | | Tax benefits less expected bankruptcy cost, at debt.bankruptcy_cost |")

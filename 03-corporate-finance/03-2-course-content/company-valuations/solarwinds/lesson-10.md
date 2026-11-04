@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 10: Bottom-up Betas"
 status: active
 owner: weprintmoney
 created: 2026-10-25
-last_updated: 2026-10-25
+last_updated: 2026-11-03
 ---
 
 # SolarWinds (SWI) — Lesson 10: Bottom-up Betas
@@ -22,7 +22,7 @@ last_updated: 2026-10-25
     - Question for SolarWinds: If SolarWinds has businesses with different risk, what hurdle rate should each carry, which one is riskier than the company as a whole, and where would using one company-wide rate lead to the wrong investment decision?
     - Sources needed: Any split of the firm into businesses with different risk; the company-wide hurdle rate; a beta for each candidate business.
     - Where to find: 10-K note 16 and MD&A; model-output.md §1; industry beta file.
-    - Answer: The company-wide hurdle rates are a 12.65% cost of equity and a 10.23% cost of capital (model-output.md §1). The filings support one business, so each carries that rate. The candidate for a riskier piece is the newer observability subscription work (growing, 30.0% subscription revenue growth in 2024, facts.subscription-growth-2024) against the maintenance base that is shrinking (maintenance revenue fell 4.6%, facts.maintenance-decline-2024). If it were split out, the right comparison would be a higher-beta group such as Software (Internet) at 1.60 unlevered (facts.industry-beta-software-internet), against 1.22 for the whole. That figure is an illustration of the gap, not a ledger input: there is no revenue, profit or capital figure for observability alone, so no weighted average can be built. Where one rate misleads: a single 10.23% bar is too low for a bet on a new observability product and too high for a renewal-driven maintenance conversion. The practical risk is capital spent on acquisitions at the company-wide rate; the balance sheet carries $2,363.2M of goodwill (`company.goodwill`), mostly from the 2016 buyout. Whether a project clears 10.23% is a coarse test for either business.
+    - Answer: The company-wide hurdle rates are a 12.65% cost of equity and a 10.67% cost of capital (model-output.md §1). The filings support one business, so each carries that rate. The candidate for a riskier piece is the newer observability subscription work (growing, 30.0% subscription revenue growth in 2024, facts.subscription-growth-2024) against the maintenance base that is shrinking (maintenance revenue fell 4.6%, facts.maintenance-decline-2024). If it were split out, the right comparison would be a higher-beta group such as Software (Internet) at 1.60 unlevered (facts.industry-beta-software-internet), against 1.22 for the whole. That figure is an illustration of the gap, not a ledger input: there is no revenue, profit or capital figure for observability alone, so no weighted average can be built. Where one rate misleads: a single 10.67% bar is too low for a bet on a new observability product and too high for a renewal-driven maintenance conversion. The practical risk is capital spent on acquisitions at the company-wide rate; the balance sheet carries $2,363.2M of goodwill (`company.goodwill`), mostly from the 2016 buyout. Whether a project clears 10.67% is a coarse test for either business.
 
 ## Module 1 Step — Questions for This Lesson
 

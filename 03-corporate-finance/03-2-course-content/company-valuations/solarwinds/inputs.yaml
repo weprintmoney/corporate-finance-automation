@@ -43,7 +43,7 @@ modeling_choices:
   sbc_treatment: expense
   firm_value_basis: market
   beta_source: bottom_up
-  kd_source: observed
+  kd_source: synthetic          # course method: the professor's spreadsheets build the cost of debt from a rating (B- from 1.85x coverage, 8.85%); the loan's 7.11% stays in debt.kd_pretax_observed as the cross-check
   terminal_method: consistent_reinvestment
   rd_amortizable_life: 3        # Damodaran's lookup table (lesson 14 return calculator): Computer Software & Svcs = 3 years
 
