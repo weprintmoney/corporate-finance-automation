@@ -28,7 +28,7 @@ last_updated: 2026-11-03
   Against the eight peers (`peers`) it is an outlier in 2024: a 150% dividend payout against a peer median of 0.0 among those with a recorded payout, and 27.22% for the wider software group (facts.sector-software-payout). Counting buybacks, 174% of net income against the group's 80.36%. Over the three years it looks closer: $224.6M returned in all (§5), mostly in one year.
 
 - **Given how much other companies in the sector are returning to stockholders, is your company returning too much or too little?**
-  In 2024, too much against the sector and against the regression's 18.2%; it also exceeded its own FCFE by 53%. Over 2023–2024 together it returned 115% of FCFE ($213.5M against $186.4M, §5), which is not far above capacity. Given returns on capital below the cost of capital (§8: 6.66% against 10.23%), returning cash is the right direction; the issue is that it was lumpy and paid to a holder base where two sponsors held 66.35% (`governance.controlling_holders`).
+  In 2024, too much against the sector and against the regression's 18.2%; it also exceeded its own FCFE by 53%. Over 2023–2024 together it returned 115% of FCFE ($213.5M against $186.4M, §5), which is not far above capacity. Given returns on capital below the cost of capital (§8: 6.66% against 10.67%), returning cash is the right direction; the issue is that it was lumpy and paid to a holder base where two sponsors held 66.35% (`governance.controlling_holders`).
 
 ## Notes
 

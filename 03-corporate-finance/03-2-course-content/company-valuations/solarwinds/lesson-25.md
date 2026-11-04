@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 25: Three Schools of Thought on Dividends"
 status: active
 owner: weprintmoney
 created: 2026-10-25
-last_updated: 2026-10-25
+last_updated: 2026-11-03
 ---
 
 # SolarWinds (SWI) — Lesson 25: Three Schools of Thought on Dividends
@@ -38,10 +38,10 @@ last_updated: 2026-10-25
 ## Cumulative Project — Questions for This Lesson
 
 - **What does the trade off on dividends look like for your firm? (What are the benefits of paying more dividends? What are the costs of paying more dividends?)**
-  Benefits: the return on invested capital is 6.66% against a 10.23% cost of capital (lesson 22), so cash kept inside is not earning its cost; the controlling holders can use cash directly. Costs: debt is $468.1M above the optimum, so a dollar paid out is a dollar not repaying 7.11% debt; the credit agreement restricts payments and the 2024 payout already exceeded free cash flow to equity by $67.7M (model-output.md §5); a regular dividend would send the wrong signal during the subscription transition. Tax costs to the holders are unknown.
+  Benefits: the return on invested capital is 6.66% against a 10.67% cost of capital (lesson 22), so cash kept inside is not earning its cost; the controlling holders can use cash directly. Costs: debt is $468.1M above the optimum, so a dollar paid out is a dollar not repaying 7.11% debt; the credit agreement restricts payments and the 2024 payout already exceeded free cash flow to equity by $67.7M (model-output.md §5); a regular dividend would send the wrong signal during the subscription transition. Tax costs to the holders are unknown.
 
 - **Given that trade off, do you think that your company should be paying high, low or no dividends?**
-  No regular dividend, and no special dividend until debt is near the 21% optimum. The cash should repay debt first (lesson 22's path). Once the ratio is near optimum and projects still earn less than 10.23%, return the excess, by special dividend rather than a regular one, so the payout carries no growth signal.
+  No regular dividend, and no special dividend until debt is near the 21% optimum. The cash should repay debt first (lesson 22's path). Once the ratio is near optimum and projects still earn less than 10.67%, return the excess, by special dividend rather than a regular one, so the payout carries no growth signal.
 
 ## Notes
 

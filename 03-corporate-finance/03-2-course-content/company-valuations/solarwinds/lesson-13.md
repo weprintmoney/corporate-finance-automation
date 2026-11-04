@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 13: Weights for Cost of Capital"
 status: active
 owner: weprintmoney
 created: 2026-10-25
-last_updated: 2026-10-25
+last_updated: 2026-11-03
 ---
 
 # SolarWinds (SWI) — Lesson 13: Weights for Cost of Capital
@@ -22,7 +22,7 @@ last_updated: 2026-10-25
     - Question for SolarWinds: What is SolarWinds' cost of capital, and should different parts of the business carry different hurdle rates? If the company reports one segment but runs businesses with different risk and growth, what would the divisional rates be?
     - Sources needed: Cost of equity, cost of debt, weights; segment information.
     - Where to find: model-output.md §1; 10-K note 16; `beta.segments` (listed in `meta.omitted`: one segment).
-    - Answer: The cost of capital is 10.23% (model-output.md §1): 66.97% × 12.65% cost of equity + 33.03% × 5.33% after-tax cost of debt. Cost of equity is 4.43% risk-free + 1.6714 levered beta × 4.92% weighted equity risk premium. It is the minimum return a new investment must earn on its capital for SolarWinds' owners and lenders to come out ahead. Divisions: SolarWinds reports one segment and gives no profit or capital by product line, so there are no divisional rates, and a split could not be built from the filings without inventing weights (lesson 10). If one were tried, the observability subscription business would carry a higher unlevered beta than the maintenance base, so a rate above 10.23% for new product bets and below it for renewal conversions. That is a reason to treat 10.23% as a company-wide hurdle with judgment on top, not a measured divisional schedule.
+    - Answer: The cost of capital is 10.67% (model-output.md §1): 66.97% × 12.65% cost of equity + 33.03% × 6.64% after-tax cost of debt. Cost of equity is 4.43% risk-free + 1.6714 levered beta × 4.92% weighted equity risk premium. It is the minimum return a new investment must earn on its capital for SolarWinds' owners and lenders to come out ahead. Divisions: SolarWinds reports one segment and gives no profit or capital by product line, so there are no divisional rates, and a split could not be built from the filings without inventing weights (lesson 10). If one were tried, the observability subscription business would carry a higher unlevered beta than the maintenance base, so a rate above 10.67% for new product bets and below it for renewal conversions. That is a reason to treat 10.67% as a company-wide hurdle with judgment on top, not a measured divisional schedule.
 
 ## Cumulative Project — Questions for This Lesson
 
@@ -39,10 +39,10 @@ last_updated: 2026-10-25
   One business, so 1.6714. No segment betas are in the ledger.
 
 - **What is the cost of capital of the firm, using market values for weights? How different would it have been, if you had used book values?**
-  10.23% at market weights. At book weights it is 9.19% (book debt share 47.28%; model-output.md §1), 1.04 points lower (10.23 − 9.19). The book version overweights debt, the cheaper source, and keeps the same cost of equity and cost of debt. Market weights are the right ones, because the cost of capital is what investors require on what their claims are worth today. The book comparison includes leases.
+  10.67% at market weights. At book weights it is 9.81% (book debt share 47.28%; model-output.md §1), 0.86 points lower (10.67 − 9.81). The book version overweights debt, the cheaper source, and keeps the same cost of equity and cost of debt. Market weights are the right ones, because the cost of capital is what investors require on what their claims are worth today. The book comparison includes leases.
 
 - **What are the costs of capital of each of the company's divisions/businesses?**
-  One business, so 10.23%.
+  One business, so 10.67%.
 
 ## Skipped
 
@@ -50,6 +50,8 @@ last_updated: 2026-10-25
 
 ## Notes
 
-This lesson fixes the weights: 33.03% debt and 66.97% equity at market value, giving a cost of capital of 10.23%. That number discounts the forecast cash flows in the DCF (model-output.md §6) and is the starting point for the optimal debt analysis (§3), where the current 33% is compared with an optimum of 21%. It is a hurdle rate for the company, and lesson 14 tests whether SolarWinds earned it. Hybrid securities: none. One class of common stock, and 50 million preferred shares authorized but none issued (`governance.share_classes`), and no convertible debt appears in the debt note, so there is nothing to split into debt and equity.
+This lesson fixes the weights: 33.03% debt and 66.97% equity at market value, giving a cost of capital of 10.67%. That number discounts the forecast cash flows in the DCF (model-output.md §6) and is the starting point for the optimal debt analysis (§3), where the current 33% is compared with an optimum of 21%. It is a hurdle rate for the company, and lesson 14 tests whether SolarWinds earned it. Hybrid securities: none. One class of common stock, and 50 million preferred shares authorized but none issued (`governance.share_classes`), and no convertible debt appears in the debt note, so there is nothing to split into debt and equity.
 
 The weights use the $15.18 unaffected price, not the $18.50 deal price, so the debt weight is not understated by the takeover premium.
+
+- 2026-11-03 — Cost of capital 10.67% (was 10.23%): the cost of debt is now the synthetic B- rate of 8.85% from lesson 12, not the loan's 7.11%. Book-weight comparison 9.81% (was 9.19%).

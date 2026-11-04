@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 15: Time Weighting Cash Flows"
 status: active
 owner: weprintmoney
 created: 2026-10-25
-last_updated: 2026-11-01
+last_updated: 2026-11-03
 ---
 
 # SolarWinds (SWI) — Lesson 15: Time Weighting Cash Flows
@@ -33,7 +33,7 @@ last_updated: 2026-11-01
 ## Cumulative Project — Questions for This Lesson
 
 - **If you can identify a typical project for your firm, what pattern of cash flows do you foresee for the project?**
-  A subscription customer. Cash comes in before the revenue is recognized, because customers pay annually or multi-annually in advance (deferred revenue $389.3M, `company.deferred_revenue`). Costs are small and spread out: hosting and support to serve the customer, and the sales cost to win or renew the contract. The platform investment sits in R&D of $108.6M (`company.rd_expense`) and capex of $20.5M (`company.capex`) a year, both low against revenue of $796.9M (`company.revenue`). The 2024 history row shows the same pattern at company level: capex of $20.5M against D&A of $74.4M (`company.history`, 2024). The pattern has three phases: the first invoice (cash in), ratable recognition over the term, and renewal. Value depends on the renewal rate and the price at renewal, not on a payback period. The acquisition version of a typical project is the opposite: a large outlay up front (the $2,363.2M of goodwill came from one) followed by cash flows that must earn the cost of capital of 10.23% (model-output.md §1) to avoid an impairment, as the 2022 write-down shows.
+  A subscription customer. Cash comes in before the revenue is recognized, because customers pay annually or multi-annually in advance (deferred revenue $389.3M, `company.deferred_revenue`). Costs are small and spread out: hosting and support to serve the customer, and the sales cost to win or renew the contract. The platform investment sits in R&D of $108.6M (`company.rd_expense`) and capex of $20.5M (`company.capex`) a year, both low against revenue of $796.9M (`company.revenue`). The 2024 history row shows the same pattern at company level: capex of $20.5M against D&A of $74.4M (`company.history`, 2024). The pattern has three phases: the first invoice (cash in), ratable recognition over the term, and renewal. Value depends on the renewal rate and the price at renewal, not on a payback period. The acquisition version of a typical project is the opposite: a large outlay up front (the $2,363.2M of goodwill came from one) followed by cash flows that must earn the cost of capital of 10.67% (model-output.md §1) to avoid an impairment, as the 2022 write-down shows.
 
 ## Notes
 

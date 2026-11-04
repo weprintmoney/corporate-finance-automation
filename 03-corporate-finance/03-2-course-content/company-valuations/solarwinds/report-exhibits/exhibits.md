@@ -25,11 +25,11 @@ Charts and tables for the final report, in the order of the course's nine projec
 | Levered beta | 1.6714 | unlevered × (1 + (1 − t) × D/E) |
 | Equity risk premium | 4.92% | country.weighted_erp |
 | Cost of equity | 12.65% | rf + levered beta × ERP |
-| Pre-tax cost of debt | 7.11% | observed rate on the company's own debt |
+| Pre-tax cost of debt | 8.85% | government bond rate plus the synthetic-rating spread (B-) |
 | Marginal tax rate | 25.00% | market.tax_rate_marginal |
-| After-tax cost of debt | 5.33% | pre-tax × (1 − t) |
+| After-tax cost of debt | 6.64% | pre-tax × (1 − t) |
 | Debt ratio (D/V) | 33.03% | arithmetic |
-| **Cost of capital (WACC)** | **10.23%** | E/V × ke + D/V × kd × (1 − t) |
+| **Cost of capital (WACC)** | **10.67%** | E/V × ke + D/V × kd × (1 − t) |
 
 ## Question 3 — Investment returns
 
@@ -73,14 +73,14 @@ Charts and tables for the final report, in the order of the course's nine projec
 
 | Bridge | Amount |
 |---|---|
-| Present value of explicit cash flows | $1,321.6M |
-| Present value of terminal value | $2,658.2M |
-| **Enterprise value** | **$3,979.8M** |
+| Present value of explicit cash flows | $1,303.2M |
+| Present value of terminal value | $2,596.7M |
+| **Enterprise value** | **$3,899.8M** |
 | − Debt | $1,285.0M |
 | + Cash | $259.3M |
-| = Equity value before option claims | $2,954.1M |
+| = Equity value before option claims | $2,874.1M |
 | − Value of options and RSUs | $187.0M |
-| **Value per share (course method: ÷ basic shares 171.6M)** | **$16.13** |
+| **Value per share (course method: ÷ basic shares 171.6M)** | **$15.66** |
 | Market or transaction price (last-unaffected) | $15.18 |
 | Deal price | $18.50 |
 
@@ -99,21 +99,21 @@ Charts and tables for the final report, in the order of the course's nine projec
 
 | Stable ROIC | Terminal reinvestment rate | Terminal value | Value per share |
 |---|---|---|---|
-| 8.23% (ledger) | 30.38% | $4,769.8M | $16.13 |
-| 10.00% | 25.00% | $5,138.1M | $17.32 |
-| 12.00% | 20.83% | $5,423.6M | $18.25 |
-| 15.00% | 16.67% | $5,709.0M | $19.18 |
-| 20.00% | 12.50% | $5,994.5M | $20.10 |
-| 30.00% | 8.33% | $6,279.9M | $21.03 |
+| 8.23% (ledger) | 30.38% | $4,769.8M | $15.66 |
+| 10.00% | 25.00% | $5,138.1M | $16.83 |
+| 12.00% | 20.83% | $5,423.6M | $17.73 |
+| 15.00% | 16.67% | $5,709.0M | $18.64 |
+| 20.00% | 12.50% | $5,994.5M | $19.54 |
+| 30.00% | 8.33% | $6,279.9M | $20.45 |
 
 **Stress cases: revenue at the 2022–2024 growth rate instead of the plan**
 
 | Case | Revenue growth | Margin | 2030 revenue | 2030 FCFF | Enterprise value | Value per share | vs. plan |
 |---|---|---|---|---|---|---|---|
-| Plan (management forecast) | 8.12% | plan | $1,273.0M | $419.0M | $3,979.8M | $16.13 |  |
-| Revenue at the 2022–2024 rate, plan margins | 5.25% | plan | $1,083.3M | $345.3M | $3,451.5M | $13.05 | -3.08 |
-| Revenue at the 2022–2024 rate, margin held at the plan's first year | 5.25% | 32.69% | $1,083.3M | $284.7M | $2,910.7M | $9.89 | -6.23 |
-| Revenue at the 2022–2024 rate, margin held at 2024 on the plan's basis | 5.25% | 29.11% | $1,083.3M | $255.6M | $2,599.4M | $8.08 | -8.04 |
+| Plan (management forecast) | 8.12% | plan | $1,273.0M | $419.0M | $3,899.8M | $15.66 |  |
+| Revenue at the 2022–2024 rate, plan margins | 5.25% | plan | $1,083.3M | $345.3M | $3,383.0M | $12.65 | -3.01 |
+| Revenue at the 2022–2024 rate, margin held at the plan's first year | 5.25% | 32.69% | $1,083.3M | $284.7M | $2,854.1M | $9.57 | -6.09 |
+| Revenue at the 2022–2024 rate, margin held at 2024 on the plan's basis | 5.25% | 29.11% | $1,083.3M | $255.6M | $2,548.9M | $7.79 | -7.87 |
 
 **Relative valuation**
 

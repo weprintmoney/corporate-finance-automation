@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 16: Loose Ends"
 status: active
 owner: weprintmoney
 created: 2026-10-25
-last_updated: 2026-10-25
+last_updated: 2026-11-03
 ---
 
 # SolarWinds (SWI) — Lesson 16: Loose Ends
@@ -34,7 +34,7 @@ last_updated: 2026-10-25
   US dollars. `meta.currency` and `meta.reporting_currency` are both USD. The foreign subsidiaries first keep books in euros and then translate to dollars (10-K Item 7A). International revenue is 35.18% of the total, US revenue 64.82% (`country.exposures`).
 
 - **What cost of equity/capital would you use for the foreign operations, given currency choice and business?**
-  The same dollar cost of capital as the rest of the company, 10.23% (model-output.md §1), for two reasons. The cash flows are in dollars, so the dollar risk-free rate of 4.43% applies. The business is the same product sold in Europe, so the bottom-up beta of 1.22 (`beta.unlevered_bottom_up`) does not change by geography. The foreign risk goes into the equity risk premium, not into a second discount rate. The premium used is 4.92%, the average of 4.27% on US revenue and 6.11% on international revenue, weighted 64.82% and 35.18% (`country.weighted_erp`, `country.exposures`). The 6.11% is a judgment: it is the mature premium of 4.27% plus the EMEA country premium of 1.84%, applied to all international revenue because most international offices are in Europe. Western Europe alone would add 1.12%, the global average 1.43% (`country.exposures` note). For a project wholly in Europe, arithmetic gives cost of equity of 4.43% + 1.6714 × 6.11% = 14.64%, and a cost of capital of about 11.57% at the company's weights (illustration; not used).
+  The same dollar cost of capital as the rest of the company, 10.67% (model-output.md §1), for two reasons. The cash flows are in dollars, so the dollar risk-free rate of 4.43% applies. The business is the same product sold in Europe, so the bottom-up beta of 1.22 (`beta.unlevered_bottom_up`) does not change by geography. The foreign risk goes into the equity risk premium, not into a second discount rate. The premium used is 4.92%, the average of 4.27% on US revenue and 6.11% on international revenue, weighted 64.82% and 35.18% (`country.weighted_erp`, `country.exposures`). The 6.11% is a judgment: it is the mature premium of 4.27% plus the EMEA country premium of 1.84%, applied to all international revenue because most international offices are in Europe. Western Europe alone would add 1.12%, the global average 1.43% (`country.exposures` note). For a project wholly in Europe, arithmetic gives cost of equity of 4.43% + 1.6714 × 6.11% = 14.64%, and a cost of capital of about 11.57% at the company's weights (illustration; not used).
 
 ## Notes
 

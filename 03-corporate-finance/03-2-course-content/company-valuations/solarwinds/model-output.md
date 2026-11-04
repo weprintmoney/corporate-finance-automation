@@ -16,7 +16,7 @@ Amounts in millions of USD. Rates as percentages. Ratings from Damodaran's small
 - sbc_treatment: expense
 - firm_value_basis: market
 - beta_source: bottom_up
-- kd_source: observed
+- kd_source: synthetic
 - terminal_method: consistent_reinvestment
 
 ## 1. Cost of capital at market weights
@@ -35,11 +35,11 @@ Amounts in millions of USD. Rates as percentages. Ratings from Damodaran's small
 | Risk-free rate | 4.43% | market.risk_free_rate (government bond rate − sovereign default spread) |
 | Equity risk premium | 4.92% | country.weighted_erp |
 | Cost of equity | 12.65% | rf + levered beta × ERP |
-| Pre-tax cost of debt | 7.11% | observed rate on the company's own debt |
+| Pre-tax cost of debt | 8.85% | government bond rate plus the synthetic-rating spread (B-) |
 | Marginal tax rate | 25.00% | market.tax_rate_marginal |
-| After-tax cost of debt | 5.33% | pre-tax × (1 − t) |
-| **Cost of capital (WACC)** | **10.23%** | E/V × ke + D/V × kd × (1 − t) |
-| Cost of capital at book weights | 9.19% | book D/V = 47.28% ; for lesson 13's comparison only |
+| After-tax cost of debt | 6.64% | pre-tax × (1 − t) |
+| **Cost of capital (WACC)** | **10.67%** | E/V × ke + D/V × kd × (1 − t) |
+| Cost of capital at book weights | 9.81% | book D/V = 47.28% ; for lesson 13's comparison only |
 
 ## 2. Interest coverage and synthetic rating
 
@@ -99,7 +99,7 @@ FCFE = net income + non-cash impairments − (capex − D&A) − change in worki
 
 ## 6. Discounted cash flow
 
-Cash flows taken from the ledger's forecast. Discounted at the current cost of capital 10.23%; terminal value at 8.23% with perpetual growth 2.50%.
+Cash flows taken from the ledger's forecast. Discounted at the current cost of capital 10.67%; terminal value at 8.23% with perpetual growth 2.50%.
 
 | Terminal-period cost of capital | Value | How |
 |---|---|---|
@@ -110,18 +110,18 @@ Cash flows taken from the ledger's forecast. Discounted at the current cost of c
 | After-tax cost of debt | 4.04% | pre-tax × (1 − t) |
 | **Stable cost of capital** | **8.23%** | (1 − D/V) × ke + D/V × kd × (1 − t) |
 
-The terminal value is capitalized at the stable cost of capital and discounted back to today at the current 10.23%, the rate that applies during the forecast years.
+The terminal value is capitalized at the stable cost of capital and discounted back to today at the current 10.67%, the rate that applies during the forecast years.
 
 Convention: each year's cash flow arrives at year end and is discounted whole years from the start of the forecast; the bridge uses base-year-end debt, cash and options. With an analysis date early in the first forecast year this is the same convention fairness opinions use (value as of the base-year end).
 
 | Year | FCFF | Discount factor | Present value |
 |---|---|---|---|
-| 2025 | $212.0M | 0.9072 | $192.3M |
-| 2026 | $258.0M | 0.8229 | $212.3M |
-| 2027 | $297.0M | 0.7465 | $221.7M |
-| 2028 | $338.0M | 0.6772 | $228.9M |
-| 2029 | $379.0M | 0.6143 | $232.8M |
-| 2030 | $419.0M | 0.5573 | $233.5M |
+| 2025 | $212.0M | 0.9036 | $191.6M |
+| 2026 | $258.0M | 0.8165 | $210.7M |
+| 2027 | $297.0M | 0.7378 | $219.1M |
+| 2028 | $338.0M | 0.6667 | $225.4M |
+| 2029 | $379.0M | 0.6025 | $228.3M |
+| 2030 | $419.0M | 0.5444 | $228.1M |
 
 | Terminal value | Amount | Method |
 |---|---|---|
@@ -131,31 +131,31 @@ Convention: each year's cash flow arrives at year end and is discounted whole ye
 
 | Bridge | Amount |
 |---|---|
-| Present value of explicit cash flows | $1,321.6M |
-| Present value of terminal value | $2,658.2M |
-| **Enterprise value** | **$3,979.8M** |
+| Present value of explicit cash flows | $1,303.2M |
+| Present value of terminal value | $2,596.7M |
+| **Enterprise value** | **$3,899.8M** |
 | − Debt | $1,285.0M |
 | + Cash | $259.3M |
-| = Equity value before option claims | $2,954.1M |
+| = Equity value before option claims | $2,874.1M |
 | − Value of options and RSUs | $187.0M |
-| **Value per share (course method: ÷ basic shares 171.6M)** | **$16.13** |
-| Value per share (shortcut: ÷ diluted shares 174.5M, options ignored) | $16.93 |
-| Value per share with the other terminal value (final-year FCFF grown at g) | $24.96 |
+| **Value per share (course method: ÷ basic shares 171.6M)** | **$15.66** |
+| Value per share (shortcut: ÷ diluted shares 174.5M, options ignored) | $16.47 |
+| Value per share with the other terminal value (final-year FCFF grown at g) | $24.29 |
 | Market or transaction price (last-unaffected) | $15.18 |
-| Course-method value ÷ price | 1.06x |
+| Course-method value ÷ price | 1.03x |
 | Deal price | $18.50 |
-| Course-method value ÷ deal price | 0.87x |
+| Course-method value ÷ deal price | 0.85x |
 
 Sensitivity of value per share (course method) to the stable return on capital, which sets terminal reinvestment (g ÷ ROIC). A return equal to the cost of capital means growth adds no value; a higher one assumes lasting competitive advantage.
 
 | Stable ROIC | Terminal reinvestment rate | Terminal value | Value per share |
 |---|---|---|---|
-| 8.23% (ledger) | 30.38% | $4,769.8M | $16.13 |
-| 10.00% | 25.00% | $5,138.1M | $17.32 |
-| 12.00% | 20.83% | $5,423.6M | $18.25 |
-| 15.00% | 16.67% | $5,709.0M | $19.18 |
-| 20.00% | 12.50% | $5,994.5M | $20.10 |
-| 30.00% | 8.33% | $6,279.9M | $21.03 |
+| 8.23% (ledger) | 30.38% | $4,769.8M | $15.66 |
+| 10.00% | 25.00% | $5,138.1M | $16.83 |
+| 12.00% | 20.83% | $5,423.6M | $17.73 |
+| 15.00% | 16.67% | $5,709.0M | $18.64 |
+| 20.00% | 12.50% | $5,994.5M | $19.54 |
+| 30.00% | 8.33% | $6,279.9M | $20.45 |
 
 The final-year-FCFF terminal value implies terminal reinvestment of -9.33%: it needs no reinvestment, or negative reinvestment, to grow at 2.50%.
 
@@ -163,17 +163,17 @@ Sensitivity to the stable beta, which sets the stable cost of capital. Each row 
 
 | Stable beta | Stable cost of equity | Stable cost of capital | Value per share, return = cost of capital | at 10% | at 12% | at 15% |
 |---|---|---|---|---|---|---|
-| 0.80 | 8.37% | 7.46% | $17.74 | $19.94 | $21.01 | $22.08 |
-| 1.00 (ledger) | 9.35% | 8.23% | $16.13 | $17.32 | $18.25 | $19.18 |
-| 1.46 (today's unlevered beta 1.22 relevered at 21.00%) | 11.61% | 10.02% | $13.36 | $13.35 | $14.06 | $14.77 |
+| 0.80 | 8.37% | 7.46% | $17.24 | $19.38 | $20.43 | $21.48 |
+| 1.00 (ledger) | 9.35% | 8.23% | $15.66 | $16.83 | $17.73 | $18.64 |
+| 1.46 (today's unlevered beta 1.22 relevered at 21.00%) | 11.61% | 10.02% | $12.96 | $12.95 | $13.64 | $14.33 |
 
-Value of control, financing lever only: at the optimal cost of capital 10.03% the enterprise value is $4,017.7M and value per share (course method) is $16.35, against $16.13 at the status quo. The other levers (operations, reinvestment, growth period) are judgment calls answered in lesson 34, not computed here.
+Value of control, financing lever only: at the optimal cost of capital 10.03% the enterprise value is $4,017.7M and value per share (course method) is $16.35, against $15.66 at the status quo. The other levers (operations, reinvestment, growth period) are judgment calls answered in lesson 34, not computed here.
 
 Three measures of the gain from moving to the optimal debt ratio. They differ in basis, not in direction:
 
 | Measure | Gain | Per basic share | Basis |
 |---|---|---|---|
-| DCF at the optimal cost of capital (this section) | $37.9M | $0.22 | Status quo at 10.23%, which prices today's debt at its observed rate; optimum at 10.03% from the section 3 schedule. Discounts the forecast cash flows |
+| DCF at the optimal cost of capital (this section) | $117.9M | $0.69 | Status quo at 10.67%, which prices today's debt at the synthetic B- rating's spread on the base year's interest expense; optimum at 10.03% from the section 3 schedule. Discounts the forecast cash flows |
 | Annual savings capitalized (section 3) | $144.4M | $0.84 | Both ends on the schedule's synthetic rates (10.31% to 10.03%); savings on firm value $3,889.9M grown at g in perpetuity |
 | Adjusted present value (section 9) | see section 9 | | Tax benefits less expected bankruptcy cost, at debt.bankruptcy_cost |
 
@@ -181,10 +181,10 @@ Stress cases on the forecast (forecast.stress_cases). Revenue grows at the case 
 
 | Case | Revenue growth | Margin | 2030 revenue | 2030 FCFF | Enterprise value | Value per share | vs. plan |
 |---|---|---|---|---|---|---|---|
-| Plan (management forecast) | 8.12% | plan | $1,273.0M | $419.0M | $3,979.8M | $16.13 | |
-| Revenue at the 2022–2024 rate, plan margins | 5.25% | plan | $1,083.3M | $345.3M | $3,451.5M | $13.05 | -3.08 |
-| Revenue at the 2022–2024 rate, margin held at the plan's first year | 5.25% | 32.69% | $1,083.3M | $284.7M | $2,910.7M | $9.89 | -6.23 |
-| Revenue at the 2022–2024 rate, margin held at 2024 on the plan's basis | 5.25% | 29.11% | $1,083.3M | $255.6M | $2,599.4M | $8.08 | -8.04 |
+| Plan (management forecast) | 8.12% | plan | $1,273.0M | $419.0M | $3,899.8M | $15.66 | |
+| Revenue at the 2022–2024 rate, plan margins | 5.25% | plan | $1,083.3M | $345.3M | $3,383.0M | $12.65 | -3.01 |
+| Revenue at the 2022–2024 rate, margin held at the plan's first year | 5.25% | 32.69% | $1,083.3M | $284.7M | $2,854.1M | $9.57 | -6.09 |
+| Revenue at the 2022–2024 rate, margin held at 2024 on the plan's basis | 5.25% | 29.11% | $1,083.3M | $255.6M | $2,548.9M | $7.79 | -7.87 |
 
 ## 7. Relative valuation
 
@@ -211,9 +211,9 @@ Peer rows marked `estimate: true` in the ledger carry ranges; the medians above 
 | After-tax operating income | $156.3M | company.ebit × (1 − marginal tax rate) |
 | Invested capital | $2,348.0M | company.invested_capital |
 | Return on invested capital (ROIC) | 6.66% | after-tax operating income ÷ invested capital |
-| Cost of capital | 10.23% | section 1 |
-| ROIC − cost of capital | -3.58% | arithmetic |
-| Economic value added (EVA) | $-84.0M | (ROIC − cost of capital) × invested capital |
+| Cost of capital | 10.67% | section 1 |
+| ROIC − cost of capital | -4.01% | arithmetic |
+| Economic value added (EVA) | $-94.1M | (ROIC − cost of capital) × invested capital |
 | Goodwill share of invested capital | 100.65% | company.goodwill ÷ invested capital |
 | Return on equity (ROE) | 7.99% | company.net_income ÷ company.equity_book |
 | Cost of equity | 12.65% | section 1 |
@@ -250,7 +250,7 @@ Research and development is treated as a capital expense with a 3-year amortizab
 | Adjusted invested capital | $2,554.2M | invested capital + research asset |
 | **Adjusted ROIC** | **6.53%** | adjusted after-tax operating income ÷ adjusted invested capital |
 | Unadjusted ROIC | 6.66% | section 8 |
-| Cost of capital | 10.23% | section 1 |
+| Cost of capital | 10.67% | section 1 |
 | Operating capital: adjusted invested capital − goodwill | $191.0M | the capital the business runs on, before the price paid to buy it |
 | Return on operating capital | 87.35% | adjusted after-tax operating income ÷ operating capital |
 

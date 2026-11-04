@@ -3,7 +3,7 @@ title: "SolarWinds (SWI) — Lesson 18: The Cost of Capital: Approach"
 status: active
 owner: weprintmoney
 created: 2026-10-25
-last_updated: 2026-10-25
+last_updated: 2026-11-03
 ---
 
 # SolarWinds (SWI) — Lesson 18: The Cost of Capital: Approach
@@ -35,11 +35,11 @@ All figures below are quoted from model-output.md §1 to §3. The model uses Dam
 ## Cumulative Project — Questions for This Lesson
 
 - **What is your firm's current debt ratio (and cost of capital)?**
-  Debt of $1,285.0M (`company.debt_total`) against equity of $2,604.9M (`company.equity_value`), so the debt ratio is 33.03% of the firm's $3,889.9M value (model-output.md §1). Debt to equity is 0.4933. The levered beta is 1.6714, the cost of equity 12.65%, the after-tax cost of debt 5.33% (7.11% pre-tax, 25% tax), and the cost of capital is **10.23%** (§1). At book weights the debt ratio is 47.28% and the cost of capital 9.19% (§1), for comparison only. The §3 table shows 10.31% at the current ratio because it prices debt from the synthetic B rating (7.43%) and not from the observed rate of 7.11%.
+  Debt of $1,285.0M (`company.debt_total`) against equity of $2,604.9M (`company.equity_value`), so the debt ratio is 33.03% of the firm's $3,889.9M value (model-output.md §1). Debt to equity is 0.4933. The levered beta is 1.6714, the cost of equity 12.65%, the after-tax cost of debt 6.64% (8.85% pre-tax, the synthetic B- rate, 25% tax), and the cost of capital is **10.67%** (§1). At book weights the debt ratio is 47.28% and the cost of capital 9.81% (§1), for comparison only. The §3 table shows 10.31% at the current ratio because it reprices all the debt at the rate its own coverage implies (B, 7.43%), while §1 rates today's debt on the interest actually paid in 2024 (B-, 8.85%).
 
 - **Based upon the cost of capital approach, what is the optimal debt ratio for your firm?**
   21%, with a cost of capital of 10.03% and an A- rating (model-output.md §3, EBIT numerator). That is $468.1M less debt than the company carries (§3). The alternatives are 26% (EBIT plus acquisition amortization) and 28% (EBITDA). Lesson 19 puts constraints on it.
 
 ## Notes
 
-The optimum is 21% against 33.03% today. The cost of capital curve is flat near the bottom, so the gain from moving is modest (lesson 19). The result depends on the coverage numerator but only by 7 points, and all three put SolarWinds above its optimum. Lessons 19 and 20 test it against a fall in operating income. A gap between the §1 rate (10.23%) and the §3 current-ratio rate (10.31%) is a method difference (observed versus synthetic cost of debt), not an error.
+The optimum is 21% against 33.03% today. The cost of capital curve is flat near the bottom, so the gain from moving is modest (lesson 19). The result depends on the coverage numerator but only by 7 points, and all three put SolarWinds above its optimum. Lessons 19 and 20 test it against a fall in operating income. A gap between the §1 rate (10.67%) and the §3 current-ratio rate (10.31%) is a method difference (today's actual interest expense versus the schedule's repricing at each ratio), not an error.
