@@ -10,12 +10,16 @@ Checks:
     weighted ERP matches exposures, terminal growth ≤ risk-free rate, years are consecutive
   - the ratings table: the snapshot file exists and is no older than RATINGS_TABLE_MAX_DAYS
   - staleness: rates and ERP past their windows are errors; other market inputs past 90 days warn
+  - blind runs (meta.blind: true, for backtests): nothing dated or published after the analysis date.
+    Every as_of anywhere in the ledger must be on or before it, and every sources/ file a source cites
+    must be listed in sources/published.yaml with a publication date on or before it
 
 Usage: python3 validate-ledger.py <inputs.yaml> [--schema <ledger-schema.yaml>]
 Exit 1 on any ERROR. Warnings do not fail.
 """
 import json
 import os
+import re
 import sys
 from datetime import date, datetime
 
@@ -243,6 +247,50 @@ def main(argv):
                     errors.append("{} is {} days older than the analysis date (limit {}); refresh it".format(path, age, limit))
                 elif limit is None and section == "market" and age > 90:
                     warnings.append("{} is {} days older than the analysis date".format(path, age))
+
+    # --- blind runs -------------------------------------------------------------------------------
+    # A backtest asks whether the read would have seen what later happened. A fact from after the
+    # analysis date (a 10-K filed later, a merger statement, a restated year) leaks the answer, and an
+    # as_of only dates the period a number covers, not when it became public. So blind runs check both.
+    if get(L, "meta.blind") is True:
+        if not adate:
+            errors.append("meta.blind is set but meta.analysis_date is missing")
+        else:
+            folder = os.path.dirname(os.path.abspath(ledger_path))
+            pub_path = os.path.join(folder, "sources", "published.yaml")
+            published = {}
+            if os.path.exists(pub_path):
+                with open(pub_path) as fh:
+                    for r in yaml.safe_load(fh) or []:
+                        published[str(r.get("file"))] = parse_date(r.get("published"))
+            else:
+                errors.append("meta.blind is set but sources/published.yaml is missing; list every source file with its publication date")
+            cited = set()
+
+            def walk_blind(x, path):
+                if isinstance(x, dict):
+                    d = parse_date(x.get("as_of")) if x.get("as_of") else None
+                    if d and d > adate:
+                        errors.append("blind run: {} is as of {}, after the analysis date {}".format(path or "(root)", d, adate))
+                    src = x.get("source")
+                    if isinstance(src, str):
+                        cited.update(re.findall(r"sources/[^\s,;()]+", src))
+                    for k, v in x.items():
+                        walk_blind(v, "{}.{}".format(path, k) if path else k)
+                elif isinstance(x, list):
+                    for i, v in enumerate(x):
+                        walk_blind(v, "{}[{}]".format(path, i))
+
+            walk_blind(L, "")
+            for f in sorted(cited):
+                f = f.rstrip(".:")
+                if f not in published:
+                    if published:
+                        errors.append("blind run: {} is cited but not listed in sources/published.yaml".format(f))
+                elif published[f] is None:
+                    errors.append("blind run: sources/published.yaml gives {} no valid publication date".format(f))
+                elif published[f] > adate:
+                    errors.append("blind run: {} was published {}, after the analysis date {}".format(f, published[f], adate))
 
     for w in warnings:
         print("WARN  " + w)
