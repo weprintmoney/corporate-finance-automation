@@ -59,7 +59,6 @@ WACC = (E/V) · rₑ + (D/V) · r_d · (1 − t)
 | [03-4-blogs/posts/](03-4-blogs/posts/) | Full Damodaran blog archive (~680 posts, 2008–present) — new posts added weekly by CI |
 | [03-3-supplemental-data/market-rates.json](03-3-supplemental-data/market-rates.json) | Damodaran's monthly ERP workbook (10-year Treasury, US Aa1 default spread, dollar risk-free rate, implied ERP over each) plus latest FRED 10-year, SOFR, Fed Funds — refreshed weekly by CI (`scripts/refresh-market-data.py`) |
 | [03-3-supplemental-data/ratings-spreads.json](03-3-supplemental-data/ratings-spreads.json) | Damodaran interest coverage → synthetic rating → default spread tables (large, small, financial) — refreshed weekly by CI |
-| [03-3-supplemental-data/companies/](03-3-supplemental-data/companies/) | Per-ticker JSON from Financial Modeling Prep: income statement, balance sheet, cash flow |
 | [03-3-supplemental-data/industry-betas.json](03-3-supplemental-data/industry-betas.json) | Damodaran US industry betas, unlevered and cash-corrected — refreshed weekly by CI |
 | [03-3-supplemental-data/country-risk.json](03-3-supplemental-data/country-risk.json) | Damodaran country ratings, default spreads, ERPs (January or July edition, whichever is newer) — refreshed weekly by CI |
 | [03-6-youtube/CLAUDE.md](03-6-youtube/CLAUDE.md) | Transcript archive of Damodaran's YouTube channel (~1,400 videos) — layout + caveats |
