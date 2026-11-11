@@ -6,7 +6,7 @@ Fixed reference material from the NYU Stern Certificate in Corporate Finance (Pr
 
 | File | Description |
 |------|-------------|
-| [advanced-valuation-course-outline.md](advanced-valuation-course-outline.md) | Meetup dates + fixed-date deliverables (quizzes, final exam, final project) |
+| [course-schedule.md](course-schedule.md) | Meetup dates + fixed-date deliverables (quizzes, final exam, final project) |
 | [syllabus.md](syllabus.md) | Full syllabus — instructor, primers, learning outcomes, grading, policies, resources |
 | [frequently-asked-questions.md](frequently-asked-questions.md) | Course-site FAQ — meetups, quizzes, CapIQ, certificates, support |
 | [final-project/instructions.md](final-project/instructions.md) | Final project instructions, word for word from Brightspace: about 7–9 pages, one submission, due 2026-12-11 11:59 PM ET |
