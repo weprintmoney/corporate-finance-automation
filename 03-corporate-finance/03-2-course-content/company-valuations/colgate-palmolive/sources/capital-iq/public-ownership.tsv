@@ -1,0 +1,89 @@
+Colgate-Palmolive Company (NYSE:CL) Public Ownership > Summary
+
+## ctl05_dgOwnershipSummary_myDG
+Type	Common Stock Equivalent Held	% of Total Shares Outstanding	Market Value (USD in mm)2
+Institutions 5	693,113,207	87.19	68,417.2
+Corporations (Private)	490	0.00	0.1
+Individuals/Insiders	998,307	0.13	98.5
+State Owned Shares	744,827	0.09	73.5
+Public and Other 3	100,063,682	12.59	9,877.3
+Total	794,920,513	100.00 6	78,466.6
+
+## ctl09_dgInstitutionSummary_myDG
+Type	Common Stock Equivalent Held	% of Inst. Ownership	% of Total Shares Outstanding	Market Value (USD in mm)²	Number Of Holders
+Traditional Investment Managers	587,429,781	84.75	73.90	57,985.2	1,816
+Banks/Investment Banks	36,849,801	5.32	4.64	3,637.4	114
+Hedge Fund Managers (<5% stake)	21,741,380	3.14	2.74	2,146.1	80
+Government Pension Sponsors	20,838,987	3.01	2.62	2,057.0	44
+Sovereign Wealth Funds (<5% stake)	10,455,604	1.51	1.32	1,032.1	6
+Insurance Companies	10,005,422	1.44	1.26	987.6	19
+Family Offices/Trusts	2,404,128	0.35	0.30	237.3	254
+Corporate Pension Sponsors	1,496,521	0.22	0.19	147.7	6
+Educational/Cultural Endowments	886,487	0.13	0.11	87.5	1
+VC/PE Firms (<5% stake)	597,354	0.09	0.08	59.0	12
+Union Pension Sponsors	270,050	0.04	0.03	26.7	1
+Unclassified	137,692	0.02	0.02	13.6	3
+Total	693,113,207	100.00	87.19	68,417.2	2,356
+
+## ctl12_dgTopHolders_myDG
+Holder	Common Stock Equivalent Held	% of Total Shares Outstanding	Market Value (USD in mm)2	Position Date
+BlackRock, Inc.	69,991,081	8.80	6,918.6	Sep-30-2026
+Vanguard Capital Management, LLC	56,685,997	7.13	5,603.4	Sep-30-2026
+State Street Investment Management	46,621,289	5.86	4,608.5	Sep-30-2026
+Vanguard Portfolio Management, LLC	34,952,327	4.40	3,455.0	Sep-30-2026
+T. Rowe Price Group, Inc.	26,893,451	3.38	2,658.4	Sep-30-2026
+
+## ctl13_dgActivistInvestors_myDG
+Investor	Common Stock Equivalent Held	% of Total Shares Outstanding	Market Value (USD in mm)²	Position Date	Campaigns	History
+Royal London Asset Management Ltd.	397,003	0.05	39.2	Sep-30-2026	1	
+D. E. Shaw & Co., L.P.	280,635	0.04	27.7	Sep-30-2026	14	
+Sterling Capital Management LLC	51,773	0.01	5.1	Sep-30-2026	1	
+GAMCO Investors, Inc.	12,405	0.00	1.2	Sep-30-2026	139	
+Ancora Advisors LLC	9,601	0.00	0.9	Sep-30-2026	55	
+Other	5,969	0.00	0.6			
+Total	757,386	0.10	74.9
+
+## ctl19_dgOwnershipActivityInstitutions_myDG
+Jun-30-2026 To Sep-30-2026	Holders	Common Stock Equivalent Held
+Total Positions	2,361	694,738,934
+New Positions	120	1,201,043
+Increased Positions	734	44,971,446
+Decreased Positions	783	(28,545,040)
+Sold Out Positions	145	(6,769,673)
+
+## ctl23_dgOwnershipActivityIndividuals_myDG
+Jun-30-2026 To Sep-30-2026	Holders	Common Stock Equivalent Held
+Total Positions	20	1,021,996
+New Positions	-	-
+Increased Positions	9	97,422
+Decreased Positions	-	-
+Sold Out Positions	-	-
+
+## ctl26_dgTradingActivity_myDG
+Aug-21-2026 To Nov-21-20261	Transactions	Common Stock Equivalent Held
+Buys	11	60,960
+Sells	14	105,551
+
+## DisplaySection1_dgOwnershipActivityStrategicOwners_myDG
+Jun-30-2026 To Sep-30-2026	Holders	Common Stock Equivalent Held
+Total Positions	4	745,317
+New Positions	-	-
+Increased Positions	1	1,283
+Decreased Positions	2	(29,704)
+Sold Out Positions	-	-
+
+## ctl32_dgTopBuyers_myDG
+Buyers	Common Stock Equivalent Held	Change
+Vanguard Portfolio Management, LLC	34,952,327	10,931,190
+AQR Capital Management, LLC	6,680,570	2,124,697
+Acadian Asset Management LLC	11,205,667	2,108,888
+ClearBridge Investments, LLC	2,299,002	1,707,220
+UBS Asset Management AG	11,932,276	1,369,245
+
+## ctl33_dgTopSellers_myDG
+Sellers	Common Stock Equivalent Held	Change
+Wellington Management Group LLP	927,113	(4,184,200)
+Diamond Hill Capital Management, LLC	0	(4,152,036)
+Citadel Advisors LLC	510,582	(4,073,405)
+Teachers Insurance and Annuity Association-College Retirement Equities Fund	13,163	(1,951,857)
+T. Rowe Price Group, Inc.	26,893,451	(1,041,550)

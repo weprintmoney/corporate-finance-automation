@@ -1,0 +1,1448 @@
+UNITED STATES
+SECURITIES AND EXCHANGE COMMISSION
+WASHINGTON, D.C. 20549
+________________________
+FORM 10-Q 
+________________________
+ (Mark One)
+☒	QUARTERLY REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934
+ For the quarterly period ended September 30, 2026
+OR
+☐	TRANSITION REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934
+For the transition period from________ to________ .
+Commission File Number: 1-644 
+COLGATE-PALMOLIVE COMPANY 
+(Exact name of registrant as specified in its charter)
+Delaware	13-1815595
+(State or other jurisdiction of incorporation or organization)	(I.R.S. Employer Identification No.)
+ 
+300 Park Avenue
+New York,	New York	10022
+(Address of principal executive offices)	(Zip Code)
+(212) 310-2000 
+(Registrant’s telephone number, including area code)
+NO CHANGES
+(Former name, former address and former fiscal year, if changed since last report)
+Securities registered pursuant to Section 12(b) of the Act:
+Title of each class	Trading Symbol(s)	Name of each exchange on which registered
+Common Stock, $1.00 par value	CL	New York Stock Exchange
+0.300% Notes due 2029	CL29	New York Stock Exchange
+1.375% Notes due 2034	CL34	New York Stock Exchange
+3.250% Notes due 2035	CL35	New York Stock Exchange
+0.875% Notes due 2039	CL39	New York Stock Exchange
+Indicate by check mark whether the registrant (1) has filed all reports required to be filed by Section 13 or 15(d) of the Securities Exchange Act of 1934 during the preceding 12 months (or for such shorter period that the registrant was required to file such reports), and (2) has been subject to such filing requirements for the past 90 days. Yes ☒ No ☐
+Indicate by check mark whether the registrant has submitted electronically every Interactive Data File required to be submitted pursuant to Rule 405 of Regulation S-T (§ 232.405 of this chapter) during the preceding 12 months (or for such shorter period that the registrant was required to submit such files). Yes ☒ No ☐
+Indicate by check mark whether the registrant is a large accelerated filer, an accelerated filer, a non-accelerated filer, a smaller reporting company, or an emerging growth company. See definitions of “large accelerated filer,” “accelerated filer,” “smaller reporting company” and “emerging growth company” in Rule 12b-2 of the Exchange Act.
+Large accelerated filer	☒
+	Accelerated filer	☐
+Non-accelerated filer	☐
+	Smaller reporting company	☐
+Emerging growth company	☐
+If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act. ☐ 
+Indicate by check mark whether the registrant is a shell company (as defined in Rule 12b-2 of the Exchange Act). Yes ☐ No ☒ 
+Indicate the number of shares outstanding of each of the issuer’s classes of common stock, as of the latest practicable date:
+Class	Shares Outstanding	Date
+Common stock, $1.00 par value	794,920,513	September 30, 2026
+PART I. FINANCIAL INFORMATION
+COLGATE-PALMOLIVE COMPANY
+Condensed Consolidated Statements of Income
+(Dollars in Millions Except Per Share Amounts)
+(Unaudited) 
+Three Months Ended	Nine Months Ended
+September 30,	September 30,
+2026	2025	2026	2025
+Net sales	$	5,369	$	5,131	$	16,055	$	15,152
+Cost of sales	2,136	2,082	6,300	6,047
+Gross profit	3,233	3,049	9,755	9,105
+Selling, general and administrative expenses	2,111	1,971	6,316	5,833
+Other (income) expense, net	34	19	370	58
+Operating profit	1,088	1,059	3,069	3,214
+Non-service related postretirement costs	24	21	70	116
+Interest expense	62	67	186	203
+Interest income	17	21	50	56
+Income before income taxes	1,019	992	2,863	2,951
+Provision for income taxes	240	226	682	685
+Net income including noncontrolling interests	779	766	2,181	2,266
+Less: Net income attributable to noncontrolling interests	28	31	91	97
+Net income attributable to Colgate-Palmolive Company	$	751	$	735	$	2,090	$	2,169
+Earnings per common share, basic	$	0.94	$	0.91	$	2.61	$	2.68
+Earnings per common share, diluted	$	0.94	$	0.91	$	2.61	$	2.67
+See Notes to Condensed Consolidated Financial Statements.
+2
+COLGATE-PALMOLIVE COMPANY
+Condensed Consolidated Statements of Comprehensive Income
+(Dollars in Millions)
+(Unaudited)
+Three Months Ended	Nine Months Ended
+September 30,	September 30,
+2026	2025	2026	2025
+Net income including noncontrolling interests	$	779	$	766	$	2,181	$	2,266
+Other comprehensive income (loss), net of tax:
+Cumulative translation adjustments	(45)	15	9	329
+Retirement plans and other retiree benefit adjustments	(3)	10	(4)	20
+ Gains (losses) on cash flow hedges	(2)	7	4	(15)
+Total Other comprehensive income (loss), net of tax	(50)	32	9	334
+Total Comprehensive income including noncontrolling interests	729	798	2,190	2,600
+Less: Net income attributable to noncontrolling interests	28	31	91	97
+Less: Cumulative translation adjustments attributable to noncontrolling interests	—	(4)	(4)	—
+Total Comprehensive income attributable to noncontrolling interests	28	27	87	97
+Total Comprehensive income attributable to Colgate-Palmolive Company	$	701	$	771	$	2,103	$	2,503
+See Notes to Condensed Consolidated Financial Statements.
+3
+COLGATE-PALMOLIVE COMPANY
+Condensed Consolidated Balance Sheets
+(Dollars in Millions Except Share and Per Share Amounts)
+(Unaudited)
+September 30,
+2026	December 31,
+2025
+Assets
+Current Assets
+Cash and cash equivalents	$	1,527	$	1,288
+Receivables (net of allowances of $90 and $90, respectively)
+	1,901	1,675
+Inventories	2,182	2,032
+Other current assets	747	714
+Total current assets	6,357	5,709
+Property, plant and equipment:
+Cost	11,097	10,856
+Less: Accumulated depreciation	(6,484)	(6,196)
+ Property, plant and equipment, net	4,613	4,660
+Goodwill	3,080	3,122
+Other intangible assets, net	1,472	1,536
+Deferred income taxes	222	205
+Other assets	998	1,098
+Total assets	$	16,742	$	16,330
+Liabilities and Shareholders’ Equity
+Current Liabilities
+Debt payable within one-year	$	532	$	1,117
+Accounts payable	2,096	2,089
+Accrued income taxes	358	383
+Other accruals	3,653	3,264
+Total current liabilities	6,639	6,853
+Long-term debt	7,184	6,871
+Deferred income taxes	262	181
+Other liabilities	2,017	2,060
+Total liabilities	16,102	15,965
+Shareholders’ Equity
+Common stock, $1 par value (2,000,000,000 shares authorized, 1,465,706,360 shares issued)
+	1,466	1,466
+Additional paid-in capital	4,474	4,322
+Retained earnings	27,415	26,595
+Accumulated other comprehensive income (loss)	(3,866)	(3,879)
+Treasury stock, at cost	(29,201)	(28,450)
+Total Colgate-Palmolive Company shareholders’ equity	288	54
+Noncontrolling interests	352	311
+Total equity	640	365
+Total liabilities and equity	$	16,742	$	16,330
+See Notes to Condensed Consolidated Financial Statements.
+4
+COLGATE-PALMOLIVE COMPANY
+Condensed Consolidated Statements of Cash Flows
+(Dollars in Millions)
+(Unaudited)
+Nine Months Ended
+September 30,
+2026	2025
+Operating Activities
+Net income including noncontrolling interests	$	2,181	$	2,266
+Adjustments to reconcile net income including noncontrolling interests to net cash provided by operations:
+Depreciation and amortization	470	457
+ERISA litigation matter	—	65
+Restructuring and termination benefits, net of cash	177	(15)
+Stock-based compensation expense	141	127
+Deferred income taxes	54	8
+Cash effects of changes in:
+Receivables	(224)	(180)
+Inventories	(104)	9
+Accounts payable and other working capital	254	30
+Other non-current assets	48	48
+Other non-current liabilities	(84)	(70)
+Net cash provided by (used in) operations	2,913	2,745
+Investing Activities
+Capital expenditures	(400)	(387)
+Purchases of marketable securities and investments	(163)	(537)
+Proceeds from sale of marketable securities and investments	187	508
+Payment for acquisition, net of cash acquired	—	(293)
+Other investing activities	(5)	(5)
+Net cash provided by (used in) investing activities	(381)	(714)
+Financing Activities
+Short-term borrowing (repayment) less than 90 days, net	947	139
+Principal payments of debt	(1,087)	(655)
+Proceeds from issuance of debt	—	497
+Dividends paid	(1,308)	(1,300)
+Purchases of treasury shares	(927)	(804)
+Proceeds from exercise of stock options	178	83
+Other financing activities	(75)	145
+Net cash provided by (used in) financing activities	(2,272)	(1,895)
+Effect of exchange rate changes on Cash and cash equivalents	(21)	47
+Net increase (decrease) in Cash and cash equivalents	239	183
+Cash and cash equivalents at beginning of the period	1,288	1,096
+Cash and cash equivalents at end of the period	$	1,527	$	1,279
+Supplemental Cash Flow Information
+Income taxes paid	$	648	$	712
+Interest paid	$	205	$	235
+ 
+See Notes to Condensed Consolidated Financial Statements.
+5
+COLGATE-PALMOLIVE COMPANY
+Condensed Consolidated Statements of Changes in Shareholders’ Equity
+(Dollars in Millions)
+(Unaudited)
+Three Months Ended September 30, 2026
+Colgate-Palmolive Company Shareholders’ Equity
+Common
+Stock	Additional
+Paid-in
+Capital	Treasury
+Stock	Retained
+Earnings	Accumulated
+Other
+Comprehensive
+Income (Loss)(1)
+	Noncontrolling
+Interests
+Balance, June 30, 2026
+	$	1,466	$	4,432	$	(28,931)	$	27,085	$	(3,816)	$	330
+Net income	—	—	—	751	—	28
+Other comprehensive income 
+(loss), net of tax
+	—	—	—	—	(50)	—
+Dividends ($0.53 per share)
+	—	—	—	(421)	—	(6)
+Stock-based compensation expense
+	—	63	—	—	—	—
+Shares issued for stock options
+	—	16	24	—	—	—
+Shares issued for restricted stock units	—	(38)	38	—	—	—
+Treasury stock acquired
+	—	—	(332)	—	—	—
+Other	—	1	—	—	—	—
+Balance, September 30, 2026
+	$	1,466	$	4,474	$	(29,201)	$	27,415	$	(3,866)	$	352
+Three Months Ended September 30, 2025
+Colgate-Palmolive Company Shareholders’ Equity
+Common
+Stock	Additional
+Paid-in
+Capital	Treasury
+Stock	Retained
+Earnings	Accumulated
+Other
+Comprehensive
+Income (Loss)(1)
+	Noncontrolling
+Interests
+Balance, June 30, 2025
+	$	1,466	$	4,246	$	(27,821)	$	26,735	$	(3,924)	$	350
+Net income	—	—	—	735	—	31
+Other comprehensive income 
+(loss), net of tax
+	—	—	—	—	36	(4)
+Dividends ($0.52 per share)
+	—	—	—	(419)	—	—
+Stock-based compensation expense
+	—	72	—	—	—	—
+Shares issued for stock options
+	—	8	10	—	—	—
+Shares issued for restricted stock units	—	(43)	43	—	—	—
+Treasury stock acquired
+	—	—	(288)	—	—	—
+Other	—	1	(1)	—	—	5
+Balance, September 30, 2025
+	$	1,466	$	4,284	$	(28,057)	$	27,051	$	(3,888)	$	382
+(1) Accumulated other comprehensive income (loss) includes cumulative translation losses of $3,337 at September 30, 2026 ($3,358 at September 30, 2025) and $3,292 at June 30, 2026 ($3,378 at June 30, 2025), respectively, and unrecognized retirement plan and other retiree benefits costs of $587 at September 30, 2026 ($586 at September 30, 2025) and $584 at June 30, 2026 ($595 at June 30, 2025), respectively.
+COLGATE-PALMOLIVE COMPANY
+Condensed Consolidated Statements of Changes in Shareholders’ Equity
+(Dollars in Millions)
+(Unaudited)
+Nine Months Ended September 30, 2026
+Colgate-Palmolive Company Shareholders’ Equity
+Common
+Stock	Additional
+Paid-in
+Capital	Treasury
+Stock	Retained
+Earnings	Accumulated
+Other
+Comprehensive
+Income (Loss)(1)
+	Noncontrolling
+Interests
+Balance, December 31, 2025
+	$	1,466	$	4,322	$	(28,450)	$	26,595	$	(3,879)	$	311
+Net income	—	—	—	2,090	—	91
+Other comprehensive income 
+(loss), net of tax
+	—	—	—	—	13	(4)
+Dividends ($1.59 per share)
+	—	—	—	(1,270)	—	(46)
+Stock-based compensation expense
+	—	141	—	—	—	—
+Shares issued for stock options
+	—	77	101	—	—	—
+Shares issued for restricted stock units
+	—	(70)	70	—	—	—
+Treasury stock acquired
+	—	—	(922)	—	—	—
+Other	—	4	—	—	—	—
+Balance, September 30, 2026
+	$	1,466	$	4,474	$	(29,201)	$	27,415	$	(3,866)	$	352
+Nine Months Ended September 30, 2025
+Colgate-Palmolive Company Shareholders’ Equity
+Common
+Stock	Additional
+Paid-in
+Capital	Treasury
+Stock	Retained
+Earnings	Accumulated
+Other
+Comprehensive
+Income (Loss)(1)
+	Noncontrolling
+Interests
+Balance, December 31, 2024
+	$	1,466	$	4,181	$	(27,358)	$	26,145	$	(4,222)	$	332
+Net income	—	—	—	2,169	—	97
+Other comprehensive income (loss), net of tax	—	—	—	—	334	—
+Dividends ($1.56 per share)
+	—	—	—	(1,263)	—	(53)
+Stock-based compensation expense
+	—	127	—	—	—	—
+Shares issued for stock options
+	—	37	46	—	—	—
+Shares issued for restricted stock units
+	—	(65)	65	—	—	—
+Treasury stock acquired
+	—	—	(804)	—	—	—
+Other	—	4	(6)	—	—	6
+Balance, September 30, 2025
+	$	1,466	$	4,284	$	(28,057)	$	27,051	$	(3,888)	$	382
+(1) Accumulated other comprehensive income (loss) includes cumulative translation losses of $3,337 at September 30, 2026 ($3,358 at September 30, 2025) and $3,351 at December 31, 2025 ($3,687 at December 31, 2024), respectively, and unrecognized retirement plan and other retiree benefits costs of $587 at September 30, 2026 ($586 at September 30, 2025) and $583 at December 31, 2025 ($605 at December 31, 2024), respectively.
+See Notes to Condensed Consolidated Financial Statements.
+6
+COLGATE-PALMOLIVE COMPANY
+ Notes to Condensed Consolidated Financial Statements
+(Dollars in Millions Except Share and Per Share Amounts)
+(Unaudited)
+1. Basis of Presentation 
+The Condensed Consolidated Financial Statements reflect all normal recurring adjustments which, in management’s opinion, are necessary for a fair statement of the results for interim periods. Results of operations for interim periods may not be representative of results to be expected for a full year. Note that certain columns and rows may not sum due to rounding. Colgate-Palmolive Company (together with its subsidiaries, the “Company” or “Colgate”) reclassifies certain prior year amounts, as applicable, to conform to the current year presentation.
+For a complete set of financial statement notes, including the Company’s significant accounting policies, refer to the Company’s Annual Report on Form 10-K for the year ended December 31, 2025, filed with the Securities and Exchange Commission (the “SEC”).
+2. Use of Estimates 
+Provisions for certain expenses, including income taxes, advertising and consumer promotion, are based on full year assumptions and are included in the accompanying Condensed Consolidated Financial Statements in proportion with estimated annual tax rates, the passage of time or estimated annual sales, as applicable.
+3. Recent Accounting Pronouncements 
+There have been no accounting pronouncements issued or effective during 2026 that have had, or are expected to have, a material impact on the Company’s Consolidated Financial Statements.
+7
+COLGATE-PALMOLIVE COMPANY
+ Notes to Condensed Consolidated Financial Statements
+(Dollars in Millions Except Share and Per Share Amounts)
+(Unaudited)
+4. Acquisitions
+On April 30, 2025, the Company acquired Care TopCo Pty Ltd, the owner of the Prime100 pet food business, for cash consideration of AU $471 ($301). This acquisition provided the Company’s Hill’s Pet Nutrition segment with an entry into the fast-growing fresh pet food category in Australia. The acquisition was financed with a combination of debt and cash and was accounted for as a business combination in accordance with ASC 805.
+During the second quarter of 2026, the Company finalized its purchase price allocation and the final purchase price of $301 was allocated to the net assets acquired based on their respective fair values as follows:
+Cash	$	8
+Other current assets	12
+Property, plant and equipment	13
+Other assets	5
+Other intangible assets	64
+Goodwill	207
+Total liabilities	(8)
+Fair value of net assets acquired	$	301
+Goodwill of $207 was allocated to the Hill’s Pet Nutrition segment. The Company expects that goodwill will be deductible for tax purposes. Other intangible assets acquired include trademarks, customer relationships and product formulations, which have useful lives ranging from five to 20 years.
+Pro forma results of operations have not been presented as the impact on the Company’s Consolidated Financial Statements is not material.
+8
+COLGATE-PALMOLIVE COMPANY
+ Notes to Condensed Consolidated Financial Statements
+(Dollars in Millions Except Share and Per Share Amounts)
+(Unaudited)
+5. Restructuring and Related Implementation Charges 
+Strategic Growth and Productivity Program
+On July 31, 2025, the Company’s Board of Directors (the “Board”) approved a three-year productivity program to drive future growth and support the Company’s 2030 strategy (the “Strategic Growth and Productivity Program”). The program includes initiatives to better align the Company’s organizational structure to support its strategic initiatives, optimize the Company’s global supply chain to drive agility and efficiencies and simplify and streamline its organizational structure to reduce overhead costs. 
+On April 30, 2026, the Board approved an expansion of the Strategic Growth and Productivity Program to continue to align the Company’s operations to drive future growth and support the Company’s 2030 strategy. 
+The Strategic Growth and Productivity Program is estimated to result in cumulative pre-tax charges, once all initiatives are approved and implemented, totaling between $350 and $550. These pre-tax charges are currently estimated to be comprised of the following: employee-related costs, including severance and other termination benefits (70% to 80%) and asset-related costs and other charges (20% to 30%), which include accelerated depreciation, asset write-downs, contract termination and other exit costs. It is estimated that approximately 80% to 90% of the charges will result in cash expenditures and substantially all charges resulting from the program will be incurred by December 31, 2028. 
+It is estimated that the cumulative pre-tax charges, once all projects are approved and implemented, will relate to initiatives undertaken in North America (5% to 10%), Latin America (15% to 20%), Europe, Middle East & Africa (“EMEA”) (25% to 30%), Asia Pacific (10% to 15%), Hill’s Pet Nutrition (10% to 15%) and Corporate (20% to 25%).
+For the three and nine months ended September 30, 2026, charges resulting from the Strategic Growth and Productivity Program are reflected in the income statement as follows:
+Three Months Ended September 30, 2026
+	Nine Months Ended September 30, 2026
+Gross Profit	$	5	$	7
+Selling, general and administrative expenses	9	20
+Other (income) expense, net	15	300
+Non-service related postretirement costs	1	6
+Total Strategic Growth and Productivity Program, pre-tax	$	30	$	333
+Total Strategic Growth and Productivity Program, after-tax	$	26	$	268
+Restructuring and related implementation charges are recorded in the Corporate segment as these initiatives are predominantly centrally directed and controlled and are not included in internal measures of segment operating performance. 
+9
+COLGATE-PALMOLIVE COMPANY
+ Notes to Condensed Consolidated Financial Statements
+(Dollars in Millions Except Share and Per Share Amounts)
+(Unaudited)
+Total charges incurred for the Strategic Growth and Productivity Program relate to initiatives undertaken by the following reportable operating segments and Corporate:
+Three Months Ended September 30, 2026
+	Nine Months Ended September 30, 2026
+	Program-to-date Accumulated Charges
+North America	(3)	%	9	%	9	%
+Latin America	16	%	15	%	15	%
+Europe, Middle East & Africa	54	%	27	%	27	%
+Asia Pacific	9	%	3	%	3	%
+Hill’s Pet Nutrition
+	—	%	19	%	18	%
+Corporate	24	%	27	%	28	%
+Total	100	%	100	%	100	%
+Since the inception of the Strategic Growth and Productivity Program, the Company has incurred cumulative pre-tax charges of $346 ($278 after-tax) in connection with the implementation of various projects as follows:
+Cumulative Charges as of September 30, 2026 
+Employee-Related Costs	$	300
+Asset-Related Costs and Other	46
+Total	$	346
+The following table summarizes the activity for the restructuring accrual: 
+Three Months Ended September 30, 2026
+Employee-Related
+Costs	Asset-Related Costs & Other	Total
+Balance at June 30, 2026
+	$	210	$	18	$	228
+Charges	20	10	30
+Cash payments	(68)	(8)	(76)
+Charges against assets and liabilities	(1)	(1)	(2)
+Foreign exchange	(8)	—	(8)
+Balance at September 30, 2026
+	$	153	$	19	$	172
+Nine Months Ended September 30, 2026
+Employee-Related
+Costs	Asset-Related Costs & Other	Total
+Balance at December 31, 2025
+	$	6	$	4	$	10
+Charges	294	39	333
+Cash payments	(121)	(19)	(140)
+Charges against assets and liabilities	(6)	(5)	(11)
+Foreign exchange	(20)	—	(20)
+Balance at September 30, 2026
+	$	153	$	19	$	172
+10
+COLGATE-PALMOLIVE COMPANY
+ Notes to Condensed Consolidated Financial Statements
+(Dollars in Millions Except Share and Per Share Amounts)
+(Unaudited)
+Employee-Related Costs primarily include severance and other termination benefits and are calculated based on long-standing benefit practices, written severance policies, local statutory requirements and, in certain cases, voluntary termination arrangements. Employee-Related Costs also include postretirement benefit enhancements of $1 and $6 for the three and nine months ended September 30, 2026, respectively. These amounts are reflected as Charges against assets and liabilities within Employee-Related Costs in the preceding tables as the corresponding balance sheet amounts are reflected as an increase in postretirement liabilities.
+6. Inventories 
+Inventories by major class were as follows:
+September 30,
+2026	December 31,
+2025
+Raw materials and supplies	$	583	$	632
+Work-in-process	60	46
+Finished goods	1,606	1,479
+ Total Inventories, net	$	2,249	$	2,157
+Non-current inventory, net	(67)	(125)
+ Current Inventories, net	$	2,182	$	2,032
+7. Earnings Per Share 
+For the three months ended September 30, 2026 and 2025, earnings per share were as follows:
+Three Months Ended
+September 30, 2026	September 30, 2025
+Net income attributable to Colgate-Palmolive Company	Shares
+(millions)	Per
+Share	Net income attributable to Colgate-Palmolive Company	Shares
+(millions)	Per
+Share
+Basic EPS	$	751	796.9	$	0.94	$	735	807.8	$	0.91
+Stock options and 
+restricted stock units
+	2.8	2.4
+Diluted EPS	$	751	799.7	$	0.94	$	735	810.2	$	0.91
+For the three months ended September 30, 2026 and 2025, the average number of stock options and restricted stock units that were anti-dilutive and not included in diluted earnings per share calculations were 1,247,681 and 1,060,609, respectively.
+For the nine months ended September 30, 2026 and 2025, earnings per share were as follows:
+11
+COLGATE-PALMOLIVE COMPANY
+ Notes to Condensed Consolidated Financial Statements
+(Dollars in Millions Except Share and Per Share Amounts)
+(Unaudited)
+Nine Months Ended
+September 30, 2026	September 30, 2025
+Net income attributable to Colgate-Palmolive Company	Shares
+(millions)	Per
+Share	Net income attributable to Colgate-Palmolive Company	Shares
+(millions)	Per
+Share
+Basic EPS	$	2,090	799.5	$	2.61	$	2,169	810.0	$	2.68
+Stock options and 
+restricted stock units
+	2.7	2.8
+Diluted EPS	$	2,090	802.2	$	2.61	$	2,169	812.8	$	2.67
+For the nine months ended September 30, 2026 and 2025, the average number of stock options and restricted stock units that were anti-dilutive and not included in diluted earnings per share calculations were 1,321,916 and 987,780, respectively.
+Basic and diluted earnings per share are computed independently for each quarter and any year-to-date period presented. As a result of changes in the number of shares outstanding during the year and rounding, the sum of the quarters’ earnings per share may not necessarily equal the earnings per share for any year-to-date period.
+8. Other Comprehensive Income (Loss) 
+Additions to and reclassifications out of Accumulated other comprehensive income (loss) attributable to the Company for the three and nine months ended September 30, 2026 and 2025 were as follows:
+Three Months Ended September 30,
+	Nine Months Ended September 30,
+2026	2025	2026	2025
+Cumulative translation adjustments:
+Cumulative translation adjustments, pre-tax	$	(41)	$	17	$	49	$	228
+Tax amounts	(4)	2	(36)	101
+Cumulative translation adjustments, net of tax	(45)	19	13	329
+Pension and other benefits:
+ Net actuarial gain (loss), prior service costs and settlements
+ during the period	(10)	5	(24)	6
+Amortization of net actuarial loss (gain), transition and prior service costs(1)
+	7	8	20	20
+Retirement Plan and other retiree benefit adjustments, pre-tax	(3)	13	(4)	26
+Tax amounts	—	(3)	—	(6)
+Retirement Plan and other retiree benefit adjustments, net of tax	(3)	10	(4)	20
+Cash flow hedges:
+Gains (losses) on cash flow hedges, pre-tax	(6)	8	5	(19)
+Tax amounts	4	(1)	(1)	4
+Gains (losses) on cash flow hedges, net of tax	(2)	7	4	(15)
+Total Other comprehensive income (loss), net of tax	$	(50)	$	36	$	13	$	334
+(1) These components of Other comprehensive income (loss) are included in the computation of total pension cost. Refer to Note 9, Retirement Plans and Other Retiree Benefits for additional details.
+There were no tax impacts on Other comprehensive income (loss) (“OCI”) attributable to Noncontrolling interests.
+12
+COLGATE-PALMOLIVE COMPANY
+ Notes to Condensed Consolidated Financial Statements
+(Dollars in Millions Except Share and Per Share Amounts)
+(Unaudited)
+9. Retirement Plans and Other Retiree Benefits 
+Components of Net periodic benefit cost for the three and nine months ended September 30, 2026 and 2025 were as follows:
+Three Months Ended September 30,
+Pension Benefits	Other Retiree Benefits
+United States	International
+2026	2025	2026	2025	2026	2025
+Service cost	$	1	$	1	$	5	$	4	$	1	$	2
+Interest cost	22	26	9	8	11	10
+Expected return on plan assets	(19)	(24)	(7)	(7)	—	—
+Amortization of actuarial loss (gain)	10	10	1	3	(4)	(5)
+Net periodic benefit cost	$	14	$	13	$	8	$	8	$	8	$	7
+Other postretirement charges	1	—	—	—	—	—
+Total pension cost	$	15	$	13	$	8	$	8	$	8	$	7
+Nine Months Ended September 30,
+Pension Benefits	Other Retiree Benefits
+United States	International
+2026	2025	2026	2025	2026	2025
+Service cost	$	1	$	1	$	14	$	13	$	4	$	5
+Interest cost	66	73	27	24	29	28
+Expected return on plan assets	(57)	(60)	(21)	(19)	—	—
+Amortization of actuarial loss (gain)	27	28	4	4	(11)	(12)
+Net periodic benefit cost	$	37	$	42	$	24	$	22	$	22	$	21
+Other postretirement charges	1	—	—	—	5	—
+ERISA litigation matter(1)
+	—	50	—	—	—	—
+Total pension cost	$	38	$	92	$	24	$	22	$	27	$	21
+(1) Refer to Note 10, Contingencies for information regarding the ERISA litigation matter.
+Other postretirement charges for the three and nine months ended September 30, 2026 included charges of $1 and $6, respectively, incurred pursuant to the Strategic Growth and Productivity Program. 
+The U.S. pension plans required immaterial cash contributions by the Company in 2026. Refer to Note 10, Contingencies for additional information.
+13
+COLGATE-PALMOLIVE COMPANY
+ Notes to Condensed Consolidated Financial Statements
+(Dollars in Millions Except Share and Per Share Amounts)
+(Unaudited)
+10. Contingencies 
+As a global company serving consumers in more than 200 countries and territories, the Company is routinely subject to a wide variety of legal proceedings. These include disputes relating to intellectual property, contracts, product liability, marketing, advertising, foreign exchange controls, antitrust and trade regulation, labor and employment, pension and benefits, data privacy and security, environmental and tax matters and consumer class actions. In addition, management proactively reviews and monitors the Company’s exposure to, and the impact of, environmental matters. The Company is party to various environmental matters and, as such, may be responsible for all or a portion of the cleanup, restoration and post-closure monitoring of several sites.
+The Company establishes accruals for loss contingencies when it has determined that a loss is probable and that the amount of loss, or range of loss, can be reasonably estimated. Any such accruals are adjusted thereafter as appropriate to reflect changes in circumstances. The Company does not accrue for legal defense costs, which are recognized as incurred when the legal services are provided.
+The Company also determines estimates of reasonably possible losses or ranges of reasonably possible losses in excess of related accrued liabilities, if any, when it has determined that a loss is reasonably possible and it is able to determine such estimates. For those matters disclosed below for which the amount of any reasonably possible losses can be reasonably estimated, the Company currently estimates that the aggregate range of reasonably possible losses in excess of any accrued liabilities is $0 to approximately $225 (based on current exchange rates). The estimates included in this amount are based on the Company’s analysis of currently available information and, as new information is obtained, these estimates may change. Due to the inherent subjectivity of the assessments and the unpredictability of outcomes of legal proceedings, any amounts accrued or included in this aggregate range may not represent the ultimate loss to the Company. Thus, the Company’s exposure and ultimate losses may be higher or lower, and possibly significantly so, than the amounts accrued or the range disclosed above.
+Based on current knowledge, management does not believe that the ultimate resolution of loss contingencies arising from the matters discussed herein will have a material effect on the Company’s consolidated financial position or its ongoing results of operations or cash flows. However, in light of the inherent uncertainties noted above, an adverse outcome in one or more matters could be material to the Company’s results of operations or cash flows for any particular quarter or year.
+Brazilian Matters
+There are certain tax and civil proceedings outstanding, as described below, related to the Company’s 1995 acquisition of the Kolynos oral care business from Wyeth (the “Seller”).
+The Brazilian internal revenue authority has disallowed interest deductions and foreign exchange losses taken by the Company’s Brazilian subsidiary for certain years in connection with the financing of the Kolynos acquisition. The tax assessments with interest, penalties and any court-mandated fees, at the current exchange rate, are approximately $107. This amount includes additional assessments received from the Brazilian internal revenue authority in April 2016 relating to net operating loss carryforwards used by the Company’s Brazilian subsidiary to offset taxable income that had also been deducted from the authority’s original assessments. The Company has been disputing the disallowances by appealing the assessments since October 2001.
+Following adverse administrative decisions, the Company filed five cases in the Lower Federal Courts in the City of São Paulo (the “Lower Federal Court”) in October 2015, March 2017, October 2018, June 2019 and September 2020. Of those five cases, currently one case is pending in the Lower Federal Court and four cases have been appealed to the Federal Court of Appeals. Of the four cases pending in the Federal Court of Appeals, one case was appealed by the Brazilian federal government following a ruling in favor of the Company in the Lower Federal Court and three were appealed by the Company following rulings against the Company in the Lower Federal Court. In December 2025, in one of these three cases, the Federal Court of Appeals ruled against the Company with respect to the deductibility of the corporate income tax for the years 1999 through 2001. The amount at issue in this case, with interest and any court-mandated fees, at the current exchange rate, is approximately $19. The Company filed a motion for clarification with the Federal Court of Appeals, which was denied in April 2026. In May 2026, the Company filed further appeals. In August and October 2026, those appeals were denied, and the Company has filed further appeals. Although there can be no assurances, management believes, based on the opinion of its Brazilian legal counsel, that it has strong legal grounds to contest these matters, and it is more likely than not that the Company will ultimately prevail. The Company is challenging these matters vigorously.
+14
+COLGATE-PALMOLIVE COMPANY
+ Notes to Condensed Consolidated Financial Statements
+(Dollars in Millions Except Share and Per Share Amounts)
+(Unaudited)
+In July 2002, the Brazilian Federal Public Attorney filed a case against the federal government of Brazil, Laboratorios Wyeth-Whitehall Ltda. (the Brazilian subsidiary of the Seller) and the Company’s Brazilian subsidiary in the Lower Federal Court, seeking to annul an April 2000 decision by the Brazilian Board of Tax Appeals that found in favor of the Seller’s Brazilian subsidiary on the issue of whether it had incurred taxable capital gains as a result of the divestiture of Kolynos. The case seeks to make the Company’s Brazilian subsidiary jointly and severally liable for any tax due from the Seller’s Brazilian subsidiary. The case has been pending since 2002, and the Lower Federal Court has not issued a decision. Although there can be no assurances, management believes, based on the opinion of its Brazilian legal counsel, that it has strong legal grounds to contest this matter and it is more likely than not that the Company will ultimately prevail. The Company is challenging this matter vigorously.
+In December 2005, the Brazilian internal revenue authority issued to the Company’s Brazilian subsidiary a tax assessment with interest and any court-mandated fees of approximately $28, at the current exchange rate, based on a claim that certain purchases of U.S. Treasury bills by the subsidiary and their subsequent disposition during the period 2000 to 2001 were subject to a tax on foreign exchange transactions. Following adverse administrative decisions, in January 2016, the Company filed a case in the Lower Federal Court. In the event the Company is unsuccessful in this case, further appeals are available. Although there can be no assurances, management believes, based on the opinion of its Brazilian legal counsel, that it has strong legal grounds to contest this matter and it is more likely than not that the Company will ultimately prevail. The Company is challenging this matter vigorously.
+Talcum Powder Matters
+The Company has been named as a defendant in civil actions alleging that certain of its historic talcum powder products were contaminated with asbestos and/or caused mesothelioma and other cancers. Many of these actions involve a number of co-defendants from a variety of different industries.
+The number of cases against manufacturers and retailers of talc-containing products continues to grow. The rate of filings against the Company is consistent with this trend. As of September 30, 2026, there were 561 individual cases pending against the Company in state and federal courts throughout the United States, as compared to 525 cases as of June 30, 2026 and 453 cases as of December 31, 2025. During the three months ended September 30, 2026, 78 new cases were filed and 42 cases were resolved by voluntary dismissal or settlement. During the nine months ended September 30, 2026, 236 new cases were filed and 128 cases were resolved by voluntary dismissal, settlement or dismissal by the court. The value of the settlements in the periods presented was not material, either individually or in the aggregate, to such period’s results of operations.
+The Company and its legal counsel believe that the Company has strong legal grounds to contest these cases and is challenging them vigorously. However, given the inherent uncertainties of litigation and the evolving litigation landscape, the Company cannot predict the outcome of all individual cases pending against it, and is only able to make an estimate for those cases that have advanced to the later stages of legal proceedings. For the remaining cases, the Company includes in the range of reasonably possible losses in excess of accrued liabilities stated above an aggregated amount that takes into account historical outcomes of the Company’s cases. 
+As of September 30, 2026, a portion of the Company’s costs incurred in defending and resolving these claims has been, and the Company believes will continue to be, covered by insurance policies issued by several primary, excess and umbrella insurance carriers, subject to exhaustion, deductibles, exclusions, retentions, policy limits and insurance carrier insolvencies.
+ERISA Matter
+In June 2016, a lawsuit was filed in the United States District Court for the Southern District of New York (the “District Court”) against the Colgate-Palmolive Company Employees’ Retirement Income Plan (the “Retirement Plan”), the Company and certain individuals claiming that residual annuity payments associated with a 2005 residual annuity amendment to the Retirement Plan were improperly calculated for certain Retirement Plan participants in violation of the Employee Retirement Income Security Act. The relief sought included recalculation of benefits, pre- and post-judgment interest and attorneys’ fees. 
+15
+COLGATE-PALMOLIVE COMPANY
+ Notes to Condensed Consolidated Financial Statements
+(Dollars in Millions Except Share and Per Share Amounts)
+(Unaudited)
+Following adverse decisions by the District Court and the United States Court of Appeals for the Second Circuit, the Company recorded charges to earnings of $267 in the quarter ended March 31, 2023 and $65 in the quarter ended March 31, 2025 to reflect the then current estimated increase in pension plan liability and other related costs. In the quarter ended September 30, 2025, the parties entered into a settlement agreement to fully resolve the litigation for $332, inclusive of attorneys’ fees and costs. In January 2026, the District Court granted final approval of the settlement. In February 2026, the District Court granted plaintiffs’ request to allocate $99 of the settlement amount to plaintiffs’ attorneys’ fees and costs. These attorneys’ fees and costs have been paid by the Company, while the remainder of the settlement amount is funded by the Plan. The litigation resulted in an increase in the obligations of the Retirement Plan and, based on the current funded status of the Retirement Plan, required immaterial cash contributions by the Company in 2025 and 2026. 
+16
+COLGATE-PALMOLIVE COMPANY
+ Notes to Condensed Consolidated Financial Statements
+(Dollars in Millions Except Share and Per Share Amounts)
+(Unaudited)
+11. Segment Information 
+The Company operates in two product segments: Oral, Personal and Home Care; and Pet Nutrition. 
+The operations of the Oral, Personal and Home Care product segment are managed geographically in four reportable operating segments: North America, Latin America, EMEA and Asia Pacific.
+As part of the Strategic Growth and Productivity Program, to further optimize and leverage the operating scale and drive growth within the Europe and Africa/Eurasia regions, the Company realigned its reportable operating segments effective for the quarter ended March 31, 2026. As a result, the Company combined the results of its Europe and Africa/Eurasia (excluding Russia and Belarus) reportable operating segments and its skin health business (previously within the North America reportable operating segment) into a new EMEA reportable operating segment. In conjunction with this realignment, Russia and Belarus, which were previously reported within the Africa/Eurasia reportable operating segment, are reported within the Asia Pacific reportable operating segment. This reportable operating segment realignment did not impact the Company’s historical consolidated results of operations, financial position or cash flows. The Company has recast its historical geographic segment information to conform to the new reporting structure. As a result of this reporting structure realignment, the Company reallocated goodwill of approximately $19 from the EMEA segment to the Asia Pacific segment. In conjunction with this reporting structure realignment, the Company completed an assessment indicating no goodwill impairment existed as a result of this new segment reporting structure. 
+The Company evaluates segment performance based on several factors, including Operating profit. The Company uses Operating profit as a measure of operating segment performance because it excludes the impact of Corporate-driven decisions related to interest expense and income taxes. The Chairman of the Board, President and Chief Executive Officer has been determined to be the Company’s Chief Operating Decision Maker and he uses Operating Profit to assess performance and to allocate resources for each of the reportable operating segments in the budgeting and forecasting process. Asset information by segment is not utilized for purposes of assessing performance or allocating resources, and therefore such information has not been presented.
+The accounting policies of the operating segments are generally the same as those described in Note 2, Summary of Significant Accounting Policies to the Company’s Consolidated Financial Statements included in the Company’s Annual Report on Form 10-K for the year ended December 31, 2025. Intercompany sales have been eliminated. Corporate operations include costs related to stock options and restricted stock units, research and development costs, Corporate overhead costs, restructuring and related implementation charges and gains and losses on sales of non-core product lines and assets. The Company reports these items within Corporate operations as they relate to Corporate-based responsibilities and decisions and are not included in the internal measures of segment operating performance used by the Company to measure the underlying performance of the operating segments.
+Approximately two-thirds of the Company’s Net sales are generated from markets outside the United States, with approximately 45% of the Company’s Net sales coming from emerging markets (which consist of Latin America, Asia (excluding Japan), Africa, the Middle East and Eastern and Central Europe).
+Corporate Operating profit (loss) for the three months ended September 30, 2026 included charges resulting from the Strategic Growth and Productivity Program of $29. 
+Corporate Operating profit (loss) for the nine months ended September 30, 2026 included charges resulting from the Strategic Growth and Productivity Program of $327. Corporate Operating profit (loss) for the nine months ended September 30, 2025 included charges resulting from the ERISA litigation matter of $15 and acquisition-related costs of $9.
+17
+COLGATE-PALMOLIVE COMPANY
+ Notes to Condensed Consolidated Financial Statements
+(Dollars in Millions Except Share and Per Share Amounts)
+(Unaudited)
+The Company’s Net sales, significant segment expenses and operating profit by reportable segment were:
+Three Months Ended September 30, 2026
+Net sales	Cost of Sales	Selling, general and administrative expenses	Other (income) expense, net (1)
+	Operating Profit
+Reportable Segments
+Oral, Personal and Home Care
+North America	$	905	$	381	$	351	$	(3)	$	177
+Latin America	1,326	570	361	2	392
+Europe, Middle East & Africa	1,130	418	436	14	262
+Asia Pacific	802	300	296	(6)	211
+Total Oral, Personal and Home Care	4,164	1,042
+Hill's Pet Nutrition	1,205	461	475	2	267
+Reconciliation with Total Company Operating Profit
+Corporate	(221)
+Total	$	5,369	$	1,088
+ Note: Table may not sum due to rounding. 
+(1) Other (income) expense, net primarily includes amortization of intangible assets and equity income.
+Nine Months Ended September 30, 2026
+Net sales	Cost of Sales	Selling, general and administrative expenses	Other (income) expense, net (1)
+	Operating Profit
+Reportable Segments
+Oral, Personal and Home Care
+North America	$	2,684	$	1,111	$	1,071	$	(7)	$	510
+Latin America	4,011	1,707	1,095	(2)	1,211
+Europe, Middle East & Africa	3,377	1,231	1,312	44	791
+Asia Pacific	2,388	886	877	(18)	643
+Total Oral, Personal and Home Care	12,461	3,155
+Hill's Pet Nutrition	3,594	1,364	1,407	7	816
+Reconciliation with Total Company Operating Profit
+Corporate	(902)
+Total	$	16,055	$	3,069
+ Note: Table may not sum due to rounding. 
+(1) Other (income) expense, net primarily includes amortization of intangible assets and equity income.
+18
+COLGATE-PALMOLIVE COMPANY
+ Notes to Condensed Consolidated Financial Statements
+(Dollars in Millions Except Share and Per Share Amounts)
+(Unaudited)
+Three Months Ended September 30, 2025
+Net sales	Cost of Sales	Selling, general and administrative expenses	Other (income) expense, net (1)
+	Operating Profit
+Reportable Segments
+Oral, Personal and Home Care
+North America	$	922	$	381	$	342	$	(1)	$	199
+Latin America	1,178	541	303	(2)	337
+Europe, Middle East & Africa	1,115	417	435	20	243
+Asia Pacific	775	288	280	(6)	213
+Total Oral, Personal and Home Care	3,989	992
+Hill's Pet Nutrition	1,142	457	427	2	255
+Reconciliation with Total Company Operating Profit
+Corporate	(189)
+Total	$	5,131	$	1,059
+ Note: Table may not sum due to rounding. 
+ (1) Other (income) expense, net primarily includes amortization of intangible assets and equity income.
+Nine Months Ended September 30, 2025
+Net sales	Cost of Sales	Selling, general and administrative expenses	Other (income) expense, net (1)
+	Operating Profit
+Reportable Segments
+Oral, Personal and Home Care
+North America	$	2,745	$	1,119	$	1,042	$	2	$	583
+Latin America	3,528	1,555	936	(15)	1,052
+Europe, Middle East & Africa	3,204	1,179	1,261	58	706
+Asia Pacific	2,259	847	809	(17)	620
+Total Oral, Personal and Home Care	11,735	2,961
+Hill's Pet Nutrition	3,417	1,356	1,280	4	778
+Reconciliation with Total Company Operating Profit
+Corporate	(523)
+Total	$	15,152	$	3,214
+ Note: Table may not sum due to rounding.
+ (1) Other (income) expense, net primarily includes amortization of intangible assets and equity income.
+19
+COLGATE-PALMOLIVE COMPANY
+ Notes to Condensed Consolidated Financial Statements
+(Dollars in Millions Except Share and Per Share Amounts)
+(Unaudited)
+The Company’s Net sales of Oral, Personal and Home Care and Pet Nutrition products accounted for the following percentages of the Company’s Net sales:
+Three Months Ended	Nine Months Ended
+September 30,	September 30,
+2026	2025	2026	2025
+Net sales
+Oral Care	44	%	44	%	44	%	44	%
+Personal Care	17	%	18	%	17	%	17	%
+Home Care	16	%	16	%	17	%	16	%
+Pet Nutrition	23	%	22	%	22	%	23	%
+Total Net sales	100	%	100	%	100	%	100	%
+Capital expenditures and depreciation and amortization expense by segment were:
+Three Months Ended	Nine Months Ended
+September 30,	September 30,
+2026	2025	2026	2025
+Capital expenditures
+Oral, Personal and Home Care
+North America	$	13	$	17	$	45	$	46
+Latin America	38	46	115	96
+Europe, Middle East & Africa	12	22	38	46
+Asia Pacific	22	18	54	51
+Total Oral, Personal and Home Care	85	103	252	239
+Hill's Pet Nutrition	23	21	60	64
+Corporate	26	31	88	84
+Total Capital expenditures	$	134	$	155	$	400	$	387
+Three Months Ended	Nine Months Ended
+September 30,	September 30,
+2026	2025	2026	2025
+Depreciation and amortization
+Oral, Personal and Home Care
+North America	$	20	$	20	$	59	$	58
+Latin America	31	27	90	78
+Europe, Middle East & Africa	27	30	80	89
+Asia Pacific	22	20	64	59
+Total Oral, Personal and Home Care	100	97	293	284
+Hill's Pet Nutrition	34	35	101	98
+Corporate	25	26	76	75
+Total Depreciation and amortization	$	159	$	158	$	470	$	457
+20
+COLGATE-PALMOLIVE COMPANY
+ Notes to Condensed Consolidated Financial Statements
+(Dollars in Millions Except Share and Per Share Amounts)
+(Unaudited)
+12. Fair Value Measurements and Financial Instruments 
+The Company uses available market information and other valuation methodologies in assessing the fair value of financial instruments. Judgment is required in interpreting market data to develop the estimates of fair value and, accordingly, changes in assumptions or the estimation methodologies may affect the fair value estimates. The Company is exposed to the risk of credit loss in the event of nonperformance by counterparties to financial instrument contracts; however, nonperformance is considered unlikely and any nonperformance is unlikely to be material, as it is the Company’s policy to contract only with diverse, credit-worthy counterparties based upon both strong credit ratings and other credit considerations. 
+The Company is exposed to market risk from foreign currency exchange rates, interest rates and commodity price fluctuations. Volatility relating to these exposures is managed on a global basis by utilizing a number of techniques, including working capital management, sourcing strategies, selling price increases, selective borrowings in local currencies and entering into selective derivative instrument transactions, issued with standard features, in accordance with the Company’s treasury and risk management policies, which prohibit the use of derivatives for speculative purposes and leveraged derivatives for any purpose. The Company’s policy is generally to enter into derivative instrument contracts with terms that match the underlying exposure being hedged. 
+The Company’s derivative instruments include foreign currency contracts and commodity contracts, which are either designated as cash flow, fair value, or net investment hedges, or are not designated as accounting hedges (“economic hedges”). The Company utilizes foreign currency contracts, including forward and swap contracts, local currency deposits and local currency borrowings to hedge portions of its forecasted foreign currency purchases, assets and liabilities arising in the normal course of business and the net investment in certain foreign subsidiaries. These contracts are valued using observable market rates (Level 2 valuation). Commodity futures contracts are utilized to hedge the purchases of raw materials used in production. These contracts are measured using quoted commodity exchange prices (Level 1 valuation). The duration of foreign currency and commodity contracts does not exceed 12 months.
+The following table summarizes the fair value of the Company’s derivative instruments and other financial instruments which are carried at fair value in the Company’s Condensed Consolidated Balance Sheets at September 30, 2026 and December 31, 2025:
+Assets	Liabilities
+Account	Fair Value	Account	Fair Value
+Derivative instruments	September 30, 2026	December 31, 2025	September 30, 2026	December 31, 2025
+Foreign currency contracts(1)
+	Other current assets	$	29	$	18	Other accruals	$	25	$	22
+Commodity contracts	Other current assets	1	—	Other accruals	—	—
+$	30	$	18	$	25	$	22
+Other financial instruments
+Marketable securities	Other current assets	$	85	$	107
+(1) As of September 30, 2026, the fair value of economic hedges was $5 and $5, which was included within Other current assets and Other accruals, respectively. 
+As of December 31, 2025, the fair value of economic hedges was $10 and $4, which was included within Other current assets and Other accruals, respectively.
+21
+COLGATE-PALMOLIVE COMPANY
+ Notes to Condensed Consolidated Financial Statements
+(Dollars in Millions Except Share and Per Share Amounts)
+(Unaudited)
+The carrying amount of cash, cash equivalents, marketable securities and accounts receivable approximated fair value as of September 30, 2026 and December 31, 2025. The estimated fair value of the Company’s total debt as of September 30, 2026 and December 31, 2025 was $6,988 and $7,518, respectively, and the related carrying value was $7,716 and $7,988, respectively. The estimated fair value of long-term debt was derived principally from quoted prices on the Company’s outstanding fixed-term notes (Level 2 valuation).
+The following table presents the notional values of the financial instruments used in our hedge activities:
+September 30, 2026	December 31, 2025
+Foreign Currency Contracts	$	3,160	$	3,535
+Foreign Currency Debt	4,042	3,942
+Commodity Contracts	18	16
+The following table presents the location and amount of gain (loss) on fair value hedges and economic hedges recognized in the Company’s Condensed Consolidated Statements of Income for three and nine months ended September 30, 2026 and 2025.
+Gain (Loss) Recognized in Income
+Location of Gain (Loss) Recognized in Income	Three Months Ended September 30,	Nine Months Ended September 30,
+2026	2025	2026	2025
+Derivative instruments:
+Foreign currency contracts(1)
+	Selling, general and administrative expenses	$	(8)	$	(19)	$	(81)	$	110
+(1) For the three and nine months ended September 30, 2026, the amount of gain (loss) on economic hedges was ($2) and ($52), respectively. 
+ For the three and nine months ended September 30, 2025, the amount of gain (loss) on economic hedges was ($11) and $68, respectively. 
+The amount of gain (loss) recognized in income and Accumulated other comprehensive income (AOCI) associated with cash flow hedges did not have a material impact on the Company’s Condensed Consolidated Financial Statements during the three and nine months ended September 30, 2026 and 2025.
+The following table presents the amount of gain (loss) on net investment hedges recognized in the Company’s AOCI for the three and nine months ended September 30, 2026 and 2025:
+Gain (Loss) Recognized in AOCI
+Three Months Ended September 30,	Nine Months Ended September 30,
+2026	2025	2026	2025
+Hedging instruments:
+Foreign currency contracts	$	—	$	(6)	$	(7)	$	(35)
+Foreign currency debt	30	(10)	172	(525)
+Total gain (loss) on net investment hedges	$	30	$	(16)	$	165	$	(560)
+22
+COLGATE-PALMOLIVE COMPANY
+ Notes to Condensed Consolidated Financial Statements
+(Dollars in Millions Except Share and Per Share Amounts)
+(Unaudited)
+ 13. Supplier Finance Program
+The Company has agreements to provide supplier finance programs which facilitate participating suppliers’ ability to finance payment obligations of the Company with designated third-party financial institutions. Participating suppliers may, at their sole discretion, elect to finance one or more payment obligations of the Company prior to their scheduled due dates at a discounted price to participating financial institutions. The Company’s obligations to its suppliers, including amounts due and scheduled payment dates, are not impacted by suppliers’ decisions to finance amounts under these arrangements. The outstanding payment obligations under the Company’s supplier finance programs are included in Accounts payable in the Condensed Consolidated Balance Sheets and were $218 and $177 as of September 30, 2026 and December 31, 2025, respectively.
+23
+COLGATE-PALMOLIVE COMPANY
+ Notes to Condensed Consolidated Financial Statements
+(Dollars in Millions Except Share and Per Share Amounts)
+(Unaudited)
+14. Income Taxes
+The effective income tax rate was 23.6% and 22.8% for the third quarter of 2026 and 2025, respectively. The quarterly provision for income taxes is determined based on the Company’s estimated full year effective income tax rate adjusted by the amount of tax attributable to infrequent or unusual items that are separately recognized on a discrete basis in the income tax provision in the quarter in which they occur. The Company’s current estimate of its full year effective income tax rate before discrete period items is 23.5% compared to 23.3% in 2025. 
+On July 4, 2025, U.S. tax legislation was signed into law (the “OBBBA”) which made permanent many of the tax provisions enacted in 2017 as part of the Tax Cuts and Jobs Act that were set to expire at the end of 2025. In addition, the OBBBA made changes to certain U.S. corporate tax provisions, many of which were effective beginning January 1, 2026. The OBBBA did not have a material effect on the Company’s Consolidated Financial Statements for the nine months ended September 30, 2026.
+In the third quarter of 2023, the Internal Revenue Service (the “IRS”) issued a notice giving taxpayers temporary relief from the effects of certain U.S. tax regulations that were issued in December 2021 which place greater restrictions on foreign taxes that are creditable against U.S. taxes on foreign source income. This notice allowed taxpayers to defer the application of these new regulations through the end of 2023. In December 2023, the IRS issued further guidance modifying this temporary relief period to the date that a notice or other guidance withdrawing or modifying the temporary relief is issued. The Company will recognize the impact, if any, in the period in which the temporary relief is withdrawn or modified.
+On December 15, 2022, the 27 member states of the European Union (“EU”) reached an agreement to establish a minimum level of taxation for certain large corporations by paying a minimum corporate tax rate of 15% in every jurisdiction in which they operate. This agreement, which is part of the Pillar II Model Rules initiative (“Pillar II”) agreed by all members of the Organization for Economic Cooperation and Development (“OECD”) and its Inclusive Framework (“IF”), was transposed into the laws of most EU member states by December 31, 2023. Subsequently, many other jurisdictions outside the EU have enacted similar minimum tax regimes consistent with the policy of Pillar II.
+Based on current legislation and available guidance, apart from the significant additional time and resources required to comply, Pillar II did not have a material impact on the Company’s Consolidated Financial Statements for the nine months ended September 30, 2026 and the Company does not believe it will have a material impact going forward.
+On January 5, 2026, IF reached an agreement known as the “Side-by-Side Package” that modifies key aspects of Pillar II and was effective beginning January 1, 2026. The Side-by-Side Package introduces various new safe harbors that the Company is expected to be eligible for and that, when fully enacted, should result in a reduction of compliance costs of Pillar II, among other benefits. However, as these rules and related regulations are revised and implemented, the Company will evaluate the impact, if any, on its Consolidated Financial Statements.
+The Company has ongoing federal, state and international income tax audits in various jurisdictions and evaluates uncertain tax positions that may be challenged by local tax authorities and not fully sustained. All U.S. federal income tax returns through December 31, 2013 have been audited by the IRS and there are limited matters which the Company plans to appeal for years 2010 through 2013. One such matter relates to the IRS assessment of taxes on the Company by imputing income on certain activities within one of our international operations, which is also under audit for the years 2014 through 2018. There were U.S. Tax Court rulings during 2023 in favor of the IRS against two unrelated third parties on similar matters. In October 2025, in one of those cases, the applicable U.S. Court of Appeals reversed the U.S. Tax Court’s decision and ruled in favor of the taxpayer. The case involving the other third party is still pending. The Company continues to believe that the tax assessment against the Company is without merit. While there can be no assurances, the Company believes this matter will ultimately be decided in favor of the Company. The amount of tax plus interest for the years 2010 through 2021 is estimated to be approximately $170, which is not included in the Company’s uncertain tax positions. In May 2024, the IRS initiated an audit for the years 2019 through 2021, which is still ongoing.
+24
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Executive Overview
+Business Organization
+Colgate-Palmolive Company (together with its subsidiaries, “we,” “us,” “our,” the “Company” or “Colgate-Palmolive”) is a caring, innovative growth company united behind our purpose to reimagine a healthier future for all people, their pets and our planet. To achieve our business and financial objectives and deliver peer-leading performance and total shareholder return, we are focused on driving organic sales growth; delivering consistent, compounded earnings per share growth; achieving operational efficiencies; and driving growth in free cash flow along with the efficient use of our balance sheet. 
+We are tightly focused on two product segments: Oral, Personal and Home Care; and Pet Nutrition. Within these segments, we follow a closely defined business strategy to grow our key product categories and increase our overall market share. Within the categories in which we compete, we prioritize our efforts based on their capacity to maximize the use of the organization’s core competencies and strong global equities and to deliver sustainable, profitable long-term growth.
+Operationally, we are organized along geographic lines with management teams having responsibility for the business and financial results in each region. We compete in more than 200 countries and territories worldwide with established businesses in all regions contributing to our sales and profitability. Approximately two-thirds of our Net sales are generated from markets outside the United States, with approximately 45% of our Net sales coming from emerging markets (which consist of Latin America, Asia (excluding Japan), Africa, the Middle East and Eastern and Central Europe). This geographic diversity and balance help to reduce our exposure to business and other risks in any one country or part of the world.
+The Oral, Personal and Home Care product segment is managed geographically in four reportable operating segments: North America, Latin America, Europe, Middle East & Africa (“EMEA”) and Asia Pacific, all of which sell primarily to a variety of retailers, wholesalers, distributors, dentists and, in some geographies, skin health professionals. Through Hill’s Pet Nutrition, we also compete on a worldwide basis in the pet nutrition market, selling products principally through authorized pet supply retailers, veterinarians and eCommerce retailers. We also sell certain of our products direct-to-consumer. We are engaged in manufacturing and sourcing of products and materials on a global scale and have major manufacturing facilities, warehousing facilities and distribution centers in every region around the world.
+As part of the Strategic Growth and Productivity Program, to further optimize and leverage the operating scale and drive growth within the Europe and Africa/Eurasia regions, we realigned our reportable operating segments effective for the quarter ended March 31, 2026. As a result, we combined the results of our Europe and Africa/Eurasia (excluding Russia and Belarus) reportable operating segments and our skin health business (previously within the North America reportable operating segment) into a new EMEA reportable operating segment. In conjunction with this realignment, Russia and Belarus, which were previously reported within the Africa/Eurasia reportable operating segment, are reported within the Asia Pacific reportable operating segment. This reportable operating segment realignment did not impact our historical consolidated results of operations, financial position or cash flows. We have recast our historical geographic segment information to conform to the new reporting structure.
+On an ongoing basis, management focuses on a variety of key indicators to monitor business health and performance. These indicators include net sales (including volume, pricing and foreign exchange components), organic sales growth (net sales growth excluding the impact of foreign exchange, acquisitions and divestments), a non-GAAP financial measure, and gross profit margin, selling, general and administrative expenses, operating profit, net income and earnings per share, in each case, on a GAAP and a non-GAAP basis, as well as measures used to optimize the management of working capital, capital expenditures, cash flow and return on capital. In addition, we review market share, household penetration and other data to assess how our brands are performing within their categories on a global and regional basis. The monitoring of these indicators and our Code of Conduct and corporate governance practices help to maintain business health and strong internal controls. For additional information regarding non-GAAP financial measures and the Company’s use of market share data and the limitations of such data, see “Non-GAAP Financial Measures” and “Market Share Information” below.
+25
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Global Trade Relations
+Major developments in trade relations, including the imposition of new or increased tariffs by the United States and/or other countries, have contributed to and are expected to continue to contribute to inflationary pressures, geopolitical tensions and macroeconomic and market volatility. These developments have also impacted and may continue to impact consumer sentiment, consumption, discretionary spending and/or purchasing patterns. In addition, they have impacted and may continue to impact the cost and/or availability of raw and packaging materials and the price of our products. While we have made and will continue to make efforts to mitigate the impact of these and any additional tariffs imposed by the United States and/or other countries or shifts in trade agreements, including the United States-Mexico-Canada Agreement, they or our mitigating actions could have a material effect on our business, results of operations, cash flows and financial condition. For additional information, see “Outlook” below.
+The War in Ukraine
+The war in Ukraine, and the related geopolitical tensions, have had and continue to have a significant impact on our operations in Ukraine and Russia, though it has not been material to our Consolidated Financial Statements. We have experienced, and expect to continue to experience, risks related to the impact of the war in Ukraine, including increases in the costs and, in certain cases, limitations on the availability of certain raw and packaging materials and commodities (including oil and natural gas), supply chain and logistics challenges, import restrictions, foreign currency volatility and reputational concerns. We also have faced and continue to face challenges to our ability to repatriate cash from Russia and identify banking partners to support our Russian operations and we may face challenges to our ability to protect our assets in Russia. We also continue to monitor the impact of sanctions, export controls and import restrictions.
+The Conflict in the Middle East 
+The conflict in the Middle East, including between the United States and Iran, has had and may continue to have macroeconomic impacts, such as heightened inflationary pressures and increased capital markets and foreign exchange volatility. It did not have a material impact on our Consolidated Financial Statements for the quarter ended September 30, 2026. The conflict has negatively impacted and may in the future negatively impact, among other things, supply chain and logistics (including increased shipping costs and freight delays), the availability and price of raw and packaging materials and commodities (particularly oil, resin and agricultural products), consumer sentiment and consumption and category growth rates. The full impact of the conflict on our business may not be fully realized for some time due to, among other things, our mitigation efforts, contingency plans and procurement processes.
+For more information about factors that could impact our business, including with respect to global trade relations, the war in Ukraine and the conflict in the Middle East, refer to Part I, Item 1A “Risk Factors” of our Annual Report on Form 10-K for the year ended December 31, 2025.
+Business Strategy
+Our 2030 strategy, which builds on the success of our 2025 strategy that concluded last year, is intended to deliver consistent, compounded earnings per share growth over the long term and to accelerate Net sales and organic sales growth through several key initiatives. These initiatives include leveraging the global reach and penetration of our brands; building the incremental benefit of superior, science-based innovation supported by an agile and resilient supply chain; harnessing the power of best-in-class omni-channel demand generation; leading in capabilities such as data, analytics and artificial intelligence (“AI”); and evolving our high-impact, inclusive culture.
+Additionally, on July 31, 2025, our Board of Directors (the “Board”) approved a three-year productivity program to drive future growth and support our 2030 strategy (the “Strategic Growth and Productivity Program”). The program includes initiatives to better align our organizational structure to support our strategic initiatives, optimize our global supply chain to drive agility and efficiencies and simplify and streamline our organizational structure to reduce overhead costs. On April 30, 2026, our Board approved an expansion of the program to continue to align our operations to drive future growth and support our 2030 strategy. The Strategic Growth and Productivity Program is estimated to result in cumulative pre-tax charges, once all initiatives are approved and implemented, totaling between $350 and $550. It is estimated that substantially all charges will be incurred by December 31, 2028. Annualized pre-tax savings are projected to be in the range of $200 to $300, once all projects are approved and implemented. For more information regarding the Strategic Growth and Productivity Program, see “Restructuring and Related Implementation Charges” below.
+26
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+The investments needed to drive growth are also supported through continuous, company-wide initiatives to lower costs and increase effective asset utilization. Through these initiatives, which are referred to as our funding-the-growth initiatives, we seek to become even more effective and efficient throughout our businesses. These initiatives are designed to reduce costs associated with direct materials, indirect expenses, distribution and logistics and advertising and promotional materials, among other things, and encompass a wide range of projects, examples of which include raw material substitution, reduction of packaging materials, consolidating suppliers to leverage volumes and increasing manufacturing efficiency through SKU reductions and formulation simplification. 
+We believe strong free cash flow performance is key to enabling us to invest for future growth and superior total shareholder return. We achieve this through increasing net income, optimizing working capital and through high return capital expenditures focused on growth and profitability.
+The efficient use of our balance sheet, including prudent management of our capital structure, is also critical. We continue to prioritize our investments in high growth and high margin segments within our categories and to make careful decisions about our brand portfolio. Finally, we drive additional value to shareholders by returning cash through dividends and ongoing share repurchases.
+Significant Items Impacting Comparability
+In the three and nine months ended September 30, 2026, we incurred pre-tax charges of $30 ($26 after-tax) and pre-tax charges of $333 ($268 after-tax), respectively, resulting from the Strategic Growth and Productivity Program. Refer to “Restructuring and Related Implementation Charges” below and Note 5, Restructuring and Related Implementation Charges to the Condensed Consolidated Financial Statements for additional information. 
+On April 30, 2025, we acquired Care TopCo Pty Ltd, the owner of the Prime100 pet food business, for cash consideration of AU $471 ($301). This acquisition provided our Hill’s Pet Nutrition segment with an entry into the fast-growing fresh pet food category in Australia. Refer to Note 4, Acquisitions to the Condensed Consolidated Financial Statements for additional information.
+During the quarter ended March 31, 2025, we recorded a charge of $65 following a decision of the United States Court of Appeals for the Second Circuit affirming the ruling of the United States District Court for the Southern District of New York (the “District Court”) on certain calculation issues related to the District Court’s earlier grant of summary judgment to the plaintiffs in a lawsuit under the Employee Retirement Income Security Act, seeking the recalculation of benefits and other relief associated with a 2005 residual annuity amendment to the Colgate-Palmolive Company Employees’ Retirement Income Plan (the “Retirement Plan”). The decision resulted in an increase in the obligations of the Retirement Plan. Refer to Note 10, Contingencies to the Condensed Consolidated Financial Statements for additional information.
+27
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Outlook
+Looking forward, we expect global macroeconomic, geopolitical and market conditions to remain challenging, including as a result of tensions, wars and military conflicts and developments in trade relations (such as the imposition of new or increased tariffs and the ongoing implementation and renegotiation of the United States-Mexico-Canada Agreement). We expect these conditions to impact, or to continue to impact, among other things, supply chain and logistics, the availability and price of raw and packaging materials and commodities (particularly oil, resin and agricultural products), consumer sentiment and purchasing patterns, consumption and category growth rates. We also expect these conditions to continue to contribute to inflationary pressures and macroeconomic and market volatility. We continue to follow these situations closely, to take actions in an effort to mitigate their negative impacts and to evaluate their impact on our business, results of operations, cash flows and financial condition.
+In this uncertain and challenging macroeconomic and geopolitical environment, we anticipate consumers may forgo purchasing certain of our products or switch to “private label” or to our lower-priced product offerings. Although we continue to devote significant resources to support our brands and market our products at multiple price points, demand for and sales volumes of our categories and/or our products may decline or shift from higher margin to lower margin product offerings. We expect the softness across our categories to continue through the balance of 2026.
+Given that approximately two-thirds of our Net sales originate in markets outside the United States, we have experienced and will likely continue to experience volatile foreign currency fluctuations. This is particularly acute in hyper-inflationary economies, including Argentina, Nigeria and Türkiye.
+We continue to experience higher raw and packaging material costs, including the impact of transactional foreign exchange. We have taken, and will continue to take, measures to mitigate the effect of these conditions, such as our funding-the-growth and revenue growth management initiatives and the Strategic Growth and Productivity Program. However, in the current environment it may become increasingly difficult to implement certain of these mitigation strategies. Additionally, inflation has impacted the broader economy with consumers in many geographies around the world facing widespread rising prices as well as high interest rates. Should these conditions persist, they could adversely affect our future results.
+We face vigorous competition worldwide, including from strong local competitors (including private label competitors) and from other companies, some of which have greater resources than we do. In addition, the substantial growth of eCommerce and the emergence and adoption of social commerce and AI have encouraged the entry of new competitors, some of which sell products direct-to-consumer. We face competition in several aspects of our business, including pricing, promotional activities, new product introductions and expansion into new geographies and channels.
+Our products are sold in a highly competitive omni-channel marketplace that is increasingly defined by the integration of traditional and digital retail operations and evolving consumer purchasing behavior and preferences, as consumers continue to shop online and increasingly through social commerce and with the assistance of AI. The increased presence of alternative retail channels, such as subscription services and direct-to-customer businesses, has also intensified competition for consumer attention. While we continue to sell our products to a variety of customers, including large-format retailers, discounters and eCommerce retailers, our growth is increasingly dependent on our ability to generate consumer demand across numerous touchpoints in the omni-channel ecosystem whether through traditional retail, eCommerce, social media or digital. We are also increasingly dependent upon certain key retailers, some of which exercise greater bargaining strength than we do, including the exclusive access to valuable first-party consumer data and analytics.
+We continue to closely monitor the impact of geopolitical events and tensions, wars and military conflicts, including in Ukraine and the Middle East, developments in trade relations and the challenging market conditions discussed above on our business and the related uncertainties and risks. While we have taken, and will continue to take, measures to mitigate the effects of these events and conditions, we cannot estimate with certainty the full extent of their impact on our business, results of operations, cash flows and/or financial condition. For more information about factors that could impact our business, see “Risk Factors” in Part I, Item 1A of our Annual Report on Form 10-K for the year ended December 31, 2025. 
+28
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Looking forward, we believe our 2030 business strategy and the Strategic Growth and Productivity Program will help ensure that we have the right capabilities and support to achieve our goals in the near term and to deliver consistent, compounded earnings per share growth over the long term. We believe our 2030 strategic priorities of leveraging the global reach and penetration of our brands; building the incremental benefit of superior, science-based innovation supported by an agile and resilient supply chain; harnessing the power of best-in-class omni-channel demand generation; leading in capabilities such as data, analytics and AI; and evolving our high-impact, inclusive culture are the keys to accelerating growth going forward. Our commitment to these priorities, the strength of our brands, our resilient global supply chain, the breadth of our global footprint and a commitment to profitability and driving efficiency in cash generation should position us well to manage through the challenges we face and increase shareholder value over time.
+29
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Results of Operations
+Three Months
+Worldwide Net sales were $5,369 in the third quarter of 2026, up 4.6% from the third quarter of 2025, due to volume growth of 1.7%, net selling price increases of 2.0% and positive foreign exchange of 1.0%. Organic sales (Net sales excluding the impact of foreign exchange, acquisitions and divestments), a non-GAAP financial measure, increased 3.6% in the third quarter of 2026, including a negative impact from lower private label pet food sales (20 bps). A reconciliation of net sales growth to organic sales growth is provided under “Non-GAAP Financial Measures” below.
+Net sales in the Oral, Personal and Home Care product segment were $4,164 in the third quarter of 2026, up 4.4% from the third quarter of 2025, due to volume growth of 1.6%, net selling price increases of 1.4% and positive foreign exchange of 1.3%. Organic sales in the Oral, Personal and Home Care product segment increased 3.1% in the third quarter of 2026.
+The increase in organic sales in the third quarter of 2026 versus the third quarter of 2025 was primarily due to an increase in Oral Care and Home Care organic sales. The increase in Oral Care was primarily due to organic sales growth in the toothpaste and manual toothbrush categories. The increase in Home Care was primarily due to organic sales growth in the surface cleaner category.
+The Company’s share of the global toothpaste market was 41.4% on a year-to-date basis, up 0.3 share points from the year ago period, and its share of the global manual toothbrush market was 33.1% on a year-to-date basis, up 0.8 share points from the year ago period. Year-to-date market shares in toothpaste were up in Latin America and EMEA and down in North America and Asia Pacific versus the comparable 2025 period. In the manual toothbrush category, year-to-date market shares were up in North America, Latin America, EMEA and Asia Pacific versus the comparable 2025 period. For additional information regarding market shares, see “Market Share Information” below.
+Net sales in the Hill’s Pet Nutrition segment were $1,205 in the third quarter of 2026, up 5.6% from the third quarter of 2025, due to volume growth of 1.8% and net selling price increases of 3.9%, partially offset by negative foreign exchange of 0.1%. Organic sales in the Hill’s Pet Nutrition segment increased 5.7% in the third quarter of 2026, including a negative impact from lower private label pet food sales (70 bps). 
+30
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Gross Profit/Margin
+Worldwide Gross profit increased to $3,233 in the third quarter of 2026 compared to $3,049 in the third quarter of 2025. Worldwide Gross profit in the third quarter of 2026 included charges resulting from the Strategic Growth and Productivity Program. Excluding these charges, Worldwide Gross profit increased to $3,238 in the third quarter of 2026 compared to $3,049 in the third quarter of 2025, reflecting an increase of $141 from higher Net sales and $47 from higher Gross profit margin.
+Worldwide Gross profit margin increased to 60.2% in the third quarter of 2026 from 59.4% in the third quarter of 2025. Excluding the charges resulting from the Strategic Growth and Productivity Program in the third quarter of 2026, Gross profit margin increased to 60.3% in the third quarter of 2026 from 59.4% in the third quarter of 2025. This increase in Gross profit margin was due to cost savings from the Company’s funding-the-growth initiatives (290 bps), higher pricing (80 bps) and favorable mix (20 bps), partially offset by significantly higher raw and packaging material costs (300 bps).
+Three Months Ended September 30,
+2026	2025
+Gross profit, GAAP	$	3,233	$	3,049
+Strategic Growth and Productivity Program	5	—
+Gross profit, non-GAAP	$	3,238	$	3,049
+Three Months Ended September 30,
+2026	2025	Basis Point Change
+Gross profit margin	60.2	%	59.4	%	80
+Strategic Growth and Productivity Program	0.1	%	—	%
+Gross profit margin, non-GAAP	60.3	%	59.4	%	90
+31
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Selling, General and Administrative Expenses
+Selling, general and administrative expenses increased 7% to $2,111 in the third quarter of 2026 compared to $1,971 in the third quarter of 2025. Selling, general and administrative expenses in the third quarter of 2026 included charges resulting from the Strategic Growth and Productivity Program. Excluding these charges, Selling, general and administrative expenses increased 7% to $2,102 in the third quarter of 2026 compared to $1,971 in the third quarter of 2025, reflecting increased advertising investment of $101 and higher overhead expenses of $30.
+Selling, general and administrative expenses as a percentage of Net sales increased by 90 bps to 39.3% in the third quarter of 2026 as compared to 38.4% in the third quarter of 2025. Excluding the charges resulting from the Strategic Growth and Productivity Program in the third quarter of 2026, Selling, general and administrative expenses as a percentage of Net sales increased by 70 bps to 39.1% in the third quarter of 2026 compared to 38.4% in the third quarter of 2025. This increase was due to increased advertising investment (130 bps), partially offset by lower overhead expenses (60 bps), both as a percentage of Net sales. Lower overhead expenses were driven by overhead efficiencies (90 bps), partially offset by higher logistics costs (30 bps). In the third quarter of 2026, advertising investment increased as a percentage of Net sales to 14.4% from 13.1% in the third quarter of 2025, or 15% in absolute terms, to $775 as compared to $674 in the third quarter of 2025.
+Three Months Ended September 30,
+2026	2025
+Selling, general and administrative expenses, GAAP	$	2,111	$	1,971
+Strategic Growth and Productivity Program	(9)	—
+Selling, general and administrative expenses, non-GAAP	$	2,102	$	1,971
+Three Months Ended September 30,
+2026	2025	Basis Point Change
+Selling, general and administrative expenses as a percentage of Net sales, GAAP	39.3	%	38.4	%	90
+Strategic Growth and Productivity Program	(0.2)	%	—	%
+Selling, general and administrative expenses as a percentage of Net sales, non-GAAP	39.1	%	38.4	%	70
+Other (Income) Expense, Net
+Other (income) expense, net was $34 and $19 in the third quarter of 2026 and 2025, respectively. Other (income) expense, net in the third quarter of 2026 included charges resulting from the Strategic Growth and Productivity Program. Excluding these charges, Other (income) expense, net was $19 in the third quarter of 2026 and 2025. 
+Three Months Ended September 30,
+2026	2025
+Other (income) expense, net, GAAP	$	34	$	19
+Strategic Growth and Productivity Program	(15)	—
+Other (income) expense, net, non-GAAP	$	19	$	19
+32
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Operating Profit
+Operating profit increased 3% to $1,088 in the third quarter of 2026 from $1,059 in the third quarter of 2025. Operating profit in the third quarter of 2026 included charges resulting from the Strategic Growth and Productivity Program. Excluding these charges, Operating profit increased 5% to $1,117 in the third quarter of 2026 from $1,059 in the third quarter of 2025 due to an increase in Gross profit, partially offset by an increase in Selling, general and administrative expenses.
+Operating profit margin was 20.3% in the third quarter of 2026, a decrease of 30 bps compared to 20.6% in the third quarter of 2025. Excluding the charges resulting from the Strategic Growth and Productivity Program in the third quarter of 2026, Operating profit margin was 20.8% in the third quarter of 2026, an increase of 20 bps compared to 20.6% in the third quarter of 2025. This increase in Operating profit margin was due to an increase in Gross profit (90 bps), partially offset by an increase in Selling, general and administrative expenses (70 bps), both as a percentage of Net sales.
+ 
+Three Months Ended September 30,
+2026	2025	% Change
+Operating profit, GAAP	$	1,088	$	1,059	3	%
+Strategic Growth and Productivity Program	29	—
+Operating profit, non-GAAP	$	1,117	$	1,059	5	%
+Three Months Ended September 30,
+2026	2025	Basis Point Change
+Operating profit margin, GAAP	20.3	%	20.6	%	(30)
+Strategic Growth and Productivity Program	0.5	%	—	%
+Operating profit margin, non-GAAP	20.8	%	20.6	%	20
+Non-Service Related Postretirement Costs
+Non-service related postretirement costs were $24 and $21 in the third quarter of 2026 and 2025, respectively. Non-service related postretirement costs in the third quarter of 2026 included charges resulting from the Strategic Growth and Productivity Program. Excluding these charges, Non-service related postretirement costs were $23 in the third quarter of 2026 and $21 in the third quarter of 2025.
+Three Months Ended September 30,
+2026	2025
+Non-service related postretirement costs, GAAP	$	24	$	21
+Strategic Growth and Productivity Program	(1)	—
+Non-service related postretirement costs, non-GAAP	$	23	$	21
+33
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Net Income Attributable to Colgate-Palmolive Company and Earnings Per Share
+Net income attributable to Colgate-Palmolive Company in the third quarter of 2026 increased to $751 from $735 in the third quarter of 2025 and Earnings per common share on a diluted basis increased to $0.94 per share in the third quarter of 2026 from $0.91 in the third quarter of 2025. Net income attributable to Colgate-Palmolive Company in the third quarter of 2026 included charges resulting from the Strategic Growth and Productivity Program. 
+Excluding the charges described above, Net income attributable to Colgate-Palmolive Company in the third quarter of 2026 increased 6% to $777 from $735 in the third quarter of 2025 and Earnings per common share on a diluted basis increased 7% to $0.97 in the third quarter of 2026 from $0.91 in the third quarter of 2025.
+Three Months Ended September 30, 2026
+Income Before Income Taxes	Provision For Income Taxes(1)
+	Net Income Including Noncontrolling Interests	Less: Income Attributable to Noncontrolling Interests	Net Income Attributable To Colgate-Palmolive Company	Diluted Earnings Per Share(2)
+As Reported GAAP	$	1,019	$	240	$	779	$	28	$	751	$	0.94
+Strategic Growth and Productivity Program
+	30	3	26	—	26	0.03
+Non-GAAP	$	1,049	$	244	$	805	$	28	$	777	$	0.97
+Three Months Ended September 30, 2025
+Income Before Income Taxes	Provision For Income Taxes	Net Income Including Noncontrolling Interests	Less: Income Attributable to Noncontrolling Interests	Net Income Attributable To Colgate-Palmolive Company	Diluted Earnings Per Share
+As Reported GAAP	$	992	$	226	$	766	$	31	$	735	$	0.91
+(1) The income tax effect on non-GAAP items is calculated based upon the tax laws and statutory income tax rates applicable in the tax jurisdiction(s) of the underlying non-GAAP adjustment. 
+(2) The impact of non-GAAP adjustments on diluted earnings per share may not necessarily equal the difference between “GAAP” and “non-GAAP” as a result of rounding.
+34
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Net Sales and Operating Profit by Segment
+Oral, Personal and Home Care
+North America
+Three Months Ended September 30,
+2026	2025	Change
+Net sales	$	905	$	922	(1.7)	%
+Operating profit	$	177	$	199	(11)	%
+% of Net sales	19.5	%	21.6	%	(210)	bps
+ 
+Net sales in North America decreased 1.7% in the third quarter of 2026 to $905, driven by volume declines of 3.7% and negative foreign exchange of 0.2%, partially offset by net selling price increases of 2.2%. Organic sales in North America decreased 1.6% in the third quarter of 2026. The organic sales decline was driven by the United States.
+The decrease in organic sales in North America in the third quarter of 2026 versus the third quarter of 2025 was primarily due to decreases in Personal Care and Oral Care organic sales. The decrease in Personal Care was primarily due to organic sales declines in the body wash and underarm protection categories. The decrease in Oral Care was primarily due to an organic sales decline in the toothpaste category.
+Operating profit in North America decreased 11% in the third quarter of 2026 to $177, or 210 bps to 19.5% as a percentage of Net sales. This decrease in Operating profit as a percentage of Net sales was primarily due to a decrease in Gross profit (70 bps) and an increase in Selling, general and administrative expenses (160 bps), both as a percentage of Net sales. This decrease in Gross profit was due to significantly higher raw and packaging material costs (520 bps) and unfavorable mix (10 bps), partially offset by cost savings from the Company’s funding-the-growth initiatives (350 bps) and higher pricing. This increase in Selling, general and administrative expenses was due to increased advertising investment (100 bps) and higher overhead expenses (60 bps).
+35
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Latin America
+Three Months Ended September 30,
+2026	2025	Change
+Net sales	$	1,326	$	1,178	12.5	%
+Operating profit	$	392	$	337	17	%
+% of Net sales	29.6	%	28.6	%	100	bps
+Net sales in Latin America increased 12.5% in the third quarter of 2026 to $1,326, driven by volume growth of 3.9%, net selling price increases of 2.1% and positive foreign exchange of 6.5%. Organic sales in Latin America increased 6.0% in the third quarter of 2026. Organic sales growth was led by Brazil, Argentina and Colombia.
+The increase in organic sales in Latin America in the third quarter of 2026 versus the third quarter of 2025 was primarily due to increases in Oral Care and Home Care organic sales. The increase in Oral Care was primarily due to organic sales growth in the toothpaste and manual toothbrush categories. The increase in Home Care was primarily due to organic sales growth in the surface cleaner category. 
+Operating profit in Latin America increased 17% in the third quarter of 2026 to $392, or 100 bps to 29.6% as a percentage of Net sales. This increase in Operating profit as a percentage of Net sales was due to an increase in Gross profit (290 bps), partially offset by an increase in Selling, general and administrative expenses (160 bps) and an increase in Other (income) expense, net (40 bps), all as a percentage of Net sales. This increase in Gross profit was due to cost savings from the Company’s funding-the-growth initiatives (250 bps), higher pricing and favorable mix (30 bps), partially offset by higher raw and packaging material costs (80 bps). This increase in Selling, general and administrative expenses was primarily due to increased advertising investment (130 bps).
+Europe, Middle East & Africa
+Three Months Ended September 30,
+2026	2025	Change
+Net sales	$	1,130	$	1,115	1.4	%
+Operating profit	$	262	$	243	8	%
+% of Net sales	23.2	%	21.8	%	140	bps
+Net sales in EMEA increased 1.4% in the third quarter of 2026 to $1,130, driven by volume growth of 3.5%, partially offset by net selling price decreases of 0.9% and negative foreign exchange of 1.2%. Organic sales in EMEA increased 2.7% in the third quarter of 2026. Organic sales growth was led by Türkiye, the United Kingdom and Spain, partially offset by organic sales declines in the Middle East region.
+The increase in organic sales in EMEA in the third quarter of 2026 versus the third quarter of 2025 was due to increases in Oral Care and Personal Care organic sales, partially offset by a decrease in Home Care organic sales. The increase in Oral Care was primarily due to organic sales growth in the toothpaste and manual toothbrush categories. The increase in Personal Care was primarily due to organic sales growth in the body wash and skin health categories. The decrease in Home Care was primarily due to an organic sales decline in the fabric softener category.
+Operating profit in EMEA increased 8% in the third quarter of 2026 to $262, or 140 bps to 23.2% as a percentage of Net sales. This increase in Operating profit as a percentage of Net sales was due to an increase in Gross profit (40 bps), a decrease in Selling, general and administrative expenses (40 bps) and a decrease in Other (income) expense, net (50 bps), all as a percentage of Net sales. This increase in Gross profit was due to cost savings from the Company’s funding-the-growth initiatives (250 bps) and favorable mix (20 bps), partially offset by higher raw and packaging material costs (200 bps) and lower pricing. This decrease in Selling, general and administrative expenses was due to lower overhead expenses (80 bps), partially offset by increased advertising investment (50 bps). 
+36
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Asia Pacific
+Three Months Ended September 30,
+2026	2025	Change
+Net sales	$	802	$	775	3.5	%
+Operating profit	$	211	$	213	(1)	%
+% of Net sales	26.4	%	27.5	%	(110)	bps
+Net sales in Asia Pacific increased 3.5% in the third quarter of 2026 to $802, driven by volume growth of 1.9% and net selling price increases of 2.8%, partially offset by negative foreign exchange of 1.1%. Organic sales in Asia Pacific increased 4.6% in the third quarter of 2026. Organic sales growth was driven by India, the Greater China region and the Philippines.
+The increase in organic sales in Asia Pacific in the third quarter of 2026 versus the third quarter of 2025 was primarily due to an increase in Oral Care organic sales, which was largely due to organic sales growth in the toothpaste and manual toothbrush categories.
+Operating profit in Asia Pacific decreased 1% in the third quarter of 2026 to $211, or 110 bps to 26.4% as a percentage of Net sales. This decrease in Operating profit as a percentage of Net sales was due to a decrease in Gross profit (40 bps) and an increase in Selling, general and administrative expenses (70 bps), both as a percentage of Net sales. This decrease in Gross profit was due to significantly higher raw and packaging material costs (550 bps), partially offset by cost savings from the Company’s funding-the-growth initiatives (380 bps), higher pricing and favorable mix (30 bps). This increase in Selling, general and administrative expenses was due to increased advertising investment (130 bps), partially offset by lower overhead expenses (60 bps). 
+Hill’s Pet Nutrition
+Three Months Ended September 30,
+2026	2025	Change
+Net sales	$	1,205	$	1,142	5.6	%
+Operating profit	$	267	$	255	5	%
+% of Net sales	22.2	%	22.4	%	(20)	bps
+Net sales for Hill’s Pet Nutrition increased 5.6% in the third quarter of 2026 to $1,205, driven by volume growth of 1.8% and net selling price increases of 3.9%, partially offset by negative foreign exchange of 0.1%. Organic sales in Hill’s Pet Nutrition increased 5.7% in the third quarter of 2026, including a negative impact from lower private label pet food sales (70 bps). Organic sales growth was led by the United States and Europe.
+The increase in organic sales in Hill’s Pet Nutrition in the third quarter of 2026 versus the third quarter of 2025 was due to organic sales growth in the therapeutic and wellness categories.
+Operating profit in Hill’s Pet Nutrition increased 5% in the third quarter of 2026 to $267, while as a percentage of Net sales it decreased by 20 bps to 22.2%. This decrease in Operating profit as a percentage of Net sales was primarily due to an increase in Gross profit (170 bps), more than offset by an increase in Selling, general and administrative expenses (200 bps), both as a percentage of Net sales. This increase in Gross profit was due to cost savings from the Company’s funding-the-growth initiatives (290 bps), higher pricing and favorable mix (20 bps), partially offset by significantly higher raw and packaging material costs (290 bps). This increase in Selling, general and administrative expenses was due to increased advertising investment (290 bps), partially offset by lower overhead expenses (90 bps). 
+37
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Corporate
+Three Months Ended September 30,
+2026	2025	Change
+Operating profit (loss)	$	(221)	$	(189)	17	%
+Operating profit (loss) related to Corporate was $(221) in the third quarter of 2026 as compared to $(189) in the third quarter of 2025. 
+In the third quarter of 2026, Corporate Operating profit (loss) included charges of $29 resulting from the Strategic Growth and Productivity Program. 
+38
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Nine Months
+Worldwide Net sales were $16,055 in the first nine months of 2026, up 6.0% as compared to the first nine months of 2025, due to volume growth of 1.2%, net selling price increases of 1.9% and positive foreign exchange of 2.8%. The Prime100 acquisition contributed 0.2% to volume. Organic sales increased 3.0% in the first nine months of 2026, including a negative impact from lower private label pet food sales (40 bps).
+Net sales in the Oral, Personal and Home Care product segment were $12,461 in the first nine months of 2026, up 6.2% from the first nine months of 2025, due to volume growth of 1.5%, net selling price increases of 1.4% and positive foreign exchange of 3.3%. Organic sales in the Oral, Personal and Home Care product segment increased 2.9% in the first nine months of 2026.
+The increase in organic sales in the first nine months of 2026 versus the first nine months of 2025 was primarily due to increases in Oral Care and Home Care organic sales. The increase in Oral Care was primarily due to organic sales growth in the toothpaste and manual toothbrush categories. The increase in Home Care was primarily due to organic sales growth in the surface cleaner and hand dish categories.
+Net sales in the Hill’s Pet Nutrition segment were $3,594 in the first nine months of 2026, an increase of 5.2% from the first nine months of 2025, due to volume growth of 0.3%, net selling price increases of 3.9% and positive foreign exchange of 1.1%. The Prime100 acquisition contributed 0.8% to volume. Organic sales in the Hill’s Pet Nutrition segment increased 3.3% in the first nine months of 2026, including a negative impact from lower private label pet food sales (180 bps).
+39
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Net Sales and Operating Profit by Segment
+Net sales and Operating profit by segment were as follows:
+Nine Months Ended September 30,
+2026	2025
+Net sales
+Oral, Personal and Home Care
+North America(1)
+	$	2,684	$	2,745
+Latin America	4,011	3,528
+Europe, Middle East & Africa(1)
+	3,377	3,204
+Asia Pacific(1)
+	2,388	2,259
+Total Oral, Personal and Home Care	12,461	11,735
+Hill's Pet Nutrition	3,594	3,417
+Total Net sales	$	16,055	$	15,152
+Operating profit
+Oral, Personal and Home Care
+North America(1)
+	$	510	$	583
+Latin America	1,211	1,052
+Europe, Middle East & Africa(1)
+	791	706
+Asia Pacific(1)
+	643	620
+Total Oral, Personal and Home Care	3,155	2,961
+Hill's Pet Nutrition	816	778
+Corporate	(902)	(523)
+Total Operating profit	$	3,069	$	3,214
+ 
+Note: Table may not sum due to rounding.
+(1) The Company has recast its historical geographic segment information to conform to the reporting structure effective as of March 31, 2026.
+40
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Net sales and Organic sales change by segment were as follows:
+For the Nine Months Ended September 30, 2026 vs. 2025
+Oral, Personal and Home Care	Net Sales	Organic Sales	As Reported Volume(1)
+	Pricing	Foreign Exchange
+North America(2)
+	(2.2)%	(2.3)%	(3.6)%	1.4%	0.1%
+Latin America	13.7%	5.6%	2.8%	2.7%	8.1%
+Europe, Middle East & Africa(2)
+	5.4%	2.7%	3.0%	(0.3)%	2.8%
+Asia Pacific(2)
+	5.7%	5.1%	3.5%	1.6%	0.6%
+Total Oral, Personal and Home Care	6.2%	2.9%	1.5%	1.4%	3.3%
+Hill's Pet Nutrition	5.2%	3.3%	0.3%	3.9%	1.1%
+Total Company	6.0%	3.0%	1.2%	1.9%	2.8%
+Note: Table may not sum due to rounding.
+(1) The impact of the acquisition of the Prime100 pet food business on as reported volume was 0.8% and 0.2% for Hill's Pet Nutrition and Total Company, respectively.
+(2) The Company has recast its historical geographic segment information to conform to the reporting structure effective as of March 31, 2026.
+In the first nine months of 2026, Operating profit (loss) related to Corporate was $(902) as compared to $(523) in the first nine months of 2025. Corporate Operating profit (loss) for the nine months ended September 30, 2026 included charges resulting from the Strategic Growth and Productivity Program of $327. Corporate Operating profit (loss) for the nine months ended September 30, 2025 included charges resulting from the ERISA litigation matter of $15 and acquisition-related costs of $9.
+Gross Profit/Margin
+Worldwide Gross profit increased to $9,755 in the first nine months of 2026 from $9,105 in the first nine months of 2025. Worldwide Gross profit in the first nine months of 2026 included charges resulting from the Strategic Growth and Productivity Program. Excluding these charges, Worldwide Gross profit increased to $9,762 in the first nine months of 2026 from $9,105 in the first nine months of 2025, reflecting an increase of $544 resulting from higher Net sales and $113 from higher Gross profit margin.
+Worldwide Gross profit margin increased to 60.8% in the first nine months of 2026 from 60.1% in the first nine months of 2025. This increase in Gross profit margin was due to cost savings from the Company’s funding-the-growth initiatives (270 bps), higher pricing (70 bps) and favorable mix (20 bps), partially offset by significantly higher raw and packaging material costs (290 bps).
+Nine Months Ended September 30,
+2026	2025
+Gross profit, GAAP	$	9,755	$	9,105
+Strategic Growth and Productivity Program	7	—
+Gross profit, non-GAAP	$	9,762	$	9,105
+Nine Months Ended September 30,
+2026	2025	Basis Point Change
+Gross profit margin	60.8	%	60.1	%	70
+41
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Selling, General and Administrative Expenses
+Selling, general and administrative expenses increased 8% to $6,316 in the first nine months of 2026 from $5,833 in the first nine months of 2025. Selling, general and administrative expenses in the first nine months of 2026 included charges resulting from the Strategic Growth and Productivity Program. Selling, general and administrative expenses in the first nine months of 2025 included charges related to the ERISA litigation matter. Excluding these charges in both periods, as applicable, Selling, general and administrative expenses increased to $6,296 in the first nine months of 2026 from $5,817 in the first nine months of 2025, reflecting increased advertising investment of $266 and higher overhead expenses of $213.
+Selling, general and administrative expenses as a percentage of Net sales increased to 39.3% in the first nine months of 2026 from 38.5% in the first nine months of 2025. Excluding the charges described above in both periods, as applicable, Selling, general and administrative expenses as a percentage of Net sales increased to 39.2% in the first nine months of 2026 from 38.4% in the first nine months of 2025. This increase was primarily due to increased advertising investment (90 bps) as a percentage of Net sales. In the first nine months of 2026, advertising investment increased as a percentage of Net sales to 14.2% from 13.3% in the first nine months of 2025, or 13% in absolute terms, to $2,286 as compared to $2,020 in the first nine months of 2025.
+Nine Months Ended September 30,
+2026	2025
+Selling, general and administrative expenses, GAAP	$	6,316	$	5,833
+Strategic Growth and Productivity Program	(20)	—
+ERISA litigation matter	—	(15)
+Selling, general and administrative expenses, non-GAAP	$	6,296	$	5,817
+Note: Table may not sum due to rounding.
+Nine Months Ended September 30,
+2026	2025	Basis Point Change
+Selling, general and administrative expenses as a percentage of Net sales, GAAP	39.3	%	38.5	%	80
+Strategic Growth and Productivity Program	(0.1)	%	—	%
+ERISA litigation matter	—	%	(0.1)	%
+Selling, general and administrative expenses as a percentage of Net sales, non-GAAP	39.2	%	38.4	%	80
+Other (Income) Expense, Net
+Other (income) expense, net was $370 and $58 in the first nine months of 2026 and 2025, respectively. Other (income) expense, net in the first nine months of 2026 included charges resulting from the Strategic Growth and Productivity Program. Other (income) expense, net in the first nine months of 2025 included acquisition-related costs. Excluding these items in both periods, as applicable, Other (income) expense, net was $70 in the first nine months of 2026 and $48 in the first nine months of 2025.
+Nine Months Ended September 30,
+2026	2025
+Other (income) expense, net, GAAP	$	370	$	58
+Strategic Growth and Productivity Program	(300)	—
+Acquisition-related costs	—	(9)
+Other (income) expense, net, non-GAAP	$	70	$	48
+Note: Table may not sum due to rounding.
+42
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Operating Profit
+Operating profit decreased 5% to $3,069 in the first nine months of 2026 from $3,214 in the first nine months of 2025. Operating profit in the first nine months of 2026 included charges resulting from the Strategic Growth and Productivity Program. Operating profit in the first nine months of 2025 included charges related to the ERISA litigation matter and acquisition-related costs. Excluding these items in both periods, as applicable, Operating profit increased to $3,396 in the first nine months of 2026 from $3,240 in the first nine months of 2025, due to an increase in Gross profit, partially offset by an increase in Selling, general and administrative expenses and an increase in Other (income) expense, net.
+Operating profit margin was 19.1% in the first nine months of 2026, a decrease of 210 bps compared to 21.2% in the first nine months of 2025. Excluding the items described above in both periods, as applicable, Operating profit margin was 21.2% in the first nine months of 2026, a decrease of 20 bps compared to 21.4% in the first nine months of 2025, primarily due to an increase in Gross profit (70 bps), more than offset by an increase in Selling, general and administrative expenses (80 bps), both as a percentage of Net sales.
+Nine Months Ended September 30,
+2026	2025	% Change
+Operating profit, GAAP	$	3,069	$	3,214	(5)	%
+Strategic Growth and Productivity Program	327	—
+ERISA litigation matter	—	15
+Acquisition-related costs	—	9
+Operating profit, non-GAAP	$	3,396	$	3,240	5	%
+Note: Table may not sum due to rounding.
+Nine Months Ended September 30,
+2026	2025	Basis Point Change
+Operating profit margin, GAAP	19.1	%	21.2	%	(210)
+Strategic Growth and Productivity Program	2.1	%	—	%
+ERISA litigation matter	—	%	0.1	%
+Acquisition-related costs	—	%	0.1	%
+Operating profit margin, non-GAAP	21.2	%	21.4	%	(20)
+Non-Service Related Postretirement Costs
+Non-service related postretirement costs were $70 and $116 in the first nine months of 2026 and 2025, respectively. Non-service related postretirement costs in the first nine months of 2026 included charges resulting from the Strategic Growth and Productivity Program. Non-service related postretirement costs in the first nine months of 2025 included charges related to the ERISA litigation matter. Excluding these charges in both periods, as applicable, Non-service related postretirement costs were $64 in the first nine months of 2026 and $66 in the first nine months of 2025. 
+Nine Months Ended September 30,
+2026	2025
+Non-service related postretirement costs, GAAP	$	70	$	116
+Strategic Growth and Productivity Program	(6)	—
+ERISA litigation matter	—	(50)
+Non-service related postretirement costs, non-GAAP	$	64	$	66
+43
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Income Taxes
+The effective income tax rate was 23.6% and 22.8% for the third quarter of 2026 and 2025, respectively. As reflected in the table below, the non-GAAP effective income tax rate was 23.3% and 22.8% for the third quarter of 2026 and 2025, respectively.
+The effective income tax rate was 23.8% and 23.2% for the first nine months of 2026 and 2025, respectively. As reflected in the table below, the non-GAAP effective income tax rate was 23.3% for the first nine months of 2026 and 23.2% for the first nine months of 2025.
+The quarterly provision for income taxes is determined based on the Company’s estimated full year effective income tax rate adjusted by the amount of tax attributable to infrequent or unusual items that are separately recognized on a discrete basis in the income tax provision in the quarter in which they occur. The Company’s current estimate of its full year effective income tax rate before discrete period items is 23.5%, compared to 23.3% in 2025.
+On July 4, 2025, U.S. tax legislation was signed into law (the “OBBBA”) which made permanent many of the tax provisions enacted in 2017 as part of the Tax Cuts and Jobs Act that were set to expire at the end of 2025. In addition, the OBBBA made changes to certain U.S. corporate tax provisions, many of which were effective beginning January 1, 2026. The OBBBA did not have a material effect on the Company’s Consolidated Financial Statements for the nine months ended September 30, 2026.
+In the third quarter of 2023, the Internal Revenue Service (the “IRS”) issued a notice giving taxpayers temporary relief from the effects of certain U.S. tax regulations that were issued in December 2021 which place greater restrictions on foreign taxes that are creditable against U.S. taxes on foreign source income. This notice allowed taxpayers to defer the application of these new regulations through the end of 2023. In December 2023, the IRS issued further guidance modifying this temporary relief period to the date that a notice or other guidance withdrawing or modifying the temporary relief is issued. The Company will recognize the impact, if any, in the period in which the temporary relief is withdrawn or modified.
+On December 15, 2022, the 27 member states of the European Union (“EU”) reached an agreement to establish a minimum level of taxation for certain large corporations by paying a minimum corporate tax rate of 15% in every jurisdiction in which they operate. This agreement, which is part of the Pillar II Model Rules initiative (“Pillar II”) agreed by all members of the Organization for Economic Cooperation and Development (“OECD”) and its Inclusive Framework (“IF”), was transposed into the laws of most EU member states by December 31, 2023. Subsequently, many other jurisdictions outside the EU have enacted similar minimum tax regimes consistent with the policy of Pillar II.
+Based on current legislation and available guidance, apart from the significant additional time and resources required to comply, Pillar II did not have a material impact on the Company’s Consolidated Financial Statements for the nine months ended September 30, 2026 and the Company does not believe it will have a material impact going forward.
+On January 5, 2026, IF reached an agreement known as the “Side-by-Side Package” that modifies key aspects of Pillar II and was effective beginning January 1, 2026. The Side-by-Side Package introduces various new safe harbors that the Company is expected to be eligible for and that, when fully enacted, should result in a reduction of compliance costs of Pillar II, among other benefits. However, as these rules and related regulations are revised and implemented, the Company will evaluate the impact, if any, on its Consolidated Financial Statements.
+44
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+The Company has ongoing federal, state and international income tax audits in various jurisdictions and evaluates uncertain tax positions that may be challenged by local tax authorities and not fully sustained. All U.S. federal income tax returns through December 31, 2013 have been audited by the IRS and there are limited matters which the Company plans to appeal for years 2010 through 2013. One such matter relates to the IRS assessment of taxes on the Company by imputing income on certain activities within one of our international operations, which is also under audit for the years 2014 through 2018. There were U.S. Tax Court rulings during 2023 in favor of the IRS against two unrelated third parties on similar matters. In October 2025, in one of those cases, the applicable U.S. Court of Appeals reversed the U.S. Tax Court’s decision and ruled in favor of the taxpayer. The case involving the other third party is still pending. The Company continues to believe that the tax assessment against the Company is without merit. While there can be no assurances, the Company believes this matter will ultimately be decided in favor of the Company. The amount of tax plus interest for the years 2010 through 2021 is estimated to be approximately $170, which is not included in the Company’s uncertain tax positions. In May 2024, the IRS initiated an audit for the years 2019 through 2021, which is still ongoing.
+Three Months Ended September 30,
+2026	2025
+Income Before Income Taxes	Provision For Income Taxes(1)
+	Effective Income Tax Rate(2)
+	Income Before Income Taxes	Provision For Income Taxes(1)
+	Effective Income Tax Rate(2)
+As Reported GAAP	$	1,019	$	240	23.6	%	$	992	$	226	22.8	%
+Strategic Growth and Productivity Program	30	3	(0.3)	%	—	—	—
+Non-GAAP	$	1,049	$	244	23.3	%	$	992	$	226	22.8	%
+Nine Months Ended September 30,
+2026	2025
+Income Before Income Taxes	Provision For Income Taxes(1)
+	Effective Income Tax Rate(2)
+	Income Before Income Taxes	Provision For Income Taxes(1)
+	Effective Income Tax Rate(2)
+As Reported GAAP	$	2,863	$	682	23.8	%	$	2,951	$	685	23.2	%
+Strategic Growth and Productivity Program	333	64	(0.5)	%	—	—	—
+ERISA litigation matter	—	—	—	65	12	—
+Acquisition-related costs	—	—	—	9	2	—
+Non-GAAP	$	3,196	$	746	23.3	%	$	3,027	$	702	23.2	%
+Note: Tables may not sum due to rounding.
+(1) The income tax effect on non-GAAP items is calculated based upon the tax laws and statutory income tax rates applicable in the tax jurisdiction(s) of the underlying non-GAAP adjustment. 
+(2) The impact of non-GAAP items on the Company’s effective tax rate represents the difference in the effective tax rate calculated with and without the non-GAAP adjustment on Income before income taxes and Provision for income taxes.
+45
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Net Income Attributable to Colgate-Palmolive Company and Earnings Per Share
+Net income attributable to Colgate-Palmolive Company in the first nine months of 2026 decreased to $2,090 from $2,169 in the comparable 2025 period. Earnings per common share on a diluted basis decreased to $2.61 in the first nine months of 2026 from $2.67 in the comparable 2025 period. Net income attributable to Colgate-Palmolive Company in the first nine months of 2026 included charges resulting from the Strategic Growth and Productivity Program. Net income attributable to Colgate-Palmolive Company in the first nine months of 2025 included charges related to the ERISA litigation matter and acquisition-related costs.
+Excluding the items described above in both periods, as applicable, Net income attributable to Colgate-Palmolive Company in the first nine months of 2026 increased 6% to $2,359 from $2,228 in the first nine months of 2025, and Earnings per common share on a diluted basis increased 7% to $2.94 in the first nine months of 2026 from $2.74 in the first nine months of 2025.
+ 
+Nine Months Ended September 30, 2026
+Income Before Income Taxes	Provision For Income Taxes(1)
+	Net Income Including Noncontrolling Interests	Less: Income Attributable to Noncontrolling Interests	Net Income Attributable To Colgate-Palmolive Company	Diluted Earnings Per Share(2)
+As Reported GAAP	$	2,863	$	682	$	2,181	$	91	$	2,090	$	2.61
+Strategic Growth and Productivity Program	333	64	269	1	268	0.33
+Non-GAAP	$	3,196	$	746	$	2,450	$	91	$	2,359	$	2.94
+Nine Months Ended September 30, 2025
+Income Before Income Taxes	Provision For Income Taxes(1)
+	Net Income Including Noncontrolling Interests	Less: Income Attributable to Noncontrolling Interests	Net Income Attributable To Colgate-Palmolive Company	Diluted Earnings Per Share(2)
+As Reported GAAP	$	2,951	$	685	$	2,266	$	97	$	2,169	$	2.67
+ERISA litigation matter	65	12	53	—	53	0.06
+Acquisition-related costs	9	2	7	—	7	0.01
+Non-GAAP	$	3,027	$	702	$	2,325	$	97	$	2,228	$	2.74
+Note: Tables may not sum due to rounding.
+(1) The income tax effect on non-GAAP items is calculated based upon the tax laws and statutory income tax rates applicable in the tax jurisdiction(s) of the underlying non-GAAP adjustment.
+(2) The impact of non-GAAP adjustments on diluted earnings per share may not necessarily equal the difference between “GAAP” and “non-GAAP” as a result of rounding.
+46
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Restructuring and Related Implementation Charges 
+Strategic Growth and Productivity Program
+On July 31, 2025, the Board approved the Strategic Growth and Productivity Program. The program includes initiatives to better align the Company’s organizational structure to support its strategic initiatives, optimize the Company’s global supply chain to drive agility and efficiencies and simplify and streamline its organizational structure to reduce overhead costs. 
+On April 30, 2026, the Company’s Board approved an expansion of the program to continue to align the Company’s operations to drive future growth and support the Company’s 2030 strategy. 
+The Strategic Growth and Productivity Program is estimated to result in cumulative pre-tax charges, once all initiatives are approved and implemented, totaling between $350 and $550. These pre-tax charges are currently estimated to be comprised of the following: employee-related costs, including severance and other termination benefits (70% to 80%) and asset-related costs and other charges (20% to 30%), which include accelerated depreciation, asset write-downs, contract termination and other exit costs. It is estimated that approximately 80% to 90% of the charges will result in cash expenditures and substantially all charges resulting from the program will be incurred by December 31, 2028. Annualized pretax savings are projected to be in the range of $200 to $300, once all projects are approved and implemented.
+It is estimated that the cumulative pre-tax charges, once all projects are approved and implemented, will relate to initiatives undertaken in North America (5% to 10%), Latin America (15% to 20%), EMEA (25% to 30%), Asia Pacific (10% to 15%), Hill’s Pet Nutrition (10% to 15%) and Corporate (20% to 25%).
+For the three and nine months ended September 30, 2026, charges resulting from the Strategic Growth and Productivity Program are reflected in the income statement as follows:
+Three Months Ended September 30, 2026	Nine Months Ended September 30, 2026
+Gross Profit	$	5	$	7
+Selling, general and administrative expenses	9	20
+Other (income) expense, net	15	300
+Non-service related postretirement costs	1	6
+Total Strategic Growth and Productivity Program, pre-tax	$	30	$	333
+Total Strategic Growth and Productivity Program, after-tax	$	26	$	268
+Restructuring and related implementation charges are recorded in the Corporate segment as these initiatives are predominantly centrally directed and controlled and are not included in internal measures of segment operating performance.
+47
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Total charges incurred for the Strategic Growth and Productivity Program relate to initiatives undertaken by the following reportable operating segments and Corporate:
+Three Months Ended September 30, 2026	Nine Months Ended September 30, 2026	Program-to-date Accumulated Charges
+North America	(3)	%	9	%	9	%
+Latin America	16	%	15	%	15	%
+Europe, Middle East & Africa	54	%	27	%	27	%
+Asia Pacific	9	%	3	%	3	%
+Hill’s Pet Nutrition
+	—	%	19	%	18	%
+Corporate	24	%	27	%	28	%
+Total	100	%	100	%	100	%
+Since the inception of the Strategic Growth and Productivity Program, the Company has incurred cumulative pre-tax charges of $346 ($278 after-tax) in connection with the implementation of various projects as follows:
+Cumulative Charges as of September 30, 2026 
+Employee-Related Costs	$	300
+Asset-Related Costs and Other	46
+Total	$	346
+The following table summarizes the activity for the restructuring accrual: 
+Three Months Ended September 30, 2026
+Employee-Related
+Costs	Asset-Related Costs & Other	Total
+Balance at June 30, 2026
+	$	210	$	18	$	228
+Charges	20	10	30
+Cash payments	(68)	(8)	(76)
+Charges against assets and liabilities	(1)	(1)	(2)
+Foreign exchange	(8)	—	(8)
+Balance at September 30, 2026
+	$	153	$	19	$	172
+Nine Months Ended September 30, 2026
+Employee-Related
+Costs	Asset-Related Costs & Other	Total
+Balance at December 31, 2025
+	$	6	$	4	$	10
+Charges	294	39	333
+Cash payments	(121)	(19)	(140)
+Charges against assets and liabilities	(6)	(5)	(11)
+Foreign exchange	(20)	—	(20)
+Balance at September 30, 2026
+	$	153	$	19	$	172
+48
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Employee-Related Costs primarily include severance and other termination benefits and are calculated based on long-standing benefit practices, written severance policies, local statutory requirements and, in certain cases, voluntary termination arrangements. Employee-Related Costs also include postretirement benefit enhancements of $1 and $6 for the three and nine months ended September 30, 2026, respectively. These amounts are reflected as Charges against assets and liabilities within Employee-Related Costs in the preceding tables as the corresponding balance sheet amounts are reflected as an increase in postretirement liabilities.
+49
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Non-GAAP Financial Measures
+This Quarterly Report on Form 10-Q discusses certain financial measures on both a GAAP and a non-GAAP basis. The Company uses the non-GAAP financial measures described below internally in its budgeting process, to evaluate segment and overall operating performance and as a factor in determining compensation. The Company believes that these non-GAAP financial measures are useful in evaluating the Company’s underlying business performance and trends; however, this information should be considered as supplemental in nature and is not meant to be considered in isolation or as a substitute for the related financial information prepared in accordance with GAAP. In addition, these non-GAAP financial measures may not be the same as similar measures presented by other companies. 
+Net sales growth (GAAP) and organic sales growth (Net sales growth excluding the impact of foreign exchange, acquisitions and divestments) (non-GAAP) are discussed in this Quarterly Report on Form 10-Q. Management believes the organic sales growth measure provides investors and analysts with useful supplemental information regarding the Company’s underlying sales trends by presenting sales growth excluding the external factor of foreign exchange, as well as the impact of acquisitions and divestments, as applicable. A reconciliation of organic sales growth to Net sales growth for the three and nine months ended September 30, 2026 is provided below.
+Gross profit, Gross profit margin, Selling, general and administrative expenses, Selling, general and administrative expenses as a percentage of Net sales, Other (income) expense, net, Operating profit, Operating profit margin, Non-service related postretirement costs, Effective income tax rate, Net income attributable to Colgate-Palmolive Company and Earnings per share on a diluted basis are discussed in this Quarterly Report on Form 10-Q both on a GAAP basis and excluding, as applicable, charges resulting from the Strategic Growth and Productivity Program and the ERISA litigation matter and acquisition-related costs. These non-GAAP financial measures exclude items that, either by their nature or amount, management would not expect to occur as part of the Company’s normal business on a regular basis, such as restructuring charges, charges for certain litigation and tax matters, acquisition-related costs, gains and losses from certain divestitures and certain other unusual, non-recurring items. Investors and analysts use these financial measures in assessing the Company’s business performance, and management believes that presenting these financial measures on a non-GAAP basis provides them with useful supplemental information to enhance their understanding of the Company’s underlying business performance and trends. These non-GAAP financial measures also enhance the ability to compare period-to-period financial results. A reconciliation of each of these non-GAAP financial measures to the most directly comparable GAAP financial measures for the three and nine months ended September 30, 2026 and 2025 is presented within the applicable section of Results of Operations.
+The following tables provide a quantitative reconciliation of Net sales growth to organic sales growth for the three and nine months ended September 30, 2026:
+Three Months Ended September 30, 2026	Net Sales Growth
+(GAAP)	Foreign
+Exchange
+Impact	Acquisitions and Divestments
+Impact	Organic
+Sales Growth
+(Non-GAAP)
+Oral, Personal and Home Care
+North America(1)
+	(1.7)%	(0.2)%	—%	(1.6)%
+Latin America	12.5%	6.5%	—%	6.0%
+Europe, Middle East & Africa(1)
+	1.4%	(1.2)%	—%	2.7%
+Asia Pacific(1)
+	3.5%	(1.1)%	—%	4.6%
+Total Oral, Personal and Home Care	4.4%	1.3%	—%	3.1%
+Hill's Pet Nutrition	5.6%	(0.1)%	—%	5.7%
+Total Company	4.6%	1.0%	—%	3.6%
+Note: Table may not sum due to rounding.
+(1) The Company has recast its historical geographic segment information to conform to the reporting structure effective for the quarter ended March 31, 2026.
+50
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Nine Months Ended September 30, 2026	Net Sales Growth
+(GAAP)	Foreign
+Exchange
+Impact	Acquisitions and Divestments
+Impact	Organic
+Sales Growth
+(Non-GAAP)
+Oral, Personal and Home Care
+North America(1)
+	(2.2)%	0.1%	—%	(2.3)%
+Latin America	13.7%	8.1%	—%	5.6%
+Europe, Middle East & Africa(1)
+	5.4%	2.8%	—%	2.7%
+Asia Pacific(1)
+	5.7%	0.6%	—%	5.1%
+Total Oral, Personal and Home Care	6.2%	3.3%	—%	2.9%
+Hill's Pet Nutrition	5.2%	1.1%	0.8%	3.3%
+Total Company	6.0%	2.8%	0.2%	3.0%
+Note: Table may not sum due to rounding.
+(1) The Company has recast its historical geographic segment information to conform to the reporting structure effective for the quarter ended March 31, 2026.
+51
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Liquidity and Capital Resources
+The Company expects cash flow from operations and debt issuances will be sufficient to meet foreseeable business operating and recurring cash needs (including for debt service, dividends, capital expenditures, share repurchases and acquisitions). The Company believes its strong cash generation and financial position should continue to allow it broad access to global credit and capital markets.
+Cash Flow
+Net cash provided by operations increased 6% to $2,913 in the first nine months of 2026, compared to $2,745 in the first nine months of 2025, primarily due to higher net income, excluding non-cash items in the period, and changes in working capital. The Company’s working capital was (6.3%) as a percentage of Net sales as of September 30, 2026 as compared to (4.0%) as of September 30, 2025. The Company defines working capital as the difference between current assets (excluding Cash and cash equivalents and marketable securities, the latter of which is reported in Other current assets) and current liabilities (excluding short-term debt).
+Investing activities used $381 of cash in the first nine months of 2026, compared to $714 used in the first nine months of 2025. Investing activities in the first nine months of 2025 included the Company’s acquisition of Care TopCo Pty Ltd, the owner of the Prime100 pet food business, as discussed in Note 4, Acquisitions to the Condensed Consolidated Financial Statements.
+Capital expenditures were $400 in the first nine months of 2026 compared to $387 in the first nine months of 2025. Capital expenditures for 2026 are expected to be approximately 3.0% of Net sales. The Company continues to focus its capital spending on projects that are expected to yield high after-tax returns. 
+Financing activities used $2,272 of cash during the first nine months of 2026, compared to $1,895 used in the first nine months of 2025. The increase in cash used in financing activities was primarily due to higher principal payments of debt and share repurchases in the first nine months of 2026 and the receipt of proceeds from the issuance of debt in the first nine months of 2025, partially offset by an increase in short-term borrowing in the first nine months of 2026.
+Total debt decreased to $7,716 as of September 30, 2026, compared to $7,988 as of December 31, 2025. During the second quarter of 2025, the Company redeemed at maturity $130 of 30-year Medium-Term Notes with a fixed coupon of 7.60%. During the third quarter of 2025, the Company redeemed at maturity $500 of three-year Senior Notes with a fixed coupon of 3.10%. During the first quarter of 2026, the Company redeemed at maturity $500 of three-year Senior Notes with a fixed coupon of 4.800% and €500 of seven-year Medium-Term Notes with a fixed coupon rate of 0.500%. The redemptions were financed with commercial paper borrowings. 
+In April 2025, the Company issued $500 of five-year Senior Notes at a fixed coupon rate of 4.200%. The Company’s debt issuances support the Company’s capital structure objectives of funding its business and growth initiatives while minimizing its risk-adjusted cost of capital. 
+Domestic and foreign commercial paper outstanding was $1,037 and $147 as of September 30, 2026 and December 31, 2025, respectively. The average daily balances outstanding for commercial paper in the first nine months of 2026 and 2025 were $1,405 and $1,733, respectively. The Company classifies commercial paper and certain long-term debt that is subject to a put option as long-term debt when it has the intent and ability to refinance such obligations on a long-term basis, including, if necessary, by utilizing its available lines of credit.
+Certain of the agreements with respect to the Company’s bank borrowings contain financial and other covenants as well as cross-default provisions. Noncompliance with these requirements could ultimately result in the acceleration of amounts owed. The Company is in full compliance with all such requirements and believes the likelihood of noncompliance is remote. Refer to Note 6, Long Term Debt and Credit Facilities to the Consolidated Financial Statements contained in the Company’s Annual Report on Form 10-K for the year ended December 31, 2025 for further information about the Company’s long-term debt and credit facilities.
+52
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+In the first quarter of 2026, the Company increased the quarterly common stock dividend to $0.53 per share from $0.52 per share previously, effective in the second quarter of 2026.
+Cash and cash equivalents increased $239 during the first nine months of 2026 to $1,527 at September 30, 2026, compared to $1,288 at December 31, 2025, the majority of which ($1,515 and $1,234, respectively) was held by the Company’s foreign subsidiaries. 
+For additional information regarding liquidity and capital resources, refer to the Company’s Annual Report on Form 10-K for the year ended December 31, 2025.
+53
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Market Share Information 
+Management uses market share information as a key indicator to monitor business health and performance. References to market share in this Quarterly Report on Form 10-Q are based on a combination of consumption and market share data provided by third-party vendors, primarily Nielsen, and internal estimates. All market share references represent the percentage of the dollar value of sales of our products, relative to all product sales in the category in the countries in which the Company competes and purchases data (excluding Venezuela from all periods).
+Market share data is subject to limitations on the availability of up-to-date information. In particular, market share data is currently not generally available for certain retail channels, such as eCommerce or certain discounters. The Company measures year-to-date market shares from January 1 of the relevant year through the most recent period for which market share data is available, which typically reflects a lag time of one or two months. The Company believes that the third-party vendors we use to provide data are reliable, but we have not verified the accuracy or completeness of the data or any assumptions underlying the data. In addition, market share information calculated by the Company may be different from market share information calculated by other companies due to differences in category definitions, the use of data from different countries, internal estimates and other factors.
+54
+COLGATE-PALMOLIVE COMPANY
+Management’s Discussion and Analysis of Financial
+Condition and Results of Operations
+(Dollars in Millions Except Per Share Amounts)
+Cautionary Statement on Forward-Looking Statements
+This Quarterly Report on Form 10-Q may contain forward-looking statements (as that term is defined in the Private Securities Litigation Reform Act of 1995 or by the SEC in its rules, regulations and releases) that set forth anticipated results based on management’s current plans and assumptions. Such statements may relate, for example, to sales or volume growth, net selling price increases, organic sales growth, profit or profit margin levels, earnings per share levels, financial goals, category growth rates, the impact of foreign exchange, the impact of developments in global trade relations and tariffs, the impact of geopolitical events and tensions, wars and military conflicts, such as in Ukraine and the Middle East, cost-reduction plans (including the Strategic Growth and Productivity Program), tax rates, interest rates, new product introductions, digital capabilities, commercial investment levels, acquisitions, divestitures, share repurchases or legal or tax proceedings, among other matters. These statements are made on the basis of the Company’s views and assumptions as of October 30, 2026. The Company undertakes no obligation to update these statements whether as a result of new information, future events or otherwise, except as required by law or by the rules and regulations of the SEC. Moreover, the Company does not, nor does any other person, assume responsibility for the accuracy and completeness of those statements. The Company cautions investors that any such forward-looking statements are not guarantees of future performance and that actual events or results may differ materially from those statements. Actual events or results may differ materially because of factors that affect international businesses and global macroeconomic and geopolitical conditions, as well as matters specific to the Company and the markets it serves, including the uncertain macroeconomic and political environment in different countries, including as a result of inflation and high interest rates and their effect on consumer sentiment and spending, foreign currency rate fluctuations, exchange controls, import restrictions, tariffs, sanctions, price or profit controls, labor relations, changes in foreign or domestic laws or regulations or their interpretation, political and fiscal developments, including developments in trade relations and the negotiation of trade agreements, tax and immigration policies, significant competition and a highly competitive omni-channel marketplace, including as a result of the growth of eCommerce and AI, a rapidly changing retail landscape and changes in the policies of retail trade customers, the ability to manage disruptions in our global supply chain and/or key office facilities, the ability to manage the availability and cost of raw and packaging materials and logistics costs, the ability to maintain or increase selling prices as needed, the emergence of alternative retail channels, the ability to develop innovative new products and successfully leverage AI and other new and emerging technologies, the ability to continue lowering costs and operate in an agile manner, the ability to successfully implement and realize the benefits of the Strategic Growth and Productivity Program, the ability to maintain the security of our information and operational technology systems from cybersecurity or data incidents, the ability to address the effects of climate change and implement our sustainability strategy and achieve our targets, the ability to complete acquisitions and divestitures as planned and successfully integrate acquired businesses, the ability to attract and retain key employees, the uncertainty of the outcome of legal proceedings, whether or not the Company believes they have merit, and the ability to address uncertain or unfavorable macroeconomic conditions, including inflation, disruptions in the credit markets and tax matters. For information about these and other factors that could impact the Company’s business and cause actual results to differ materially from forward-looking statements, refer to the Company’s filings with the SEC (including, but not limited to, the information set forth under the captions “Risk Factors” and “Cautionary Statement on Forward-Looking Statements” in the Company’s Annual Report on Form 10-K for the year ended December 31, 2025 and subsequent filings with the SEC).
+Quantitative and Qualitative Disclosures about Market Risk
+There is no material change in the information reported under Part II, Item 7, “Managing Foreign Currency, Interest Rate, Commodity Price and Credit Risk Exposure” contained in our Annual Report on Form 10-K for the year ended December 31, 2025.
+55
+COLGATE-PALMOLIVE COMPANY
+Controls and Procedures
+Evaluation of Disclosure Controls and Procedures
+The Company’s management, under the supervision and with the participation of the Company’s Chairman of the Board, President and Chief Executive Officer and Chief Financial Officer, carried out an evaluation of the effectiveness of the design and operation of the Company’s disclosure controls and procedures as of September 30, 2026 (the “Evaluation”). Based upon the Evaluation, the Company’s Chairman of the Board, President and Chief Executive Officer and Chief Financial Officer concluded that the Company’s disclosure controls and procedures (as defined in Rule 13a-15(e) of the Securities Exchange Act of 1934) are effective.
+Changes in Internal Control Over Financial Reporting
+The Company is in the process of upgrading its enterprise IT system and transitioning its enterprise IT infrastructure to the cloud. This change has not had and is not expected to have a material impact on the Company’s internal control over financial reporting. 
+Except as noted above, there were no changes in the Company’s internal control over financial reporting that occurred during the Company’s most recent fiscal quarter that have materially affected, or are reasonably likely to materially affect, the Company’s internal control over financial reporting. 
+56
+COLGATE-PALMOLIVE COMPANY
+PART II. OTHER INFORMATION
+Item 1. Legal Proceedings
+For information regarding legal matters, refer to Note 10, Contingencies to the Condensed Consolidated Financial Statements contained in Part I of this Quarterly Report on Form 10-Q, which is incorporated herein by reference.
+Item 1A. Risk Factors
+There have been no material changes from the risk factors disclosed in “Risk Factors” in Part I, Item 1A of the Company’s Annual Report on Form 10-K for the year ended December 31, 2025.
+57
+COLGATE-PALMOLIVE COMPANY
+Item 2. Unregistered Sales of Equity Securities and Use of Proceeds 
+On March 20, 2025, the Board authorized the repurchase of shares of the Company’s common stock having an aggregate purchase price of up to $5 billion under a new share repurchase program (the “2025 Program”), which replaced a previously authorized share repurchase program. The Board also has authorized share repurchases on an ongoing basis to fulfill certain requirements of the Company’s compensation and benefit programs. The shares are repurchased from time to time in open market or privately negotiated transactions at the Company’s discretion, subject to market conditions, customary blackout periods and other factors. 
+The following table shows the stock repurchase activity for the three months in the quarter ended September 30, 2026:
+Month	Total Number of Shares Purchased(1)
+	Average Price Paid per Share	Total Number of Shares Purchased as Part of Publicly Announced Plans or Programs(2)
+	Approximate Dollar Value of Shares That May Yet Be Purchased Under the Plans or Programs(3)
+(in millions) 
+July 1 through 31, 2026	710,388	$	92.16	707,000	$	3,465
+August 1 through 31, 2026	1,120,994	$	91.64	1,119,500	$	3,362
+September 1 through 30, 2026	1,848,785	$	87.58	1,534,609	$	3,228
+Total	3,680,167	$	89.70	3,361,109
+(1) Includes share repurchases under the 2025 Program and those associated with certain employee elections under the Company’s compensation and benefit programs.
+(2) The difference between the total number of shares purchased and the total number of shares purchased as part of publicly announced plans or programs is 319,058 shares, which represents shares deemed surrendered to the Company to satisfy certain employee elections under the Company’s compensation and benefit programs.
+(3) Includes approximate dollar value of shares that were available to be purchased under the publicly announced plans or programs. 
+58
+COLGATE-PALMOLIVE COMPANY
+Item 3. Defaults Upon Senior Securities
+None.
+Item 4. Mine Safety Disclosures
+Not Applicable.
+Item 5. Other Information
+(c) Trading Plans
+No director or officer of the Company adopted, modified or terminated a “Rule 10b5-1 trading arrangement” or “non-Rule 10b5-1 trading arrangement,” as each term is defined in Item 408(a) of Regulation S-K, during the three months ended September 30, 2026.
+59
+ COLGATE-PALMOLIVE COMPANY
+Item 6. Exhibits
+Exhibit No.	Description
+10-A	Form of Nonqualified Option Award Agreement used in connection with grants under the Colgate-Palmolive Company 2019 Incentive Compensation Plan.* **
+10-B	Form of Restricted Stock Unit Award Agreement used in connection with grants under the Colgate-Palmolive Company 2019 Incentive Compensation Plan.* ** 
+31-A	Certificate of the Chairman of the Board, President and Chief Executive Officer of Colgate-Palmolive Company pursuant to Rule 13a-14(a) under the Securities Exchange Act of 1934.**
+31-B	Certificate of the Chief Financial Officer of Colgate-Palmolive Company pursuant to Rule 13a-14(a) under the Securities Exchange Act of 1934.**
+32	Certificate of the Chairman of the Board, President and Chief Executive Officer and the Chief Financial Officer of Colgate-Palmolive Company pursuant to Rule 13a-14(b) under the Securities Exchange Act of 1934 and 18 U.S.C. § 1350.***
+101	The following materials from Colgate-Palmolive Company’s Quarterly Report on Form 10-Q for the period ended September 30, 2026, formatted in Inline eXtensible Business Reporting Language (Inline XBRL): (i) the Condensed Consolidated Statements of Income; (ii) the Condensed Consolidated Statements of Comprehensive Income; (iii) the Condensed Consolidated Balance Sheets; (iv) the Condensed Consolidated Statements of Cash Flows; (v) the Condensed Consolidated Statements of Changes in Shareholders’ Equity; and (vi) Notes to Condensed Consolidated Financial Statements.
+104	Cover Page Interactive Data File (formatted as Inline XBRL and contained in Exhibit 101).
+ 
+__________
+* Indicates a management contract or compensatory plan or arrangement.
+** Filed herewith.
+*** Furnished herewith.
+60
+COLGATE-PALMOLIVE COMPANY
+SIGNATURES
+Pursuant to the requirements of the Securities Exchange Act of 1934, the registrant has duly caused this report to be signed on its behalf by the undersigned thereunto duly authorized.
+COLGATE-PALMOLIVE COMPANY
+(Registrant)
+Principal Executive Officer:
+October 30, 2026	/s/ Noel Wallace
+Noel Wallace
+Chairman of the Board, President and
+Chief Executive Officer
+Principal Financial Officer:
+October 30, 2026	/s/ Stanley J. Sutula III
+Stanley J. Sutula III
+Chief Financial Officer
+Principal Accounting Officer:
+October 30, 2026	/s/ Gregory O. Malcolm
+Gregory O. Malcolm
+Executive Vice President, Controller
+61
