@@ -85,6 +85,8 @@ Buybacks net of option proceeds were 6,959 over 2018–2025 against 10,621 gross
 | All sheet defaults: return equals cost of capital, growth 4.82%, stable cost of capital 9.05% | 47,989 | 24,519 | $50.90 | 193.9% (98.71 ÷ 50.90) |
 | Base case with cost of capital 7.84% (beta 0.63) | not read | not read | $63.82 | 154.66% |
 | Base case with cost of capital 8.67% (beta 0.80) | not read | not read | $60.56 | 163.00% |
+| Base case with cost of capital 6.77% for years 1–5 (peer-median beta 0.41), stable rate 8.43% | 61,892 | 36,481 | $68.32 (computed from the operating-asset cell) | 144.5% (98.71 ÷ 68.32) |
+| Base case with 6.77% as the stable cost of capital as well | 80,690 | not read | about $91.88 (computed from the operating-asset cell) | 107.4% (98.71 ÷ 91.88) |
 
 Base case detail:
 

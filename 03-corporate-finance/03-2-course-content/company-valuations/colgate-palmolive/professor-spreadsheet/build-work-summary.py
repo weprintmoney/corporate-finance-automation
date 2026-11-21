@@ -45,7 +45,7 @@ rows = [
  ("Tab: Debt design", "Sector sensitivities from macrodur.xlsx weighted by segment, Colgate's own history, and the debt it has."),
  ("Tab: Spreadsheet results", "Outputs read from the three filled professor spreadsheets, with the inputs that differ from their defaults."),
  ("Professor spreadsheets (separate files)", "colgate-capstru-optimal-debt.xlsx (optimal debt ratio) · colgate-dividends-2026-11-20.xlsx (dividend analysis) · colgate-fcffsimpleginzu-2026-11-20.xlsx (valuation). Each is the professor's file with Colgate's inputs entered in the yellow cells."),
- ("Judgment calls to challenge", "1) Operating income 4,225 = reported 3,306 plus the 919 non-cash write-down; restructuring and litigation charges kept in. 2) Cost of debt from the actual A+ rating, not the synthetic AAA. 3) Start-of-November equity risk premium, although the S&P 500 fell 8.8% afterwards. 4) Food Processing beta for Hill's Pet Nutrition. 5) Stable return on capital of 20% in the valuation, against the spreadsheet default of return = cost of capital."),
+ ("Judgment calls to challenge", "1) Beta: industry average 0.73 used; Colgate's own regression gives 0.315 and six large peers about 0.41. This is the input most likely to be wrong. 2) Operating income 4,225 = reported 3,306 plus the 919 non-cash write-down; restructuring and litigation charges kept in. Cost of debt from the actual A+ rating, not the synthetic AAA. 3) Start-of-November equity risk premium, although the S&P 500 fell 8.8% afterwards. 4) Food Processing beta for Hill's Pet Nutrition. 5) Stable return on capital of 20% and growth in perpetuity of 3% in the valuation, against the spreadsheet defaults (return = cost of capital, growth = riskfree rate)."),
  ("Sources", "Colgate 10-K FY2025, 10-Q Q3 2026 and 2026 proxy (SEC EDGAR, CIK 0000021665); SEC XBRL company facts; S&P Capital IQ (rating, bond list, consensus); Damodaran data (ERP November 2026, industry betas and ratings table January 2026, regional risk premiums January 2026); FRED 10-year Treasury; Yahoo Finance prices."),
 ]
 for i, (a, b) in enumerate(rows, 3):
@@ -130,7 +130,7 @@ out = [("Observations", f"=COUNT({y})", "0"), ("Beta (slope)", f"=SLOPE({y},{x})
 header(ws, 3, ["Month", "CL adjusted close", "S&P 500 total return", "CL return", "Market return", "", "Result", "Value", "Note"])
 for i, (n, f, fm) in enumerate(out, 4):
     put(ws, f"G{i}", n); put(ws, f"H{i}", f, BOLD, fm)
-put(ws, "I5", "Capital IQ shows a five-year beta of 0.31. The cost of capital uses the bottom-up beta instead.", NOTE)
+put(ws, "I5", "Capital IQ shows a five-year beta of 0.31 for Colgate and a median of about 0.41 for six household peers. The cost of capital uses the industry-average beta, 0.73; the Spreadsheet results tab shows the value at 0.41.", NOTE)
 put(ws, "I7", "The market explains about 6% of the stock's movement; the rest is company-specific.", NOTE)
 put(ws, "I9", "Simple returns here; the option input in the valuation used log returns (19.08%).", NOTE)
 put(ws, "G11", "Source: Yahoo Finance chart endpoint, dividend-adjusted month-end closes, read 2026-11-21.", NOTE)
@@ -227,10 +227,12 @@ put(ws, "A16", "Sensitivity of the base case (value per share)", BOLD)
 sens = [("Growth in perpetuity at the sheet default, 4.82%", 79.74, "With returns above the cost of capital, growth adds value"),
         ("Stable return equal to the cost of capital, growth 4.82%", 53.82, "Stable cost of capital kept at 8.43%"),
         ("Cost of capital 7.84% (beta 0.63)", 63.82, "Low end of the beta range; stable cost of capital unchanged"),
-        ("Cost of capital 8.67% (beta 0.80)", 60.56, "High end of the beta range")]
+        ("Cost of capital 8.67% (beta 0.80)", 60.56, "High end of the beta range"),
+        ("Cost of capital 6.77% (large-peer beta 0.41) for years 1–5, then the 8.43% stable rate", 68.32, "Median five-year beta of six household peers (Capital IQ) is about 0.41. Computed from the workbook's operating-asset value of 61,892"),
+        ("Cost of capital 6.77% in every year, including the stable period", 91.88, "Computed from the workbook's operating-asset value of 80,690")]
 for i, (n, v, s) in enumerate(sens, 17):
     put(ws, f"A{i}", n); put(ws, f"B{i}", v, BLUE, "0.00"); put(ws, f"D{i}", s, NOTE)
-put(ws, "A22", "Valuation inputs that differ from the sheet's defaults", BOLD)
+put(ws, "A24", "Valuation inputs that differ from the sheet's defaults", BOLD)
 vi = [("Cost of capital", "8.34%, entered directly", "So all three spreadsheets use the same number as the Cost of capital tab"),
       ("Stable cost of capital", "8.43%", "Riskfree 4.82% + mature premium 3.61%. The sheet default uses its January premium (4.23%) and gives 9.05%"),
       ("Stable return on capital", "20%", "Under half of the 42% base-year return; household products industry average is 34%"),
@@ -240,11 +242,11 @@ vi = [("Cost of capital", "8.34%, entered directly", "So all three spreadsheets 
       ("Sales to capital", "2.2", "Colgate's own ratio (sales 20,382 over invested capital 9,169) and the US household products average (2.21). The sheet default is the global average, 1.79"),
       ("Effective tax rate", "23.5%", "23.1% for 2025 excluding the write-down; 23.8% for the first nine months of 2026"),
       ("Trailing operating income", "4,080", "Reported 3,161 plus the 919 write-down booked in Q4 2025")]
-for i, (n, v, s) in enumerate(vi, 23):
+for i, (n, v, s) in enumerate(vi, 25):
     put(ws, f"A{i}", n); put(ws, f"B{i}", v, BLUE); put(ws, f"D{i}", s, NOTE)
-header(ws, 33, ["dividends.xlsx — 2018–2025", "Total", "", "Note"])
+header(ws, 35, ["dividends.xlsx — 2018–2025", "Total", "", "Note"])
 dr = [("Free cash flow to equity, $M", 18819, NUM, "Matches the Dividends tab, G12"), ("Dividends plus buybacks, $M", 24211, NUM, "Matches the Dividends tab, J12"), ("Dividend payout ratio", 0.7254, PCT, "")]
-for i, (n, a, f, s) in enumerate(dr, 34):
+for i, (n, a, f, s) in enumerate(dr, 36):
     put(ws, f"A{i}", n); put(ws, f"B{i}", a, BLUE, f); put(ws, f"D{i}", s, NOTE)
 
 wb.save(OUT); print("saved", OUT, wb.sheetnames)

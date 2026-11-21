@@ -33,20 +33,20 @@ last_updated: 2026-11-21
         | Principle | The test | Colgate | Verdict |
         |---|---|---|---|
         | Investment: take projects that earn more than the hurdle rate | Return on capital against cost of capital | 34.56% against 8.34% on the existing business (model-output.md §8). Acquisitions: more than half written off | Passes on what it has; fails on what it has bought |
-        | Financing: choose the mix that makes the hurdle rate lowest | Actual against optimal debt | 9.34% against 30% unconstrained, 20% recommended (model-output.md §3; lesson 19) | Too little debt. Worth 1% to 7% of value, depending on the measure |
+        | Financing: choose the mix that makes the hurdle rate lowest | Actual against optimal debt | 9.34% against 30% unconstrained, 20% recommended (model-output.md §3; lesson 19) | Too little debt. Worth 2% to 7% of the share price: $2.26 a share for the move to 20%, up to $7.30 for the full move (lesson 19) |
         | Dividend: return what cannot be invested well | Cash returned against free cash flow to equity | About 105% over five years, net of option receipts (lesson 26) | Passes on the amount. The form is the issue |
 
       The quote describes what Colgate does. It cannot find enough investments that clear its hurdle rate, and it gives the cash back. Its payout follows from the first answer. It does not follow from the second: a company with this much unused debt capacity and nowhere to invest could return more, by borrowing.
-      The valuation adds the piece the three principles do not cover: at what price. The principles say return the cash. They do not say how. When the share price is above the value of the share, a buyback is the wrong vehicle and a dividend is the right one. That is the one place where the financing and dividend conclusions depend on the valuation, and it is a judgment that holds only if the valuation is right.
+      The valuation adds the piece the three principles do not cover: at what price. The principles say return the cash. They do not say how. When the share price is above the value of the share, a buyback is the wrong vehicle and a special dividend is the right one. That is the one place where the financing and dividend conclusions depend on the valuation, and it is a judgment that holds only if the valuation is right.
       The narrative is given in the project answer below.
 
 ## Cumulative Project — Questions for This Lesson
 
 - **What is the narrative that you would use to describe your company, as its run today?**
   Colgate-Palmolive is a mature company that owns a few very strong brands in products people buy every week, and it is run cautiously for steadiness. Its sales grow about 3% a year, mostly by raising prices. It earns over 30% on the capital in its existing business, four times what that capital costs, and it needs almost no new capital to keep going. Because it cannot put much money to work at those returns, it hands nearly all of its cash to shareholders, about $3 billion a year, and when it has tried to buy growth it has written off more than half of what it paid. It borrows far less than it safely could. Nobody controls it and nobody is pressing it to change. It is a good business, competently and conservatively run, with one bad habit, acquisitions, and one missed opportunity, debt.
-  A good business is not the same as a good investment at any price. On the story above, a share is worth about $62: $61.83 in our base case, $50.90 on the most cautious assumptions and $79.74 on the most generous we would defend (`facts.ginzu-base-case-detail`). The market price is $98.71. The market prices Colgate much as it prices similar companies, about $89 on their multiples (`facts.peer-medians-and-implied-prices`), so it is not out of line with its sector. It is the sector's price that our numbers cannot support. For the price to be right, Colgate's advantage would have to last forever at full strength and its growth would have to outrun the economy.
-  What we would do: borrow up to 20% of value over about five years; pay that cash, and the cash now going to buybacks, as dividends while the price is above value; and stop buying businesses that do not clearly earn their cost.
-  How sure we are: confident in the description of the business, which comes from audited filings. Confident that the shares are worth less than the price, because that holds under every assumption we tested. Not confident in $61.83 as a point, because it rests on two assumptions about the distant future, the return on new investment and growth forever, that no one can check.
+  A good business is not the same as a good investment at any price. On the story above, a share is worth about $62: $61.83 in our base case, $50.90 on the most cautious assumptions and $79.74 on the most generous we would defend (`facts.ginzu-base-case-detail`). The market price is $98.71. The market prices Colgate much as it prices similar companies, about $89 on their multiples (`facts.peer-medians-and-implied-prices`), so it is not out of line with its sector. It is the sector's price that our numbers cannot support. For the price to be right, Colgate's advantage would have to last forever at full strength and its growth would have to outrun the economy, or its cost of capital would have to stay forever near the 6.77% that its large peers' betas imply; on that last assumption a share is worth about $91.88 (`facts.ginzu-peer-beta-cases`).
+  What we would do: borrow up to 20% of value over about five years; pay that cash, and the cash now going to buybacks, as special dividends while the price is above value, with the regular dividend left on its slow rise; and stop buying businesses that do not clearly earn their cost.
+  How sure we are: confident in the description of the business, which comes from audited filings. Moderately confident that the shares are worth less than the price. That holds in every case we tested, but it rests on the cost of capital moving toward the mature-company rate over time, which is the professor's spreadsheet default. Confidence in the beta is low: the range is 0.41 to 0.80 (lesson 10). Not confident in $61.83 as a point, because it rests on two assumptions about the distant future, the return on new investment and growth forever, that no one can check.
 
 ## Notes
 
@@ -55,15 +55,15 @@ The course in one table, for Colgate:
 | Question | Answer | Lessons |
 |---|---|---|
 | Who runs it, and for whom? | Professional managers, lightly supervised by index funds | 1–4 |
-| What does its money cost? | 8.34% | 5–13 |
+| What does its money cost? | 8.34%, in a range of 6.77% to 8.67% on the beta | 5–13 |
 | Does it earn more than that? | Yes, 34.56%, on the existing business; not on acquisitions | 14–16 |
 | Does it use the right amount of debt? | No: 9.34% against 20% recommended | 17–23 |
-| Does it return the right amount of cash? | Yes. The form should be dividends while the price is above value | 24–28, 33, 34 |
-| What is it worth? | $61.83, in a range of $50.90 to $79.74 | 29–34 |
+| Does it return the right amount of cash? | Yes. The form should be special dividends while the price is above value | 24–28, 33, 34 |
+| What is it worth? | $61.83, in a range of $50.90 to $79.74; $68.32 to about $91.88 on the large-peer beta | 29–34 |
 | What is it priced at? | $98.71; about $89 on its peers' multiples | 35 |
 
 Three things in the earlier lessons should be read in the light of the valuation. The route for the borrowed money in lesson 22, special dividends and not buybacks, rests entirely on the value being below the price (lesson 34). Lesson 19 quotes $106.01 as value per share at the optimal debt ratio; that figure is the market price plus the gain, not an estimate of value. And lesson 28's check of payout against individual peers remains open, because the comparison data we hold has no dividend figures.
 
-Open points carried to the report: the treatment of the United States' country risk premium (lesson 7); the unsourced Moody's rating (lesson 12); the workbook and the model rating 30% debt differently (lesson 18); minority interests at book value, which may overstate value by about $2 a share (lesson 33); and a peer set that is Capital IQ's default list, not one built for this company (lesson 35).
+Open points carried to the report: the beta, where the peer evidence says 0.73 is probably too high (lesson 10); the treatment of the United States' country risk premium (lesson 7); the unsourced Moody's rating (lesson 12); the workbook and the model rating 30% debt differently (lesson 18); minority interests at book value, which may overstate value by about $2 a share (lesson 33); and a peer set that is Capital IQ's default list, not one built for this company (lesson 35).
 
 Confidence overall: the direction of every finding is firmer than its size.

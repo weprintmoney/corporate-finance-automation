@@ -103,7 +103,7 @@ Where the comparison companies come from. The ledger holds no agreed peer set (`
   For context only, Professor Damodaran's averages for 93 US household products firms in January 2024, two years before our date: EV ÷ EBITDA 15.95, EV ÷ EBIT 20.01, forward price ÷ earnings 31.41 (`facts.sector-multiples-2024`). Colgate at 16.85 and 19.31 is close to those.
 
 - **Based upon the multiple and comparables, what price would you attach to your company?**
-  About $89 a share, in a range of roughly $73 to $94 (`facts.peer-medians-and-implied-prices`).
+  About $89 a share. The three earnings multiples on the six give a range of $72.67 to $93.75 (`facts.peer-medians-and-implied-prices`). The regression of EV ÷ revenue on margin is a separate check and gives $96.09 (`facts.peer-regression`).
 
   | Multiple | Median of the six | Price implied | Median of all ten | Price implied |
   |---|---|---|---|---|
@@ -113,7 +113,7 @@ Where the comparison companies come from. The ledger holds no agreed peer set (`
   | EV ÷ revenue, adjusted for margin (regression) | | $96.09 | | $89.08 |
 
   The method for the EV rows: multiply the median by Colgate's own figure, subtract net debt of $6,104M and minority interests of $352M, divide by 794.9 million shares. For EBITDA on the six: 15.35 × $5,041M, less $6,456M, over 794.9 million, is $89.23.
-  Our pricing is $89.23, the EV ÷ EBITDA figure on the six household companies. The price today is $98.71, about 10% higher. That premium is roughly what Colgate's higher margin justifies. On pricing, then, Colgate is fairly priced to slightly dear.
+  Our pricing is $89.23, the EV ÷ EBITDA figure on the six household companies. The price today is $98.71, 10.6% higher. That premium is roughly what Colgate's higher margin justifies. On pricing, then, Colgate is fairly priced to slightly dear.
 
 ## Notes
 
@@ -125,7 +125,7 @@ Pricing and value disagree, and both answers stand.
 |---|---|
 | Intrinsic value, base case | $61.83 |
 | Intrinsic value, range of cases | $50.90 to $79.74 |
-| Pricing against the six household companies | $89.23, range $72.67 to $93.75 |
+| Pricing against the six household companies | $89.23; earnings multiples $72.67 to $93.75; margin regression $96.09 |
 | Market price | $98.71 |
 | Analysts' mean target | $101.70 |
 

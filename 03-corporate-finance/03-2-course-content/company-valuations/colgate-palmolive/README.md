@@ -34,6 +34,7 @@ The report's valuation runs in the professor's `fcffsimpleginzu.xlsx`. Section 6
 | Cost of debt | S&P's A+ rating, 5.74% | Synthetic AAA from coverage, 5.44% |
 | Equity risk premium date | Damodaran's start-of-November implied premium, 3.61% | A premium recomputed after the 8.8% fall in the S&P 500 |
 | Beta for Hill's | Food Processing, 0.47 | No pet food industry in the dataset |
+| Beta | Industry average, 0.73 levered: the course's method and an average over 188 companies. Confidence is low; the honest range is 0.41 to 0.80 | Median of six large household peers, about 0.41: cost of capital 6.77%, value $68.32 if it fades to the mature rate and about $91.88 if it lasts forever |
 | Stable return on capital | 20% | The spreadsheet default: return equals cost of capital |
 | Growth in perpetuity | 3%: consensus revenue growth is 2.3% to 3.5% and sales grew 3.3% a year from 2016 to 2025 | The spreadsheet default, the 4.82% riskfree rate |
 | Forecast margins | 20.5% rising to 21.3%: consensus less about 0.7 points for restructuring and similar charges, which consensus leaves out and operating income here keeps in | Consensus as published, 21.2% rising to 22% |
@@ -49,7 +50,6 @@ The report's valuation runs in the professor's `fcffsimpleginzu.xlsx`. Section 6
 | Question | Where raised |
 |---|---|
 | US sales are priced at the 3.61% mature premium with nothing added, while Damodaran's tables give the US (Aa1) 0.22% over the mature market. The weighted premium is 5.38% as built, or 5.45% or 5.23% on the other readings | `lesson-07.md` |
-| The beta carries most of the uncertainty: 0.73 bottom-up against 0.315 from the regression. Show value at both ends of a 0.63–0.80 range | `lesson-10.md` |
 | Moody's rating is not sourced | `sources/README.md` |
 | `capstru.xlsx` rates the firm A− at 30% because it keeps existing debt at its present interest; the model reprices all debt and gets BBB. The report should say which it relies on | `lesson-18.md`, `professor-spreadsheet/results.md` |
 | Currencies behind the 3,942 of foreign currency debt designated as a net investment hedge, and the duration of the notes, are not in the files | `lesson-23.md` |
@@ -73,6 +73,10 @@ The report's valuation runs in the professor's `fcffsimpleginzu.xlsx`. Section 6
 | `modules-2-4-cross-checks.py`, `modules-2-4-cross-checks-output.md` | Arithmetic quoted in lessons 13–28 (divisional rates, one-point debt schedule, stress tests, APV at other bankruptcy costs, FCFE by year, sector comparisons); generated, not hand-edited |
 | `module-1-cross-checks.py`, `module-1-cross-checks-output.md` | Alternatives quoted in lessons 1–12 (regression diagnostics, cost of capital under other choices); generated, not hand-edited |
 | `professor-spreadsheet/originals/` | The professor's spreadsheets as downloaded 2026-11-21: `fcffsimpleginzu.xlsx`, `macrodur.xls`, `apv.xls`, `divfund.xls` |
+| `final-report.md` | The report for submission: verdict, nine sections, judgment-call tables |
+| `final-report.docx` | The Word version, built from `final-report.md` by `report-exhibits/build-report-docx.js` |
+| `report-exhibits/` | The four charts and the script that draws them |
+| `peer-payout-check.py`, `peer-payout-check-output.md` | Five-year dividends and buybacks against net income for Colgate and six household peers |
 
 ## Corrections log
 
