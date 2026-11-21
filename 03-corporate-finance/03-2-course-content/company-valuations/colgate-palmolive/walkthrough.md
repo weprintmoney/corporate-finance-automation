@@ -10,11 +10,11 @@ last_updated: 2026-11-21
 
 ## How to read this
 
-This document walks through the valuation of Colgate-Palmolive one step at a time, in the order the course teaches it. Every number in it was either read from a named document or computed by the model from those documents; nothing is typed in from memory. Each step has the same six parts: what we wanted to know, why it matters, what we did, the numbers and where they came from, what we decided, and how sure we are. Terms are explained the first time they appear and will be collected in the glossary at the end.
+This document walks through the valuation of Colgate-Palmolive one step at a time, in the order the course teaches it. Every number in it was either read from a named document or computed by the model from those documents; nothing is typed in from memory. Each step has the same six parts: what we wanted to know, why it matters, what we did, the numbers and where they came from, what we decided, and how sure we are. Terms are explained the first time they appear and are collected in the glossary at the end.
 
 ## The valuation in ten sentences
 
-To be written last, when all 36 steps are done.
+Colgate-Palmolive sells toothpaste, soap, cleaners and pet food in almost every country, and it is a mature business: sales of $20,382 million in 2025, growing about 3% a year, mostly through price. Nobody controls it; its largest owners are index funds, so the investor who sets its price is well spread out, and risk is measured by how the shares move with the market. Money costs Colgate 8.34% a year: shareholders require 8.76%, lenders 5.74% before tax, and debt is only 9.34% of the company's value. The existing business earns 34.56% on its capital, about four times that cost, but more than half of the $3,894 million Colgate spent buying other businesses since 2018 has been written off. Colgate could safely borrow more: we recommend debt of 20% of value, reached over about five years, which is worth a few percent of the share value. It returns about $3 billion a year to shareholders in dividends and buybacks, roughly all the cash it generates, and that amount is right. Valued on its future cash flows in Professor Damodaran's spreadsheet, a share is worth $61.83, against a market price of $98.71 on 2026-11-20. That value rests mostly on two assumptions about the distant future, that new investments earn 20% and that growth continues at 3% forever; with the spreadsheet's cautious defaults it is $50.90, with growth at 4.82% it is $79.74, and in no case we tested does it reach the price. Priced the way the market prices six similar companies, Colgate would sell for about $89, so it is in line with its peers, and it is the whole group's price that our cash flow numbers do not support. Our advice follows from the gap: borrow the extra money, but pay it out as dividends and not buybacks for as long as the price is above the value, because buying shares for more than they are worth takes from the shareholders who stay; that advice is a judgment and is only as good as the valuation.
 
 ## Where the numbers come from
 
@@ -24,7 +24,7 @@ To be written last, when all 36 steps are done.
 
 *Market data.* The interest rate on 10-year US government bonds on 2026-11-19, from the Federal Reserve Bank of St. Louis's public database (FRED). The extra return investors demand for owning stocks, the table that turns a credit rating into an interest rate, the risk measures for each industry and the risk premiums for each country, all from Professor Damodaran's published datasets. Month-end share prices for Colgate and the S&P 500 index (500 large US companies) from December 2020 to 2026-11-20. Files: `sources/market-data/`.
 
-*Two generated files.* `model-output.md` is produced by the course model from the ledger (`inputs.yaml`, the list of every input with its source). `module-1-cross-checks-output.md` is produced by a short script from the same ledger and source files; it holds the alternatives quoted in steps 1 to 12, so a reader can see how much each choice is worth. A second script produces `modules-2-4-cross-checks-output.md` the same way for steps 13 to 28: the finer debt schedule, the year-by-year cash flow table and the comparisons with other companies. None of the three is edited by hand.
+*Two generated files.* `model-output.md` is produced by the course model from the ledger (`inputs.yaml`, the list of every input with its source). `module-1-cross-checks-output.md` is produced by a short script from the same ledger and source files; it holds the alternatives quoted in steps 1 to 12, so a reader can see how much each choice is worth. A second script produces `modules-2-4-cross-checks-output.md` the same way for steps 13 to 28: the finer debt schedule, the year-by-year cash flow table and the comparisons with other companies. A third script produces `valuation-cross-checks-output.md` for steps 29 to 36: the history of market value and cash flow, a rebuild of the professor's valuation spreadsheet that shows its year-by-year path, and the comparison with similar companies. None of the four is edited by hand.
 
 *The professor's spreadsheets.* Three of Professor Damodaran's workbooks were filled in with the same inputs. Their results are in `professor-spreadsheet/results.md` and are used from step 13 on. A fourth workbook, on how sensitive industries are to interest rates, inflation and currencies, supplies the figures in `professor-spreadsheet/macro-sensitivity-output.md`, used in step 23.
 
@@ -342,7 +342,7 @@ We recommend 20%, not 30%. This is a judgment. At 30%, a 10% fall in operating i
 
 *The numbers and where they came from.* Shares worth $78.5 billion (step 13). The 2026 proxy statement and Capital IQ: no takeover defenses of the usual kinds, and the largest activist investor owns 0.05%. The price file: over five years to December 2025 Colgate's shares returned 4.0% and the S&P 500 index 96.2%. The 2025 annual report: a buyback program of up to $5 billion approved in March 2025; $1,210 million of shares bought in 2025; $3,033 million returned to shareholders in all.
 
-*What we decided, and what we didn't.* Colgate is under-borrowed. It is not under threat of being bought: it is too large, and a buyer could not load it with debt (step 18). An activist campaign is possible, given the weak share returns, but none is visible. Its existing business earns 34.56% (step 14), but it has few new places to put money: plant spending runs below depreciation, and its purchases were followed by write-downs equal to 57% of what was spent. So we recommend borrowing gradually and buying back shares: $9,226 million over five years, about $1,845 million a year, 61% of what Colgate already returns each year. We would leave the regular dividend alone. We rejected a single large borrowing, because nothing forces speed and a slow pace lets Colgate stop if rating agencies react badly. We rejected investing the money, because of the record on purchases. Doing nothing leaves between $2.26 and $3.86 a share with the tax authorities.
+*What we decided, and what we didn't.* Colgate is under-borrowed. It is not under threat of being bought: it is too large, and a buyer could not load it with debt (step 18). An activist campaign is possible, given the weak share returns, but none is visible. Its existing business earns 34.56% (step 14), but it has few new places to put money: plant spending runs below depreciation, and its purchases were followed by write-downs equal to 57% of what was spent. So we recommend borrowing gradually and paying the money out as special dividends, one-time payments that carry no promise of being repeated: $9,226 million over five years, about $1,845 million a year, 61% of what Colgate already returns each year. We chose special dividends over buying back shares because the valuation puts a share at $61.83 against a price of $98.71 (step 34), and buying shares for more than they are worth takes from the shareholders who stay. Buybacks become the better route only if the price falls to or below that value. This is a judgment that depends on the valuation being right. We would leave the regular dividend alone, because a regular dividend raised with borrowed money is hard to bring back down. We rejected a single large borrowing, because nothing forces speed and a slow pace lets Colgate stop if rating agencies react badly. We rejected investing the money, because of the record on purchases. Doing nothing leaves between $2.26 and $3.86 a share with the tax authorities.
 
 *How sure we are.* Moderate. The route is a recommendation, not a calculation. It is worth 2% to 4% of the share price: worth having, not urgent. A large purchase, a lasting fall in income, or a harsh response from S&P would each change it.
 
@@ -412,7 +412,7 @@ We recommend 20%, not 30%. This is a judgment. At 30%, a 10% fall in operating i
 
 *The numbers and where they came from.* FCFE comparison: step 26. Return on capital 34.56% against 8.34%: `model-output.md`, section 8. From the professor's dividend spreadsheet (`professor-spreadsheet/results.md`): Colgate's shares fell short of their required return in four of the five years from 2021 to 2025, by between 3.03 and 25.08 points. From the price file: 4.0% total return over five years against 96.2% for the S&P 500.
 
-*What we decided, and what we didn't.* Colgate returns about what it generates and its existing business earns far more than its cost, so it sits in the part of the grid that calls for no change. That placement is a judgment, because the two tests disagree. The business earns excellent returns; the shares have done poorly. Both are true: the high returns come from brands built long ago and already in the share price, while the last five years brought slow growth and write-downs. On trust: Colgate holds little cash, $1,395 million or 1.61% of its value, so the question hardly arises. If it did build cash, the record on purchases says shareholders should object. It should not scale back: the excess over FCFE is 4.1% over five years (step 26) and was not paid for with debt. Over eight years the business covered dividends 1.31 times before any borrowing. The buyback is the flexible part and should stay that way. The borrowing recommended in step 22 would lift cash returned above FCFE for about five years; that is a planned change in financing, not a payout the business must sustain.
+*What we decided, and what we didn't.* Colgate returns about what it generates and its existing business earns far more than its cost, so it sits in the part of the grid that calls for no change. That placement is a judgment, because the two tests disagree. The business earns excellent returns; the shares have done poorly. Both are true: the high returns come from brands built long ago and already in the share price, while the last five years brought slow growth and write-downs. On trust: Colgate holds little cash, $1,395 million or 1.61% of its value, so the question hardly arises. If it did build cash, the record on purchases says shareholders should object. It should not scale back: the excess over FCFE is 4.1% over five years (step 26) and was not paid for with debt. Over eight years the business covered dividends 1.31 times before any borrowing. The buyback is the flexible part and should stay that way. The borrowing recommended in step 22, paid out as special dividends, would lift cash returned above FCFE for about five years; that is a planned change in financing, not a payout the business must sustain.
 
 *How sure we are.* High that no change in dividend policy is needed. The poor share returns are a warning about growth and purchases, not about the dividend.
 
@@ -430,12 +430,275 @@ We recommend 20%, not 30%. This is a judgment. At 30%, a 10% fall in operating i
 
 *How sure we are.* Moderate for this step taken alone: the benchmarks are averages, two years apart, and no final list of similar companies exists yet. High for the conclusion of steps 24 to 28 together: Colgate pays a high, steady dividend, adds flexible buybacks, returns roughly what it generates, and needs no change in policy. The valuation itself is settled in steps 29 to 35.
 
+## Step 29: What does the stock market pay for Colgate, compared with what Colgate earns?
+
+*What we wanted to know.* The total price the market puts on Colgate's shares, how that compares with a year of profit and cash, and how both have moved.
+
+*Why it matters.* Steps 30 to 34 work out what the business is worth from its cash flows. This step sets the bar that value has to clear. It also settles whether we value the whole company or only the shareholders' part.
+
+*What we did.* Market value is the number of shares times the share price: 794.9 million × $98.71 = $78,466.6 million. We divided that by net income and by two measures of cash. Free cash flow to equity (FCFE) is the cash left for shareholders after reinvestment and debt payments. Free cash flow to the firm (FCFF) is the cash the business produces before any payment to lenders: operating income after tax, less what is reinvested. We also chose to value the whole firm and then subtract debt, rather than valuing the shareholders' cash directly. That choice is a judgment.
+
+*The numbers and where they came from.* The share count is from the cover of the quarterly report for September 2026 and the price is the 2026-11-20 close. Net income, FCFE and FCFF for 2021 to 2025 are from the twelve-year file of figures Colgate reported to the SEC and from the rows entered in the professor's dividend spreadsheet. Year-end market values use December prices from the price file. The table is in `valuation-cross-checks-output.md`, sections 1 and 2.
+
+*What we decided, and what we didn't.* The market pays 36.8 times 2025 net income of $2,132 million. That overstates it, because 2025 profit carries a write-down of $794 million after tax that took no cash. With it added back, profit is $2,926 million and the market pays 26.8 times. It pays 28.9 times FCFE of $2,712 million and 21.9 times FCFF of $3,579 million. Turned around, the shareholders' cash is 3.46% of the price, from a business growing about 3% a year. Together those fall short of the 8.76% return shareholders should require (step 13). That is a first warning, not a valuation.
+
+Over time: the market value was $72,674 million at the end of 2020 and is 8.0% higher now. Profit before the write-down grew about as much. But the path was uneven. At the end of 2025 the value was $63,314 million, and it has risen 23.9% since, while operating income slipped from $4,225 million for 2025 to $4,080 million for the latest twelve months. The price rose while earnings did not.
+
+We value the whole firm. The alternative, valuing shareholders' cash directly, suits a company whose debt is steady, and Colgate's has been: between 9.83% and 12.40% of its value at each year end since 2020. We chose the firm because we recommend a change in debt (step 19), which a firm valuation handles by changing one rate, and because the professor's valuation spreadsheet works that way.
+
+*How sure we are.* High. These are disclosed figures and arithmetic. Why the price rose in 2026 is not in our files, and we do not guess.
+
+## Step 30: How much cash does Colgate's business produce, and what rate turns future cash into today's value?
+
+*What we wanted to know.* The cash flow the valuation starts from, and the discount rate, which is the yearly return used to convert a dollar received in the future into its value today.
+
+*Why it matters.* Value is future cash discounted at that rate. Too high a starting cash flow, or too low a rate, and every later number is too high.
+
+*What we did.* FCFF = operating income × (1 − tax rate) − reinvestment. Reinvestment is spending on plant above the depreciation charge, plus any increase in working capital. For 2025: $4,225 million × (1 − 25%) = $3,168.8 million. Reinvestment was −$410 million: Colgate spent $66 million less on plant than it charged in depreciation, and working capital handed back $344 million. So FCFF = $3,168.8 million + $410 million = $3,578.8 million. We did the same for each year from 2021.
+
+*The numbers and where they came from.* The 2025 annual report's income and cash flow statements, and the model (`model-output.md`, section 8) for 2023 to 2025. For 2021 and 2022, the SEC data file. Five-year table: `valuation-cross-checks-output.md`, section 2. Cost of capital: `model-output.md`, section 1.
+
+*What we decided, and what we didn't.* Over 2021 to 2025 FCFF averaged $3,032 million a year and FCFE $2,568 million. Reinvestment over the five years added up to −$163 million: nothing, net. Counting the $1,102 million Colgate spent buying businesses, it reinvested $939 million, 6.26% of its after-tax operating income. Colgate turns nearly all its profit into cash.
+
+Three judgments sit in these figures. We add back the $919 million write-down, because no cash left and it will not recur every year. We keep restructuring and lawsuit charges in, because Colgate books some most years. And we treat shares given to employees, $155 million in 2025, as a real cost.
+
+The discount rate for FCFF is the cost of capital, 8.34% (step 13), because this cash belongs to lenders and shareholders together. For the years after the forecast we use 8.43%: the risk-free rate of 4.82% plus the 3.61% premium for an average mature company. The spreadsheet's own default would be 9.05%; we replaced it because it pairs a January premium with a November interest rate. If the beta is anywhere from 0.63 to 0.80, the cost of capital is 7.84% to 8.67% and the value per share moves by only $3.26 (step 34).
+
+*How sure we are.* High on the history. The treatment of charges is a judgment: taking restructuring out would raise yearly operating income by about $156 million.
+
+## Step 31: How fast will Colgate grow, and what must it spend to grow?
+
+*What we wanted to know.* The growth in sales and profit to build into the forecast, and the reinvestment that growth requires.
+
+*Why it matters.* Growth is not free. A forecast that grows without spending overstates value.
+
+*What we did.* We looked at three sources: history, analysts and management, and the company's own fundamentals. The fundamental test is: growth = reinvestment rate × return on invested capital. The reinvestment rate is the share of after-tax operating income put back into the business. For Colgate in 2025: −12.94% × 34.56% = −4.47%. Over 2021 to 2025, counting purchases of businesses: 6.26% × 34.56% = 2.16%. Because that test swings so much from year to year, we built the forecast the other way: forecast sales, then the operating margin (operating income as a share of sales), then the reinvestment needed, using a sales to capital ratio, which is the dollars of new sales each dollar of new investment supports.
+
+*The numbers and where they came from.* History from the SEC data file. Analysts' consensus, the average of their forecasts, from Capital IQ on 2026-11-20 (file: `sources/capital-iq/ciq-estimates.tsv`). The inputs entered in the professor's valuation spreadsheet are listed in `professor-spreadsheet/inputs.md`. The year-by-year path is in `valuation-cross-checks-output.md`, section 4. That section rebuilds the spreadsheet's valuation sheet from the formulas in the professor's original file; it reproduces all six results we read from the filled spreadsheet to the cent.
+
+*What we decided, and what we didn't.* History: sales grew 3.3% a year from 2016 to 2025, operating income before write-downs 0.7% a year, and net income fell 1.5% a year, or rose 2.0% with the 2025 write-down added back. Analysts expect sales to grow 3.57% a year to 2028 and 3.07% a year from 2027 to 2030. Colgate grew faster than its reinvestment explains because growth came from price: in 2025 prices rose 2.1% and volume fell 0.4%.
+
+Our forecast, each a judgment with its alternative:
+
+- Sales growth of 2.25% next year and 3.1% a year for years 2 to 5, from the analysts. One point more adds $3.61 a share; one point less takes off $3.42.
+- Operating margin of 20.5% next year, rising to 21.3% by year 5. Analysts say 21.2% rising to 22%. We take off about 0.7 points because analysts leave out restructuring charges and we keep them in. Those charges were $52 million, $85 million, $122 million and $327 million in the last four periods: $586 million in all, about 0.7% of sales. Using the analysts' margins instead would add $2.44 a share.
+- Sales to capital of 2.2, which is both Colgate's own ratio and its industry's. The spreadsheet's default of 1.79 would take off $0.65.
+- Tax at the 23.5% Colgate pays, rising to 25%.
+
+The result: sales rise from $21,285 million to $28,563 million in year 10. Operating income rises from $4,080 million to $6,084 million. Reinvestment runs from $307 million to $389 million a year, about 8.6% of after-tax income. FCFF rises from $3,106 million in year 1 to $4,173 million in year 10.
+
+The margin is the optimistic part. The latest twelve months' margin is 19.17%. If it stayed there, the value would be $7.10 a share lower.
+
+*How sure we are.* High on sales growth: history, analysts and management agree within a point. Moderate on the margin, and we have said which way it leans.
+
+## Step 32: What happens after the forecast ends, and why does it decide the answer?
+
+*What we wanted to know.* What Colgate's cash flows are worth beyond year 10. That lump is called the terminal value.
+
+*Why it matters.* It is 58.1% of the value of Colgate's business in our base case. The two assumptions inside it move the value per share more than everything in steps 30 and 31 together.
+
+*What we did.* Terminal value = cash flow in the first year after the forecast ÷ (cost of capital − growth forever). The cash flow has to be after the reinvestment that the growth needs: reinvestment rate = growth ÷ return on new investment. With growth of 3% and a return of 20%, Colgate must reinvest 3% ÷ 20% = 15% of its after-tax operating income. That income is $4,700 million in the first year after the forecast. Less 15%, $705 million, the cash flow is $3,995 million. Terminal value = $3,995 million ÷ (8.43% − 3%) = $73,570 million. Discounted to today it is $32,940 million.
+
+*The numbers and where they came from.* The professor's valuation spreadsheet, base case (`professor-spreadsheet/results.md`). The table of values under other assumptions is in `valuation-cross-checks-output.md`, section 5; apart from the cases read from the spreadsheet, those come from our rebuild of it. Industry return on capital, 34.42%, from Professor Damodaran's January 2026 table.
+
+*What we decided, and what we didn't.* Colgate is mature already: its sales grow more slowly than the 4.82% risk-free rate, which the course uses as the ceiling for growth forever. So the ten forecast years are not a growth spurt. They are ten more years of Colgate earning what it earns today on its brands. After that, we made two judgments.
+
+Growth forever: 3%. Sales grew 3.3% a year for nine years and analysts expect about 3%. The spreadsheet's default is the risk-free rate, 4.82%, which would have Colgate growing faster forever than it has in the past. We quote that case beside ours: $79.74 a share.
+
+Return on new investment: 20%. Today Colgate earns 34.56% (step 14) and its industry 34.42%. The course's default is that competition eventually pushes the return on new investment down to the cost of capital. We chose between the two. Colgate's brands have lasted generations, so the default seems too harsh. But new money has done badly: $2,211 million written off against $3,894 million spent buying businesses. So today's return seems too kind.
+
+How much these two choices matter:
+
+| | Growth 3% | Growth 4.82% |
+|---|---|---|
+| New investment earns only its cost, 8.43% | $51.84 | $53.82 |
+| New investment earns 20% | $61.83 | $79.74 |
+
+With every spreadsheet default, including a 9.05% cost of capital, the value is $50.90. All of these are below the $98.71 price. Even today's 34.56% return kept forever, with growth at the 4.82% ceiling, gives $87.70.
+
+*How sure we are.* Low on the exact figure. Nobody can check what a Colgate investment will earn twenty years from now. Fairly high that the answer is below the price, because that holds in every case we tried.
+
+## Step 33: How do we get from the value of the business to the value of one share?
+
+*What we wanted to know.* What is left for an ordinary shareholder after everyone with a prior claim is counted.
+
+*Why it matters.* The business is worth $56,717 million. Shareholders do not own all of it: lenders, part-owners of subsidiaries and employees with options come first.
+
+*What we did.* Start with the business, subtract what is owed, add what is owned outside it, and divide by the shares:
+
+| Step | $ millions |
+|---|---|
+| Value of the operating business | 56,717 |
+| − Debt, including leases | 8,282 |
+| − Minority interests | 352 |
+| + Cash | 1,612 |
+| + Stakes in other companies | 82 |
+| Value of equity | 49,777 |
+| − Employee options | 439 |
+| Value for ordinary shareholders | 49,338 |
+| ÷ Shares (millions) | 797.9 |
+| Value per share | $61.83 |
+
+Minority interests are the slices of Colgate's subsidiaries that belong to outside part-owners. Employee options are rights to buy shares later at a set price; here 12.619 million options at an average of $79.
+
+*The numbers and where they came from.* Debt of $7,716 million and cash of $1,612 million from the quarterly report for September 2026, with $566 million of leases carried over from the 2025 annual report. Minority interests of $352 million from the same quarterly report. Stakes in other companies, $82 million, from note 2 of the 2025 annual report. Options and share units from Item 12 of the annual report; the option value is computed inside the professor's spreadsheet. Files: `sources/filings/cl-10q-2026-q3.txt`, `sources/filings/cl-10k-fy2025.txt`, `professor-spreadsheet/results.md`.
+
+*What we decided, and what we didn't.* $61.83 a share. Four judgments, each small:
+
+- Cash at full value. Some companies' cash deserves a discount because they waste it. Colgate pays its cash out each year. A 10% discount would take off only $0.20.
+- Options valued as options and subtracted. The common shortcut, dividing by a larger share count of 811.1 million, gives $61.37.
+- Debt at the amount in the accounts. At its lower market value of $7,554 million the value would be $0.91 higher.
+- The pension shortfall of $1,283 million is not subtracted, to match how we counted debt in step 12. Subtracting it after tax would take off $1.21.
+
+One item we think is understated. Minority interests are in at their accounting value of $352 million, as the spreadsheet takes them. But those part-owners earned $129 million in 2025. A claim earning that much is worth far more than $352 million. Our rough estimate is $2,117 million, which would lower the value by $2.21 to $59.62 a share. It is an estimate: the filings we hold do not name these subsidiaries. We keep $61.83 as the base case and show $59.62 beside it.
+
+*How sure we are.* High on the amounts, all read from filings. The bridge leans a little high: taking the market value of debt, the pension shortfall and our minority estimate together would give $59.33.
+
+## Step 34: What is Colgate worth as it is run, and what would better decisions add?
+
+*What we wanted to know.* The value of Colgate under today's management, the value if it made the changes we recommend, and how likely those changes are.
+
+*Why it matters.* The difference between the two values is what control of the company is worth. It also tells us whether the market price could be explained by hopes of a shake-up.
+
+*What we did.* We took the base case as the value under today's management. Then we revalued with the changes from earlier steps. The course's formula: expected value of control = chance of change × (value if changed − value as run).
+
+*The numbers and where they came from.* The professor's valuation spreadsheet (`professor-spreadsheet/results.md`): $61.83 in the base case; $50.90 on all its defaults; $79.74 with growth forever at 4.82%; $60.56 to $63.82 across the range of beta. The course model's separate check, on three years of analysts' forecasts: $60.85 (`model-output.md`, section 6). The value of more debt on each measure, and the arithmetic on buybacks: `valuation-cross-checks-output.md`, sections 5 and 6.
+
+*What we decided, and what we didn't.* As run today, a share is worth $61.83. The price is $98.71, which is 159.64% of that, or $36.88 more. On the most cautious assumptions the value is $50.90 and on the most generous we would defend, $79.74. The shares look overpriced in every case. For the price to be right, holding the rest of our base case, the operating margin would have to be 33.3%, or growth forever 5.78%. Analysts disagree with us: their average target price is $101.70. The course model's check, built differently, gives $60.85. The closeness shows neither tool has a gross error; both rest on the same two long-run assumptions.
+
+What we would change:
+
+- Borrow more, to 20% of value (step 19). In the valuation this is worth $0.47 to $1.57 a share, depending on whether the lower cost of capital lasts beyond five years. Other measures, taken on the market price and not on our value, are higher: $2.26 in the model and, for the full move to 30%, $7.30 in the professor's debt spreadsheet, whose $106.01 is the market price plus that gain.
+- Pay the cash out as dividends, not buybacks. This is the reason behind the route chosen in step 22. A buyback at $98.71 of a share worth $61.83 hands the seller more than the share is worth, and the shareholders who stay pay the difference. On the $9,226 million of new borrowing that would be $3,447 million, or $4.91 for each remaining share, more than the $2.26 the borrowing gains. A dividend pays every shareholder the same and moves nothing between them. Buybacks become the better route only if the price falls to or below the value. This is a judgment, and it depends on our valuation being right.
+- Stop buying businesses that do not clearly earn their cost.
+
+With these changes a share is worth about $62 to $63.
+
+How likely: low. No one controls Colgate; its biggest owners are index funds; the largest activist holds 0.05%. And managers' pay points the other way: 80% of the yearly bonus rests on earnings per share and sales growth, and buybacks lift earnings per share while dividends do not. A small gain times a low chance is cents a share. So hopes of a shake-up do not explain the price.
+
+*How sure we are.* Moderate on $61.83 as a point, for the reasons in step 32. High that better decisions add little. The dividend-over-buyback advice is only as good as the valuation.
+
+## Step 35: What would Colgate sell for if it were priced like similar companies?
+
+*What we wanted to know.* The price that similar companies' prices imply for Colgate. This is pricing, not valuing: it asks what others are paying, not what the cash flows are worth.
+
+*Why it matters.* It is a second opinion from the market. If value and pricing disagree, an investor needs to know which one they are relying on.
+
+*What we did.* We used multiples. A multiple is a price divided by something the business produces. Our main one is enterprise value ÷ EBITDA. Enterprise value is the market value of the shares plus debt, less cash. EBITDA is operating income before depreciation. We took the median, the middle value, of the multiple across similar companies and applied it to Colgate: 15.35 × Colgate's EBITDA of $5,041 million, less net debt and minority interests of $6,456 million, divided by 794.9 million shares, gives $89.23.
+
+*The numbers and where they came from.* The ten companies on Capital IQ's standard comparison page for Colgate, at 2026-11-20 prices (file: `sources/capital-iq/quick-comps.tsv`). This is Capital IQ's list, not one built for this project. Medians, implied prices and the regression are computed by a script; results are in `valuation-cross-checks-output.md`, section 7.
+
+*What we decided, and what we didn't.* Of the ten, we judged six to be like Colgate: Procter & Gamble, Kimberly-Clark, Church & Dwight, Clorox, Reckitt Benckiser and Henkel, all sellers of household and personal care staples. Two beauty companies and two food companies fit less well; we show results with and without them.
+
+Colgate trades at 16.85 times EBITDA. The six trade at a median of 15.35 and all ten at 13.30. So Colgate is priced 10% above the six. Its higher profit margin explains most of that: 20.66% of sales against a median of 18.0%. A regression across the companies, relating price per dollar of sales to margin, puts Colgate 3% to 15% above where its margin alone would place it. With so few companies that is within the noise.
+
+Which multiple: enterprise value to EBITDA. Price to book value is useless, because buybacks have cut Colgate's book value to $0.07 a share. Price to earnings is distorted by the write-down. We checked two others: enterprise value to operating income implies $93.75, and price to next year's expected earnings implies $72.67.
+
+Our pricing is $89.23, in a range of about $73 to $94. The market price, $98.71, is 10.6% above it. On pricing, Colgate is fairly priced to slightly dear.
+
+Pricing and value disagree: $89.23 against $61.83. Both can be right. The market prices Colgate much as it prices its peers. Our valuation says those prices are more than the cash flows support. The likeliest reading is that the whole group of branded staples is priced richly, not that Colgate alone is. We have not valued the peers, so that is a reading, not a finding.
+
+*How sure we are.* Low to moderate on $89.23. The list is not ours, one company's forecasts were unusable, and six to ten companies is a small sample. Moderate on the conclusion that Colgate is priced close to its peers.
+
+## Step 36: What is the story of Colgate, in one piece?
+
+*What we wanted to know.* A single account of the company that every number in steps 1 to 35 fits.
+
+*Why it matters.* A valuation is a story turned into numbers. If the story does not hold together, the numbers are decoration.
+
+*What we did.* We checked Colgate against the three questions the course is built on. Does it invest only where the return beats the cost? Does it use the mix of debt and shares that makes its money cheapest? Does it hand back cash it cannot invest well? Then we set the answers beside the value and the price.
+
+*The numbers and where they came from.* All from earlier steps: return and cost of capital (steps 13 and 14), debt (steps 18 and 19), cash returned (step 26), value (steps 32 to 34) and pricing (step 35).
+
+*What we decided, and what we didn't.* Investing: Colgate's existing business earns 34.56% on capital that costs 8.34%, about four times as much. Its purchases of other businesses have not: more than half of what it spent was written off. Financing: it has 9.34% debt where 20% would be safe and cheaper. Cash: it returns about what it generates, roughly $3 billion a year, which is right. The form should change to dividends while the price is above value.
+
+The story: Colgate owns a few very strong brands in things people buy every week. It grows about 3% a year, mostly by raising prices, earns a great deal on little capital, and gives almost all its cash to shareholders because it has nowhere better to put it. It is run cautiously, with little debt and no owner pushing for more. It has one bad habit, buying businesses, and one missed opportunity, debt.
+
+A good business is not a good investment at every price. On this story a share is worth $61.83, between $50.90 and $79.74. Priced like its peers it would sell for about $89. It sells for $98.71. The price is right only if Colgate's advantage never fades and its growth outruns the economy.
+
+Whose interests have been served? Shareholders, on the cash returned. Lenders, more than they needed. Managers, on purchases that added size and on buybacks that lift earnings per share, which their pay rewards. That last conflict is the sharpest, and the valuation makes it sharper.
+
+*How sure we are.* Sure of the description of the business, which rests on audited reports. Sure the shares are worth less than the price, because every case we ran says so. Not sure of $61.83 as a single figure: it rests on what new investments earn and how fast the company grows in the distant future, and nobody can check either.
+
 ## Corrections made along the way
 
 None yet. Three points were raised for review during steps 1 to 12 and left unchanged: how the United States' own country risk premium is treated (step 7); a rating label in the ledger that implies a Moody's rating we have not sourced (step 12); and a ledger note that gives the lawsuit charge as $65 million where the charge inside operating profit is $99 million (step 1). None changes a number used above.
 
 No ledger value was changed during steps 13 to 28. One input was added on 2026-11-21: the cost of bankruptcy, 15% of the company's value, a judgment needed for step 21. Two further points were raised for review and left unchanged: the professor's debt spreadsheet and the course model agree on a best debt level of 30% but grade it differently (A− and BBB), for the reason given in step 18; and the dividend spreadsheet, read alone, overstates what shareholders were paid, which step 26 corrects for cash received from employee share options.
 
+No ledger value was changed during steps 29 to 36. Rows were added on 2026-11-21 for the valuation inputs and results, the cash flow and growth history, the comparison companies and the arithmetic quoted in those steps. One recommendation depends on the valuation and would reverse if it changed: the extra borrowing is paid out as dividends, not buybacks, while the share price is above our estimate of value (steps 22 and 34). Three points were raised for review and left unchanged: minority interests are valued at their accounting figure, which probably overstates value by about $2 a share (step 33); the comparison companies are Capital IQ's standard list, not one built for Colgate (step 35); and the professor's debt spreadsheet's $106.01 is the market price plus the gain from borrowing, not an estimate of value (step 34).
+
 ## Glossary
 
-To be completed with the summary. Terms defined so far, in the step where each first appears: activist (2), beta (4), book value (4), bottom-up beta (10), correlation (10), corporate governance (2), cost of capital (6), cost of equity (5), country risk premium (7), default spread (5), depreciation (1), equity risk premium (6), free cash flow to equity (1), gross profit (9), implied premium (6), independent director (2), index fund (2), interest coverage (12), Jensen's alpha (8), levered and unlevered beta (9), marginal investor (4), operating income (1), organic sales growth (3), poison pill (2), R-squared (8), regression (4), risk-free rate (5), spread (12), standard error (6), synthetic rating (12), total beta (11), write-down (1). Added in steps 13 to 28: adjusted present value (21), buyback (24), commercial paper (17), dividend (24), dividend yield (24), duration (23), EBITDA (19), free cash flow (14), hedging (16), invested capital (14), investment grade (18), optimal debt ratio (18), payout ratio (24), return on equity (14), return on invested capital (14), sunk cost (15), working capital (14).
+- **Activist.** An investor who buys shares in order to press a company's managers to change what they do.
+- **Adjusted present value.** A way of valuing the effect of debt: start with the company's value with no debt, add the tax saved by borrowing, and subtract the expected cost of going bankrupt.
+- **Beta.** A measure of how much a share's return moves when the whole market moves. A beta of 1 moves with the market; below 1 moves less.
+- **Book value.** The value of something as recorded in a company's accounts, which can be very different from what it would sell for.
+- **Bottom-up beta.** A beta built from the average betas of the industries a company operates in, adjusted for the company's own debt, instead of from its own share-price history.
+- **Buyback.** A company buying its own shares from shareholders who choose to sell. It returns cash and reduces the number of shares.
+- **Commercial paper.** Very short-term borrowing by large companies, usually repaid within weeks or months.
+- **Consensus.** The average of the forecasts published by the analysts who follow a company.
+- **Corporate governance.** The arrangements that decide who directs a company and who can hold its managers to account.
+- **Correlation.** A measure, from −1 to 1, of how closely two things move together.
+- **Cost of capital.** The yearly return a company must earn on all the money invested in it, blending what shareholders require and what lenders charge after tax.
+- **Cost of equity.** The yearly return shareholders require for holding a company's shares.
+- **Country risk premium.** The extra return investors demand for doing business in a riskier country.
+- **Cross holding.** A stake one company owns in another.
+- **Default spread.** The extra interest a borrower pays over a safe government bond because it might not repay.
+- **Depreciation.** The yearly accounting charge for the wearing out of buildings and equipment bought in earlier years.
+- **Discount rate.** The yearly return used to convert cash received in the future into its value today.
+- **Discounted cash flow valuation.** Valuing a business as the sum of the cash it is expected to produce in the future, each year's cash converted into today's value.
+- **Dividend.** Cash a company pays to every shareholder, the same amount for each share.
+- **Dividend yield.** A year's dividend per share divided by the share price.
+- **Duration.** A measure of how sensitive the value of a debt or an asset is to a change in interest rates; roughly, the average time until its cash arrives.
+- **EBITDA.** Earnings before interest, taxes, depreciation and amortization: operating income with the depreciation charge added back.
+- **Employee option.** A right given to an employee to buy the company's shares later at a price fixed today.
+- **Enterprise value.** The market value of a company's shares plus its debt, less its cash: the price of the whole operating business.
+- **Equity risk premium.** The extra yearly return investors demand for owning shares instead of a risk-free bond.
+- **Free cash flow.** Cash a business produces after paying for the investment it needs to keep going and grow.
+- **Free cash flow to equity (FCFE).** The cash left for shareholders after reinvestment and after payments to and from lenders.
+- **Free cash flow to the firm (FCFF).** The cash a business produces after tax and reinvestment but before any payment to lenders; it belongs to lenders and shareholders together.
+- **Gross profit.** Sales less the direct cost of making what was sold.
+- **Growth in perpetuity.** The rate at which a company's cash flows are assumed to grow forever once the detailed forecast ends.
+- **Hedging.** Taking a financial position that gains when the business loses, for example to offset currency swings.
+- **Implied premium.** The equity risk premium worked out from today's share prices and expected cash flows, instead of from history.
+- **Independent director.** A board member with no job at the company and no other tie to its managers.
+- **Index fund.** A fund that holds every share in a market index in proportion and does not pick stocks.
+- **Interest coverage.** Operating income divided by interest expense: how many times over a company can pay its interest.
+- **Intrinsic value.** What a business is worth judged by the cash it will produce, as opposed to what the market currently pays for it.
+- **Invested capital.** The money put into a business by lenders and shareholders that is tied up in its operations.
+- **Investment grade.** A credit rating of BBB or better, the level below which many lenders will not lend.
+- **Jensen's alpha.** The return a share earned above or below what its risk said it should earn.
+- **Levered and unlevered beta.** An unlevered beta measures the risk of the business alone; a levered beta adds the extra risk that debt puts on shareholders.
+- **Marginal investor.** The investor most likely to be buying or selling the shares at any moment, and so the one whose view of risk sets the price.
+- **Median.** The middle value of a list when it is sorted; half the list is above it and half below.
+- **Minority interests.** The part of a company's subsidiaries that belongs to outside part-owners. Also called noncontrolling interests.
+- **Multiple.** A price divided by something the business produces, such as earnings or sales, used to compare companies of different sizes.
+- **Net debt.** Debt less cash.
+- **Operating income.** Profit from the business before interest and taxes.
+- **Operating margin.** Operating income as a share of sales.
+- **Optimal debt ratio.** The share of debt in a company's financing at which its cost of capital is lowest.
+- **Organic sales growth.** Sales growth excluding the effects of buying or selling businesses and of currency movements.
+- **Payout ratio.** Dividends as a share of net income.
+- **Poison pill.** A defence that makes a company very costly to take over without its board's consent.
+- **Present value.** What a future amount of cash is worth today, after discounting.
+- **Pricing.** Estimating what a company should sell for by looking at what investors pay for similar companies.
+- **R-squared.** The share of the movement in one thing that is explained by movement in another, from 0 to 1.
+- **Regression.** A statistical method that fits a line through data to measure how one thing moves with another.
+- **Reinvestment rate.** The share of after-tax operating income a company puts back into the business.
+- **Restricted stock unit.** A promise to give an employee shares in the future if they stay or meet targets.
+- **Return on equity.** Net income divided by the book value of shareholders' equity.
+- **Return on invested capital.** After-tax operating income divided by invested capital: what the business earns on the money tied up in it.
+- **Risk-free rate.** The return on an investment with no risk of default, here a long-term US government bond after removing a small allowance for default.
+- **Sales to capital ratio.** The dollars of sales a company produces for each dollar of invested capital; used to work out how much investment a given rise in sales needs.
+- **Special dividend.** A one-time dividend, paid without any promise that it will be repeated.
+- **Spread.** The gap between two interest rates, usually a borrower's rate and a government bond's.
+- **Standard error.** A measure of how uncertain an estimate is; the true figure usually lies within two standard errors of the estimate.
+- **Sunk cost.** Money already spent that cannot be recovered and so should not affect a new decision.
+- **Synthetic rating.** A credit rating estimated from a company's interest coverage, used when there is no agency rating or as a check on one.
+- **Terminal value.** The value, at the end of the detailed forecast, of all the cash flows that come after it.
+- **Total beta.** A beta scaled up for an owner whose wealth is not spread across many investments.
+- **Trailing twelve months.** The most recent twelve months of results, built by adding the latest quarters to the last full year.
+- **Value of control.** The difference between what a company would be worth run as well as possible and what it is worth as run today.
+- **Working capital.** Money tied up in day-to-day operations: stock and amounts customers owe, less amounts owed to suppliers.
+- **Write-down.** An accounting charge that admits an asset, often a business bought earlier, is worth less than was paid for it. No cash leaves when it is booked.

@@ -46,7 +46,7 @@ last_updated: 2026-11-21
   No. The excess is small and explained: $637M over five years after option proceeds, 4.1% of what was returned (`facts.fcfe-by-year-2018-2025`). It has not been funded by rising debt or a shrinking cash balance (lesson 26). Scaling back would build cash that the company has no good use for.
   Two refinements.
     - Keep the split. The regular dividend, about $1.8 billion a year, is covered 1.3 times by FCFE before debt flows over eight years. The buyback, between $1.1 billion and $1.7 billion a year, is the part that should flex, and it has.
-    - Lessons 19 and 22 recommend raising debt from 9.34% to 20% and using the proceeds for buybacks. That would lift cash returned well above FCFE for about five years. It is consistent with this lesson, because it is a decision to change how the company is financed, with a stated end, and not a payout the business is expected to sustain from operations.
+    - Lessons 19 and 22 recommend raising debt from 9.34% to 20% and paying the proceeds out as special dividends, because the valuation puts the share price above its value and a buyback at that price would favour the sellers. That would lift cash returned well above FCFE for about five years. It is consistent with this lesson, because it is a decision to change how the company is financed, with a stated end, and not a payout the business is expected to sustain from operations.
 
 ## Notes
 
