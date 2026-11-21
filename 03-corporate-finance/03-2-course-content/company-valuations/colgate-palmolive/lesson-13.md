@@ -31,7 +31,7 @@ last_updated: 2026-11-21
   9.34%. Interest-bearing debt at fair value $7,518.0M plus operating leases $566.0M is $8,084.0M; market value of equity is $78,466.6M (model-output.md §1). Debt to equity is 0.1030. Both debt figures are disclosed in the 10-K; nothing is estimated. Confidence: high.
 
 - **What is the levered beta for the firm?**
-  0.7321: the bottom-up unlevered beta of 0.6796 × (1 + (1 − 0.25) × 0.1030) (model-output.md §1). Debt adds 0.0525, or 7.2% of the levered beta (`facts.segment-hurdle-rates`). The uncertainty is in the unlevered beta (lesson 10: a range of 0.63 to 0.80 for the levered figure), not in the levering.
+  0.7321: the bottom-up unlevered beta of 0.6796 × (1 + (1 − 0.25) × 0.1030) (model-output.md §1). Debt adds 0.0525, or 7.2% of the levered beta (`facts.segment-hurdle-rates`). The uncertainty is in the unlevered beta, not in the levering. There are three readings: Colgate's own regression at 0.315 (standard error 0.158), the median of its six large peers at about 0.41, and the industry average at 0.73 levered. The base case keeps 0.73 as the course's method and the most precise estimate, but the peer evidence says it is probably too high, so the range for the levered figure is 0.41 to 0.80 and confidence in the beta is low (lesson 10).
 
 - **If you can allocate debt across different divisions/businesses, what is the debt ratio for each business that the firm is in?**
   The filings do not allocate debt: the debt note describes the company's notes as a whole, and the segment note gives no debt or interest by segment. Two allocations, both judgment (`facts.weights-and-divisions`):
@@ -63,4 +63,4 @@ last_updated: 2026-11-21
 
 The cost of capital stays at 8.34%; this lesson adds no new input. What it adds is the contrast between market weights (9.34% debt) and book weights (99.37%), and two divisional hurdle rates, 8.67% and 7.24%. The book-weight contrast matters again in lesson 14, where return on equity turns out to be unusable for the same reason, and in lesson 17, where Colgate looks heavily borrowed on its balance sheet and lightly borrowed in fact.
 
-Confidence: high on the weights, which are disclosed market values. Moderate on the divisional rates, which rest on the judgment that pet food carries the risk of food processing.
+Confidence: high on the weights, which are disclosed market values. Moderate on the divisional rates, which rest on the judgment that pet food carries the risk of food processing. Low on the beta inside the 8.34%: across lesson 10's range of 0.41 to 0.80 the cost of capital runs from 6.77% to 8.67% (`facts.peer-betas-capital-iq`, `facts.cost-of-capital-alternatives`).

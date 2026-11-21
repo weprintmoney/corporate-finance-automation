@@ -78,6 +78,6 @@ The finding to carry forward. The value of Colgate rests on two assumptions abou
 
 All four are below the $98.71 price. Changing every near-term input in lesson 31 within its plausible range moves value by a few dollars; these two assumptions move it by about $28 ($79.74 less $51.84). And no pair we tried reaches the price: even today's 34.56% return kept forever, with growth at the 4.82% ceiling, gives $87.70 (`facts.ginzu-sensitivities`). Holding the rest of the base case, growth forever would have to be 5.78%, above the riskfree rate, which the course treats as impossible (`facts.price-implied-assumptions`).
 
-Confidence: low on the point estimate, and we say so. Nobody can observe what a new Colgate investment will earn in 2040. Moderate to high on the conclusion that the shares are worth less than $98.71, because it holds in every cell of the table.
+Confidence: low on the point estimate, and we say so. Nobody can observe what a new Colgate investment will earn in 2040. Moderate on the conclusion that the shares are worth less than $98.71. It holds in every cell of the table, but every cell uses the mature-company cost of capital of 8.43%. With the large-peer beta of 0.41 and its cost of capital of 6.77% held forever, a share is worth about $91.88 (`facts.ginzu-peer-beta-cases`). The conclusion rests on the cost of capital moving toward the mature-company rate over time, which is the workbook's default.
 
 The grid figures other than the four cases read from the workbook come from the replication described in lesson 31.

@@ -45,13 +45,13 @@ last_updated: 2026-11-21
 - **If your firm has returned more cash than it can over time, should it scale back cash return?**
   No. The excess is small and explained: $637M over five years after option proceeds, 4.1% of what was returned (`facts.fcfe-by-year-2018-2025`). It has not been funded by rising debt or a shrinking cash balance (lesson 26). Scaling back would build cash that the company has no good use for.
   Two refinements.
-    - Keep the split. The regular dividend, about $1.8 billion a year, is covered 1.3 times by FCFE before debt flows over eight years. The buyback, between $1.1 billion and $1.7 billion a year, is the part that should flex, and it has.
+    - Keep the split between a fixed part and a flexible part. The regular dividend, about $1.8 billion a year, is covered 1.3 times by FCFE before debt flows over eight years, and should stay on its slow rise. The rest, between $1.1 billion and $1.7 billion a year, is the part that should flex, and it has. Colgate has paid it out through buybacks. While the share price is above the estimated value it should go out as special dividends; buybacks become the better route only if the price falls to or below value (lesson 22).
     - Lessons 19 and 22 recommend raising debt from 9.34% to 20% and paying the proceeds out as special dividends, because the valuation puts the share price above its value and a buyback at that price would favour the sellers. That would lift cash returned well above FCFE for about five years. It is consistent with this lesson, because it is a decision to change how the company is financed, with a stated end, and not a payout the business is expected to sustain from operations.
 
 ## Notes
 
 Colgate sits in the cell of the matrix that calls for no change: it returns what it generates and its existing business earns far more than its cost of capital. Confidence is high on the first half (lesson 26) and qualified on the second: returns on capital are excellent, shareholder returns have been poor, and the two are measuring different things.
 
-The practical conclusion for the report: do not recommend a change in dividend policy. The recommendations that matter are elsewhere: more debt (lesson 22), and discipline on acquisitions, which is where value has been lost.
+The practical conclusion for the report: do not recommend a change in the amount returned or in the regular dividend. The route for the cash beyond the regular dividend depends on the share price against its estimated value (lesson 22). The recommendations that matter are elsewhere: more debt (lesson 22), and discipline on acquisitions, which is where value has been lost.
 
 One open item carried forward: the workbook's required-return figures use year-end to year-end stock returns and the bottom-up beta. They were read from the sheet, not recomputed here.

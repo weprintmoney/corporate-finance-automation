@@ -1,6 +1,6 @@
 ---
 title: "Colgate-Palmolive (CL) — Source Manifest"
-status: draft
+status: active
 owner: weprintmoney
 created: 2026-11-21
 last_updated: 2026-11-21
@@ -22,9 +22,9 @@ Filings are the source of record. Capital IQ is a cross-check, and the source on
 | Risk and hurdle rate: beta by business | FY2025 10-K segment note; Damodaran industry betas (household products, pet food) | In folder |
 | Risk and hurdle rate: default risk and cost of debt | Capital IQ credit ratings and debt tranches; 10-K debt note; Damodaran ratings table | In folder |
 | Past and future investments | FY2025 and FY2024 10-Ks; twelve-year XBRL series | In folder |
-| Optimal capital structure | Professor's `capstru.xlsx`; 10-K; sector debt ratios (Damodaran) | `capstru.xlsx` still to download; `apv.xls` (a different method) is in folder |
+| Optimal capital structure | Professor's `capstru.xlsx`; 10-K; sector debt ratios (Damodaran) | In folder (`../professor-spreadsheet/originals/`) |
 | Debt design | Capital IQ bond list (currency, maturity, fixed or floating); professor's `macrodur.xlsx` | In folder |
-| Dividend analysis | Twelve-year cash flow series (dividends, buybacks, capex, debt issued and repaid); professor's `dividends.xlsx` | Series in folder; `dividends.xlsx` still to download (`divfund.xls` is the industry table, not the worksheet) |
+| Dividend analysis | Twelve-year cash flow series (dividends, buybacks, capex, debt issued and repaid); professor's `dividends.xlsx` | In folder (`../professor-spreadsheet/originals/`) |
 | Valuation | Professor's `fcffsimpleginzu.xlsx`; latest 10-Q for trailing twelve months; analyst estimates; peer multiples | In folder |
 
 ## `filings/` — the company's own statements (SEC EDGAR, CIK 0000021665)
@@ -56,6 +56,9 @@ Each file is one Capital IQ page, tables as tab-separated rows.
 | `ciq-estimates.tsv` | Consensus revenue, EBITDA, EPS to 2030; target price; guidance |
 | `quick-comps.tsv`, `competitors.tsv` | Ten peers (KMB, PG, CLX, EL, CHD, Reckitt, Henkel, GIS, COTY, SJM) |
 | `pension-opeb.tsv` | Pension and retiree-benefit obligations |
+| `peer-betas.tsv` | Five-year beta and dividend yield for the ten companies on Capital IQ's comparison list and Colgate |
+| `peer-cash-returned.tsv` | Net income, dividends, buybacks and share issuance for Colgate and six household peers, last five fiscal years |
+| `transcript-notes.md` | Paraphrased notes on growth statements from three 2026 transcripts |
 
 Capital IQ standardizes some lines. Its FY2025 EBIT of $4,238M leaves out restructuring and impairment charges that GAAP operating income of $3,306M includes.
 
@@ -71,8 +74,6 @@ Capital IQ standardizes some lines. Its FY2025 EBIT of $4,238M leaves out restru
 
 | What | Where | Why not yet |
 |---|---|---|
-| `capstru.xlsx` and `dividends.xlsx` (current editions) | pages.stern.nyu.edu/~adamodar/pc/ | The checklist names these two; the downloads on 2026-11-21 were `apv.xls` and `divfund.xls` instead |
 | Moody's rating | Moody's site or a CL press release | The 10-K does not state its ratings |
-| Peer fundamentals on the analysis date | `fetch-peer-facts.py` | Run after the peer set is agreed |
+| Peer fundamentals from each peer's own filings | `fetch-peer-facts.py` | Peers are taken from Capital IQ's comparison list; the ledger's `peers` block is not filled |
 | Revenue by country | 10-K gives United States and emerging markets only | The country risk premium will rest on regional segments |
-| Q3 2026 earnings-call transcript | Capital IQ Transcripts | Optional: management's story on growth and restructuring |

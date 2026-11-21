@@ -1,0 +1,38 @@
+Capital IQ Financials > Cash Flow for Colgate and six household peers, last five fiscal years plus LTM (col6), read 2026-11-21. Amounts in millions of the currency shown; each company's own fiscal years.
+## peer-cash-returned
+company	item	col1	col2	col3	col4	col5	col6
+Kimberly‑Clark Corporation (NasdaqGS:KMB)	currency	USD	USD	USD	USD	USD	USD
+Kimberly‑Clark Corporation (NasdaqGS:KMB)	net_income	1,814.0	1,934.0	1,764.0	2,545.0	2,021.0	3,302.0
+Kimberly‑Clark Corporation (NasdaqGS:KMB)	dividends	(1,516.0)	(1,558.0)	(1,588.0)	(1,628.0)	(1,660.0)	(1,686.0)
+Kimberly‑Clark Corporation (NasdaqGS:KMB)	buybacks	(400.0)	(100.0)	(225.0)	(1,000.0)	(141.0)	(1.0)
+Kimberly‑Clark Corporation (NasdaqGS:KMB)	issuance	65.0	94.0	97.0	136.0	40.0	0.0
+The Procter & Gamble Company (NYSE:PG)	currency	USD	USD	USD	USD	USD	USD
+The Procter & Gamble Company (NYSE:PG)	net_income	14,742.0	14,653.0	14,879.0	15,974.0	16,046.0	16,027.0
+The Procter & Gamble Company (NYSE:PG)	dividends	(8,770.0)	(8,999.0)	(9,312.0)	(9,872.0)	(10,232.0)	(10,286.0)
+The Procter & Gamble Company (NYSE:PG)	buybacks	(10,003.0)	(7,353.0)	(5,006.0)	(6,500.0)	(5,028.0)	(5,028.0)
+The Procter & Gamble Company (NYSE:PG)	issuance	2,005.0	1,269.0	1,905.0	1,707.0	907.0	916.0
+The Clorox Company (NYSE:CLX)	currency	USD	USD	USD	USD	USD	USD
+The Clorox Company (NYSE:CLX)	net_income	462.0	149.0	280.0	810.0	587.0	677.0
+The Clorox Company (NYSE:CLX)	dividends	(571.0)	(583.0)	(595.0)	(602.0)	(602.0)	(602.0)
+The Clorox Company (NYSE:CLX)	buybacks	(25.0)	-	-	(332.0)	(256.0)	(134.0)
+The Clorox Company (NYSE:CLX)	issuance	5.0	33.0	1.0	26.0	-	-
+Church & Dwight Co., Inc. (NYSE:CHD)	currency	USD	USD	USD	USD	USD	USD
+Church & Dwight Co., Inc. (NYSE:CHD)	net_income	827.5	413.9	755.6	585.3	736.8	774.8
+Church & Dwight Co., Inc. (NYSE:CHD)	dividends	(247.5)	(255.0)	(266.5)	(277.0)	(287.2)	(290.4)
+Church & Dwight Co., Inc. (NYSE:CHD)	buybacks	(500.0)	-	(300.1)	-	(900.0)	(337.1)
+Church & Dwight Co., Inc. (NYSE:CHD)	issuance	98.7	26.2	111.7	142.9	35.6	49.4
+Reckitt Benckiser Group plc (LSE:RKT)	currency	GBP	GBP	GBP	GBP	GBP	GBP
+Reckitt Benckiser Group plc (LSE:RKT)	net_income	(32.0)	2,330.0	1,643.0	1,426.0	3,182.0	2,876.0
+Reckitt Benckiser Group plc (LSE:RKT)	dividends	(1,246.0)	(1,249.0)	(1,339.0)	(1,381.0)	(1,403.0)	(2,973.0)
+Reckitt Benckiser Group plc (LSE:RKT)	buybacks	(5.0)	-	(209.0)	(1,331.0)	(882.0)	(1,012.0)
+Reckitt Benckiser Group plc (LSE:RKT)	issuance	80.0	54.0	48.0	3.0	43.0	34.0
+Henkel AG & Co. KGaA (XTRA:HEN3)	currency	EUR	EUR	EUR	EUR	EUR	EUR
+Henkel AG & Co. KGaA (XTRA:HEN3)	net_income	1,634.0	1,259.0	1,318.0	2,007.0	2,035.0	1,913.0
+Henkel AG & Co. KGaA (XTRA:HEN3)	dividends	(798.0)	(795.0)	(771.0)	(771.0)	(850.0)	(833.0)
+Henkel AG & Co. KGaA (XTRA:HEN3)	buybacks	-	(803.0)	(195.0)	-	(856.0)	(707.0)
+Henkel AG & Co. KGaA (XTRA:HEN3)	issuance
+Colgate‑Palmolive Company (NYSE:CL)	currency	USD	USD	USD	USD	USD	USD
+Colgate‑Palmolive Company (NYSE:CL)	net_income	2,166.0	1,785.0	2,300.0	2,889.0	2,132.0	2,053.0
+Colgate‑Palmolive Company (NYSE:CL)	dividends	(1,679.0)	(1,691.0)	(1,749.0)	(1,789.0)	(1,823.0)	(1,831.0)
+Colgate‑Palmolive Company (NYSE:CL)	buybacks	(1,320.0)	(1,308.0)	(1,128.0)	(1,739.0)	(1,210.0)	(1,333.0)
+Colgate‑Palmolive Company (NYSE:CL)	issuance	424.0	418.0	380.0	638.0	101.0	196.0

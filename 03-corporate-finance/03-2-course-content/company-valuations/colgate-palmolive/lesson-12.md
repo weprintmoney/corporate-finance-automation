@@ -57,10 +57,10 @@ last_updated: 2026-11-21
 
 ## Notes
 
-Debt is $8,084.0M at market value including leases, 9.34% of the firm's value. The cost of debt is 5.74% before tax and 4.30% after. Both are high-confidence figures: the debt's fair value and the rating are disclosed, and the only estimate is the spread attached to the rating, from a table dated January 2026. Because debt is so small a share, none of the judgment calls in this lesson (fair value against carrying value, purchase obligations, actual against synthetic rating) moves the cost of capital by more than a few hundredths of a point.
+Debt is $8,084.0M at market value including leases, 9.34% of the firm's value. The cost of debt is 5.74% before tax and 4.30% after (model-output.md §1). The professor's `capstru.xlsx` shows 4.31% for the same 5.74% × 0.75, a difference of rounding (`facts.capstru-detail`). Both are high-confidence figures: the debt's fair value and the rating are disclosed, and the only estimate is the spread attached to the rating, from a table dated January 2026. Because debt is so small a share, none of the judgment calls in this lesson (fair value against carrying value, purchase obligations, actual against synthetic rating) moves the cost of capital by more than a few hundredths of a point.
 
 That completes Module 1. Cost of capital: 90.66% equity at 8.76% and 9.34% debt at 4.30% gives 8.34% (model-output.md §1). After this lesson the model was rerun; its section 1 agrees with every figure quoted in lessons 5 to 12.
 
-The uncertainty in the 8.34% does not come from debt. In order of size it comes from the beta (7.84% to 8.67%, lesson 10), the date of the equity risk premium (up to 8.57%, lesson 6), and the country premium method and weights (lessons 6 and 7).
+The uncertainty in the 8.34% does not come from debt. In order of size it comes from the beta (6.77% to 8.67%, lesson 10), the date of the equity risk premium (up to 8.57%, lesson 6), and the country premium method and weights (lessons 6 and 7).
 
 Two items for a later correction pass, neither changed here: the `debt.rating_actual` label "A1/A+" implies a Moody's rating we have not sourced; and model-output.md §3 puts the "current" row of its debt schedule on the synthetic AAA rate (cost of capital 8.33% at 9%), which is why its value-of-moving figures start from 8.32% and not 8.34%. Lesson 18 should say so when it quotes them.
