@@ -9,6 +9,7 @@ Applied Corporate Finance course content — 36 lessons across 4 modules.
 | [lesson-index.yaml](lesson-index.yaml) | Full lesson map: module, folder, topic, available file types |
 | [key-terms.md](key-terms.md) | Plain-language glossary of key terms, by lesson, for all 36 lessons |
 | [company-valuations/solarwinds/study-guide.md](company-valuations/solarwinds/study-guide.md) | SolarWinds final-project study guide, lesson by lesson: key terms, assignment questions, inputs and sources, worked steps |
+| [company-valuations/colgate-palmolive/README.md](company-valuations/colgate-palmolive/README.md) | Colgate-Palmolive final-project run: decisions made, open questions, and the map to the ledger, sources, lesson answers and the professor's spreadsheets |
 | [README.md](README.md) | Human-readable structure overview, export script docs, `/evaluate-company` skill docs |
 | [brightspace-export.py](brightspace-export.py) | Brightspace export script — downloads lesson content, converts PDFs with marker |
 | [company-valuations/](company-valuations/) | One folder per company from `/value-company` runs (ledger, sources, lesson-by-lesson answers, model output, report, walkthrough), plus the older single-file `/evaluate-company` reports |
