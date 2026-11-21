@@ -64,6 +64,6 @@ The headline, and the correction that produced it. `dividends.xlsx` taken alone 
 
 Confidence: high on the amounts returned and on option proceeds, all disclosed. Moderate on FCFE itself, which depends on choices: whether acquisitions count as reinvestment (we follow the workbook and count them) and how working capital is measured. The conclusion does not depend on those choices: on every version, the net figure is between about 100% and 107% of FCFE.
 
-What this means for the plan in lesson 22. Colgate is not over-distributing today, so borrowing an extra $1,845M a year for buybacks would be new: for those five years it would return well over its FCFE, by design, until debt reaches 20%. That should be described to shareholders as a change in capital structure with an end date, not as a higher sustainable payout.
+What this means for the plan in lesson 22. Colgate is not over-distributing today, so borrowing an extra $1,845M a year for special dividends would be new: for those five years it would return well over its FCFE, by design, until debt reaches 20%. That should be described to shareholders as a change in capital structure with an end date, not as a higher sustainable payout.
 
 Not read from the workbook: its 2018 to 2020 yearly performance rows and its forecast sheet (noted in `professor-spreadsheet/results.md`). The 2018 to 2020 FCFE figures in our table are computed from the input rows, not read from the sheet.

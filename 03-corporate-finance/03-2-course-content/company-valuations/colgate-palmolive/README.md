@@ -20,7 +20,9 @@ A `/value-company` run for the course final project. Colgate-Palmolive is a US-l
 
 ## Where the run stands
 
-Done: sources compiled; ledger filled and validated; model run; lessons 1–28 and walkthrough steps 1–28 written; the professor's `capstru.xlsx`, `dividends.xlsx` and `fcffsimpleginzu.xlsx` filled in Google Sheets (`professor-spreadsheet/results.md`); debt design numbers from `macrodur.xlsx` (`professor-spreadsheet/macro-sensitivity-output.md`). Not started: lessons 29–36, the walkthrough summary and glossary, the report.
+Done: sources compiled; ledger filled and validated; model run; lessons 1–36 and walkthrough steps 1–36 written, with the walkthrough summary and glossary; the professor's `capstru.xlsx`, `dividends.xlsx` and `fcffsimpleginzu.xlsx` filled in Google Sheets (`professor-spreadsheet/results.md`); debt design numbers from `macrodur.xlsx` (`professor-spreadsheet/macro-sensitivity-output.md`); valuation history, sensitivities and peer pricing in `valuation-cross-checks-output.md`. Not started: the valuation report and the review pass.
+
+Where the valuation landed: $61.83 a share in the base case against a price of $98.71; $50.90 on all the workbook's defaults and $79.74 with growth in perpetuity at 4.82%; about $89 on the multiples of six household and personal care companies from Capital IQ's default list. The debt recommendation of 20% stands, with the cash paid out as dividends, not buybacks, while the price is above the estimated value (`lesson-22.md`, `lesson-34.md`).
 
 The report's valuation runs in the professor's `fcffsimpleginzu.xlsx`. Section 6 of `model-output.md` is the repo cross-check on a three-year consensus forecast, not the valuation.
 
@@ -39,6 +41,8 @@ The report's valuation runs in the professor's `fcffsimpleginzu.xlsx`. Section 6
 | Valuation headline | Base case with both stable-period overrides, quoted beside the all-defaults result | All sheet defaults only |
 | Bankruptcy cost for the adjusted present value (lesson 21) | 15% of firm value, range 10% to 25%; added to the ledger as `debt.bankruptcy_cost` | 25%, the lecture's Disney figure; the optimum moves from 30% to 26% |
 | Recommended debt ratio (lesson 19) | 20%: holds a synthetic A− rating with operating income 20% lower | 30%, the unconstrained optimum in `capstru.xlsx` and the model; 25% as a middle course |
+| How the borrowed cash is paid out (lesson 34) | Dividends, regular or special, while the price is above the estimated value. A judgment that depends on the valuation being right | Buybacks, which become the better route only at or below value |
+| Comparison companies (lesson 35) | Capital IQ's default list of ten, priced on the six household and personal care companies; the ledger's `peers` block stays empty | A peer set built for Colgate, weighted for Hill's, with `fetch-peer-facts.py` |
 
 ## Open questions
 
@@ -50,6 +54,9 @@ The report's valuation runs in the professor's `fcffsimpleginzu.xlsx`. Section 6
 | `capstru.xlsx` rates the firm A− at 30% because it keeps existing debt at its present interest; the model reprices all debt and gets BBB. The report should say which it relies on | `lesson-18.md`, `professor-spreadsheet/results.md` |
 | Currencies behind the 3,942 of foreign currency debt designated as a net investment hedge, and the duration of the notes, are not in the files | `lesson-23.md` |
 | Ex-dividend price test not run (no daily prices); peer dividend data waits for the peer set | `lesson-25.md`, `lesson-28.md` |
+| Minority interests are subtracted at book value, 352. On the earnings they receive (129 in 2025) an estimate is 2,117, which would put the base case at 59.62 | `lesson-33.md` |
+| The pension and retiree-benefit shortfall of 1,283 is not subtracted in the valuation; after tax it is worth 1.21 a share | `lesson-33.md` |
+| Kimberly-Clark's next-twelve-months figures on the Capital IQ page are 90% above its trailing revenue; the cause is not in the files and its forward multiples are left out | `lesson-35.md` |
 
 ## File map
 
@@ -60,7 +67,9 @@ The report's valuation runs in the professor's `fcffsimpleginzu.xlsx`. Section 6
 | `sources/` | Filings, Capital IQ pulls, market data; manifest in `sources/README.md` |
 | `lesson-01.md` … `lesson-12.md` | Module 1 question logs with answers (cost of capital) |
 | `lesson-13.md` … `lesson-28.md` | Question logs for investment returns, financing mix and dividends |
-| `walkthrough.md` | Plain-language trail, steps 1 to 28 so far; summary and glossary still to write |
+| `lesson-29.md` … `lesson-36.md` | Question logs for valuation, value of control, relative valuation and the closing narrative |
+| `walkthrough.md` | Plain-language trail, steps 1 to 36, with the ten-sentence summary and the glossary |
+| `valuation-cross-checks.py`, `valuation-cross-checks-output.md` | Arithmetic quoted in lessons 29–36 (market value and cash flow history, growth, a replication of the valuation workbook with sensitivities, buybacks above value, peer multiples and regressions); generated, not hand-edited |
 | `modules-2-4-cross-checks.py`, `modules-2-4-cross-checks-output.md` | Arithmetic quoted in lessons 13–28 (divisional rates, one-point debt schedule, stress tests, APV at other bankruptcy costs, FCFE by year, sector comparisons); generated, not hand-edited |
 | `module-1-cross-checks.py`, `module-1-cross-checks-output.md` | Alternatives quoted in lessons 1–12 (regression diagnostics, cost of capital under other choices); generated, not hand-edited |
 | `professor-spreadsheet/originals/` | The professor's spreadsheets as downloaded 2026-11-21: `fcffsimpleginzu.xlsx`, `macrodur.xls`, `apv.xls`, `divfund.xls` |

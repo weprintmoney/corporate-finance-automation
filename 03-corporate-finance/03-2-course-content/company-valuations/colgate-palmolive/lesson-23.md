@@ -66,4 +66,4 @@ Colgate's debt is close to what its assets call for in type, rate and maturity, 
 
 Two gaps in the data, both stated above: the duration of the notes (we have maturity only), and the currencies behind the $3,942M of hedging debt. Either could shrink the mismatch we describe. Neither would reverse the advice on new debt.
 
-This closes the financing module. Summary for the report: 9.34% debt today, 30% unconstrained optimum, 20% recommended, reached over five years through buybacks funded with new fixed-rate debt issued mostly outside the dollar.
+This closes the financing module. Summary for the report: 9.34% debt today, 30% unconstrained optimum, 20% recommended, reached over five years through special dividends funded with new fixed-rate debt issued mostly outside the dollar.

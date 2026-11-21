@@ -37,7 +37,7 @@ last_updated: 2026-11-21
         | Pay incentives | Partly. Bonuses rest on earnings per share (`facts.executive-pay-2025`), and buybacks raise earnings per share by shrinking the share count | A weak reason, and a reason for buybacks, not dividends |
 
       The wealth-transfer point in the quote is real but small today. Paying cash out leaves lenders with less cushion. With coverage of 15.82 times, lenders are not at risk, though S&P's 2024 action, recorded as a downgrade (`facts.sp-rating-action`), came while Colgate was returning more than its net income. Under the path in lesson 22 (borrowing to buy back shares) the transfer would become deliberate and noticeable: existing noteholders would hold lower-rated paper.
-      Would a change signal something unintended? A cut or freeze in the dividend, yes. That is why the recommendation in lesson 22 runs through buybacks, which can be raised and lowered without the market reading a message into it.
+      Would a change signal something unintended? A cut or freeze in the dividend, yes. That is why the recommendation in lesson 22 leaves the regular dividend alone and runs through special dividends, which are labelled as one-off and can stop without the market reading a cut into it. Buybacks have the same flexibility, but lesson 22 sets them aside while the price is above the estimated value.
 
 ## Cumulative Project — Questions for This Lesson
 
@@ -61,4 +61,4 @@ The trade-off favours a high payout, and Colgate's policy is consistent with it.
 
 Not done: the ex-dividend test, for lack of daily prices. It would tell us the tax position of the marginal investor more directly than the ownership table does, and we expect it would confirm a near-neutral result, but that is an expectation and not a finding.
 
-One link back to lesson 22: the plan to move toward 20% debt uses buybacks because of this lesson. A dividend raised with borrowed money would have to be held or cut when the borrowing stopped, and a cut is the one signal Colgate cannot afford to send.
+One link back to lesson 22: the plan to move toward 20% debt leaves the regular dividend alone because of this lesson, and pays the borrowed cash out as special dividends. A dividend raised with borrowed money would have to be held or cut when the borrowing stopped, and a cut is the one signal Colgate cannot afford to send.
