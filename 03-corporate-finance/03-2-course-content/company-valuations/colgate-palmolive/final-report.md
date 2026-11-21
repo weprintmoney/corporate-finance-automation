@@ -70,7 +70,7 @@ Because the marginal investor, the one whose trades set the price, is a diversif
 
 All three come from the same recent years; Damodaran's table is built from two and five years of weekly returns. So the gap is not about the period. It is about which companies are averaged. The industry tables include many small companies, and the two readings closest to Colgate, its own history and its six largest peers, agree on 0.3 to 0.4.
 
-I kept 0.73 for the base case for three reasons. It is the course's method, and an average over 188 companies is far more precise than one regression with a standard error of 0.158 or a median of six. A beta near 0.3 gives a cost of equity of 6.51%, less than a point above the 5.74% at which Colgate borrows, and shareholders are paid after lenders. And over the five years to December 2025 the index returned 96.2% and Colgate 4.0%, so the low figures record a market driven by other sectors as much as they record safety.
+I kept 0.73 for the base case for three reasons. It is the course's method, and an average over 188 companies is far more precise than one regression with a standard error of 0.158 or a median of six. A beta near 0.3 gives a cost of equity of 6.51%, less than a point above the 5.74% at which Colgate borrows, and shareholders are paid after lenders. And from December 2020 to 2026-11-20 the index returned 100.0% and Colgate 33.0%, most of it in 2026, so the low figures record a market driven by other sectors as much as they record safety.
 
 But the peer evidence says 0.73 is probably too high for the world's largest toothpaste maker. The honest range is 0.41 to 0.80, a cost of capital of 6.77% to 8.67%. Section 9 shows what each end does to value, and the low end matters.
 
@@ -149,7 +149,7 @@ The alternative is 25%, which captures about nine-tenths of the gain and is stil
 
 **Yes, slowly, and the cash should go out rather than into acquisitions.**
 
-Colgate is under-borrowed but not under threat. No buyer could debt-finance a $78.5 billion purchase of a business that cannot carry even 40% debt. The realistic threat is an activist with a simple case: a 4.0% total return over five years against 96.2% for the S&P 500, an idle balance sheet and $2.2 billion of write-offs. None is visible in the register.
+Colgate is under-borrowed but not under threat. No buyer could debt-finance a $78.5 billion purchase of a business that cannot carry even 40% debt. The realistic threat is an activist with a simple case: a 33.0% total return since December 2020 against 100.0% for the S&P 500, an idle balance sheet and $2.2 billion of write-offs. That case was stronger a year ago, when the figures were 4.0% and 96.2%; Colgate's shares returned 27.9% in 2026 to date while the index returned 2.0%. None is visible in the register.
 
 Nor does Colgate have projects big enough to absorb new borrowing. Large sums could only go into acquisitions, where the record says the money would likely earn less than it costs.
 

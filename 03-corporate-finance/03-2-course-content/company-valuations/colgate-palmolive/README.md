@@ -74,6 +74,8 @@ The report's valuation runs in the professor's `fcffsimpleginzu.xlsx`. Section 6
 | `module-1-cross-checks.py`, `module-1-cross-checks-output.md` | Alternatives quoted in lessons 1–12 (regression diagnostics, cost of capital under other choices); generated, not hand-edited |
 | `professor-spreadsheet/originals/` | The professor's spreadsheets as downloaded 2026-11-21: `fcffsimpleginzu.xlsx`, `macrodur.xls`, `apv.xls`, `divfund.xls` |
 | `final-report.md` | The report for submission: verdict, nine sections, judgment-call tables |
+| `final-report.docx` | The Word version, built from `final-report.md` by `report-exhibits/build-report-docx.js` |
+| `report-exhibits/` | The four charts and the script that draws them |
 | `peer-payout-check.py`, `peer-payout-check-output.md` | Five-year dividends and buybacks against net income for Colgate and six household peers |
 
 ## Corrections log
